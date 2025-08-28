@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--裂解-->
+  <DamageDef>
+    <defName>GR_Disintegration</defName>
+    <label>Disintegration</label>
+    <additionalHediffs>
+      <li>
+        <hediff>GR_Disintegration_Corrosion</hediff>
+        <severityPerDamageDealt>0.0067</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been melted.</deathMessage>
+    <hediff>Gunshot</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <isRanged>true</isRanged>
+    <ignoreShields>true</ignoreShields>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <buildingDamageFactor>15</buildingDamageFactor>
+    <plantDamageFactor>15</plantDamageFactor>
+    <combatLogRules>Damage_Flame</combatLogRules>
+  </DamageDef>
+
+  <!--电弧-->
+  <DamageDef>
+    <defName>GR_Arc</defName>
+    <label>Arc</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} was shattered by an arc.</deathMessage>
+    <hediff>ElectricalBurn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Electric</impactSoundType>
+    <isRanged>true</isRanged>
+    <ignoreShields>true</ignoreShields>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <buildingDamageFactor>0</buildingDamageFactor>
+    <plantDamageFactor>0</plantDamageFactor>
+    <combatLogRules>Damage_Flame</combatLogRules>
+  </DamageDef>
+
+  <!--纳米爪击-->
+  <DamageDef ParentName="Scratch">
+    <defName>GR_NanoScratch</defName>
+    <label>Nanite scratch</label>
+    <additionalHediffs>
+      <li>
+        <hediff>GR_Nanite_Corrosion</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactor>30</buildingDamageFactor>
+    <buildingDamageFactorImpassable>2</buildingDamageFactorImpassable>
+    <externalViolence>false</externalViolence>
+    <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+  </DamageDef>
+
+  <!--纳米弹-->
+  <DamageDef ParentName="Bullet">
+    <defName>GR_NanoBullet</defName>
+    <label>Nano Bullet</label>
+    <externalViolence>false</externalViolence>
+    <additionalHediffs>
+      <li>
+        <hediff>GR_Nanite_Corrosion</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+
+  <!--激光-->
+  <DamageDef ParentName="Beam">
+    <defName>GR_Laser</defName>
+    <label>Laser</label>
+    <isExplosive>true</isExplosive>
+    <defaultArmorPenetration>1</defaultArmorPenetration>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <isExplosive>true</isExplosive>
+  </DamageDef>
+
+</Defs>

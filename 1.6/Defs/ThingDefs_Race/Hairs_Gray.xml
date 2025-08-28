@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <StyleItemCategoryDef>
+        <defName>GrayHair</defName>
+        <label>Gray发型</label>
+    </StyleItemCategoryDef>
+
+
+    <HairDef>
+        <defName>GR_hair_I</defName>
+        <label>GR_hair_I</label>
+        <texPath>Race/Gray/Hair/Gray_1</texPath>
+        <styleGender>Female</styleGender>
+        <category>Urban</category>
+        <styleTags>
+            <li>GrayHair</li>
+        </styleTags>
+    </HairDef>
+
+</Defs>

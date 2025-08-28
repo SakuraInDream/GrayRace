@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <SoundDef>
+        <defName>GR_disruptor_fire</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/disruptor_fire</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>45</min>
+                    <max>100</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>0.9082353</min>
+                    <max>1.145882</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

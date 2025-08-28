@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+ 
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>GR_Feature</defName>
+    <graphicPath>Race/Head/Gray_Female</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+
+</Defs>

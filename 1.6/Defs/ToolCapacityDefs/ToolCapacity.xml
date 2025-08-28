@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ToolCapacityDef>
+        <defName>GR_NanoScratch</defName>
+        <label>Nanite Scratch</label>
+    </ToolCapacityDef>
+    
+</Defs>

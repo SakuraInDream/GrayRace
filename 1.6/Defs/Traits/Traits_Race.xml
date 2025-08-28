@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    
+    <!--学习算法-->
+    <TraitDef>
+        <defName>LearningAlgorithms</defName>
+        <exclusionTags>
+            <li>SlowFastLearner</li>
+        </exclusionTags>
+        <degreeDatas>
+            <li>
+                <label>Learning Algorithms</label>
+                <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
+                <statOffsets>
+                    <GlobalLearningFactor>1</GlobalLearningFactor>
+                </statOffsets>
+                <possessions>
+                    <TextBook />
+                </possessions>
+            </li>
+        </degreeDatas>
+    </TraitDef>
+
+</Defs>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartDef>
+    <defName>Nano_Torso</defName>
+    <label>Nano torso</label>
+    <hitPoints>60</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <executionPartPriority>400</executionPartPriority>
+  </BodyPartDef>
+
+</Defs>

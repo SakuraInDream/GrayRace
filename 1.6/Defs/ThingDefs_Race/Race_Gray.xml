@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef Name="Gray_PawnBase" ParentName="BasePawn" Abstract="True">
+        <thingClass>Pawn</thingClass>
+        <category>Pawn</category>
+        <selectable>true</selectable>        <!--可选择-->
+        <altitudeLayer>Pawn</altitudeLayer>
+        <useHitPoints>false</useHitPoints>
+        <hasTooltip>true</hasTooltip>        <!--有工具提示-->
+        <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+        <butcherProducts>            <!--屠宰产物-->
+            <GR_Nanites>500</GR_Nanites>
+        </butcherProducts>
+        <statBases>
+        </statBases>
+    </ThingDef>
+
+    <AlienRace.ThingDef_AlienRace ParentName="Gray_PawnBase">
+        <defName>Gray_Race</defName>
+        <label>Gray</label>
+        <description>灰裔，是由纳米机械组成的生命体，借助人格核心和灰风的帮助获得了独立的意识与情感，成为具有自我认知的个体。她们曾是高效的杀戮机器，如今更专注于生产建设，战斗能力已大不如前。尽管拥有坚韧的机械身躯，但不能像灰风一样从被打散的状态重组，因此她们对死亡充满恐惧。</description>
+        <alienRace>
+            <generalSettings>                <!-- 一般设置 -->
+                <maleGenderProbability>0</maleGenderProbability>                <!--男性比例-->
+                <immuneToAge>true</immuneToAge>                <!-- 不受年龄影响 -->
+                <humanRecipeImport>true</humanRecipeImport>                <!--可使用人类手术配方-->
+                <canLayDown>true</canLayDown>                <!-- 是否会受伤倒地 -->
+                <maxDamageForSocialfight>1</maxDamageForSocialfight>                <!--最大打架几率-->
+                <immuneToXenophobia>true</immuneToXenophobia>                <!--禁用仇外主义-->
+                <disallowedTraits>                    <!--该种族禁用特性-->
+                    <li>
+                        <defName>Abrasive</defName>
+                    </li>
+                    <li>
+                        <defName>AnnoyingVoice</defName>
+                    </li>
+                    <li>
+                        <defName>Asexual</defName>
+                    </li>
+                    <li>
+                        <defName>BodyPurist</defName>
+                    </li>
+                    <li>
+                        <defName>CreepyBreathing</defName>
+                    </li>
+                    <li>
+                        <defName>DislikesMen</defName>
+                    </li>
+                    <li>
+                        <defName>Greedy</defName>
+                    </li>
+                    <li>
+                        <defName>Jealous</defName>
+                    </li>
+                    <li>
+                        <defName>Pyromaniac</defName>
+                    </li>
+                    <li>
+                        <defName>SlowLearner</defName>
+                    </li>
+                    <li>
+                        <defName>Beauty</defName>
+                    </li>
+                    <li>
+                        <defName>DrugDesire</defName>
+                    </li>
+                    <li>
+                        <defName>Immunity</defName>
+                    </li>
+                    <li>
+                        <defName>PsychicSensitivity</defName>
+                    </li>
+                </disallowedTraits>
+                <forcedRaceTraitEntries>                    <!--种族必备特性-->
+                    <li>
+                        <defName>LearningAlgorithms</defName>
+                        <chance>50</chance>
+                    </li>
+                    <li>
+                        <defName>GreatMemory</defName>
+                        <chance>50</chance>
+                    </li>
+                </forcedRaceTraitEntries>
+                <!--=파트제네레이터==========================================================================================-->
+                <alienPartGenerator>
+                    <headTypes>                        <!--头部的种类-->
+                        <li>GR_Feature</li>
+                    </headTypes>
+                    <bodyTypes>                        <!--体型-->
+                        <li>Female</li>
+                        <li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>                        <!-- test -->
+                        <li MayRequire="Ludeon.RimWorld.Biotech">Child</li>                        <!-- test -->
+                    </bodyTypes>
+                    <atlasScale>4</atlasScale>
+                    <headOffset>(0.0, -0.35)</headOffset>                    <!--头部贴图的位置-->
+                    <headOffsetDirectional>
+                        <east>
+                            <offset>(-0.1, 0.0)</offset>
+                        </east>
+                        <west>
+                            <offset>(0.1, 0.0)</offset>
+                        </west>
+                    </headOffsetDirectional>
+                    <customDrawSize>(1, 1)</customDrawSize>                    <!-- 生物的贴图的尺寸  -->
+                    <customHeadDrawSize>(1, 1)</customHeadDrawSize>                    <!-- 生物的头部贴图的尺寸发型与头盔也会按比例缩放  -->
+                    <customPortraitDrawSize>(1.0, 1.0)</customPortraitDrawSize>                    <!-- 生物的肖像尺寸大小  -->
+                    <!--肤色发色-->
+                    <colorChannels Inherit="False">
+                        <li>
+                            <name>skin</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>100</weight>
+                                        <only>(255,240,234)</only>
+                                    </li>
+                                </options>
+                            </first>
+                            <second Class="AlienRace.ColorGenerator_CustomAlienChannel">
+                                <colorChannel>skin_1</colorChannel>
+                            </second>
+                        </li>
+                        <li>
+                            <name>hair</name>
+                            <first Class="ColorGenerator_Options">
+                                <options>
+                                    <li>
+                                        <weight>100</weight>
+                                        <only>(255,255,255)</only>
+                                    </li>
+                                </options>
+                            </first>
+                            <second Class="ColorGenerator_Single">
+                                <color>(35, 20, 120)</color>
+                            </second>
+                        </li>
+                    </colorChannels>
+                </alienPartGenerator>
+                <reproduction>
+                    <maleFertilityAgeFactor>                        <!--男性生育年龄因素-->
+                    </maleFertilityAgeFactor>
+                    <femaleFertilityAgeFactor>                        <!--女性生育年龄因素-->
+                        <points>                            <!-- 年龄,概率 -->
+                            <li>(10, 0)</li>
+                            <li>(16, 0)</li>
+                            <li>(28, 0)</li>
+                            <li>(35, 0)</li>
+                            <li>(40, 0)</li>
+                            <li>(45, 0)</li>
+                            <li>(50, 0)</li>
+                        </points>
+                    </femaleFertilityAgeFactor>
+                </reproduction>
+            </generalSettings>
+            <graphicPaths>                <!--身体贴图的路径-->
+                <head>Race/Gray/Head/</head>
+                <body>Race/Gray/Body/</body>
+                <skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</skeleton>                <!--骨架?不知道干什么的-->
+            </graphicPaths>
+            <styleSettings>                <!--生物的风格设置-->
+                <li>
+                    <key>HairDef</key>                    <!--发型-->
+                    <value>
+                        <hasStyle>true</hasStyle>
+                        <styleTagsOverride>
+                            <li>AtHair</li>
+                            <li>GGlSHair</li>
+                        </styleTagsOverride>
+                    </value>
+                </li>
+                <li>
+                    <key>BeardDef</key>                    <!--胡子-->
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+                <li>
+                    <key>TattooDef</key>                    <!--纹身-->
+                    <value>
+                        <hasStyle>false</hasStyle>
+                    </value>
+                </li>
+            </styleSettings>
+
+            <relationSettings>                <!--碰到以下关系的概率(设置0避免莫名其妙多个出父母亲戚)-->
+                <relationChanceModifierChild>0</relationChanceModifierChild>
+                <relationChanceModifierExLover>0</relationChanceModifierExLover>
+                <relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+                <relationChanceModifierFiance>0</relationChanceModifierFiance>
+                <relationChanceModifierLover>0</relationChanceModifierLover>
+                <relationChanceModifierParent>0</relationChanceModifierParent>
+                <relationChanceModifierSibling>0</relationChanceModifierSibling>
+                <relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+            </relationSettings>
+
+            <thoughtSettings>
+            </thoughtSettings>
+            <!--=============================================================================================================================-->
+            <raceRestriction>
+                <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>                <!-- 只使用种族限制服装 -->
+                <apparelList>
+                </apparelList>
+                <whiteApparelList>
+                </whiteApparelList>
+                <buildingList>
+                </buildingList>
+            </raceRestriction>
+        </alienRace>
+        <!--=============================================================================================================================-->
+        <statBases>            <!--基础值设定-->
+            <MarketValue>8000</MarketValue>            <!--价值-->
+            <MoveSpeed>7</MoveSpeed>            <!--移动速度-->
+            <Flammability>-1</Flammability>            <!--可燃率-->
+            <ToxicResistance>10</ToxicResistance>            <!--毒素抗性-->
+            <ComfyTemperatureMin>-273</ComfyTemperatureMin>            <!--最低舒适温度-->
+            <ComfyTemperatureMax>1453</ComfyTemperatureMax>            <!--最高舒适温度-->
+            <Mass>10</Mass>            <!--质量-->
+            <MeatAmount>5</MeatAmount>            <!--肉量-->
+            <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+            <ArmorRating_Heat>2.00</ArmorRating_Heat>
+            <CarryingCapacity>500</CarryingCapacity>            <!--携带能力-->
+            <MentalBreakThreshold>0.35</MentalBreakThreshold>            <!--崩溃阈值-->
+            <PainShockThreshold>0.6</PainShockThreshold>            <!--疼痛休克阈值-->
+            <PsychicSensitivity>0</PsychicSensitivity>            <!--心灵敏感度-->
+            <FilthRate>0</FilthRate>            <!--污物规模-->
+            <!--战斗-->
+            <MeleeDodgeChance>2</MeleeDodgeChance>            <!--近战闪避几率-->
+            <MeleeHitChance>2</MeleeHitChance>            <!--近战命中率-->
+            <AimingDelayFactor>0.8</AimingDelayFactor>            <!--瞄准时间-->
+            <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>            <!--射击精准度-->
+            <!--社交-->
+            <NegotiationAbility>0.8</NegotiationAbility>            <!--谈判能力-->
+            <SellPriceFactor>2</SellPriceFactor>            <!--交易价格-->
+            <SocialImpact>0.8</SocialImpact>            <!--社交影响力-->
+            <!--生产-->
+            <ButcheryMechanoidEfficiency>1.5</ButcheryMechanoidEfficiency>            <!--机械体拆解效率-->
+            <ButcheryMechanoidSpeed>1.5</ButcheryMechanoidSpeed>            <!--机械体拆解速度-->
+            <SmeltingSpeed>1.5</SmeltingSpeed>            <!--熔炼速度-->
+            <GeneralLaborSpeed>1.5</GeneralLaborSpeed>            <!--普通工作速度-->
+            <WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+            <!--烹饪-->
+            <FoodPoisonChance>5</FoodPoisonChance>            <!--食物中毒几率-->
+            <!--医学/研究-->
+            <ResearchSpeed>2</ResearchSpeed>            <!--研究速度-->
+            <MedicalTendQuality>1.5</MedicalTendQuality>            <!--医疗质量-->
+            <MedicalSurgerySuccessChance>2</MedicalSurgerySuccessChance>            <!--手术成功率-->
+            <GlobalLearningFactor>2.0</GlobalLearningFactor>            <!--全局学习系数-->
+            <!--劳作-->
+            <MiningSpeed>2</MiningSpeed>            <!--采矿速度-->
+            <ConstructionSpeed>1.5</ConstructionSpeed>            <!--建造速度-->
+            <ConstructSuccessChance>10</ConstructSuccessChance>            <!--建造成功率-->
+            <FixBrokenDownBuildingSuccessChance>10</FixBrokenDownBuildingSuccessChance>            <!--修理成功率-->
+            <!--其他-->
+            <RoyalFavorValue>14</RoyalFavorValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Spawner">
+                <thingToSpawn>GR_Nanites</thingToSpawn>
+                <spawnCount>100</spawnCount>
+                <spawnIntervalRange>60000</spawnIntervalRange>
+                <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+                <showMessageIfOwned>true</showMessageIfOwned>
+            </li>
+        </comps>
+        <damageMultipliers>
+			<li>
+				<damageDef>GR_NanoScratch</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+            <li>
+				<damageDef>GR_NanoBullet</damageDef>
+				<multiplier>0</multiplier>
+			</li>
+		</damageMultipliers>
+        <!--==맨손전투===================================================================================================================-->
+        <tools>            <!--空手攻击的设置-->
+            <li>
+                <label>left fist</label>
+                <capacities>
+                    <li>GR_NanoScratch</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>1</cooldownTime>
+                <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+            </li>
+            <li>
+                <label>right fist</label>
+                <capacities>
+                    <li>GR_NanoScratch</li>
+                </capacities>
+                <power>30</power>
+                <cooldownTime>1</cooldownTime>
+                <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <!--=============================================================================================================================-->
+        <race>
+            <thinkTreeMain>Humanlike</thinkTreeMain>
+            <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+            <intelligence>Humanlike</intelligence>            <!--智力:人-->
+            <makesFootprints>true</makesFootprints>            <!--留下脚印:是-->
+            <lifeExpectancy>5000</lifeExpectancy>            <!--平均寿命-->
+            <nameCategory>HumanStandard</nameCategory>            <!--名称限定-->
+            <hasGenders>true</hasGenders>            <!--有性别-->
+            <body>Gray</body>            <!-- body -->
+            <renderTree>Humanlike</renderTree>
+            <bloodDef>Filth_Blood</bloodDef>
+            <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
+            <specificMeatDef>GR_GrayFlesh</specificMeatDef>
+            <baseBodySize>1</baseBodySize>            <!--体型大小-->
+            <baseHealthScale>3</baseHealthScale>
+            <foodType>OmnivoreHuman</foodType>            <!--杂食生物-->
+            <gestationPeriodDays>5000</gestationPeriodDays>            <!--妊娠期天数 -->
+            <soundCallIntervalRange>2000~5000</soundCallIntervalRange>
+            <canBecomeShambler>true</canBecomeShambler>
+            <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
+            <anomalyKnowledge>1</anomalyKnowledge>
+            <litterSizeCurve>                <!-- 初生婴儿年龄 -->
+                <points>
+                    <li>(0.5, 0)</li>
+                    <li>(1, 1.00)</li>
+                    <li>(2, 0.07)</li>
+                    <li>(3, 0.02)</li>
+                    <li>(4, 0.01)</li>
+                    <li>(5, 0)</li>
+                </points>
+            </litterSizeCurve>
+            <lifeStageAges>                <!-- 年龄阶段，容易出BUG，别改 -->
+                <li>
+                    <def>HumanlikeBaby</def>
+                    <minAge>0</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeChild</def>
+                    <minAge>3</minAge>
+                </li>
+                <li MayRequire="Ludeon.RimWorld.Biotech">
+                    <def>HumanlikePreTeenager</def>
+                    <minAge>9</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeTeenager</def>
+                    <minAge>12</minAge>
+                </li>
+                <li>
+                    <def>HumanlikeAdult</def>
+                    <minAge>16</minAge>
+                </li>
+            </lifeStageAges>
+            <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">                <!--职业几率?-->
+                <Firefighter>7</Firefighter>
+                <Patient>0</Patient>
+                <Doctor>10</Doctor>
+                <PatientBedRest>0</PatientBedRest>
+                <Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+                <BasicWorker>3</BasicWorker>
+                <Warden>10</Warden>
+                <Handling>7</Handling>
+                <Cooking>7</Cooking>
+                <Hunting>7</Hunting>
+                <Construction>10</Construction>
+                <Growing>7</Growing>
+                <Mining>7</Mining>
+                <PlantCutting>7</PlantCutting>
+                <Smithing>13</Smithing>
+                <Tailoring>7</Tailoring>
+                <Art>10</Art>
+                <Crafting>7</Crafting>
+                <Hauling>3</Hauling>
+                <Cleaning>3</Cleaning>
+                <Research>13</Research>
+            </lifeStageWorkSettings>
+            <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+            <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+            <specialShadowData>                <!--阴影数据-->
+                <volume>(0.3, 0.8, 0.4)</volume>
+                <offset>(0,0,-0.3)</offset>
+            </specialShadowData>
+            <ageGenerationCurve>                <!--不知道什么玩意
+                改了容易出BUG,刷新不出外星人.-->
+                <points>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>                    <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li>                    <!-- End exclude -->
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+                    <li>(14,0)</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+                    <li>(16,40)</li>
+                    <li>(18,70)</li>
+                    <li>(22,100)</li>
+                    <li>(30,20)</li>
+                    <li>(60,3)</li>
+                    <li>(80,0)</li>
+                </points>
+            </ageGenerationCurve>
+            <hediffGiverSets>                <!--该种族能获得的健康状态效果,和手术有点关联-->
+                <li>OrganicStandard</li>
+                <li>Human</li>
+            </hediffGiverSets>
+        </race>
+        <!--=============================================================================================================================-->
+        <recipes>            <!--能够接受的手术配方-->
+            <li>ExciseCarcinoma</li>
+            <li>AdministerMechSerumHealer</li>
+            <li>RemoveBodyPart</li>
+            <li>Euthanize</li>
+            <li>Anesthetize</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
+            <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+            <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">SurgicalInspection</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">BlissLobotomy</li>
+            <li MayRequire="Ludeon.RimWorld.Anomaly">GhoulInfusion</li>
+        </recipes>
+    </AlienRace.ThingDef_AlienRace>
+
+</Defs>

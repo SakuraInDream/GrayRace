@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <PawnKindDef Name="GR_colonist" Abstract="True">
+        <race>Gray_Race</race>
+        <defaultFactionType>PlayerColony</defaultFactionType>
+        <backstoryCryptosleepCommonality>0.5</backstoryCryptosleepCommonality><!--实际年龄大于生理年龄的几率-->
+        <minGenerationAge>18</minGenerationAge><!--Pawn最小年龄-->
+        <maxGenerationAge>30</maxGenerationAge><!--Pawn最大年龄-->
+        <invNutrition>0</invNutrition>
+        <itemQuality>Good</itemQuality><!--物品品质:极佳Superior-->
+        <xenotypeSet>
+            <xenotypeChances>
+                <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+                <Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+                <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+                <Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+                <Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+                <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+                <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+            </xenotypeChances>
+        </xenotypeSet>
+        <gearHealthRange>
+            <min>1</min>
+            <max>1</max>
+        </gearHealthRange>
+        <apparelRequired>
+        </apparelRequired>
+        <apparelTags><!--穿戴服装-->
+        </apparelTags>
+        <apparelMoney><!--服装价值-->
+            <min>500</min>
+            <max>2000</max>
+        </apparelMoney>
+        <techHediffsMoney>
+            <min>1500</min>
+            <max>1500</max>
+        </techHediffsMoney>
+        <techHediffsRequired>
+        </techHediffsRequired>
+        <disallowedTraits>
+            <li>BodyPurist</li><!--纯粹主义-->
+        </disallowedTraits>
+        <combatEnhancingDrugsCount><!--带有战斗药剂的概率-->
+            <min>0</min>
+			<max>2</max>
+        </combatEnhancingDrugsCount>
+        <initialWillRange>30~40</initialWillRange>
+        <initialResistanceRange>25~30</initialResistanceRange>
+        <skills><!--固有技能-->
+            <li>
+                <skill>Shooting</skill>
+                <range>10~15</range>
+            </li>
+            <li>
+                <skill>Melee</skill>
+                <range>6~8</range>
+            </li>
+        </skills>
+        <inventoryOptions>
+            <skipChance>0.1</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <thingDef>MealSurvivalPack</thingDef>
+                    <countRange><!--数量-->
+                        <min>2</min>
+                        <max>3</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+        <biocodeWeaponChance>1</biocodeWeaponChance>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="GR_colonist">
+        <defName>GR_colonist_A</defName>
+        <label>殖民者</label>
+        <combatPower>50</combatPower>
+        <apparelRequired>
+        </apparelRequired>
+        <weaponMoney><!--武器价值-->
+            <min>500</min>
+            <max>2000</max>
+        </weaponMoney>
+        <weaponTags>
+        </weaponTags>
+        <backstoryFiltersOverride><!--↓■背景-->
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                    <li>Outlander</li>
+                    <li>Outsider</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+    </PawnKindDef>
+
+</Defs>

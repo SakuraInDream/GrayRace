@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--女仆装-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Maid</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Maid</label>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Apparel/Maid/Gray_Maid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <CleaningSpeed>1</CleaningSpeed>
+      <AnimalGatherYield>0.25</AnimalGatherYield>
+      <AnimalGatherSpeed>0.5</AnimalGatherSpeed>
+      <PlantHarvestYield>0.25</PlantHarvestYield>
+      <PlantWorkSpeed>0.5</PlantWorkSpeed>
+      <FoodPoisonChance>-5</FoodPoisonChance>
+      <CookSpeed>0.5</CookSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Maid/Gray_Maid</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>GR_Work</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--旗袍-->
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Gray_Apparel_Qipao</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Qipao</label>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Qipao/Gray_Qipao</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+      <Mass>0</Mass>
+      <ArmorRating_Sharp>2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>2</ArmorRating_Blunt>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
+      <EquipDelay>0</EquipDelay>
+      <EnergyShieldRechargeRate>5</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>50.0</EnergyShieldEnergyMax>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Flammability>0</Flammability>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Qipao/Gray_Qipao</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>600</startingTicksToReset>
+        <minDrawSize>1.8</minDrawSize>
+        <maxDrawSize>2.2</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--研究服-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Research</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Research Uniform</label>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <researchPrerequisite>ComplexClothing</researchPrerequisite>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Apparel/Research/Gray_Research_Uniform</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.5</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <DrugSynthesisSpeed>0.5</DrugSynthesisSpeed>
+      <MedicalTendSpeed>0.5</MedicalTendSpeed>
+      <MedicalTendQuality>0.25</MedicalTendQuality>
+      <MedicalOperationSpeed>0.5</MedicalOperationSpeed>
+      <MedicalSurgerySuccessChance>0.25</MedicalSurgerySuccessChance>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Research/Gray_Research_Uniform</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>GR_Work</li>
+      </tags>
+      <defaultOutfitTags>
+
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+</Defs>

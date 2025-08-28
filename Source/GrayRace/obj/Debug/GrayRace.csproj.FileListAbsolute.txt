@@ -1,0 +1,6 @@
+D:\Steam\steamapps\common\RimWorld\Mods\Gray Race\Source\GrayRace\bin\Debug\GrayRace.dll
+D:\Steam\steamapps\common\RimWorld\Mods\Gray Race\Source\GrayRace\bin\Debug\GrayRace.pdb
+D:\Steam\steamapps\common\RimWorld\Mods\Gray Race\Source\GrayRace\obj\Debug\GrayRace.csproj.AssemblyReference.cache
+D:\Steam\steamapps\common\RimWorld\Mods\Gray Race\Source\GrayRace\obj\Debug\GrayRace.csproj.CoreCompileInputs.cache
+D:\Steam\steamapps\common\RimWorld\Mods\Gray Race\Source\GrayRace\obj\Debug\GrayRace.dll
+D:\Steam\steamapps\common\RimWorld\Mods\Gray Race\Source\GrayRace\obj\Debug\GrayRace.pdb
