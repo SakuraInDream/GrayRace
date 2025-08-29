@@ -7,12 +7,13 @@
     <ProjectGuid>{F77FD251-0D59-40AF-A431-9FC47116DD5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GrayRace</RootNamespace>
-    <AssemblyName>GrayRace</AssemblyName>
+    <RootNamespace>SD.GrayRace</RootNamespace>
+    <AssemblyName>SD.GrayRace</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -311,6 +312,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CompAbilityEffect_NanitesCost.cs" />
+    <Compile Include="CompResource_Nanites.cs" />
+    <Compile Include="CompProperties_AbilityNanitesCost.cs" />
+    <Compile Include="CompProperties_Nanites.cs" />
+    <Compile Include="Gizmo_NaniteResources.cs" />
+    <Compile Include="GRUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

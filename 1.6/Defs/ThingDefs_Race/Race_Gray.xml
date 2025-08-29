@@ -262,6 +262,17 @@
                 <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
                 <showMessageIfOwned>true</showMessageIfOwned>
             </li>
+            <!-- 纳米机械Comp -->
+            <li Class="SD.GrayRace.CompProperties_Nanites">
+                <maxResource>5</maxResource>
+                <regenPerTick>0.01</regenPerTick>
+                <resourceLabel>备用纳米机械</resourceLabel>
+                <resourceGizmoThresholds>
+                    <li>0.25</li>
+                    <li>0.5</li>
+                    <li>0.75</li>
+                </resourceGizmoThresholds>
+            </li>
         </comps>
         <damageMultipliers>
 			<li>
