@@ -2,7 +2,7 @@
 <Defs>
 
 	<!--灰潮源质-->
-    <RecipeDef>
+	<RecipeDef>
 		<defName>GR_Alloy_recipe</defName>
 		<label>Extract Nanites x500</label>
 		<description>Extract Nanites from Gray Flesh.</description>
@@ -26,7 +26,7 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-                <li>GR_GrayFlesh</li>
+				<li>GR_GrayFlesh</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -38,8 +38,8 @@
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
 
-    <!--合金-->
-    <RecipeDef>
+	<!--合金-->
+	<RecipeDef>
 		<defName>GR_Alloy_recipe_Less</defName>
 		<label>cast Alloy x20</label>
 		<description>Casting Alloy,it's not a easy task.</description>
@@ -61,7 +61,7 @@
 				</filter>
 				<count>15</count>
 			</li>
-            <li>
+			<li>
 				<filter>
 					<thingDefs>
 						<li>Uranium</li>
@@ -82,7 +82,7 @@
 			<thingDefs>
 				<li>Plasteel</li>
 				<li>Uranium</li>
-                <li>Steel</li>
+				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -93,8 +93,9 @@
 		</skillRequirements>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
-    
-    <RecipeDef>
+
+	<!--合金2-->
+	<RecipeDef>
 		<defName>GR_Alloy_recipe_Normal</defName>
 		<label>cast Alloy x60</label>
 		<description>Casting Alloy,it's not a easy task.</description>
@@ -105,7 +106,7 @@
 		<workAmount>12000</workAmount>
 		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 		<recipeUsers>
-			<li>ElectricSmelter</li>
+			<li>GR_NaniteReconfigurator</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -116,7 +117,7 @@
 				</filter>
 				<count>45</count>
 			</li>
-            <li>
+			<li>
 				<filter>
 					<thingDefs>
 						<li>Uranium</li>
@@ -137,7 +138,7 @@
 			<thingDefs>
 				<li>Plasteel</li>
 				<li>Uranium</li>
-                <li>Steel</li>
+				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -148,7 +149,8 @@
 		</skillRequirements>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
-    
+
+	<!--合金3-->
 	<RecipeDef>
 		<defName>GR_Alloy_recipe_Much</defName>
 		<label>cast Alloy x200</label>
@@ -160,7 +162,7 @@
 		<workAmount>42000</workAmount>
 		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 		<recipeUsers>
-			<li>ElectricSmelter</li>
+			<li>GR_NaniteTransmuter</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
@@ -171,7 +173,7 @@
 				</filter>
 				<count>150</count>
 			</li>
-            <li>
+			<li>
 				<filter>
 					<thingDefs>
 						<li>Uranium</li>
@@ -192,7 +194,7 @@
 			<thingDefs>
 				<li>Plasteel</li>
 				<li>Uranium</li>
-                <li>Steel</li>
+				<li>Steel</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -204,4 +206,109 @@
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
 
+	<!--零部件-->
+	<RecipeDef>
+		<defName>GR_Make_ComponentIndustrial</defName>
+		<label>make component x2</label>
+		<description>Make a component.</description>
+		<jobString>Making component.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>4000</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>GR_Nanites</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</products>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+
+	<!--高级零部件-->
+	<RecipeDef>
+		<defName>GR_Make_ComponentSpacer</defName>
+		<label>make advanced component x2</label>
+		<description>Make an advanced component.</description>
+		<jobString>Making advanced component.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>8000</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Alloy</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>0.3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+				<li>GR_Alloy</li>
+				<li>Gold</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentSpacer>2</ComponentSpacer>
+		</products>
+		<researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+	</RecipeDef>
 </Defs>

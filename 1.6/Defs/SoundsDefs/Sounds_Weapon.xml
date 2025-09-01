@@ -2,7 +2,7 @@
 <Defs>
 
     <SoundDef>
-        <defName>GR_disruptor_fire</defName>
+        <defName>GR_EnergyShotgun</defName>
         <context>MapOnly</context>
         <maxSimultaneous>1</maxSimultaneous>
         <subSounds>
@@ -10,6 +10,98 @@
                 <grains>
                     <li Class="AudioGrain_Clip">
                         <clipPath>Weapons/disruptor_fire</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>45</min>
+                    <max>100</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>0.9082353</min>
+                    <max>1.145882</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>GR_EnergySniperRifle</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/GR_EnergySniperRifle</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>45</min>
+                    <max>100</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>0.9082353</min>
+                    <max>1.145882</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>GR_EnergyPDW</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/GR_EnergyPDW</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>45</min>
+                    <max>100</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>0.9082353</min>
+                    <max>1.145882</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>GR_EnergyBattleRifle</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/GR_EnergyBattleRifle</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>
+                    <min>45</min>
+                    <max>100</max>
+                </volumeRange>
+                <pitchRange>
+                    <min>0.9082353</min>
+                    <max>1.145882</max>
+                </pitchRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <SoundDef>
+        <defName>GR_RailSniperRifle</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Weapons/GR_RailSniperRifle</clipPath>
                     </li>
                 </grains>
                 <volumeRange>

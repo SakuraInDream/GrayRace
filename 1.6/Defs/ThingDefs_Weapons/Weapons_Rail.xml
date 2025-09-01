@@ -404,7 +404,7 @@
                 <defaultProjectile>Bullet_GR_RailSniperRifle</defaultProjectile>
                 <warmupTime>2.3</warmupTime>
                 <range>49.9</range>
-                <soundCast>Shot_SniperRifle</soundCast>
+                <soundCast>GR_RailSniperRifle</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
             </li>

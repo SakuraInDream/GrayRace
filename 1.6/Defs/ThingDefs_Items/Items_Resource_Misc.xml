@@ -33,4 +33,67 @@
         </thingSetMakerTags>
         <allowedArchonexusCount>50</allowedArchonexusCount>
     </ThingDef>
+
+    <!--灰潮核心-->
+    <ThingDef ParentName="ResourceBase">
+    <defName>GR_GrayCore</defName>
+    <label>Nanite Core</label>
+    <description>One of the central components constituting the Gray's body. It coordinates the operation of all nanites throughout the body and breaks down any absorbed matter into additional nanites to replenish those expended during normal physiological activities.</description>
+    <graphicData>
+      <texPath>Things/Item/Misc/Nanite_Core</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Ultra</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--仿制灰潮核心-->
+    <ThingDef ParentName="ResourceBase">
+    <defName>GR_GrayCorePoor</defName>
+    <label>Imitation Nanite Core</label>
+    <description>A counterfeit device modeled after the true Nanite Core. It can only maintain basic nanite circulation within a Gray's body but lacks the ability to break down matter into new nanites. Despite its limited functionality, it remains a valuable commodity capable of fetching a high price on the market.</description>
+    <graphicData>
+      <texPath>Things/Item/Misc/Nanite_Core</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>2</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ItemsMisc</li>
+    </thingCategories>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <tradeability>Sellable</tradeability>
+    <techLevel>Ultra</techLevel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+
 </Defs>

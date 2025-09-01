@@ -6,7 +6,7 @@
         <label>Nanites</label>
         <description>A simple and efficient nano-actuator capable of performing complex operations and experiments at the nanoscale.</description>
         <graphicData>
-            <texPath>Things/Item/Resource/Steel</texPath>
+            <texPath>Things/Item/Resource/Nanites</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <soundInteract>Metal_Drop</soundInteract>
@@ -50,6 +50,8 @@
                 <Flammability>0</Flammability>
                 <Mass>0.1</Mass>
                 <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+                <WorkToMake>0.2</WorkToMake>
+                <WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
             </statFactors>
             <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
         </stuffProps>
