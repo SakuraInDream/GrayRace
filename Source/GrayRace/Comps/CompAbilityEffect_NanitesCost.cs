@@ -14,7 +14,7 @@ namespace SD.GrayRace
             get
             {
                 var comp = parent.pawn.TryGetComp<CompResource_Nanites>();
-                return comp?.Value >= Props.nanitesCost;
+                return comp?.CurResource >= Props.nanitesCost;
             }
         }
 
@@ -30,7 +30,7 @@ namespace SD.GrayRace
 
         public override string ExtraTooltipPart()
         {
-            return $"消耗纳米机械：{Props.nanitesCost * 100f}";
+            return $"消耗纳米机械：{Props.nanitesCost * 100f}"; // 待本地化
         }
 
         public override bool GizmoDisabled(out string reason)
@@ -38,13 +38,13 @@ namespace SD.GrayRace
             var resource = parent.pawn.TryGetComp<CompResource_Nanites>();
             if (resource == null)
             {
-                reason = "无使用纳米机械能力";
+                reason = "无使用纳米机械能力"; // 待本地化
                 return true;
             }
 
             if (resource.Value < Props.nanitesCost || Props.nanitesCost > float.Epsilon && Props.nanitesCost > resource.Value)
             {
-                reason = "纳米机械不足";
+                reason = "纳米机械不足"; // 待本地化
                 return true;
             }
 

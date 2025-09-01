@@ -13,10 +13,20 @@ namespace SD.GrayRace
         // 仿造 Gene_Resource
         protected CompResource_Nanites resource;
 
+        protected override float Width => 300f;
+        
         // 正在移动滑条
         private static bool draggingBar;
         
         private static readonly Texture2D NaniteCostTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.2f));
+        private static readonly Texture2D BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.34f, 0.42f, 0.43f));
+        private static readonly Texture2D BarHighlightTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.43f, 0.54f, 0.55f));
+        private static readonly Texture2D EmptyBarTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.03f, 0.035f, 0.05f));
+        // private static readonly Texture2D DragBarTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.74f, 0.97f, 0.8f));
+        
+        private static readonly Texture2D Click = ContentFinder<Texture2D>.Get("UI/Gizmo/Click", true);
+        private static readonly Texture2D Hover = ContentFinder<Texture2D>.Get("UI/Gizmo/Hover", true);
+        private static readonly Texture2D Normal = ContentFinder<Texture2D>.Get("UI/Gizmo/Normal", true);
 
         public Gizmo_NaniteResources(CompResource_Nanites resource)
         {
@@ -31,7 +41,7 @@ namespace SD.GrayRace
         protected override string BarLabel => $"{resource.ValueForDisplay}/{resource.MaxForDisplay}";
         
         // 是否可移动滑条
-        protected override bool IsDraggable => resource.Pawn.IsColonistPlayerControlled || resource.Pawn.IsPrisonerOfColony;
+        protected override bool IsDraggable => false; // resource.Pawn.IsColonistPlayerControlled || resource.Pawn.IsPrisonerOfColony;
 
         protected override int Increments => resource.MaxForDisplay / 10;
 
@@ -39,10 +49,11 @@ namespace SD.GrayRace
 
         protected override FloatRange DragRange => new FloatRange(0f, 1f);
         
+        // 无用
         protected override float Target
         {
-            get => resource.TargetValue / resource.Max;
-            set => resource.TargetValue = value * resource.Props.maxResource;
+            get; // => resource.TargetValue / resource.Max;
+            set;// => resource.TargetValue = value * resource.Props.maxResource;
         }
 
         protected override string Title
@@ -70,9 +81,47 @@ namespace SD.GrayRace
 
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
         {
-            GizmoResult gizmoResult = base.GizmoOnGUI(topLeft, maxWidth, parms);
-            Rect baserect = new Rect(topLeft.x, topLeft.y, GetWidth(maxWidth), 75f);
+            GizmoResult gizmoResult = new GizmoResult(GizmoState.Clear);// base.GizmoOnGUI(topLeft, maxWidth, parms);
+            bool mouseOverElement = false;
+            Rect baseRect = new Rect(topLeft.x, topLeft.y, Width, 75f);
+            Rect innerRect = baseRect.ContractedBy(2f);
+            if (Mouse.IsOver(baseRect))
+            {
+                GRUtils.DrawWindowBackgroundWithTexture(baseRect, Hover);
+            }
+            else
+            { 
+                GRUtils.DrawWindowBackgroundWithTexture(baseRect, Normal);
+            }
             
+            Text.Font = GameFont.Small;
+            Rect textRect = innerRect;
+
+            textRect.height = Text.LineHeight;
+            DrawHeader(textRect, ref mouseOverElement);
+
+            barRect = innerRect.ContractedBy(22f);
+            // barRect.yMin = textRect.yMax + 6f;
+
+            Widgets.FillableBar(barRect, ValuePercent, BarTex, EmptyBarTex, true);
+            foreach (float barThreshold in GetBarThresholds())
+            {
+                GUI.DrawTexture(
+                    new Rect
+                    {
+                        x = barRect.x + 3f + (barRect.width - 6f) * barThreshold,
+                        y = barRect.y + barRect.height - 5f,
+                        width = 2f,
+                        height = 4f
+                    },
+                    (ValuePercent < barThreshold) ? BaseContent.GreyTex : BaseContent.BlackTex
+                );
+            }
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Text.Font = GameFont.Tiny;
+            Widgets.Label(barRect, BarLabel);
+            Text.Anchor = TextAnchor.UpperLeft;
+            Text.Font = GameFont.Small;
             var num = Mathf.Repeat(Time.time, 0.85f);
             var num2 = 1f;
             if (num < 0.1f)
@@ -85,7 +134,7 @@ namespace SD.GrayRace
             }
             
             // 预览消耗多少资源
-            if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability command_Ability && resource.Max >= 0f)
+            if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability command_Ability && resource.Max > 0f)
             {
                 foreach (var effectComp in command_Ability.Ability.EffectComps)
                 {
@@ -114,11 +163,22 @@ namespace SD.GrayRace
             }
             
             // 悬浮提示
-            if (Mouse.IsOver(baserect))
+            if (Mouse.IsOver(barRect))
             {
-                TooltipHandler.TipRegion(baserect, GetTooltip());
+                Widgets.DrawHighlight(barRect);
+                // 意思是这个 uniqueid 必须是已经存在的，否则不显示，或者显示会闪烁
+                TooltipHandler.TipRegion(barRect, GetTooltip,828267373);
             }
             return gizmoResult;
+        }
+
+        protected override void DrawHeader(Rect headerRect, ref bool mouseOverElement)
+        {
+            string text = Title;
+            text = text.Truncate(headerRect.width);
+            Text.Anchor = TextAnchor.MiddleCenter;
+            Widgets.Label(headerRect, text);
+            Text.Anchor = TextAnchor.UpperLeft;
         }
 
         protected override IEnumerable<float> GetBarThresholds()
@@ -128,5 +188,7 @@ namespace SD.GrayRace
                 yield return resource.Props.resourceGizmoThresholds[i];
             }
         }
+
+        
     }
 }

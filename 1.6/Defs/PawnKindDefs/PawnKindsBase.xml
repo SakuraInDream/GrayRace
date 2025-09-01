@@ -73,6 +73,13 @@
             </subOptionsChooseOne>
         </inventoryOptions>
         <biocodeWeaponChance>1</biocodeWeaponChance>
+        <!-- 自带的 Hediff -->
+        <startingHediffs>
+            <li>
+                <def>NanitesRegeneration</def>
+                <severity>1</severity>
+            </li>
+        </startingHediffs>
     </PawnKindDef>
 
     <PawnKindDef ParentName="GR_colonist">

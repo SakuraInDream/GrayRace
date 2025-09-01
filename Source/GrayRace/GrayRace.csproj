@@ -19,7 +19,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>H:\RimWorldMods\RimWorld\Mods\GrayRace\1.6\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -312,12 +312,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="CompAbilityEffect_NanitesCost.cs" />
-    <Compile Include="CompResource_Nanites.cs" />
-    <Compile Include="CompProperties_AbilityNanitesCost.cs" />
-    <Compile Include="CompProperties_Nanites.cs" />
+    <Compile Include="Comps\CompAbilityEffect_NanitesCost.cs" />
+    <Compile Include="Comps\CompProperties_AbilityNanitesCost.cs" />
+    <Compile Include="Comps\CompProperties_Nanites.cs" />
+    <Compile Include="Comps\CompResource_Nanites.cs" />
     <Compile Include="Gizmo_NaniteResources.cs" />
     <Compile Include="GRUtils.cs" />
+    <Compile Include="Hediffs\HediffComp_NanitesRegeneration.cs" />
+    <Compile Include="Hediffs\HediffCompProperties_NanitesRegeneration.cs" />
+    <Compile Include="Hediffs\Hediff_NanitesRegeneration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

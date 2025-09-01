@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.Noise;
@@ -8,8 +9,6 @@ namespace SD.GrayRace
     // 纳米机械资源实现
     public class CompResource_Nanites: ThingComp
     {
-        public float targetValue = 0.5f;
-        
         protected float cur;
         
         protected float max;
@@ -17,15 +16,18 @@ namespace SD.GrayRace
         protected Gizmo_NaniteResources gizmo;
 
         public virtual string ResourceLabel => Props.resourceLabel;
+        
         public Pawn Pawn => parent as Pawn;
-        public CompProperties_Nanites Props => (CompProperties_Nanites)this.props;
+        
+        public CompProperties_Nanites Props => (CompProperties_Nanites)props;
+
         public virtual float InitialResourceMax => Props.maxResource;
 
-        public float TargetValue
+        public bool HasEnoughResource(float cost)
         {
-            get => targetValue;
-            set => targetValue = value;
+            return cur >= cost;
         }
+
         public float CurResource => cur;
 
         public bool CanRegenNanites
@@ -34,51 +36,33 @@ namespace SD.GrayRace
             {
                 if (Pawn.InMentalState || Pawn.Dead || Pawn.Deathresting) return false;
 
-                return Pawn != null && !Pawn.needs.food.Starving && cur <= targetValue;
+                return Pawn != null && !Pawn.needs.food.Starving; // 随时换掉food的判断
             }
         }
-        
+        // 当前资源显示
         public virtual int ValueForDisplay => PostProcessValue(cur);
-
+        
+        // 最大资源显示
         public virtual int MaxForDisplay => PostProcessValue(max);
-
+        // 获取最大资源量
         public virtual float Max => max;
-
+        
+        // 获取当前资源量
         public virtual float Value
         {
             get => cur;
             set => cur = Mathf.Clamp(value, 0f, max);
         }
-
+        // 获取当前资源百分比
         public virtual float ValuePercent
         {
             get => cur / Props.maxResource;
             set => cur = value * Props.maxResource;
         }
 
-        public void SetMax(float newmax)
-        {
-            max = newmax;
-            cur = Mathf.Clamp(cur, 0f, max);
-            SetTargetValuePct(targetValue);
-        }
-
-        public void ResetMax()
-        {
-            max = InitialResourceMax;
-            cur = Mathf.Clamp(cur, 0f, max);
-            SetTargetValuePct(targetValue);
-        }
-
         protected virtual void Reset()
         {
             max = InitialResourceMax;
-            targetValue = 0.5f * max;
-        }
-        
-        public virtual void SetTargetValuePct(float value)
-        {
-            targetValue = value * Max;
         }
 
         public virtual int PostProcessValue(float value) => Mathf.RoundToInt(value * 100f);
@@ -87,7 +71,7 @@ namespace SD.GrayRace
         public override void Initialize(CompProperties prop)
         {
             base.Initialize(prop);
-            targetValue = Props.maxResource * 0.5f;
+            gizmo = new Gizmo_NaniteResources(this);
         }
 
         public override void PostExposeData()
@@ -95,7 +79,6 @@ namespace SD.GrayRace
             base.PostExposeData();
             Scribe_Values.Look(ref cur, "cur");
             Scribe_Values.Look(ref max, "max");
-            Scribe_Values.Look(ref targetValue, "targetValue", 0.5f * max);
         }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
@@ -106,17 +89,18 @@ namespace SD.GrayRace
 
         public override void CompTickInterval(int delta)
         {
-            if (!parent.IsHashIntervalTick(120, delta) || CurResource >= targetValue) return;
-
+            if (!parent.IsHashIntervalTick(60, delta) || CurResource >= Props.maxResource) return;
+            
+            // 还需要一个根据 NeedDef 影响回复速度的判断
             if (CanRegenNanites)
             {
-                cur += Props.regenPerTick;
+                cur += Props.regenPerSecond;
             }
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            yield return new Gizmo_NaniteResources(this);
+            yield return gizmo;
             
             if (DebugSettings.ShowDevGizmos)
             {

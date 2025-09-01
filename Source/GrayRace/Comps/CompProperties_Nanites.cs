@@ -8,7 +8,7 @@ namespace SD.GrayRace
     {
         public float maxResource;
         
-        public float regenPerTick = 0.01f;
+        public float regenPerSecond = 0.01f;
         
         [MustTranslate]
         public string resourceLabel;

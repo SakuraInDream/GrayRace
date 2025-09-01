@@ -264,9 +264,13 @@
             </li>
             <!-- 纳米机械Comp -->
             <li Class="SD.GrayRace.CompProperties_Nanites">
+                <!-- 最大 500 -->
                 <maxResource>5</maxResource>
-                <regenPerTick>0.01</regenPerTick>
+                <!-- 每秒恢复（应该是PerSecond，后面改） -->
+                <regenPerSecond>0.01</regenPerSecond>
+                <!-- 资源名称，可本地化 -> <DefNAME.comps.CompResource_Nanites.resourceLabel> -->
                 <resourceLabel>备用纳米机械</resourceLabel>
+                <!-- gizmo 的下方刻度显示 -->
                 <resourceGizmoThresholds>
                     <li>0.25</li>
                     <li>0.5</li>
