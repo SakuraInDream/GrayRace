@@ -76,7 +76,13 @@ namespace SD.GrayRace
         }
         protected override string GetTooltip()
         {
-            return $"{resource.ResourceLabel.Colorize(ColoredText.TipSectionTitleColor)}: {resource.ValueForDisplay} / {resource.MaxForDisplay}";
+            StringBuilder sb = new StringBuilder();
+            sb.Append($"{resource.ResourceLabel.Colorize(ColoredText.TipSectionTitleColor)}: {resource.ValueForDisplay} / {resource.MaxForDisplay}");
+            if (resource.Props.regenPerSecond > 0f)
+            {
+                sb.Append($"(+{resource.Props.regenPerSecond}/s)");
+            }
+            return sb.ToString();
         }
 
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)

@@ -197,7 +197,7 @@
                 <naturalHealingFactor>0</naturalHealingFactor>
                 <minSeverity>0</minSeverity>
                 <!-- <regeneration>5000</regeneration> -->
-                <painFactor>0</painFactor>
+                <!-- <painFactor>0</painFactor> -->
                 <statOffsets>
                     <!-- 疼痛休克阈值 +100% -->
                     <PainShockThreshold>1</PainShockThreshold>
@@ -207,7 +207,7 @@
         <comps>
             <li Class="SD.GrayRace.HediffCompProperties_NanitesRegeneration">
                 <!-- 每秒消耗 -->
-                <naniteCostPerSeconds>0.01</naniteCostPerSeconds>
+                <naniteCostPerSeconds>0.02</naniteCostPerSeconds>
                 <!-- 每秒恢复 -->
                 <healAmountPerSeconds>1</healAmountPerSeconds>
             </li>
