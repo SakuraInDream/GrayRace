@@ -59,4 +59,3 @@ nunit-*.xml
 /Source/GrayRace/bin
 Source/GrayRace/packages.config
 Source/GrayRace/obj/Debug/GrayRace.csproj.AssemblyReference.cache
-/Source/GrayRace/.vs
