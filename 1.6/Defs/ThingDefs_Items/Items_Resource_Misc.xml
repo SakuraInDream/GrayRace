@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    
-    <!--灰色血肉-->
-    <ThingDef ParentName="ResourceBase">
-        <defName>GR_GrayFlesh</defName>
-        <label>gray flesh</label>
-        <description>A large piece of tissue that constitutes the body of the Gray, whose shape reminds your colonists of some unpleasant memories. Perhaps Nanites can be extracted from it?</description>
-        <graphicData>
-            <texPath>Things/Item/Resource/Misc/GrayMeat</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <soundInteract>Metal_Drop</soundInteract>
-        <soundDrop>Standard_Drop</soundDrop>
-        <stackLimit>200</stackLimit>
-        <healthAffectsPrice>false</healthAffectsPrice>
-        <statBases>
-            <MaxHitPoints>200</MaxHitPoints>
-            <MarketValue>100</MarketValue>
-            <Mass>0.5</Mass>
-            <Flammability>0</Flammability>
-            <DeteriorationRate>0</DeteriorationRate>
-        </statBases>
-        <intricate>true</intricate>
-        <thingCategories>
-            <li>Manufactured</li>
-        </thingCategories>
-        <tradeTags>
-            <li>ExoticMisc</li>
-        </tradeTags>
-        <thingSetMakerTags>
-            <li>RewardStandardCore</li>
-        </thingSetMakerTags>
-        <allowedArchonexusCount>50</allowedArchonexusCount>
-    </ThingDef>
 
-    <!--灰潮核心-->
-    <ThingDef ParentName="ResourceBase">
+  <!--灰色血肉-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>GR_GrayFlesh</defName>
+    <label>gray flesh</label>
+    <description>A large piece of tissue that constitutes the body of the Gray, whose shape reminds your colonists of some unpleasant memories. Perhaps Nanites can be extracted from it?</description>
+    <graphicData>
+      <texPath>Things/Item/Misc/GrayMeat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>200</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>100</MarketValue>
+      <Mass>0.5</Mass>
+      <Flammability>0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
+  </ThingDef>
+
+  <!--灰潮核心-->
+  <ThingDef ParentName="ResourceBase">
     <defName>GR_GrayCore</defName>
     <label>Nanite Core</label>
     <description>One of the central components constituting the Gray's body. It coordinates the operation of all nanites throughout the body and breaks down any absorbed matter into additional nanites to replenish those expended during normal physiological activities.</description>
@@ -66,12 +66,12 @@
   </ThingDef>
 
   <!--仿制灰潮核心-->
-    <ThingDef ParentName="ResourceBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>GR_GrayCorePoor</defName>
     <label>Imitation Nanite Core</label>
     <description>A counterfeit device modeled after the true Nanite Core. It can only maintain basic nanite circulation within a Gray's body but lacks the ability to break down matter into new nanites. Despite its limited functionality, it remains a valuable commodity capable of fetching a high price on the market.</description>
     <graphicData>
-      <texPath>Things/Item/Misc/Nanite_Core</texPath>
+      <texPath>Things/Item/Misc/Imitation</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <resourceReadoutPriority>Middle</resourceReadoutPriority>
@@ -94,6 +94,31 @@
     <tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
+  </ThingDef>
+
+  <!--基本立方-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>GR_FundamentalCube</defName>
+    <label>Fundamental Cube</label>
+    <description>The Fundamental Cube is a perfect metallic cube forged through absolute mastery of the four fundamental forces. Its flawless surface reflects no light and emits no heat, existing in a state of perfect equilibrium. Within its form, gravity is tuned to a standstill, electromagnetic forces are locked in seamless coherence, and the strong and weak nuclear forces are suspended in ultrastable harmony. It serves as both a testament and a tool—allowing interaction with matter at the most fundamental level, manipulating density, inertia, and even atomic stability through thought alone. To observe the Fundamental Cube is to witness the laws of physics rewritten into tangible form.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/FundamentalCube</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+      <Mass>0</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <techLevel>Archotech</techLevel>
   </ThingDef>
 
 </Defs>

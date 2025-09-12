@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--零部件-->
+	<RecipeDef>
+		<defName>GR_Make_ComponentIndustrial_Nanites</defName>
+		<label>make component x2</label>
+		<description>Make component.</description>
+		<jobString>Making component.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>1200</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentIndustrial>2</ComponentIndustrial>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>0</displayPriority>
+	</RecipeDef>
+
+	<!--高级零部件-->
+	<RecipeDef>
+		<defName>GR_Make_ComponentSpacer_Nanites</defName>
+		<label>make advanced component x2</label>
+		<description>Make advanced component.</description>
+		<jobString>Making advanced component.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>2400</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>37</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+				</filter>
+				<count>0.3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+				<li>Gold</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<ComponentSpacer>2</ComponentSpacer>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>1</displayPriority>
+	</RecipeDef>
+
+    <!--钢铁-->
+	<RecipeDef>
+		<defName>GR_Make_Steel</defName>
+		<label>make Steel x100</label>
+		<description>Make Steel.</description>
+		<jobString>Making Steel.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>600</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Steel>100</Steel>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>8</displayPriority>
+	</RecipeDef>
+
+	<!--钢铁2-->
+	<RecipeDef>
+		<defName>GR_Make_Steel_More</defName>
+		<label>make Steel x1000</label>
+		<description>Make Steel.</description>
+		<jobString>Making Steel.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>600</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>500</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Steel>1000</Steel>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>9</displayPriority>
+	</RecipeDef>
+
+	<!--玻璃钢-->
+	<RecipeDef>
+		<defName>GR_Make_Plasteel</defName>
+		<label>make Plasteel x100</label>
+		<description>Make Plasteel.</description>
+		<jobString>Making Plasteel.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>600</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>100</Plasteel>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>10</displayPriority>
+	</RecipeDef>
+
+	<!--玻璃钢2-->
+	<RecipeDef>
+		<defName>GR_Make_Plasteel_More</defName>
+		<label>make Plasteel x1000</label>
+		<description>Make Plasteel.</description>
+		<jobString>Making Plasteel.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>600</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>250</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Plasteel>1000</Plasteel>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>11</displayPriority>
+	</RecipeDef>
+
+	<!--铀-->
+	<RecipeDef>
+		<defName>GR_Make_Uranium</defName>
+		<label>make Uranium x100</label>
+		<description>Make Uranium.</description>
+		<jobString>Making Uranium.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>600</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Uranium>100</Uranium>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>12</displayPriority>
+	</RecipeDef>
+
+	<!--铀2-->
+	<RecipeDef>
+		<defName>GR_Make_Uranium_More</defName>
+		<label>make Uranium x1000</label>
+		<description>Make Uranium.</description>
+		<jobString>Making Uranium.</jobString>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>600</workAmount>
+		<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		<recipeUsers>
+			<li>GR_NaniteTransmuter</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>GR_Nanites</li>
+					</thingDefs>
+				</filter>
+				<count>1000</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>GR_Nanites</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Uranium>1000</Uranium>
+		</products>
+		<workSkill>Crafting</workSkill>
+		<displayPriority>13</displayPriority>
+	</RecipeDef>
+
+</Defs>

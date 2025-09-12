@@ -176,10 +176,6 @@
                     <ArmorRating_Heat>-1</ArmorRating_Heat>
                 </statOffsets>
             </li>
-            <li>
-                <label>Assimilation</label>
-                <minSeverity>1</minSeverity>
-            </li>
         </stages>
     </HediffDef>
 

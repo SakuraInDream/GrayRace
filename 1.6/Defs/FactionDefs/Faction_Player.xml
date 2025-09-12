@@ -6,9 +6,9 @@
     <label>Gray Colonial Vanguard</label>
     <description>A colony of recently-arrived Grays.</description>
     <isPlayer>true</isPlayer>
-    <basicMemberKind>Colonist</basicMemberKind>
-    <pawnSingular>colonist</pawnSingular>
-    <pawnsPlural>colonists</pawnsPlural>
+    <basicMemberKind>GR_colonist</basicMemberKind>
+    <pawnSingular>GR_colonist</pawnSingular>
+    <pawnsPlural>GR_colonist</pawnsPlural>
     <techLevel>Spacer</techLevel>
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
@@ -16,11 +16,11 @@
     <backstoryFilters>
       <li>
         <categories>
-          <li>Offworld</li>
+          <li>GR_Adult</li>
         </categories>
       </li>
     </backstoryFilters>
-    <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+    <factionIconPath>Icon/Faction/Player_Gray</factionIconPath>
     <startingResearchTags>
       <li>ClassicStart</li>
     </startingResearchTags>

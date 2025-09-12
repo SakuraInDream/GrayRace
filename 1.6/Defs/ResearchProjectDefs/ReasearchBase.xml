@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--Alloy Casting 合金铸造-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_AlloyCasting</defName>
+        <label>Alloy Casting</label>
+        <description>Unlocks the production of alloy. This space-age, high-quality metal offers near-perfect toughness, strength, and hardness, while also exhibiting exceptional malleability under specific conditions.</description>
+        <baseCost>1000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <prerequisites>
+            <li>Electricity</li>
+        </prerequisites>
+        <discoveredLetterTitle>About: Alloy production formula</discoveredLetterTitle>
+        <discoveredLetterText>先空着，傻逼泰南的科技联动显示太抽象了，后面写个说明</discoveredLetterText>
+        <techLevel>Industrial</techLevel>
+        <researchViewX>0</researchViewX>
+        <researchViewY>3</researchViewY>
+    </ResearchProjectDef>
+
+
+    <!--Science Nexus 科研枢纽-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_ScienceNexus</defName>
+        <label>Science Nexus</label>
+        <description>Unlock more efficient alloy casting formulas.</description>
+        <baseCost>6000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_AlloyCasting</li>
+        </prerequisites>
+        <techLevel>Ultra</techLevel>
+        <researchViewX>2</researchViewX>
+        <researchViewY>3</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Cosmogenesis 宇！宙！创！生！-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_Cosmogenesis</defName>
+        <label>Cosmogenesis</label>
+        <description>Unlock more efficient alloy casting formulas.</description>
+        <baseCost>20000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_ScienceNexus</li>
+        </prerequisites>
+        <techLevel>Archotech</techLevel>
+        <researchViewX>7</researchViewX>
+        <researchViewY>3</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Alloy process optimization 合金工艺优化-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_AlloyProcessOptimization</defName>
+        <label>Alloy process optimization</label>
+        <description>Unlock more efficient alloy casting formulas.</description>
+        <baseCost>3000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_AlloyCasting</li>
+            <li>Fabrication</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>1</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Nanite Transmuter 纳米变形器-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_NaniteTransmuter</defName>
+        <label>Nanite Transmuter</label>
+        <description>Unlock more efficient alloy casting formulas.</description>
+        <baseCost>10000</baseCost>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>0</techprintCommonality>
+        <heldByFactionCategoryTags>
+            <li>GR_Faction_NPC</li>
+        </heldByFactionCategoryTags>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_AlloyProcessOptimization</li>
+            <li>GR_ScienceNexus</li>
+        </prerequisites>
+        <techLevel>Ultra</techLevel>
+        <researchViewX>3</researchViewX>
+        <researchViewY>1</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Gray Basic Clothing灰裔基础服装-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_BasicClothing</defName>
+        <label>Gray Basic Clothing</label>
+        <description>Unlock Gray's basic clothing</description>
+        <baseCost>500</baseCost>
+        <requiredResearchBuilding>SimpleResearchBench</requiredResearchBuilding>
+        <prerequisites>
+            <li>ComplexClothing</li>
+        </prerequisites>
+        <techLevel>Industrial</techLevel>
+        <researchViewX>1</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Gray Professional Clothing灰裔专业服装-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_ProfessionalClothing</defName>
+        <label>Gray Professional Clothing</label>
+        <description>Unlock Gray's basic clothing</description>
+        <baseCost>750</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <prerequisites>
+            <li>GR_BasicClothing</li>
+        </prerequisites>
+        <techLevel>Industrial</techLevel>
+        <researchViewX>2</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Gray Combat Clothing灰裔战斗服装-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_CombatClothing</defName>
+        <label>Gray Combat Clothing</label>
+        <description>Unlock Gray's basic clothing</description>
+        <baseCost>3000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_ScienceNexus</li>
+            <li>GR_ProfessionalClothing</li>
+            <li>Fabrication</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>3</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Gray Advanced Combat Clothing灰裔高级战斗服装-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_AdvancedCombatClothing</defName>
+        <label>Gray Advanced Combat Clothing</label>
+        <description>Unlock Gray's basic clothing</description>
+        <baseCost>6000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_CombatClothing</li>
+        </prerequisites>
+        <techLevel>Ultra</techLevel>
+        <researchViewX>4</researchViewX>
+        <researchViewY>0</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Energy Weapon 能量武器-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_EnergyWeapon</defName>
+        <label>Energy Weapon</label>
+        <description>Fires high-energy particle beams. These high-density beams are devastating at close range, but suffer from rapid diffusion in atmosphere, drastically reducing their effective range.</description>
+        <baseCost>3000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <prerequisites>
+            <li>GR_AlloyCasting</li>
+            <li>Fabrication</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>1</researchViewX>
+        <researchViewY>4</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Railgun 磁轨武器-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_Railgun</defName>
+        <label>Railgun</label>
+        <description>A kinetic weapon that accelerates projectiles through multi-stage electromagnetic coils. The extremely high muzzle velocity grants superior range and armor penetration, though the relatively low mass of railgun slugs results in slightly reduced damage. Special nanite-composite ammunition can ignore the target's Damage Mitigation.</description>
+        <baseCost>3000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_AlloyCasting</li>
+            <li>Fabrication</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>2</researchViewX>
+        <researchViewY>4</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Science Nexus 聚变反应堆-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_FusionReactor</defName>
+        <label>Fusion Reactor</label>
+        <description>Unlock more efficient alloy casting formulas.</description>
+        <baseCost>8000</baseCost>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>0</techprintCommonality>
+        <heldByFactionCategoryTags>
+            <li>GR_Faction_NPC</li>
+        </heldByFactionCategoryTags>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_ScienceNexus</li>
+        </prerequisites>
+        <techLevel>Ultra</techLevel>
+        <researchViewX>3</researchViewX>
+        <researchViewY>4</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Zro 泽珞-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_Zro</defName>
+        <label>Zro</label>
+        <description>Unlock zro,this is a substance that can greatly enhance spiritual abilities.</description>
+        <baseCost>2000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>4</researchViewX>
+        <researchViewY>4</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Daily Mimicry 生活变形-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_DailyMimicry</defName>
+        <label>Daily Mimicry</label>
+        <description>Unlock Mimicry,this is a substance that can greatly enhance spiritual abilities.</description>
+        <baseCost>1000</baseCost>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>1</researchViewX>
+        <researchViewY>6</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Combat Mimicry 战斗变形-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_CombatMimicry</defName>
+        <label>Combat Mimicry</label>
+        <description>Unlock Mimicry,this is a substance that can greatly enhance spiritual abilities.</description>
+        <baseCost>2000</baseCost>
+        <prerequisites>
+            <li>GR_DailyMimicry</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>2</researchViewX>
+        <researchViewY>6</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Daily plugin 生活插件-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_DailyPlugin</defName>
+        <label>Daily Plugin</label>
+        <description>Unlock plugin,this is a substance that can greatly enhance spiritual abilities.</description>
+        <baseCost>3000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_CombatMimicry</li>
+            <li>GR_ScienceNexus</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>3</researchViewX>
+        <researchViewY>6</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Combat plugin 战斗插件-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_CombatPlugin</defName>
+        <label>Combat Plugin</label>
+        <description>Unlock plugin,this is a substance that can greatly enhance spiritual abilities.</description>
+        <baseCost>4000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_DailyPlugin</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>4</researchViewX>
+        <researchViewY>6</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T1 Weapon Tech T1武器科技-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T1WeaponTech</defName>
+        <label>T1 Weapon Tech</label>
+        <description>Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns.</description>
+        <baseCost>1500</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <prerequisites>
+            <li>GR_AlloyCasting</li>
+            <li>Fabrication</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>1</researchViewX>
+        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T2 Weapon Tech T2武器科技-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T2WeaponTech</defName>
+        <label>T2 Weapon Tech</label>
+        <description>Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns.</description>
+        <baseCost>3000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_T1WeaponTech</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>2</researchViewX>
+        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T3 Weapon Tech T3武器科技-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T3WeaponTech</defName>
+        <label>T3 Weapon Tech</label>
+        <description>Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance.</description>
+        <baseCost>5000</baseCost>
+        <techprintCount>1</techprintCount>
+        <techprintCommonality>0</techprintCommonality>
+        <heldByFactionCategoryTags>
+            <li>GR_Faction_NPC</li>
+        </heldByFactionCategoryTags>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_T2WeaponTech</li>
+            <li>GR_ScienceNexus</li>
+        </prerequisites>
+        <techLevel>Ultra</techLevel>
+        <researchViewX>3</researchViewX>
+        <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T1 Mech Tech T1机械科技-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T1MechTech</defName>
+        <label>T1 Mech Tech</label>
+        <description>Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns.</description>
+        <baseCost>1000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <prerequisites>
+            <li>GR_AlloyCasting</li>
+            <li>BasicMechtech</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>1</researchViewX>
+        <researchViewY>5</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T2 Mech Tech T2机械科技-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T2MechTech</defName>
+        <label>T2 Mech Tech</label>
+        <description>Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns.</description>
+        <baseCost>2500</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_T1MechTech</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>2</researchViewX>
+        <researchViewY>5</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T3 Mech Tech T3机械科技-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T3MechTech</defName>
+        <label>T3 Mech Tech</label>
+        <description>Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance.</description>
+        <baseCost>6000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_T2MechTech</li>
+            <li>GR_ScienceNexus</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>3</researchViewX>
+        <researchViewY>5</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T4 Mech Tech T4机械科技-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T4MechTech</defName>
+        <label>T4 Mech Tech</label>
+        <description>Unlocks Tier 4 weaponry. These weapons are generally classified as heavy ordnance.</description>
+        <baseCost>10000</baseCost>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <prerequisites>
+            <li>GR_T3MechTech</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <researchViewX>4</researchViewX>
+        <researchViewY>5</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T5 Mech Tech T5机械科技-->
+    <ResearchProjectDef ParentName="MechtechBase">
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T5Mechtech</defName>
+        <label>T5 Mech Tech</label>
+        <description>The technology needed for your mechanitor to create and control high-tier mechanoids.\n\nYou can get powerfocus chips by using a mechanitor to summon a war queen threat.</description>
+        <baseCost>15000</baseCost>
+        <techprintMarketValue>4000</techprintMarketValue>
+        <prerequisites>
+            <li>GR_T4MechTech</li>
+        </prerequisites>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <requiredAnalyzed>
+            <li>PowerfocusChip</li>
+        </requiredAnalyzed>
+        <techLevel>Ultra</techLevel>
+        <researchViewX>5</researchViewX>
+        <researchViewY>5</researchViewY>
+    </ResearchProjectDef>
+
+    <!--T6 Mech Tech T6机械科技-->
+    <ResearchProjectDef ParentName="MechtechBase">
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_T6Mechtech</defName>
+        <label>T6 Mech Tech</label>
+        <description>The advanced technology needed for your mechanitor to create and control ultra-tier mechanoids, including large mechs and ultra-tier mechanitor gear.\n\nYou can get nano structuring chips by using a mechanitor to summon an apocriton threat.</description>
+        <baseCost>20000</baseCost>
+        <techprintMarketValue>6000</techprintMarketValue>
+        <prerequisites>
+            <li>GR_T5Mechtech</li>
+        </prerequisites>
+        <requiredResearchFacilities>
+            <li>GR_ScienceNexus</li>
+        </requiredResearchFacilities>
+        <requiredAnalyzed>
+            <li>NanostructuringChip</li>
+        </requiredAnalyzed>
+        <techLevel>Ultra</techLevel>
+        <researchViewX>6</researchViewX>
+        <researchViewY>5</researchViewY>
+    </ResearchProjectDef>
+
+</Defs>
