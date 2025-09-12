@@ -14,7 +14,7 @@
       </groups>
       <parts>
         <li>
-          <def>Heart</def>
+          <def>Nano_Heart</def>
           <coverage>0.01</coverage>
           <depth>Inside</depth>
           <groups>
@@ -39,7 +39,7 @@
               </groups>
               <parts>
                 <li>
-                  <def>Brain</def>
+                  <def>Nano_Brain</def>
                   <coverage>0.18</coverage>
                   <depth>Inside</depth>
                   <groups>

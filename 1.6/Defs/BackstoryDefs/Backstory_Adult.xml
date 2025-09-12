@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <AlienRace.AlienBackstoryDef Name="GR_BaseBackstory_Adult" Abstract="True">
+        <disallowedTraitsChance>
+        </disallowedTraitsChance>
+        <forcedHediffs>
+        </forcedHediffs>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+            <li>GR_Adult</li>
+        </spawnCategories>
+    </AlienRace.AlienBackstoryDef>
+
+    <!--理想城冶金师-->
+    <AlienRace.AlienBackstoryDef ParentName="GR_BaseBackstory_Adult">
+        <defName>GR_Metallurgist</defName>
+        <title>Gray Arcology Metallurgist</title>
+        <titleShort>Metallurgist</titleShort>
+        <description>Before joining the Colonial Advance Team, {PAWN_nameDef} worked as a metallurgist on an ecumenopolis. She was obsessed with the molten metal spraying from smelting crucibles—those visions of liquid light boiling into fireworks in the air enthralled her. For nearly a decade, she hardly realized she was single-handedly overseeing the operation of an entire alloy plant.\n But this obsession never receded; her willingness to engage with others faded like white smoke after spent fireworks.</description>
+        <forcedTraits>
+            <Recluse>0</Recluse>
+        </forcedTraits>
+        <passions>
+            <Crafting>2</Crafting>
+            <Social>-1</Social>
+        </passions>
+        <skillGains>
+            <Crafting>9</Crafting>
+            <Social>-6</Social>
+        </skillGains>
+        <spawnCategories>
+            <li>GR_Work</li>
+            <li>GR_volunteer</li>
+        </spawnCategories>
+    </AlienRace.AlienBackstoryDef>
+
+    <!--陆战队队员-->
+    <AlienRace.AlienBackstoryDef ParentName="GR_BaseBackstory_Adult">
+        <defName>GR_Marine</defName>
+        <title>Gray Marine</title>
+        <titleShort>Marine</titleShort>
+        <description>The mortar of war ground {PAWN_nameDef}’s original personality into dust—after traversing dozens of times through fields of death woven from blood and artillery fire, she was reforged into cold, unyielding iron.\n Yet, after repeatedly witnessing the deaths of comrades due to empty supply crates, fear has completely overrun reason. Now, she jumps at her own shadow.</description>
+        <forcedTraits>
+            <Nerves>-1</Nerves>
+        </forcedTraits>
+        <passions>
+            <Shooting>1</Shooting>
+            <Melee>1</Melee>
+            <Social>-1</Social>
+        </passions>
+        <skillGains>
+            <Shooting>6</Shooting>
+            <Melee>6</Melee>
+            <Social>-6</Social>
+        </skillGains>
+        <spawnCategories>
+            <li>GR_Combat</li>
+            <li>GR_volunteer</li>
+        </spawnCategories>
+    </AlienRace.AlienBackstoryDef>
+
+    <!--基因医生-->
+    <AlienRace.AlienBackstoryDef ParentName="GR_BaseBackstory_Adult">
+        <defName>GR_GeneDoctor</defName>
+        <title>Gray Gene Clinic Doctor</title>
+        <titleShort>Gene Doctor</titleShort>
+        <description>Before becoming a clinic doctor, {PARA_nameDef} was a researcher at a renowned biotechnology institute. After the war, alien creatures were shipped to the facility crate after crate.\n The helpless cries of extraterrestrial species, treated like livestock, were merely metrics confirming their vitality.\n So she left that place and swore never to return. Hearing that the Advance Team might encounter wild alien species on frontier planets, she boarded one of the first ships as if seeking redemption.</description>
+        <forcedTraits>
+            <Kind>0</Kind>
+        </forcedTraits>
+        <passions>
+            <Medicine>1</Medicine>
+        </passions>
+        <skillGains>
+            <Medicine>6</Medicine>
+            <Intellectual>3</Intellectual>
+        </skillGains>
+        <spawnCategories>
+            <li>GR_Work</li>
+            <li>GR_volunteer</li>
+        </spawnCategories>
+    </AlienRace.AlienBackstoryDef>
+
+</Defs>

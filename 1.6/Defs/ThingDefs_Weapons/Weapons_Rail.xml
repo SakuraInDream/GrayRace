@@ -16,8 +16,13 @@
             <li>ShortShots</li>
             <li>RangedHeavy</li>
         </weaponClasses>
-        <recipeMaker>
-            <researchPrerequisite>GasOperation</researchPrerequisite>
+        <recipeMaker Inherit="False">
+            <recipeUsers>
+                <li>GR_NaniteReconfigurator</li>
+            </recipeUsers>
+            <researchPrerequisites>
+                <li>GR_Railgun</li>
+            </researchPrerequisites>
             <skillRequirements>
                 <Crafting>6</Crafting>
             </skillRequirements>
@@ -25,6 +30,7 @@
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
+        <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>24000</WorkToMake>
             <Mass>3.5</Mass>
@@ -107,10 +113,13 @@
         <weaponClasses>
             <li>ShortShots</li>
         </weaponClasses>
-        <recipeMaker>
-            <researchPrerequisite>GasOperation</researchPrerequisite>
+        <recipeMaker Inherit="False">
+            <researchPrerequisites>
+                <li>GR_Railgun</li>
+                <li>GR_T1WeaponTech</li>
+            </researchPrerequisites>
             <recipeUsers>
-                <li>TableMachining</li>
+                <li>GR_NaniteReconfigurator</li>
             </recipeUsers>
             <skillRequirements>
                 <Crafting>8</Crafting>
@@ -119,6 +128,7 @@
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
+        <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>31000</WorkToMake>
             <Mass>4.5</Mass>
@@ -198,15 +208,22 @@
         </graphicData>
         <equippedAngleOffset>45</equippedAngleOffset>
         <soundInteract>Interact_Rifle</soundInteract>
-        <recipeMaker>
-            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+        <recipeMaker Inherit="False">
+            <researchPrerequisites>
+                <li>GR_Railgun</li>
+                <li>GR_T1WeaponTech</li>
+            </researchPrerequisites>
             <skillRequirements>
                 <Crafting>10</Crafting>
             </skillRequirements>
+            <recipeUsers>
+                <li>GR_NaniteReconfigurator</li>
+            </recipeUsers>
         </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
+        <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>40000</WorkToMake>
             <Mass>3.5</Mass>
@@ -304,14 +321,19 @@
             <GR_Alloy>160</GR_Alloy>
             <GR_Nanites>100</GR_Nanites>
         </costList>
-        <recipeMaker>
-            <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+        <recipeMaker Inherit="False">
+            <researchPrerequisites>
+                <li>GR_Railgun</li>
+                <li>GR_T2WeaponTech</li>
+            </researchPrerequisites>
             <skillRequirements>
-                <Crafting>7</Crafting>
+                <Crafting>12</Crafting>
             </skillRequirements>
-            <displayPriority>450</displayPriority>
+            <recipeUsers>
+                <li>GR_NaniteReconfigurator</li>
+            </recipeUsers>
         </recipeMaker>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Spacer</techLevel>
         <weaponTags>
             <li>GunHeavy</li>
             <li>Minigun</li>
@@ -375,15 +397,22 @@
             <li>LongShots</li>
             <li>RangedHeavy</li>
         </weaponClasses>
-        <recipeMaker>
-            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+        <recipeMaker Inherit="False">
+            <researchPrerequisites>
+                <li>GR_Railgun</li>
+                <li>GR_T2WeaponTech</li>
+            </researchPrerequisites>
             <skillRequirements>
                 <Crafting>12</Crafting>
             </skillRequirements>
+            <recipeUsers>
+                <li>GR_NaniteReconfigurator</li>
+            </recipeUsers>
         </recipeMaker>
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
+        <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>45000</WorkToMake>
             <Mass>4</Mass>
@@ -480,14 +509,19 @@
             <GR_Alloy>240</GR_Alloy>
             <GR_Nanites>200</GR_Nanites>
         </costList>
-        <recipeMaker>
-            <researchPrerequisite>MultibarrelWeapons</researchPrerequisite>
+        <recipeMaker Inherit="False">
+            <researchPrerequisites>
+                <li>GR_Railgun</li>
+                <li>GR_T3WeaponTech</li>
+            </researchPrerequisites>
             <skillRequirements>
-                <Crafting>7</Crafting>
+                <Crafting>14</Crafting>
             </skillRequirements>
-            <displayPriority>450</displayPriority>
+            <recipeUsers>
+                <li>GR_NaniteReconfigurator</li>
+            </recipeUsers>
         </recipeMaker>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Ultra</techLevel>
         <weaponTags>
             <li>GunHeavy</li>
         </weaponTags>

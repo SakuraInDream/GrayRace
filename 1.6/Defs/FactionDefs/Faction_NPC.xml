@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <FactionDef Name="Atlas_Faction">
+        <defName>GR_Faction_NPC</defName>
+        <label>&lt;color=#00ff9b>&lt;b>德萨努协约国&lt;/b>&lt;/color></label>
+        <description>德萨努协约国是最初的建门者，失控的灰蛊风暴彻底摧毁德萨努协约国之前，他们关闭了所有的L星门。许久之后，灰蛊风暴将自己伪装成德萨努的社会，以试图寻找重新打开L星门的办法，最终也没有任何成果。而现如今的德萨努协约国，仅仅是灰裔先遣队借用这个名字组成的临时组织。</description>
+        <pawnsPlural>灰蛊</pawnsPlural>        <!--该派系"Pawn棋子"的复数称谓-->
+        <fixedName>&lt;color=#00ff9b>&lt;b>德萨努协约国&lt;/b>&lt;/color></fixedName>
+        <canSiege>false</canSiege>        <!--是否围攻:否-->
+        <canStageAttacks>true</canStageAttacks>        <!--可以发动攻击:是-->
+        <leaderTitle>总统</leaderTitle>        <!-- 领袖称呼 -->
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>        <!--派系必须数量-->
+        <maxConfigurableAtWorldCreation>8</maxConfigurableAtWorldCreation>        <!--在创建世界时这个"派系"做多能设置的数量.-->
+        <factionIconPath>Icon/Faction/Gray</factionIconPath>        <!--派系贴图的文件路径-->
+        <fixedLeaderKinds>
+            <li>GR_leader</li>            <!-- 派系领袖 -->
+        </fixedLeaderKinds>
+        <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>        <!-- 当产生新领袖时，是否总是生成一个新的成员 -->
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>        <!--外来殖民者-->
+        <techLevel>Archotech</techLevel>        <!--科技等级-->
+        <settlementGenerationWeight>0.5</settlementGenerationWeight>        <!--据点生成数量比值.数值越高,该派系据点数量越多.-->
+        <backstoryFilters>            <!--背景故事限制-->
+            <li>
+                <categories>
+                    <li>GR_Adult</li>                    <!--外来者-->
+                </categories>
+            </li>
+        </backstoryFilters>
+        <caravanTraderKinds>            <!--呼叫商队-->
+            <li>Caravan_Outlander_BulkGoods</li>
+            <li>Caravan_Outlander_Exotic</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>            <!--游客商队-->
+            <li>Visitor_Outlander_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>            <!--基地贸易-->
+            <li>Base_Outlander_Standard</li>
+        </baseTraderKinds>
+        <autoFlee>true</autoFlee>        <!--自动逃离:否-->
+        <hidden>false</hidden>
+        <allowedArrivalTemperatureRange>            <!--袭击需要的温度-->
+            <min>-273</min>
+            <max>1453</max>
+        </allowedArrivalTemperatureRange>
+        <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+        <raidLootValueFromPointsCurve>            <!--营地战利品价值?-->
+            <points>
+                <li>(35, 	15)</li>
+                <li>(100, 	120)</li>
+                <li>(1000, 	500)</li>
+                <li>(2000, 	800)</li>
+                <li>(4000,	1000)</li>
+            </points>
+        </raidLootValueFromPointsCurve>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Combat</kindDef>                <!--正常袭击-->
+                <commonality>100</commonality>
+                <disallowedStrategies>
+                    <li>Siege</li>
+                </disallowedStrategies>
+                <options>                    <!-- 不知道什么毛病，1.5的时候突然出现的？ 机械体比例得在原来数值×300倍 之前pawn设置异种族出过一回问题，保留这个注释免得忘了。  -->
+                    <GR_leader>5</GR_leader>
+                    <GR_colonist>10</GR_colonist>
+                </options>
+            </li>
+            <li>
+                <kindDef>Peaceful</kindDef>                <!--支援-->
+                <commonality>100</commonality>
+                <options>                    <!--正常袭击-->
+                    <GR_colonist>10</GR_colonist>
+                    <GR_leader>15</GR_leader>
+                </options>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>                <!--派系营地防守情况-->
+                <options>
+                    <GR_leader>2</GR_leader>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <GR_leader>1</GR_leader>
+                </traders>
+                <carriers>
+                    <GR_colonist>16</GR_colonist>
+                </carriers>
+                <guards>
+                    <GR_colonist>80</GR_colonist>
+                </guards>
+            </li>
+        </pawnGroupMakers>
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <requiredMemes MayRequire="Ludeon.RimWorld.Ideology">
+            <li>Structure_Ideological</li>            <!--结构:无神论-->
+            <li>HumanPrimacy</li>
+            <li>Collectivist</li>
+        </requiredMemes>
+        <disallowedMemes MayRequire="Ludeon.RimWorld.Ideology">
+            <li>HighLife</li>            <!--化学极乐-->
+            <li>Supremacist</li>            <!--霸权主义-->
+            <li>Raider</li>            <!--劫掠成性-->
+            <li>PainIsVirtue</li>            <!--苦痛主义-->
+            <li>MaleSupremacy</li>            <!--男性至上-->
+            <li>FemaleSupremacy</li>            <!--女性至上-->
+            <li>Cannibal</li>            <!--食人狂热-->
+            <li>HAR_Xenophobia</li>            <!--异族摈斥-->
+            <li MayRequire="Ludeon.RimWorld.Biotech">Bloodfeeding</li>            <!--吸血热忱-->
+        </disallowedMemes>
+       
+    </FactionDef>
+
+</Defs>

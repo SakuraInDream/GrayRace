@@ -25,7 +25,7 @@
                 <immuneToAge>true</immuneToAge>                <!-- 不受年龄影响 -->
                 <humanRecipeImport>true</humanRecipeImport>                <!--可使用人类手术配方-->
                 <canLayDown>true</canLayDown>                <!-- 是否会受伤倒地 -->
-                <maxDamageForSocialfight>1</maxDamageForSocialfight>                <!--最大打架几率-->
+                <maxDamageForSocialfight>5</maxDamageForSocialfight>                <!--最大打架伤害-->
                 <immuneToXenophobia>true</immuneToXenophobia>                <!--禁用仇外主义-->
                 <disallowedTraits>                    <!--该种族禁用特性-->
                     <li>

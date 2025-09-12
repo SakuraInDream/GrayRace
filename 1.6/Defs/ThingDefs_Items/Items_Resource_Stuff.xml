@@ -12,8 +12,8 @@
         <soundInteract>Metal_Drop</soundInteract>
         <soundDrop>Metal_Drop</soundDrop>
         <statBases>
-            <MarketValue>0</MarketValue>
-            <Mass>0.001</Mass>
+            <MarketValue>0.3</MarketValue>
+            <Mass>0.1</Mass>
             <StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
             <StuffPower_Armor_Blunt>0.8</StuffPower_Armor_Blunt>
             <StuffPower_Armor_Heat>0.2</StuffPower_Armor_Heat>
@@ -102,7 +102,7 @@
             <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
             <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
             <statFactors>
-                <MaxHitPoints>10</MaxHitPoints>
+                <MaxHitPoints>15</MaxHitPoints>
                 <Flammability>0</Flammability>
                 <Mass>0.8</Mass>
                 <MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
