@@ -22,6 +22,8 @@ namespace SD.GrayRace
         public CompProperties_Nanites Props => (CompProperties_Nanites)props;
 
         public virtual float InitialResourceMax => Props.maxResource;
+        
+        public float RegenPerSecond { get; set; }
 
         public bool HasEnoughResource(float cost)
         {
@@ -72,6 +74,7 @@ namespace SD.GrayRace
         {
             base.Initialize(prop);
             gizmo = new Gizmo_NaniteResources(this);
+            RegenPerSecond = Props.regenPerSecond;
         }
 
         public override void PostExposeData()
@@ -94,7 +97,7 @@ namespace SD.GrayRace
             // 还需要一个根据 NeedDef 影响回复速度的判断
             if (CanRegenNanites)
             {
-                cur += Props.regenPerSecond;
+                cur += RegenPerSecond;
             }
         }
 

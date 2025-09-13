@@ -266,7 +266,7 @@
             <li Class="SD.GrayRace.CompProperties_Nanites">
                 <!-- 最大 500 -->
                 <maxResource>5</maxResource>
-                <!-- 每秒恢复（应该是PerSecond，后面改） -->
+                <!-- 每秒恢复 -->
                 <regenPerSecond>0.01</regenPerSecond>
                 <!-- 资源名称，可本地化 -> <DefNAME.comps.CompResource_Nanites.resourceLabel> -->
                 <resourceLabel>备用纳米机械</resourceLabel>

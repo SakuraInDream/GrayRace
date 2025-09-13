@@ -140,7 +140,6 @@ namespace SD.GrayRace
                 if (maxHealable <= 0f) continue;
 
                 var cost = maxHealable / Pros.healAmountPerSeconds * Pros.naniteCostPerSeconds;
-                
                 if (GRUtils.TryConsumeNanites(Pawn, cost))
                 { 
                     if(injury.Bleeding || injury.TendableNow()) 
@@ -288,17 +287,17 @@ namespace SD.GrayRace
 
             if (resNanites.CurResource < Pros.naniteCostPerSeconds) return;
             
-            Log.Message($"InCompTick");
+            // Log.Message($"InCompTick");
             // 每 300tick 重建一次伤口和断肢列表
             if (Pawn.IsHashIntervalTick(300))
             {
-                Log.Message("HashIntervalTick 300");
+                // Log.Message("HashIntervalTick 300");
                 RefreshTmpHediffLists();
             }
 
             if (Pawn.IsHashIntervalTick(600, delta))
             { 
-                Log.Message("HashIntervalTick 600");
+                // Log.Message("HashIntervalTick 600");
                 NaniteHeal_NewTemp();
             };
             

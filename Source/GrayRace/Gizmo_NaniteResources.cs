@@ -78,9 +78,9 @@ namespace SD.GrayRace
         {
             StringBuilder sb = new StringBuilder();
             sb.Append($"{resource.ResourceLabel.Colorize(ColoredText.TipSectionTitleColor)}: {resource.ValueForDisplay} / {resource.MaxForDisplay}");
-            if (resource.Props.regenPerSecond > 0f)
+            if (resource.RegenPerSecond > 0f)
             {
-                sb.Append($"(+{resource.Props.regenPerSecond}/s)");
+                sb.Append($"(+{resource.RegenPerSecond * 100}/s)");
             }
             return sb.ToString();
         }
