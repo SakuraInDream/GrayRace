@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef Name="BaseNaniteRaceRecipe" Abstract="True">
+    <jobString>开始制造灰裔。</jobString>
+    <workAmount>1800</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <soundWorking>MechGestatorCycle_Initiating</soundWorking>
+  </RecipeDef>
+
+  <RecipeDef ParentName="BaseNaniteRaceRecipe">
+    <defName>GRRecipe_GrayRace</defName>
+    <label>基础型灰裔</label>
+    <description>培育一名基础型灰裔。</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_GrayCore</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AIPersonaCore</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <!-- 可能要根据这个来控制培育的PawnKindDef -->
+      <!-- <Gray_Race>1</Gray_Race> -->
+    </products>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Solider</defName>
+    <label>人格基底 - 士兵</label>
+    <description>为了快速投入战斗而设计的人格基底，有着基础的格斗技能与射击及枪支使用、维护等经验。</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AIPersonaCore</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <!-- 具体的人格基底需要加入这个ModExtensions -->
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <!-- 填 BackstoryDef 的 defName -->
+        <!-- 自动绑定到幼年背景 -->
+        <newBornBackstory>MilitaryChild82</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+</Defs>

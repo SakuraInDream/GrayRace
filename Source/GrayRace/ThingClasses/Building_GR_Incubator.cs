@@ -1,0 +1,405 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using RimWorld;
+using SD.GrayRace.Attributes;
+using SD.GrayRace.DefModExtensions;
+using UnityEngine;
+using Verse;
+using Verse.Sound;
+
+namespace SD.GrayRace.ThingClasses
+{
+    public enum IncubatorState
+    {
+        [Localized("空闲")]
+        Idle,
+        [Localized("准备材料")]
+        Preparing,
+        [Localized("培育中")]
+        Incubating,
+        [Localized("培育完成")]
+        Finished
+    }
+    // 消耗纳米机械和电力进行培育
+    // 配合个 ITab() 显示当前培育状态：比如剩余时间、所需材料、纳米机械数量、放入的人格显示
+    [StaticConstructorOnStartup]
+    public class Building_GRIncubator: Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn, IThingHolder
+    {
+        public RecipeDef selectedRecipe;
+
+        public RecipeDef foundationRecipe;
+
+        [Unsaved]
+        private CompPowerTrader power;
+
+        private float containedNanites;
+
+        public StorageSettings allowedNutritionSettings;
+
+        public IncubatorState State = IncubatorState.Idle;
+
+        // 改，都可以改
+        private const float NanitesConsumed = 6f;
+
+        private float NanitesConsumedPerDay
+        {
+            get
+            {
+                var consumedPerDay = State == IncubatorState.Incubating ? NanitesConsumed : 0f;
+
+                return consumedPerDay;
+            }
+        }
+
+        public CompPowerTrader PowerTraderComp => power ??= this.TryGetComp<CompPowerTrader>();
+        public bool PoweredOn => PowerTraderComp.PowerOn;
+
+        public List<RecipeDef> ModExtensionRecipes = DefDatabase<RecipeDef>.AllDefsListForReading.Where(t=> t.HasModExtension<DefModExtension_RecipeNewBorn>()).ToList();
+
+        public override AcceptanceReport CanAcceptPawn(Pawn p)
+        {
+            if (Working)
+            {
+                return "Occupied".Translate();
+            }
+
+            if (!PoweredOn)
+            {
+                return "NoPower".Translate().CapitalizeFirst();
+            }
+
+            if(selectedPawn != null && selectedPawn != p)
+            {
+                return "WaitingForPawn".Translate(selectedPawn.Named("PAWN"));
+            }
+
+            if (selectedPawn != null && !selectedPawn.IsGrayRace())
+            {
+                return "非灰裔".Translate();
+            }
+
+            return p.IsColonist && !p.IsQuestLodger();
+        }
+
+        public override void TryAcceptPawn(Pawn p)
+        {
+            if (selectedPawn != null && CanAcceptPawn(p))
+            {
+                selectedPawn = p;
+                if (innerContainer.TryAddOrTransfer(p))
+                {
+                    SoundDefOf.GrowthVat_Close.PlayOneShot(SoundInfo.InMap(this));
+                    startTick = Find.TickManager.TicksGame;
+                    // 这里可能要加点在培育舱里面的逻辑，比如添加个状态，学习加速等
+
+                }
+                if (p.DeSpawnOrDeselect())
+                {
+                    Find.Selector.Select(p, false, false);
+                }
+            }
+        }
+
+        public override void PostMake()
+        {
+            base.PostMake();
+            allowedNutritionSettings = new StorageSettings(this);
+            if(def.building.defaultStorageSettings != null)
+                allowedNutritionSettings.CopyFrom(def.building.defaultStorageSettings);
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+        }
+
+        public override bool IsWorking()
+        {
+            return base.IsWorking();
+        }
+
+        public override IEnumerable<Gizmo> GetGizmos()
+        {
+            foreach (var gizmo in base.GetGizmos())
+            {
+                yield return gizmo;
+            }
+            if (State == IncubatorState.Idle)
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "开始培育准备",
+                    defaultDesc = "放入培育准备材料。",
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/DesirePower"),
+                    action = () =>
+                    {
+                        State = IncubatorState.Preparing;
+                        var recipe = def.recipes.FirstOrDefault();
+                        selectedRecipe = recipe;
+                    }
+                };
+            }
+            if (State == IncubatorState.Preparing)
+            {
+                var command_startIncubation = new Command_Action
+                {
+                    defaultLabel = "开始培育",
+                    defaultDesc = "启动培育程序",
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/DesirePower"),
+                    action = () =>
+                    {
+                        startTick = Find.TickManager.TicksGame;
+                        State = IncubatorState.Incubating;
+                    }
+                };
+                yield return command_startIncubation;
+                if (selectedRecipe == null)
+                {
+                    command_startIncubation.Disable("请先选择培育清单");
+                }
+                else if (!AllRequiredIngredientsLoaded)
+                {
+                    command_startIncubation.Disable("所需材料不足");
+                }
+                else if (!PoweredOn)
+                {
+                    command_startIncubation.Disable("没有电力");
+                }
+
+                yield return new Command_Action
+                {
+                    defaultLabel = "取消准备",
+                    defaultDesc = "",
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/DesirePower"),
+                    action = () =>
+                    {
+                        State = IncubatorState.Idle;
+                        selectedRecipe = null;
+                        foundationRecipe = null;
+                        EjectContents();
+                    }
+                };
+            }
+
+            if(State == IncubatorState.Preparing && selectedRecipe != null && foundationRecipe == null)
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "添加人格基底",
+                    defaultDesc = "添加人格基底以培育不同类型的灰裔。",
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/DesirePower"),
+                    action = () =>
+                    {
+                        List<FloatMenuOption> options = new List<FloatMenuOption>();
+                        // Find.WindowStack.Add(new Dialog_SelectForIncubator(this));
+                        foreach (var recipe in ModExtensionRecipes)
+                        {
+                            options.Add(new FloatMenuOption(recipe.LabelCap, () =>
+                            {
+                                foundationRecipe = recipe;
+                            }));
+                        }
+
+                        Find.WindowStack.Add(new FloatMenu(options));
+                    }
+                };
+            }
+        }
+
+        public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
+        {
+            foreach (var floatMenuOption in base.GetFloatMenuOptions(selPawn))
+            {
+                yield return floatMenuOption;
+            }
+        }
+
+        public override string GetInspectString()
+        {
+            StringBuilder sb = new StringBuilder(base.GetInspectString());
+            sb.Append($"\n当前状态：{State.ToLocalizedString()}");
+            if (selectedPawn != null)
+            {
+                sb.AppendLine("\n当前加速培育: " + selectedPawn.LabelCap);
+            }
+            if(selectedRecipe != null)
+            {
+                sb.Append("\n当前培育: " + selectedRecipe.LabelCap + "\n");
+                sb.Append("所需材料: ");
+                foreach (var ingredient in selectedRecipe.ingredients)
+                {
+                    sb.Append($"{ingredient.FixedIngredient.label} x{ingredient.GetBaseCount() - innerContainer.TotalStackCountOfDef(ingredient.FixedIngredient)} ");
+                }
+            }
+            return sb.ToString();
+        }
+
+        public override Vector3 PawnDrawOffset => CompBiosculpterPod.FloatingOffset(Find.TickManager.TicksGame);
+
+        public StorageSettings GetStoreSettings()
+        {
+            return allowedNutritionSettings;
+        }
+
+        public StorageSettings GetParentStoreSettings()
+        {
+            return def.building.fixedStorageSettings;
+        }
+
+        public void Notify_SettingsChanged()
+        {
+        }
+
+        public bool StorageTabVisible => true;
+
+        public float HeldPawnDrawPos_Y => DrawPos.y + 0.03658537f;
+
+        public float HeldPawnBodyAngle => Rotation.AsAngle;
+
+        public PawnPosture HeldPawnPosture => PawnPosture.LayingOnGroundFaceUp;
+
+        protected override void Tick()
+        {
+            base.Tick();
+            if (this.IsHashIntervalTick(250))
+            {
+                PowerTraderComp.PowerOutput = State == IncubatorState.Incubating ? -PowerTraderComp.Props.PowerConsumption : -PowerTraderComp.Props.idlePowerDraw;
+            }
+            if (State == IncubatorState.Incubating)
+            {
+                containedNanites -= 1f / 60000f;
+                if (containedNanites <= 0f)
+                {
+                    TryAbsorbNanites();
+                }
+
+                if (startTick > 0 && Find.TickManager.TicksGame - startTick >= 600)
+                {
+                    Birth();
+                    Finsh();
+                }
+            }
+        }
+
+        protected override void TickInterval(int delta)
+        {
+            base.TickInterval(delta);
+        }
+
+        public IEnumerable<IntVec3> IngredientStackCells => GenAdj.CellsOccupiedBy(this);
+
+        // 是否已经满足所有材料需求
+        public bool AllRequiredIngredientsLoaded
+        {
+            get
+            {
+                if(selectedRecipe == null) return false;
+
+                bool baseOk = selectedRecipe.ingredients.All(t => GetRequiredCountOf(t.FixedIngredient) <= 0);
+
+                if (!baseOk) return false;
+
+                return foundationRecipe == null || foundationRecipe.ingredients.All(t => GetRequiredCountOf_Foundation(t.FixedIngredient) <= 0);
+            }
+        }
+
+        private void Birth()
+        {
+            if(State != IncubatorState.Incubating) return;
+
+            Pawn baby = null;
+            PawnKindDef babyKind = GrayRaceDefOf.GR_colonist; // 后面再改成在 Def 里找
+            // PawnKindDef babyKind = PawnKindDefOf.Colonist;
+            var pReq = new PawnGenerationRequest(babyKind, Faction.OfPlayer, PawnGenerationContext.NonPlayer, null, forceGenerateNewPawn: true, false, true, false, false, 1f, false, false, false, true, false, false, false, false, false, 0f, 0f, developmentalStages: DevelopmentalStage.Child);
+            baby = PawnGenerator.GeneratePawn(pReq);
+            if (baby != null)
+            {
+                Log.Message("new Baby!");
+            }
+            else
+            {
+                Log.Message("No! my Baby!");
+                return;
+            }
+
+            if (foundationRecipe != null)
+            {
+                var ext = foundationRecipe.GetModExtension<DefModExtension_RecipeNewBorn>();
+                if (ext.newBornBackstory != null)
+                {
+                    baby.story.Childhood = ext.newBornBackstory;
+                }
+            }
+
+            GenSpawn.Spawn(baby, InteractionCell, Map);
+            State = IncubatorState.Finished;
+            selectedRecipe = null;
+            foundationRecipe = null;
+            startTick = -1;
+        }
+
+        private void Finsh()
+        {
+            if (State == IncubatorState.Finished)
+            {
+                State = IncubatorState.Idle;
+                innerContainer.ClearAndDestroyContents();
+            }
+        }
+
+        private void EjectContents()
+        {
+            if (innerContainer.Count > 0)
+            {
+                innerContainer.TryDropAll(InteractionCell, Map, ThingPlaceMode.Near);
+            }
+        }
+        private void TryAbsorbNanites()
+        {
+            foreach (var thing in innerContainer)
+            {
+                if (thing.def != GrayRaceDefOf.GR_Nanites) continue;
+
+                // 1 个纳米机械供给 1
+                containedNanites += 1f;
+                thing.SplitOff(1).Destroy();
+
+                break;
+            }
+        }
+        public bool CanAcceptIngredient(Thing thing)
+        {
+            return GetRequiredCountOf(thing.def) > 0 || GetRequiredCountOf_Foundation(thing.def) > 0;
+        }
+        public int GetRequiredCountOf(ThingDef thingDef)
+        {
+            foreach (var t in selectedRecipe.ingredients)
+            {
+                if (t.FixedIngredient == thingDef)
+                {
+                    int num = innerContainer.TotalStackCountOfDef(t.FixedIngredient);
+                    return (int)t.GetBaseCount() - num;
+                }
+            }
+
+            return 0;
+        }
+        public int GetRequiredCountOf_Foundation(ThingDef thingDef)
+        {
+            if (foundationRecipe == null) return 0;
+
+            foreach (var t in foundationRecipe.ingredients)
+            {
+                if (t.FixedIngredient != thingDef) continue;
+
+                int num = innerContainer.TotalStackCountOfDef(t.FixedIngredient);
+
+                return (int)t.GetBaseCount() - num;
+            }
+
+            return 0;
+        }
+
+    }
+}
