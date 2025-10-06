@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <NeedDef>
+    <defName>GrayRaceEnergy</defName>
+    <needClass>SD.GrayRace.Needs.Need_GrayRaceEnergy</needClass>
+    <description>灰裔无需正常的饮食，但是需要消耗能量以维持纳米机械的正常运转，需要通过吞噬金属原材料来补充（每1kg对应0.1营养值）。即使能量归零也不会死亡，但是备用纳米机械不再会自然恢复，且所有备用纳米机械的相关功能都不会正常工作，这包括回血和使用技能。</description>
+    <label>Nanite energy</label>
+    <showOnNeedList>true</showOnNeedList>
+    <minIntelligence>Humanlike</minIntelligence>
+    <listPriority>800</listPriority>
+    <showForCaravanMembers>true</showForCaravanMembers>
+    <major>true</major>
+    <showUnitTicks>true</showUnitTicks>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <!-- 居然要有奥德赛 DLC 才能生效 -->
+    <!-- <requiredComps MayRequire="Ludeon.RimWorld.Anomaly">
+      <li Class="SD.GrayRace.CompProperties_Nanites"/>
+    </requiredComps> -->
+    <hediffRequiredAny>
+      <li>NanitesRegeneration</li>
+    </hediffRequiredAny>
+  </NeedDef>
+
+</Defs>

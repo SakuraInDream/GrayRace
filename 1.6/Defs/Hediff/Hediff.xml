@@ -1,212 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <!--裂解侵蚀-->
-    <HediffDef>
-        <description>The creature is being consumed by a lethal disintegrative corrosion, its armor relentlessly flaking away into nothingness, exposing vulnerable tissues beneath. Its movements turn sluggish and uncoordinated as its very flesh dissolves into molecular debris.</description>
-        <defName>GR_Disintegration_Corrosion</defName>
-        <hediffClass>HediffWithComps</hediffClass>
-        <defaultLabelColor>(1, 0, 0)</defaultLabelColor>
-        <label>Disintegration Corrosion</label>
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-60</severityPerDay>
-                <showHoursToRecover>true</showHoursToRecover>
-            </li>
-            <li Class="HediffCompProperties_Effecter">
-                <stateEffecter></stateEffecter>
-            </li>
-        </comps>
-        <stages>
-            <li>
-                <label>Initial</label>
-                <becomeVisible>false</becomeVisible>
-            </li>
-            <li>
-                <label>Infiltration</label>
-                <minSeverity>0.1</minSeverity>
-                <statOffsets>
-                    <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
-                    <ArmorRating_Heat>-0.1</ArmorRating_Heat>
-                    <IncomingDamageFactor>0.1</IncomingDamageFactor>
-                </statOffsets>
-                <statFactors>
-                    <IncomingDamageFactor>1.1</IncomingDamageFactor>
-                </statFactors>
-            </li>
-            <li>
-                <label>Corrosion</label>
-                <minSeverity>0.35</minSeverity>
-                <statOffsets>
-                    <ArmorRating_Sharp>-0.35</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>-0.35</ArmorRating_Blunt>
-                    <ArmorRating_Heat>-0.35</ArmorRating_Heat>
-                    <IncomingDamageFactor>0.2</IncomingDamageFactor>
-                    <MeleeCooldownFactor>1.1</MeleeCooldownFactor>
-                    <RangedCooldownFactor>1.1</RangedCooldownFactor>
-                    <MeleeDodgeChance>-0.3</MeleeDodgeChance>
-                    <StaggerDurationFactor>1.1</StaggerDurationFactor>
-                    <MoveSpeed>-0.5</MoveSpeed>
-                </statOffsets>
-                <statFactors>
-                    <IncomingDamageFactor>1.2</IncomingDamageFactor>
-                </statFactors>
-            </li>
-            <li>
-                <label>Degradation</label>
-                <minSeverity>0.70</minSeverity>
-                <statOffsets>
-                    <ArmorRating_Sharp>-0.7</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>-0.7</ArmorRating_Blunt>
-                    <ArmorRating_Heat>-0.7</ArmorRating_Heat>
-                    <IncomingDamageFactor>0.3</IncomingDamageFactor>
-                    <MeleeCooldownFactor>1.3</MeleeCooldownFactor>
-                    <RangedCooldownFactor>1.2</RangedCooldownFactor>
-                    <AimingDelayFactor>1.1</AimingDelayFactor>
-                    <MeleeDodgeChance>-0.4</MeleeDodgeChance>
-                    <StaggerDurationFactor>1.5</StaggerDurationFactor>
-                    <MoveSpeed>-1.5</MoveSpeed>
-                </statOffsets>
-                <statFactors>
-                    <IncomingDamageFactor>1.3</IncomingDamageFactor>
-                </statFactors>
-            </li>
-            <li>
-                <label>Collapse</label>
-                <minSeverity>0.9</minSeverity>
-                <statOffsets>
-                    <ArmorRating_Sharp>-1</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>-1</ArmorRating_Blunt>
-                    <ArmorRating_Heat>-1</ArmorRating_Heat>
-                    <IncomingDamageFactor>0.5</IncomingDamageFactor>
-                    <MeleeCooldownFactor>2</MeleeCooldownFactor>
-                    <RangedCooldownFactor>1.5</RangedCooldownFactor>
-                    <AimingDelayFactor>1.5</AimingDelayFactor>
-                    <MeleeDodgeChance>-0.7</MeleeDodgeChance>
-                    <StaggerDurationFactor>2</StaggerDurationFactor>
-                    <MoveSpeed>-3</MoveSpeed>
-                </statOffsets>
-                <statFactors>
-                    <IncomingDamageFactor>1.5</IncomingDamageFactor>
-                </statFactors>
-            </li>
-            <li>
-                <label>Annihilation</label>
-                <minSeverity>1</minSeverity>
-                <statOffsets>
-                    <IncomingDamageFactor>1</IncomingDamageFactor>
-                    <MeleeCooldownFactor>4</MeleeCooldownFactor>
-                    <RangedCooldownFactor>3</RangedCooldownFactor>
-                    <AimingDelayFactor>3</AimingDelayFactor>
-                    <MeleeDodgeChance>-2</MeleeDodgeChance>
-                    <StaggerDurationFactor>4</StaggerDurationFactor>
-                    <MoveSpeed>-6</MoveSpeed>
-                </statOffsets>
-                <statFactors>
-                    <ArmorRating_Sharp>0</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>0</ArmorRating_Blunt>
-                    <ArmorRating_Heat>0</ArmorRating_Heat>
-                    <IncomingDamageFactor>2</IncomingDamageFactor>
-                </statFactors>
-            </li>
-        </stages>
-    </HediffDef>
+  <!--裂解侵蚀-->
+  <HediffDef>
+    <description>The creature is being consumed by a lethal disintegrative corrosion, its armor relentlessly flaking away into nothingness, exposing vulnerable tissues beneath. Its movements turn sluggish and uncoordinated as its very flesh dissolves into molecular debris.</description>
+    <defName>GR_Disintegration_Corrosion</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+    <label>Disintegration Corrosion</label>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-60</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+      <li Class="HediffCompProperties_Effecter">
+        <stateEffecter></stateEffecter>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>Infiltration</label>
+        <minSeverity>0.1</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.1</ArmorRating_Heat>
+          <IncomingDamageFactor>0.1</IncomingDamageFactor>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>1.1</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>Corrosion</label>
+        <minSeverity>0.35</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.35</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.35</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.35</ArmorRating_Heat>
+          <IncomingDamageFactor>0.2</IncomingDamageFactor>
+          <MeleeCooldownFactor>1.1</MeleeCooldownFactor>
+          <RangedCooldownFactor>1.1</RangedCooldownFactor>
+          <MeleeDodgeChance>-0.3</MeleeDodgeChance>
+          <StaggerDurationFactor>1.1</StaggerDurationFactor>
+          <MoveSpeed>-0.5</MoveSpeed>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>1.2</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>Degradation</label>
+        <minSeverity>0.70</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.7</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.7</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.7</ArmorRating_Heat>
+          <IncomingDamageFactor>0.3</IncomingDamageFactor>
+          <MeleeCooldownFactor>1.3</MeleeCooldownFactor>
+          <RangedCooldownFactor>1.2</RangedCooldownFactor>
+          <AimingDelayFactor>1.1</AimingDelayFactor>
+          <MeleeDodgeChance>-0.4</MeleeDodgeChance>
+          <StaggerDurationFactor>1.5</StaggerDurationFactor>
+          <MoveSpeed>-1.5</MoveSpeed>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>1.3</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>Collapse</label>
+        <minSeverity>0.9</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>-1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-1</ArmorRating_Blunt>
+          <ArmorRating_Heat>-1</ArmorRating_Heat>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+          <MeleeCooldownFactor>2</MeleeCooldownFactor>
+          <RangedCooldownFactor>1.5</RangedCooldownFactor>
+          <AimingDelayFactor>1.5</AimingDelayFactor>
+          <MeleeDodgeChance>-0.7</MeleeDodgeChance>
+          <StaggerDurationFactor>2</StaggerDurationFactor>
+          <MoveSpeed>-3</MoveSpeed>
+        </statOffsets>
+        <statFactors>
+          <IncomingDamageFactor>1.5</IncomingDamageFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>Annihilation</label>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <IncomingDamageFactor>1</IncomingDamageFactor>
+          <MeleeCooldownFactor>4</MeleeCooldownFactor>
+          <RangedCooldownFactor>3</RangedCooldownFactor>
+          <AimingDelayFactor>3</AimingDelayFactor>
+          <MeleeDodgeChance>-2</MeleeDodgeChance>
+          <StaggerDurationFactor>4</StaggerDurationFactor>
+          <MoveSpeed>-6</MoveSpeed>
+        </statOffsets>
+        <statFactors>
+          <ArmorRating_Sharp>0</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0</ArmorRating_Blunt>
+          <ArmorRating_Heat>0</ArmorRating_Heat>
+          <IncomingDamageFactor>2</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
 
-    <!--纳米侵蚀-->
-    <HediffDef>
-        <description>This lethal nanite infection progressively disassembles the target's molecular structure, inducing excruciating neural pain while systematically degrading defensive capabilities. Affected subjects undergo a cascading failure—from localized corrosion to total systemic collapse.</description>
-        <defName>GR_Nanite_Corrosion</defName>
-        <hediffClass>HediffWithComps</hediffClass>
-        <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
-        <label>Nanite Corrosion</label>
+  <!--纳米侵蚀-->
+  <HediffDef>
+    <description>This lethal nanite infection progressively disassembles the target's molecular structure, inducing excruciating neural pain while systematically degrading defensive capabilities. Affected subjects undergo a cascading failure—from localized corrosion to total systemic collapse.</description>
+    <defName>GR_Nanite_Corrosion</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1, 1, 1)</defaultLabelColor>
+    <label>Nanite Corrosion</label>
+    <minSeverity>0</minSeverity>
+    <maxSeverity>1</maxSeverity>
+    <lethalSeverity>1</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-30</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+      <li Class="HediffCompProperties_Effecter">
+        <stateEffecter></stateEffecter>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>Infiltration</label>
+        <minSeverity>0.1</minSeverity>
+        <painOffset>0.1</painOffset>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.1</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <label>Proliferation</label>
+        <minSeverity>0.35</minSeverity>
+        <painOffset>0.35</painOffset>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.35</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.35</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.35</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <label>Corrosion</label>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.7</painOffset>
+        <statOffsets>
+          <ArmorRating_Sharp>-0.7</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-0.7</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.7</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <label>Neural</label>
+        <minSeverity>0.9</minSeverity>
+        <painOffset>0.9</painOffset>
+        <statOffsets>
+          <ArmorRating_Sharp>-1</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-1</ArmorRating_Blunt>
+          <ArmorRating_Heat>-1</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>NanitesRegeneration</defName>
+    <label>纳米机械再生</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <!-- <hediffClass>Hediff_RapidRegeneration</hediffClass> -->
+    <description>运用体内的备用纳米机械能够快速修复身上的伤口。</description>
+    <isBad>false</isBad>
+    <preventsDeath>false</preventsDeath>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <naturalHealingFactor>0</naturalHealingFactor>
         <minSeverity>0</minSeverity>
-        <maxSeverity>1</maxSeverity>
-        <lethalSeverity>1</lethalSeverity>
-        <comps>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-30</severityPerDay>
-                <showHoursToRecover>true</showHoursToRecover>
-            </li>
-            <li Class="HediffCompProperties_Effecter">
-                <stateEffecter></stateEffecter>
-            </li>
-        </comps>
-        <stages>
-            <li>
-                <label>Initial</label>
-                <becomeVisible>false</becomeVisible>
-            </li>
-            <li>
-                <label>Infiltration</label>
-                <minSeverity>0.1</minSeverity>
-                <painOffset>0.1</painOffset>
-                <statOffsets>
-                    <ArmorRating_Sharp>-0.1</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>-0.1</ArmorRating_Blunt>
-                    <ArmorRating_Heat>-0.1</ArmorRating_Heat>
-                </statOffsets>
-            </li>
-            <li>
-                <label>Proliferation</label>
-                <minSeverity>0.35</minSeverity>
-                <painOffset>0.35</painOffset>
-                <statOffsets>
-                    <ArmorRating_Sharp>-0.35</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>-0.35</ArmorRating_Blunt>
-                    <ArmorRating_Heat>-0.35</ArmorRating_Heat>
-                </statOffsets>
-            </li>
-            <li>
-                <label>Corrosion</label>
-                <minSeverity>0.7</minSeverity>
-                <painOffset>0.7</painOffset>
-                <statOffsets>
-                    <ArmorRating_Sharp>-0.7</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>-0.7</ArmorRating_Blunt>
-                    <ArmorRating_Heat>-0.7</ArmorRating_Heat>
-                </statOffsets>
-            </li>
-            <li>
-                <label>Neural</label>
-                <minSeverity>0.9</minSeverity>
-                <painOffset>0.9</painOffset>
-                <statOffsets>
-                    <ArmorRating_Sharp>-1</ArmorRating_Sharp>
-                    <ArmorRating_Blunt>-1</ArmorRating_Blunt>
-                    <ArmorRating_Heat>-1</ArmorRating_Heat>
-                </statOffsets>
-            </li>
-        </stages>
-    </HediffDef>
-
-    <HediffDef>
-        <defName>NanitesRegeneration</defName>
-        <label>纳米机械再生</label>
-        <hediffClass>HediffWithComps</hediffClass>
-        <!-- <hediffClass>Hediff_RapidRegeneration</hediffClass> -->
-        <description>运用体内的备用纳米机械能够快速修复身上的伤口。</description>
-        <isBad>false</isBad>
-        <preventsDeath>false</preventsDeath>
-        <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-        <stages>
-            <li>
-                <naturalHealingFactor>0</naturalHealingFactor>
-                <minSeverity>0</minSeverity>
-                <!-- <regeneration>5000</regeneration> -->
-                <!-- <painFactor>0</painFactor> -->
-                <statOffsets>
-                    <!-- 疼痛休克阈值 +100% -->
-                    <PainShockThreshold>1</PainShockThreshold>
-                </statOffsets>
-            </li>
-        </stages>
-        <comps>
-            <li Class="SD.GrayRace.HediffCompProperties_NanitesRegeneration">
-                <!-- 每秒消耗 -->
-                <naniteCostPerSeconds>0.02</naniteCostPerSeconds>
-                <!-- 每秒恢复 -->
-                <healAmountPerSeconds>1</healAmountPerSeconds>
-            </li>
-        </comps>
-    </HediffDef>
+        <!-- <regeneration>5000</regeneration> -->
+        <!-- <painFactor>0</painFactor> -->
+        <statOffsets>
+          <!-- 疼痛休克阈值 +100% -->
+          <PainShockThreshold>1</PainShockThreshold>
+        </statOffsets>
+        <disablesNeeds>
+          <li>Food</li>
+        </disablesNeeds>
+      </li>
+    </stages>
+    <comps>
+      <li Class="SD.GrayRace.HediffCompProperties_NanitesRegeneration">
+        <!-- 每秒消耗 -->
+        <naniteCostPerSeconds>0.02</naniteCostPerSeconds>
+        <!-- 每秒恢复 -->
+        <healAmountPerSeconds>1</healAmountPerSeconds>
+      </li>
+    </comps>
+  </HediffDef>
 </Defs>

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using RimWorld;
+using SD.GrayRace.Comps;
 using UnityEngine;
 using Verse;
 
@@ -14,16 +15,16 @@ namespace SD.GrayRace
         protected CompResource_Nanites resource;
 
         protected override float Width => 300f;
-        
+
         // 正在移动滑条
         private static bool draggingBar;
-        
+
         private static readonly Texture2D NaniteCostTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.2f));
         private static readonly Texture2D BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.34f, 0.42f, 0.43f));
         private static readonly Texture2D BarHighlightTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.43f, 0.54f, 0.55f));
         private static readonly Texture2D EmptyBarTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.03f, 0.035f, 0.05f));
         // private static readonly Texture2D DragBarTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.74f, 0.97f, 0.8f));
-        
+
         private static readonly Texture2D Click = ContentFinder<Texture2D>.Get("UI/Gizmo/Click", true);
         private static readonly Texture2D Hover = ContentFinder<Texture2D>.Get("UI/Gizmo/Hover", true);
         private static readonly Texture2D Normal = ContentFinder<Texture2D>.Get("UI/Gizmo/Normal", true);
@@ -34,12 +35,12 @@ namespace SD.GrayRace
         }
 
         protected override Color BarColor => new ColorInt(120, 150, 130).ToColor;
-        
+
         protected override Color BarHighlightColor => new ColorInt(160, 190, 170).ToColor;
-        
+
         // 资源状态显示
         protected override string BarLabel => $"{resource.ValueForDisplay}/{resource.MaxForDisplay}";
-        
+
         // 是否可移动滑条
         protected override bool IsDraggable => false; // resource.Pawn.IsColonistPlayerControlled || resource.Pawn.IsPrisonerOfColony;
 
@@ -48,7 +49,7 @@ namespace SD.GrayRace
         protected override float ValuePercent => resource.ValuePercent;
 
         protected override FloatRange DragRange => new FloatRange(0f, 1f);
-        
+
         // 无用
         protected override float Target
         {
@@ -61,10 +62,10 @@ namespace SD.GrayRace
             get
             {
                 StringBuilder text = new StringBuilder(resource.ResourceLabel.CapitalizeFirst());
-                
+
                 if (Find.Selector.SelectedPawns.Count != 1)
                     text.Append($" ({resource.Pawn.LabelShort})");
-                
+
                 return text.ToString();
             }
         }
@@ -78,9 +79,9 @@ namespace SD.GrayRace
         {
             StringBuilder sb = new StringBuilder();
             sb.Append($"{resource.ResourceLabel.Colorize(ColoredText.TipSectionTitleColor)}: {resource.ValueForDisplay} / {resource.MaxForDisplay}");
-            if (resource.Props.regenPerSecond > 0f)
+            if (resource.RegenPerSecond > 0f)
             {
-                sb.Append($"(+{resource.Props.regenPerSecond}/s)");
+                sb.Append($"(+{resource.RegenPerSecond * 100}/s)");
             }
             return sb.ToString();
         }
@@ -93,13 +94,13 @@ namespace SD.GrayRace
             Rect innerRect = baseRect.ContractedBy(2f);
             if (Mouse.IsOver(baseRect))
             {
-                GRUtils.DrawWindowBackgroundWithTexture(baseRect, Hover);
+                GrayRaceUtilities.DrawWindowBackgroundWithTexture(baseRect, Hover);
             }
             else
-            { 
-                GRUtils.DrawWindowBackgroundWithTexture(baseRect, Normal);
+            {
+                GrayRaceUtilities.DrawWindowBackgroundWithTexture(baseRect, Normal);
             }
-            
+
             Text.Font = GameFont.Small;
             Rect textRect = innerRect;
 
@@ -138,7 +139,7 @@ namespace SD.GrayRace
             {
                 num2 = 1f - (num - 0.25f) / 0.6f;
             }
-            
+
             // 预览消耗多少资源
             if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability command_Ability && resource.Max > 0f)
             {
@@ -148,26 +149,26 @@ namespace SD.GrayRace
                     {
                         continue;
                     }
-                    
+
                     var props = compAbilityEffectNanitesCost.Props;
-                    
+
                     if(props.nanitesCost < float.Epsilon) continue;
-            
+
                     var rect = barRect.ContractedBy(3f);
                     var width = rect.width;
                     var num3 = resource.Value / resource.Max;
                     rect.xMax = rect.xMin + width * num3;
-                    
+
                     var num4 = Mathf.Min(props.nanitesCost / resource.Max, 1f);
                     rect.xMin = Mathf.Max(rect.xMin, rect.xMax - width * num4);
-                    
+
                     GUI.color = new Color(1f, 1f, 1f, num2 * 0.7f);
                     GenUI.DrawTextureWithMaterial(rect, NaniteCostTex, null);
                     GUI.color = Color.white;
                     return gizmoResult;
                 }
             }
-            
+
             // 悬浮提示
             if (Mouse.IsOver(barRect))
             {
@@ -194,7 +195,5 @@ namespace SD.GrayRace
                 yield return resource.Props.resourceGizmoThresholds[i];
             }
         }
-
-        
     }
 }

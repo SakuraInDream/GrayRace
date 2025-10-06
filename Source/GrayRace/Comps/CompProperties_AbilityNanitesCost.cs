@@ -1,4 +1,5 @@
 using RimWorld;
+using SD.GrayRace.Comps;
 using Verse;
 
 namespace SD.GrayRace

@@ -42,7 +42,7 @@
     <recipes>
     </recipes>
     <graphicData>
-      <texPath>Things/Building/Reconfigurator</texPath>
+      <texPath>Things/Building/Reconfigurator/Reconfigurator</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(5.2,2.7)</drawSize>
@@ -327,17 +327,21 @@
     <defName>GR_Incubator</defName>
     <label>Incubator</label>
     <description>A vat of fluid which can gestate an embryo or accelerate a child's growth.\n\nWhile growing or gestating, the vat must be fed with a constant supply of nutrition to provide the feedstock for growth. Gestating an embryo takes twice the nutrition of accelerating a child's growth.\n\nEmbryos are gestated for 9 days before a baby is formed. There is a risk of health complications.\n\nChild growth can only be accelerated up to age 18, but not beyond. While growing, a child's skills will slowly increase. Children raised in growth vats will have lower skills and gain fewer passions than normal.\n\nThe device uses chemical injections, electrical stimulation, and simple mechanite treatments to push the body to grow. Growth vats are often used to quickly manufacture engineered workers or warriors.</description>
-    <thingClass>Building_GrowthVat</thingClass>
+    <thingClass>SD.GrayRace.ThingClasses.Building_GRIncubator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/Incubator</texPath>
+      <texPath>Things/Building/Incubator/Incubator</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(1.5,3)</drawSize>
     </graphicData>
     <rotatable>false</rotatable>
     <castEdgeShadows>true</castEdgeShadows>
     <size>(1,1)</size>
+    <recipes>
+      <!-- 默认基础型灰裔，只会选第一个 -->
+      <li>GRRecipe_GrayRace</li>
+    </recipes>
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
       <WorkToBuild>8000</WorkToBuild>
@@ -361,7 +365,6 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <inspectorTabs>
       <li>ITab_BiosculpterNutritionStorage</li>
-      <li>ITab_Genes</li>
     </inspectorTabs>
     <researchPrerequisites>
       <li>GrowthVats</li>

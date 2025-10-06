@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using RimWorld;
-using UnityEngine;
 using Verse;
 
-namespace SD.GrayRace
+namespace SD.GrayRace.Comps
 {
     public class CompAbilityEffect_NanitesCost: CompAbilityEffect
     {
@@ -25,7 +24,7 @@ namespace SD.GrayRace
 
         public override void PostApplied(List<LocalTargetInfo> targets, Map map)
         {
-            GRUtils.OffsetNanites(parent.pawn, 0f - Props.nanitesCost);
+            GrayRaceUtilities.OffsetNanites(parent.pawn, 0f - Props.nanitesCost);
         }
 
         public override string ExtraTooltipPart()

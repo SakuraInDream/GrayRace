@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using RimWorld;
+using SD.GrayRace.Needs;
 using UnityEngine;
 using Verse;
 using Verse.Noise;
@@ -10,18 +11,22 @@ namespace SD.GrayRace
     public class CompResource_Nanites: ThingComp
     {
         protected float cur;
-        
+
         protected float max;
 
         protected Gizmo_NaniteResources gizmo;
 
+        private Need_GrayRaceEnergy energy => Pawn.needs.TryGetNeed<Need_GrayRaceEnergy>();
+
         public virtual string ResourceLabel => Props.resourceLabel;
-        
+
         public Pawn Pawn => parent as Pawn;
-        
+
         public CompProperties_Nanites Props => (CompProperties_Nanites)props;
 
         public virtual float InitialResourceMax => Props.maxResource;
+
+        public float RegenPerSecond { get; set; }
 
         public bool HasEnoughResource(float cost)
         {
@@ -34,19 +39,19 @@ namespace SD.GrayRace
         {
             get
             {
-                if (Pawn.InMentalState || Pawn.Dead || Pawn.Deathresting) return false;
+                if (Pawn.InMentalState || Pawn.Dead || Pawn.Deathresting || CurResource >= Max) return false;
 
-                return Pawn != null && !Pawn.needs.food.Starving; // 随时换掉food的判断
+                return energy != null && energy.CurLevelPercentage > 0.01f;
             }
         }
         // 当前资源显示
         public virtual int ValueForDisplay => PostProcessValue(cur);
-        
+
         // 最大资源显示
         public virtual int MaxForDisplay => PostProcessValue(max);
         // 获取最大资源量
         public virtual float Max => max;
-        
+
         // 获取当前资源量
         public virtual float Value
         {
@@ -72,6 +77,7 @@ namespace SD.GrayRace
         {
             base.Initialize(prop);
             gizmo = new Gizmo_NaniteResources(this);
+            RegenPerSecond = Props.regenPerSecond;
         }
 
         public override void PostExposeData()
@@ -90,18 +96,23 @@ namespace SD.GrayRace
         public override void CompTickInterval(int delta)
         {
             if (!parent.IsHashIntervalTick(60, delta) || CurResource >= Props.maxResource) return;
-            
+
             // 还需要一个根据 NeedDef 影响回复速度的判断
             if (CanRegenNanites)
             {
-                cur += Props.regenPerSecond;
+                cur += RegenPerSecond;
+            }
+
+            if (!Pawn.health.hediffSet.HasHediff(GrayRaceDefOf.NanitesRegeneration))
+            {
+                Pawn.health.AddHediff(GrayRaceDefOf.NanitesRegeneration);
             }
         }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
             yield return gizmo;
-            
+
             if (DebugSettings.ShowDevGizmos)
             {
                 yield return new Command_Action
@@ -109,7 +120,7 @@ namespace SD.GrayRace
                     defaultLabel = $"-20% {ResourceLabel}",
                     action = () =>
                     {
-                        GRUtils.OffsetNanites(Pawn, -max * 0.2f);
+                        GrayRaceUtilities.OffsetNanites(Pawn, -max * 0.2f);
                     }
                 };
                 yield return new Command_Action
@@ -117,7 +128,7 @@ namespace SD.GrayRace
                     defaultLabel = $"+20% {ResourceLabel}",
                     action = () =>
                     {
-                        GRUtils.OffsetNanites(Pawn, max * 0.2f);
+                        GrayRaceUtilities.OffsetNanites(Pawn, max * 0.2f);
                     }
                 };
             }
