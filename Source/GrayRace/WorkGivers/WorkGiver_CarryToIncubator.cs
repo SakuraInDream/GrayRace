@@ -58,7 +58,7 @@ namespace SD.GrayRace.WorkGivers
 
             if (thing == null) return default;
 
-            var count = incubator.GetRequiredCountOf(thing.def) + incubator.GetRequiredCountOf_Foundation(thing.def);
+            var count = incubator.GetRequiredCountOf(thing.def) + incubator.GetRequiredCountOf_Foundation(thing.def) - incubator.innerContainer.TotalStackCountOfDef(thing.def);
 
             return new ThingCount(thing, count, true);
         }

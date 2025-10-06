@@ -30,6 +30,8 @@ namespace SD.GrayRace.ThingClasses
 
         public RecipeDef foundationRecipe;
 
+        private Pawn baby;
+
         [Unsaved]
         private CompPowerTrader power;
 
@@ -205,6 +207,17 @@ namespace SD.GrayRace.ThingClasses
                     }
                 };
             }
+
+            if (State == IncubatorState.Finished)
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "完成培育",
+                    defaultDesc = "完成培育并释放新生儿。",
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/DesirePower"),
+                    action = Finsh
+                };
+            }
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -223,14 +236,10 @@ namespace SD.GrayRace.ThingClasses
             {
                 sb.AppendLine("\n当前加速培育: " + selectedPawn.LabelCap);
             }
-            if(selectedRecipe != null)
+            if (State == IncubatorState.Preparing)
             {
-                sb.Append("\n当前培育: " + selectedRecipe.LabelCap + "\n");
-                sb.Append("所需材料: ");
-                foreach (var ingredient in selectedRecipe.ingredients)
-                {
-                    sb.Append($"{ingredient.FixedIngredient.label} x{ingredient.GetBaseCount() - innerContainer.TotalStackCountOfDef(ingredient.FixedIngredient)} ");
-                }
+                sb.Append("\n等待运送材料：");
+                AppendIngredientsList(sb);
             }
             return sb.ToString();
         }
@@ -277,7 +286,7 @@ namespace SD.GrayRace.ThingClasses
                 if (startTick > 0 && Find.TickManager.TicksGame - startTick >= 600)
                 {
                     Birth();
-                    Finsh();
+                    // Finsh();
                 }
             }
         }
@@ -296,11 +305,11 @@ namespace SD.GrayRace.ThingClasses
             {
                 if(selectedRecipe == null) return false;
 
-                bool baseOk = selectedRecipe.ingredients.All(t => GetRequiredCountOf(t.FixedIngredient) <= 0);
+                bool baseOk = selectedRecipe.ingredients.All(t => GetRequiredCountOf(t.FixedIngredient) - innerContainer.TotalStackCountOfDef(t.FixedIngredient) <= 0);
 
                 if (!baseOk) return false;
 
-                return foundationRecipe == null || foundationRecipe.ingredients.All(t => GetRequiredCountOf_Foundation(t.FixedIngredient) <= 0);
+                return foundationRecipe == null || foundationRecipe.ingredients.All(t => GetRequiredCountOf(t.FixedIngredient) + GetRequiredCountOf_Foundation(t.FixedIngredient) - innerContainer.TotalStackCountOfDef(t.FixedIngredient) <= 0);
             }
         }
 
@@ -308,20 +317,30 @@ namespace SD.GrayRace.ThingClasses
         {
             if(State != IncubatorState.Incubating) return;
 
-            Pawn baby = null;
             PawnKindDef babyKind = GrayRaceDefOf.GR_colonist; // 后面再改成在 Def 里找
             // PawnKindDef babyKind = PawnKindDefOf.Colonist;
-            var pReq = new PawnGenerationRequest(babyKind, Faction.OfPlayer, PawnGenerationContext.NonPlayer, null, forceGenerateNewPawn: true, false, true, false, false, 1f, false, false, false, true, false, false, false, false, false, 0f, 0f, developmentalStages: DevelopmentalStage.Child);
+            var pReq = new PawnGenerationRequest(
+                kind: babyKind,
+                faction: Faction.OfPlayer,
+                forceGenerateNewPawn: true,
+                allowDowned:true,
+                canGeneratePawnRelations: false,
+                allowGay:false,
+                allowFood:false,
+                allowAddictions:false,
+                developmentalStages: DevelopmentalStage.Child,
+                forceNoGear:true);
             baby = PawnGenerator.GeneratePawn(pReq);
-            if (baby != null)
-            {
-                Log.Message("new Baby!");
-            }
-            else
-            {
-                Log.Message("No! my Baby!");
-                return;
-            }
+            // baby = (Pawn)PregnancyUtility.ApplyBirthOutcome(null, 100f, Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual, null, null, this, null, null);
+            // if (baby != null)
+            // {
+            //     Log.Message("new Baby!");
+            // }
+            // else
+            // {
+            //     Log.Message("No! my Baby!");
+            //     return;
+            // }
 
             if (foundationRecipe != null)
             {
@@ -332,8 +351,8 @@ namespace SD.GrayRace.ThingClasses
                 }
             }
 
-            GenSpawn.Spawn(baby, InteractionCell, Map);
             State = IncubatorState.Finished;
+
             selectedRecipe = null;
             foundationRecipe = null;
             startTick = -1;
@@ -341,11 +360,27 @@ namespace SD.GrayRace.ThingClasses
 
         private void Finsh()
         {
-            if (State == IncubatorState.Finished)
+            if (State != IncubatorState.Finished) return;
+
+            // 可以再弹出一个窗口显示新生儿，然后指定名字等，确定后，再清空舱内
+            NameTriple nameTriple = baby.Name as NameTriple;
+            Name name;
+            string text = null;
+            if (nameTriple != null && nameTriple.First == "Baby".Translate().CapitalizeFirst())
             {
-                State = IncubatorState.Idle;
-                innerContainer.ClearAndDestroyContents();
+                Rand.PushState();
+                Rand.Seed = baby.thingIDNumber;
+                NameStyle nameStyle = NameStyle.Full;
+                name = PawnBioAndNameGenerator.GeneratePawnName(baby, nameStyle);
+                Rand.PopState();
+                NameTriple nameTriple2 = name as NameTriple;
+                text = ((nameTriple2 != null) ? nameTriple2.First: ((NameSingle)name).Name);
             }
+            Find.WindowStack.Add(baby.NamePawnDialog(text));
+            State = IncubatorState.Idle;
+            SoundDefOf.GrowthVat_Open.PlayOneShot(SoundInfo.InMap(this));
+            GenSpawn.Spawn(baby, InteractionCell, Map);
+            innerContainer.ClearAndDestroyContents();
         }
 
         private void EjectContents()
@@ -368,19 +403,31 @@ namespace SD.GrayRace.ThingClasses
                 break;
             }
         }
+
+        private void AppendIngredientsList(StringBuilder sb)
+        {
+            if(selectedRecipe == null) return;
+
+            var ingredients = selectedRecipe.ingredients.ConcatIfNotNull(foundationRecipe?.ingredients).GroupBy(t => t.FixedIngredient.defName).Select(t=> t.First()).ToList();
+
+            foreach (var thing in ingredients)
+            {
+                sb.AppendInNewLine($" - {thing.FixedIngredient.LabelCap} {innerContainer.TotalStackCountOfDef(thing.FixedIngredient)}/{GetRequiredCountOf(thing.FixedIngredient) + GetRequiredCountOf_Foundation(thing.FixedIngredient)}");
+            }
+        }
         public bool CanAcceptIngredient(Thing thing)
         {
-            return GetRequiredCountOf(thing.def) > 0 || GetRequiredCountOf_Foundation(thing.def) > 0;
+            return GetRequiredCountOf(thing.def) + GetRequiredCountOf_Foundation(thing.def) - innerContainer.TotalStackCountOfDef(thing.def) > 0;
         }
         public int GetRequiredCountOf(ThingDef thingDef)
         {
+            if (selectedRecipe == null) return 0;
+
             foreach (var t in selectedRecipe.ingredients)
             {
-                if (t.FixedIngredient == thingDef)
-                {
-                    int num = innerContainer.TotalStackCountOfDef(t.FixedIngredient);
-                    return (int)t.GetBaseCount() - num;
-                }
+                if (t.FixedIngredient != thingDef) continue;
+
+                return (int)t.GetBaseCount();
             }
 
             return 0;
@@ -393,9 +440,7 @@ namespace SD.GrayRace.ThingClasses
             {
                 if (t.FixedIngredient != thingDef) continue;
 
-                int num = innerContainer.TotalStackCountOfDef(t.FixedIngredient);
-
-                return (int)t.GetBaseCount() - num;
+                return (int)t.GetBaseCount();
             }
 
             return 0;

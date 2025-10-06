@@ -329,7 +329,6 @@
     <Compile Include="Hediffs\HediffCompProperties_NanitesRegeneration.cs" />
     <Compile Include="Hediffs\Hediff_NanitesRegeneration.cs" />
     <Compile Include="ITabs\ITab_GrayRace.cs" />
-    <Compile Include="JobDrivers\JobDriver_DoGrayRaceBill.cs" />
     <Compile Include="DefModExtensions\DefModExtension_RecipeNewBorn.cs" />
     <Compile Include="JobDrivers\JobGiver_GetMetal.cs" />
     <Compile Include="Needs\Need_GrayRaceEnergy.cs" />
