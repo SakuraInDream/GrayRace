@@ -15,7 +15,7 @@ namespace SD.GrayRace.WorkGivers
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (!(t is Building_GRIncubator buildingIncubator) || buildingIncubator.Working || buildingIncubator.SelectedRecipe == null)
+            if (!(t is Building_GRIncubator { State: IncubatorState.Preparing } buildingIncubator))
             {
                 return false;
             }
@@ -27,15 +27,15 @@ namespace SD.GrayRace.WorkGivers
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            var buildingIncubator = t as Building_GRIncubator;
-            if (buildingIncubator == null || buildingIncubator.Working || Building_GRIncubator.State != IncubatorState.Preparing) return null;
+            if (!(t is Building_GRIncubator { State: IncubatorState.Preparing } buildingIncubator)) return null;
 
             ThingCount thingCount = FindIngredients(pawn, buildingIncubator);
 
             if (thingCount.Thing == null || thingCount.Count == 0) return null;
 
-            Job job = HaulAIUtility.HaulToContainerJob(pawn, thingCount.Thing, t);
-            job.count = Mathf.Min(job.count, thingCount.Count);
+            Job job = JobMaker.MakeJob(GrayRaceDefOf.GR_HaulToIncubator, thingCount.Thing, t);
+            job.count = Mathf.Min(thingCount.Thing.stackCount, t.TryGetInnerInteractableThingOwner().GetCountCanAccept(t, true));
+            job.haulMode = HaulMode.ToContainer;
 
             if (DebugSettings.godMode)
             {

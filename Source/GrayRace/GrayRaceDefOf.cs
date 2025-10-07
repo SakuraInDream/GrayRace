@@ -18,6 +18,7 @@ namespace SD.GrayRace
 
         // JobDefs
         public static JobDef GR_ConsumeMetal;
+        public static JobDef GR_HaulToIncubator;
 
         static GrayRaceDefOf()
         {

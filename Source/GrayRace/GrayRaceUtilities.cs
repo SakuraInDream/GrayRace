@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using RimWorld;
@@ -30,7 +31,7 @@ namespace SD.GrayRace
             if (compNanites != null)
             {
                 compNanites.Value += offset;
-                if(compNanites.Value > compNanites.Max)
+                if (compNanites.Value > compNanites.Max)
                 {
                     compNanites.Value = compNanites.Max;
                 }
@@ -53,27 +54,6 @@ namespace SD.GrayRace
             OffsetNanites(pawn, 0f - amount);
 
             return true;
-        }
-
-        // 本地化枚举
-        // 在枚举字段上添加 [Localized("本地化文本")] 特性
-        // 如果没有该特性，则使用枚举名称进行本地化
-        // 使用示例： myEnumValue.ToLocalizedString();
-        public static string ToLocalizedString(this Enum value)
-        {
-            if (value == null) return string.Empty;
-            var field = value.GetType().GetField(value.ToString());
-            if (field == null)
-            {
-                return value.ToString().Translate();
-            }
-
-            var attr = field.GetCustomAttribute<LocalizedAttribute>();
-            if(attr != null && !string.IsNullOrEmpty(attr.Text))
-            {
-                return attr.Text.Translate();
-            }
-            return value.ToString().Translate();
         }
     }
 }

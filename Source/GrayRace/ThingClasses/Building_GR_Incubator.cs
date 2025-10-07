@@ -4,6 +4,7 @@ using System.Text;
 using RimWorld;
 using SD.GrayRace.Attributes;
 using SD.GrayRace.DefModExtensions;
+using SD.GrayRace.Utilities;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -41,7 +42,7 @@ namespace SD.GrayRace.ThingClasses
 
         public StorageSettings allowedNutritionSettings;
 
-        public static IncubatorState State { get; set; } = IncubatorState.Idle;
+        public IncubatorState State { get; set; } = IncubatorState.Idle;
 
         // 改，都可以改
         private const float NanitesConsumed = 6f;
@@ -443,6 +444,12 @@ namespace SD.GrayRace.ThingClasses
             }
 
             return 0;
+        }
+
+        public static bool WasLoadingCancelled(Thing thing)
+        {
+            var incubator = thing as Building_GRIncubator;
+            return incubator != null && incubator.State != IncubatorState.Preparing;
         }
 
     }
