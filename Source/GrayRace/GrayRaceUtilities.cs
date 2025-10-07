@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using RimWorld;
 using SD.GrayRace.Attributes;
 using UnityEngine;
 using Verse;
@@ -14,6 +15,7 @@ namespace SD.GrayRace
         public static bool IsGrayRace(this Pawn pawn)
         {
             return pawn?.kindDef.race == DefDatabase<ThingDef>.GetNamedSilentFail("Gray_Race");
+            // return pawn.HasComp<CompResource_Nanites>();
         }
         public static void DrawWindowBackgroundWithTexture(Rect rect, Texture2D texture)
         {
@@ -43,6 +45,7 @@ namespace SD.GrayRace
         public static bool TryConsumeNanites(Pawn pawn, float amount)
         {
             var comp = pawn.TryGetComp<CompResource_Nanites>();
+
             if (comp == null) return false;
 
             if (!comp.HasEnoughResource(amount)) return false;

@@ -16,6 +16,9 @@ namespace SD.GrayRace
         // HediffDefs
         public static HediffDef NanitesRegeneration;
 
+        // JobDefs
+        public static JobDef GR_ConsumeMetal;
+
         static GrayRaceDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(GrayRaceDefOf));
