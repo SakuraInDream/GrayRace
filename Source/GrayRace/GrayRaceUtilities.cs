@@ -26,18 +26,18 @@ namespace SD.GrayRace
         // 消耗资源
         public static void OffsetNanites(Pawn pawn, float offset)
         {
-            var CompNanites = pawn.TryGetComp<CompResource_Nanites>();
-            if (CompNanites != null)
+            var compNanites = pawn.TryGetComp<CompResource_Nanites>();
+            if (compNanites != null)
             {
-                CompNanites.Value += offset;
-                if(CompNanites.Value > CompNanites.Max)
+                compNanites.Value += offset;
+                if(compNanites.Value > compNanites.Max)
                 {
-                    CompNanites.Value = CompNanites.Max;
+                    compNanites.Value = compNanites.Max;
                 }
 
-                if (CompNanites.Value <= 0.01f)
+                if (compNanites.Value <= 0.01f)
                 {
-                    CompNanites.Value = 0f;
+                    compNanites.Value = 0f;
                 }
             }
         }
@@ -63,13 +63,15 @@ namespace SD.GrayRace
         {
             if (value == null) return string.Empty;
             var field = value.GetType().GetField(value.ToString());
-            if (field != null)
+            if (field == null)
             {
-                var attr = field.GetCustomAttribute<LocalizedAttribute>();
-                if(attr != null && !string.IsNullOrEmpty(attr.Text))
-                {
-                    return attr.Text.Translate();
-                }
+                return value.ToString().Translate();
+            }
+
+            var attr = field.GetCustomAttribute<LocalizedAttribute>();
+            if(attr != null && !string.IsNullOrEmpty(attr.Text))
+            {
+                return attr.Text.Translate();
             }
             return value.ToString().Translate();
         }

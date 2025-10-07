@@ -12,7 +12,7 @@ namespace SD.GrayRace.Needs
 {
     public class Need_GrayRaceEnergy: Need
     {
-        public bool StopSeekingMetal = true;
+        public bool stopSeekingMetal = true;
         public Need_GrayRaceEnergy(Pawn pawn) : base(pawn)
         {
         }
@@ -29,7 +29,7 @@ namespace SD.GrayRace.Needs
         {
             StringBuilder sb = new StringBuilder(base.GetTipString());
             sb.AppendInNewLine($"{CurLevel:F2}/{MaxLevel:F2}");
-            sb.AppendInNewLine($"自动寻找金属:{StopSeekingMetal}");
+            sb.AppendInNewLine($"自动寻找金属:{stopSeekingMetal}");
 
             return sb.ToString();
         }
@@ -50,8 +50,8 @@ namespace SD.GrayRace.Needs
             Rect buttonRect = new Rect(rect.xMax - buttonSize, rect.center.y, buttonSize, buttonSize);
             if(Widgets.ButtonImage(buttonRect, ThingDefOf.Steel.uiIcon))
             {
-                StopSeekingMetal = !StopSeekingMetal;
-                if (StopSeekingMetal)
+                stopSeekingMetal = !stopSeekingMetal;
+                if (stopSeekingMetal)
                 {
                     SoundDefOf.Tick_High.PlayOneShotOnCamera();
                 }
@@ -60,7 +60,7 @@ namespace SD.GrayRace.Needs
                     SoundDefOf.Tick_Low.PlayOneShotOnCamera();
                 }
             }
-            GUI.DrawTexture(new Rect(buttonRect.center.x, buttonRect.y, buttonRect.width/2f, buttonRect.height/2f), StopSeekingMetal ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
+            GUI.DrawTexture(new Rect(buttonRect.center.x, buttonRect.y, buttonRect.width/2f, buttonRect.height/2f), stopSeekingMetal ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
 
             if (Mouse.IsOver(buttonRect))
             {

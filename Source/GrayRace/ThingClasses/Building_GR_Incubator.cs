@@ -24,22 +24,24 @@ namespace SD.GrayRace.ThingClasses
     // 消耗纳米机械和电力进行培育
     // 配合个 ITab() 显示当前培育状态：比如剩余时间、所需材料、纳米机械数量、放入的人格显示
     [StaticConstructorOnStartup]
-    public class Building_GRIncubator: Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn, IThingHolder
+    public class Building_GRIncubator: Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn
     {
         public RecipeDef selectedRecipe;
+        public RecipeDef SelectedRecipe => selectedRecipe;
 
         public RecipeDef foundationRecipe;
+        public RecipeDef FoundationRecipe => foundationRecipe;
 
-        private Pawn baby;
+        private Pawn _baby;
 
         [Unsaved]
-        private CompPowerTrader power;
+        private CompPowerTrader _power;
 
-        private float containedNanites;
+        private float _containedNanites;
 
         public StorageSettings allowedNutritionSettings;
 
-        public IncubatorState State = IncubatorState.Idle;
+        public static IncubatorState State { get; set; } = IncubatorState.Idle;
 
         // 改，都可以改
         private const float NanitesConsumed = 6f;
@@ -54,10 +56,10 @@ namespace SD.GrayRace.ThingClasses
             }
         }
 
-        public CompPowerTrader PowerTraderComp => power ??= this.TryGetComp<CompPowerTrader>();
+        public CompPowerTrader PowerTraderComp => _power ??= this.TryGetComp<CompPowerTrader>();
         public bool PoweredOn => PowerTraderComp.PowerOn;
 
-        public List<RecipeDef> ModExtensionRecipes = DefDatabase<RecipeDef>.AllDefsListForReading.Where(t=> t.HasModExtension<DefModExtension_RecipeNewBorn>()).ToList();
+        public List<RecipeDef> modExtensionRecipes = DefDatabase<RecipeDef>.AllDefsListForReading.Where(t=> t.HasModExtension<DefModExtension_RecipeNewBorn>()).ToList();
 
         public override AcceptanceReport CanAcceptPawn(Pawn p)
         {
@@ -144,7 +146,7 @@ namespace SD.GrayRace.ThingClasses
             }
             if (State == IncubatorState.Preparing)
             {
-                var command_startIncubation = new Command_Action
+                var commandStartIncubation = new Command_Action
                 {
                     defaultLabel = "开始培育",
                     defaultDesc = "启动培育程序",
@@ -155,18 +157,18 @@ namespace SD.GrayRace.ThingClasses
                         State = IncubatorState.Incubating;
                     }
                 };
-                yield return command_startIncubation;
+                yield return commandStartIncubation;
                 if (selectedRecipe == null)
                 {
-                    command_startIncubation.Disable("请先选择培育清单");
+                    commandStartIncubation.Disable("请先选择培育清单");
                 }
                 else if (!AllRequiredIngredientsLoaded)
                 {
-                    command_startIncubation.Disable("所需材料不足");
+                    commandStartIncubation.Disable("所需材料不足");
                 }
                 else if (!PoweredOn)
                 {
-                    command_startIncubation.Disable("没有电力");
+                    commandStartIncubation.Disable("没有电力");
                 }
 
                 yield return new Command_Action
@@ -195,7 +197,7 @@ namespace SD.GrayRace.ThingClasses
                     {
                         List<FloatMenuOption> options = new List<FloatMenuOption>();
                         // Find.WindowStack.Add(new Dialog_SelectForIncubator(this));
-                        foreach (var recipe in ModExtensionRecipes)
+                        foreach (var recipe in modExtensionRecipes)
                         {
                             options.Add(new FloatMenuOption(recipe.LabelCap, () =>
                             {
@@ -277,8 +279,8 @@ namespace SD.GrayRace.ThingClasses
             }
             if (State == IncubatorState.Incubating)
             {
-                containedNanites -= 1f / 60000f;
-                if (containedNanites <= 0f)
+                _containedNanites -= 1f / 60000f;
+                if (_containedNanites <= 0f)
                 {
                     TryAbsorbNanites();
                 }
@@ -330,7 +332,7 @@ namespace SD.GrayRace.ThingClasses
                 allowAddictions:false,
                 developmentalStages: DevelopmentalStage.Child,
                 forceNoGear:true);
-            baby = PawnGenerator.GeneratePawn(pReq);
+            _baby = PawnGenerator.GeneratePawn(pReq);
             // baby = (Pawn)PregnancyUtility.ApplyBirthOutcome(null, 100f, Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual, null, null, this, null, null);
             // if (baby != null)
             // {
@@ -342,13 +344,10 @@ namespace SD.GrayRace.ThingClasses
             //     return;
             // }
 
-            if (foundationRecipe != null)
+            var ext = foundationRecipe?.GetModExtension<DefModExtension_RecipeNewBorn>();
+            if (ext?.newBornBackstory != null)
             {
-                var ext = foundationRecipe.GetModExtension<DefModExtension_RecipeNewBorn>();
-                if (ext.newBornBackstory != null)
-                {
-                    baby.story.Childhood = ext.newBornBackstory;
-                }
+                _baby.story.Childhood = ext.newBornBackstory;
             }
 
             State = IncubatorState.Finished;
@@ -363,23 +362,23 @@ namespace SD.GrayRace.ThingClasses
             if (State != IncubatorState.Finished) return;
 
             // 可以再弹出一个窗口显示新生儿，然后指定名字等，确定后，再清空舱内
-            NameTriple nameTriple = baby.Name as NameTriple;
+            NameTriple nameTriple = _baby.Name as NameTriple;
             Name name;
             string text = null;
             if (nameTriple != null && nameTriple.First == "Baby".Translate().CapitalizeFirst())
             {
                 Rand.PushState();
-                Rand.Seed = baby.thingIDNumber;
+                Rand.Seed = _baby.thingIDNumber;
                 NameStyle nameStyle = NameStyle.Full;
-                name = PawnBioAndNameGenerator.GeneratePawnName(baby, nameStyle);
+                name = PawnBioAndNameGenerator.GeneratePawnName(_baby, nameStyle);
                 Rand.PopState();
                 NameTriple nameTriple2 = name as NameTriple;
                 text = ((nameTriple2 != null) ? nameTriple2.First: ((NameSingle)name).Name);
             }
-            Find.WindowStack.Add(baby.NamePawnDialog(text));
+            Find.WindowStack.Add(_baby.NamePawnDialog(text));
             State = IncubatorState.Idle;
             SoundDefOf.GrowthVat_Open.PlayOneShot(SoundInfo.InMap(this));
-            GenSpawn.Spawn(baby, InteractionCell, Map);
+            GenSpawn.Spawn(_baby, InteractionCell, Map);
             innerContainer.ClearAndDestroyContents();
         }
 
@@ -397,7 +396,7 @@ namespace SD.GrayRace.ThingClasses
                 if (thing.def != GrayRaceDefOf.GR_Nanites) continue;
 
                 // 1 个纳米机械供给 1
-                containedNanites += 1f;
+                _containedNanites += 1f;
                 thing.SplitOff(1).Destroy();
 
                 break;

@@ -25,15 +25,15 @@ namespace SD.GrayRace.JobGivers
             {
                 return null;
             }
-            if (!pawn.needs.TryGetNeed<Need_GrayRaceEnergy>(out var need_GrayRaceEnergy))
+            if (!pawn.needs.TryGetNeed<Need_GrayRaceEnergy>(out var needGrayRaceEnergy))
             {
                 return null;
             }
 
-            if (!need_GrayRaceEnergy.StopSeekingMetal)
+            if (!needGrayRaceEnergy.stopSeekingMetal)
                 return null;
 
-            if (need_GrayRaceEnergy.CurLevelPercentage > 0.2f)
+            if (needGrayRaceEnergy.CurLevelPercentage > 0.2f)
             {
                 return null;
             }

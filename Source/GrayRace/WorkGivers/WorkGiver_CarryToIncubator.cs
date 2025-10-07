@@ -15,22 +15,22 @@ namespace SD.GrayRace.WorkGivers
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            if (!(t is Building_GRIncubator building_Incubator) || building_Incubator.Working || building_Incubator.selectedRecipe == null)
+            if (!(t is Building_GRIncubator buildingIncubator) || buildingIncubator.Working || buildingIncubator.SelectedRecipe == null)
             {
                 return false;
             }
 
-            if (pawn.Map.designationManager.DesignationOn(building_Incubator, DesignationDefOf.Deconstruct) != null) return false;
+            if (pawn.Map.designationManager.DesignationOn(buildingIncubator, DesignationDefOf.Deconstruct) != null) return false;
 
-            return !building_Incubator.IsBurning() && pawn.CanReserve(building_Incubator) && FindIngredients(pawn, building_Incubator).Thing != null;
+            return !buildingIncubator.IsBurning() && pawn.CanReserve(buildingIncubator) && FindIngredients(pawn, buildingIncubator).Thing != null;
         }
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            var building_Incubator = t as Building_GRIncubator;
-            if (building_Incubator == null || building_Incubator.Working || building_Incubator.State != IncubatorState.Preparing) return null;
+            var buildingIncubator = t as Building_GRIncubator;
+            if (buildingIncubator == null || buildingIncubator.Working || Building_GRIncubator.State != IncubatorState.Preparing) return null;
 
-            ThingCount thingCount = FindIngredients(pawn, building_Incubator);
+            ThingCount thingCount = FindIngredients(pawn, buildingIncubator);
 
             if (thingCount.Thing == null || thingCount.Count == 0) return null;
 

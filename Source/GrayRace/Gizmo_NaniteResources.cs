@@ -17,17 +17,17 @@ namespace SD.GrayRace
         protected override float Width => 300f;
 
         // 正在移动滑条
-        private static bool draggingBar;
+        private static bool s_draggingBar;
 
-        private static readonly Texture2D NaniteCostTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.2f));
-        private static readonly Texture2D BarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.34f, 0.42f, 0.43f));
-        private static readonly Texture2D BarHighlightTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.43f, 0.54f, 0.55f));
-        private static readonly Texture2D EmptyBarTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.03f, 0.035f, 0.05f));
+        private static readonly Texture2D s_naniteCostTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.2f, 0.2f, 0.2f));
+        private static readonly Texture2D s_barTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.34f, 0.42f, 0.43f));
+        private static readonly Texture2D s_barHighlightTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.43f, 0.54f, 0.55f));
+        private static readonly Texture2D s_emptyBarTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.03f, 0.035f, 0.05f));
         // private static readonly Texture2D DragBarTex =  SolidColorMaterials.NewSolidColorTexture(new Color(0.74f, 0.97f, 0.8f));
 
-        private static readonly Texture2D Click = ContentFinder<Texture2D>.Get("UI/Gizmo/Click", true);
-        private static readonly Texture2D Hover = ContentFinder<Texture2D>.Get("UI/Gizmo/Hover", true);
-        private static readonly Texture2D Normal = ContentFinder<Texture2D>.Get("UI/Gizmo/Normal", true);
+        private static readonly Texture2D s_click = ContentFinder<Texture2D>.Get("UI/Gizmo/Click", true);
+        private static readonly Texture2D s_hover = ContentFinder<Texture2D>.Get("UI/Gizmo/Hover", true);
+        private static readonly Texture2D s_normal = ContentFinder<Texture2D>.Get("UI/Gizmo/Normal", true);
 
         public Gizmo_NaniteResources(CompResource_Nanites resource)
         {
@@ -72,8 +72,8 @@ namespace SD.GrayRace
 
         protected override bool DraggingBar
         {
-            get => draggingBar;
-            set => draggingBar = value;
+            get => s_draggingBar;
+            set => s_draggingBar = value;
         }
         protected override string GetTooltip()
         {
@@ -94,11 +94,11 @@ namespace SD.GrayRace
             Rect innerRect = baseRect.ContractedBy(2f);
             if (Mouse.IsOver(baseRect))
             {
-                GrayRaceUtilities.DrawWindowBackgroundWithTexture(baseRect, Hover);
+                GrayRaceUtilities.DrawWindowBackgroundWithTexture(baseRect, s_hover);
             }
             else
             {
-                GrayRaceUtilities.DrawWindowBackgroundWithTexture(baseRect, Normal);
+                GrayRaceUtilities.DrawWindowBackgroundWithTexture(baseRect, s_normal);
             }
 
             Text.Font = GameFont.Small;
@@ -110,7 +110,7 @@ namespace SD.GrayRace
             barRect = innerRect.ContractedBy(22f);
             // barRect.yMin = textRect.yMax + 6f;
 
-            Widgets.FillableBar(barRect, ValuePercent, BarTex, EmptyBarTex, true);
+            Widgets.FillableBar(barRect, ValuePercent, s_barTex, s_emptyBarTex, true);
             foreach (float barThreshold in GetBarThresholds())
             {
                 GUI.DrawTexture(
@@ -141,9 +141,9 @@ namespace SD.GrayRace
             }
 
             // 预览消耗多少资源
-            if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability command_Ability && resource.Max > 0f)
+            if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability commandAbility && resource.Max > 0f)
             {
-                foreach (var effectComp in command_Ability.Ability.EffectComps)
+                foreach (var effectComp in commandAbility.Ability.EffectComps)
                 {
                     if (!(effectComp is CompAbilityEffect_NanitesCost compAbilityEffectNanitesCost))
                     {
@@ -163,7 +163,7 @@ namespace SD.GrayRace
                     rect.xMin = Mathf.Max(rect.xMin, rect.xMax - width * num4);
 
                     GUI.color = new Color(1f, 1f, 1f, num2 * 0.7f);
-                    GenUI.DrawTextureWithMaterial(rect, NaniteCostTex, null);
+                    GenUI.DrawTextureWithMaterial(rect, s_naniteCostTex, null);
                     GUI.color = Color.white;
                     return gizmoResult;
                 }

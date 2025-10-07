@@ -11,7 +11,7 @@ namespace SD.GrayRace
 {
     public class GrayRaceMod : Mod
     {
-        public static Harmony harmony;
+        public static Harmony HarmonyInstance;
 
         public GrayRaceMod(ModContentPack content) : base(content)
         {
