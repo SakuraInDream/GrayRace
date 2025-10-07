@@ -6,12 +6,13 @@ using SD.GrayRace.JobGivers;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using Verse.Sound;
 
 namespace SD.GrayRace.Needs
 {
     public class Need_GrayRaceEnergy: Need
     {
-        public bool StopSeekingMetal = false;
+        public bool StopSeekingMetal = true;
         public Need_GrayRaceEnergy(Pawn pawn) : base(pawn)
         {
         }
@@ -45,12 +46,21 @@ namespace SD.GrayRace.Needs
 
             // 在需求条右上角添加一个小按钮，控制当缺乏纳米机械时是否自动搜寻金属物品
             // 实验性功能 随时弃用
-            float buttonSize = rect.height / 2f;
-            Rect buttonRect = new Rect(rect.xMax - buttonSize, rect.y, buttonSize, buttonSize);
-            if(Widgets.ButtonImage(buttonRect, ContentFinder<Texture2D>.Get("Things/Item/Resource/Steel")))
+            float buttonSize = 24f; // rect.height / 2f;
+            Rect buttonRect = new Rect(rect.xMax - buttonSize, rect.center.y, buttonSize, buttonSize);
+            if(Widgets.ButtonImage(buttonRect, ThingDefOf.Steel.uiIcon))
             {
                 StopSeekingMetal = !StopSeekingMetal;
+                if (StopSeekingMetal)
+                {
+                    SoundDefOf.Tick_High.PlayOneShotOnCamera();
+                }
+                else
+                {
+                    SoundDefOf.Tick_Low.PlayOneShotOnCamera();
+                }
             }
+            GUI.DrawTexture(new Rect(buttonRect.center.x, buttonRect.y, buttonRect.width/2f, buttonRect.height/2f), StopSeekingMetal ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex);
 
             if (Mouse.IsOver(buttonRect))
             {
