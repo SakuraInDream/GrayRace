@@ -335,6 +335,7 @@
     <Compile Include="Needs\Need_GrayRaceEnergy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThingClasses\Building_GR_Incubator.cs" />
+    <Compile Include="UI\FloatMenuOptionProviders\FloatMenuOptionProvider_ConsumeMetal.cs" />
     <Compile Include="WorkGivers\WorkGiver_CarryToIncubator.cs" />
   </ItemGroup>
   <ItemGroup>
