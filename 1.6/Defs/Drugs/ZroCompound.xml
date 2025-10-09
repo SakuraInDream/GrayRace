@@ -10,7 +10,7 @@
       <HediffDef>GR_ZroAddiction</HediffDef>
     </descriptionHyperlinks>
     <graphicData>
-      <texPath>Things/Item/Drug/GoJuice</texPath>
+      <texPath>Things/Item/ZroCompound</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <rotatable>false</rotatable>

@@ -26,7 +26,7 @@
 
   <BodyPartDef>
     <defName>Nano_Brain</defName>
-    <label>AIPersonaCore</label>
+    <label>AI Persona Core</label>
     <hitPoints>10</hitPoints>
     <skinCovered>false</skinCovered>
     <canScarify>false</canScarify>

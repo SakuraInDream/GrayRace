@@ -249,7 +249,7 @@
                 <defaultProjectile>Bullet_GR_EnergyBattleRifle</defaultProjectile>
                 <warmupTime>1</warmupTime>
                 <range>39.9</range>
-                <burstShotCount>3</burstShotCount>
+                <burstShotCount>5</burstShotCount>
                 <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
                 <soundCast>GR_EnergyBattleRifle</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
@@ -301,7 +301,7 @@
 
     <!--能量重机枪（趋光）-->
     <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>SR_EnergyHMG</defName>
+        <defName>GR_EnergyHMG</defName>
         <label>Lumenward</label>
         <description>.</description>
         <graphicData>
@@ -324,7 +324,7 @@
             <AccuracyShort>0.33</AccuracyShort>
             <AccuracyMedium>0.35</AccuracyMedium>
             <AccuracyLong>0.25</AccuracyLong>
-            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+            <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
         </statBases>
         <costList>
             <GR_Alloy>160</GR_Alloy>

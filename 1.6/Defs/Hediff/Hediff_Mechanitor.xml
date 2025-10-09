@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!--战略指挥中心下行链路-->
+
+    <ThingDef ParentName="ControlSublinkBase">
+    <defName>GR_SCC_DownLink</defName>
+    <descriptionHyperlinks><HediffDef>GR_SCC_DownLink_Hediff</HediffDef></descriptionHyperlinks>
+    <label>SCC DownLink</label>
+    <description>A Strategic Coordination Link that boosts Mech Control Groups and Bandwidth for the Mechanitor.</description>
+    <costList>
+      <SignalChip>1</SignalChip>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>StandardMechtech</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsableImplant</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Implant sublink</useLabel>
+        <userMustHaveHediff>MechlinkImplant</userMustHaveHediff>
+      </li>
+      <li Class="CompProperties_UseEffectInstallImplant">
+        <hediffDef>GR_SCC_DownLink_Hediff</hediffDef>
+        <bodyPart>Brain</bodyPart>
+        <canUpgrade>true</canUpgrade>
+        <maxSeverity>3</maxSeverity>
+      </li>
+    </comps>
+  </ThingDef>
+
+    <HediffDef>
+    <defName>GR_SCC_DownLink_Hediff</defName>
+    <hediffClass>Hediff_Level</hediffClass>
+    <label>Strategic Coordination Center DownLink</label>
+    <description>A Strategic Coordination Link that boosts Mech Control Groups and Bandwidth for the Mechanitor.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <priceImpact>true</priceImpact>
+    <initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+    <minSeverity>0</minSeverity>
+    <maxSeverity>3</maxSeverity>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <levelIsQuantity>true</levelIsQuantity>
+    <duplicationAllowed>false</duplicationAllowed>
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <MechControlGroups>1</MechControlGroups>
+          <MechBandwidth>15</MechBandwidth>
+          <MechFormingSpeed>0.5</MechFormingSpeed>
+          <MechRepairSpeed>0.5</MechRepairSpeed>
+          <SubcoreEncodingSpeed>0.5</SubcoreEncodingSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>2</minSeverity>
+        <statOffsets>
+          <MechControlGroups>2</MechControlGroups>
+          <MechBandwidth>30</MechBandwidth>
+          <MechFormingSpeed>1</MechFormingSpeed>
+          <MechRepairSpeed>1</MechRepairSpeed>
+          <SubcoreEncodingSpeed>1</SubcoreEncodingSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>3</minSeverity>
+        <statOffsets>
+          <MechControlGroups>4</MechControlGroups>
+          <MechBandwidth>50</MechBandwidth>
+          <MechFormingSpeed>1.5</MechFormingSpeed>
+          <MechRepairSpeed>1.5</MechRepairSpeed>
+          <SubcoreEncodingSpeed>1.5</SubcoreEncodingSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+  <!--战略指挥中心信号转发终端-->
+
+  <HediffDef>
+    <defName>GR_SCC_BandNode_Hediff</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Strategic Coordination Center Signal Relay Terminal</label>
+    <description>This mechanitor's bandwidth is being increased thanks to the influence of a band node structure.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <duplicationAllowed>false</duplicationAllowed>
+    <stages>
+      <li>
+        <minSeverity>1</minSeverity>
+        <statOffsets>
+          <MechBandwidth>50</MechBandwidth>
+          <MechRemoteRepairDistance>1</MechRemoteRepairDistance>
+          <MechRemoteShieldDistance>1</MechRemoteShieldDistance>
+          <MechRemoteShieldEnergy>1</MechRemoteShieldEnergy>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>
