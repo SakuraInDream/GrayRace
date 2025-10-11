@@ -2,7 +2,7 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace SD.GrayRace.UI.FloatMenuOptionProviders
+namespace SD.GrayRace.UISet.FloatMenuOptionProviders
 {
     // 为金属物品添加“享用”选项
     public class FloatMenuOptionProvider_ConsumeMetal: FloatMenuOptionProvider
