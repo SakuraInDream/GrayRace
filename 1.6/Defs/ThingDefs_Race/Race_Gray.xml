@@ -74,11 +74,11 @@
                 <forcedRaceTraitEntries>                    <!--种族必备特性-->
                     <li>
                         <defName>LearningAlgorithms</defName>
-                        <chance>50</chance>
+                        <chance>10</chance>
                     </li>
                     <li>
                         <defName>GreatMemory</defName>
-                        <chance>50</chance>
+                        <chance>100</chance>
                     </li>
                 </forcedRaceTraitEntries>
                 <!--=파트제네레이터==========================================================================================-->
@@ -163,8 +163,7 @@
                     <value>
                         <hasStyle>true</hasStyle>
                         <styleTagsOverride>
-                            <li>AtHair</li>
-                            <li>GGlSHair</li>
+                            <li>GrayHair</li>
                         </styleTagsOverride>
                     </value>
                 </li>
@@ -204,18 +203,30 @@
                 </whiteApparelList>
                 <buildingList>
                 </buildingList>
+                <blackGeneTags>
+                    <li>HairStyle</li>
+                    <li>Fur</li>
+                    <li>BeardStyle</li>
+                    <li>SkinColor</li>
+                </blackGeneTags>
+                <blackEndoCategories>
+                    <li>HairColor</li>
+                    <li>Jaw</li>
+                    <li>Head</li>
+                    <li>BodyType</li>
+                </blackEndoCategories>
             </raceRestriction>
         </alienRace>
         <!--=============================================================================================================================-->
         <statBases>            <!--基础值设定-->
             <MarketValue>8000</MarketValue>            <!--价值-->
             <MoveSpeed>7</MoveSpeed>            <!--移动速度-->
-            <Flammability>-1</Flammability>            <!--可燃率-->
+            <Flammability>-10</Flammability>            <!--可燃率-->
             <ToxicResistance>10</ToxicResistance>            <!--毒素抗性-->
             <ComfyTemperatureMin>-273</ComfyTemperatureMin>            <!--最低舒适温度-->
             <ComfyTemperatureMax>1453</ComfyTemperatureMax>            <!--最高舒适温度-->
             <Mass>10</Mass>            <!--质量-->
-            <MeatAmount>5</MeatAmount>            <!--肉量-->
+            <MeatAmount>50</MeatAmount>            <!--肉量-->
             <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
             <ArmorRating_Heat>2.00</ArmorRating_Heat>
@@ -231,14 +242,14 @@
             <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>            <!--射击精准度-->
             <!--社交-->
             <NegotiationAbility>0.8</NegotiationAbility>            <!--谈判能力-->
-            <SellPriceFactor>2</SellPriceFactor>            <!--交易价格-->
+            <SellPriceFactor>2</SellPriceFactor>            <!--出售价格-->
             <SocialImpact>0.8</SocialImpact>            <!--社交影响力-->
             <!--生产-->
             <ButcheryMechanoidEfficiency>1.5</ButcheryMechanoidEfficiency>            <!--机械体拆解效率-->
             <ButcheryMechanoidSpeed>1.5</ButcheryMechanoidSpeed>            <!--机械体拆解速度-->
             <SmeltingSpeed>1.5</SmeltingSpeed>            <!--熔炼速度-->
             <GeneralLaborSpeed>1.5</GeneralLaborSpeed>            <!--普通工作速度-->
-            <WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+            <WorkSpeedGlobal>1.5</WorkSpeedGlobal>               <!--全局工作速度-->
             <!--烹饪-->
             <FoodPoisonChance>5</FoodPoisonChance>            <!--食物中毒几率-->
             <!--医学/研究-->
@@ -279,15 +290,15 @@
             </li>
         </comps>
         <damageMultipliers>
-			<li>
-				<damageDef>GR_NanoScratch</damageDef>
-				<multiplier>0</multiplier>
-			</li>
             <li>
-				<damageDef>GR_NanoBullet</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-		</damageMultipliers>
+                <damageDef>GR_NanoScratch</damageDef>
+                <multiplier>0</multiplier>
+            </li>
+            <li>
+                <damageDef>GR_NanoBullet</damageDef>
+                <multiplier>0</multiplier>
+            </li>
+        </damageMultipliers>
         <!--==맨손전투===================================================================================================================-->
         <tools>            <!--空手攻击的设置-->
             <li>
@@ -296,7 +307,7 @@
                     <li>GR_NanoScratch</li>
                 </capacities>
                 <power>30</power>
-                <cooldownTime>1</cooldownTime>
+                <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
             </li>
             <li>
@@ -305,7 +316,7 @@
                     <li>GR_NanoScratch</li>
                 </capacities>
                 <power>30</power>
-                <cooldownTime>1</cooldownTime>
+                <cooldownTime>2</cooldownTime>
                 <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
             </li>
         </tools>
@@ -363,7 +374,7 @@
                     <minAge>16</minAge>
                 </li>
             </lifeStageAges>
-            <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">                <!--职业几率?-->
+            <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">                <!--解锁职业的年龄-->
                 <Firefighter>7</Firefighter>
                 <Patient>0</Patient>
                 <Doctor>10</Doctor>

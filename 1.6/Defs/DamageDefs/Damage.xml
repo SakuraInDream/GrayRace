@@ -14,7 +14,7 @@
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been melted.</deathMessage>
-    <hediff>Gunshot</hediff>
+    <hediff>Burn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Blunt</impactSoundType>
     <isRanged>true</isRanged>
@@ -84,7 +84,5 @@
     <isExplosive>true</isExplosive>
     <defaultArmorPenetration>1</defaultArmorPenetration>
     <workerClass>DamageWorker_AddInjury</workerClass>
-    <isExplosive>true</isExplosive>
   </DamageDef>
-
 </Defs>

@@ -40,9 +40,9 @@
             </li>
         </tools>
         <recipeMaker>
-            <researchPrerequisite>Smithing</researchPrerequisite>
+            <researchPrerequisite>GR_T3WeaponTech</researchPrerequisite>
             <skillRequirements>
-                <Crafting>12</Crafting>
+                <Crafting>16</Crafting>
             </skillRequirements>
             <displayPriority>410</displayPriority>
         </recipeMaker>

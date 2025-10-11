@@ -22,7 +22,7 @@
     <size>(5,2)</size>
     <costList>
       <GR_Alloy>100</GR_Alloy>
-      <GR_Nanites>500</GR_Nanites>
+      <GR_Nanites>1000</GR_Nanites>
       <ComponentSpacer>5</ComponentSpacer>
     </costList>
     <comps>
@@ -33,7 +33,7 @@
       </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>400</basePowerConsumption>
+        <basePowerConsumption>1000</basePowerConsumption>
         <shortCircuitInRain>true</shortCircuitInRain>
       </li>
       <li Class="CompProperties_Flickable"/>
@@ -81,7 +81,6 @@
     </researchPrerequisites>
   </ThingDef>
 
-
   <!--纳米变形器-->
 
   <ThingDef ParentName="BenchBase">
@@ -100,7 +99,7 @@
     </statBases>
     <minifiedDef />
     <thingCategories Inherit="false" />
-    <size>(5,2)</size>
+    <size>(5,5)</size>
     <costList>
       <GR_Alloy>600</GR_Alloy>
       <GR_Nanites>1000</GR_Nanites>
@@ -114,7 +113,7 @@
       </li>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>1000</basePowerConsumption>
+        <basePowerConsumption>10000</basePowerConsumption>
         <shortCircuitInRain>true</shortCircuitInRain>
       </li>
       <li Class="CompProperties_Flickable"/>
@@ -123,10 +122,10 @@
     <recipes>
     </recipes>
     <graphicData>
-      <texPath>Things/Building/Production/FabricationBench</texPath>
+      <texPath>Things/Building/Transmuter/Transmuter</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(7,4)</drawSize>
+      <drawSize>(5.5,5.5)</drawSize>
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -145,7 +144,7 @@
       <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
     </building>
     <fillPercent>0.5</fillPercent>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <interactionCellOffset>(0,0,-3)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <designationCategory>Production</designationCategory>
@@ -162,69 +161,6 @@
     </researchPrerequisites>
   </ThingDef>
 
-  <!--科研枢纽下行链路-->
-
-  <ThingDef ParentName="BuildingBase">
-    <defName>GR_ScienceNexus</defName>
-    <label>Science Nexus DownLink</label>
-    <description>Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one multi-analyzer.</description>
-    <graphicData>
-      <texPath>Things/Building/Misc/MultiAnalyzer</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>2.46875</drawSize>
-    </graphicData>
-    <uiIconScale>0.85</uiIconScale>
-    <researchPrerequisites>
-      <li>GR_ScienceNexus</li>
-    </researchPrerequisites>
-    <size>(2,2)</size>
-    <rotatable>false</rotatable>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.5</fillPercent>
-    <designationHotKey>Misc4</designationHotKey>
-    <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <canOverlapZones>false</canOverlapZones>
-    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <thingCategories>
-      <li>BuildingsMisc</li>
-    </thingCategories>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>6000</WorkToBuild>
-      <Mass>60</Mass>
-      <Flammability>0</Flammability>
-    </statBases>
-    <costList>
-      <GR_Alloy>40</GR_Alloy>
-      <GR_Nanites>200</GR_Nanites>
-      <ComponentSpacer>10</ComponentSpacer>
-    </costList>
-    <building>
-      <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
-    </building>
-    <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <shortCircuitInRain>true</shortCircuitInRain>
-        <basePowerConsumption>200</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
-      <li Class="CompProperties_Facility">
-        <statOffsets>
-          <ResearchSpeedFactor>0.4</ResearchSpeedFactor>
-        </statOffsets>
-        <maxSimultaneous>2</maxSimultaneous>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>PlaceWorker_ShowFacilitiesConnections</li>
-    </placeWorkers>
-    <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
-  </ThingDef>
-
   <!--聚变反应堆-->
 
   <ThingDef ParentName="BuildingBase">
@@ -237,6 +173,7 @@
       <texPath>Things/Building/Reactor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,6)</drawSize>
+      <drawOffset>(0,0,0.4)</drawOffset>
       <shadowData>
         <volume>(5,1,5)</volume>
         <offset>(-0.03,0,-0.1)</offset>
@@ -323,6 +260,7 @@
   </ThingDef>
 
   <!--被泰南气晕，培育仓盖子是单独渲染的-->
+  
   <ThingDef ParentName="BuildingBase">
     <defName>GR_Incubator</defName>
     <label>Incubator</label>
@@ -333,7 +271,8 @@
     <graphicData>
       <texPath>Things/Building/Incubator/Incubator</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(1.5,3)</drawSize>
+      <drawSize>(1.5,2.5)</drawSize>
+      <drawOffset>(0,0,0.7)</drawOffset>
     </graphicData>
     <rotatable>false</rotatable>
     <castEdgeShadows>true</castEdgeShadows>
@@ -401,5 +340,127 @@
       <li Class="CompProperties_Flickable"/>
     </comps>
   </ThingDef>
+
+  <!--干船坞-->
+
+  <!-- <ThingDef ParentName="MechGestatorBase">
+    <defName>GR_Shipyard</defName>
+    <label>Shipyard</label>
+    <description>A tank of mechanite-rich fluid with support tubes for feeding in materials and nutrients. Mechanitors can use it to produce new mechanoids or to resurrect dead mechanoids. This tier of mech gestator is capable of generating medium, heavy, and ultraheavy mechs.\n\nThe process uses harsh chemicals which are stored in toxic wastepacks. Haulers must remove the wastepacks from time to time.</description>
+    <graphicData>
+      <texPath>Things/Building/Production/MechGestatorLarge</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(6, 5)</drawSize>
+      <shadowData>
+        <volume>(3.8, 3, 2.7)</volume>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/Production/MechGestatorLarge_MenuIcon</uiIconPath>
+    <uiIconScale>1.5</uiIconScale>
+    <interactionCellOffset>(2,0,2)</interactionCellOffset>
+    <statBases>
+      <MaxHitPoints>8000</MaxHitPoints>
+      <WorkToBuild>30000</WorkToBuild>
+      <Mass>100</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <size>(4,3)</size>
+    <costList>
+      <GR_Alloy>500</GR_Alloy>
+      <GR_Nanites>1000</GR_Nanites>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <researchPrerequisites>
+      <li>StandardMechtech</li>
+    </researchPrerequisites>
+    <building>
+      <barDrawData>
+        <north>
+          <preRotationOffset>(-1.59, 1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </north>
+        <south>
+          <preRotationOffset>(-1.59, 1.33)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </south>
+        <east>
+          <preRotationOffset>(1.59, -1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </east>
+        <west>
+          <preRotationOffset>(-1.59, -1.4)</preRotationOffset>
+          <size>(0.72, 0.12)</size>
+        </west>
+      </barDrawData>
+      <formingGraphicData>
+        <texPath>Things/Pawn/Mechanoid/HalfGestatedMechLarge</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>(1.65,1.65)</drawSize>
+      </formingGraphicData>
+      <formingMechBobSpeed>0.0005</formingMechBobSpeed>
+      <formingMechYBobDistance>0.08</formingMechYBobDistance>
+      <formingMechPerRotationOffset>
+        <li>(0, 0, 0.225)</li>
+        <li>(-0.15, 0, 0.225)</li>
+        <li>(0, 0, 0.225)</li>
+        <li>(0.15, 0, 0.225)</li>
+      </formingMechPerRotationOffset>
+      <mechGestatorCylinderGraphic>
+        <texPath>Things/Building/Production/MechGestatorLargeGlass</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(6, 5)</drawSize>
+        <shaderType>Transparent</shaderType>
+      </mechGestatorCylinderGraphic>
+      <mechGestatorTopGraphic>
+        <texPath>Things/Building/Production/MechGestatorLargeTop</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(6, 5)</drawSize>
+      </mechGestatorTopGraphic>
+      <gestatorFormingMote>
+        <north>MechGestatorFormingLarge_North</north>
+        <east>MechGestatorFormingLarge_East</east>
+        <west>MechGestatorFormingLarge_West</west>
+        <south>MechGestatorFormingLarge_South</south>
+      </gestatorFormingMote>
+      <gestatorCycleCompleteMote>
+        <north>MechGestatorCycleCompleteLarge_North</north>
+        <east>MechGestatorCycleCompleteLarge_East</east>
+        <west>MechGestatorCycleCompleteLarge_West</west>
+        <south>MechGestatorCycleCompleteLarge_South</south>
+      </gestatorCycleCompleteMote>
+      <gestatorFormedMote>
+        <north>MechGestatorFormedLarge_North</north>
+        <east>MechGestatorFormedLarge_East</east>
+        <west>MechGestatorFormedLarge_West</west>
+        <south>MechGestatorFormedLarge_South</south>
+      </gestatorFormedMote>
+    </building>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <recipes>
+      <li>Pikeman</li>
+      <li>Scorcher</li>
+      <li>Scyther</li>
+      <li>Tunneler</li>
+      <li>Lancer</li>
+      <li>Tesseron</li>
+      <li>Legionary</li>
+      <li>CentipedeGunner</li>
+      <li>CentipedeBurner</li>
+      <li>CentipedeBlaster</li>
+      <li>Diabolus</li>
+      <li>Centurion</li>
+      <li>Warqueen</li>
+      <li>ResurrectMediumMech</li>
+      <li>ResurrectHeavyMech</li>
+      <li>ResurrectUltraheavyMech</li>
+    </recipes>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>5000</basePowerConsumption>
+        <idlePowerDraw>50</idlePowerDraw>
+      </li>
+    </comps>
+  </ThingDef> -->
 
 </Defs>

@@ -33,7 +33,7 @@
         <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>24000</WorkToMake>
-            <Mass>3.5</Mass>
+            <Mass>2</Mass>
             <AccuracyTouch>1</AccuracyTouch>
             <AccuracyShort>0.95</AccuracyShort>
             <AccuracyMedium>0.6</AccuracyMedium>
@@ -151,7 +151,7 @@
                 <range>21.9</range>
                 <burstShotCount>3</burstShotCount>
                 <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                <soundCast>GR_disruptor_fire</soundCast>
+                <soundCast>GR_RailSniperRifle</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
             </li>
@@ -242,7 +242,7 @@
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_GR_RailAssaultRifle</defaultProjectile>
-                <warmupTime>0.8</warmupTime>
+                <warmupTime>1.1</warmupTime>
                 <range>37.9</range>
                 <burstShotCount>5</burstShotCount>
                 <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
@@ -293,7 +293,7 @@
 
     <!--磁轨机枪（风暴）-->
     <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>SR_RailMachinegun</defName>
+        <defName>GR_RailMachinegun</defName>
         <label>Storm</label>
         <description>.</description>
         <graphicData>
@@ -415,7 +415,7 @@
         <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>45000</WorkToMake>
-            <Mass>4</Mass>
+            <Mass>8</Mass>
             <AccuracyTouch>0.6</AccuracyTouch>
             <AccuracyShort>0.9</AccuracyShort>
             <AccuracyMedium>1</AccuracyMedium>
@@ -480,7 +480,7 @@
 
     <!--磁轨重武器（质量）-->
     <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>SR_RailHSR</defName>
+        <defName>GR_RailCannon</defName>
         <label>MASS</label>
         <description>.</description>
         <graphicData>
@@ -532,7 +532,7 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_GR_RailHSR</defaultProjectile>
+                <defaultProjectile>Bullet_GR_RailCannon</defaultProjectile>
                 <warmupTime>2</warmupTime>
                 <range>54.9</range>
                 <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
@@ -554,13 +554,13 @@
         </tools>
     </ThingDef>
     <ThingDef ParentName="BaseBullet">
-        <defName>Bullet_GR_RailHSR</defName>
-        <label>Rail heavy sniper rifle bullet</label>
+        <defName>Bullet_GR_RailCannon</defName>
+        <label>Rail heavy cannon bullet</label>
+        <thingClass>Projectile_Explosive</thingClass>
         <graphicData>
             <texPath>Things/Projectile/ShellHighExplosive</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Bomb</damageDef>
             <damageAmountBase>150</damageAmountBase>

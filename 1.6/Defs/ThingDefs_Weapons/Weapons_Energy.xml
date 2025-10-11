@@ -33,7 +33,7 @@
         <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>24000</WorkToMake>
-            <Mass>3.5</Mass>
+            <Mass>2</Mass>
             <AccuracyTouch>1</AccuracyTouch>
             <AccuracyShort>0.8</AccuracyShort>
             <AccuracyMedium>0.4</AccuracyMedium>
@@ -93,7 +93,7 @@
         </graphicData>
         <projectile>
             <damageDef>GR_Laser</damageDef>
-            <damageAmountBase>15</damageAmountBase>
+            <damageAmountBase>20</damageAmountBase>
             <armorPenetrationBase>0.1</armorPenetrationBase>
             <stoppingPower>1</stoppingPower>
             <beamMoteDef>Mote_BeamRepeaterLaser</beamMoteDef>
@@ -194,7 +194,7 @@
         </graphicData>
         <projectile>
             <damageDef>GR_Disintegration</damageDef>
-            <damageAmountBase>15</damageAmountBase>
+            <damageAmountBase>20</damageAmountBase>
             <stoppingPower>3</stoppingPower>
             <beamMoteDef>Mote_BeamRepeaterLaser</beamMoteDef>
             <beamStartOffset>0.5</beamStartOffset>
@@ -248,8 +248,8 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_GR_EnergyBattleRifle</defaultProjectile>
                 <warmupTime>1</warmupTime>
-                <range>39.9</range>
-                <burstShotCount>3</burstShotCount>
+                <range>37.9</range>
+                <burstShotCount>5</burstShotCount>
                 <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
                 <soundCast>GR_EnergyBattleRifle</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
@@ -291,7 +291,7 @@
         </graphicData>
         <projectile>
             <damageDef>GR_Laser</damageDef>
-            <damageAmountBase>18</damageAmountBase>
+            <damageAmountBase>24</damageAmountBase>
             <armorPenetrationBase>0.3</armorPenetrationBase>
             <beamMoteDef>Mote_BeamRepeaterLaser</beamMoteDef>
             <beamStartOffset>0.5</beamStartOffset>
@@ -301,7 +301,7 @@
 
     <!--能量重机枪（趋光）-->
     <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>SR_EnergyHMG</defName>
+        <defName>GR_EnergyHMG</defName>
         <label>Lumenward</label>
         <description>.</description>
         <graphicData>
@@ -324,7 +324,7 @@
             <AccuracyShort>0.33</AccuracyShort>
             <AccuracyMedium>0.35</AccuracyMedium>
             <AccuracyLong>0.25</AccuracyLong>
-            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+            <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
         </statBases>
         <costList>
             <GR_Alloy>160</GR_Alloy>
@@ -358,7 +358,7 @@
                 <warmupTime>0.5</warmupTime>
                 <range>37.9</range>
                 <burstShotCount>25</burstShotCount>
-                <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
                 <soundCast>GR_EnergyBattleRifle</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
@@ -385,7 +385,7 @@
         </graphicData>
         <projectile>
             <damageDef>GR_Laser</damageDef>
-            <damageAmountBase>18</damageAmountBase>
+            <damageAmountBase>30</damageAmountBase>
             <armorPenetrationBase>0.3</armorPenetrationBase>
             <beamMoteDef>Mote_GRHeavyMG</beamMoteDef>
             <beamStartOffset>0.5</beamStartOffset>
@@ -572,6 +572,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_GR_EnergyHL</defName>
         <label>Energy heavy Launcher bullet</label>
+        <thingClass>Projectile_Explosive</thingClass>
         <graphicData>
             <texPath>Things/Projectile/Bullet_Small</texPath>
             <graphicClass>Graphic_Single</graphicClass>

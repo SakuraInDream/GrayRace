@@ -6,7 +6,7 @@
     <defName>Gray</defName>
     <label>Gray</label>
     <corePart>
-      <def>Nano_Torso</def>
+      <def>Torso</def>
       <height>Middle</height>
       <depth>Outside</depth>
       <groups>
@@ -39,14 +39,27 @@
               </groups>
               <parts>
                 <li>
-                  <def>Nano_Brain</def>
-                  <coverage>0.18</coverage>
+                  <def>Brain</def>
+                  <customLabel>AI Persona Core</customLabel>
+                  <coverage>0</coverage>
                   <depth>Inside</depth>
                   <groups>
                     <li>UpperHead</li>
                     <li>Eyes</li>
                     <li>FullHead</li>
                   </groups>
+                  <parts>
+                    <li>
+                      <def>Nano_Brain</def>
+                      <coverage>0</coverage>
+                      <depth>Inside</depth>
+                      <groups>
+                        <li>UpperHead</li>
+                        <li>Eyes</li>
+                        <li>FullHead</li>
+                      </groups>
+                    </li>
+                  </parts>
                 </li>
                 <li>
                   <def>Eye</def>
@@ -422,5 +435,5 @@
       </parts>
     </corePart>
   </BodyDef>
-  
+
 </Defs>

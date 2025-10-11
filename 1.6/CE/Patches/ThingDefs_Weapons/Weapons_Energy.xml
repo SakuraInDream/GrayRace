@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <!-- ================ Melee ================ -->
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[ 
+            defName="GR_EnergyPDW" or 
+            defName="GR_EnergyShotgun" or 
+            defName="GR_EnergyBattleRifle" or 
+            defName="GR_EnergyHMG" or 
+            defName="GR_EnergySniperRifle" or 
+            defName="GR_EnergyHL"
+        ]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>stock</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>1.3</cooldownTime>
+                    <chanceFactor>1.5</chanceFactor>
+                    <armorPenetrationBlunt>3</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>barrel</label>
+                    <capacities>
+                        <li>Blunt</li>
+                    </capacities>
+                    <power>6</power>
+                    <cooldownTime>1.8</cooldownTime>
+                    <armorPenetrationBlunt>2</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>muzzle</label>
+                    <capacities>
+                        <li>Poke</li>
+                    </capacities>
+                    <power>10</power>
+                    <cooldownTime>1.3</cooldownTime>
+                    <armorPenetrationBlunt>3</armorPenetrationBlunt>
+                    <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <!-- ================ Weapon ================ -->
+
+    <!--能量冲（流光）-->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>GR_EnergyPDW</defName>
+        <statBases>
+            <SightsEfficiency>1.0</SightsEfficiency>
+            <ShotSpread>0.07</ShotSpread>
+            <SwayFactor>0.7</SwayFactor>
+            <Bulk>3</Bulk>
+            <Mass>2</Mass>
+            <RangedWeapon_Cooldown>0.22</RangedWeapon_Cooldown>
+        </statBases>
+        <Properties>
+            <recoilAmount>0</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_PDWLaser_GR</defaultProjectile>
+            <warmupTime>0.4</warmupTime>
+            <burstShotCount>8</burstShotCount>
+            <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+            <range>25</range>
+            <soundCast>GR_EnergyPDW</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>40</magazineSize>
+            <reloadTime>3.5</reloadTime>
+            <ammoSet>AmmoSet_LaserCell_PDW</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aimedBurstShotCount>4</aimedBurstShotCount>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+            <aiAimMode>Snapshot</aiAimMode>
+        </FireModes>
+        <weaponTags>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
+    </Operation>
+
+    <!--能量喷（逐光）-->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>GR_EnergyShotgun</defName>
+        <statBases>
+            <SightsEfficiency>1</SightsEfficiency>
+            <ShotSpread>0.1</ShotSpread>
+            <SwayFactor>1.21</SwayFactor>
+            <Bulk>8</Bulk>
+            <Mass>4</Mass>
+            <RangedWeapon_Cooldown>0.22</RangedWeapon_Cooldown>
+        </statBases>
+        <Properties>
+            <recoilAmount>0</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_SGLaser_GR</defaultProjectile>
+            <warmupTime>0.6</warmupTime>
+            <burstShotCount>3</burstShotCount>
+            <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+            <range>18</range>
+            <soundCast>GR_EnergyShotgun</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>30</magazineSize>
+            <reloadTime>4</reloadTime>
+            <ammoSet>AmmoSet_LaserCell_SG</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>Snapshot</aiAimMode>
+        </FireModes>
+    </Operation>
+
+    <!--能量战斗步枪（飞光）-->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>GR_EnergyBattleRifle</defName>
+        <statBases>
+            <SightsEfficiency>1.5</SightsEfficiency>
+            <ShotSpread>0.06</ShotSpread>
+            <SwayFactor>1.1</SwayFactor>
+            <Bulk>8</Bulk>
+            <Mass>4</Mass>
+            <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+        </statBases>
+        <Properties>
+            <recoilAmount>0</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_RifleLaser_GR</defaultProjectile>
+            <warmupTime>0.8</warmupTime>
+            <burstShotCount>5</burstShotCount>
+            <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+            <range>60</range>
+            <soundCast>GR_EnergyBattleRifle</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>30</magazineSize>
+            <reloadTime>3.5</reloadTime>
+            <ammoSet>AmmoSet_LaserCell_CR</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aimedBurstShotCount>3</aimedBurstShotCount>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+    </Operation>
+
+    <!--能量重机枪（趋光）-->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>GR_EnergyHMG</defName>
+        <statBases>
+            <SightsEfficiency>1</SightsEfficiency>
+            <ShotSpread>0.04</ShotSpread>
+            <SwayFactor>1.3</SwayFactor>
+            <Bulk>25</Bulk>
+            <Mass>60</Mass>
+            <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+        </statBases>
+        <Properties>
+            <recoilAmount>0</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_MGLaser_GR</defaultProjectile>
+            <warmupTime>1.9</warmupTime>
+            <burstShotCount>40</burstShotCount>
+            <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+            <range>70</range>
+            <soundCast>GR_EnergyBattleRifle</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>200</magazineSize>
+            <reloadTime>7.5</reloadTime>
+            <ammoSet>AmmoSet_LaserCell_MG</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aimedBurstShotCount>20</aimedBurstShotCount>
+            <aiAimMode>Snapshot</aiAimMode>
+        </FireModes>
+    </Operation>
+
+    <!--能量狙（耀光）-->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>GR_EnergySniperRifle</defName>
+        <statBases>
+            <SightsEfficiency>4.5</SightsEfficiency>
+            <ShotSpread>0.01</ShotSpread>
+            <SwayFactor>1.2</SwayFactor>
+            <Bulk>13</Bulk>
+            <Mass>5</Mass>
+            <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+        </statBases>
+        <Properties>
+            <recoilAmount>0</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_SRLaser_GR</defaultProjectile>
+            <warmupTime>1.5</warmupTime>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+            <range>85</range>
+            <soundCast>GR_EnergySniperRifle</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>8</magazineSize>
+            <reloadTime>3.5</reloadTime>
+            <ammoSet>AmmoSet_LaserCell_SR</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+    </Operation>
+
+    <!--能量重武器（星光）-->
+
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+        <defName>GR_EnergyHL</defName>
+        <statBases>
+            <SightsEfficiency>2</SightsEfficiency>
+            <ShotSpread>0.06</ShotSpread>
+            <SwayFactor>0.6</SwayFactor>
+            <Bulk>30</Bulk>
+            <Mass>60</Mass>
+            <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+        </statBases>
+        <Properties>
+            <recoilAmount>0</recoilAmount>
+            <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Bullet_HLLaser_GR</defaultProjectile>
+            <warmupTime>1.5</warmupTime>
+            <burstShotCount>1</burstShotCount>
+            <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+            <range>110</range>
+            <soundCast>GR_RailSniperRifle</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+        </Properties>
+        <AmmoUser>
+            <magazineSize>1</magazineSize>
+            <reloadTime>7.5</reloadTime>
+            <ammoSet>AmmoSet_LaserCell_HL</ammoSet>
+        </AmmoUser>
+        <FireModes>
+            <aiAimMode>AimedShot</aiAimMode>
+        </FireModes>
+    </Operation>
+
+</Patch>

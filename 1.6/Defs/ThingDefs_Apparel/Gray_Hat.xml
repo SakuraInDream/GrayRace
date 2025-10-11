@@ -40,6 +40,21 @@
       <layers>
         <li>Overhead</li>
       </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+        <north>
+          <offset>(0,-0.15)</offset>
+        </north>
+        <south>
+          <offset>(0,-0.15)</offset>
+        </south>
+        <east>
+          <offset>(-0.35,-0.1)</offset>
+        </east>
+        <west>
+          <offset>(0.35,-0.1)</offset>
+        </west>
+      </wornGraphicData>
       <tags>
         <li>IndustrialBasic</li>
       </tags>

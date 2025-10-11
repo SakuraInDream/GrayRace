@@ -24,7 +24,7 @@
         </forcedTraits>
         <passions>
             <Crafting>2</Crafting>
-            <Social>-1</Social>
+            <Social>0</Social>
         </passions>
         <skillGains>
             <Crafting>9</Crafting>
@@ -48,7 +48,7 @@
         <passions>
             <Shooting>1</Shooting>
             <Melee>1</Melee>
-            <Social>-1</Social>
+            <Social>0</Social>
         </passions>
         <skillGains>
             <Shooting>6</Shooting>
