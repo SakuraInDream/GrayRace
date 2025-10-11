@@ -33,7 +33,7 @@
         <techLevel>Spacer</techLevel>
         <statBases>
             <WorkToMake>24000</WorkToMake>
-            <Mass>3.5</Mass>
+            <Mass>2</Mass>
             <AccuracyTouch>1</AccuracyTouch>
             <AccuracyShort>0.95</AccuracyShort>
             <AccuracyMedium>0.6</AccuracyMedium>
@@ -556,11 +556,11 @@
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_GR_RailCannon</defName>
         <label>Rail heavy cannon bullet</label>
+        <thingClass>Projectile_Explosive</thingClass>
         <graphicData>
             <texPath>Things/Projectile/ShellHighExplosive</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Bomb</damageDef>
             <damageAmountBase>150</damageAmountBase>

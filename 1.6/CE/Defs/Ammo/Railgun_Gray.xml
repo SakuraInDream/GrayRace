@@ -112,10 +112,10 @@
 	<!-- ==================== Recipes ========================== -->
 
 	<RecipeDef ParentName="AmmoRecipeBase">
-		<defName>MakeAmmo_6mmRailgun_Sabot</defName>
-		<label>make 6mm Railgun cartridge (Sabot) x500</label>
-		<description>Craft 500 6mm Railgun (Sabot) cartridges.</description>
-		<jobString>Making 6mm Railgun (Sabot) cartridges.</jobString>
+		<defName>MakeAmmo_Railgun_Gray</defName>
+		<label>make Railgun(Gray) cartridge x500</label>
+		<description>Craft 500 Railgun(Gray) cartridges.</description>
+		<jobString>Making Railgun(Gray) cartridges.</jobString>
 		<workAmount>1000</workAmount>
 		<ingredients>
 			<li>

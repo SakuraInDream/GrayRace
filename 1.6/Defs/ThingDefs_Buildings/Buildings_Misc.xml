@@ -10,7 +10,8 @@
         <graphicData>
             <texPath>Things/Building/Misc/ScienceNexus</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>2.46875</drawSize>
+            <drawSize>2.5</drawSize>
+            <drawOffset>(0,0,0.2)</drawOffset>
         </graphicData>
         <uiIconScale>0.85</uiIconScale>
         <researchPrerequisites>
@@ -79,6 +80,7 @@
             <texPath>Things/Building/Misc/SCC</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(2.5,2.5)</drawSize>
+            <drawOffset>(0,0,0.2)</drawOffset>
             <shadowData>
                 <volume>(1.5, 0.35, 1.2)</volume>
                 <offset>(0, 0, -0.15)</offset>

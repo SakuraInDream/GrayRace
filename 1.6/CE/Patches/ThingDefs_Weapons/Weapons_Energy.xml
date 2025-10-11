@@ -59,8 +59,8 @@
             <SightsEfficiency>1.0</SightsEfficiency>
             <ShotSpread>0.07</ShotSpread>
             <SwayFactor>0.7</SwayFactor>
-            <Bulk>4</Bulk>
-            <Mass>3</Mass>
+            <Bulk>3</Bulk>
+            <Mass>2</Mass>
             <RangedWeapon_Cooldown>0.22</RangedWeapon_Cooldown>
         </statBases>
         <Properties>
@@ -86,6 +86,9 @@
 			<aiUseBurstMode>TRUE</aiUseBurstMode>
             <aiAimMode>Snapshot</aiAimMode>
         </FireModes>
+        <weaponTags>
+            <li>CE_OneHandedWeapon</li>
+        </weaponTags>
     </Operation>
 
     <!--能量喷（逐光）-->

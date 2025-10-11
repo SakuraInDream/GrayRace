@@ -173,6 +173,7 @@
       <texPath>Things/Building/Reactor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,6)</drawSize>
+      <drawOffset>(0,0,0.4)</drawOffset>
       <shadowData>
         <volume>(5,1,5)</volume>
         <offset>(-0.03,0,-0.1)</offset>
@@ -270,7 +271,8 @@
     <graphicData>
       <texPath>Things/Building/Incubator/Incubator</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(1.5,3)</drawSize>
+      <drawSize>(1.5,2.5)</drawSize>
+      <drawOffset>(0,0,0.7)</drawOffset>
     </graphicData>
     <rotatable>false</rotatable>
     <castEdgeShadows>true</castEdgeShadows>
