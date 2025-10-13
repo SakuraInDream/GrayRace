@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-        <defName>GR_HFMurasama</defName>
-        <label>HF Murasama</label>
-        <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
-        <possessionCount>1</possessionCount>
-        <graphicData>
-            <texPath>Things/Item/Weapon/Melee/Melee_HFMurasama</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <uiIconScale>1.2</uiIconScale>
-        <techLevel>Spacer</techLevel>
-        <thingSetMakerTags>
-            <li>RewardStandardQualitySuper</li>
-        </thingSetMakerTags>
-        <weaponTags>
-            <li>MedievalMeleeDecent</li>
-        </weaponTags>
-        <statBases>
-            <WorkToMake>12000</WorkToMake>
-            <Mass>0.85</Mass>
-        </statBases>
-        <costList>
-            <GR_Alloy>120</GR_Alloy>
-            <GR_Nanites>100</GR_Nanites>
-        </costList>
-        <relicChance>2</relicChance>
-        <equippedAngleOffset>-135</equippedAngleOffset>
-        <tools>
-            <li>
-                <label>edge</label>
-                <capacities>
-                    <li>Cut</li>
-                </capacities>
-                <power>40</power>
-                <armorPenetration>3</armorPenetration>
-                <cooldownTime>0.3</cooldownTime>
-            </li>
-        </tools>
-        <recipeMaker>
-            <researchPrerequisite>GR_T3WeaponTech</researchPrerequisite>
-            <skillRequirements>
-                <Crafting>16</Crafting>
-            </skillRequirements>
-            <displayPriority>410</displayPriority>
-        </recipeMaker>
-    </ThingDef>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>GR_HFMurasama</defName>
+    <label>HF Murasama</label>
+    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Weapon/Melee/Melee_HFMurasama</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <techLevel>Spacer</techLevel>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>0.85</Mass>
+    </statBases>
+    <costList>
+      <GR_Alloy>120</GR_Alloy>
+      <GR_Nanites>100</GR_Nanites>
+    </costList>
+    <relicChance>2</relicChance>
+    <equippedAngleOffset>-135</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>40</power>
+        <armorPenetration>3</armorPenetration>
+        <cooldownTime>0.3</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>GR_T3WeaponTech</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>16</Crafting>
+      </skillRequirements>
+      <displayPriority>410</displayPriority>
+    </recipeMaker>
+  </ThingDef>
 
 </Defs>
