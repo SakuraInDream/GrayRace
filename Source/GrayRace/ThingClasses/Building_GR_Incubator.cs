@@ -4,6 +4,7 @@ using System.Text;
 using RimWorld;
 using SD.GrayRace.Attributes;
 using SD.GrayRace.DefModExtensions;
+using SD.GrayRace.Utilities;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -24,22 +25,73 @@ namespace SD.GrayRace.ThingClasses
     // 消耗纳米机械和电力进行培育
     // 配合个 ITab() 显示当前培育状态：比如剩余时间、所需材料、纳米机械数量、放入的人格显示
     [StaticConstructorOnStartup]
-    public class Building_GRIncubator: Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn, IThingHolder
+    public class Building_GRIncubator: Building_Enterable, IStoreSettingsParent, IThingHolderWithDrawnPawn
     {
         public RecipeDef selectedRecipe;
 
         public RecipeDef foundationRecipe;
 
-        private Pawn baby;
+        [Unsaved]
+        private Graphic _fetusEarlyStageGraphic;
 
         [Unsaved]
-        private CompPowerTrader power;
+        private Graphic _fetusLateStageGraphic;
 
-        private float containedNanites;
+        [Unsaved]
+        private Graphic _topGraphic;
+
+        [Unsaved]
+        private Graphic _glassGraphic;
+
+        public Graphic TopGraphic
+        {
+            get
+            {
+                _topGraphic ??= def.building.mechGestatorTopGraphic.Graphic;
+                return _topGraphic;
+            }
+        }
+        // 用原版的胚胎贴图
+        public Graphic FetusEarlyStageGraphic
+        {
+            get
+            {
+                _fetusEarlyStageGraphic ??= GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_EarlyStage", ShaderDatabase.Cutout, Vector2.one, Color.white);
+
+                return _fetusEarlyStageGraphic;
+            }
+        }
+
+        public Graphic FetusLateStageGraphic
+        {
+            get
+            {
+                _fetusLateStageGraphic ??= GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_LateStage", ShaderDatabase.Cutout, Vector2.one, Color.white);
+
+                return _fetusLateStageGraphic;
+            }
+        }
+
+        public Graphic IncubatorGlass
+        {
+            get
+            {
+                _glassGraphic ??= def.building.mechGestatorCylinderGraphic.Graphic;
+
+                return _glassGraphic;
+            }
+        }
+
+        private Pawn _baby;
+
+        [Unsaved]
+        private CompPowerTrader _power;
+
+        private float _containedNanites;
 
         public StorageSettings allowedNutritionSettings;
 
-        public IncubatorState State = IncubatorState.Idle;
+        public IncubatorState State { get; set; } = IncubatorState.Idle;
 
         // 改，都可以改
         private const float NanitesConsumed = 6f;
@@ -54,14 +106,19 @@ namespace SD.GrayRace.ThingClasses
             }
         }
 
-        public CompPowerTrader PowerTraderComp => power ??= this.TryGetComp<CompPowerTrader>();
+        public CompPowerTrader PowerTraderComp => _power ??= this.TryGetComp<CompPowerTrader>();
         public bool PoweredOn => PowerTraderComp.PowerOn;
 
-        public List<RecipeDef> ModExtensionRecipes = DefDatabase<RecipeDef>.AllDefsListForReading.Where(t=> t.HasModExtension<DefModExtension_RecipeNewBorn>()).ToList();
+        public List<RecipeDef> modExtensionRecipes = DefDatabase<RecipeDef>.AllDefsListForReading.Where(t=> t.HasModExtension<DefModExtension_RecipeNewBorn>()).ToList();
 
         public override AcceptanceReport CanAcceptPawn(Pawn p)
         {
-            if (Working)
+            if(selectedPawn != null && selectedPawn != p)
+            {
+                return "WaitingForPawn".Translate(selectedPawn.Named("PAWN"));
+            }
+
+            if (State == IncubatorState.Incubating)
             {
                 return "Occupied".Translate();
             }
@@ -71,12 +128,8 @@ namespace SD.GrayRace.ThingClasses
                 return "NoPower".Translate().CapitalizeFirst();
             }
 
-            if(selectedPawn != null && selectedPawn != p)
-            {
-                return "WaitingForPawn".Translate(selectedPawn.Named("PAWN"));
-            }
 
-            if (selectedPawn != null && !selectedPawn.IsGrayRace())
+            if (!p.IsGrayRace())
             {
                 return "非灰裔".Translate();
             }
@@ -89,6 +142,7 @@ namespace SD.GrayRace.ThingClasses
             if (selectedPawn != null && CanAcceptPawn(p))
             {
                 selectedPawn = p;
+                bool flag = p.DeSpawnOrDeselect();
                 if (innerContainer.TryAddOrTransfer(p))
                 {
                     SoundDefOf.GrowthVat_Close.PlayOneShot(SoundInfo.InMap(this));
@@ -96,7 +150,8 @@ namespace SD.GrayRace.ThingClasses
                     // 这里可能要加点在培育舱里面的逻辑，比如添加个状态，学习加速等
 
                 }
-                if (p.DeSpawnOrDeselect())
+
+                if (flag)
                 {
                     Find.Selector.Select(p, false, false);
                 }
@@ -116,18 +171,47 @@ namespace SD.GrayRace.ThingClasses
             base.ExposeData();
         }
 
-        public override bool IsWorking()
+        public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
         {
-            return base.IsWorking();
+            base.DynamicDrawPhaseAt(phase, drawLoc, flip);
+
+            if (selectedPawn != null && innerContainer.Contains(selectedPawn))
+            {
+                selectedPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc + PawnDrawOffset, null, true);
+            }
         }
 
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
+        {
+            base.DrawAt(drawLoc, flip);
+            if (State == IncubatorState.Incubating && (selectedPawn == null || !innerContainer.Contains(selectedPawn)))
+            {
+                var vector = Vector2.one * Mathf.Lerp(0.4f, 0.95f, 1f - Mathf.Clamp01((startTick - Find.TickManager.TicksGame) / 600f));
+                if (startTick - Find.TickManager.TicksGame > 600)
+                {
+                    FetusEarlyStageGraphic.drawSize = vector;
+                    FetusEarlyStageGraphic.DrawFromDef(DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f, Rotation, null);
+                }
+                else
+                {
+                    FetusLateStageGraphic.drawSize = vector;
+                    FetusLateStageGraphic.DrawFromDef(DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f, Rotation, null);
+                }
+            }
+            TopGraphic.Draw(DrawPos + Altitudes.AltIncVect * 2f, Rotation, this);
+
+            if (State != IncubatorState.Idle && State != IncubatorState.Preparing)
+            {
+                IncubatorGlass.Draw(DrawPos + Altitudes.AltIncVect * 2f, Rotation, this);
+            }
+        }
         public override IEnumerable<Gizmo> GetGizmos()
         {
             foreach (var gizmo in base.GetGizmos())
             {
                 yield return gizmo;
             }
-            if (State == IncubatorState.Idle)
+            if (State == IncubatorState.Idle && selectedPawn == null)
             {
                 yield return new Command_Action
                 {
@@ -144,36 +228,36 @@ namespace SD.GrayRace.ThingClasses
             }
             if (State == IncubatorState.Preparing)
             {
-                var command_startIncubation = new Command_Action
+                var commandStartIncubation = new Command_Action
                 {
                     defaultLabel = "开始培育",
                     defaultDesc = "启动培育程序",
                     icon = ContentFinder<Texture2D>.Get("UI/Commands/DesirePower"),
                     action = () =>
                     {
-                        startTick = Find.TickManager.TicksGame;
+                        startTick = Find.TickManager.TicksGame + 600;
                         State = IncubatorState.Incubating;
                     }
                 };
-                yield return command_startIncubation;
+                yield return commandStartIncubation;
                 if (selectedRecipe == null)
                 {
-                    command_startIncubation.Disable("请先选择培育清单");
+                    commandStartIncubation.Disable("请先选择培育清单");
                 }
                 else if (!AllRequiredIngredientsLoaded)
                 {
-                    command_startIncubation.Disable("所需材料不足");
+                    commandStartIncubation.Disable("所需材料不足");
                 }
                 else if (!PoweredOn)
                 {
-                    command_startIncubation.Disable("没有电力");
+                    commandStartIncubation.Disable("没有电力");
                 }
 
                 yield return new Command_Action
                 {
                     defaultLabel = "取消准备",
                     defaultDesc = "",
-                    icon = ContentFinder<Texture2D>.Get("UI/Commands/DesirePower"),
+                    icon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel"),
                     action = () =>
                     {
                         State = IncubatorState.Idle;
@@ -195,7 +279,7 @@ namespace SD.GrayRace.ThingClasses
                     {
                         List<FloatMenuOption> options = new List<FloatMenuOption>();
                         // Find.WindowStack.Add(new Dialog_SelectForIncubator(this));
-                        foreach (var recipe in ModExtensionRecipes)
+                        foreach (var recipe in modExtensionRecipes)
                         {
                             options.Add(new FloatMenuOption(recipe.LabelCap, () =>
                             {
@@ -218,6 +302,23 @@ namespace SD.GrayRace.ThingClasses
                     action = Finsh
                 };
             }
+
+            if (selectedPawn != null && State == IncubatorState.Incubating)
+            {
+                yield return new Command_Action
+                {
+                    defaultLabel = "弹出",
+                    defaultDesc = "弹出殖民者",
+                    icon = ContentFinder<Texture2D>.Get("UI/Commands/DesirePower"),
+                    action = () =>
+                    {
+                        innerContainer.TryDrop(selectedPawn, InteractionCell, Map, ThingPlaceMode.Near, 1, out Thing _);
+                        if (State != IncubatorState.Idle)
+                            State = IncubatorState.Idle;
+                        selectedPawn = null;
+                    }
+                };
+            }
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn selPawn)
@@ -226,25 +327,38 @@ namespace SD.GrayRace.ThingClasses
             {
                 yield return floatMenuOption;
             }
+
+            var acceptanceReport = CanAcceptPawn(selPawn);
+            if (acceptanceReport.Accepted)
+            {
+                yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("EnterBuilding".Translate(this), () =>
+                {
+                    SelectPawn(selPawn);
+                }), selPawn, this);
+            }
+            else if(!acceptanceReport.Reason.NullOrEmpty())
+            {
+                yield return new FloatMenuOption($"{"CannotEnterBuilding".Translate(this)}: {acceptanceReport.Reason.CapitalizeFirst()}", null);
+            }
         }
 
         public override string GetInspectString()
         {
             StringBuilder sb = new StringBuilder(base.GetInspectString());
-            sb.Append($"\n当前状态：{State.ToLocalizedString()}");
-            if (selectedPawn != null)
+            sb.AppendInNewLine($"当前状态：{State.ToLocalizedString()}");
+            if (selectedPawn != null && innerContainer.Contains(selectedPawn) && State == IncubatorState.Incubating)
             {
-                sb.AppendLine("\n当前加速培育: " + selectedPawn.LabelCap);
+                sb.AppendInNewLine("当前加速培育: " + selectedPawn.LabelCap);
             }
             if (State == IncubatorState.Preparing)
             {
-                sb.Append("\n等待运送材料：");
+                sb.AppendInNewLine("等待运送材料：");
                 AppendIngredientsList(sb);
             }
             return sb.ToString();
         }
 
-        public override Vector3 PawnDrawOffset => CompBiosculpterPod.FloatingOffset(Find.TickManager.TicksGame);
+        public override Vector3 PawnDrawOffset => def.graphicData.drawOffset + CompBiosculpterPod.FloatingOffset(Find.TickManager.TicksGame);
 
         public StorageSettings GetStoreSettings()
         {
@@ -275,18 +389,22 @@ namespace SD.GrayRace.ThingClasses
             {
                 PowerTraderComp.PowerOutput = State == IncubatorState.Incubating ? -PowerTraderComp.Props.PowerConsumption : -PowerTraderComp.Props.idlePowerDraw;
             }
+
+            if (innerContainer.Contains(selectedPawn) && selectedRecipe == null)
+            {
+                State = IncubatorState.Incubating;
+            }
             if (State == IncubatorState.Incubating)
             {
-                containedNanites -= 1f / 60000f;
-                if (containedNanites <= 0f)
+                _containedNanites -= 1f / 60000f;
+                if (_containedNanites <= 0f)
                 {
                     TryAbsorbNanites();
                 }
 
-                if (startTick > 0 && Find.TickManager.TicksGame - startTick >= 600)
+                if (startTick > 0 && Find.TickManager.TicksGame - startTick >= 600 && selectedPawn == null)
                 {
                     Birth();
-                    // Finsh();
                 }
             }
         }
@@ -323,64 +441,41 @@ namespace SD.GrayRace.ThingClasses
                 kind: babyKind,
                 faction: Faction.OfPlayer,
                 forceGenerateNewPawn: true,
-                allowDowned:true,
+                allowDowned: true,
                 canGeneratePawnRelations: false,
-                allowGay:false,
-                allowFood:false,
-                allowAddictions:false,
+                allowGay: false,
+                allowFood: false,
+                allowAddictions: false,
                 developmentalStages: DevelopmentalStage.Child,
-                forceNoGear:true);
-            baby = PawnGenerator.GeneratePawn(pReq);
-            // baby = (Pawn)PregnancyUtility.ApplyBirthOutcome(null, 100f, Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual, null, null, this, null, null);
-            // if (baby != null)
-            // {
-            //     Log.Message("new Baby!");
-            // }
-            // else
-            // {
-            //     Log.Message("No! my Baby!");
-            //     return;
-            // }
+                forceNoGear: true,
+                fixedBiologicalAge: 13f
+            );
+            _baby = PawnGenerator.GeneratePawn(pReq);
 
-            if (foundationRecipe != null)
+            var ext = foundationRecipe?.GetModExtension<DefModExtension_RecipeNewBorn>();
+            if (ext?.newBornBackstory != null)
             {
-                var ext = foundationRecipe.GetModExtension<DefModExtension_RecipeNewBorn>();
-                if (ext.newBornBackstory != null)
-                {
-                    baby.story.Childhood = ext.newBornBackstory;
-                }
+                _baby.story.Childhood = ext.newBornBackstory;
             }
 
             State = IncubatorState.Finished;
-
-            selectedRecipe = null;
-            foundationRecipe = null;
+            innerContainer.ClearAndDestroyContents();
+            innerContainer.TryAdd(_baby);
+            selectedPawn = _baby;
             startTick = -1;
         }
 
         private void Finsh()
         {
             if (State != IncubatorState.Finished) return;
-
-            // 可以再弹出一个窗口显示新生儿，然后指定名字等，确定后，再清空舱内
-            NameTriple nameTriple = baby.Name as NameTriple;
-            Name name;
-            string text = null;
-            if (nameTriple != null && nameTriple.First == "Baby".Translate().CapitalizeFirst())
-            {
-                Rand.PushState();
-                Rand.Seed = baby.thingIDNumber;
-                NameStyle nameStyle = NameStyle.Full;
-                name = PawnBioAndNameGenerator.GeneratePawnName(baby, nameStyle);
-                Rand.PopState();
-                NameTriple nameTriple2 = name as NameTriple;
-                text = ((nameTriple2 != null) ? nameTriple2.First: ((NameSingle)name).Name);
-            }
-            Find.WindowStack.Add(baby.NamePawnDialog(text));
-            State = IncubatorState.Idle;
+            Find.WindowStack.Add(_baby.NameGrayRaceDialog());
             SoundDefOf.GrowthVat_Open.PlayOneShot(SoundInfo.InMap(this));
-            GenSpawn.Spawn(baby, InteractionCell, Map);
-            innerContainer.ClearAndDestroyContents();
+            // GenSpawn.Spawn(_baby, InteractionCell, Map);
+            selectedRecipe = null;
+            foundationRecipe = null;
+            EjectContents();
+            selectedPawn = null;
+            State = IncubatorState.Idle;
         }
 
         private void EjectContents()
@@ -397,7 +492,7 @@ namespace SD.GrayRace.ThingClasses
                 if (thing.def != GrayRaceDefOf.GR_Nanites) continue;
 
                 // 1 个纳米机械供给 1
-                containedNanites += 1f;
+                _containedNanites += 1f;
                 thing.SplitOff(1).Destroy();
 
                 break;
@@ -444,6 +539,12 @@ namespace SD.GrayRace.ThingClasses
             }
 
             return 0;
+        }
+
+        public static bool WasLoadingCancelled(Thing thing)
+        {
+            var incubator = thing as Building_GRIncubator;
+            return incubator != null && incubator.State != IncubatorState.Preparing;
         }
 
     }

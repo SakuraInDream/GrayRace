@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using RimWorld;
 using SD.GrayRace.Attributes;
 using UnityEngine;
 using Verse;
@@ -14,6 +16,7 @@ namespace SD.GrayRace
         public static bool IsGrayRace(this Pawn pawn)
         {
             return pawn?.kindDef.race == DefDatabase<ThingDef>.GetNamedSilentFail("Gray_Race");
+            // return pawn.HasComp<CompResource_Nanites>();
         }
         public static void DrawWindowBackgroundWithTexture(Rect rect, Texture2D texture)
         {
@@ -24,18 +27,18 @@ namespace SD.GrayRace
         // 消耗资源
         public static void OffsetNanites(Pawn pawn, float offset)
         {
-            var CompNanites = pawn.TryGetComp<CompResource_Nanites>();
-            if (CompNanites != null)
+            var compNanites = pawn.TryGetComp<CompResource_Nanites>();
+            if (compNanites != null)
             {
-                CompNanites.Value += offset;
-                if(CompNanites.Value > CompNanites.Max)
+                compNanites.Value += offset;
+                if (compNanites.Value > compNanites.Max)
                 {
-                    CompNanites.Value = CompNanites.Max;
+                    compNanites.Value = compNanites.Max;
                 }
 
-                if (CompNanites.Value <= 0.01f)
+                if (compNanites.Value <= 0.01f)
                 {
-                    CompNanites.Value = 0f;
+                    compNanites.Value = 0f;
                 }
             }
         }
@@ -43,6 +46,7 @@ namespace SD.GrayRace
         public static bool TryConsumeNanites(Pawn pawn, float amount)
         {
             var comp = pawn.TryGetComp<CompResource_Nanites>();
+
             if (comp == null) return false;
 
             if (!comp.HasEnoughResource(amount)) return false;
@@ -52,23 +56,9 @@ namespace SD.GrayRace
             return true;
         }
 
-        // 本地化枚举
-        // 在枚举字段上添加 [Localized("本地化文本")] 特性
-        // 如果没有该特性，则使用枚举名称进行本地化
-        // 使用示例： myEnumValue.ToLocalizedString();
-        public static string ToLocalizedString(this Enum value)
+        public static Dialog_NamePawn NameGrayRaceDialog(this Pawn pawn)
         {
-            if (value == null) return string.Empty;
-            var field = value.GetType().GetField(value.ToString());
-            if (field != null)
-            {
-                var attr = field.GetCustomAttribute<LocalizedAttribute>();
-                if(attr != null && !string.IsNullOrEmpty(attr.Text))
-                {
-                    return attr.Text.Translate();
-                }
-            }
-            return value.ToString().Translate();
+            return new Dialog_NamePawn(pawn, NameFilter.First | NameFilter.Nick | NameFilter.Last, NameFilter.First | NameFilter.Nick | NameFilter.Last, null);
         }
     }
 }

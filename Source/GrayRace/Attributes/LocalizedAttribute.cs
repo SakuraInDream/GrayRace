@@ -6,17 +6,19 @@ namespace SD.GrayRace.Attributes
     [AttributeUsage(AttributeTargets.Field)]
     public class LocalizedAttribute: Attribute
     {
-        private string text;
+        private string _text;
 
         public LocalizedAttribute(string key)
         {
-            text = key;
+            _text = key;
         }
-
+        /// <summary>
+        /// 应该存储本地化键值，而非本地化文本
+        /// </summary>
         public string Text
         {
-            get => text;
-            set => text = value;
+            get => _text;
+            set => _text = value;
         }
 
         public override bool Equals(object obj)
@@ -28,7 +30,7 @@ namespace SD.GrayRace.Attributes
 
             if (obj is LocalizedAttribute other)
             {
-                return text == other.text;
+                return _text == other._text;
             }
 
             return false;

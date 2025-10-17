@@ -9,17 +9,17 @@ namespace SD.GrayRace
 {
     public class HediffComp_NanitesRegeneration : HediffComp
     {
-        private CompResource_Nanites resNanites;
+        private CompResource_Nanites _resNanites;
 
-        private List<Hediff_Injury> tmpHediffInjuries = new List<Hediff_Injury>();
+        private List<Hediff_Injury> _tmpHediffInjuries = new List<Hediff_Injury>();
 
-        private List<Hediff_MissingPart> tmpHediffMissingParts = new List<Hediff_MissingPart>();
+        private List<Hediff_MissingPart> _tmpHediffMissingParts = new List<Hediff_MissingPart>();
         public HediffCompProperties_NanitesRegeneration Pros => (HediffCompProperties_NanitesRegeneration)props;
-        private HediffSet hediffSet => Pawn.health.hediffSet;
+        private HediffSet HediffSet => Pawn.health.hediffSet;
 
-        private static readonly IComparer<Hediff_Injury> injurySeverityComparer = Comparer<Hediff_Injury>.Create((a, b) => b.Severity.CompareTo(a.Severity));
+        private static readonly IComparer<Hediff_Injury> s_injurySeverityComparer = Comparer<Hediff_Injury>.Create((a, b) => b.Severity.CompareTo(a.Severity));
 
-        private static readonly Dictionary<BodyPartTagDef, float> partImportanceMap = new Dictionary<BodyPartTagDef, float>
+        private static readonly Dictionary<BodyPartTagDef, float> s_partImportanceMap = new Dictionary<BodyPartTagDef, float>
         {
             { BodyPartTagDefOf.BloodFiltrationSource, 2.0f },
             { BodyPartTagDefOf.BloodFiltrationLiver, 1.9f },
@@ -81,7 +81,7 @@ namespace SD.GrayRace
 
         private void NaniteHeal_NewTemp()
         {
-            var resourceFraction = Mathf.Clamp01(resNanites.CurResource / resNanites.Max);
+            var resourceFraction = Mathf.Clamp01(_resNanites.CurResource / _resNanites.Max);
 
             // 可用资源影响治疗速度 当见底时 直接不治疗，充盈时全速治疗
             var speedMultiplier = Mathf.Lerp(0f, 1f, resourceFraction);
@@ -89,7 +89,7 @@ namespace SD.GrayRace
             // 每次治疗的最大纳米机械消耗量
             var maxConsumableNanites = Pros.naniteCostPerSeconds * speedMultiplier * 100f;
 
-            var availableNanites = Mathf.Min(resNanites.ValueForDisplay, maxConsumableNanites);
+            var availableNanites = Mathf.Min(_resNanites.ValueForDisplay, maxConsumableNanites);
 
             if (availableNanites <= 0f) return;
 
@@ -127,11 +127,11 @@ namespace SD.GrayRace
         // 逻辑分离1 伤口修复
         private float ProcessInjuryHealing(float allocatedNanites)
         {
-            tmpHediffInjuries.Sort(injurySeverityComparer);
+            _tmpHediffInjuries.Sort(s_injurySeverityComparer);
 
             var remainingAllocation = allocatedNanites;
 
-            foreach (var injury in tmpHediffInjuries)
+            foreach (var injury in _tmpHediffInjuries)
             {
                 if (remainingAllocation <= 0f) break;
 
@@ -162,7 +162,7 @@ namespace SD.GrayRace
 
             // Log.Message($"MissingPartRepair => remainingAllocation={remainingAllocation:F2} count={tmpHediffMissingParts.Count}");
 
-            foreach (var missingPart in tmpHediffMissingParts)
+            foreach (var missingPart in _tmpHediffMissingParts)
             {
                 if(remainingAllocation <= 0f) break;
 
@@ -191,7 +191,7 @@ namespace SD.GrayRace
                 if (GrayRaceUtilities.TryConsumeNanites(Pawn, cost))
                 {
                     Pawn.health.RemoveHediff(missingPart);
-                    var partHealth = hediffSet.GetPartHealth(part);
+                    var partHealth = HediffSet.GetPartHealth(part);
                     var regenHediff = Pawn.health.AddHediff(HediffDefOf.Misc, part);
                     regenHediff.Severity = Mathf.Max(partHealth - 1f, partHealth * 0.9f);
 
@@ -207,7 +207,7 @@ namespace SD.GrayRace
             float totalMissingImpact = 0f;
 
             // 评估伤势紧急程度
-            foreach (var injury in tmpHediffInjuries)
+            foreach (var injury in _tmpHediffInjuries)
             {
                 totalInjurySeverity += injury.Severity;
                 if (injury.Severity > 0.7f || injury.Bleeding) // 严重伤势
@@ -215,7 +215,7 @@ namespace SD.GrayRace
             }
 
             // 评估缺失部件紧急程度
-            foreach (var missing in tmpHediffMissingParts)
+            foreach (var missing in _tmpHediffMissingParts)
             {
                 var partImportance = GetBodyPartImportance(missing.Part);
                 if(missing.Bleeding)
@@ -249,7 +249,7 @@ namespace SD.GrayRace
             if (part == null) return 0f;
             foreach (var tag in part.def.tags)
             {
-                if (partImportanceMap.TryGetValue(tag, out var value))
+                if (s_partImportanceMap.TryGetValue(tag, out var value))
                 {
                     return value;
                 }
@@ -260,32 +260,32 @@ namespace SD.GrayRace
 
         private void RefreshTmpHediffLists()
         {
-            tmpHediffInjuries.Clear();
-            tmpHediffMissingParts.Clear();
+            _tmpHediffInjuries.Clear();
+            _tmpHediffMissingParts.Clear();
 
-            hediffSet.GetHediffs(ref tmpHediffInjuries, h => true);
+            HediffSet.GetHediffs(ref _tmpHediffInjuries, h => true);
 
-            hediffSet.GetHediffs(
-                ref tmpHediffMissingParts,
+            HediffSet.GetHediffs(
+                ref _tmpHediffMissingParts,
                 h =>
                     h.Part.parent != null &&
                     // !tmpHediffInjuries.Any(x => x.Part == h.Part.parent) &&
-                    hediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(h.Part.parent) == null
-                    && hediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(h.Part.parent) == null
+                    HediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(h.Part.parent) == null
+                    && HediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(h.Part.parent) == null
             );
         }
 
         public override void CompPostMake()
         {
             base.CompPostMake();
-            resNanites = Pawn?.TryGetComp<CompResource_Nanites>();
+            _resNanites = Pawn?.TryGetComp<CompResource_Nanites>();
         }
 
         public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
-            resNanites ??= Pawn.TryGetComp<CompResource_Nanites>();
+            _resNanites ??= Pawn.TryGetComp<CompResource_Nanites>();
 
-            if (resNanites.CurResource < Pros.naniteCostPerSeconds) return;
+            if (_resNanites.CurResource < Pros.naniteCostPerSeconds) return;
 
             // Log.Message($"InCompTick");
             // 每 300tick 重建一次伤口和断肢列表
@@ -305,7 +305,7 @@ namespace SD.GrayRace
 
         public override string CompDebugString()
         {
-            return $"Injuries: {tmpHediffInjuries.Count}, MissingParts: {tmpHediffMissingParts.Count}";
+            return $"Injuries: {_tmpHediffInjuries.Count}, MissingParts: {_tmpHediffMissingParts.Count}";
         }
     }
 }
