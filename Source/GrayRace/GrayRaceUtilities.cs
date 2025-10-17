@@ -55,5 +55,10 @@ namespace SD.GrayRace
 
             return true;
         }
+
+        public static Dialog_NamePawn NameGrayRaceDialog(this Pawn pawn)
+        {
+            return new Dialog_NamePawn(pawn, NameFilter.First | NameFilter.Nick | NameFilter.Last, NameFilter.First | NameFilter.Nick | NameFilter.Last, null);
+        }
     }
 }

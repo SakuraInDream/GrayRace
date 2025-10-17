@@ -10,15 +10,6 @@ namespace SD.GrayRace.JobGivers
 {
     public class JobGiver_GetMetal: ThinkNode_JobGiver
     {
-        private static readonly List<ThingDef> MetalList = new List<ThingDef>
-        {
-            ThingDefOf.Steel,
-            ThingDefOf.Silver,
-            ThingDefOf.Gold,
-            ThingDefOf.Plasteel,
-            ThingDefOf.Uranium
-        };
-
         protected override Job TryGiveJob(Pawn pawn)
         {
             if (!pawn.IsGrayRace())

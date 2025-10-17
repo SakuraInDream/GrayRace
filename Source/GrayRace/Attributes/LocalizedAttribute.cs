@@ -12,7 +12,9 @@ namespace SD.GrayRace.Attributes
         {
             _text = key;
         }
-
+        /// <summary>
+        /// 应该存储本地化键值，而非本地化文本
+        /// </summary>
         public string Text
         {
             get => _text;

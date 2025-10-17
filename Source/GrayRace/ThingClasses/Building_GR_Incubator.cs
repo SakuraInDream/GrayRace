@@ -37,17 +37,21 @@ namespace SD.GrayRace.ThingClasses
         [Unsaved]
         private Graphic _fetusLateStageGraphic;
 
-        [Unsaved] private Graphic _topGraphic;
+        [Unsaved]
+        private Graphic _topGraphic;
+
+        [Unsaved]
+        private Graphic _glassGraphic;
 
         public Graphic TopGraphic
         {
             get
             {
-                _topGraphic ??= GraphicDatabase.Get<Graphic_Multi>("Things/Building/Misc/GrowthVat/GrowthVatTop", ShaderDatabase.Transparent, def.graphicData.drawSize, Color.white);
+                _topGraphic ??= def.building.mechGestatorTopGraphic.Graphic;
                 return _topGraphic;
             }
         }
-
+        // 用原版的胚胎贴图
         public Graphic FetusEarlyStageGraphic
         {
             get
@@ -65,6 +69,16 @@ namespace SD.GrayRace.ThingClasses
                 _fetusLateStageGraphic ??= GraphicDatabase.Get<Graphic_Single>("Other/VatGrownFetus_LateStage", ShaderDatabase.Cutout, Vector2.one, Color.white);
 
                 return _fetusLateStageGraphic;
+            }
+        }
+
+        public Graphic IncubatorGlass
+        {
+            get
+            {
+                _glassGraphic ??= def.building.mechGestatorCylinderGraphic.Graphic;
+
+                return _glassGraphic;
             }
         }
 
@@ -99,6 +113,11 @@ namespace SD.GrayRace.ThingClasses
 
         public override AcceptanceReport CanAcceptPawn(Pawn p)
         {
+            if(selectedPawn != null && selectedPawn != p)
+            {
+                return "WaitingForPawn".Translate(selectedPawn.Named("PAWN"));
+            }
+
             if (State == IncubatorState.Incubating)
             {
                 return "Occupied".Translate();
@@ -109,12 +128,8 @@ namespace SD.GrayRace.ThingClasses
                 return "NoPower".Translate().CapitalizeFirst();
             }
 
-            if(selectedPawn != null && selectedPawn != p)
-            {
-                return "WaitingForPawn".Translate(selectedPawn.Named("PAWN"));
-            }
 
-            if (selectedPawn != null && !selectedPawn.IsGrayRace())
+            if (!p.IsGrayRace())
             {
                 return "非灰裔".Translate();
             }
@@ -183,8 +198,12 @@ namespace SD.GrayRace.ThingClasses
                     FetusLateStageGraphic.DrawFromDef(DrawPos + PawnDrawOffset + Altitudes.AltIncVect * 0.25f, Rotation, null);
                 }
             }
+            TopGraphic.Draw(DrawPos + Altitudes.AltIncVect * 2f, Rotation, this);
 
-            // TopGraphic.Draw(DrawPos + Altitudes.AltIncVect * 2, Rotation, this);
+            if (State != IncubatorState.Idle && State != IncubatorState.Preparing)
+            {
+                IncubatorGlass.Draw(DrawPos + Altitudes.AltIncVect * 2f, Rotation, this);
+            }
         }
         public override IEnumerable<Gizmo> GetGizmos()
         {
@@ -309,32 +328,37 @@ namespace SD.GrayRace.ThingClasses
                 yield return floatMenuOption;
             }
 
-            if (CanAcceptPawn(selPawn).Accepted)
+            var acceptanceReport = CanAcceptPawn(selPawn);
+            if (acceptanceReport.Accepted)
             {
                 yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption("EnterBuilding".Translate(this), () =>
                 {
                     SelectPawn(selPawn);
                 }), selPawn, this);
             }
+            else if(!acceptanceReport.Reason.NullOrEmpty())
+            {
+                yield return new FloatMenuOption($"{"CannotEnterBuilding".Translate(this)}: {acceptanceReport.Reason.CapitalizeFirst()}", null);
+            }
         }
 
         public override string GetInspectString()
         {
             StringBuilder sb = new StringBuilder(base.GetInspectString());
-            sb.Append($"\n当前状态：{State.ToLocalizedString()}");
-            if (selectedPawn != null)
+            sb.AppendInNewLine($"当前状态：{State.ToLocalizedString()}");
+            if (selectedPawn != null && innerContainer.Contains(selectedPawn) && State == IncubatorState.Incubating)
             {
                 sb.AppendInNewLine("当前加速培育: " + selectedPawn.LabelCap);
             }
             if (State == IncubatorState.Preparing)
             {
-                sb.Append("\n等待运送材料：");
+                sb.AppendInNewLine("等待运送材料：");
                 AppendIngredientsList(sb);
             }
             return sb.ToString();
         }
 
-        public override Vector3 PawnDrawOffset => CompBiosculpterPod.FloatingOffset(Find.TickManager.TicksGame);
+        public override Vector3 PawnDrawOffset => def.graphicData.drawOffset + CompBiosculpterPod.FloatingOffset(Find.TickManager.TicksGame);
 
         public StorageSettings GetStoreSettings()
         {
@@ -427,16 +451,6 @@ namespace SD.GrayRace.ThingClasses
                 fixedBiologicalAge: 13f
             );
             _baby = PawnGenerator.GeneratePawn(pReq);
-            // baby = (Pawn)PregnancyUtility.ApplyBirthOutcome(null, 100f, Faction.OfPlayer.ideos.PrimaryIdeo.GetPrecept(PreceptDefOf.ChildBirth) as Precept_Ritual, null, null, this, null, null);
-            // if (baby != null)
-            // {
-            //     Log.Message("new Baby!");
-            // }
-            // else
-            // {
-            //     Log.Message("No! my Baby!");
-            //     return;
-            // }
 
             var ext = foundationRecipe?.GetModExtension<DefModExtension_RecipeNewBorn>();
             if (ext?.newBornBackstory != null)
@@ -454,22 +468,7 @@ namespace SD.GrayRace.ThingClasses
         private void Finsh()
         {
             if (State != IncubatorState.Finished) return;
-
-            // 可以再弹出一个窗口显示新生儿，然后指定名字等，确定后，再清空舱内
-            NameTriple nameTriple = _baby.Name as NameTriple;
-            Name name;
-            string text = null;
-            if (nameTriple != null && nameTriple.First == "Baby".Translate().CapitalizeFirst())
-            {
-                Rand.PushState();
-                Rand.Seed = _baby.thingIDNumber;
-                NameStyle nameStyle = NameStyle.Full;
-                name = PawnBioAndNameGenerator.GeneratePawnName(_baby, nameStyle);
-                Rand.PopState();
-                NameTriple nameTriple2 = name as NameTriple;
-                text = ((nameTriple2 != null) ? nameTriple2.First: ((NameSingle)name).Name);
-            }
-            Find.WindowStack.Add(_baby.NamePawnDialog(text));
+            Find.WindowStack.Add(_baby.NameGrayRaceDialog());
             SoundDefOf.GrowthVat_Open.PlayOneShot(SoundInfo.InMap(this));
             // GenSpawn.Spawn(_baby, InteractionCell, Map);
             selectedRecipe = null;

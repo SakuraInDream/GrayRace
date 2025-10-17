@@ -328,15 +328,16 @@
     <Compile Include="Hediffs\HediffComp_NanitesRegeneration.cs" />
     <Compile Include="Hediffs\HediffCompProperties_NanitesRegeneration.cs" />
     <Compile Include="Hediffs\Hediff_NanitesRegeneration.cs" />
-    <Compile Include="ITabs\ITab_GrayRace.cs" />
+    <Compile Include="ITabs\ITab_GrayRaceOverlock.cs" />
     <Compile Include="DefModExtensions\DefModExtension_RecipeNewBorn.cs" />
     <Compile Include="JobDrivers\JobDriver_ConsumeMetal.cs" />
     <Compile Include="JobDrivers\JobDriver_HaulToIncubator.cs" />
     <Compile Include="JobGivers\JobGiver_GetMetal.cs" />
     <Compile Include="Needs\Need_GrayRaceEnergy.cs" />
+    <Compile Include="PlaceWorkers\PlaceWorker_IncubatorTop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThingClasses\Building_GR_Incubator.cs" />
-    <Compile Include="UI\FloatMenuOptionProviders\FloatMenuOptionProvider_ConsumeMetal.cs" />
+    <Compile Include="UISet\FloatMenuOptionProviders\FloatMenuOptionProvider_ConsumeMetal.cs" />
     <Compile Include="Utilities\EnumExtensions.cs" />
     <Compile Include="WorkGivers\WorkGiver_CarryToIncubator.cs" />
   </ItemGroup>
