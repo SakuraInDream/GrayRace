@@ -18,6 +18,7 @@
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Blunt</impactSoundType>
     <isRanged>true</isRanged>
+    <isExplosive>true</isExplosive>
     <ignoreShields>true</ignoreShields>
     <makesAnimalsFlee>true</makesAnimalsFlee>
     <buildingDamageFactor>15</buildingDamageFactor>

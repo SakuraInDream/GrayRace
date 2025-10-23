@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--高频村雨-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_HFMurasama"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>80</power>
+          <extraMeleeDamages>
+            <li>
+              <def>Flame</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>0.2</cooldownTime>
+          <armorPenetrationSharp>300</armorPenetrationSharp>
+          <armorPenetrationBlunt>800</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_HFMurasama"]/statBases</xpath>
+    <value>
+      <Bulk>8</Bulk>
+      <MeleeCounterParryBonus>1.5</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_HFMurasama"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>3.5</MeleeCritChance>
+      <MeleeParryChance>1</MeleeParryChance>
+    </value>
+  </Operation>
+
+  <!--斩舰刀-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_ShipSlayer"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>GR_NanoScratch</li>
+          </capacities>
+          <power>400</power>
+          <extraMeleeDamages>
+            <li>
+              <def>EMP</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>2</cooldownTime>
+          <armorPenetrationSharp>150</armorPenetrationSharp>
+          <armorPenetrationBlunt>3600</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_ShipSlayer"]/statBases</xpath>
+    <value>
+      <Bulk>100</Bulk>
+      <MeleeCounterParryBonus>0.3</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_ShipSlayer"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>2</MeleeCritChance>
+      <MeleeParryChance>2</MeleeParryChance>
+    </value>
+  </Operation>
+
+</Patch>

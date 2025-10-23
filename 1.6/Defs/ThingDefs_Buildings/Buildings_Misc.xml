@@ -105,8 +105,9 @@
     </statBases>
     <size>(2,2)</size>
     <costList>
-      <GR_Alloy>200</GR_Alloy>
-      <ComponentSpacer>4</ComponentSpacer>
+      <GR_Alloy>300</GR_Alloy>
+      <GR_Nanites>100</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
     </costList>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>

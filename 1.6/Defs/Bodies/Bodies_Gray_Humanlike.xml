@@ -39,9 +39,8 @@
               </groups>
               <parts>
                 <li>
-                  <def>Brain</def>
-                  <customLabel>AI Persona Core</customLabel>
-                  <coverage>0</coverage>
+                  <def>Nano_Brain</def>
+                  <coverage>0.1</coverage>
                   <depth>Inside</depth>
                   <groups>
                     <li>UpperHead</li>
@@ -50,7 +49,8 @@
                   </groups>
                   <parts>
                     <li>
-                      <def>Nano_Brain</def>
+                      <def>Brain</def>
+                      <customLabel>AI Persona Core</customLabel>
                       <coverage>0</coverage>
                       <depth>Inside</depth>
                       <groups>

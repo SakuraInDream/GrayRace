@@ -1,104 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-    <PawnKindDef Name="GR_colonist" Abstract="True">
-        <race>Gray_Race</race>
-        <defaultFactionType>GR_PlayerColony</defaultFactionType>
-        <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>        <!--实际年龄大于生理年龄的几率-->
-        <minGenerationAge>18</minGenerationAge>        <!--Pawn最小年龄-->
-        <maxGenerationAge>30</maxGenerationAge>        <!--Pawn最大年龄-->
-        <invNutrition>0</invNutrition>
-        <itemQuality>Superior</itemQuality>        <!--物品品质:极佳Superior-->
-        <xenotypeSet>
-            <xenotypeChances>
-                <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
-                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
-                <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
-                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
-                <Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
-                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
-                <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
-                <Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
-                <Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
-                <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
-                <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
-            </xenotypeChances>
-        </xenotypeSet>
-        <gearHealthRange>1~1</gearHealthRange>
-        <apparelRequired>
-        </apparelRequired>
-        <apparelTags>            <!--穿戴服装tag-->
+  <PawnKindDef Name="GR_colonist" Abstract="True">
+    <race>Gray_Race</race>
+    <defaultFactionType>GR_PlayerColony</defaultFactionType>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>    <!--实际年龄大于生理年龄的几率-->
+    <invNutrition>0</invNutrition>
+    <itemQuality>Superior</itemQuality>    <!--物品品质:极佳Superior-->
+    <xenotypeSet>
+      <xenotypeChances>
+        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+        <Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+        <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+        <Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+        <Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+        <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+      </xenotypeChances>
+    </xenotypeSet>
+    <gearHealthRange>1~1</gearHealthRange>
+    <apparelRequired>
+    </apparelRequired>
+    <apparelTags>      <!--穿戴服装tag-->
 
-        </apparelTags>
-        <apparelMoney>            <!--服装价值-->
-            <min>500</min>
-            <max>2000</max>
-        </apparelMoney>
-        <techHediffsMoney>            <!--植入体价值-->
-        </techHediffsMoney>
-        <techHediffsRequired>            <!--必备植入体-->
-        </techHediffsRequired>
-        <disallowedTraits>            <!--禁止特性-->
-        </disallowedTraits>
-        <initialWillRange>90~110</initialWillRange>
-        <initialResistanceRange>15~25</initialResistanceRange>
-        <skills>            <!--固有技能-->
-            <li>
-                <skill>Construction</skill>
-                <range>6~10</range>
-            </li>
-            <li>
-                <skill>Crafting</skill>
-                <range>6~10</range>
-            </li>
-            <li>
-                <skill>Intellectual</skill>
-                <range>6~10</range>
-            </li>
-            <li>
-                <skill>Mining</skill>
-                <range>8~12</range>
-            </li>
-        </skills>
-        <inventoryOptions>            <!--物品栏清单-->
-            <skipChance>0.1</skipChance>
-            <subOptionsChooseOne>
-                <li>
-                    <thingDef>MealSurvivalPack</thingDef>
-                    <countRange>
-                        <min>2</min>
-                        <max>3</max>
-                    </countRange>
-                </li>
-            </subOptionsChooseOne>
-        </inventoryOptions>
-        <biocodeWeaponChance>0</biocodeWeaponChance>        <!--生物编码-->
-        <!-- 自带的 Hediff -->
-        <startingHediffs>
-            <li>
-                <def>NanitesRegeneration</def>
-                <severity>1</severity>
-            </li>
-        </startingHediffs>
-    </PawnKindDef>
+    </apparelTags>
+    <apparelMoney>      <!--服装价值-->
+      <min>500</min>
+      <max>2000</max>
+    </apparelMoney>
+    <techHediffsMoney>      <!--植入体价值-->
+    </techHediffsMoney>
+    <techHediffsRequired>      <!--必备植入体-->
+    </techHediffsRequired>
+    <disallowedTraits>      <!--禁止特性-->
+    </disallowedTraits>
+    <initialWillRange>90~110</initialWillRange>
+    <initialResistanceRange>15~25</initialResistanceRange>
+    <skills>      <!--固有技能-->
+    </skills>
+    <inventoryOptions>      <!--物品栏清单-->
+    </inventoryOptions>
+    <biocodeWeaponChance>0</biocodeWeaponChance>    <!--生物编码-->
+    <!-- 自带的 Hediff -->
+    <startingHediffs>
+      <li>
+        <def>NanitesRegeneration</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+  </PawnKindDef>
 
-    <!--殖民者-->
-    <PawnKindDef ParentName="GR_colonist">
-        <defName>GR_colonist</defName>
-        <label>colonist</label>
-        <combatPower>50</combatPower>
-        <apparelRequired>            <!--必备服装-->
-        </apparelRequired>
-        <weaponMoney>            <!--武器价值-->
-        </weaponMoney>
-        <weaponTags>
-        </weaponTags>
-        <backstoryFiltersOverride>            <!--背景-->
-            <li>
-                <categories>
-                    <li>GR_Adult</li>
-                </categories>
-            </li>
-        </backstoryFiltersOverride>
-    </PawnKindDef>
+  <!--殖民者-->
+  <PawnKindDef ParentName="GR_colonist">
+    <defName>GR_colonist</defName>
+    <label>colonist</label>
+    <combatPower>50</combatPower>
+    <apparelRequired>      <!--必备服装-->
+    </apparelRequired>
+    <weaponMoney>      <!--武器价值-->
+    </weaponMoney>
+    <weaponTags>
+    </weaponTags>
+    <backstoryFiltersOverride>      <!--背景-->
+      <li>
+        <categories>
+          <li>GR_Child</li>
+          <li>GR_Adult</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
 
 </Defs>

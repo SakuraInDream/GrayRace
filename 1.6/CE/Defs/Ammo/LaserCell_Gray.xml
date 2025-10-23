@@ -1,120 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!--PDW-->
-	<CombatExtended.AmmoSetDef>
-        <defName>AmmoSet_LaserCell_PDW</defName>
-        <label>PDW Laser Cell</label>
-        <ammoTypes>
-            <Ammo_LaserChargePack>Bullet_PDWLaser_GR</Ammo_LaserChargePack>
-        </ammoTypes>
-    </CombatExtended.AmmoSetDef>
+  <!--PDW-->
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_LaserCell_PDW</defName>
+    <label>PDW Laser Cell</label>
+    <ammoTypes>
+      <Ammo_LaserChargePack>Bullet_PDWLaser_GR</Ammo_LaserChargePack>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
 
-	<!--步枪-->
-    <CombatExtended.AmmoSetDef>
-        <defName>AmmoSet_LaserCell_CR</defName>
-        <label>Combat Rifle Laser Cell</label>
-        <ammoTypes>
-            <Ammo_LaserChargePack>Bullet_RifleLaser_GR</Ammo_LaserChargePack>
-        </ammoTypes>
-    </CombatExtended.AmmoSetDef>
+  <!--步枪-->
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_LaserCell_CR</defName>
+    <label>Combat Rifle Laser Cell</label>
+    <ammoTypes>
+      <Ammo_LaserChargePack>Bullet_RifleLaser_GR</Ammo_LaserChargePack>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
 
-	<!--霰弹-->
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_LaserCell_SG</defName>
-		<label>Shotgun Laser Cell</label>
-		<ammoTypes>
-			<Ammo_LaserChargePack>Bullet_SGLaser_GR</Ammo_LaserChargePack>
-		</ammoTypes>
-	</CombatExtended.AmmoSetDef>
+  <!--霰弹-->
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_LaserCell_SG</defName>
+    <label>Shotgun Laser Cell</label>
+    <ammoTypes>
+      <Ammo_LaserChargePack>Bullet_SGLaser_GR</Ammo_LaserChargePack>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
 
-	<!--机枪-->
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_LaserCell_MG</defName>
-		<label>Machine Gun Laser Cell</label>
-		<ammoTypes>
-			<Ammo_LaserChargePack>Bullet_MGLaser_GR</Ammo_LaserChargePack>
-		</ammoTypes>
-	</CombatExtended.AmmoSetDef>
+  <!--机枪-->
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_LaserCell_MG</defName>
+    <label>Machine Gun Laser Cell</label>
+    <ammoTypes>
+      <Ammo_LaserChargePack>Bullet_MGLaser_GR</Ammo_LaserChargePack>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
 
-	<!--狙击枪-->
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_LaserCell_SR</defName>
-		<label>Sniper Rifle Laser Cell</label>
-		<ammoTypes>
-			<Ammo_LaserChargePack>Bullet_SRLaser_GR</Ammo_LaserChargePack>
-		</ammoTypes>
-	</CombatExtended.AmmoSetDef>
+  <!--狙击枪-->
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_LaserCell_SR</defName>
+    <label>Sniper Rifle Laser Cell</label>
+    <ammoTypes>
+      <Ammo_LaserChargePack>Bullet_SRLaser_GR</Ammo_LaserChargePack>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
 
-	<!--重武器-->
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_LaserCell_HL</defName>
-		<label>Heavy Launcher Laser Cell</label>
-		<ammoTypes>
-			<Ammo_LaserChargePack>Bullet_HLLaser_GR</Ammo_LaserChargePack>
-		</ammoTypes>
-	</CombatExtended.AmmoSetDef>
-    <!-- ================== Projectiles ================== -->
+  <!--重武器-->
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_LaserCell_HL</defName>
+    <label>Heavy Launcher Laser Cell</label>
+    <ammoTypes>
+      <Ammo_LaserChargePack>Bullet_HLLaser_GR</Ammo_LaserChargePack>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+  <!-- ================== Projectiles ================== -->
 
-	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" Name="Bullet_LaserBase_GR" ParentName="LaserBulletBlue" Abstract="True">
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>GR_Laser</damageDef>
-		</projectile>
-	</ThingDef>
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" Name="Bullet_LaserBase_GR" ParentName="LaserBulletBlue" Abstract="True">
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+    </projectile>
+  </ThingDef>
 
-	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
-		<defName>Bullet_PDWLaser_GR</defName>
-		<label>laser beam</label>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>21</damageAmountBase>
-		</projectile>
-	</ThingDef>
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
+    <defName>Bullet_PDWLaser_GR</defName>
+    <label>laser beam</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>21</damageAmountBase>
+    </projectile>
+  </ThingDef>
 
-	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
-		<defName>Bullet_RifleLaser_GR</defName>
-		<label>laser beam</label>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>29</damageAmountBase>
-		</projectile>
-	</ThingDef>
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
+    <defName>Bullet_RifleLaser_GR</defName>
+    <label>laser beam</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>29</damageAmountBase>
+    </projectile>
+  </ThingDef>
 
-	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
-		<defName>Bullet_SGLaser_GR</defName>
-		<label>laser beam</label>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>GR_Disintegration</damageDef>
-			<damageAmountBase>2</damageAmountBase>
-			<pelletCount>40</pelletCount>
-			<spreadMult>40</spreadMult>
-			<damageFalloff>false</damageFalloff>
-		</projectile>
-	</ThingDef>
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
+    <defName>Bullet_SGLaser_GR</defName>
+    <label>laser beam</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <pelletCount>40</pelletCount>
+      <spreadMult>40</spreadMult>
+      <damageFalloff>false</damageFalloff>
+    </projectile>
+  </ThingDef>
 
-	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
-		<defName>Bullet_MGLaser_GR</defName>
-		<label>laser beam</label>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>38</damageAmountBase>
-		</projectile>
-	</ThingDef>
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
+    <defName>Bullet_MGLaser_GR</defName>
+    <label>laser beam</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>38</damageAmountBase>
+    </projectile>
+  </ThingDef>
 
-	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
-		<defName>Bullet_SRLaser_GR</defName>
-		<label>laser beam</label>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>GR_Arc</damageDef>
-			<damageAmountBase>60</damageAmountBase>
-		</projectile>
-	</ThingDef>
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
+    <defName>Bullet_SRLaser_GR</defName>
+    <label>laser beam</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Arc</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+    </projectile>
+  </ThingDef>
 
-	<ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
-		<defName>Bullet_HLLaser_GR</defName>
-		<label>laser beam</label>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>GR_Arc</damageDef>
-			<damageAmountBase>400</damageAmountBase>
-			<explosionRadius>4</explosionRadius>
-			<soundExplode>Explosion_Vaporize</soundExplode>
-		</projectile>
-	</ThingDef>
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
+    <defName>Bullet_HLLaser_GR</defName>
+    <label>laser beam</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>400</damageAmountBase>
+      <explosionRadius>5</explosionRadius>
+      <soundExplode>Explosion_Vaporize</soundExplode>
+    </projectile>
+  </ThingDef>
 
 </Defs>

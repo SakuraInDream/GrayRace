@@ -94,6 +94,12 @@
       <damageDef>GR_NanoBullet</damageDef>
       <damageAmountBase>10</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
+      <extraDamages>
+        <li>
+          <def>EMP</def>
+          <amount>5</amount>
+        </li>
+      </extraDamages>
       <stoppingPower>1</stoppingPower>
       <speed>110</speed>
     </projectile>
@@ -287,6 +293,12 @@
       <damageDef>GR_NanoBullet</damageDef>
       <damageAmountBase>12</damageAmountBase>
       <armorPenetrationBase>0.5</armorPenetrationBase>
+      <extraDamages>
+        <li>
+          <def>EMP</def>
+          <amount>8</amount>
+        </li>
+      </extraDamages>
       <speed>120</speed>
     </projectile>
   </ThingDef>
@@ -473,6 +485,12 @@
       <damageDef>GR_NanoBullet</damageDef>
       <damageAmountBase>30</damageAmountBase>
       <armorPenetrationBase>1.5</armorPenetrationBase>
+      <extraDamages>
+        <li>
+          <def>EMP</def>
+          <amount>30</amount>
+        </li>
+      </extraDamages>
       <stoppingPower>2</stoppingPower>
       <speed>220</speed>
     </projectile>
@@ -563,7 +581,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>150</damageAmountBase>
+      <damageAmountBase>100</damageAmountBase>
       <explosionRadius>5.5</explosionRadius>
       <armorPenetrationBase>4.5</armorPenetrationBase>
       <stoppingPower>8</stoppingPower>

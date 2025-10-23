@@ -27,8 +27,8 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/statBases</xpath>
         <value>
-            <CarryWeight>500</CarryWeight>
-            <CarryBulk>1000</CarryBulk>
+            <CarryWeight>1000</CarryWeight>
+            <CarryBulk>1500</CarryBulk>
             <SmokeSensitivity>0</SmokeSensitivity>
             <AimingAccuracy>1.5</AimingAccuracy>
             <MeleeCritChance>5</MeleeCritChance>
@@ -107,7 +107,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/statBases</xpath>
         <value>
-            <CarryWeight>500</CarryWeight>
+            <CarryWeight>1000</CarryWeight>
             <CarryBulk>1000</CarryBulk>
         </value>
     </Operation>

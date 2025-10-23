@@ -30,14 +30,14 @@
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="GR_Alloy"]/statBases/StuffPower_Armor_Sharp</xpath>
         <value>
-            <StuffPower_Armor_Sharp>5</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Sharp>8</StuffPower_Armor_Sharp>
         </value>
     </Operation>
 
     <Operation Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="GR_Alloy"]/statBases/StuffPower_Armor_Blunt</xpath>
         <value>
-            <StuffPower_Armor_Blunt>15</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Blunt>32</StuffPower_Armor_Blunt>
         </value>
     </Operation>
 

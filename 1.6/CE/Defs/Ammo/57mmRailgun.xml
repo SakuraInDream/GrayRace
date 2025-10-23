@@ -56,10 +56,10 @@
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>GR_NanoBullet</damageDef>
-			<damageAmountBase>742</damageAmountBase>
+			<damageAmountBase>521</damageAmountBase>
 			<armorPenetrationSharp>746</armorPenetrationSharp>
-			<armorPenetrationBlunt>1250000</armorPenetrationBlunt>
-			<speed>595</speed>
+			<armorPenetrationBlunt>450000</armorPenetrationBlunt>
+			<speed>406</speed>
 		</projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_Fragments">
@@ -82,7 +82,7 @@
 		<researchPrerequisites>
 			<li>CE_TurretHeavyWeapons</li>
 		</researchPrerequisites>
-		<workAmount>8000</workAmount>
+		<workAmount>30000</workAmount>
 		<ingredients>
 			<li>
 				<filter>

@@ -66,7 +66,7 @@
         <defName>GR_GeneDoctor</defName>
         <title>Gray Gene Clinic Doctor</title>
         <titleShort>Gene Doctor</titleShort>
-        <description>Before becoming a clinic doctor, {PARA_nameDef} was a researcher at a renowned biotechnology institute. After the war, alien creatures were shipped to the facility crate after crate.\n The helpless cries of extraterrestrial species, treated like livestock, were merely metrics confirming their vitality.\n So she left that place and swore never to return. Hearing that the Advance Team might encounter wild alien species on frontier planets, she boarded one of the first ships as if seeking redemption.</description>
+        <description>Before becoming a clinic doctor, {PAWN_nameDef} was a researcher at a renowned biotechnology institute. After the war, alien creatures were shipped to the facility crate after crate.\n The helpless cries of extraterrestrial species, treated like livestock, were merely metrics confirming their vitality.\n So she left that place and swore never to return. Hearing that the Advance Team might encounter wild alien species on frontier planets, she boarded one of the first ships as if seeking redemption.</description>
         <forcedTraits>
             <Kind>0</Kind>
         </forcedTraits>

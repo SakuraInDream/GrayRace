@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <FactionDef Name="Atlas_Faction">
+    <FactionDef Name="GR_Faction">
         <defName>GR_Faction_NPC</defName>
         <label>&lt;color=#00ff9b>&lt;b>德萨努协约国&lt;/b>&lt;/color></label>
         <description>德萨努协约国是最初的建门者，失控的灰蛊风暴彻底摧毁德萨努协约国之前，他们关闭了所有的L星门。许久之后，灰蛊风暴将自己伪装成德萨努的社会，以试图寻找重新打开L星门的办法，最终也没有任何成果。而现如今的德萨努协约国，仅仅是灰裔先遣队借用这个名字组成的临时组织。</description>
@@ -23,7 +23,8 @@
         <backstoryFilters>            <!--背景故事限制-->
             <li>
                 <categories>
-                    <li>GR_Adult</li>                    <!--外来者-->
+                    <li>GR_Adult</li>                    <!--所有成年背景-->
+                    <li>GR_Child</li>                    <!--所有儿童背景-->
                 </categories>
             </li>
         </backstoryFilters>

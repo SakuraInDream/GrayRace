@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--旗袍-->
+  <ThingDef ParentName="ApparelNoQualityBase">
+    <defName>Gray_Apparel_Qipao</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Qipao</label>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Qipao/Gray_Qipao</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+      <Mass>0</Mass>
+      <ArmorRating_Sharp>2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>2</ArmorRating_Blunt>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
+      <EquipDelay>0</EquipDelay>
+      <EnergyShieldRechargeRate>5</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>50.0</EnergyShieldEnergyMax>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Flammability>0</Flammability>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Qipao/Gray_Qipao</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+    </apparel>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>600</startingTicksToReset>
+        <minDrawSize>1.8</minDrawSize>
+        <maxDrawSize>2.2</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>0</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

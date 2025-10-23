@@ -5,7 +5,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyPDW</defName>
     <label>Flowglow</label>
-    <description>.</description>
+    <description>Gray Standard-issue Energy PDW.Its compact frame is almost entirely dedicated to the particle accelerator, enabling true instant-fire capability. However, its low stopping power makes it effective only against humans and smaller foes, rendering it unpopular among Grays who frequently encounter bizarre alien lifeforms.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_PDW</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -106,7 +106,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyShotgun</defName>
     <label>Lucifer</label>
-    <description>.</description>
+    <description>Gray Standard-issue Energy Shotgun.An energy compressor forces a high-yield charge into a single point, maximizing penetration and burst damage. However, due to a lack of containment, the projectile is highly unstable and dissipates shortly after leaving the barrel. This inherent limitation led to its design and deployment as a shotgun.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_SG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -206,7 +206,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyBattleRifle</defName>
     <label>Aetherglow</label>
-    <description>.</description>
+    <description>Gray Standard-issue Energy Rifle.Utilizing a high-pressure energy cell coupled with a stabilizer, it delivers substantial firepower without compromising on weight or size. As a weapon that excels in range, accuracy, power, compactness, and weight, it is the preferred choice for the majority of Grays.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -303,7 +303,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyHMG</defName>
     <label>Lumenward</label>
-    <description>.</description>
+    <description>Gray Standard-issue Energy Heavy Machine Gun.Its massive size and staggering weight mean even a Gray can only wield it by hand. This bulk, however, allows it to house a particle accelerator, energy stabilizer, and rapid heat sink simultaneously. Powered by multiple large high-pressure energy cells at the rear, it unleashes a relentless, devastating hail of high-energy projectiles, turning any engagement zone into a bloody wilderness. Due to its bulk and overkill nature, Grays deploy it only for outpost defense, rarely carrying it on routine patrols—even in teams.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_HMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -397,7 +397,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergySniperRifle</defName>
     <label>Radiant</label>
-    <description>.</description>
+    <description>Gray Standard-issue Energy Sniper Rifle.A high-energy particle focuser channels the raw power of a Diabolus main cannon into a single, devastating beam. The shot's brilliance remains visible even from dozens of kilometers away, and its armor-piercing capability is absolute. This is no assassin's tool—it is a weapon of pure, lethal, and efficient annihilation.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_SR</texPath>
@@ -496,7 +496,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyHL</defName>
     <label>Supernova</label>
-    <description>.</description>
+    <description>Gray Standard-issue Heavy Energy Launcher.This platform serves dual roles in anti-armor and anti-fortification warfare. The entire cannon is essentially a gigantic particle accelerator, retaining only the most basic stabilizer to prevent catastrophic failure. Each shot consumes an entire high-pressure energy cell, firing an unstable orb of energy that detonates upon impact with a terrifying blast, obliterating everything within its radius.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_Heavy_Launcher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -550,6 +550,7 @@
         <warmupTime>2</warmupTime>
         <range>47.9</range>
         <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <forcedMissRadius>1</forcedMissRadius>
         <soundCast>Shot_Minigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <targetParams>
@@ -578,8 +579,8 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <damageDef>GR_Laser</damageDef>
-      <damageAmountBase>300</damageAmountBase>
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>150</damageAmountBase>
       <explosionRadius>5.5</explosionRadius>
       <armorPenetrationBase>1</armorPenetrationBase>
       <stoppingPower>5</stoppingPower>
