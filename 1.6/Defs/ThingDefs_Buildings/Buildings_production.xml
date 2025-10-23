@@ -260,7 +260,7 @@
   </ThingDef>
 
   <!--被泰南气晕，培育仓盖子是单独渲染的-->
-  
+
   <ThingDef ParentName="BuildingBase">
     <defName>GR_Incubator</defName>
     <label>Incubator</label>
@@ -274,6 +274,7 @@
       <drawSize>(1.5,2.5)</drawSize>
       <drawOffset>(0,0,0.7)</drawOffset>
     </graphicData>
+    <uiIconPath>Things/Building/Incubator/Incubator_MenuIcon</uiIconPath>
     <rotatable>false</rotatable>
     <castEdgeShadows>true</castEdgeShadows>
     <size>(1,1)</size>
@@ -329,8 +330,26 @@
           </thingDefs>
         </filter>
       </defaultStorageSettings>
+      <!-- 借用一下生科的培育器 -->
+      <mechGestatorCylinderGraphic>
+        <texPath>Things/Building/Incubator/IncubatorGlass</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>(1.5,2.5)</drawSize>
+        <!-- <drawOffset>(-0.01,0,0.7)</drawOffset> -->
+        <drawOffset>(0,0,0.7)</drawOffset>
+        <shaderType>Transparent</shaderType>
+      </mechGestatorCylinderGraphic>
+      <mechGestatorTopGraphic>
+        <texPath>Things/Building/Incubator/IncubatorTop</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <drawSize>(1.5,2.5)</drawSize>
+        <drawOffset>(0,0,0.7)</drawOffset>
+      </mechGestatorTopGraphic>
     </building>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>SD.GrayRace.PlaceWorkers.PlaceWorker_IncubatorTop</li>
+    </placeWorkers>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
