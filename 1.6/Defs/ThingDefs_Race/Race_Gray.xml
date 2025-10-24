@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+
   <ThingDef Name="Gray_PawnBase" ParentName="BasePawn" Abstract="True">
     <thingClass>Pawn</thingClass>
     <category>Pawn</category>
@@ -13,6 +14,10 @@
     </butcherProducts>
     <statBases>
     </statBases>
+    <inspectorTabs>
+      <!-- 超频面板 -->
+      <li>SD.GrayRace.ITabs.ITab_GrayRaceOverlock</li>
+    </inspectorTabs>
   </ThingDef>
 
   <AlienRace.ThingDef_AlienRace ParentName="Gray_PawnBase">
@@ -407,8 +412,8 @@
       <ConstructSuccessChance>10</ConstructSuccessChance>      <!--建造成功率-->
       <FixBrokenDownBuildingSuccessChance>10</FixBrokenDownBuildingSuccessChance>      <!--修理成功率-->
       <!--其他-->
-      <RoyalFavorValue>14</RoyalFavorValue>         <!--皇权声望-->
-      <LearningRateFactor>5</LearningRateFactor>    <!--儿童学习速度-->
+      <RoyalFavorValue>14</RoyalFavorValue>      <!--皇权声望-->
+      <LearningRateFactor>5</LearningRateFactor>      <!--儿童学习速度-->
     </statBases>
     <comps>
       <li Class="CompProperties_Spawner">
@@ -568,56 +573,7 @@
         <volume>(0.3, 0.8, 0.4)</volume>
         <offset>(0,0,-0.3)</offset>
       </specialShadowData>
-      <ageGenerationCurve>        <!--不知道什么玩意
-                改了容易出BUG,刷新不出外星人.-->
-        <points>
-          <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
-          <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
-          <li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
-          <li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>          <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->
-          <li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>
-          <li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>
-          <li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li>          <!-- End exclude -->
-          <li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
-          <li>(14,0)</li>
-          <li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
-          <li>(16,40)</li>
-          <li>(18,70)</li>
-          <li>(22,100)</li>
-          <li>(30,20)</li>
-          <li>(60,3)</li>
-          <li>(80,0)</li>
-        </points>
-      </ageGenerationCurve>
-      <hediffGiverSets>        <!--该种族能获得的健康状态效果,和手术有点关联-->
-        <li>OrganicStandard</li>
-        <li>Human</li>
-      </hediffGiverSets>
-    </race>
-    <!--=============================================================================================================================-->
-    <recipes>      <!--能够接受的手术配方-->
-      <li>ExciseCarcinoma</li>
-      <li>AdministerMechSerumHealer</li>
-      <li>RemoveBodyPart</li>
-      <li>Euthanize</li>
-      <li>Anesthetize</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
-      <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
-      <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
-      <li MayRequire="Ludeon.RimWorld.Anomaly">SurgicalInspection</li>
-      <li MayRequire="Ludeon.RimWorld.Anomaly">BlissLobotomy</li>
-      <li MayRequire="Ludeon.RimWorld.Anomaly">GhoulInfusion</li>
-    </recipes>
-  </AlienRace.ThingDef_AlienRace>
+      <ageGenerationCurve>        <!--不知道什么玩意 改了容易出BUG,刷新不出外星人.-->
         <points>
           <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
           <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
