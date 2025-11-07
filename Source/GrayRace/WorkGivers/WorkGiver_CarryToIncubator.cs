@@ -34,12 +34,19 @@ namespace SD.GrayRace.WorkGivers
             if (thingCount.Thing == null || thingCount.Count == 0) return null;
 
             Job job = JobMaker.MakeJob(GrayRaceDefOf.GR_HaulToIncubator, thingCount.Thing, t);
-            job.count = Mathf.Min(thingCount.Thing.stackCount, t.TryGetInnerInteractableThingOwner().GetCountCanAccept(t, true));
+            // int needcount = t.TryGetInnerInteractableThingOwner().GetCountCanAccept(t, true);
+            // job.count = Mathf.Min(thingCount.Thing.stackCount, needcount);
+            job.count = Mathf.Min(thingCount.Thing.stackCount, thingCount.Count);
             job.haulMode = HaulMode.ToContainer;
 
             if (DebugSettings.godMode)
             {
-                Log.Message($"GR_CarryToIncubator - Job Count: {job.count} ThingCount: {thingCount.Thing.LabelCapNoCount}x{thingCount.Count}");
+                Log.Message($"[Incubator Haul] Creating job for {pawn.Name.ToStringShort}. " +
+                            $"Target: {thingCount.Thing.def.defName}. " +
+                            $"Required: {thingCount.Count}. " +
+                            // $"CountCanAccept: {needcount}. " +
+                            $"On Ground: {thingCount.Thing.stackCount}. " +
+                            $"Final job.count: {job.count}");
             }
 
             return job;
@@ -58,7 +65,7 @@ namespace SD.GrayRace.WorkGivers
 
             if (thing == null) return default;
 
-            var count = incubator.GetRequiredCountOf(thing.def) + incubator.GetRequiredCountOf_Foundation(thing.def) - incubator.innerContainer.TotalStackCountOfDef(thing.def);
+            int count = incubator.GetRequiredCountOf(thing.def) + incubator.GetRequiredCountOf_Foundation(thing.def) - incubator.innerContainer.TotalStackCountOfDef(thing.def);
 
             return new ThingCount(thing, count, true);
         }
