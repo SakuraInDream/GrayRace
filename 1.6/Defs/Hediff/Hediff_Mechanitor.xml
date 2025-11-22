@@ -55,48 +55,45 @@
         <minSeverity>1</minSeverity>
         <statOffsets>
           <MechControlGroups>1</MechControlGroups>
-          <MechBandwidth>15</MechBandwidth>
           <MechFormingSpeed>0.5</MechFormingSpeed>
           <MechRepairSpeed>0.5</MechRepairSpeed>
           <SubcoreEncodingSpeed>0.5</SubcoreEncodingSpeed>
         </statOffsets>
         <statFactors>
           <MechBandwidth>1.15</MechBandwidth>
-          <MechFormingSpeed>1.5</MechFormingSpeed>
-          <MechRepairSpeed>1.5</MechRepairSpeed>
-          <SubcoreEncodingSpeed>1.5</SubcoreEncodingSpeed>
+          <MechFormingSpeed>1.15</MechFormingSpeed>
+          <MechRepairSpeed>1.15</MechRepairSpeed>
+          <SubcoreEncodingSpeed>1.15</SubcoreEncodingSpeed>
         </statFactors>
       </li>
       <li>
         <minSeverity>2</minSeverity>
         <statOffsets>
           <MechControlGroups>2</MechControlGroups>
-          <MechBandwidth>30</MechBandwidth>
           <MechFormingSpeed>1</MechFormingSpeed>
           <MechRepairSpeed>1</MechRepairSpeed>
           <SubcoreEncodingSpeed>1</SubcoreEncodingSpeed>
         </statOffsets>
         <statFactors>
           <MechBandwidth>1.3</MechBandwidth>
-          <MechFormingSpeed>2</MechFormingSpeed>
-          <MechRepairSpeed>2</MechRepairSpeed>
-          <SubcoreEncodingSpeed>2</SubcoreEncodingSpeed>
+          <MechFormingSpeed>1.3</MechFormingSpeed>
+          <MechRepairSpeed>1.3</MechRepairSpeed>
+          <SubcoreEncodingSpeed>1.3</SubcoreEncodingSpeed>
         </statFactors>
       </li>
       <li>
         <minSeverity>3</minSeverity>
         <statOffsets>
           <MechControlGroups>4</MechControlGroups>
-          <MechBandwidth>50</MechBandwidth>
           <MechFormingSpeed>1.5</MechFormingSpeed>
           <MechRepairSpeed>1.5</MechRepairSpeed>
           <SubcoreEncodingSpeed>1.5</SubcoreEncodingSpeed>
         </statOffsets>
         <statFactors>
           <MechBandwidth>1.5</MechBandwidth>
-          <MechFormingSpeed>2.5</MechFormingSpeed>
-          <MechRepairSpeed>2.5</MechRepairSpeed>
-          <SubcoreEncodingSpeed>2.5</SubcoreEncodingSpeed>
+          <MechFormingSpeed>1.5</MechFormingSpeed>
+          <MechRepairSpeed>1.5</MechRepairSpeed>
+          <SubcoreEncodingSpeed>1.5</SubcoreEncodingSpeed>
         </statFactors>
       </li>
     </stages>
@@ -119,11 +116,10 @@
         <statOffsets>
           <MechBandwidth>50</MechBandwidth>
           <MechRemoteRepairDistance>50</MechRemoteRepairDistance>
-          <MechRemoteShieldDistance>500</MechRemoteShieldDistance>
-          <MechRemoteShieldEnergy>50</MechRemoteShieldEnergy>
+          <MechRemoteShieldDistance>50</MechRemoteShieldDistance>
+          <MechRemoteShieldEnergy>500</MechRemoteShieldEnergy>
         </statOffsets>
         <statFactors>
-          <MechBandwidth>1.5</MechBandwidth>
           <MechRemoteRepairDistance>2</MechRemoteRepairDistance>
           <MechRemoteShieldDistance>2</MechRemoteShieldDistance>
           <MechRemoteShieldEnergy>2</MechRemoteShieldEnergy>

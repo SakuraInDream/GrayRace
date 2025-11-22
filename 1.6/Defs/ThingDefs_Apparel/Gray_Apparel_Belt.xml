@@ -40,17 +40,17 @@
       <EquipDelay>1</EquipDelay>
     </statBases>
     <thingCategories>
-      <li>ApparelUtility</li>
+      <li>GR_ApparelMisc</li>
     </thingCategories>
     <equippedStatOffsets>
       <MechBandwidth>12</MechBandwidth>
       <MechRepairSpeed>2</MechRepairSpeed>
       <SubcoreEncodingSpeed>1</SubcoreEncodingSpeed>
-      <MeleeDamageFactor>2</MeleeDamageFactor>
-      <WorkSpeedGlobal>0.5</WorkSpeedGlobal>
+      <MeleeDamageFactor>0.4</MeleeDamageFactor>
+      <GeneralLaborSpeed>0.5</GeneralLaborSpeed>
     </equippedStatOffsets>
     <apparel>
-      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
       <scoreOffset>4</scoreOffset>
       <mechanitorApparel>true</mechanitorApparel>
       <careIfWornByCorpse>false</careIfWornByCorpse>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--士兵-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_Soldier</defName>
+    <label>gray soldier</label>
+    <combatPower>90</combatPower>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>true</isFighter>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>
+      <min>99999</min>
+      <max>99999</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_RangedArmor</li>
+    </apparelTags>
+    <apparelDisallowTags>
+      <li>GR_MechanitorArmor</li>
+    </apparelDisallowTags>
+    <weaponMoney>2000~4000</weaponMoney>
+    <weaponTags>
+      <li>GR_BasicWeapon</li>
+      <li>GR_T1Weapon</li>
+    </weaponTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Combat</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <!--火力支援兵-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_FireSupportSoldier</defName>
+    <label>gray fire support soldier</label>
+    <combatPower>120</combatPower>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>true</isFighter>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>
+      <min>99999</min>
+      <max>99999</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_RangedArmor</li>
+    </apparelTags>
+    <apparelDisallowTags>
+      <li>GR_MechanitorArmor</li>
+    </apparelDisallowTags>
+    <weaponMoney>3500~7000</weaponMoney>
+    <weaponTags>
+      <li>GR_Mechgun</li>
+    </weaponTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Combat</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <!--重型火力支援兵-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_HeavyFireSupportSoldier</defName>
+    <label>gray heavy fire support soldier</label>
+    <combatPower>150</combatPower>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>true</isFighter>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>
+      <min>99999</min>
+      <max>99999</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_RangedArmor</li>
+    </apparelTags>
+    <apparelDisallowTags>
+      <li>GR_MechanitorArmor</li>
+    </apparelDisallowTags>
+    <weaponMoney>3500~7000</weaponMoney>
+    <weaponTags>
+      <li>GR_HeavyWeapon</li>
+    </weaponTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Combat</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <!--精英士兵-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_EliteSoldier</defName>
+    <label>gray elite soldier</label>
+    <combatPower>120</combatPower>
+    <itemQuality>Masterwork</itemQuality>
+    <isFighter>true</isFighter>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>
+      <min>99999</min>
+      <max>99999</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_RangedArmor</li>
+    </apparelTags>
+    <apparelDisallowTags>
+      <li>GR_MechanitorArmor</li>
+    </apparelDisallowTags>
+    <weaponMoney>3000~6000</weaponMoney>
+    <weaponTags>
+      <li>GR_T1Weapon</li>
+      <li>GR_T2Weapon</li>
+    </weaponTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Combat</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <!--精英火力支援兵-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_EliteFireSupportSoldier</defName>
+    <label>gray elite fire support soldier</label>
+    <combatPower>150</combatPower>
+    <itemQuality>Masterwork</itemQuality>
+    <isFighter>true</isFighter>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>
+      <min>99999</min>
+      <max>99999</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_RangedArmor</li>
+    </apparelTags>
+    <apparelDisallowTags>
+      <li>GR_MechanitorArmor</li>
+    </apparelDisallowTags>
+    <weaponMoney>3500~7000</weaponMoney>
+    <weaponTags>
+      <li>GR_Mechgun</li>
+    </weaponTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Combat</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <!--精英重型火力支援兵-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_EliteHeavyFireSupportSoldier</defName>
+    <label>gray elite heavy fire support soldier</label>
+    <combatPower>180</combatPower>
+    <itemQuality>Masterwork</itemQuality>
+    <isFighter>true</isFighter>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>
+      <min>99999</min>
+      <max>99999</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_RangedArmor</li>
+    </apparelTags>
+    <apparelDisallowTags>
+      <li>GR_MechanitorArmor</li>
+    </apparelDisallowTags>
+    <weaponMoney>3500~7000</weaponMoney>
+    <weaponTags>
+      <li>GR_HeavyWeapon</li>
+    </weaponTags>
+    <techHediffsRequired>
+      <li>DeathAcidifier</li>
+    </techHediffsRequired>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Combat</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+
+</Defs>

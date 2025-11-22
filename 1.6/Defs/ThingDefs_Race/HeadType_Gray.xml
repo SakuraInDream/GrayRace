@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
- 
+
   <HeadTypeDef ParentName="AverageBase">
-    <defName>GR_Feature</defName>
-    <graphicPath>Race/Head/Gray_Female</graphicPath>
-    <gender>Female</gender>
+    <defName>GR_Feature0</defName>
+    <graphicPath>Race/Gray/Head/Gray_Female</graphicPath>
+    <gender>None</gender>
   </HeadTypeDef>
 
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>GR_Feature1</defName>
+    <graphicPath>Race/Gray/Head/Gray_Female</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
 </Defs>

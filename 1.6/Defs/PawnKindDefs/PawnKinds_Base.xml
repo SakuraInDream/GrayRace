@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Name="Gray_PawnKindBase" Abstract="True">
+    <race>Gray_Race</race>
+    <fixedGender>Female</fixedGender>
+    <defaultFactionType>Gray_Faction</defaultFactionType>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <invNutrition>3</invNutrition>
+    <gearHealthRange>1~1</gearHealthRange>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <maxGenerationAge>2000</maxGenerationAge>
+    <minGenerationAge>7</minGenerationAge>
+    <initialWillRange>80~100</initialWillRange>
+    <initialResistanceRange>10~30</initialResistanceRange>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
+        <Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
+        <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
+        <Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
+        <Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
+        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
+        <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <startingHediffs>
+      <li>
+        <def>NanitesRegeneration</def>
+        <severity>1</severity>
+      </li>
+      <li>
+        <def>NanitesLife</def>
+        <severity>1</severity>
+      </li>
+    </startingHediffs>
+  </PawnKindDef>
+
+</Defs>

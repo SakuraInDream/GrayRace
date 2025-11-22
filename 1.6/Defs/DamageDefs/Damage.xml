@@ -21,8 +21,12 @@
     <isExplosive>true</isExplosive>
     <ignoreShields>true</ignoreShields>
     <makesAnimalsFlee>true</makesAnimalsFlee>
-    <buildingDamageFactor>15</buildingDamageFactor>
+    <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
     <plantDamageFactor>15</plantDamageFactor>
+    <explosionHeatEnergyPerCell>20</explosionHeatEnergyPerCell>
+    <explosionCellFleck>Fleck_Vaporize</explosionCellFleck>
+    <soundExplosion>Explosion_Vaporize</soundExplosion>
     <combatLogRules>Damage_Flame</combatLogRules>
   </DamageDef>
 
@@ -83,6 +87,7 @@
     <defName>GR_Laser</defName>
     <label>Laser</label>
     <isExplosive>true</isExplosive>
+    <defaultDamage>25</defaultDamage>
     <defaultArmorPenetration>1</defaultArmorPenetration>
     <workerClass>DamageWorker_AddInjury</workerClass>
   </DamageDef>

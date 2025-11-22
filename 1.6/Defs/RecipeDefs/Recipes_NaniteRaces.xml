@@ -2,7 +2,7 @@
 <Defs>
   <RecipeDef Name="BaseNaniteRaceRecipe" Abstract="True">
     <jobString>开始制造灰裔。</jobString>
-    <workAmount>1800</workAmount>
+    <workAmount>180000</workAmount>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <soundWorking>MechGestatorCycle_Initiating</soundWorking>
   </RecipeDef>
@@ -37,16 +37,16 @@
 
   <RecipeDef>
     <defName>GRRecipe_Solider</defName>
-    <label>人格基底 - 士兵</label>
-    <description>为了快速投入战斗而设计的人格基底，有着基础的格斗技能与射击及枪支使用、维护等经验。</description>
+    <label>Persona Matrix - Soldier</label>
+    <description>A persona matrix designed for rapid combat deployment. Comes pre-loaded with foundational melee skills, firearms proficiency, and weapon maintenance protocols.</description>
     <ingredients>
       <li>
         <filter>
           <thingDefs>
-            <li>AIPersonaCore</li>
+            <li>GR_Nanites</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>900</count>
       </li>
     </ingredients>
     <modExtensions>
@@ -54,8 +54,282 @@
       <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
         <!-- 填 BackstoryDef 的 defName -->
         <!-- 自动绑定到幼年背景 -->
-        <newBornBackstory>MilitaryChild82</newBornBackstory>
+        <newBornBackstory>GR_PM_Soldier</newBornBackstory>
       </li>
     </modExtensions>
   </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Artist</defName>
+    <label>Persona Matrix - Artist</label>
+    <description>Designed for the mass production of artworks. Imprinted with human-defined aesthetic standards and comprehensive fabrication knowledge.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>600</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Artist</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Aide</defName>
+    <label>Persona Matrix - Aide</label>
+    <description>Built primarily to assist others, this matrix's knowledge base spans nearly all known fields—pushing the storage capacity of a persona matrix to its absolute limit.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>2000</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Aide</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Medical</defName>
+    <label>Persona Matrix - Medical Assistant</label>
+    <description>Contains extensive physiological data calibrated for humans, enabling it to provide basic medical aid and emergency care.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>600</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Medical</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Technician</defName>
+    <label>Persona Matrix - Technician</label>
+    <description>Designed for manual tasks in diverse environments. Loaded with multi-disciplinary mechanical operation knowledge, capable of independently completing fabrication tasks without mechanical support.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>600</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Technician</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Constable</defName>
+    <label>Persona Matrix - Constable</label>
+    <description>Created for conflict mediation between individuals, with contingency protocols for violent scenarios. Includes friendly social interaction modules and proficiency with most melee weapons.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>900</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Constable</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Adjutant</defName>
+    <label>Persona Matrix - Adjutant</label>
+    <description>Designed to provide tactical advice and decision-making guidance. Contains leadership protocols and basic firearms knowledge.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>1200</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Adjutant</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Technical</defName>
+    <label>Persona Matrix - Technical Officer</label>
+    <description>Optimized for coordinating production workflows. Loaded with rich theoretical knowledge and practical records, capable of independently analyzing and adjusting production strategies.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>900</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Technical</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Research</defName>
+    <label>Persona Matrix - Research Assistant</label>
+    <description>Designed to support scientific research. Combines multidisciplinary knowledge with enhanced computational and logical reasoning capabilities.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>900</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Research</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Guard</defName>
+    <label>Persona Matrix - Guard</label>
+    <description>Created for general protective duties. Excels in close-quarters combat and situational awareness, serving equally well as a social escort in formal settings.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>1200</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Guard</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Maid</defName>
+    <label>Persona Matrix - Maid</label>
+    <description>Designed for personal attendant duties. Includes standard cleaning and culinary knowledge, along with intimate care protocols—and certain unspoken specialties. The predefined personality attributes also occupy significant matrix capacity.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>1200</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Maid</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Miner</defName>
+    <label>Persona Matrix - Miner</label>
+    <description>Built for large-scale mining operations. Contains both equipment operation knowledge and autonomous mining protocols for resource-scarce environments.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>600</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Miner</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Architect</defName>
+    <label>Persona Matrix - Architect</label>
+    <description>Capable of simultaneous architectural planning and construction. Includes fundamental material science knowledge, enabling adaptation to resource-poor or exotic material environments.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>600</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Architect</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GRRecipe_Farmer</defName>
+    <label>Persona Matrix - Farmer</label>
+    <description>Designed for crop cultivation and livestock management on an industrial scale. Contains comprehensive biological knowledge and environmental assessment protocols.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>600</count>
+      </li>
+    </ingredients>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+        <newBornBackstory>GR_PM_Farmer</newBornBackstory>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
 </Defs>

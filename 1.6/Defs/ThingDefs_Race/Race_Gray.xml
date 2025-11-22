@@ -27,7 +27,7 @@
     <alienRace>
       <generalSettings>
         <maleGenderProbability>0</maleGenderProbability>        <!--男性比例-->
-        <immuneToAge>true</immuneToAge>        <!-- 不受年龄影响 -->
+        <immuneToAge>true</immuneToAge>        <!-- 不受年龄影响（老年病） -->
         <humanRecipeImport>true</humanRecipeImport>        <!--可使用人类手术配方-->
         <canLayDown>true</canLayDown>        <!-- 是否可以躺下睡觉（什么神经病功能，给半人马准备的是吧？） -->
         <maxDamageForSocialfight>5</maxDamageForSocialfight>        <!--最大打架伤害-->
@@ -65,7 +65,10 @@
             <defName>SlowLearner</defName>
           </li>
           <li>
-            <defName>Beauty</defName>
+            <defName Degree="-1">Beauty</defName>
+          </li>
+          <li>
+            <defName Degree="-2">Beauty</defName>
           </li>
           <li>
             <defName>DrugDesire</defName>
@@ -76,21 +79,40 @@
           <li>
             <defName>PsychicSensitivity</defName>
           </li>
+          <li>
+            <defName Degree="-1">Industriousness</defName>
+          </li>
+          <li>
+            <defName Degree="-2">Industriousness</defName>
+          </li>
         </disallowedTraits>
         <forcedRaceTraitEntries>          <!--种族必备特性-->
+          <li>
+            <defName>GreatMemory</defName>
+            <chance>100</chance>
+          </li>
           <li>
             <defName>GR_LearningAlgorithms</defName>
             <chance>10</chance>
           </li>
           <li>
-            <defName>GreatMemory</defName>
-            <chance>100</chance>
+            <defName>GR_Physicists</defName>
+            <chance>10</chance>
+          </li>
+          <li>
+            <defName>GR_Engineers</defName>
+            <chance>10</chance>
+          </li>
+          <li>
+            <defName>GR_Sociologists</defName>
+            <chance>10</chance>
           </li>
         </forcedRaceTraitEntries>
         <!--=============================================外观相关==============================================-->
         <alienPartGenerator>
           <headTypes>            <!--头部的种类，动态表情貌似就是引用的这玩意做的脸？但是貌似空路径都没事，只要别空着，这玩意干嘛的，不会是什么泰南的神秘历史遗留吧-->
-            <li>GR_Feature</li>
+            <li>GR_Feature0</li>
+            <li>GR_Feature1</li>
           </headTypes>
           <bodyTypes>            <!--体型-->
             <li>Female</li>
@@ -98,6 +120,7 @@
             <li MayRequire="Ludeon.RimWorld.Biotech">Child</li>            <!-- test -->
           </bodyTypes>
           <atlasScale>4</atlasScale>
+          <borderScale>1</borderScale>
           <headOffset>(0.0, -0.35)</headOffset>          <!--头部贴图的偏移-->
           <headOffsetDirectional>
             <east>
@@ -118,7 +141,7 @@
                 <options>
                   <li>
                     <weight>100</weight>
-                    <only>(255,240,234)</only>
+                    <only>(255,255,255)</only>
                   </li>
                 </options>
               </first>
@@ -153,36 +176,33 @@
                   <hiddenUnderApparelTag>
                   </hiddenUnderApparelTag>
                 </Apparel>
+                <Posture>
+                  <drawnStanding>true</drawnStanding>
+                  <drawnInBed>true</drawnInBed>
+                  <drawnLaying>true</drawnLaying>
+                </Posture>
                 <RotStage>Fresh,Rotting</RotStage>
               </conditions>
               <offsets>
+                <west>
+                  <layerOffset>-0.274</layerOffset>
+                </west>
                 <south>
-                  <bodyTypes>
-                    <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
-                  </bodyTypes>
-                  <layerOffset>-0.2736</layerOffset>
+                  <layerOffset>-0.274</layerOffset>
                 </south>
                 <north>
-                  <bodyTypes>
-                    <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0.01)</Child>
-                  </bodyTypes>
-                  <layerOffset>-0.325</layerOffset>
+                  <layerOffset>-0.274</layerOffset>
                 </north>
                 <east>
-                  <bodyTypes>
-                    <Child MayRequire="Ludeon.RimWorld.Biotech">(0,-0.002)</Child>
-                  </bodyTypes>
-                  <layerOffset>-0.2736</layerOffset>
+                  <layerOffset>-0.274</layerOffset>
                 </east>
-                <west>
-                  <bodyTypes>
-                    <Child MayRequire="Ludeon.RimWorld.Biotech">(0,-0.002)</Child>
-                  </bodyTypes>
-                  <layerOffset>-0.2736</layerOffset>
-                </west>
               </offsets>
               <inFrontOfBody>true</inFrontOfBody>
+              <layerInvert>false</layerInvert>
               <alignWithHead>true</alignWithHead>
+              <userCustomizable>true</userCustomizable>
+              <defaultOffset>Center</defaultOffset>
+              <drawSize>1</drawSize>
               <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
             </li>
             <!--后发-->
@@ -195,6 +215,7 @@
                 <Posture>
                   <drawnStanding>true</drawnStanding>
                   <drawnInBed>false</drawnInBed>
+                  <drawnLaying>true</drawnLaying>
                 </Posture>
                 <Apparel>
                   <hiddenUnderApparelTag>
@@ -203,33 +224,25 @@
                 <RotStage>Fresh,Rotting</RotStage>
               </conditions>
               <offsets>
+                <west>
+                  <layerOffset>-0.275</layerOffset>
+                </west>
                 <south>
-                  <bodyTypes>
-                    <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0)</Child>
-                  </bodyTypes>
-                  <layerOffset>-1.273</layerOffset>
+                  <layerOffset>-0.299</layerOffset>
                 </south>
                 <north>
-                  <bodyTypes>
-                    <Child MayRequire="Ludeon.RimWorld.Biotech">(0,0.01)</Child>
-                  </bodyTypes>
-                  <layerOffset>-0.13</layerOffset>
+                  <layerOffset>-0.275</layerOffset>
                 </north>
                 <east>
-                  <bodyTypes>
-                    <Child MayRequire="Ludeon.RimWorld.Biotech">(0,-0.002)</Child>
-                  </bodyTypes>
-                  <layerOffset>-1.273</layerOffset>
+                  <layerOffset>-0.275</layerOffset>
                 </east>
-                <west>
-                  <bodyTypes>
-                    <Child MayRequire="Ludeon.RimWorld.Biotech">(0,-0.002)</Child>
-                  </bodyTypes>
-                  <layerOffset>-1.273</layerOffset>
-                </west>
               </offsets>
-              <inFrontOfBody>true</inFrontOfBody>
+              <inFrontOfBody>false</inFrontOfBody>
+              <layerInvert>false</layerInvert>
               <alignWithHead>true</alignWithHead>
+              <userCustomizable>true</userCustomizable>
+              <defaultOffset>Center</defaultOffset>
+              <drawSize>1</drawSize>
               <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
               <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
             </li>
@@ -255,11 +268,10 @@
             <useBiologicalYears>true</useBiologicalYears>
             <curve>
               <points>
-                <li>(1,0.4)</li>
-                <li>(7,0.8)</li>
-                <li>(10,1.0)</li>
-                <li>(15,1.2)</li>
-                <li>(18,1.5)</li>
+                <li>(1,0.2)</li>
+                <li>(7,0.5)</li>
+                <li>(10,0.8)</li>
+                <li>(15,1.0)</li>
               </points>
             </curve>
           </WorkSpeedGlobal>
@@ -270,20 +282,22 @@
           <li>10</li>
         </growthAges>
       </generalSettings>
+      <compatibility>
+        <hasBlood>false</hasBlood>
+      </compatibility>
       <graphicPaths>        <!--身体贴图的路径-->
         <head>Race/Gray/Head/</head>
         <body>
-          <path>Race/Gray/Body/Naked_Female</path>
           <ageGraphics>
             <HumanlikeAdult>Race/Gray/Body/Naked_Female</HumanlikeAdult>
             <HumanlikeTeenager>Race/Gray/Body/Naked_Female</HumanlikeTeenager>
-            <HumanlikePreTeenager MayRequire="Ludeon.RimWorld.Biotech">Race/Gray/Body/Naked_Child</HumanlikePreTeenager>
+            <HumanlikePreTeenager>Race/Gray/Body/Naked_Child</HumanlikePreTeenager>
             <HumanlikeChild>Race/Gray/Body/Naked_Baby</HumanlikeChild>
             <HumanlikeBaby>Race/Gray/Body/Naked_Baby</HumanlikeBaby>
           </ageGraphics>
         </body>
         <skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton>        <!--风干骷髅的贴图-->
-        <swaddle>blank</swaddle>
+        <swaddle>blank</swaddle>      <!--襁褓贴图-->
       </graphicPaths>
       <styleSettings>        <!--生物的风格设置-->
         <li>
@@ -349,16 +363,24 @@
       <raceRestriction>
         <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>        <!-- 只使用种族限制服装 -->
         <apparelList>
+          <li>Gray_Apparel_MechanitorHelmet</li>
+          <li>Gray_Apparel_MechanitorArmor</li>
+          <li>Gray_Apparel_MechanitorISA</li>
+          <li>Gray_Apparel_MarksmanHelmet</li>
+          <li>Gray_Apparel_MarksmanArmor</li>
+          <li>Gray_Apparel_MeleeHelmet</li>
+          <li>Gray_Apparel_MeleeArmor</li>
         </apparelList>
         <whiteApparelList>
+          <li>Gray_Apparel_MechanitorBelt</li>
         </whiteApparelList>
-        <blackGeneTags>
+        <blackGeneTags>       <!-- 禁用基因标签 -->
           <li>HairStyle</li>
           <li>Fur</li>
           <li>BeardStyle</li>
           <li>SkinColor</li>
         </blackGeneTags>
-        <blackEndoCategories>
+        <blackEndoCategories>     <!-- 黑名单基因类别 -->
           <li>HairColor</li>
           <li>Jaw</li>
           <li>Head</li>
@@ -382,7 +404,7 @@
       <CarryingCapacity>500</CarryingCapacity>      <!--携带能力-->
       <MentalBreakThreshold>0.35</MentalBreakThreshold>      <!--崩溃阈值-->
       <PainShockThreshold>0.6</PainShockThreshold>      <!--疼痛休克阈值-->
-      <PsychicSensitivity>0</PsychicSensitivity>      <!--心灵敏感度-->
+      <PsychicSensitivity>0.01</PsychicSensitivity>      <!--心灵敏感度-->
       <FilthRate>0</FilthRate>      <!--污物规模-->
       <!--战斗-->
       <MeleeDodgeChance>2</MeleeDodgeChance>      <!--近战闪避几率-->
@@ -400,7 +422,7 @@
       <GeneralLaborSpeed>1.5</GeneralLaborSpeed>      <!--普通工作速度-->
       <WorkSpeedGlobal>1.5</WorkSpeedGlobal>      <!--全局工作速度-->
       <!--烹饪-->
-      <FoodPoisonChance>5000</FoodPoisonChance>      <!--食物中毒几率-->
+      <FoodPoisonChance>500</FoodPoisonChance>      <!--食物中毒几率-->
       <!--医学/研究-->
       <ResearchSpeed>2</ResearchSpeed>      <!--研究速度-->
       <MedicalTendQuality>1.5</MedicalTendQuality>      <!--医疗质量-->
@@ -411,6 +433,8 @@
       <ConstructionSpeed>1.5</ConstructionSpeed>      <!--建造速度-->
       <ConstructSuccessChance>10</ConstructSuccessChance>      <!--建造成功率-->
       <FixBrokenDownBuildingSuccessChance>10</FixBrokenDownBuildingSuccessChance>      <!--修理成功率-->
+      <TameAnimalChance>0.5</TameAnimalChance>    <!--驯服成功率-->
+      <TrainAnimalChance>0.5</TrainAnimalChance>    <!--训练成功率-->
       <!--其他-->
       <RoyalFavorValue>14</RoyalFavorValue>      <!--皇权声望-->
       <LearningRateFactor>5</LearningRateFactor>      <!--儿童学习速度-->
@@ -428,9 +452,9 @@
         <!-- 最大 500 -->
         <maxResource>5</maxResource>
         <!-- 每秒恢复 -->
-        <regenPerSecond>0.01</regenPerSecond>
+        <regenPerSecond>0.001</regenPerSecond>
         <!-- 资源名称，可本地化 -> <DefNAME.comps.CompResource_Nanites.resourceLabel> -->
-        <resourceLabel>备用纳米机械</resourceLabel>
+        <resourceLabel>备用灰潮源质</resourceLabel>
         <!-- gizmo 的下方刻度显示 -->
         <resourceGizmoThresholds>
           <li>0.25</li>
@@ -486,7 +510,7 @@
       <specificMeatDef>GR_GrayFlesh</specificMeatDef>
       <baseBodySize>1</baseBodySize>      <!--体型大小-->
       <baseHealthScale>3</baseHealthScale>
-      <foodType>OmnivoreHuman</foodType>      <!--杂食生物-->
+      <foodType>None</foodType>      <!--不吃，杂食（人类默认）为OmnivoreHuman-->
       <gestationPeriodDays>5000</gestationPeriodDays>      <!--妊娠期天数 -->
       <soundCallIntervalRange>2000~5000</soundCallIntervalRange>
       <canBecomeShambler>true</canBecomeShambler>

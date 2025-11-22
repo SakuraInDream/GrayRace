@@ -17,7 +17,7 @@
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <MarketValue>10</MarketValue>
-      <Mass>0.1</Mass>
+      <Mass>1</Mass>
       <Flammability>0</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
     </statBases>
@@ -58,7 +58,7 @@
       <li>ItemsMisc</li>
     </thingCategories>
     <drawGUIOverlay>false</drawGUIOverlay>
-    <tradeability>Sellable</tradeability>
+    <tradeability>All</tradeability>
     <techLevel>Ultra</techLevel>
     <tradeTags>
       <li>ExoticMisc</li>

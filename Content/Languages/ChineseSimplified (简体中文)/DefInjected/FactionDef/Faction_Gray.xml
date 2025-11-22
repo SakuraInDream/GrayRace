@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: <color=#00ff9b><b>德萨努协约国</b></color> -->
+  <Gray_Faction.label>TODO</Gray_Faction.label>
+  <!-- EN: 灰裔先遣队据点。 -->
+  <Gray_Faction.description>TODO</Gray_Faction.description>
+  <!-- EN: <color=#00ff9b><b>德萨努协约国</b></color> -->
+  <Gray_Faction.fixedName>TODO</Gray_Faction.fixedName>
+  <!-- EN: governor -->
+  <Gray_Faction.leaderTitle>TODO</Gray_Faction.leaderTitle>
+  <!-- EN: {0} from {1} are attacking your {2}. -->
+  <Gray_Faction.messageDefendersAttacking>TODO</Gray_Faction.messageDefendersAttacking>
+  <!-- EN: Gray -->
+  <Gray_Faction.pawnSingular>TODO</Gray_Faction.pawnSingular>
+  <!-- EN: Grey -->
+  <Gray_Faction.pawnsPlural>TODO</Gray_Faction.pawnsPlural>
+  
+</LanguageData>

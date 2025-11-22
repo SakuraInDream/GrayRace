@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Consume TargetA. -->
+  <GR_ConsumeMetal.reportString>TODO</GR_ConsumeMetal.reportString>
+  
+  <!-- EN: hauling TargetA to TargetB. -->
+  <GR_HaulToIncubator.reportString>TODO</GR_HaulToIncubator.reportString>
+  
+</LanguageData>

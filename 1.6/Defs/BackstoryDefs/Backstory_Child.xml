@@ -96,7 +96,7 @@
     <title>Persona Matrix - Adjutant</title>
     <titleShort>Adjutant</titleShort>
     <description>Designed to provide tactical advice and decision-making guidance. Contains leadership protocols and basic firearms knowledge.</description>
-    <skillGains>  
+    <skillGains>
       <Shooting>3</Shooting>
       <Social>6</Social>
       <Intellectual>3</Intellectual>
@@ -152,6 +152,9 @@
       <Social>6</Social>
       <Cooking>9</Cooking>
     </skillGains>
+    <spawnCategories>
+      <li>GR_Maid</li>
+    </spawnCategories>
   </AlienRace.AlienBackstoryDef>
 
   <!--矿工-->

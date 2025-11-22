@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Disintegration Corrosion -->
+  <GR_Disintegration_Corrosion.label>TODO</GR_Disintegration_Corrosion.label>
+  <!-- EN: The creature is being consumed by a lethal disintegrative corrosion, its armor relentlessly flaking away into nothingness, exposing vulnerable tissues beneath. Its movements turn sluggish and uncoordinated as its very flesh dissolves into molecular debris. -->
+  <GR_Disintegration_Corrosion.description>TODO</GR_Disintegration_Corrosion.description>
+  <!-- EN: Initial -->
+  <GR_Disintegration_Corrosion.stages.Initial.label>TODO</GR_Disintegration_Corrosion.stages.Initial.label>
+  <!-- EN: Infiltration -->
+  <GR_Disintegration_Corrosion.stages.Infiltration.label>TODO</GR_Disintegration_Corrosion.stages.Infiltration.label>
+  <!-- EN: Corrosion -->
+  <GR_Disintegration_Corrosion.stages.Corrosion.label>TODO</GR_Disintegration_Corrosion.stages.Corrosion.label>
+  <!-- EN: Degradation -->
+  <GR_Disintegration_Corrosion.stages.Degradation.label>TODO</GR_Disintegration_Corrosion.stages.Degradation.label>
+  <!-- EN: Collapse -->
+  <GR_Disintegration_Corrosion.stages.Collapse.label>TODO</GR_Disintegration_Corrosion.stages.Collapse.label>
+  <!-- EN: Annihilation -->
+  <GR_Disintegration_Corrosion.stages.Annihilation.label>TODO</GR_Disintegration_Corrosion.stages.Annihilation.label>
+  
+  <!-- EN: Nanite Corrosion -->
+  <GR_Nanite_Corrosion.label>TODO</GR_Nanite_Corrosion.label>
+  <!-- EN: This lethal nanite infection progressively disassembles the target's molecular structure, inducing excruciating neural pain while systematically degrading defensive capabilities. Affected subjects undergo a cascading failure—from localized corrosion to total systemic collapse. -->
+  <GR_Nanite_Corrosion.description>TODO</GR_Nanite_Corrosion.description>
+  <!-- EN: Initial -->
+  <GR_Nanite_Corrosion.stages.Initial.label>TODO</GR_Nanite_Corrosion.stages.Initial.label>
+  <!-- EN: Infiltration -->
+  <GR_Nanite_Corrosion.stages.Infiltration.label>TODO</GR_Nanite_Corrosion.stages.Infiltration.label>
+  <!-- EN: Proliferation -->
+  <GR_Nanite_Corrosion.stages.Proliferation.label>TODO</GR_Nanite_Corrosion.stages.Proliferation.label>
+  <!-- EN: Corrosion -->
+  <GR_Nanite_Corrosion.stages.Corrosion.label>TODO</GR_Nanite_Corrosion.stages.Corrosion.label>
+  <!-- EN: Neural -->
+  <GR_Nanite_Corrosion.stages.Neural.label>TODO</GR_Nanite_Corrosion.stages.Neural.label>
+  
+</LanguageData>

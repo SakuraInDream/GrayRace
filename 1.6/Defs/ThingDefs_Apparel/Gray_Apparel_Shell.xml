@@ -6,7 +6,7 @@
     <defName>Gray_Apparel_MechanitorArmor</defName>
     <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
     <label>Gray Mechanitor Armor</label>
-    <techLevel>Spacer</techLevel>
+    <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Apparel/Mechanitor/Gray_MechanitorArmor</texPath>
@@ -14,7 +14,7 @@
       <drawSize>1.0</drawSize>
     </graphicData>
     <thingCategories>
-      <li>ApparelMisc</li>
+      <li>GR_ApparelArmor</li>
     </thingCategories>
     <recipeMaker>
       <researchPrerequisites>
@@ -48,14 +48,13 @@
       <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
       <EnergyShieldRechargeRate>5</EnergyShieldRechargeRate>
-      <EnergyShieldEnergyMax>0.02</EnergyShieldEnergyMax>
-      <EquipDelay>10</EquipDelay>
+      <EnergyShieldEnergyMax>0.01</EnergyShieldEnergyMax>
+      <EquipDelay>4</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <MechBandwidth>15</MechBandwidth>
+      <MechBandwidth>20</MechBandwidth>
       <MechRemoteShieldDistance>50</MechRemoteShieldDistance>
-      <MechRemoteShieldEnergy>50</MechRemoteShieldEnergy>
-      <MoveSpeed>2</MoveSpeed>
+      <MechRemoteShieldEnergy>500</MechRemoteShieldEnergy>
     </equippedStatOffsets>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>false</smeltable>
@@ -72,9 +71,16 @@
       <wornGraphicPath>Apparel/Mechanitor/Gray_MechanitorArmor</wornGraphicPath>
       <layers>
         <li>Middle</li>
+        <li>Shell</li>
       </layers>
+      <drawData>
+        <dataNorth>
+          <layer>20</layer>
+        </dataNorth>
+      </drawData>
       <tags>
-        <li>GR_Combat</li>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_MechanitorArmor</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
@@ -87,10 +93,217 @@
       <li Class="CompProperties_Shield">
         <startingTicksToReset>300</startingTicksToReset>
         <minDrawSize>1.8</minDrawSize>
-        <maxDrawSize>2.2</maxDrawSize>
+        <maxDrawSize>1.8</maxDrawSize>
         <energyLossPerDamage>0.01</energyLossPerDamage>
         <energyOnReset>0</energyOnReset>
         <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--射手装甲-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_MarksmanArmor</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Marksman Armor</label>
+    <techLevel>Ultra</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Ranged/Gray_RangedArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_AdvancedCombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>60</GR_Alloy>
+      <GR_Nanites>40</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToMake>24000</WorkToMake>
+      <Mass>12</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EnergyShieldRechargeRate>1.2</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>5</EnergyShieldEnergyMax>
+      <EquipDelay>10</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <AimingDelayFactor>-0.15</AimingDelayFactor>
+      <RangedCooldownFactor>-0.15</RangedCooldownFactor>
+      <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+      <IncomingDamageFactor>-0.1</IncomingDamageFactor>
+      <MeleeDodgeChance>12</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Ranged/Gray_RangedArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <drawData>
+        <dataNorth>
+          <layer>20</layer>
+        </dataNorth>
+      </drawData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_RangedArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>1200</startingTicksToReset>
+        <minDrawSize>1.8</minDrawSize>
+        <maxDrawSize>1.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>2.5</energyOnReset>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>GR_Suspensiondevice</hediff>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--战士装甲-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_MeleeArmor</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Warrior Armor</label>
+    <techLevel>Ultra</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Melee/Gray_MeleeArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_AdvancedCombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>160</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>80</GR_Alloy>
+      <GR_Nanites>40</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToMake>24000</WorkToMake>
+      <Mass>12</Mass>
+      <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>15</EnergyShieldEnergyMax>
+      <EquipDelay>10</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MeleeCooldownFactor>-0.15</MeleeCooldownFactor>
+      <MeleeDamageFactor>1.2</MeleeDamageFactor>
+      <MeleeDodgeChance>4</MeleeDodgeChance>
+      <MeleeHitChance>8</MeleeHitChance>
+      <StaggerDurationFactor>-1</StaggerDurationFactor>
+      <IncomingDamageFactor>-0.35</IncomingDamageFactor>
+      <MoveSpeed>2</MoveSpeed>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Melee/Gray_MeleeArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <drawData>
+        <dataNorth>
+          <layer>20</layer>
+        </dataNorth>
+      </drawData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_MeleeArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <startingTicksToReset>3600</startingTicksToReset>
+        <minDrawSize>1.8</minDrawSize>
+        <maxDrawSize>1.8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+        <energyOnReset>5</energyOnReset>
+        <blocksRangedWeapons>true</blocksRangedWeapons>
       </li>
     </comps>
   </ThingDef>

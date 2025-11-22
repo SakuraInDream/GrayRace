@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--机械师头盔-->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorHelmet"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>10</StuffEffectMultiplierArmor>
+      <Bulk>10</Bulk>
+      <WornBulk>5</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorHelmet"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>4</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorHelmet"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>32</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <!--机械师装甲-->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorArmor"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>10</StuffEffectMultiplierArmor>
+      <Bulk>20</Bulk>
+      <WornBulk>10</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorArmor"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>4</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorArmor"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>8</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorArmor"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>40</CarryBulk>
+			<CarryWeight>60</CarryWeight>
+		</value>
+	</Operation>
+
+  <!--机械师软甲-->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorISA"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>2</StuffEffectMultiplierArmor>
+      <Bulk>4</Bulk>
+      <WornBulk>2</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MechanitorISA"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>32</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <!--射手头盔-->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MarksmanHelmet"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>6</StuffEffectMultiplierArmor>
+      <Bulk>6</Bulk>
+      <WornBulk>3</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MarksmanHelmet"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>8</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MarksmanHelmet"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>16</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MarksmanHelmet"]/equippedStatOffsets</xpath>
+    <value>
+      <AimingAccuracy>3</AimingAccuracy>
+    </value>
+  </Operation>
+
+  <!--射手装甲-->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MarksmanArmor"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>6</StuffEffectMultiplierArmor>
+      <Bulk>15</Bulk>
+      <WornBulk>7.5</WornBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MarksmanArmor"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>8</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_MarksmanArmor"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>16</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gray_Apparel_MarksmanArmor"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>40</CarryBulk>
+			<CarryWeight>60</CarryWeight>
+		</value>
+	</Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/AbilityDef[defName="GR_Longjump"]/verbProperties/range</xpath>
+    <value>
+      <range>34.9</range>
+    </value>
+  </Operation>
+
+</Patch>

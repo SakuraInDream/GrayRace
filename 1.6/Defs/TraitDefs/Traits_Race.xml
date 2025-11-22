@@ -22,6 +22,54 @@
     </degreeDatas>
   </TraitDef>
 
+  <!--工程学家-->
+  <TraitDef>
+    <defName>GR_Engineers</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Natural Engineers</label>
+        <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
+        <statFactors>
+          <WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+          <ConstructionSpeed>1.5</ConstructionSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!--物理学家-->
+  <TraitDef>
+    <defName>GR_Physicists</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Natural Physicists</label>
+        <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
+        <statFactors>
+          <ResearchSpeed>1.5</ResearchSpeed>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <!--社会学家-->
+  <TraitDef>
+    <defName>GR_Sociologists</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Natural Sociologists</label>
+        <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
+        <statFactors>
+          <SocialImpact>1.5</SocialImpact>
+          <NegotiationAbility>1.5</NegotiationAbility>
+          <TradePriceImprovement>1.5</TradePriceImprovement>
+        </statFactors>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
   <!--女仆-->
   <TraitDef>
     <defName>GR_Maid</defName>
@@ -34,8 +82,8 @@
           <FoodPoisonChance>0</FoodPoisonChance>
           <CookSpeed>2</CookSpeed>
           <ButcheryFleshSpeed>2</ButcheryFleshSpeed>
-          <ButcheryFleshEfficiency>1.5</ButcheryFleshEfficiency>
           <CleaningSpeed>2</CleaningSpeed>
+          <ButcheryFleshEfficiency>1.5</ButcheryFleshEfficiency>
         </statFactors>
       </li>
     </degreeDatas>

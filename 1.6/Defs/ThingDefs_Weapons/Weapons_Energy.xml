@@ -4,8 +4,8 @@
   <!--能量冲（流光）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyPDW</defName>
-    <label>Flowglow</label>
-    <description>Gray Standard-issue Energy PDW.Its compact frame is almost entirely dedicated to the particle accelerator, enabling true instant-fire capability. However, its low stopping power makes it effective only against humans and smaller foes, rendering it unpopular among Grays who frequently encounter bizarre alien lifeforms.</description>
+    <label>Gray Energy PDW</label>
+    <description>Flowglow.Its compact frame is almost entirely dedicated to the particle accelerator, enabling true instant-fire capability. However, its low stopping power makes it effective only against humans and smaller foes, rendering it unpopular among Grays who frequently encounter bizarre alien lifeforms.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_PDW</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -30,6 +30,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
       <WorkToMake>24000</WorkToMake>
@@ -39,6 +42,7 @@
       <AccuracyMedium>0.4</AccuracyMedium>
       <AccuracyLong>0.1</AccuracyLong>
       <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>75</GR_Alloy>
@@ -53,14 +57,13 @@
         <range>21.9</range>
         <burstShotCount>7</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>GR_EnergyPDW</soundCast>
+        <soundCast>GR_EnergyPDWShoot</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <weaponTags>
-      <li>IndustrialGunAdvanced</li>
-      <li>ShortShots</li>
+      <li>GR_BasicWeapon</li>
     </weaponTags>
     <tools>
       <li>
@@ -94,7 +97,7 @@
     <projectile>
       <damageDef>GR_Laser</damageDef>
       <damageAmountBase>20</damageAmountBase>
-      <armorPenetrationBase>0.1</armorPenetrationBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
       <stoppingPower>1</stoppingPower>
       <beamMoteDef>Mote_BeamRepeaterLaser</beamMoteDef>
       <beamStartOffset>0.5</beamStartOffset>
@@ -105,8 +108,8 @@
   <!--能量喷（逐光）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyShotgun</defName>
-    <label>Lucifer</label>
-    <description>Gray Standard-issue Energy Shotgun.An energy compressor forces a high-yield charge into a single point, maximizing penetration and burst damage. However, due to a lack of containment, the projectile is highly unstable and dissipates shortly after leaving the barrel. This inherent limitation led to its design and deployment as a shotgun.</description>
+    <label>Gray Energy Shotgun</label>
+    <description>Lucifer.An energy compressor forces a high-yield charge into a single point, maximizing penetration and burst damage. However, due to a lack of containment, the projectile is highly unstable and dissipates shortly after leaving the barrel. This inherent limitation led to its design and deployment as a shotgun.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_SG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -131,6 +134,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
       <WorkToMake>31000</WorkToMake>
@@ -140,6 +146,7 @@
       <AccuracyMedium>0.4</AccuracyMedium>
       <AccuracyLong>0.2</AccuracyLong>
       <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>50</GR_Alloy>
@@ -154,14 +161,13 @@
         <range>17.9</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-        <soundCast>GR_EnergyShotgun</soundCast>
+        <soundCast>GR_EnergyShotgunShoot</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <weaponTags>
-      <li>IndustrialGunAdvanced</li>
-      <li>ShortShots</li>
+      <li>GR_T1Weapon</li>
     </weaponTags>
     <tools>
       <li>
@@ -202,11 +208,118 @@
     </projectile>
   </ThingDef>
 
+  <!--能量发射器（辉光）-->
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>GR_EnergyLauncher</defName>
+    <label>Gray Energy Launcher</label>
+    <description>.</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/Energy/Energy_Launcher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker Inherit="False">
+      <researchPrerequisites>
+        <li>GR_EnergyWeapon</li>
+        <li>GR_T1WeaponTech</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costList>
+      <GR_Alloy>60</GR_Alloy>
+      <GR_Nanites>35</GR_Nanites>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_ShootBeam</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>1.0</warmupTime>
+        <range>34.9</range>
+        <minRange>3.9</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <beamFullWidthRange>19.9</beamFullWidthRange>
+        <burstShotCount>10</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <beamWidth>9</beamWidth>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <beamDamageDef>GR_Laser</beamDamageDef>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <beamGroundFleckDef>Fleck_BeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMaxDeviation>1.5</beamMaxDeviation>
+        <beamCurvature>0.6</beamCurvature>
+        <beamMoteDef>Mote_GraserBeamBase</beamMoteDef>
+        <beamEndEffecterDef>GraserBeam_End</beamEndEffecterDef>
+        <beamChanceToStartFire>0.1</beamChanceToStartFire>
+        <beamChanceToAttachFire>0.1</beamChanceToAttachFire>
+        <beamFireSizeRange>0.9~1.0</beamFireSizeRange>
+        <beamLineFleckDef>Fleck_BeamSpark</beamLineFleckDef>
+        <beamStartOffset>0.8</beamStartOffset>
+        <beamLineFleckChanceCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(0.65, 0.4)</li>
+            <li>(1, 0.75)</li>
+          </points>
+        </beamLineFleckChanceCurve>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>GR_T1Weapon</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
   <!--能量战斗步枪（飞光）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyBattleRifle</defName>
-    <label>Aetherglow</label>
-    <description>Gray Standard-issue Energy Rifle.Utilizing a high-pressure energy cell coupled with a stabilizer, it delivers substantial firepower without compromising on weight or size. As a weapon that excels in range, accuracy, power, compactness, and weight, it is the preferred choice for the majority of Grays.</description>
+    <label>Gray Energy Rifle</label>
+    <description>Aetherglow.Utilizing a high-pressure energy cell coupled with a stabilizer, it delivers substantial firepower without compromising on weight or size. As a weapon that excels in range, accuracy, power, compactness, and weight, it is the preferred choice for the majority of Grays.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -228,6 +341,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
       <WorkToMake>40000</WorkToMake>
@@ -237,6 +353,7 @@
       <AccuracyMedium>0.85</AccuracyMedium>
       <AccuracyLong>0.7</AccuracyLong>
       <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>60</GR_Alloy>
@@ -251,14 +368,13 @@
         <range>37.9</range>
         <burstShotCount>5</burstShotCount>
         <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-        <soundCast>GR_EnergyBattleRifle</soundCast>
+        <soundCast>GR_EnergyBattleRifleShoot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <weaponTags>
-      <li>IndustrialGunAdvanced</li>
-      <li>AssaultRifle</li>
+      <li>GR_T1Weapon</li>
     </weaponTags>
     <tools>
       <li>
@@ -292,7 +408,7 @@
     <projectile>
       <damageDef>GR_Laser</damageDef>
       <damageAmountBase>24</damageAmountBase>
-      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
       <beamMoteDef>Mote_BeamRepeaterLaser</beamMoteDef>
       <beamStartOffset>0.5</beamStartOffset>
       <speed>110</speed>
@@ -302,8 +418,8 @@
   <!--能量重机枪（趋光）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyHMG</defName>
-    <label>Lumenward</label>
-    <description>Gray Standard-issue Energy Heavy Machine Gun.Its massive size and staggering weight mean even a Gray can only wield it by hand. This bulk, however, allows it to house a particle accelerator, energy stabilizer, and rapid heat sink simultaneously. Powered by multiple large high-pressure energy cells at the rear, it unleashes a relentless, devastating hail of high-energy projectiles, turning any engagement zone into a bloody wilderness. Due to its bulk and overkill nature, Grays deploy it only for outpost defense, rarely carrying it on routine patrols—even in teams.</description>
+    <label>Gray Energy MachineGun</label>
+    <description>Lumenward.Its massive size and staggering weight mean even a Gray can only wield it by hand. This bulk, however, allows it to house a particle accelerator, energy stabilizer, and rapid heat sink simultaneously. Powered by multiple large high-pressure energy cells at the rear, it unleashes a relentless, devastating hail of high-energy projectiles, turning any engagement zone into a bloody wilderness. Due to its bulk and overkill nature, Grays deploy it only for outpost defense, rarely carrying it on routine patrols—even in teams.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_HMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -314,6 +430,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <weaponClasses>
       <li>RangedHeavy</li>
     </weaponClasses>
@@ -325,6 +444,7 @@
       <AccuracyMedium>0.35</AccuracyMedium>
       <AccuracyLong>0.25</AccuracyLong>
       <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>160</GR_Alloy>
@@ -344,8 +464,8 @@
     </recipeMaker>
     <techLevel>Spacer</techLevel>
     <weaponTags>
-      <li>GunHeavy</li>
-      <li>Minigun</li>
+      <li>GR_T2Weapon</li>
+      <li>GR_Mechgun</li>
     </weaponTags>
     <equippedStatOffsets>
       <MoveSpeed>-0.4</MoveSpeed>
@@ -359,7 +479,7 @@
         <range>37.9</range>
         <burstShotCount>25</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>GR_EnergyBattleRifle</soundCast>
+        <soundCast>GR_EnergyMechGunShoot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -386,7 +506,7 @@
     <projectile>
       <damageDef>GR_Laser</damageDef>
       <damageAmountBase>30</damageAmountBase>
-      <armorPenetrationBase>0.3</armorPenetrationBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
       <beamMoteDef>Mote_GRHeavyMG</beamMoteDef>
       <beamStartOffset>0.5</beamStartOffset>
       <speed>120</speed>
@@ -396,8 +516,8 @@
   <!--能量狙（耀光）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergySniperRifle</defName>
-    <label>Radiant</label>
-    <description>Gray Standard-issue Energy Sniper Rifle.A high-energy particle focuser channels the raw power of a Diabolus main cannon into a single, devastating beam. The shot's brilliance remains visible even from dozens of kilometers away, and its armor-piercing capability is absolute. This is no assassin's tool—it is a weapon of pure, lethal, and efficient annihilation.</description>
+    <label>Gray Energy Sniper Rifle</label>
+    <description>Radiant.A high-energy particle focuser channels the raw power of a Diabolus main cannon into a single, devastating beam. The shot's brilliance remains visible even from dozens of kilometers away, and its armor-piercing capability is absolute. This is no assassin's tool—it is a weapon of pure, lethal, and efficient annihilation.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_SR</texPath>
@@ -424,6 +544,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
       <WorkToMake>45000</WorkToMake>
@@ -433,6 +556,7 @@
       <AccuracyMedium>0.9</AccuracyMedium>
       <AccuracyLong>1.0</AccuracyLong>
       <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>90</GR_Alloy>
@@ -445,7 +569,7 @@
         <defaultProjectile>Bullet_GR_EnergySniperRifle</defaultProjectile>
         <warmupTime>2</warmupTime>
         <range>44.9</range>
-        <soundCast>GR_EnergySniperRifle</soundCast>
+        <soundCast>GR_EnergySniperRifleShoot</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -470,7 +594,7 @@
       </li>
     </tools>
     <weaponTags Inherit="False">
-      <li>SniperRifle</li>
+      <li>GR_T2Weapon</li>
     </weaponTags>
   </ThingDef>
 
@@ -495,8 +619,8 @@
   <!--能量重武器（星光）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyHL</defName>
-    <label>Supernova</label>
-    <description>Gray Standard-issue Heavy Energy Launcher.This platform serves dual roles in anti-armor and anti-fortification warfare. The entire cannon is essentially a gigantic particle accelerator, retaining only the most basic stabilizer to prevent catastrophic failure. Each shot consumes an entire high-pressure energy cell, firing an unstable orb of energy that detonates upon impact with a terrifying blast, obliterating everything within its radius.</description>
+    <label>Gray Energy Heavy Launcher</label>
+    <description>Supernova.This platform serves dual roles in anti-armor and anti-fortification warfare. The entire cannon is essentially a gigantic particle accelerator, retaining only the most basic stabilizer to prevent catastrophic failure. Each shot consumes an entire high-pressure energy cell, firing an unstable orb of energy that detonates upon impact with a terrifying blast, obliterating everything within its radius.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_Heavy_Launcher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -506,6 +630,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <weaponClasses>
       <li>RangedHeavy</li>
     </weaponClasses>
@@ -517,6 +644,7 @@
       <AccuracyMedium>0.7</AccuracyMedium>
       <AccuracyLong>0.9</AccuracyLong>
       <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>160</GR_Alloy>
@@ -536,8 +664,8 @@
     </recipeMaker>
     <techLevel>Ultra</techLevel>
     <weaponTags>
-      <li>GunHeavy</li>
-      <li>Minigun</li>
+      <li>GR_T3Weapon</li>
+      <li>GR_HeavyWeapon</li>
     </weaponTags>
     <equippedStatOffsets>
       <MoveSpeed>-0.4</MoveSpeed>
@@ -550,13 +678,18 @@
         <warmupTime>2</warmupTime>
         <range>47.9</range>
         <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-        <forcedMissRadius>1</forcedMissRadius>
-        <soundCast>Shot_Minigun</soundCast>
+        <!-- <forcedMissRadius>1</forcedMissRadius> -->
+        <soundCast>GR_EnergyLauncherShoot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
         <muzzleFlashScale>9</muzzleFlashScale>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
       </li>
     </verbs>
     <tools>
@@ -573,19 +706,20 @@
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_EnergyHL</defName>
     <label>Energy heavy Launcher bullet</label>
-    <thingClass>Projectile_Explosive</thingClass>
+    <thingClass>Projectile_HellsphereCannon</thingClass>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Things/Projectile/Bullet_Thump</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>MoteGlow</shaderType>
+      <drawSize>(1.5, 3)</drawSize>
     </graphicData>
     <projectile>
       <damageDef>GR_Disintegration</damageDef>
       <damageAmountBase>150</damageAmountBase>
       <explosionRadius>5.5</explosionRadius>
-      <armorPenetrationBase>1</armorPenetrationBase>
       <stoppingPower>5</stoppingPower>
       <speed>120</speed>
     </projectile>
   </ThingDef>
-  
+
 </Defs>

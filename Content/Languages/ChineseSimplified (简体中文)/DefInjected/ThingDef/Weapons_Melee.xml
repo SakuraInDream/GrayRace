@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Stun stick -->
+  <GR_Cadus.label>电流长棍</GR_Cadus.label>
+  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
+  <GR_Cadus.description>TODO</GR_Cadus.description>
+  <!-- EN: Top -->
+  <GR_Cadus.tools.Top.label>TODO</GR_Cadus.tools.Top.label>
+  <!-- EN: Bottom -->
+  <GR_Cadus.tools.Bottom.label>TODO</GR_Cadus.tools.Bottom.label>
+
+  <!-- EN: HF Murasama -->
+  <GR_HFMurasama.label>TODO</GR_HFMurasama.label>
+  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
+  <GR_HFMurasama.description>TODO</GR_HFMurasama.description>
+  <!-- EN: edge -->
+  <GR_HFMurasama.tools.edge.label>TODO</GR_HFMurasama.tools.edge.label>
+
+  <!-- EN: Lightsaber -->
+  <GR_Lightsaber.label>TODO</GR_Lightsaber.label>
+  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
+  <GR_Lightsaber.description>TODO</GR_Lightsaber.description>
+  <!-- EN: edge -->
+  <GR_Lightsaber.tools.edge.label>TODO</GR_Lightsaber.tools.edge.label>
+
+  <!-- EN: Ship Slayer -->
+  <GR_ShipSlayer.label>TODO</GR_ShipSlayer.label>
+  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
+  <GR_ShipSlayer.description>TODO</GR_ShipSlayer.description>
+  <!-- EN: edge -->
+  <GR_ShipSlayer.tools.edge.label>TODO</GR_ShipSlayer.tools.edge.label>
+
+  <!-- EN: Electric shock sword -->
+  <GR_VoltSword.label>电击剑</GR_VoltSword.label>
+  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
+  <GR_VoltSword.description>TODO</GR_VoltSword.description>
+  <!-- EN: point -->
+  <GR_VoltSword.tools.point.label>TODO</GR_VoltSword.tools.point.label>
+  <!-- EN: edge -->
+  <GR_VoltSword.tools.edge.label>TODO</GR_VoltSword.tools.edge.label>
+
+</LanguageData>

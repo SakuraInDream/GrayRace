@@ -11,8 +11,8 @@
 
   <!--步枪-->
   <CombatExtended.AmmoSetDef>
-    <defName>AmmoSet_LaserCell_CR</defName>
-    <label>Combat Rifle Laser Cell</label>
+    <defName>AmmoSet_LaserCell_BR</defName>
+    <label>Battle Rifle Laser Cell</label>
     <ammoTypes>
       <Ammo_LaserChargePack>Bullet_RifleLaser_GR</Ammo_LaserChargePack>
     </ammoTypes>
@@ -58,9 +58,11 @@
   <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" Name="Bullet_LaserBase_GR" ParentName="LaserBulletBlue" Abstract="True">
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>GR_Laser</damageDef>
+      <damageFalloff>false</damageFalloff>
     </projectile>
   </ThingDef>
 
+  <!--个人防卫武器-->
   <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
     <defName>Bullet_PDWLaser_GR</defName>
     <label>laser beam</label>
@@ -69,6 +71,7 @@
     </projectile>
   </ThingDef>
 
+  <!--步枪-->
   <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
     <defName>Bullet_RifleLaser_GR</defName>
     <label>laser beam</label>
@@ -77,6 +80,7 @@
     </projectile>
   </ThingDef>
 
+  <!--霰弹-->
   <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
     <defName>Bullet_SGLaser_GR</defName>
     <label>laser beam</label>
@@ -89,6 +93,7 @@
     </projectile>
   </ThingDef>
 
+  <!--机枪-->
   <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
     <defName>Bullet_MGLaser_GR</defName>
     <label>laser beam</label>
@@ -97,6 +102,7 @@
     </projectile>
   </ThingDef>
 
+  <!--狙击枪-->
   <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
     <defName>Bullet_SRLaser_GR</defName>
     <label>laser beam</label>
@@ -106,6 +112,7 @@
     </projectile>
   </ThingDef>
 
+  <!--发射器-->
   <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="Bullet_LaserBase_GR">
     <defName>Bullet_HLLaser_GR</defName>
     <label>laser beam</label>

@@ -8,7 +8,7 @@
     <label>Gray mechanitor ISA</label>
     <techLevel>Spacer</techLevel>
     <thingCategories>
-      <li>ApparelMisc</li>
+      <li>GR_ApparelArmor</li>
     </thingCategories>
     <possessionCount>1</possessionCount>
     <recipeMaker>
@@ -48,7 +48,7 @@
       <EquipDelay>3</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <MechBandwidth>15</MechBandwidth>
+      <MechBandwidth>12</MechBandwidth>
       <MechFormingSpeed>0.5</MechFormingSpeed>
       <MechRepairSpeed>0.5</MechRepairSpeed>
     </equippedStatOffsets>
@@ -68,6 +68,8 @@
       </layers>
       <tags>
         <li>GR_Combat</li>
+        <li>GR_MechanitorArmor</li>
+        <li>GR_Underwear</li>
       </tags>
       <defaultOutfitTags>
         <li>Soldier</li>
@@ -76,5 +78,5 @@
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
   </ThingDef>
-  
+
 </Defs>

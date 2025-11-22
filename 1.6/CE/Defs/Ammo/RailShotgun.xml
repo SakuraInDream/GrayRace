@@ -81,7 +81,7 @@
 			<armorPenetrationSharp>16</armorPenetrationSharp>
 			<armorPenetrationBlunt>44.44</armorPenetrationBlunt>
 			<pelletCount>8</pelletCount>
-			<spreadMult>14.5</spreadMult>
+			<spreadMult>14.53</spreadMult>
 		</projectile>
 	</ThingDef>
 
@@ -95,6 +95,8 @@
 			<damageAmountBase>40</damageAmountBase>
 			<armorPenetrationSharp>24</armorPenetrationSharp>
 			<armorPenetrationBlunt>190</armorPenetrationBlunt>
+      <effectiveRangeMultiplier>2</effectiveRangeMultiplier>
+      <recoilMultiplier>1.3</recoilMultiplier>
 		</projectile>
 	</ThingDef>
 

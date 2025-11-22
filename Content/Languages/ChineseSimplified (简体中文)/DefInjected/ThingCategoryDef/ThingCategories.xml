@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: gray apparel -->
+  <GR_Apparel.label>TODO</GR_Apparel.label>
+  
+  <!-- EN: gray armor -->
+  <GR_ApparelArmor.label>TODO</GR_ApparelArmor.label>
+  
+  <!-- EN: gray Basic apparel -->
+  <GR_ApparelBasic.label>TODO</GR_ApparelBasic.label>
+  
+  <!-- EN: misc -->
+  <GR_ApparelMisc.label>TODO</GR_ApparelMisc.label>
+  
+  <!-- EN: gray weapons -->
+  <GR_Weapons.label>TODO</GR_Weapons.label>
+  
+  <!-- EN: gray melee weapons -->
+  <GR_WeaponsMelee.label>TODO</GR_WeaponsMelee.label>
+  
+  <!-- EN: gray ranged weapons -->
+  <GR_WeaponsRanged.label>TODO</GR_WeaponsRanged.label>
+  
+</LanguageData>

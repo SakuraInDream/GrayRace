@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Alloy -->
+  <GR_Alloy.label>合金</GR_Alloy.label>
+  <!-- EN: This iconic material of the space age is synthesized from a nanoscale metallic matrix and rare interstellar minerals, combining exceptional strength with remarkable lightness. Its unique crystalline structure allows it to adapt to extreme temperatures, while its surface properties can be modulated via energy fields, making it suitable for a wide range of applications—from starship armor to colonial infrastructure. -->
+  <GR_Alloy.description>TODO</GR_Alloy.description>
+  <!-- EN: alloy -->
+  <GR_Alloy.stuffProps.stuffAdjective>合金</GR_Alloy.stuffProps.stuffAdjective>
+
+  <!-- EN: Nanites -->
+  <GR_Nanites.label>灰潮源质</GR_Nanites.label>
+  <!-- EN: A simple and efficient nano-actuator capable of performing complex operations and experiments at the nanoscale. -->
+  <GR_Nanites.description>TODO</GR_Nanites.description>
+
+  <!-- EN: Zro -->
+  <GR_Zro.label>泽珞</GR_Zro.label>
+  <!-- EN: An extremely rare aerosol of exotic particles. It has been deposited on a number of worlds through meteor impacts, but its true origin is a mystery. If ingested by psionically-gifted individuals, zro acts as a very potent (and addictive) drug that enhances PSI abilities. -->
+  <GR_Zro.description>TODO</GR_Zro.description>
+
+</LanguageData>

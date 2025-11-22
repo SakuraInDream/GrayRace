@@ -24,7 +24,8 @@
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
     <designationHotKey>Misc4</designationHotKey>
-    <designationCategory>Misc</designationCategory>
+    <designationCategory>Gray_Building</designationCategory>
+    <uiOrder>500</uiOrder>
     <minifiedDef>MinifiedThing</minifiedDef>
     <canOverlapZones>false</canOverlapZones>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
@@ -95,8 +96,8 @@
       </buildingTags>
     </building>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-    <designationCategory>Biotech</designationCategory>
-    <uiOrder>2440</uiOrder>
+    <designationCategory>Gray_Building</designationCategory>
+    <uiOrder>600</uiOrder>
     <statBases>
       <MaxHitPoints>450</MaxHitPoints>
       <WorkToBuild>12000</WorkToBuild>

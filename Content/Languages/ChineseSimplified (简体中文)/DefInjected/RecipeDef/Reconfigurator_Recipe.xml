@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: make AI Persona Core -->
+  <GR_Make_AICore.label>TODO</GR_Make_AICore.label>
+  <!-- EN: Make AI Persona Core. -->
+  <GR_Make_AICore.description>TODO</GR_Make_AICore.description>
+  <!-- EN: Making AI Persona Core. -->
+  <GR_Make_AICore.jobString>TODO</GR_Make_AICore.jobString>
+  
+  <!-- EN: make component x2 -->
+  <GR_Make_ComponentIndustrial.label>TODO</GR_Make_ComponentIndustrial.label>
+  <!-- EN: Make component. -->
+  <GR_Make_ComponentIndustrial.description>TODO</GR_Make_ComponentIndustrial.description>
+  <!-- EN: Making component. -->
+  <GR_Make_ComponentIndustrial.jobString>TODO</GR_Make_ComponentIndustrial.jobString>
+  
+  <!-- EN: make advanced component x2 -->
+  <GR_Make_ComponentSpacer.label>TODO</GR_Make_ComponentSpacer.label>
+  <!-- EN: Make  advanced component. -->
+  <GR_Make_ComponentSpacer.description>TODO</GR_Make_ComponentSpacer.description>
+  <!-- EN: Making advanced component. -->
+  <GR_Make_ComponentSpacer.jobString>TODO</GR_Make_ComponentSpacer.jobString>
+  
+  <!-- EN: make Fundamental Cube -->
+  <GR_Make_FundamentalCube.label>TODO</GR_Make_FundamentalCube.label>
+  <!-- EN: Make Fundamental Cube. -->
+  <GR_Make_FundamentalCube.description>TODO</GR_Make_FundamentalCube.description>
+  <!-- EN: Making Fundamental Cube. -->
+  <GR_Make_FundamentalCube.jobString>TODO</GR_Make_FundamentalCube.jobString>
+  
+  <!-- EN: make Nanite Core -->
+  <GR_Make_GrayCore.label>TODO</GR_Make_GrayCore.label>
+  <!-- EN: Make Nanite Core. -->
+  <GR_Make_GrayCore.description>TODO</GR_Make_GrayCore.description>
+  <!-- EN: Making Nanite Core. -->
+  <GR_Make_GrayCore.jobString>TODO</GR_Make_GrayCore.jobString>
+  
+  <!-- EN: make Imitation Nanite Core -->
+  <GR_Make_GrayCorePoor.label>TODO</GR_Make_GrayCorePoor.label>
+  <!-- EN: Make Imitation Nanite Core. -->
+  <GR_Make_GrayCorePoor.description>TODO</GR_Make_GrayCorePoor.description>
+  <!-- EN: Making Imitation Nanite Core. -->
+  <GR_Make_GrayCorePoor.jobString>TODO</GR_Make_GrayCorePoor.jobString>
+  
+</LanguageData>

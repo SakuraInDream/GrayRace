@@ -15,7 +15,7 @@
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
-      <WorkToMake>600</WorkToMake>
+      <WorkToMake>1500</WorkToMake>
       <MarketValue>120</MarketValue>
       <Mass>0.05</Mass>
     </statBases>
@@ -61,8 +61,8 @@
       <displayPriority>1500</displayPriority>
     </recipeMaker>
     <costList>
-      <Neutroamine>2</Neutroamine>
-      <GR_Zro>1</GR_Zro>
+      <Neutroamine>5</Neutroamine>
+      <GR_Zro>2</GR_Zro>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">

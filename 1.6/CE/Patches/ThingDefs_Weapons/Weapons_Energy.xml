@@ -148,7 +148,7 @@
     <AmmoUser>
       <magazineSize>30</magazineSize>
       <reloadTime>3.5</reloadTime>
-      <ammoSet>AmmoSet_LaserCell_CR</ammoSet>
+      <ammoSet>AmmoSet_LaserCell_BR</ammoSet>
     </AmmoUser>
     <FireModes>
       <aimedBurstShotCount>3</aimedBurstShotCount>

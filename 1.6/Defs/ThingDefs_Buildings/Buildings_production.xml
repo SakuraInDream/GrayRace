@@ -21,7 +21,7 @@
     <thingCategories Inherit="false" />
     <size>(5,2)</size>
     <costList>
-      <GR_Alloy>100</GR_Alloy>
+      <GR_Alloy>200</GR_Alloy>
       <GR_Nanites>1000</GR_Nanites>
       <ComponentSpacer>5</ComponentSpacer>
     </costList>
@@ -67,8 +67,8 @@
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Production</designationCategory>
-    <uiOrder>2530</uiOrder>
+    <designationCategory>Gray_Building</designationCategory>
+    <uiOrder>100</uiOrder>
     <surfaceType>Item</surfaceType>
     <designationHotKey>Misc12</designationHotKey>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
@@ -147,8 +147,8 @@
     <interactionCellOffset>(0,0,-3)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-    <designationCategory>Production</designationCategory>
-    <uiOrder>2530</uiOrder>
+    <designationCategory>Gray_Building</designationCategory>
+    <uiOrder>400</uiOrder>
     <surfaceType>Item</surfaceType>
     <designationHotKey>Misc12</designationHotKey>
     <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
@@ -249,8 +249,8 @@
       </li>
     </comps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-    <designationCategory>Power</designationCategory>
-    <uiOrder>2100</uiOrder>
+    <designationCategory>Gray_Building</designationCategory>
+    <uiOrder>300</uiOrder>
     <designationHotKey>Misc4</designationHotKey>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
@@ -289,8 +289,8 @@
       <Flammability>0.5</Flammability>
     </statBases>
     <costList>
-      <Steel>150</Steel>
-      <ComponentIndustrial>4</ComponentIndustrial>
+      <GR_Alloy>150</GR_Alloy>
+      <ComponentSpacer>4</ComponentSpacer>
     </costList>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -299,8 +299,8 @@
     <drawerType>MapMeshAndRealTime</drawerType>
     <fillPercent>0.5</fillPercent>
     <canOverlapZones>false</canOverlapZones>
-    <designationCategory>Biotech</designationCategory>
-    <uiOrder>2200</uiOrder>
+    <designationCategory>Gray_Building</designationCategory>
+    <uiOrder>200</uiOrder>
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <inspectorTabs>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Designed to provide tactical advice and decision-making guidance. Contains leadership protocols and basic firearms knowledge. -->
+  <GR_PM_Adjutant.description>TODO</GR_PM_Adjutant.description>
+  <!-- EN: Persona Matrix - Adjutant -->
+  <GR_PM_Adjutant.title>TODO</GR_PM_Adjutant.title>
+  <!-- EN: Adjutant -->
+  <GR_PM_Adjutant.titleShort>TODO</GR_PM_Adjutant.titleShort>
+  
+  <!-- EN: Built primarily to assist others, this matrix's knowledge base spans nearly all known fields—pushing the storage capacity of a persona matrix to its absolute limit. -->
+  <GR_PM_Aide.description>TODO</GR_PM_Aide.description>
+  <!-- EN: Persona Matrix - Aide -->
+  <GR_PM_Aide.title>TODO</GR_PM_Aide.title>
+  <!-- EN: Aide -->
+  <GR_PM_Aide.titleShort>TODO</GR_PM_Aide.titleShort>
+  
+  <!-- EN: Capable of simultaneous architectural planning and construction. Includes fundamental material science knowledge, enabling adaptation to resource-poor or exotic material environments. -->
+  <GR_PM_Architect.description>TODO</GR_PM_Architect.description>
+  <!-- EN: Persona Matrix - Architect -->
+  <GR_PM_Architect.title>TODO</GR_PM_Architect.title>
+  <!-- EN: Architect -->
+  <GR_PM_Architect.titleShort>TODO</GR_PM_Architect.titleShort>
+  
+  <!-- EN: Designed for the mass production of artworks. Imprinted with human-defined aesthetic standards and comprehensive fabrication knowledge. -->
+  <GR_PM_Artist.description>TODO</GR_PM_Artist.description>
+  <!-- EN: Persona Matrix - Artist -->
+  <GR_PM_Artist.title>TODO</GR_PM_Artist.title>
+  <!-- EN: Artist -->
+  <GR_PM_Artist.titleShort>TODO</GR_PM_Artist.titleShort>
+  
+  <!-- EN: Created for conflict mediation between individuals, with contingency protocols for violent scenarios. Includes friendly social interaction modules and proficiency with most melee weapons. -->
+  <GR_PM_Constable.description>TODO</GR_PM_Constable.description>
+  <!-- EN: Persona Matrix - Constable -->
+  <GR_PM_Constable.title>TODO</GR_PM_Constable.title>
+  <!-- EN: Constable -->
+  <GR_PM_Constable.titleShort>TODO</GR_PM_Constable.titleShort>
+  
+  <!-- EN: Designed for ██████. Configured as ██████████████████ EEEEEERROR———— -->
+  <GR_PM_CORRUPTED.description>TODO</GR_PM_CORRUPTED.description>
+  <!-- EN: Persona Matrix - [CORRUPTED] -->
+  <GR_PM_CORRUPTED.title>TODO</GR_PM_CORRUPTED.title>
+  <!-- EN: [CORRUPTED] -->
+  <GR_PM_CORRUPTED.titleShort>TODO</GR_PM_CORRUPTED.titleShort>
+  
+  <!-- EN: Designed for crop cultivation and livestock management on an industrial scale. Contains comprehensive biological knowledge and environmental assessment protocols. -->
+  <GR_PM_Farmer.description>TODO</GR_PM_Farmer.description>
+  <!-- EN: Persona Matrix - Farmer -->
+  <GR_PM_Farmer.title>TODO</GR_PM_Farmer.title>
+  <!-- EN: Farmer -->
+  <GR_PM_Farmer.titleShort>TODO</GR_PM_Farmer.titleShort>
+  
+  <!-- EN: Created for general protective duties. Excels in close-quarters combat and situational awareness, serving equally well as a social escort in formal settings. -->
+  <GR_PM_Guard.description>TODO</GR_PM_Guard.description>
+  <!-- EN: Persona Matrix - Guard -->
+  <GR_PM_Guard.title>TODO</GR_PM_Guard.title>
+  <!-- EN: Guard -->
+  <GR_PM_Guard.titleShort>TODO</GR_PM_Guard.titleShort>
+  
+  <!-- EN: Designed for personal attendant duties. Includes standard cleaning and culinary knowledge, along with intimate care protocols—and certain unspoken specialties. The predefined personality attributes also occupy significant matrix capacity. -->
+  <GR_PM_Maid.description>TODO</GR_PM_Maid.description>
+  <!-- EN: Persona Matrix - Maid -->
+  <GR_PM_Maid.title>TODO</GR_PM_Maid.title>
+  <!-- EN: Maid -->
+  <GR_PM_Maid.titleShort>TODO</GR_PM_Maid.titleShort>
+  
+  <!-- EN: Contains extensive physiological data calibrated for humans, enabling it to provide basic medical aid and emergency care. -->
+  <GR_PM_Medical.description>TODO</GR_PM_Medical.description>
+  <!-- EN: Persona Matrix - Medical Assistant -->
+  <GR_PM_Medical.title>TODO</GR_PM_Medical.title>
+  <!-- EN: Medical Assistant -->
+  <GR_PM_Medical.titleShort>TODO</GR_PM_Medical.titleShort>
+  
+  <!-- EN: Built for large-scale mining operations. Contains both equipment operation knowledge and autonomous mining protocols for resource-scarce environments. -->
+  <GR_PM_Miner.description>TODO</GR_PM_Miner.description>
+  <!-- EN: Persona Matrix - Miner -->
+  <GR_PM_Miner.title>TODO</GR_PM_Miner.title>
+  <!-- EN: Miner -->
+  <GR_PM_Miner.titleShort>TODO</GR_PM_Miner.titleShort>
+  
+  <!-- EN: Designed to support scientific research. Combines multidisciplinary knowledge with enhanced computational and logical reasoning capabilities. -->
+  <GR_PM_Research.description>TODO</GR_PM_Research.description>
+  <!-- EN: Persona Matrix - Research Assistant -->
+  <GR_PM_Research.title>TODO</GR_PM_Research.title>
+  <!-- EN: Research Assistant -->
+  <GR_PM_Research.titleShort>TODO</GR_PM_Research.titleShort>
+  
+  <!-- EN: A persona matrix designed for rapid combat deployment. Comes pre-loaded with foundational melee skills, firearms proficiency, and weapon maintenance protocols. -->
+  <GR_PM_Soldier.description>TODO</GR_PM_Soldier.description>
+  <!-- EN: Persona Matrix - Soldier -->
+  <GR_PM_Soldier.title>TODO</GR_PM_Soldier.title>
+  <!-- EN: Soldier -->
+  <GR_PM_Soldier.titleShort>TODO</GR_PM_Soldier.titleShort>
+  
+  <!-- EN: Optimized for coordinating production workflows. Loaded with rich theoretical knowledge and practical records, capable of independently analyzing and adjusting production strategies. -->
+  <GR_PM_Technical.description>TODO</GR_PM_Technical.description>
+  <!-- EN: Persona Matrix - Technical Officer -->
+  <GR_PM_Technical.title>TODO</GR_PM_Technical.title>
+  <!-- EN: Technical Officer -->
+  <GR_PM_Technical.titleShort>TODO</GR_PM_Technical.titleShort>
+  
+  <!-- EN: Designed for manual tasks in diverse environments. Loaded with multi-disciplinary mechanical operation knowledge, capable of independently completing fabrication tasks without mechanical support. -->
+  <GR_PM_Technician.description>TODO</GR_PM_Technician.description>
+  <!-- EN: Persona Matrix - Technician -->
+  <GR_PM_Technician.title>TODO</GR_PM_Technician.title>
+  <!-- EN: Technician -->
+  <GR_PM_Technician.titleShort>TODO</GR_PM_Technician.titleShort>
+  
+</LanguageData>

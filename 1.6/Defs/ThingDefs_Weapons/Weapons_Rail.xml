@@ -4,8 +4,8 @@
   <!--磁轨冲（脉冲）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailPDW</defName>
-    <label>Pulse</label>
-    <description>.</description>
+    <label>Gray Railgun PDW</label>
+    <description>Pulse.Its low-pressure rail and compact capacitor provide only modest projectile velocity and a thin EMP coating, but in return grant a blistering rate of fire, exceptional stability, and nearly inaudible operation. This extreme lightweight design design enables lightning-fast target acquisition, making it the perfect partner for infiltration missions and the personal defense weapon of choice for most Grays.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_PDW</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -30,6 +30,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
       <WorkToMake>24000</WorkToMake>
@@ -39,6 +42,7 @@
       <AccuracyMedium>0.6</AccuracyMedium>
       <AccuracyLong>0.3</AccuracyLong>
       <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>75</GR_Alloy>
@@ -53,14 +57,13 @@
         <range>25.9</range>
         <burstShotCount>7</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>Shot_HeavySMG</soundCast>
+        <soundCast>GR_RailPDWShoot</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <weaponTags>
-      <li>IndustrialGunAdvanced</li>
-      <li>ShortShots</li>
+      <li>GR_BasicWeapon</li>
     </weaponTags>
     <tools>
       <li>
@@ -87,7 +90,7 @@
     <defName>Bullet_GR_RailSMG</defName>
     <label>Rail SMG bullet</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Things/Projectile/Charge_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
@@ -108,8 +111,8 @@
   <!--磁轨喷（碎星）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailShotgun</defName>
-    <label>Starbreaker</label>
-    <description>.</description>
+    <label>Gray Railgun Shotgun</label>
+    <description>Starbreaker.Its unique array of mid-pressure magnetic rails simultaneously accelerates multiple projectiles, which are then compressed into a dense cluster by a muzzle suppressor. Upon impact, this cluster erupts into a devastating storm of shrapnel. While effective range is limited, its close-quarters and confined-space suppression capability is nothing short of terrifying.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_SG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -134,6 +137,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
       <WorkToMake>31000</WorkToMake>
@@ -143,6 +149,7 @@
       <AccuracyMedium>0.5</AccuracyMedium>
       <AccuracyLong>0.2</AccuracyLong>
       <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>50</GR_Alloy>
@@ -157,14 +164,13 @@
         <range>21.9</range>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-        <soundCast>GR_RailSniperRifle</soundCast>
+        <soundCast>GR_RailShotGunShoot</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <weaponTags>
-      <li>IndustrialGunAdvanced</li>
-      <li>ShortShots</li>
+      <li>GR_T1Weapon</li>
     </weaponTags>
     <tools>
       <li>
@@ -191,7 +197,7 @@
     <defName>Bullet_GR_RailShotgun</defName>
     <label>Rail shotgun blast</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <texPath>Things/projectile/Rail_Shotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
@@ -206,8 +212,8 @@
   <!--磁轨突击步枪（斩铁）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailAssaultRifle</defName>
-    <label>Ironcleave</label>
-    <description>.</description>
+    <label>Gray Railgun Rifle</label>
+    <description>Ironcleave.Utilizing a compact mid-pressure rail and a specialized capacitor that applies a powerful EMP coating to its slugs, this rifle offers respectable armor penetration while effectively neutralizing mechanical lifeforms. As it is essentially an elongated modification of a submachine gun platform, its raw stopping power is somewhat limited, but this trade-off maximizes its weight and size advantages.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -229,6 +235,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
       <WorkToMake>40000</WorkToMake>
@@ -238,6 +247,7 @@
       <AccuracyMedium>1</AccuracyMedium>
       <AccuracyLong>0.9</AccuracyLong>
       <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>60</GR_Alloy>
@@ -252,14 +262,13 @@
         <range>37.9</range>
         <burstShotCount>5</burstShotCount>
         <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCast>GR_RailAssaultRifleShoot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <weaponTags>
-      <li>IndustrialGunAdvanced</li>
-      <li>AssaultRifle</li>
+      <li>GR_T1Weapon</li>
     </weaponTags>
     <tools>
       <li>
@@ -286,7 +295,7 @@
     <defName>Bullet_GR_RailAssaultRifle</defName>
     <label>Rail assault rifle bullet</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Things/Projectile/Charge_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
@@ -306,8 +315,8 @@
   <!--磁轨机枪（风暴）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailMachinegun</defName>
-    <label>Storm</label>
-    <description>.</description>
+    <label>Gray Railgun Light MachineGun</label>
+    <description>Storm.Featuring a compact high-pressure rail and a high-capacity capacitor, this weapon unleashes a continuous, devastating stream of heavy depleted uranium armor-piercing rounds at a cyclic rate of fire. It creates a suppressive impact zone akin to a storm of steel and lead, establishing absolute dominance in base assaults and fire suppression roles.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_MG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -317,6 +326,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <weaponClasses>
       <li>RangedHeavy</li>
     </weaponClasses>
@@ -328,6 +340,7 @@
       <AccuracyMedium>0.6</AccuracyMedium>
       <AccuracyLong>0.35</AccuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>160</GR_Alloy>
@@ -347,8 +360,8 @@
     </recipeMaker>
     <techLevel>Spacer</techLevel>
     <weaponTags>
-      <li>GunHeavy</li>
-      <li>Minigun</li>
+      <li>GR_T2Weapon</li>
+      <li>GR_Mechgun</li>
     </weaponTags>
     <equippedStatOffsets>
       <MoveSpeed>-0.4</MoveSpeed>
@@ -357,12 +370,12 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_RailMinigun</defaultProjectile>
+        <defaultProjectile>Bullet_GR_RailMechgun</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>41.9</range>
         <burstShotCount>25</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
-        <soundCast>Shot_Minigun</soundCast>
+        <soundCast>GR_RailMechGunShoot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -379,10 +392,10 @@
     </tools>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_GR_RailMinigun</defName>
+    <defName>Bullet_GR_RailMechgun</defName>
     <label>Rail minigun bullet</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Things/Projectile/ChargeLanceShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
@@ -396,8 +409,8 @@
   <!--磁轨重狙（流星）-->
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailSniperRifle</defName>
-    <label>Meteor</label>
-    <description>.</description>
+    <label>Gray Railgun Sniper Rifle</label>
+    <description>Meteor.A custom-built over-pressure magnetic rail accelerates projectiles to twenty Mach and imbues them with a potent EMP charge, granting phenomenal penetration and lethal force. The kinetic energy released upon impact can pierce weaker armor plates on corvettes. Due to its considerable size and poor portability, Grays typically deploy this weapon only from fixed firing positions.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_SR</texPath>
@@ -424,6 +437,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
       <WorkToMake>45000</WorkToMake>
@@ -433,6 +449,7 @@
       <AccuracyMedium>1</AccuracyMedium>
       <AccuracyLong>1</AccuracyLong>
       <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>90</GR_Alloy>
@@ -445,7 +462,7 @@
         <defaultProjectile>Bullet_GR_RailSniperRifle</defaultProjectile>
         <warmupTime>2.3</warmupTime>
         <range>49.9</range>
-        <soundCast>GR_RailSniperRifle</soundCast>
+        <soundCast>GR_RailSniperRifleShoot</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -470,7 +487,7 @@
       </li>
     </tools>
     <weaponTags Inherit="False">
-      <li>SniperRifle</li>
+      <li>GR_T2Weapon</li>
     </weaponTags>
   </ThingDef>
 
@@ -478,7 +495,7 @@
     <defName>Bullet_GR_RailSniperRifle</defName>
     <label>Rail Sniper Rifle bullet</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <texPath>Things/Projectile/ChargeLanceShot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
@@ -500,7 +517,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailCannon</defName>
     <label>MASS</label>
-    <description>.</description>
+    <description>Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_Cannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -511,6 +528,9 @@
     <thingSetMakerTags>
       <li>RewardStandardQualitySuper</li>
     </thingSetMakerTags>
+    <thingCategories>
+      <li>GR_WeaponsRanged</li>
+    </thingCategories>
     <weaponClasses>
       <li>RangedHeavy</li>
     </weaponClasses>
@@ -522,6 +542,7 @@
       <AccuracyMedium>1</AccuracyMedium>
       <AccuracyLong>1</AccuracyLong>
       <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>240</GR_Alloy>
@@ -541,7 +562,8 @@
     </recipeMaker>
     <techLevel>Ultra</techLevel>
     <weaponTags>
-      <li>GunHeavy</li>
+      <li>GR_T3Weapon</li>
+      <li>GR_HeavyWeapon</li>
     </weaponTags>
     <equippedStatOffsets>
       <MoveSpeed>-1.0</MoveSpeed>
@@ -555,7 +577,7 @@
         <range>54.9</range>
         <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
         <forcedMissRadius>1</forcedMissRadius>
-        <soundCast>Shot_Minigun</soundCast>
+        <soundCast>GR_RailLauncherShoot</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>

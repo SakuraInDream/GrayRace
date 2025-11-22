@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Gray Marksman Armor -->
+  <Gray_Apparel_MarksmanArmor.label>TODO</Gray_Apparel_MarksmanArmor.label>
+  <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
+  <Gray_Apparel_MarksmanArmor.description>TODO</Gray_Apparel_MarksmanArmor.description>
+  
+  <!-- EN: Gray Mechanitor Armor -->
+  <Gray_Apparel_MechanitorArmor.label>TODO</Gray_Apparel_MechanitorArmor.label>
+  <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
+  <Gray_Apparel_MechanitorArmor.description>TODO</Gray_Apparel_MechanitorArmor.description>
+  
+  <!-- EN: Gray Warrior Armor -->
+  <Gray_Apparel_MeleeArmor.label>TODO</Gray_Apparel_MeleeArmor.label>
+  <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
+  <Gray_Apparel_MeleeArmor.description>TODO</Gray_Apparel_MeleeArmor.description>
+  
+</LanguageData>

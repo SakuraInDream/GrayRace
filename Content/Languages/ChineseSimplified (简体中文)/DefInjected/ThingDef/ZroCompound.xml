@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Zro Compound -->
+  <GR_ZroCompound.label>TODO</GR_ZroCompound.label>
+  <!-- EN: A psychotropic agent derived from Zro, employed by psionics to amplify mental powers. It markedly elevates Psionic Sensitivity and generates a long-lasting stimulatory effect, which sustains user vigilance for 24 hours and augments bodily functions. Be warned: it carries a high risk of addiction. -->
+  <GR_ZroCompound.description>TODO</GR_ZroCompound.description>
+  <!-- EN: Inject {0} -->
+  <GR_ZroCompound.ingestible.ingestCommandString>TODO</GR_ZroCompound.ingestible.ingestCommandString>
+  <!-- EN: Injecting {0}. -->
+  <GR_ZroCompound.ingestible.ingestReportString>TODO</GR_ZroCompound.ingestible.ingestReportString>
+  
+</LanguageData>

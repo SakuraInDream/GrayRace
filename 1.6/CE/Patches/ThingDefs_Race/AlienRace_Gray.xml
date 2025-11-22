@@ -104,12 +104,4 @@
         </value>
     </Operation>
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/statBases</xpath>
-        <value>
-            <CarryWeight>1000</CarryWeight>
-            <CarryBulk>1000</CarryBulk>
-        </value>
-    </Operation>
-
 </Patch>

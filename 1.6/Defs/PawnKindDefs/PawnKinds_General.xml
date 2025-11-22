@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--殖民者-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>GR_colonist</defName>
+    <label>gray colonist</label>
+    <combatPower>50</combatPower>
+    <itemQuality>Excellent</itemQuality>
+    <isFighter>true</isFighter>
+    <factionLeader>false</factionLeader>
+    <apparelMoney>2000~3000</apparelMoney>
+    <apparelTags>
+      <li>Gray_Underwear</li>
+      <li>Gray_Daily</li>
+    </apparelTags>
+    <apparelDisallowTags>
+    </apparelDisallowTags>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+    <weaponTags>
+    </weaponTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Adult</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <inventoryOptions>
+      <skipChance>0.25</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>100</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>100</min>
+            <max>500</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+    <defaultFactionType>Gray_PlayerFaction</defaultFactionType>
+  </PawnKindDef>
+
+  <!--平民-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_Citizen</defName>
+    <label>gray citizen</label>
+    <combatPower>50</combatPower>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>true</isFighter>
+    <factionLeader>false</factionLeader>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>100~500</apparelMoney>
+    <apparelTags>
+      <li>GR_Daily</li>
+      <li>GR_Underwear</li>
+    </apparelTags>
+    <specificApparelRequirements>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <requiredTag>GR_Daily</requiredTag>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <requiredTag>GR_Underwear</requiredTag>
+      </li>
+    </specificApparelRequirements>
+    <apparelDisallowTags>
+    </apparelDisallowTags>
+    <apparelAllowHeadgearChance>0.4</apparelAllowHeadgearChance>
+    <weaponMoney>2000~3000</weaponMoney>
+    <weaponTags>
+      <li>GR_BasicWeapon</li>
+    </weaponTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Adult</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <inventoryOptions>
+      <skipChance>0.25</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>100</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>20</min>
+            <max>75</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <!--女仆-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_Maid</defName>
+    <label>gray maid</label>
+    <combatPower>70</combatPower>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>true</isFighter>
+    <factionLeader>false</factionLeader>
+    <apparelMoney>1000~5000</apparelMoney>
+    <maxGenerationAge>30</maxGenerationAge>
+    <minGenerationAge Inherit="False">10</minGenerationAge>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_Maid</li>
+    </apparelTags>
+    <specificApparelRequirements>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <requiredTag>GR_Underwear</requiredTag>
+      </li>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <requiredTag>GR_Maid</requiredTag>
+      </li>
+      <li>
+        <bodyPartGroup>UpperHead</bodyPartGroup>
+        <requiredTag>GR_Maid</requiredTag>
+      </li>
+    </specificApparelRequirements>
+    <apparelDisallowTags>
+    </apparelDisallowTags>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <weaponTags>
+    </weaponTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categoriesChildhood>
+          <li>GR_Maid</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>GR_Maid</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFiltersOverride>
+  </PawnKindDef>
+
+  <!--商人-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_Trader</defName>
+    <label>gray trader</label>
+    <combatPower>20</combatPower>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>true</isFighter>
+    <trader>true</trader>
+    <factionLeader>false</factionLeader>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>1200~2000</apparelMoney>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_Daily</li>
+    </apparelTags>
+    <specificApparelRequirements>
+      <li>
+        <bodyPartGroup>Torso</bodyPartGroup>
+        <requiredTag>Gray_Daily</requiredTag>
+      </li>
+    </specificApparelRequirements>
+    <apparelDisallowTags>
+    </apparelDisallowTags>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <weaponTags>
+    </weaponTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Adult</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <inventoryOptions>
+      <skipChance>0.25</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>100</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>2000</min>
+            <max>5000</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+  <!--领导者-->
+  <PawnKindDef ParentName="Gray_PawnKindBase">
+    <defName>Gray_Leader</defName>
+    <label>gray leader</label>
+    <combatPower>100</combatPower>
+    <itemQuality>Masterwork</itemQuality>
+    <isFighter>true</isFighter>
+    <factionLeader>true</factionLeader>
+    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <apparelMoney>1200~2000</apparelMoney>
+    <apparelTags>
+      <li>GR_Underwear</li>
+      <li>GR_Daily</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+    <weaponTags>
+    </weaponTags>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>GR_Adult</li>
+          <li>GR_Child</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <inventoryOptions>
+      <skipChance>0.25</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <choiceChance>100</choiceChance>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>100</min>
+            <max>500</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+
+</Defs>
