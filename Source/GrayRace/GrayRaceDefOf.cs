@@ -20,6 +20,9 @@ namespace SD.GrayRace
         public static JobDef GR_ConsumeMetal;
         public static JobDef GR_HaulToIncubator;
 
+        // StatDefs
+        public static StatDef GRStat_NaniteMax;
+        public static StatDef GRStat_NaniteRegenRate;
         static GrayRaceDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(GrayRaceDefOf));

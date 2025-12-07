@@ -438,6 +438,9 @@
       <!--其他-->
       <RoyalFavorValue>14</RoyalFavorValue>      <!--皇权声望-->
       <LearningRateFactor>5</LearningRateFactor>      <!--儿童学习速度-->
+      <!-- 纳米机械 Comp 迁移 StatDef -->
+      <GRStat_NaniteMax>500</GRStat_NaniteMax>
+      <GRStat_NaniteRegenRate>0.1</GRStat_NaniteRegenRate>
     </statBases>
     <comps>
       <li Class="CompProperties_Spawner">
@@ -448,11 +451,12 @@
         <showMessageIfOwned>true</showMessageIfOwned>
       </li>
       <!-- 纳米机械Comp -->
-      <li Class="SD.GrayRace.CompProperties_Nanites">
-        <!-- 最大 500 -->
-        <maxResource>5</maxResource>
-        <!-- 每秒恢复 -->
-        <regenPerSecond>0.001</regenPerSecond>
+      <!-- <li Class="SD.GrayRace.CompProperties_Nanites"> -->
+      <li Class="SD.GrayRace.Comps.CompProperties_Nanites">
+        <!-- 弃用，改用 StatDef GRStat_NaniteMax -->
+        <!-- <maxResource>5</maxResource> -->
+        <!-- 弃用，改用 StatDef GRStat_NaniteRegenRate -->
+        <!-- <regenPerSecond>0.001</regenPerSecond> -->
         <!-- 资源名称，可本地化 -> <DefNAME.comps.CompResource_Nanites.resourceLabel> -->
         <resourceLabel>备用灰潮源质</resourceLabel>
         <!-- gizmo 的下方刻度显示 -->

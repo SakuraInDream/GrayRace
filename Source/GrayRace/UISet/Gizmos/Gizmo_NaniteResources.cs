@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Text;
 using RimWorld;
@@ -6,7 +5,7 @@ using SD.GrayRace.Comps;
 using UnityEngine;
 using Verse;
 
-namespace SD.GrayRace
+namespace SD.GrayRace.UISet.Gizmos
 {
     [StaticConstructorOnStartup]
     public class Gizmo_NaniteResources: Gizmo_Slider
@@ -88,7 +87,7 @@ namespace SD.GrayRace
 
         public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth, GizmoRenderParms parms)
         {
-            GizmoResult gizmoResult = new GizmoResult(GizmoState.Clear);// base.GizmoOnGUI(topLeft, maxWidth, parms);
+            GizmoResult gizmoResult = new GizmoResult(GizmoState.Clear);
             bool mouseOverElement = false;
             Rect baseRect = new Rect(topLeft.x, topLeft.y, Width, 75f);
             Rect innerRect = baseRect.ContractedBy(2f);
@@ -108,9 +107,9 @@ namespace SD.GrayRace
             DrawHeader(textRect, ref mouseOverElement);
 
             barRect = innerRect.ContractedBy(22f);
-            // barRect.yMin = textRect.yMax + 6f;
 
             Widgets.FillableBar(barRect, ValuePercent, s_barTex, s_emptyBarTex, true);
+
             foreach (float barThreshold in GetBarThresholds())
             {
                 GUI.DrawTexture(
