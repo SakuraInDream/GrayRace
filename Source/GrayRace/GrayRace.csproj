@@ -96,8 +96,4 @@
   <ItemGroup>
     <PackageReference Include="Lib.Harmony.Ref" Version="2.4.1" />
   </ItemGroup>
-
-  <Target Name="CheckRimWorldPath" BeforeTargets="Build">
-    <Error Condition="!Exists('$(RimWorldPath)')" Text="RimWorld path not found. Please create Local.props or set RIMWORLD_DIR env var." />
-  </Target>
 </Project>
