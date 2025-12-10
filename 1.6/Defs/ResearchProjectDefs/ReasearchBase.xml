@@ -119,13 +119,13 @@
         <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
-    <!--Gray Professional Clothing灰裔专业服装-->
+    <!--Gray Special Clothing灰裔特殊服装-->
     <ResearchProjectDef>
         <tab>GR_ResearchTab</tab>
         <defName>GR_ProfessionalClothing</defName>
-        <label>Gray Professional Clothing</label>
-        <description>Unlock Gray's basic clothing</description>
-        <baseCost>750</baseCost>
+        <label>Gray Special Clothing</label>
+        <description>Unlock Gray's special clothing</description>
+        <baseCost>1000</baseCost>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <prerequisites>
             <li>GR_BasicClothing</li>

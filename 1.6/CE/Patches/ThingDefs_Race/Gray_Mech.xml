@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- ======== 护卫舰 ======== -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/statBases/MoveSpeed</xpath>
+    <value>
+      <MoveSpeed>14.5</MoveSpeed>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Mech_FF"]</xpath>
+    <value>
+      <comps>
+        <li Class="CombatExtended.CompProperties_ArmorDurability">
+          <Durability>1200</Durability>
+          <Regenerates>true</Regenerates>
+          <RegenInterval>120</RegenInterval>
+          <RegenValue>12</RegenValue>
+          <Repairable>true</Repairable>
+          <RepairIngredients>
+            <GR_Alloy>10</GR_Alloy>
+          </RepairIngredients>
+          <RepairTime>60</RepairTime>
+          <RepairValue>600</RepairValue>
+          <CanOverHeal>true</CanOverHeal>
+          <MaxOverHeal>800</MaxOverHeal>
+          <MinArmorPct>0.50</MinArmorPct>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/PawnKindDef[defName="GR_Mech_FF"]</xpath>
+    <value>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>4</min>
+          <max>8</max>
+        </primaryMagazineCount>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>8</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>20</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/statBases</xpath>
+    <value>
+      <NightVisionEfficiency>0.80</NightVisionEfficiency>
+      <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+      <CarryWeight>300</CarryWeight>
+      <CarryBulk>300</CarryBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="GR_Mech_FF"]</xpath>
+    <value>
+      <li Class="CombatExtended.PartialArmorExt">
+        <stats>
+          <li>
+            <ArmorRating_Sharp>10</ArmorRating_Sharp>
+            <parts>
+              <li>GR_ArmoredBelt</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>20</ArmorRating_Blunt>
+            <parts>
+              <li>GR_ArmoredBelt</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Sharp>6</ArmorRating_Sharp>
+            <parts>
+              <li>GR_AntiTorpedoBulge</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>12</ArmorRating_Blunt>
+            <parts>
+              <li>GR_AntiTorpedoBulge</li>
+            </parts>
+          </li>
+        </stats>
+      </li>
+    </value>
+  </Operation>
+</Patch>

@@ -536,7 +536,7 @@
     </weaponClasses>
     <statBases>
       <WorkToMake>60000</WorkToMake>
-      <Mass>20</Mass>
+      <Mass>150</Mass>
       <AccuracyTouch>0.5</AccuracyTouch>
       <AccuracyShort>0.7</AccuracyShort>
       <AccuracyMedium>1</AccuracyMedium>
@@ -610,4 +610,5 @@
       <speed>120</speed>
     </projectile>
   </ThingDef>
+
 </Defs>

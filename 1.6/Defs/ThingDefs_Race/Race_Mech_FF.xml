@@ -2,69 +2,86 @@
 <Defs>
 
   <!-- 护卫舰 -->
-    <ThingDef ParentName="LightMechanoid">
-      <defName>GR_Mech_FF</defName>
-      <label>巡空精魅</label>
-      <description>巡空精魅是一类擅长侦查作战的轻型机械体，装甲与护盾均较为薄弱，火力也严重不足，但其较高的航速与较低的制造成本能够以数量弥补单体的劣势。</description>
-      <statBases>
-        <MoveSpeed>12.7</MoveSpeed>
-      </statBases>
-      <race>
-        <lifeStageAges>
-          <li>
-            <def>MechanoidFullyFormed</def>
-            <minAge>0</minAge>
-            <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
-            <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
-            <soundCall>Pawn_Mech_Militor_Call</soundCall>
-          </li>
-          <li>
-            <def>MechanoidFullyFormed</def>
-            <minAge>100</minAge>
-            <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
-            <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
-            <soundCall>Pawn_Mech_Militor_Call</soundCall>
-          </li>
-        </lifeStageAges>
-      </race>
-    </ThingDef>
+  <ThingDef ParentName="LightMechanoid">
+    <defName>GR_Mech_FF</defName>
+    <label>巡空精魅</label>
+    <description>巡空精魅是一类擅长侦查作战的轻型机械体，装甲与护盾均较为薄弱，火力也严重不足，但其较高的航速与较低的制造成本能够以数量弥补单体的劣势。</description>
+    <statBases>
+      <MoveSpeed>12.7</MoveSpeed>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <BandwidthCost>1</BandwidthCost>
+      <WastepacksPerRecharge>0</WastepacksPerRecharge>
+      <MechEnergyLossPerHP>0.1</MechEnergyLossPerHP>
+    </statBases>
+    <race>
+      <body>GR_MechBody</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <mechWeightClass>Light</mechWeightClass>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+          <soundCall>Pawn_Mech_Militor_Call</soundCall>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
+          <soundCall>Pawn_Mech_Militor_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+    <butcherProducts>
+      <GR_Nanites>100</GR_Nanites>
+      <GR_Alloy>10</GR_Alloy>
+    </butcherProducts>
+  </ThingDef>
 
-    <PawnKindDef ParentName="LightMechanoidKind">
-      <defName>GR_Mech_FF</defName>
-      <label>巡空精魅</label>
-      <race>GR_Mech_FF</race>
-      <combatPower>45</combatPower>
-      <lifeStages>
-        <li>
-          <bodyGraphicData>
-            <texPath>Race/Mech/FF</texPath>
-            <maskPath>blank</maskPath>
-            <shaderType>CutoutWithOverlay</shaderType>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>1</drawSize>
-            <shadowData>
-              <volume>(0.3, 0.4, 0.3)</volume>
-              <offset>(0,0,-0.25)</offset>
-            </shadowData>
-          </bodyGraphicData>
-        </li>
-        <li>
-          <bodyGraphicData>
-            <texPath>Race/Mech/FF</texPath>
-            <maskPath>blank</maskPath>
-            <shaderType>CutoutWithOverlay</shaderType>
-            <graphicClass>Graphic_Multi</graphicClass>
-            <drawSize>1</drawSize>
-            <shadowData>
-              <volume>(0.3, 0.4, 0.3)</volume>
-              <offset>(0,0,-0.25)</offset>
-            </shadowData>
-          </bodyGraphicData>
-        </li>
-      </lifeStages>
-      <weaponTags>
-        <li>MechanoidGunShortRange</li>
-      </weaponTags>
-    </PawnKindDef>
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>GR_Mech_FF</defName>
+    <label>巡空精魅</label>
+    <race>GR_Mech_FF</race>
+    <combatPower>50</combatPower>
+    <maxPerGroup>20</maxPerGroup>
+    <allowInMechClusters>true</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Race/Mech/FF</texPath>
+          <maskPath>blank</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Race/Mech/FF</texPath>
+          <maskPath>blank</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponTags>
+      <li>GR_MechWeapon_FF</li>
+    </weaponTags>
+  </PawnKindDef>
 
 </Defs>

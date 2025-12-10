@@ -423,7 +423,7 @@
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_HMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.5</drawSize>
+      <drawSize>1.2</drawSize>
     </graphicData>
     <equippedAngleOffset>45</equippedAngleOffset>
     <soundInteract>Interact_Rifle</soundInteract>

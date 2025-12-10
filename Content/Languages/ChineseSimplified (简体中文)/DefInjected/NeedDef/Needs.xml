@@ -3,7 +3,7 @@
   
   <!-- EN: Nanite energy -->
   <GrayRaceEnergy.label>TODO</GrayRaceEnergy.label>
-  <!-- EN: 灰裔无需正常的饮食，但是需要消耗能量以维持纳米机械的正常运转，需要通过吞噬金属原材料来补充（每1kg对应0.1营养值）。即使能量归零也不会死亡，但是备用纳米机械不再会自然恢复，且所有备用纳米机械的相关功能都不会正常工作，这包括回血和使用技能。 -->
+  <!-- EN: 灰裔无需正常的饮食，但是需要消耗能量以维持纳米机械的正常运转，需要通过吞噬金属原材料来补充（每1kg对应0.1营养值）。即使能量归零也不会死亡，但是备用灰潮源质不再会自然恢复，且所有备用灰潮源质的相关功能都不会正常工作，这包括回血和使用技能。 -->
   <GrayRaceEnergy.description>TODO</GrayRaceEnergy.description>
   
 </LanguageData>

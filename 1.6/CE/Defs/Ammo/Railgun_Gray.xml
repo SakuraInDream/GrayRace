@@ -34,6 +34,14 @@
     </ammoTypes>
   </CombatExtended.AmmoSetDef>
 
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_12mmAA_Railgun_Gray</defName>
+    <label>12mm Anti-Aircraft Railgun</label>
+    <ammoTypes>
+      <Ammo_12mmRailgun_Sabot>Bullet_12mmRailgun_GR</Ammo_12mmRailgun_Sabot>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+
   <!-- ================== Projectiles ================== -->
 
   <ThingDef ParentName="BaseBulletCE">
@@ -101,5 +109,21 @@
       <speed>327</speed>
     </projectile>
   </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+		<defName>Bullet_12mmRailgun_GR</defName>
+		<label>12mm Railgun bullet (Sabot)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>GR_NanoBullet</damageDef>
+			<damageAmountBase>73</damageAmountBase>
+			<armorPenetrationSharp>130</armorPenetrationSharp>
+			<armorPenetrationBlunt>7250</armorPenetrationBlunt>
+			<speed>354</speed>
+		</projectile>
+	</ThingDef>
 
 </Defs>

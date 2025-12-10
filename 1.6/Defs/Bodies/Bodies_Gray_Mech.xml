@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyDef>
+    <defName>GR_MechBody</defName>
+    <label>Warship</label>
+    <corePart>
+      <def>MechanicalThorax</def>
+      <customLabel>Hull</customLabel>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <groups>
+        <li>Torso</li>
+      </groups>
+      <parts>
+        <li>
+          <def>GR_MechKeel</def>
+          <coverage>0.025</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>MechanicalNeck</def>
+          <customLabel>Superstructure</customLabel>
+          <coverage>0.10</coverage>
+          <height>Top</height>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>MechanicalHead</def>
+              <customLabel>Bridge</customLabel>
+              <coverage>0.80</coverage>
+              <depth>Inside</depth>
+              <groups>
+                <li>HeadAttackTool</li>
+              </groups>
+              <parts>
+                <li>
+                  <def>ArtificialBrain</def>
+                  <customLabel>Combat information center</customLabel>
+                  <coverage>0.10</coverage>
+                  <depth>Inside</depth>
+                </li>
+                <li>
+                  <def>SightSensor</def>
+                  <customLabel>Radar system</customLabel>
+                  <coverage>0.13</coverage>
+                  <depth>Inside</depth>
+                </li>
+                <li>
+                  <def>HearingSensor</def>
+                  <customLabel>Radio system</customLabel>
+                  <coverage>0.10</coverage>
+                  <depth>Inside</depth>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>MechanicalShoulder</def>
+          <customLabel>Turret</customLabel>
+          <coverage>0.17</coverage>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>MechanicalArm</def>
+              <customLabel>Gun mount</customLabel>
+              <coverage>0.85</coverage>
+              <depth>Outside</depth>
+              <parts>
+                <li>
+                  <def>MechanicalHand</def>
+                  <customLabel>Main gun</customLabel>
+                  <coverage>0.3</coverage>
+                  <depth>Outside</depth>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GR_AntiTorpedoBulge</def>
+          <customLabel>Anti-torpedo Bulge</customLabel>
+          <coverage>0.2</coverage>
+          <height>Bottom</height>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>MechanicalThorax</def>
+              <customLabel>Stern</customLabel>
+              <coverage>0.8</coverage>
+              <height>Bottom</height>
+              <parts>
+                <li>
+                  <def>MechanicalLeg</def>
+                  <customLabel>Engine Room</customLabel>
+                  <coverage>0.5</coverage>
+                  <height>Bottom</height>
+                  <depth>Inside</depth>
+                  <parts>
+                    <li>
+                      <def>MechanicalFoot</def>
+                      <customLabel>Thruster</customLabel>
+                      <coverage>0.2</coverage>
+                      <depth>Outside</depth>
+                    </li>
+                  </parts>
+                </li>
+              </parts>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>GR_ArmoredBelt</def>
+          <customLabel>Armored Belt</customLabel>
+          <coverage>0.2</coverage>
+          <height>Bottom</height>
+          <depth>Outside</depth>
+          <parts>
+            <li>
+              <def>Reactor</def>
+              <coverage>0.06</coverage>
+              <depth>Inside</depth>
+            </li>
+          </parts>
+        </li>
+        <li>
+          <def>FluidReprocessor</def>
+          <customLabel>Circulating pipeline</customLabel>
+          <coverage>0.04</coverage>
+          <depth>Inside</depth>
+        </li>
+      </parts>
+    </corePart>
+  </BodyDef>
+
+</Defs>

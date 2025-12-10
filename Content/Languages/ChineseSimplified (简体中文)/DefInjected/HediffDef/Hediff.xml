@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 纳米机械再生 -->
+  <!-- EN: 灰潮生命 -->
+  <NanitesLife.label>TODO</NanitesLife.label>
+  <!-- EN: 你不应该看到这个。 -->
+  <NanitesLife.description>TODO</NanitesLife.description>
+  
+  <!-- EN: 灰潮再生 -->
   <NanitesRegeneration.label>TODO</NanitesRegeneration.label>
-  <!-- EN: 运用体内的备用纳米机械能够快速修复身上的伤口。 -->
+  <!-- EN: 运用体内的备用灰潮源质能够快速修复身上的伤口。 -->
   <NanitesRegeneration.description>TODO</NanitesRegeneration.description>
   
 </LanguageData>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--12mm磁轨防空机枪-->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_12mmAA</defName>
+    <statBases>
+      <SightsEfficiency>1.5</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0.1</SwayFactor>
+      <Bulk>25</Bulk>
+      <Mass>60</Mass>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>0.2</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_12mmRailgun_GR</defaultProjectile>
+      <warmupTime>0.1</warmupTime>
+      <burstShotCount>40</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <range>70</range>
+      <soundCast>Shot_Shotgun</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>1200</magazineSize>
+      <reloadTime>7.5</reloadTime>
+      <ammoSet>AmmoSet_12mmAA_Railgun_Gray</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>20</aimedBurstShotCount>
+      <aiAimMode>Snapshot</aiAimMode>
+    </FireModes>
+  </Operation>
+
+</Patch>

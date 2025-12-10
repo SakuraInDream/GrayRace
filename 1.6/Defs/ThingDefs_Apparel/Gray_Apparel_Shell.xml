@@ -34,13 +34,13 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <GR_Alloy>40</GR_Alloy>
+      <GR_Alloy>80</GR_Alloy>
       <GR_Nanites>40</GR_Nanites>
       <ComponentSpacer>15</ComponentSpacer>
     </costList>
     <statBases>
-      <MaxHitPoints>500</MaxHitPoints>
-      <WorkToMake>24000</WorkToMake>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToMake>72000</WorkToMake>
       <Mass>15</Mass>
       <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -73,11 +73,6 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
-      <drawData>
-        <dataNorth>
-          <layer>20</layer>
-        </dataNorth>
-      </drawData>
       <tags>
         <li>GR_AdvancedArmor</li>
         <li>GR_MechanitorArmor</li>
@@ -88,6 +83,7 @@
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
     <tickerType>Normal</tickerType>
     <comps>
       <li Class="CompProperties_Shield">
@@ -133,15 +129,15 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <GR_Alloy>60</GR_Alloy>
+      <GR_Alloy>120</GR_Alloy>
       <GR_Nanites>40</GR_Nanites>
       <ComponentSpacer>10</ComponentSpacer>
     </costList>
     <statBases>
-      <MaxHitPoints>500</MaxHitPoints>
-      <WorkToMake>24000</WorkToMake>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToMake>60000</WorkToMake>
       <Mass>12</Mass>
-      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
       <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
@@ -174,11 +170,6 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
-      <drawData>
-        <dataNorth>
-          <layer>20</layer>
-        </dataNorth>
-      </drawData>
       <tags>
         <li>GR_AdvancedArmor</li>
         <li>GR_RangedArmor</li>
@@ -189,6 +180,7 @@
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
     <tickerType>Normal</tickerType>
     <comps>
       <li Class="CompProperties_Shield">
@@ -237,13 +229,13 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <GR_Alloy>80</GR_Alloy>
-      <GR_Nanites>40</GR_Nanites>
+      <GR_Alloy>160</GR_Alloy>
+      <GR_Nanites>80</GR_Nanites>
       <ComponentSpacer>10</ComponentSpacer>
     </costList>
     <statBases>
-      <MaxHitPoints>500</MaxHitPoints>
-      <WorkToMake>24000</WorkToMake>
+      <MaxHitPoints>800</MaxHitPoints>
+      <WorkToMake>108000</WorkToMake>
       <Mass>12</Mass>
       <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -280,11 +272,6 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
-      <drawData>
-        <dataNorth>
-          <layer>20</layer>
-        </dataNorth>
-      </drawData>
       <tags>
         <li>GR_AdvancedArmor</li>
         <li>GR_MeleeArmor</li>
@@ -295,6 +282,7 @@
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
     <tickerType>Normal</tickerType>
     <comps>
       <li Class="CompProperties_Shield">
@@ -306,6 +294,166 @@
         <blocksRangedWeapons>true</blocksRangedWeapons>
       </li>
     </comps>
+  </ThingDef>
+
+  <!--轻型装甲-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_LightArmor</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Light Armor</label>
+    <techLevel>Spacer</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/LightPower/Gray_LightPowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_CombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>100</GR_Alloy>
+      <GR_Nanites>40</GR_Nanites>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToMake>48000</WorkToMake>
+      <Mass>6</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>8</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>1</MoveSpeed>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/LightPower/Gray_LightPowerArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>GR_Armor</li>
+        <li>GR_RangedArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+  </ThingDef>
+
+  <!--重型装甲-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_HeavyArmor</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Heavy Armor</label>
+    <techLevel>Spacer</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/HeavyPower/Gray_HeavyPowerArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_CombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>120</GR_Alloy>
+      <GR_Nanites>40</GR_Nanites>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>8</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>10</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-1</MoveSpeed>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/HeavyPower/Gray_HeavyPowerArmor</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>GR_Armor</li>
+        <li>GR_MeleeArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
   </ThingDef>
 
 </Defs>

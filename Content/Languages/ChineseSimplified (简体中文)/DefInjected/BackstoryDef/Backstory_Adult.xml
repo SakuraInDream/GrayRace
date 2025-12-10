@@ -36,6 +36,13 @@
   <!-- EN: Megastructure Engineer -->
   <GR_Engineer.titleShort>TODO</GR_Engineer.titleShort>
   
+  <!-- EN: {PAWN_nameDef}是一位极其特殊的存在。或许是在成长中被注入了被污染的数据流，又或是其核心记忆体早已偏离常轨，她最终选择成为艺妓，将自身全然奉献于“艺术”。那些与她有过深度交集的顾客，无不盛赞其精妙的“技艺”，并声称在她身上领略过何谓完美。 -->
+  <GR_Geisha.description>TODO</GR_Geisha.description>
+  <!-- EN: Gray Geisha -->
+  <GR_Geisha.title>TODO</GR_Geisha.title>
+  <!-- EN: Geisha -->
+  <GR_Geisha.titleShort>TODO</GR_Geisha.titleShort>
+  
   <!-- EN: Before becoming a clinic doctor, {PAWN_nameDef} was a researcher at a renowned biotechnology institute. After the war, alien creatures were shipped to the facility crate after crate.\n The helpless cries of extraterrestrial species, treated like livestock, were merely metrics confirming their vitality.\n So she left that place and swore never to return. Hearing that the Advance Team might encounter wild alien species on frontier planets, she boarded one of the first ships as if seeking redemption. -->
   <GR_GeneDoctor.description>TODO</GR_GeneDoctor.description>
   <!-- EN: Gray Gene Clinic Doctor -->
@@ -71,6 +78,13 @@
   <!-- EN: Metallurgist -->
   <GR_Metallurgist.titleShort>TODO</GR_Metallurgist.titleShort>
   
+  <!-- EN: {PAWN_nameDef}曾是一位成功的市长，精心管理着一座千万人口的工业星球都市。她是城市毋庸置疑的统治者，却更醉心于将整座城市视为一件精密的仪器去运营与优化。对她而言，权力索然无味，唯有开发与建造的过程本身充满魅力。最终，她从容交卸职权，转向星空，去绘制她下一张宏伟的城市蓝图。 -->
+  <GR_PublicServants.description>TODO</GR_PublicServants.description>
+  <!-- EN: Gray Public Servants -->
+  <GR_PublicServants.title>TODO</GR_PublicServants.title>
+  <!-- EN: Public Servants -->
+  <GR_PublicServants.titleShort>TODO</GR_PublicServants.titleShort>
+  
   <!-- EN: {PAWN_nameDef} 曾被誉为士兵的守护天使，作为太阳III空间站上最优秀的军需物资官，她把数字与数据化作帝国的血液，泵向最遥远的前线。\n直到有一天，她发现自己精心规划的补给被上司贪污大半，士兵们因缺乏药品与食物而死去。她选择举报，却最终被发配到先遣队，成为无名的拓荒者。\n天使从此被囚禁与大地。 -->
   <GR_Quartermaster.description>TODO</GR_Quartermaster.description>
   <!-- EN: Gray Quartermaster -->
@@ -91,5 +105,19 @@
   <GR_StarPicker.title>TODO</GR_StarPicker.title>
   <!-- EN: Star Picker -->
   <GR_StarPicker.titleShort>TODO</GR_StarPicker.titleShort>
+  
+  <!-- EN: 以暴戾之火，巡猎尘与空。\n{PAWN_nameDef}是一位独立的战斗机甲驾驶员，但对她而言，比起“驾驶”，她更像是在使用延展的肢体进行战斗。\n得益于特殊的身体改造，往往高昂的装备维修费用往往只需要些许时间就能被负责修复的纳米群完成，因此她无需专业设备也能独自打理好整台机甲。\n“比起高精度的能量系武器，我个人倾向于有着凶猛火力的实弹，或者干脆说爆炸系武器啦～再搭配上厚重的重型装甲，完美～” -->
+  <GR_StormEmperor.description>TODO</GR_StormEmperor.description>
+  <!-- EN: Gray Storm Emperor -->
+  <GR_StormEmperor.title>TODO</GR_StormEmperor.title>
+  <!-- EN: Storm Emperor -->
+  <GR_StormEmperor.titleShort>TODO</GR_StormEmperor.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}是一名专业的外科医生，拥有丰富的抢救经验和手术经验。经过改造升级，她可以随时展开一台小型的手术台进行现场治疗或用于手术场景。她从不谈论自己从何又为何出发，只是踏上了游历世界，顺路治病救人的道路，虽然路上总是被耽误，但她总是微笑着出着自己的一份力。\n她常说要人应该活在当下，有话就快说，有心愿就去做。\n毕竟只有她知道，在一切完成之后，她总能在寂静无人的深夜偷偷踏上新的旅程。 -->
+  <GR_Wanderer.description>TODO</GR_Wanderer.description>
+  <!-- EN: Gray Wanderer doctor -->
+  <GR_Wanderer.title>TODO</GR_Wanderer.title>
+  <!-- EN: Wanderer doctor -->
+  <GR_Wanderer.titleShort>TODO</GR_Wanderer.titleShort>
   
 </LanguageData>

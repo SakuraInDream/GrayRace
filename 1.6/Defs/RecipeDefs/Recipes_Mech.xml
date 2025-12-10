@@ -21,7 +21,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>SubcoreHigh</li>
+            <li>SubcoreBasic</li>
           </thingDefs>
         </filter>
         <count>1</count>

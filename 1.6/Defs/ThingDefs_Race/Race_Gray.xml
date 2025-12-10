@@ -191,7 +191,7 @@
                   <layerOffset>-0.274</layerOffset>
                 </south>
                 <north>
-                  <layerOffset>-0.274</layerOffset>
+                  <layerOffset>0.22</layerOffset>
                 </north>
                 <east>
                   <layerOffset>-0.274</layerOffset>
@@ -283,6 +283,7 @@
         </growthAges>
       </generalSettings>
       <compatibility>
+        <isFlesh>false</isFlesh>
         <hasBlood>false</hasBlood>
       </compatibility>
       <graphicPaths>        <!--身体贴图的路径-->
@@ -297,7 +298,7 @@
           </ageGraphics>
         </body>
         <skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton>        <!--风干骷髅的贴图-->
-        <swaddle>blank</swaddle>      <!--襁褓贴图-->
+        <swaddle>blank</swaddle>        <!--襁褓贴图-->
       </graphicPaths>
       <styleSettings>        <!--生物的风格设置-->
         <li>
@@ -370,17 +371,27 @@
           <li>Gray_Apparel_MarksmanArmor</li>
           <li>Gray_Apparel_MeleeHelmet</li>
           <li>Gray_Apparel_MeleeArmor</li>
+          <li>Gray_Apparel_LightHelmet</li>
+          <li>Gray_Apparel_LightArmor</li>
+          <li>Gray_Apparel_HeavyHelmet</li>
+          <li>Gray_Apparel_HeavyArmor</li>
+          <li>Gray_Apparel_UniversalISA</li>
         </apparelList>
         <whiteApparelList>
           <li>Gray_Apparel_MechanitorBelt</li>
         </whiteApparelList>
-        <blackGeneTags>       <!-- 禁用基因标签 -->
+        <weaponList>
+          <li>GR_RailCannon</li>
+          <li>GR_HFMurasama</li>
+          <li>GR_ShipSlayer</li>
+        </weaponList>
+        <blackGeneTags>          <!-- 禁用基因标签 -->
           <li>HairStyle</li>
           <li>Fur</li>
           <li>BeardStyle</li>
           <li>SkinColor</li>
         </blackGeneTags>
-        <blackEndoCategories>     <!-- 黑名单基因类别 -->
+        <blackEndoCategories>          <!-- 黑名单基因类别 -->
           <li>HairColor</li>
           <li>Jaw</li>
           <li>Head</li>
@@ -433,8 +444,8 @@
       <ConstructionSpeed>1.5</ConstructionSpeed>      <!--建造速度-->
       <ConstructSuccessChance>10</ConstructSuccessChance>      <!--建造成功率-->
       <FixBrokenDownBuildingSuccessChance>10</FixBrokenDownBuildingSuccessChance>      <!--修理成功率-->
-      <TameAnimalChance>0.5</TameAnimalChance>    <!--驯服成功率-->
-      <TrainAnimalChance>0.5</TrainAnimalChance>    <!--训练成功率-->
+      <TameAnimalChance>0.5</TameAnimalChance>      <!--驯服成功率-->
+      <TrainAnimalChance>0.5</TrainAnimalChance>      <!--训练成功率-->
       <!--其他-->
       <RoyalFavorValue>14</RoyalFavorValue>      <!--皇权声望-->
       <LearningRateFactor>5</LearningRateFactor>      <!--儿童学习速度-->
