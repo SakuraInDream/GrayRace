@@ -61,3 +61,5 @@ Source/GrayRace/packages.config
 Source/GrayRace/obj/Debug/GrayRace.csproj.AssemblyReference.cache
 Source/GrayRace/GrayRace.sln.DotSettings.user
 Source/GrayRace/GrayRace.sln.DotSettings
+*.props
+/.vscode
