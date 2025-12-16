@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Boltor bullet -->
+  <Bullet_GR_Boltor.label>TODO</Bullet_GR_Boltor.label>
+  
+  <!-- EN: Corinth bullet -->
+  <Bullet_GR_Corinth.label>TODO</Bullet_GR_Corinth.label>
+  
+  <!-- EN: Daikyu arrow -->
+  <Bullet_GR_Daikyu.label>TODO</Bullet_GR_Daikyu.label>
+  
+  <!-- EN: Euphona bullet -->
+  <Bullet_GR_Euphona.label>TODO</Bullet_GR_Euphona.label>
+  
+  <!-- EN: Glaive -->
+  <Bullet_GR_Glaive.label>TODO</Bullet_GR_Glaive.label>
+  
+  <!-- EN: Vadarya bullet -->
+  <Bullet_GR_Vadarya.label>TODO</Bullet_GR_Vadarya.label>
+  
+  <!-- EN: Vasto bullet -->
+  <Bullet_GR_Vasto.label>TODO</Bullet_GR_Vasto.label>
+  
+  <!-- EN: Boltor -->
+  <GR_Boltor.label>TODO</GR_Boltor.label>
+  <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
+  <GR_Boltor.description>TODO</GR_Boltor.description>
+  <!-- EN: grip -->
+  <GR_Boltor.tools.grip.label>TODO</GR_Boltor.tools.grip.label>
+  <!-- EN: barrel -->
+  <GR_Boltor.tools.barrel.label>TODO</GR_Boltor.tools.barrel.label>
+  <!-- EN: Boltor -->
+  <GR_Boltor.verbs.Verb_Shoot.label>TODO</GR_Boltor.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Corinth -->
+  <GR_Corinth.label>TODO</GR_Corinth.label>
+  <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
+  <GR_Corinth.description>TODO</GR_Corinth.description>
+  <!-- EN: charge -->
+  <GR_Corinth.comps.CompEquippableAbilityReloadable.chargeNoun>TODO</GR_Corinth.comps.CompEquippableAbilityReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <GR_Corinth.comps.CompEquippableAbilityReloadable.cooldownGerund>TODO</GR_Corinth.comps.CompEquippableAbilityReloadable.cooldownGerund>
+  <!-- EN: grip -->
+  <GR_Corinth.tools.grip.label>TODO</GR_Corinth.tools.grip.label>
+  <!-- EN: barrel -->
+  <GR_Corinth.tools.barrel.label>TODO</GR_Corinth.tools.barrel.label>
+  <!-- EN: Corinth -->
+  <GR_Corinth.verbs.Verb_Shoot.label>TODO</GR_Corinth.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Daikyu -->
+  <GR_Daikyu.label>TODO</GR_Daikyu.label>
+  <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
+  <GR_Daikyu.description>TODO</GR_Daikyu.description>
+  <!-- EN: Daikyu -->
+  <GR_Daikyu.verbs.Verb_Shoot.label>TODO</GR_Daikyu.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Euphona -->
+  <GR_Euphona.label>TODO</GR_Euphona.label>
+  <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
+  <GR_Euphona.description>TODO</GR_Euphona.description>
+  <!-- EN: grip -->
+  <GR_Euphona.tools.grip.label>TODO</GR_Euphona.tools.grip.label>
+  <!-- EN: barrel -->
+  <GR_Euphona.tools.barrel.label>TODO</GR_Euphona.tools.barrel.label>
+  <!-- EN: Euphona -->
+  <GR_Euphona.verbs.Verb_Shoot.label>TODO</GR_Euphona.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Glaive -->
+  <GR_Glaive.label>TODO</GR_Glaive.label>
+  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
+  <GR_Glaive.description>TODO</GR_Glaive.description>
+  <!-- EN: charge -->
+  <GR_Glaive.comps.CompEquippableAbilityReloadable.chargeNoun>TODO</GR_Glaive.comps.CompEquippableAbilityReloadable.chargeNoun>
+  <!-- EN: on cooldown -->
+  <GR_Glaive.comps.CompEquippableAbilityReloadable.cooldownGerund>TODO</GR_Glaive.comps.CompEquippableAbilityReloadable.cooldownGerund>
+  <!-- EN: edge -->
+  <GR_Glaive.tools.edge.label>TODO</GR_Glaive.tools.edge.label>
+  
+  <!-- EN: Tatsu -->
+  <GR_Tatsu.label>TODO</GR_Tatsu.label>
+  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
+  <GR_Tatsu.description>TODO</GR_Tatsu.description>
+  <!-- EN: point -->
+  <GR_Tatsu.tools.point.label>TODO</GR_Tatsu.tools.point.label>
+  <!-- EN: edge -->
+  <GR_Tatsu.tools.edge.label>TODO</GR_Tatsu.tools.edge.label>
+  
+  <!-- EN: Vadarya -->
+  <GR_Vadarya.label>TODO</GR_Vadarya.label>
+  <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
+  <GR_Vadarya.description>TODO</GR_Vadarya.description>
+  <!-- EN: grip -->
+  <GR_Vadarya.tools.grip.label>TODO</GR_Vadarya.tools.grip.label>
+  <!-- EN: barrel -->
+  <GR_Vadarya.tools.barrel.label>TODO</GR_Vadarya.tools.barrel.label>
+  <!-- EN: Vadarya -->
+  <GR_Vadarya.verbs.Verb_Shoot.label>TODO</GR_Vadarya.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Vasto -->
+  <GR_Vasto.label>TODO</GR_Vasto.label>
+  <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
+  <GR_Vasto.description>TODO</GR_Vasto.description>
+  <!-- EN: grip -->
+  <GR_Vasto.tools.grip.label>TODO</GR_Vasto.tools.grip.label>
+  <!-- EN: barrel -->
+  <GR_Vasto.tools.barrel.label>TODO</GR_Vasto.tools.barrel.label>
+  <!-- EN: Vasto -->
+  <GR_Vasto.verbs.Verb_Shoot.label>TODO</GR_Vasto.verbs.Verb_Shoot.label>
+  
+</LanguageData>

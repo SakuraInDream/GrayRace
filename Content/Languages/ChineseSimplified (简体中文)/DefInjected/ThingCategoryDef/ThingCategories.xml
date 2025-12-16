@@ -2,24 +2,24 @@
 <LanguageData>
   
   <!-- EN: gray apparel -->
-  <GR_Apparel.label>TODO</GR_Apparel.label>
+  <GR_Apparel.label>灰裔服装</GR_Apparel.label>
   
   <!-- EN: gray armor -->
-  <GR_ApparelArmor.label>TODO</GR_ApparelArmor.label>
+  <GR_ApparelArmor.label>灰裔护甲</GR_ApparelArmor.label>
   
   <!-- EN: gray Basic apparel -->
-  <GR_ApparelBasic.label>TODO</GR_ApparelBasic.label>
+  <GR_ApparelBasic.label>灰裔基础服装</GR_ApparelBasic.label>
   
   <!-- EN: misc -->
-  <GR_ApparelMisc.label>TODO</GR_ApparelMisc.label>
+  <GR_ApparelMisc.label>灰裔杂项服装</GR_ApparelMisc.label>
   
   <!-- EN: gray weapons -->
-  <GR_Weapons.label>TODO</GR_Weapons.label>
+  <GR_Weapons.label>灰裔武器</GR_Weapons.label>
   
   <!-- EN: gray melee weapons -->
-  <GR_WeaponsMelee.label>TODO</GR_WeaponsMelee.label>
+  <GR_WeaponsMelee.label>灰裔近战武器</GR_WeaponsMelee.label>
   
   <!-- EN: gray ranged weapons -->
-  <GR_WeaponsRanged.label>TODO</GR_WeaponsRanged.label>
+  <GR_WeaponsRanged.label>灰裔远程武器</GR_WeaponsRanged.label>
   
 </LanguageData>

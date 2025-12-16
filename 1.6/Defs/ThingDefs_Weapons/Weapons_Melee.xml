@@ -124,9 +124,9 @@
       </li>
     </tools>
     <recipeMaker>
-      <researchPrerequisite>GR_T1WeaponTech</researchPrerequisite>
+      <researchPrerequisite>GR_AlloyCasting</researchPrerequisite>
       <skillRequirements>
-        <Crafting>8</Crafting>
+        <Crafting>6</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
@@ -347,7 +347,7 @@
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>40</power>
+        <power>120</power>
         <extraMeleeDamages>
           <li>
             <def>Burn</def>
@@ -362,6 +362,67 @@
       <skillRequirements>
         <Crafting>14</Crafting>
       </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <!--撬棍-->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>GR_Crowbar</defName>
+    <label>HolySword</label>
+    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Weapon/Melee/Melee_Lightsaber</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <techLevel>Archotech</techLevel>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>GR_T4MeleeWeapon</li>
+    </weaponTags>
+    <thingCategories>
+      <li>GR_WeaponsMelee</li>
+    </thingCategories>
+    <statBases>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>3.33</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <equippedStatOffsets>
+      <MeleeHitChance>3.33</MeleeHitChance>
+      <HackingSpeed>10</HackingSpeed>
+      <HackingStealth>10</HackingStealth>
+    </equippedStatOffsets>
+    <costList>
+      <GR_Alloy>333</GR_Alloy>
+      <GR_Nanites>33.3</GR_Nanites>
+      <ComponentSpacer>20</ComponentSpacer>
+      <GR_FundamentalCube>1</GR_FundamentalCube>
+    </costList>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>GR_CrowbarDamage</li>
+        </capacities>
+        <power>33.3</power>
+        <extraMeleeDamages>
+          <li>
+            <def>Stun</def>
+            <amount>3.33</amount>
+          </li>
+        </extraMeleeDamages>
+        <cooldownTime>1</cooldownTime>
+        <armorPenetration>333.333</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>GR_Cosmogenesis</researchPrerequisite>
     </recipeMaker>
   </ThingDef>
 

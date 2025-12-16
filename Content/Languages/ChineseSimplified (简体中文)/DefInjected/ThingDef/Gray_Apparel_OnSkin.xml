@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray mechanitor ISA -->
-  <Gray_Apparel_MechanitorISA.label>TODO</Gray_Apparel_MechanitorISA.label>
+  <Gray_Apparel_MechanitorISA.label>“流层战织体”动态缓冲作战服</Gray_Apparel_MechanitorISA.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
   <Gray_Apparel_MechanitorISA.description>TODO</Gray_Apparel_MechanitorISA.description>
-  
+
+  <!-- EN: Gray Universal ISA -->
+  <Gray_Apparel_UniversalISA.label>灰裔通用软甲</Gray_Apparel_UniversalISA.label>
+  <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
+  <Gray_Apparel_UniversalISA.description>TODO</Gray_Apparel_UniversalISA.description>
+
 </LanguageData>

@@ -47,7 +47,6 @@
         <li>Middle</li>
       </layers>
       <tags>
-
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -64,6 +63,81 @@
         <energyOnReset>0</energyOnReset>
         <blocksRangedWeapons>false</blocksRangedWeapons>
       </li>
+    </comps>
+  </ThingDef>
+
+  <!--夜宴晚礼服-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_BanquetDress</defName>
+    <description>.</description>
+    <label>Gray Evening Banquet Dress</label>
+    <graphicData>
+      <texPath>Apparel/BanquetDress/Gray_BanquetDress</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelBasic</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+        <Artistic>6</Artistic>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <PawnBeauty>2</PawnBeauty>
+      <SocialImpact>0.2</SocialImpact>
+      <TradePriceImprovement>0.05</TradePriceImprovement>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BanquetDress/Gray_BanquetDress</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>Gray_Daily</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <comps>
     </comps>
   </ThingDef>
 

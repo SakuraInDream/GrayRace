@@ -33,13 +33,13 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <GR_Alloy>40</GR_Alloy>
+      <GR_Alloy>80</GR_Alloy>
       <GR_Nanites>60</GR_Nanites>
       <ComponentSpacer>15</ComponentSpacer>
     </costList>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToMake>48000</WorkToMake>
       <Mass>2</Mass>
       <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -78,6 +78,7 @@
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
     <tradeTags>
       <li>BasicClothing</li>
     </tradeTags>
@@ -114,15 +115,15 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <GR_Alloy>60</GR_Alloy>
+      <GR_Alloy>80</GR_Alloy>
       <GR_Nanites>60</GR_Nanites>
       <ComponentSpacer>10</ComponentSpacer>
     </costList>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToMake>36000</WorkToMake>
       <Mass>2</Mass>
-      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
       <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
@@ -158,6 +159,7 @@
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
     <tradeTags>
       <li>BasicClothing</li>
     </tradeTags>
@@ -194,13 +196,13 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <GR_Alloy>80</GR_Alloy>
+      <GR_Alloy>160</GR_Alloy>
       <GR_Nanites>60</GR_Nanites>
       <ComponentSpacer>6</ComponentSpacer>
     </costList>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <MaxHitPoints>800</MaxHitPoints>
+      <WorkToMake>72000</WorkToMake>
       <Mass>2</Mass>
       <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -241,6 +243,162 @@
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--轻型头盔-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_LightHelmet</defName>
+    <label>Gray Light Helmet</label>
+    <description>Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
+    <techLevel>Spacer</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/LightPower/Gray_LightPowerHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_CombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>60</GR_Alloy>
+      <GR_Nanites>60</GR_Nanites>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/LightPower/Gray_LightPowerHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_RangedArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--重型头盔-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_HeavyHelmet</defName>
+    <label>Gray Heavy Helmet</label>
+    <description>Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
+    <techLevel>Spacer</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/HeavyPower/Gray_HeavyPowerHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_CombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>80</GR_Alloy>
+      <GR_Nanites>60</GR_Nanites>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/HeavyPower/Gray_HeavyPowerHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_MeleeArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
     <tradeTags>
       <li>BasicClothing</li>
     </tradeTags>

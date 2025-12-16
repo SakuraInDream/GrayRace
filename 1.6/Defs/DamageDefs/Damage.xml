@@ -91,4 +91,13 @@
     <defaultArmorPenetration>1</defaultArmorPenetration>
     <workerClass>DamageWorker_AddInjury</workerClass>
   </DamageDef>
+
+  <!--撬棍用破墙锐伤-->
+  <DamageDef ParentName="CutBase">
+    <defName>GR_CrowbarDamage</defName>
+    <label>Crowbar Damage</label>
+    <buildingDamageFactorImpassable>60</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>30</buildingDamageFactorPassable>
+  </DamageDef>
+
 </Defs>

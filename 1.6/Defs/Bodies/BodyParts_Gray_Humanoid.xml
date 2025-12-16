@@ -26,13 +26,11 @@
 
   <BodyPartDef>
     <defName>Nano_Brain</defName>
-    <label>AI Persona Core</label>
-    <hitPoints>10</hitPoints>
+    <label>AI Persona Core Shield</label>
+    <hitPoints>25</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
     <skinCovered>false</skinCovered>
     <canScarify>false</canScarify>
-    <tags>
-      <li>ConsciousnessSource</li>
-    </tags>
     <canSuggestAmputation>false</canSuggestAmputation>
     <spawnThingOnRemoved>AIPersonaCore</spawnThingOnRemoved>
   </BodyPartDef>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Gray colonial outpost -->
   <Gray_PlayerFaction.label>灰裔殖民前哨站</Gray_PlayerFaction.label>
   <!-- EN: A colony of recently-arrived Grays. -->
@@ -13,5 +13,5 @@
   <Gray_PlayerFaction.pawnSingular>TODO</Gray_PlayerFaction.pawnSingular>
   <!-- EN: kiiro colonists -->
   <Gray_PlayerFaction.pawnsPlural>TODO</Gray_PlayerFaction.pawnsPlural>
-
+  
 </LanguageData>

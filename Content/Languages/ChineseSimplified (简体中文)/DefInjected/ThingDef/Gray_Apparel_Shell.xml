@@ -1,19 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
+  <!-- EN: Gray Heavy Armor -->
+  <Gray_Apparel_HeavyArmor.label>灰裔重型装甲</Gray_Apparel_HeavyArmor.label>
+  <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
+  <Gray_Apparel_HeavyArmor.description>TODO</Gray_Apparel_HeavyArmor.description>
+
+  <!-- EN: Gray Light Armor -->
+  <Gray_Apparel_LightArmor.label>灰裔轻型装甲</Gray_Apparel_LightArmor.label>
+  <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
+  <Gray_Apparel_LightArmor.description>TODO</Gray_Apparel_LightArmor.description>
+
   <!-- EN: Gray Marksman Armor -->
-  <Gray_Apparel_MarksmanArmor.label>TODO</Gray_Apparel_MarksmanArmor.label>
+  <Gray_Apparel_MarksmanArmor.label>“平行线”折射稳定装甲</Gray_Apparel_MarksmanArmor.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
   <Gray_Apparel_MarksmanArmor.description>TODO</Gray_Apparel_MarksmanArmor.description>
-  
+
   <!-- EN: Gray Mechanitor Armor -->
-  <Gray_Apparel_MechanitorArmor.label>TODO</Gray_Apparel_MechanitorArmor.label>
+  <Gray_Apparel_MechanitorArmor.label>“司阵骨架”临场指挥外骨骼</Gray_Apparel_MechanitorArmor.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
   <Gray_Apparel_MechanitorArmor.description>TODO</Gray_Apparel_MechanitorArmor.description>
-  
+
   <!-- EN: Gray Warrior Armor -->
-  <Gray_Apparel_MeleeArmor.label>TODO</Gray_Apparel_MeleeArmor.label>
+  <Gray_Apparel_MeleeArmor.label>“崇高意志”机装</Gray_Apparel_MeleeArmor.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
   <Gray_Apparel_MeleeArmor.description>TODO</Gray_Apparel_MeleeArmor.description>
-  
+
 </LanguageData>

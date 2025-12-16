@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: gray elite fire support soldier -->
+  <Gray_EliteFireSupportSoldier.label>灰裔精英火力支援兵</Gray_EliteFireSupportSoldier.label>
+  
+  <!-- EN: gray elite heavy fire support soldier -->
+  <Gray_EliteHeavyFireSupportSoldier.label>灰裔精英重型火力支援兵</Gray_EliteHeavyFireSupportSoldier.label>
+  
+  <!-- EN: gray elite soldier -->
+  <Gray_EliteSoldier.label>灰裔精英士兵</Gray_EliteSoldier.label>
+  
+  <!-- EN: gray fire support soldier -->
+  <Gray_FireSupportSoldier.label>灰裔火力支援兵</Gray_FireSupportSoldier.label>
+  
+  <!-- EN: gray heavy fire support soldier -->
+  <Gray_HeavyFireSupportSoldier.label>灰裔重型火力支援兵</Gray_HeavyFireSupportSoldier.label>
+  
+  <!-- EN: gray soldier -->
+  <Gray_Soldier.label>灰裔士兵</Gray_Soldier.label>
+  
+</LanguageData>

@@ -5,5 +5,9 @@
         <defName>GR_NanoScratch</defName>
         <label>Nanite Scratch</label>
     </ToolCapacityDef>
-    
+
+    <ToolCapacityDef>
+        <defName>GR_CrowbarDamage</defName>
+        <label>Crowbar Damage</label>
+    </ToolCapacityDef>
 </Defs>

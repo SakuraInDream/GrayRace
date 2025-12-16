@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <!-- EN: AI Persona Core -->
-  <Nano_Brain.label>TODO</Nano_Brain.label>
-  
+
+  <!-- EN: AI Persona Core Shield -->
+  <Nano_Brain.label>人格核心护盾</Nano_Brain.label>
+
   <!-- EN: Nanite Core -->
-  <Nano_Heart.label>TODO</Nano_Heart.label>
-  
+  <Nano_Heart.label>灰潮核心</Nano_Heart.label>
+
   <!-- EN: Nanite torso -->
-  <Nano_Torso.label>TODO</Nano_Torso.label>
-  
+  <Nano_Torso.label>躯干</Nano_Torso.label>
+
 </LanguageData>

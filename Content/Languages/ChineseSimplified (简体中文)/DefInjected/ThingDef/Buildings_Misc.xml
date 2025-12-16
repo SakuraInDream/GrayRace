@@ -2,12 +2,12 @@
 <LanguageData>
   
   <!-- EN: SCC Signal Relay Terminal -->
-  <GR_SCC_BandNode.label>TODO</GR_SCC_BandNode.label>
+  <GR_SCC_BandNode.label>战略指挥中心信号转发终端</GR_SCC_BandNode.label>
   <!-- EN: A terminal that receives signals from the Strategic Coordination Center. It must be tuned to a specific Mechanitor. This will add 10 bandwidth to that mechanitor's total bandwidth, allowing them to control more mechanoids. The terminal can be quickly tuned to a Mechanitor immediately after construction. However, retuning it to a different Mechanitor takes considerably longer. -->
   <GR_SCC_BandNode.description>TODO</GR_SCC_BandNode.description>
   
   <!-- EN: Science Nexus DownLink -->
-  <GR_ScienceNexus.label>TODO</GR_ScienceNexus.label>
+  <GR_ScienceNexus.label>科研枢纽下行链路</GR_ScienceNexus.label>
   <!-- EN: Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one multi-analyzer. -->
   <GR_ScienceNexus.description>TODO</GR_ScienceNexus.description>
   

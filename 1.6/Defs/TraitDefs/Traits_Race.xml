@@ -31,7 +31,7 @@
         <label>Natural Engineers</label>
         <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
         <statFactors>
-          <WorkSpeedGlobal>1.5</WorkSpeedGlobal>
+          <GeneralLaborSpeed>1.5</GeneralLaborSpeed>
           <ConstructionSpeed>1.5</ConstructionSpeed>
         </statFactors>
       </li>
