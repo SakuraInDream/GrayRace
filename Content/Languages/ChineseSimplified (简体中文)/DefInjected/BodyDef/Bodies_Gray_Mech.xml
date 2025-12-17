@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Warship -->
   <GR_MechBody.label>舰娘</GR_MechBody.label>
   <!-- EN: Hull -->
@@ -34,5 +34,5 @@
   <GR_MechBody.corePart.parts.Armored_Belt.customLabel>装甲带</GR_MechBody.corePart.parts.Armored_Belt.customLabel>
   <!-- EN: Circulating pipeline -->
   <GR_MechBody.corePart.parts.Circulating_pipeline.customLabel>循环管线</GR_MechBody.corePart.parts.Circulating_pipeline.customLabel>
-
+  
 </LanguageData>
