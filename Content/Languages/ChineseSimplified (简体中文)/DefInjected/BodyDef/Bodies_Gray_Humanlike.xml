@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Gray -->
   <Gray.label>灰裔</Gray.label>
   <!-- EN: AI Persona Core -->
@@ -73,12 +73,12 @@
   <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>右二趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>
   <!-- EN: right big toe -->
   <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>右大拇趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>
-
+  
   <!-- UNUSED -->
   <Gray.corePart.parts.Neck.parts.Head.parts.Nano_Brain.parts.AI_Persona_Core.customLabel>人格核心</Gray.corePart.parts.Neck.parts.Head.parts.Nano_Brain.parts.AI_Persona_Core.customLabel>
   <Gray.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>左眼</Gray.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>
   <Gray.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>右眼</Gray.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>
   <Gray.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>左耳</Gray.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>
   <Gray.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>右耳</Gray.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>
-
+  
 </LanguageData>

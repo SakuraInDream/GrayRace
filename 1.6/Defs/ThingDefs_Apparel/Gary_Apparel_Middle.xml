@@ -67,7 +67,7 @@
   </ThingDef>
 
   <!--夜宴晚礼服-->
-  <ThingDef ParentName="ApparelMakeableBase">
+  <ThingDef ParentName="ApparelMakeableBase" Name="GR_ApparelProfessional">
     <defName>Gray_Apparel_BanquetDress</defName>
     <description>.</description>
     <label>Gray Evening Banquet Dress</label>
@@ -81,7 +81,7 @@
     </thingCategories>
     <recipeMaker>
       <researchPrerequisites>
-        <li>GR_BasicClothing</li>
+        <li>GR_ProfessionalClothing</li>
       </researchPrerequisites>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
@@ -129,7 +129,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-        <li>Gray_Daily</li>
+        <li>GR_Decorative</li>
       </tags>
       <defaultOutfitTags>
         <li>Worker</li>
@@ -137,8 +137,34 @@
       <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
-    <comps>
-    </comps>
+  </ThingDef>
+
+  <!--神道巫女-->
+  <ThingDef ParentName="GR_ApparelProfessional">
+    <defName>Gray_Apparel_MikoOutfit</defName>
+    <description>.</description>
+    <label>Gray miko outfit</label>
+    <graphicData>
+      <texPath>Apparel/MikoOutfit/Gray_MikoOutfit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <equippedStatOffsets>
+      <PawnBeauty>2</PawnBeauty>
+      <StudyEfficiency MayRequire="Ludeon.RimWorld.Anomaly">0.2</StudyEfficiency>
+      <EntityStudyRate MayRequire="Ludeon.RimWorld.Anomaly">0.2</EntityStudyRate>
+      <ActivitySuppressionRate MayRequire="Ludeon.RimWorld.Anomaly">0.2</ActivitySuppressionRate>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Apparel/MikoOutfit/Gray_MikoOutfit</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>GR_Decorative</li>
+      </tags>
+    </apparel>
   </ThingDef>
 
 </Defs>

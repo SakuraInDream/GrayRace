@@ -9,10 +9,10 @@
     <itemQuality>Excellent</itemQuality>
     <isFighter>true</isFighter>
     <factionLeader>false</factionLeader>
-    <apparelMoney>2000~3000</apparelMoney>
+    <apparelMoney>100~500</apparelMoney>
     <apparelTags>
-      <li>Gray_Underwear</li>
-      <li>Gray_Daily</li>
+      <li>GR_Underwear</li>
+      <li>GR_Daily</li>
     </apparelTags>
     <apparelDisallowTags>
     </apparelDisallowTags>
@@ -161,7 +161,7 @@
     <specificApparelRequirements>
       <li>
         <bodyPartGroup>Torso</bodyPartGroup>
-        <requiredTag>Gray_Daily</requiredTag>
+        <requiredTag>GR_Daily</requiredTag>
       </li>
     </specificApparelRequirements>
     <apparelDisallowTags>

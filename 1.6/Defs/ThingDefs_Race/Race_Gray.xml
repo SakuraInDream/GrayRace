@@ -376,6 +376,13 @@
           <li>Gray_Apparel_HeavyHelmet</li>
           <li>Gray_Apparel_HeavyArmor</li>
           <li>Gray_Apparel_UniversalISA</li>
+          <li>Gray_Apparel_CrewUniformA</li>
+          <li>Gray_Apparel_CrewUniformB</li>
+          <li>Gray_Apparel_CrewUniformC</li>
+          <li>Gray_Apparel_NileGauze</li>
+          <li>Gray_Apparel_StrangeNurse</li>
+          <li>Gray_Apparel_BanquetDress</li>
+          <li>Gray_Apparel_MikoOutfit</li>
         </apparelList>
         <whiteApparelList>
           <li>Gray_Apparel_MechanitorBelt</li>

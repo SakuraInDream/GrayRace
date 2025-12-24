@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Gray Heavy Helmet -->
   <Gray_Apparel_HeavyHelmet.label>灰裔重型头盔</Gray_Apparel_HeavyHelmet.label>
   <!-- EN: Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire. -->
   <Gray_Apparel_HeavyHelmet.description>TODO</Gray_Apparel_HeavyHelmet.description>
-
+  
   <!-- EN: Gray Light Helmet -->
   <Gray_Apparel_LightHelmet.label>灰裔轻型头盔</Gray_Apparel_LightHelmet.label>
   <!-- EN: Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire. -->
   <Gray_Apparel_LightHelmet.description>TODO</Gray_Apparel_LightHelmet.description>
-
+  
   <!-- EN: Gray Marksman Helmet -->
   <Gray_Apparel_MarksmanHelmet.label>“相交线”目标追踪头盔</Gray_Apparel_MarksmanHelmet.label>
   <!-- EN: Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire. -->
   <Gray_Apparel_MarksmanHelmet.description>TODO</Gray_Apparel_MarksmanHelmet.description>
-
+  
   <!-- EN: Gray Mechanitor Helmet -->
   <Gray_Apparel_MechanitorHelmet.label>“交感折射镜”思维分析护目镜</Gray_Apparel_MechanitorHelmet.label>
   <!-- EN: Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire. -->
   <Gray_Apparel_MechanitorHelmet.description>TODO</Gray_Apparel_MechanitorHelmet.description>
-
+  
   <!-- EN: Gray Warrior Helmet -->
   <Gray_Apparel_MeleeHelmet.label>“骑士精神”面甲</Gray_Apparel_MeleeHelmet.label>
   <!-- EN: Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire. -->
   <Gray_Apparel_MeleeHelmet.description>TODO</Gray_Apparel_MeleeHelmet.description>
-
+  
 </LanguageData>

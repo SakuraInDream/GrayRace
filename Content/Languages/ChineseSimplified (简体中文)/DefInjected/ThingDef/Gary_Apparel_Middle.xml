@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray Evening Banquet Dress -->
   <Gray_Apparel_BanquetDress.label>灰裔夜宴晚礼服</Gray_Apparel_BanquetDress.label>
   <!-- EN: . -->
   <Gray_Apparel_BanquetDress.description>TODO</Gray_Apparel_BanquetDress.description>
-  
+
+  <!-- EN: Gray miko outfit -->
+  <Gray_Apparel_MikoOutfit.label>灰裔神道巫女服</Gray_Apparel_MikoOutfit.label>
+  <!-- EN: . -->
+  <Gray_Apparel_MikoOutfit.description>TODO</Gray_Apparel_MikoOutfit.description>
+
   <!-- EN: Gray Qipao -->
   <Gray_Apparel_Qipao.label>TODO</Gray_Apparel_Qipao.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
   <Gray_Apparel_Qipao.description>TODO</Gray_Apparel_Qipao.description>
-  
+
 </LanguageData>
