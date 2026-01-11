@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HarmonyLib;
-using RimWorld;
+﻿// using HarmonyLib;
 using Verse;
 
 namespace SD.GrayRace
 {
+    // 预留 Mod 配置
     public class GrayRaceMod : Mod
     {
-        public static Harmony HarmonyInstance;
+        // public static Harmony HarmonyInstance;
 
         public GrayRaceMod(ModContentPack content) : base(content)
         {

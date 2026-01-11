@@ -484,6 +484,8 @@
           <li>0.75</li>
         </resourceGizmoThresholds>
       </li>
+      <!-- 超频系统 -->
+      <li Class="SD.GrayRace.Comps.CompProperties_Overclock" />
     </comps>
     <damageMultipliers>
       <li>

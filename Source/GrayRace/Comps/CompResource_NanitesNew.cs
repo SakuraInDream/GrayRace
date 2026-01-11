@@ -8,7 +8,7 @@ using Verse;
 namespace SD.GrayRace.Comps
 {
     // 纳米机械资源实现
-    public class CompResourceNanitesNew: ThingComp
+    public class CompResource_NanitesNew: ThingComp
     {
         private float _curNanites;
 
@@ -34,7 +34,12 @@ namespace SD.GrayRace.Comps
                 return Pawn.GetStatValue(GrayRaceDefOf.GRStat_NaniteMax);
             }
         }
-        public float CurrentNanites => _curNanites;
+        public float CurrentNanites
+        {
+            get => _curNanites;
+            set => _curNanites = value;
+        }
+
         public float CurrentNanitesPercent => Max > 0 ? _curNanites / Max : 0f;
 
         public bool CanRegenNanites
@@ -76,6 +81,7 @@ namespace SD.GrayRace.Comps
             if (!CanRegenNanites) return;
 
             float regenAmount = Pawn.GetStatValue(GrayRaceDefOf.GRStat_NaniteRegenRate);
+
             _curNanites = Mathf.Min(_curNanites + regenAmount, Max);
         }
 
@@ -85,11 +91,6 @@ namespace SD.GrayRace.Comps
             {
                 Pawn.health.AddHediff(GrayRaceDefOf.NanitesRegeneration);
             }
-        }
-
-        private void UpdateStatsCache()
-        {
-
         }
 
         public bool TrySpendNanites(float amount, string reason = "")

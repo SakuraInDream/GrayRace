@@ -10,7 +10,7 @@ namespace SD.GrayRace.UISet.Gizmos
     [StaticConstructorOnStartup]
     public class Gizmo_NaniteResourcesNew : Gizmo_Slider
     {
-        protected CompResourceNanitesNew resource;
+        protected CompResource_NanitesNew resource;
         protected override float Width => 300f;
         protected override float Target { get; set; }
 
@@ -21,7 +21,7 @@ namespace SD.GrayRace.UISet.Gizmos
         private static readonly Texture2D s_hover = ContentFinder<Texture2D>.Get("UI/Gizmo/Hover", true);
         private static readonly Texture2D s_normal = ContentFinder<Texture2D>.Get("UI/Gizmo/Normal", true);
 
-        public Gizmo_NaniteResourcesNew(CompResourceNanitesNew resource)
+        public Gizmo_NaniteResourcesNew(CompResource_NanitesNew resource)
         {
             this.resource = resource;
         }
@@ -71,7 +71,7 @@ namespace SD.GrayRace.UISet.Gizmos
             {
                 sb.Append($"每秒回复: +{regenRate:F1}/s".Colorize(ColorLibrary.Green));
             }
-            else if (regenRate < 0f)
+            else if (regenRate <= 0f)
             {
                 sb.Append($"每秒消耗: -{regenRate:F1}/s".Colorize(ColorLibrary.RedReadable));
             }
