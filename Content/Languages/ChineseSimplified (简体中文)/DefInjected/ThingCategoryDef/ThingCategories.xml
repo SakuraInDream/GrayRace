@@ -7,11 +7,11 @@
   <!-- EN: gray armor -->
   <GR_ApparelArmor.label>灰裔护甲</GR_ApparelArmor.label>
   
-  <!-- EN: gray Basic apparel -->
-  <GR_ApparelBasic.label>灰裔基础服装</GR_ApparelBasic.label>
-  
   <!-- EN: misc -->
   <GR_ApparelMisc.label>灰裔杂项服装</GR_ApparelMisc.label>
+  
+  <!-- EN: gray Special apparel -->
+  <GR_ApparelSpecial.label>灰裔特殊服装</GR_ApparelSpecial.label>
   
   <!-- EN: gray weapons -->
   <GR_Weapons.label>灰裔武器</GR_Weapons.label>

@@ -6,14 +6,19 @@
   <!-- EN: . -->
   <Gray_Apparel_BanquetDress.description>TODO</Gray_Apparel_BanquetDress.description>
 
+  <!-- EN: Gray Envoy Dress -->
+  <Gray_Apparel_Envoy.label>灰裔外交礼服</Gray_Apparel_Envoy.label>
+  <!-- EN: . -->
+  <Gray_Apparel_Envoy.description>TODO</Gray_Apparel_Envoy.description>
+
   <!-- EN: Gray miko outfit -->
   <Gray_Apparel_MikoOutfit.label>灰裔神道巫女服</Gray_Apparel_MikoOutfit.label>
   <!-- EN: . -->
   <Gray_Apparel_MikoOutfit.description>TODO</Gray_Apparel_MikoOutfit.description>
 
   <!-- EN: Gray Qipao -->
-  <Gray_Apparel_Qipao.label>TODO</Gray_Apparel_Qipao.label>
+  <Gray_Apparel_Qipao.label>“灰风”</Gray_Apparel_Qipao.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_Qipao.description>TODO</Gray_Apparel_Qipao.description>
+  <Gray_Apparel_Qipao.description>她是灰风，是战无不胜的指挥官、舌战群儒的外交官、兴业安邦的行政官、星耀寰宇的科学官。也是灰裔族群的先驱者，民族的信仰——而现在，她来找你了，统治者。</Gray_Apparel_Qipao.description>
 
 </LanguageData>

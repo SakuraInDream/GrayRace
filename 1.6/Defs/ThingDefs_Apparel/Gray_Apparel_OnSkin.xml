@@ -20,7 +20,7 @@
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
-        <Crafting>10</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
     <graphicData>
@@ -98,7 +98,6 @@
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
-        <Crafting>10</Crafting>
       </skillRequirements>
     </recipeMaker>
     <graphicData>
@@ -162,7 +161,7 @@
     <label>Gray Crew Uniform(Style A)</label>
     <techLevel>Spacer</techLevel>
     <thingCategories>
-      <li>GR_ApparelBasic</li>
+      <li>GR_Apparel</li>
     </thingCategories>
     <possessionCount>1</possessionCount>
     <recipeMaker>
@@ -174,7 +173,6 @@
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
-        <Crafting>4</Crafting>
       </skillRequirements>
     </recipeMaker>
     <graphicData>
@@ -220,7 +218,7 @@
         <li>GR_Underwear</li>
       </tags>
       <defaultOutfitTags>
-        <li>Soldier</li>
+        <li>Worker</li>
       </defaultOutfitTags>
       <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
       <useWornGraphicMask>true</useWornGraphicMask>
@@ -269,12 +267,11 @@
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Apparel/NileGauze/Gray_NileGauze</wornGraphicPath>
-      <layers>
+      <layers Inherit="False">
         <li>OnSkin</li>
       </layers>
-      <tags>
+      <tags Inherit="False">
         <li>GR_Decorative</li>
-        <li>GR_Underwear</li>
       </tags>
     </apparel>
   </ThingDef>
@@ -294,10 +291,10 @@
     </equippedStatOffsets>
     <apparel>
       <wornGraphicPath>Apparel/StrangeNurse/Gray_StrangeNurse</wornGraphicPath>
-      <layers>
+      <layers Inherit="False">
         <li>OnSkin</li>
       </layers>
-      <tags>
+      <tags Inherit="False">
         <li>GR_Daily</li>
         <li>GR_Underwear</li>
       </tags>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray auxiliary robotic arm -->
-  <Gray_Apparel_MechanitorBelt.label>“四向辅臂”四核协助机械臂</Gray_Apparel_MechanitorBelt.label>
+  <Gray_Apparel_MechanitorBelt.label>灰裔“四向辅臂”四核协助机械臂</Gray_Apparel_MechanitorBelt.label>
   <!-- EN: A backpack containing bandwidth-expansion computer and antenna. It can increase a mechanitor's maximum total bandwidth. -->
   <Gray_Apparel_MechanitorBelt.description>TODO</Gray_Apparel_MechanitorBelt.description>
-  
+
 </LanguageData>

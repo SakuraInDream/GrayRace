@@ -57,7 +57,7 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>GR_NanoBullet</damageDef>
 			<damageAmountBase>521</damageAmountBase>
-			<armorPenetrationSharp>746</armorPenetrationSharp>
+			<armorPenetrationSharp>1177</armorPenetrationSharp>
 			<armorPenetrationBlunt>450000</armorPenetrationBlunt>
 			<speed>406</speed>
 		</projectile>

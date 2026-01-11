@@ -104,7 +104,7 @@
       <defaultProjectile>Bullet_SGLaser_GR</defaultProjectile>
       <warmupTime>0.6</warmupTime>
       <burstShotCount>3</burstShotCount>
-      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
       <range>18</range>
       <soundCast>GR_EnergyShotgun</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>

@@ -30,8 +30,8 @@
   </ThingCategoryDef>
 
   <ThingCategoryDef>
-    <defName>GR_ApparelBasic</defName>
-    <label>gray Basic apparel</label>
+    <defName>GR_ApparelSpecial</defName>
+    <label>gray Special apparel</label>
     <parent>GR_Apparel</parent>
   </ThingCategoryDef>
 

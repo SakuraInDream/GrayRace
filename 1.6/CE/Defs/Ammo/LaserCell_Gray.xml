@@ -68,6 +68,7 @@
     <label>laser beam</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageAmountBase>21</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
     </projectile>
   </ThingDef>
 

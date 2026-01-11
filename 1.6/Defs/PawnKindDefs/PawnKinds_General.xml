@@ -9,7 +9,7 @@
     <itemQuality>Excellent</itemQuality>
     <isFighter>true</isFighter>
     <factionLeader>false</factionLeader>
-    <apparelMoney>100~500</apparelMoney>
+    <apparelMoney>500~2000</apparelMoney>
     <apparelTags>
       <li>GR_Underwear</li>
       <li>GR_Daily</li>
@@ -52,7 +52,7 @@
     <isFighter>true</isFighter>
     <factionLeader>false</factionLeader>
     <minGenerationAge Inherit="False">15</minGenerationAge>
-    <apparelMoney>100~500</apparelMoney>
+    <apparelMoney>500~2000</apparelMoney>
     <apparelTags>
       <li>GR_Daily</li>
       <li>GR_Underwear</li>
@@ -153,7 +153,7 @@
     <trader>true</trader>
     <factionLeader>false</factionLeader>
     <minGenerationAge Inherit="False">15</minGenerationAge>
-    <apparelMoney>1200~2000</apparelMoney>
+    <apparelMoney>1200~3000</apparelMoney>
     <apparelTags>
       <li>GR_Underwear</li>
       <li>GR_Daily</li>

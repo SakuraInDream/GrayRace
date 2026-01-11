@@ -104,7 +104,7 @@
       <defaultProjectile>Bullet_ShotgunRail</defaultProjectile>
       <warmupTime>0.6</warmupTime>
       <burstShotCount>5</burstShotCount>
-      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
       <range>25</range>
       <soundCast>GR_RailSniperRifle</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>

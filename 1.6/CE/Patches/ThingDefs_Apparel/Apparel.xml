@@ -350,4 +350,38 @@
 		</value>
 	</Operation>
 
+  <!--旗袍-->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_Qipao"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>10000</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_Qipao"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>20000</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Gray_Apparel_Qipao"]/equippedStatOffsets</xpath>
+		<value>
+			<CarryBulk>5000</CarryBulk>
+			<CarryWeight>5000</CarryWeight>
+		</value>
+	</Operation>
+
+  <!--舰员制服-->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gray_Apparel_CrewUniformA"]/statBases/StuffEffectMultiplierArmor</xpath>
+    <value>
+      <StuffEffectMultiplierArmor>3</StuffEffectMultiplierArmor>
+      <Bulk>2</Bulk>
+      <WornBulk>0</WornBulk>
+    </value>
+  </Operation>
 </Patch>

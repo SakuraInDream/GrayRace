@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: high on Zro -->
-  <GR_ZroHigh.stages.high_on_Zro.label>TODO</GR_ZroHigh.stages.high_on_Zro.label>
+  <GR_ZroHigh.stages.high_on_Zro.label>泽珞亢奋</GR_ZroHigh.stages.high_on_Zro.label>
   <!-- EN: I see God calling me... -->
-  <GR_ZroHigh.stages.high_on_Zro.description>TODO</GR_ZroHigh.stages.high_on_Zro.description>
-  
+  <GR_ZroHigh.stages.high_on_Zro.description>我看到神在呼唤我...</GR_ZroHigh.stages.high_on_Zro.description>
+
   <!-- EN: go-juice withdrawal -->
-  <GR_ZroWithdrawal.stages.gojuice_withdrawal.label>TODO</GR_ZroWithdrawal.stages.gojuice_withdrawal.label>
+  <GR_ZroWithdrawal.stages.gojuice_withdrawal.label>泽珞戒断</GR_ZroWithdrawal.stages.gojuice_withdrawal.label>
   <!-- EN: I am confused and unable to think properly... My God, where are you? -->
-  <GR_ZroWithdrawal.stages.gojuice_withdrawal.description>TODO</GR_ZroWithdrawal.stages.gojuice_withdrawal.description>
-  
+  <GR_ZroWithdrawal.stages.gojuice_withdrawal.description>我感到迷茫，无法正常思考...我的神啊，你在哪里？</GR_ZroWithdrawal.stages.gojuice_withdrawal.description>
+
 </LanguageData>

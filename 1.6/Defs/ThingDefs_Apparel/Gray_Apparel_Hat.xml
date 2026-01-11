@@ -5,7 +5,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_MechanitorHelmet</defName>
     <label>Gray Mechanitor Helmet</label>
-    <description>Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
+    <description>.</description>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -88,7 +88,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_MarksmanHelmet</defName>
     <label>Gray Marksman Helmet</label>
-    <description>Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
+    <description>.</description>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -169,7 +169,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_MeleeHelmet</defName>
     <label>Gray Warrior Helmet</label>
-    <description>Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
+    <description>.</description>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -253,7 +253,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_LightHelmet</defName>
     <label>Gray Light Helmet</label>
-    <description>Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
+    <description>.</description>
     <techLevel>Spacer</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -296,7 +296,6 @@
       <EquipDelay>2</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-
     </equippedStatOffsets>
     <apparel>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
@@ -331,7 +330,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_HeavyHelmet</defName>
     <label>Gray Heavy Helmet</label>
-    <description>Stylish yet rugged, this helmet keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
+    <description>.</description>
     <techLevel>Spacer</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -399,6 +398,78 @@
       <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
     <colorGenerator Class="ColorGenerator_White" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--面纱-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_NileGauzeVeil</defName>
+    <label>Gray Nile Gauze Veil</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/NileGauze/Gray_NileGauzeVeil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_ProfessionalClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costList>
+    </costList>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>0.1</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/NileGauze/Gray_NileGauzeVeil</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <drawData>
+        <defaultData>
+          <layer>60</layer>
+        </defaultData>
+      </drawData>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_Decorative</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
     <tradeTags>
       <li>BasicClothing</li>
     </tradeTags>

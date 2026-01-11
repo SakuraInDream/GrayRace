@@ -167,7 +167,7 @@
           <bodyAddons>            <!--  BodyPart，附加组件  -->
             <!--前发-->
             <li>
-              <path>Race/Gray/Hair/Gray_Hair</path>
+              <path>Race/Gray/Hair/FrontHair/Gray_Hair</path>
               <conditions>
                 <BodyPart>
                   <bodyPart>Head</bodyPart>
@@ -203,11 +203,12 @@
               <userCustomizable>true</userCustomizable>
               <defaultOffset>Center</defaultOffset>
               <drawSize>1</drawSize>
+              <colorChannel>hair</colorChannel>
               <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
             </li>
             <!--后发-->
             <li>
-              <path>Race/Gray/Hair/Gray_HairBack</path>
+              <path>Race/Gray/Hair/BackHair/Gray_HairBack</path>
               <conditions>
                 <BodyPart>
                   <bodyPart>Head</bodyPart>
@@ -243,6 +244,7 @@
               <userCustomizable>true</userCustomizable>
               <defaultOffset>Center</defaultOffset>
               <drawSize>1</drawSize>
+              <colorChannel>hair</colorChannel>
               <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
               <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
             </li>
@@ -523,7 +525,7 @@
       <hasGenders>true</hasGenders>      <!--有性别-->
       <body>Gray</body>      <!-- body -->
       <renderTree>Humanlike</renderTree>
-      <bloodDef>Filth_Blood</bloodDef>
+      <bloodDef>Filth_MachineBits</bloodDef>
       <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
       <specificMeatDef>GR_GrayFlesh</specificMeatDef>
       <baseBodySize>1</baseBodySize>      <!--体型大小-->
