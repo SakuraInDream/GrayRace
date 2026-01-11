@@ -1,8 +1,6 @@
 using RimWorld;
-using SD.GrayRace.Comps;
-using Verse;
 
-namespace SD.GrayRace
+namespace SD.GrayRace.Comps
 {
     public class CompProperties_AbilityNanitesCost: CompProperties_AbilityEffect
     {

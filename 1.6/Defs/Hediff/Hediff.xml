@@ -15,15 +15,17 @@
       <li>
         <totalBleedFactor>0</totalBleedFactor>
         <minSeverity>0</minSeverity>
+        <statOffsets>
+          <GRStat_NaniteRegenRate>-0.02</GRStat_NaniteRegenRate>
+        </statOffsets>
         <!-- <regeneration>5000</regeneration> -->
         <!-- <painFactor>0</painFactor> -->
       </li>
     </stages>
     <comps>
-      <li Class="SD.GrayRace.HediffCompProperties_NanitesRegeneration">
-        <!-- 每秒消耗 -->
+      <!-- <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NanitesRegeneration" /> -->
+      <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NanitesRegeneration">
         <naniteCostPerSeconds>0.01</naniteCostPerSeconds>
-        <!-- 每秒恢复 -->
         <healAmountPerSeconds>1</healAmountPerSeconds>
       </li>
     </comps>

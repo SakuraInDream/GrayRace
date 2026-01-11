@@ -13,13 +13,13 @@ namespace SD.GrayRace.ThingClasses
 {
     public enum IncubatorState
     {
-        [Localized("空闲")]
+        [Localized("GR_IncubatorState_Idle")] // 空闲
         Idle,
-        [Localized("准备材料")]
+        [Localized("GR_IncubatorState_Preparing")] // 准备材料
         Preparing,
-        [Localized("培育中")]
+        [Localized("GR_IncubatorState_Incubating")] // 培育中
         Incubating,
-        [Localized("培育完成")]
+        [Localized("GR_IncubatorState_Finished")] // 培育完成
         Finished
     }
     // 消耗纳米机械和电力进行培育
@@ -131,7 +131,7 @@ namespace SD.GrayRace.ThingClasses
 
             if (!p.IsGrayRace())
             {
-                return "非灰裔".Translate();
+                return "GR_NoneGrayRace".Translate(); // 非灰裔
             }
 
             return p.IsColonist && !p.IsQuestLodger();
@@ -452,6 +452,7 @@ namespace SD.GrayRace.ThingClasses
             );
             _baby = PawnGenerator.GeneratePawn(pReq);
 
+            // 是否设置了固定 trait
             var ext = foundationRecipe?.GetModExtension<DefModExtension_RecipeNewBorn>();
             if (ext?.newBornBackstory != null)
             {

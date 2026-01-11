@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Hediffs.Hediff_Overclock Name="GrayOverclockBase" Abstract="True">
+    <defaultLabelColor>(1,0.8,0.8)</defaultLabelColor>
+    <initialSeverity>0.01</initialSeverity>
+    <maxSeverity>1.0</maxSeverity>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+  </SD.GrayRace.Hediffs.Hediff_Overclock>
+
+  <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
+    <defName>GR_Overclock_Arm</defName>
+    <label>手臂超频</label>
+    <description>加速能量消耗对部位进行效率超频。</description>
+    <!-- 范围 0% 到 100% -->
+    <efficiencyRange>0~1</efficiencyRange>
+    <!-- 基础能量消耗 -->
+    <baseEnergyDrain>1.0</baseEnergyDrain>
+  </SD.GrayRace.Hediffs.HediffDef_Overclock>
+
+  <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
+    <defName>GR_Overclock_Leg</defName>
+    <label>腿部超频</label>
+    <description>加速能量消耗对部位进行效率超频。</description>
+    <efficiencyRange>0~1</efficiencyRange>
+    <baseEnergyDrain>1.0</baseEnergyDrain>
+  </SD.GrayRace.Hediffs.HediffDef_Overclock>
+
+  <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
+    <defName>GR_Overclock_Eye</defName>
+    <label>眼部超频</label>
+    <description>加速能量消耗对部位进行效率超频。</description>
+    <efficiencyRange>0~1</efficiencyRange>
+    <baseEnergyDrain>1.0</baseEnergyDrain>
+  </SD.GrayRace.Hediffs.HediffDef_Overclock>
+
+  <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
+    <defName>GR_Overclock_Heart</defName>
+    <label>核心超频</label>
+    <description>大幅提升血液循环效率。</description>
+
+    <capacityToBoost>BloodPumping</capacityToBoost>
+    <capacityRange>0~0.8</capacityRange>
+    <baseEnergyDrain>5.0</baseEnergyDrain>
+  </SD.GrayRace.Hediffs.HediffDef_Overclock>
+
+  <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
+    <defName>GR_Overclock_Brain</defName>
+    <label>人格核心超频</label>
+    <description>提升意识水平。</description>
+    <!-- 这个玩意是仿原版的 capMods 实现，只不过只影响一个 capacity -->
+    <!-- 用法是直接指定 PawnCapacityDef -->
+    <!-- 这里直接写 <efficiencyRange>0~0.5</efficiencyRange> 也行，不要同时使用，二选一 -->
+    <capacityToBoost>Consciousness</capacityToBoost>
+    <!-- 指定超频的范围，跟 efficiencyRange 相同类型，都是 FloatRange -->
+    <capacityRange>0~0.5</capacityRange>
+    <baseEnergyDrain>5.0</baseEnergyDrain>
+  </SD.GrayRace.Hediffs.HediffDef_Overclock>
+</Defs>
