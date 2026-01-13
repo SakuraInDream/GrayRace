@@ -69,7 +69,7 @@ namespace SD.GrayRace.ITabs
             Widgets.DrawLineVertical(leftRect.xMax + 5f, leftRect.y, leftRect.height);
 
             // 5. 执行具体绘制
-            DrawPartList(leftRect, selPawn);
+            DrawPartList(leftRect);
             DrawControlPanel(rightRect, selPawn);
 
         }
@@ -120,7 +120,7 @@ namespace SD.GrayRace.ITabs
         }
 
         // 主绘制逻辑
-        private void DrawPartList(Rect rect, Pawn pawn)
+        private void DrawPartList(Rect rect)
         {
             Widgets.DrawMenuSection(rect);
 
@@ -251,11 +251,18 @@ namespace SD.GrayRace.ITabs
                 ApplyChanges(pawn);
             }
 
-            if (Widgets.ButtonText(new Rect(actionRect.x + 150f, actionRect.y, 100f, 40f), "重置")) // "Gray_Overclock_Reset".Translate()
+            if (Widgets.ButtonText(new Rect(actionRect.x + 150f, actionRect.y, 100f, 40f), "丢弃所有更改")) // "Gray_Overclock_Reset".Translate()
             {
                 ResetDraftData(pawn);
                 SoundDefOf.Click.PlayOneShotOnCamera();
             }
+
+            if (Widgets.ButtonText(new Rect(actionRect.x + 150f, actionRect.y, 100f, 40f), "重置"))
+            {
+
+                SoundDefOf.Click.PlayOneShotOnCamera();
+            }
+
 
             listing.End();
         }

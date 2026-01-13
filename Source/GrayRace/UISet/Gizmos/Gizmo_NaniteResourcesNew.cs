@@ -18,8 +18,8 @@ namespace SD.GrayRace.UISet.Gizmos
         private static readonly Texture2D s_barTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.34f, 0.42f, 0.43f));
         private static readonly Texture2D s_emptyBarTex = SolidColorMaterials.NewSolidColorTexture(new Color(0.03f, 0.035f, 0.05f));
 
-        private static readonly Texture2D s_hover = ContentFinder<Texture2D>.Get("UI/Gizmo/Hover", true);
-        private static readonly Texture2D s_normal = ContentFinder<Texture2D>.Get("UI/Gizmo/Normal", true);
+        private static readonly Texture2D s_hover = ContentFinder<Texture2D>.Get("UI/Gizmo/Hover");
+        private static readonly Texture2D s_normal = ContentFinder<Texture2D>.Get("UI/Gizmo/Normal");
 
         public Gizmo_NaniteResourcesNew(CompResource_NanitesNew resource)
         {
