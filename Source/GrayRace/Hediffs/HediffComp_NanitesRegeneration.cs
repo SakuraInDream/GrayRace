@@ -1,20 +1,21 @@
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using RimWorld;
+using SD.GrayRace.Comps;
 using UnityEngine;
 using Verse;
 
-namespace SD.GrayRace
+namespace SD.GrayRace.Hediffs
 {
+    // 待重构：原来的再生逻辑是直接对资源进行消耗，消耗量为 properties 里的内容，新的 CompResource 使用 StatDef 控制回复速率
     public class HediffComp_NanitesRegeneration : HediffComp
     {
-        private CompResource_Nanites _resNanites;
+        // private CompResource_Nanites _resNanites;
+        private CompResource_NanitesNew _resNanites;
 
         private List<Hediff_Injury> _tmpHediffInjuries = new List<Hediff_Injury>();
-
         private List<Hediff_MissingPart> _tmpHediffMissingParts = new List<Hediff_MissingPart>();
-        public HediffCompProperties_NanitesRegeneration Pros => (HediffCompProperties_NanitesRegeneration)props;
+
+        public HediffCompProperties_NanitesRegeneration Props => (HediffCompProperties_NanitesRegeneration)props;
         private HediffSet HediffSet => Pawn.health.hediffSet;
 
         private static readonly IComparer<Hediff_Injury> s_injurySeverityComparer = Comparer<Hediff_Injury>.Create((a, b) => b.Severity.CompareTo(a.Severity));
@@ -32,86 +33,36 @@ namespace SD.GrayRace
             { BodyPartTagDefOf.Spine, 1.7f }
         };
 
-        // 完全仿食尸鬼的高速再生，但是恢复速率可调 —— 诶，灵感菇来了
-        // private void NaniteHeal(HediffSet hediffSet)
-        // {
-        //     var healBudget = Pros.healAmountPerSeconds;
-        //     if (healBudget > 0f)
-        //     {
-        //         hediffSet.GetHediffs(ref tmpHediffInjuries, injury => true);
-        //         foreach (var tmpHediffInjury in tmpHediffInjuries)
-        //         {
-        //             float healMax = Mathf.Min(healBudget, tmpHediffInjury.Severity);
-        //             healBudget -= healMax;
-        //             if (tmpHediffInjury.Bleeding || tmpHediffInjury.TendableNow())
-        //                 tmpHediffInjury.Tended(new FloatRange(0.2f, healMax).RandomInRange * 1f, healMax * 1);
-        //             tmpHediffInjury.Heal(healMax);
-        //             hediffSet.Notify_Regenerated(Pros.naniteCostPerSeconds);
-        //             if (healBudget < 0f)
-        //                 break;
-        //         }
-        //
-        //         if (healBudget > 0f)
-        //         {
-        //             hediffSet.GetHediffs(
-        //                 ref tmpHediffMissingParts,
-        //                 h =>
-        //                     h.Part.parent != null &&
-        //                     !tmpHediffInjuries.Any(x => x.Part == h.Part.parent) &&
-        //                     hediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(h.Part.parent) == null
-        //                     && hediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(h.Part.parent) == null
-        //             );
-        //             var missingPart = tmpHediffMissingParts.FirstOrDefault(h => true);
-        //             if (missingPart != null)
-        //             {
-        //                 if (missingPart.Bleeding || missingPart.TendableNow())
-        //                     missingPart.Tended(new FloatRange(0.2f, 1f).RandomInRange * 1f, 1f, 1);
-        //                 BodyPartRecord part = missingPart.Part;
-        //                 Pawn.health.RemoveHediff(missingPart);
-        //
-        //                 Hediff regenHediff = Pawn.health.AddHediff(HediffDefOf.Misc, part);
-        //                 float parthealth = hediffSet.GetPartHealth(part);
-        //
-        //                 regenHediff.Severity = Mathf.Max(parthealth - 1f, parthealth * 0.9f);
-        //                 hediffSet.Notify_Regenerated(parthealth - regenHediff.Severity);
-        //             }
-        //         }
-        //     }
-        // }
-
         private void NaniteHeal_NewTemp()
         {
-            var resourceFraction = Mathf.Clamp01(_resNanites.CurResource / _resNanites.Max);
-
-            // 可用资源影响治疗速度 当见底时 直接不治疗，充盈时全速治疗
-            var speedMultiplier = Mathf.Lerp(0f, 1f, resourceFraction);
+            float resourceFraction = Mathf.Clamp01(_resNanites.CurrentNanites / _resNanites.Max);
+            float speedMultiplier = Mathf.Lerp(0.1f, 1f, resourceFraction);
 
             // 每次治疗的最大纳米机械消耗量
-            var maxConsumableNanites = Pros.naniteCostPerSeconds * speedMultiplier * 100f;
+            float maxConsumableNanites = Props.naniteCostPerSeconds * speedMultiplier * 10f;
+            float availableNanites = Mathf.Min(_resNanites.CurrentNanites, maxConsumableNanites);
 
-            var availableNanites = Mathf.Min(_resNanites.ValueForDisplay, maxConsumableNanites);
-
-            if (availableNanites <= 0f) return;
+            if (availableNanites <= 0.1f) return;
 
             // 评估伤势和缺失部件的紧急程度
-            var (injuryUrgency, missingUrgency) = EvaluateMedicalUrgency();
+            (float injuryUrgency, float missingUrgency) = EvaluateMedicalUrgency();
             // Log.Message($"Urgency Weight => Injury={injuryUrgency:F2}, Missing={missingUrgency:F2}");
             // 根据紧急程度计算资源分配权重
-            var (weightInjury, weightMissing) = CalculateAllocationWeights(injuryUrgency, missingUrgency);
+            (float weightInjury, float weightMissing) = CalculateAllocationWeights(injuryUrgency, missingUrgency);
 
             // 计算总权重
-            var totalWeight = weightInjury + weightMissing;
+            float totalWeight = weightInjury + weightMissing;
 
             if (totalWeight <= 0f) return;
 
             // 按权重分配纳米机械资源
-            var allocatedForInjuries = availableNanites * (weightInjury /  totalWeight);
-            var allocatedForMissing = availableNanites * (weightMissing / totalWeight);
+            float allocatedForInjuries = availableNanites * (weightInjury /  totalWeight);
+            float allocatedForMissing = availableNanites * (weightMissing / totalWeight);
 
             // Log.Message($"Allocation => Injuries={allocatedForInjuries:F2}, Missing={allocatedForMissing:F2}");
             if (allocatedForInjuries > 0)
             {
-                var remainingInjuryAllocation = ProcessInjuryHealing(allocatedForInjuries);
+                float remainingInjuryAllocation = ProcessInjuryHealing(allocatedForInjuries);
                 // 没用完的资源就给断肢再生
                 // Log.Message($"Unused {remainingInjuryAllocation:F2} nanites from injuries, reallocated to missing parts");
                 allocatedForMissing += remainingInjuryAllocation;
@@ -135,11 +86,11 @@ namespace SD.GrayRace
             {
                 if (remainingAllocation <= 0f) break;
 
-                float maxHealable = Mathf.Min(injury.Severity, Pros.healAmountPerSeconds);
+                float maxHealable = Mathf.Min(injury.Severity, Props.healAmountPerSeconds);
 
                 if (maxHealable <= 0f) continue;
 
-                var cost = maxHealable / Pros.healAmountPerSeconds * Pros.naniteCostPerSeconds;
+                var cost = maxHealable / Props.healAmountPerSeconds * Props.naniteCostPerSeconds;
                 if (GrayRaceUtilities.TryConsumeNanites(Pawn, cost))
                 {
                     if(injury.Bleeding || injury.TendableNow())
@@ -170,12 +121,12 @@ namespace SD.GrayRace
 
                 var partImportance = GetBodyPartImportance(part);
 
-                var nanitesPerHP = Pros.naniteCostPerSeconds * partImportance / Pros.healAmountPerSeconds;
+                var nanitesPerHP = Props.naniteCostPerSeconds * partImportance / Props.healAmountPerSeconds;
 
                 var partMaxHealth = part.def.GetMaxHealth(Pawn);
 
                 // var maxRestorable = Mathf.Min(remainingAllocation / nanitesPerHP, partMaxHealth * 0.1f);
-                var maxRestorable = Mathf.Min(nanitesPerHP * partMaxHealth, Pros.healAmountPerSeconds);
+                var maxRestorable = Mathf.Min(nanitesPerHP * partMaxHealth, Props.healAmountPerSeconds);
 
                 // Log.Message($"maxRestorable: {maxRestorable} partMaxHealth: {partMaxHealth}");
                 if (maxRestorable <= 0f) continue;
@@ -278,14 +229,18 @@ namespace SD.GrayRace
         public override void CompPostMake()
         {
             base.CompPostMake();
-            _resNanites = Pawn?.TryGetComp<CompResource_Nanites>();
+            _resNanites = Pawn?.TryGetComp<CompResource_NanitesNew>();
         }
 
         public override void CompPostTickInterval(ref float severityAdjustment, int delta)
         {
-            _resNanites ??= Pawn.TryGetComp<CompResource_Nanites>();
+            base.CompPostTickInterval(ref severityAdjustment, delta);
 
-            if (_resNanites.CurResource < Pros.naniteCostPerSeconds) return;
+            if (Pawn.Dead) return;
+
+            _resNanites ??= Pawn.TryGetComp<CompResource_NanitesNew>();
+
+            if (_resNanites is null || _resNanites.CurrentNanites < 0.9) return;
 
             // Log.Message($"InCompTick");
             // 每 300tick 重建一次伤口和断肢列表

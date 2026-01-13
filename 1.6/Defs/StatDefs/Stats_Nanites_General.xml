@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <StatDef>
+    <defName>GRStat_NaniteMax</defName>
+    <label>备用灰潮源质上限</label>
+    <description>灰裔体内能够储存的备用纳米机械最大值。</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0</defaultBaseValue>
+    <minValue>0</minValue>
+    <toStringStyle>Integer</toStringStyle>
+    <workerClass>SD.GrayRace.StatWorkers.StatWorker_GrayRace</workerClass>
+  </StatDef>
+
+  <StatDef>
+    <defName>GRStat_NaniteRegenRate</defName>
+    <label>备用灰潮源质回复率</label>
+    <description>灰裔每秒自动回复的纳米机械数量。</description>
+    <category>BasicsPawn</category>
+    <defaultBaseValue>0.0</defaultBaseValue>
+    <toStringStyle>FloatTwo</toStringStyle>
+    <workerClass>SD.GrayRace.StatWorkers.StatWorker_GrayRace</workerClass>
+
+    <capacityFactors>
+      <li>
+        <capacity>BloodPumping</capacity>
+      </li>
+    </capacityFactors>
+  </StatDef>
+</Defs>

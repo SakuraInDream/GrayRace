@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using RimWorld;
+using SD.GrayRace.Comps;
 using SD.GrayRace.JobGivers;
 using UnityEngine;
 using Verse;
@@ -21,7 +22,15 @@ namespace SD.GrayRace.Needs
         {
             if (!IsFrozen)
             {
-                CurLevel -= 0.002f;
+                float fallPerTick = def.fallPerDay / 60000f * 150f;
+                var overclockComp = pawn.GetComp<CompOverclock>();
+                if (overclockComp != null)
+                {
+                    // 假设 CachedEnergyConsumptionFactor 是 0.5 (代表增加 50% 消耗)
+                    // 最终消耗 = 基础 * (1 + 额外系数)
+                    fallPerTick *= (1f + overclockComp.CachedEnergyConsumptionFactor);
+                }
+                CurLevel -= fallPerTick;
             }
         }
 
@@ -29,6 +38,20 @@ namespace SD.GrayRace.Needs
         {
             StringBuilder sb = new StringBuilder(base.GetTipString());
             sb.AppendInNewLine($"{CurLevel:F2}/{MaxLevel:F2}");
+            float fallPerDay = def.fallPerDay;
+            float extraFactor = 0f;
+            var overclockComp = pawn.GetComp<CompOverclock>();
+            if (overclockComp != null)
+            {
+                extraFactor = overclockComp.CachedEnergyConsumptionFactor;
+                fallPerDay *= (1f + extraFactor);
+            }
+
+            if (fallPerDay > 0.01f)
+            {
+                sb.AppendInNewLine($"能量消耗 {-fallPerDay:F2}/天 | {(fallPerDay/60000):F4}/tick (超频: {extraFactor:P0})".Colorize(ColorLibrary.RedReadable));
+            }
+
             sb.AppendInNewLine($"自动寻找金属:{stopSeekingMetal}");
 
             return sb.ToString();

@@ -79,6 +79,18 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
   </PropertyGroup>
 
+
+  <PropertyGroup>
+    <VerDay>$([System.DateTime]::Now.ToString("yyMM"))</VerDay>
+    <VerTime>$([System.DateTime]::Now.ToString("ddHH"))</VerTime>
+
+    <FullBuildDate>$([System.DateTime]::Now.ToString("yyyy-MM-dd"))</FullBuildDate>
+    <Version>1.0.$(VerDay).$(VerTime)</Version>
+    <InformationalVersion>$(Version) build at $(FullBuildDate)</InformationalVersion>
+  </PropertyGroup>
+
+
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\..\$(RimWorldVersion)\Assemblies\</OutputPath>
   </PropertyGroup>
