@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: gray apparel -->
+  <GR_Apparel.label>灰裔服装</GR_Apparel.label>
+  
+  <!-- EN: gray armor -->
+  <GR_ApparelArmor.label>灰裔护甲</GR_ApparelArmor.label>
+  
+  <!-- EN: misc -->
+  <GR_ApparelMisc.label>灰裔杂项服装</GR_ApparelMisc.label>
+  
+  <!-- EN: gray Special apparel -->
+  <GR_ApparelSpecial.label>灰裔特殊服装</GR_ApparelSpecial.label>
+  
+  <!-- EN: gray weapons -->
+  <GR_Weapons.label>灰裔武器</GR_Weapons.label>
+  
+  <!-- EN: gray melee weapons -->
+  <GR_WeaponsMelee.label>灰裔近战武器</GR_WeaponsMelee.label>
+  
+  <!-- EN: gray ranged weapons -->
+  <GR_WeaponsRanged.label>灰裔远程武器</GR_WeaponsRanged.label>
+  
+</LanguageData>

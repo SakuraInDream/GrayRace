@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Persona Matrix - Adjutant -->
+  <GRRecipe_Adjutant.label>TODO</GRRecipe_Adjutant.label>
+  <!-- EN: Designed to provide tactical advice and decision-making guidance. Contains leadership protocols and basic firearms knowledge. -->
+  <GRRecipe_Adjutant.description>TODO</GRRecipe_Adjutant.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Adjutant.jobString>TODO</GRRecipe_Adjutant.jobString>
+  
+  <!-- EN: Persona Matrix - Aide -->
+  <GRRecipe_Aide.label>TODO</GRRecipe_Aide.label>
+  <!-- EN: Built primarily to assist others, this matrix's knowledge base spans nearly all known fields—pushing the storage capacity of a persona matrix to its absolute limit. -->
+  <GRRecipe_Aide.description>TODO</GRRecipe_Aide.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Aide.jobString>TODO</GRRecipe_Aide.jobString>
+  
+  <!-- EN: Persona Matrix - Architect -->
+  <GRRecipe_Architect.label>TODO</GRRecipe_Architect.label>
+  <!-- EN: Capable of simultaneous architectural planning and construction. Includes fundamental material science knowledge, enabling adaptation to resource-poor or exotic material environments. -->
+  <GRRecipe_Architect.description>TODO</GRRecipe_Architect.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Architect.jobString>TODO</GRRecipe_Architect.jobString>
+  
+  <!-- EN: Persona Matrix - Artist -->
+  <GRRecipe_Artist.label>TODO</GRRecipe_Artist.label>
+  <!-- EN: Designed for the mass production of artworks. Imprinted with human-defined aesthetic standards and comprehensive fabrication knowledge. -->
+  <GRRecipe_Artist.description>TODO</GRRecipe_Artist.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Artist.jobString>TODO</GRRecipe_Artist.jobString>
+  
+  <!-- EN: Persona Matrix - Constable -->
+  <GRRecipe_Constable.label>TODO</GRRecipe_Constable.label>
+  <!-- EN: Created for conflict mediation between individuals, with contingency protocols for violent scenarios. Includes friendly social interaction modules and proficiency with most melee weapons. -->
+  <GRRecipe_Constable.description>TODO</GRRecipe_Constable.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Constable.jobString>TODO</GRRecipe_Constable.jobString>
+  
+  <!-- EN: Persona Matrix - Farmer -->
+  <GRRecipe_Farmer.label>TODO</GRRecipe_Farmer.label>
+  <!-- EN: Designed for crop cultivation and livestock management on an industrial scale. Contains comprehensive biological knowledge and environmental assessment protocols. -->
+  <GRRecipe_Farmer.description>TODO</GRRecipe_Farmer.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Farmer.jobString>TODO</GRRecipe_Farmer.jobString>
+  
+  <!-- EN: 基础型灰裔 -->
+  <GRRecipe_GrayRace.label>TODO</GRRecipe_GrayRace.label>
+  <!-- EN: 培育一名基础型灰裔。 -->
+  <GRRecipe_GrayRace.description>TODO</GRRecipe_GrayRace.description>
+  <!-- EN: 开始制造灰裔。 -->
+  <GRRecipe_GrayRace.jobString>TODO</GRRecipe_GrayRace.jobString>
+  
+  <!-- EN: Persona Matrix - Guard -->
+  <GRRecipe_Guard.label>TODO</GRRecipe_Guard.label>
+  <!-- EN: Created for general protective duties. Excels in close-quarters combat and situational awareness, serving equally well as a social escort in formal settings. -->
+  <GRRecipe_Guard.description>TODO</GRRecipe_Guard.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Guard.jobString>TODO</GRRecipe_Guard.jobString>
+  
+  <!-- EN: Persona Matrix - Maid -->
+  <GRRecipe_Maid.label>TODO</GRRecipe_Maid.label>
+  <!-- EN: Designed for personal attendant duties. Includes standard cleaning and culinary knowledge, along with intimate care protocols—and certain unspoken specialties. The predefined personality attributes also occupy significant matrix capacity. -->
+  <GRRecipe_Maid.description>TODO</GRRecipe_Maid.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Maid.jobString>TODO</GRRecipe_Maid.jobString>
+  
+  <!-- EN: Persona Matrix - Medical Assistant -->
+  <GRRecipe_Medical.label>TODO</GRRecipe_Medical.label>
+  <!-- EN: Contains extensive physiological data calibrated for humans, enabling it to provide basic medical aid and emergency care. -->
+  <GRRecipe_Medical.description>TODO</GRRecipe_Medical.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Medical.jobString>TODO</GRRecipe_Medical.jobString>
+  
+  <!-- EN: Persona Matrix - Miner -->
+  <GRRecipe_Miner.label>TODO</GRRecipe_Miner.label>
+  <!-- EN: Built for large-scale mining operations. Contains both equipment operation knowledge and autonomous mining protocols for resource-scarce environments. -->
+  <GRRecipe_Miner.description>TODO</GRRecipe_Miner.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Miner.jobString>TODO</GRRecipe_Miner.jobString>
+  
+  <!-- EN: Persona Matrix - Research Assistant -->
+  <GRRecipe_Research.label>TODO</GRRecipe_Research.label>
+  <!-- EN: Designed to support scientific research. Combines multidisciplinary knowledge with enhanced computational and logical reasoning capabilities. -->
+  <GRRecipe_Research.description>TODO</GRRecipe_Research.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Research.jobString>TODO</GRRecipe_Research.jobString>
+  
+  <!-- EN: Persona Matrix - Soldier -->
+  <GRRecipe_Solider.label>TODO</GRRecipe_Solider.label>
+  <!-- EN: A persona matrix designed for rapid combat deployment. Comes pre-loaded with foundational melee skills, firearms proficiency, and weapon maintenance protocols. -->
+  <GRRecipe_Solider.description>TODO</GRRecipe_Solider.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Solider.jobString>TODO</GRRecipe_Solider.jobString>
+  
+  <!-- EN: Persona Matrix - Technical Officer -->
+  <GRRecipe_Technical.label>TODO</GRRecipe_Technical.label>
+  <!-- EN: Optimized for coordinating production workflows. Loaded with rich theoretical knowledge and practical records, capable of independently analyzing and adjusting production strategies. -->
+  <GRRecipe_Technical.description>TODO</GRRecipe_Technical.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Technical.jobString>TODO</GRRecipe_Technical.jobString>
+  
+  <!-- EN: Persona Matrix - Technician -->
+  <GRRecipe_Technician.label>TODO</GRRecipe_Technician.label>
+  <!-- EN: Designed for manual tasks in diverse environments. Loaded with multi-disciplinary mechanical operation knowledge, capable of independently completing fabrication tasks without mechanical support. -->
+  <GRRecipe_Technician.description>TODO</GRRecipe_Technician.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GRRecipe_Technician.jobString>TODO</GRRecipe_Technician.jobString>
+  
+</LanguageData>

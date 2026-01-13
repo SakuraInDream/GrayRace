@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Protocol:Soldier -->
+  <GR_Xeno_Soldier.label>协议：士兵</GR_Xeno_Soldier.label>
+  <!-- EN: 为战斗而特化的协议类型，包含了灰裔所擅长的所有战斗技能的数据。 -->
+  <GR_Xeno_Soldier.description>为战斗而特化的协议类型，包含了灰裔所擅长的所有战斗技能的数据。</GR_Xeno_Soldier.description>
+  <!-- EN: 为战斗而特化的协议类型，包含了灰裔所擅长的所有战斗技能的数据。 -->
+  <GR_Xeno_Soldier.descriptionShort>为战斗而特化的协议类型，包含了灰裔所擅长的所有战斗技能的数据。</GR_Xeno_Soldier.descriptionShort>
+
+  <!-- EN: Protocol:Worker -->
+  <GR_Xeno_Worker.label>协议：工人</GR_Xeno_Worker.label>
+  <!-- EN: 为工作而特化的协议类型，包含了灰裔所擅长的所有工作类型的数据。 -->
+  <GR_Xeno_Worker.description>为工作而特化的协议类型，包含了灰裔所擅长的所有工作类型的数据。</GR_Xeno_Worker.description>
+  <!-- EN: 为工作而特化的协议类型，包含了灰裔所擅长的所有工作类型的数据。 -->
+  <GR_Xeno_Worker.descriptionShort>为工作而特化的协议类型，包含了灰裔所擅长的所有工作类型的数据。</GR_Xeno_Worker.descriptionShort>
+
+</LanguageData>

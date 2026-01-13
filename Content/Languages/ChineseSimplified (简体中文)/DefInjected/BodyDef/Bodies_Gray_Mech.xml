@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Warship -->
+  <GR_MechBody.label>舰娘</GR_MechBody.label>
+  <!-- EN: Hull -->
+  <GR_MechBody.corePart.customLabel>船壳</GR_MechBody.corePart.customLabel>
+  <GR_MechBody.corePart.parts.GR_MechKeel.customLabel>龙骨</GR_MechBody.corePart.parts.GR_MechKeel.customLabel>
+  <!-- EN: Superstructure -->
+  <GR_MechBody.corePart.parts.Superstructure.customLabel>上层结构</GR_MechBody.corePart.parts.Superstructure.customLabel>
+  <!-- EN: Bridge -->
+  <GR_MechBody.corePart.parts.Superstructure.parts.Bridge.customLabel>舰桥</GR_MechBody.corePart.parts.Superstructure.parts.Bridge.customLabel>
+  <!-- EN: Combat information center -->
+  <GR_MechBody.corePart.parts.Superstructure.parts.Bridge.parts.Combat_information_center.customLabel>作战情报中心</GR_MechBody.corePart.parts.Superstructure.parts.Bridge.parts.Combat_information_center.customLabel>
+  <!-- EN: Radar system -->
+  <GR_MechBody.corePart.parts.Superstructure.parts.Bridge.parts.Radar_system.customLabel>雷达系统</GR_MechBody.corePart.parts.Superstructure.parts.Bridge.parts.Radar_system.customLabel>
+  <!-- EN: Radio system -->
+  <GR_MechBody.corePart.parts.Superstructure.parts.Bridge.parts.Radio_system.customLabel>无线电系统</GR_MechBody.corePart.parts.Superstructure.parts.Bridge.parts.Radio_system.customLabel>
+  <!-- EN: Turret -->
+  <GR_MechBody.corePart.parts.Turret.customLabel>炮塔</GR_MechBody.corePart.parts.Turret.customLabel>
+  <!-- EN: Gun mount -->
+  <GR_MechBody.corePart.parts.Turret.parts.Gun_mount.customLabel>炮座</GR_MechBody.corePart.parts.Turret.parts.Gun_mount.customLabel>
+  <!-- EN: Main gun -->
+  <GR_MechBody.corePart.parts.Turret.parts.Gun_mount.parts.Main_gun.customLabel>主炮</GR_MechBody.corePart.parts.Turret.parts.Gun_mount.parts.Main_gun.customLabel>
+  <!-- EN: Anti-torpedo Bulge -->
+  <GR_MechBody.corePart.parts.Antitorpedo_Bulge.customLabel>防鱼雷带</GR_MechBody.corePart.parts.Antitorpedo_Bulge.customLabel>
+  <!-- EN: Stern -->
+  <GR_MechBody.corePart.parts.Antitorpedo_Bulge.parts.Stern.customLabel>舰艉</GR_MechBody.corePart.parts.Antitorpedo_Bulge.parts.Stern.customLabel>
+  <!-- EN: Engine Room -->
+  <GR_MechBody.corePart.parts.Antitorpedo_Bulge.parts.Stern.parts.Engine_Room.customLabel>轮机舱</GR_MechBody.corePart.parts.Antitorpedo_Bulge.parts.Stern.parts.Engine_Room.customLabel>
+  <!-- EN: Thruster -->
+  <GR_MechBody.corePart.parts.Antitorpedo_Bulge.parts.Stern.parts.Engine_Room.parts.Thruster.customLabel>推进器</GR_MechBody.corePart.parts.Antitorpedo_Bulge.parts.Stern.parts.Engine_Room.parts.Thruster.customLabel>
+  <!-- EN: Armored Belt -->
+  <GR_MechBody.corePart.parts.Armored_Belt.customLabel>装甲带</GR_MechBody.corePart.parts.Armored_Belt.customLabel>
+  <!-- EN: Circulating pipeline -->
+  <GR_MechBody.corePart.parts.Circulating_pipeline.customLabel>循环管线</GR_MechBody.corePart.parts.Circulating_pipeline.customLabel>
+  
+</LanguageData>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--高频村雨-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_HFMurasama"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>120</power>
+          <extraMeleeDamages>
+            <li>
+              <def>Flame</def>
+              <amount>60</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>0.3</cooldownTime>
+          <armorPenetrationSharp>300</armorPenetrationSharp>
+          <armorPenetrationBlunt>800</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_HFMurasama"]/statBases</xpath>
+    <value>
+      <Bulk>10</Bulk>
+      <MeleeCounterParryBonus>1.5</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_HFMurasama"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>3.5</MeleeCritChance>
+      <MeleeParryChance>1</MeleeParryChance>
+    </value>
+  </Operation>
+
+  <!--斩舰刀-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_ShipSlayer"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>GR_NanoScratch</li>
+          </capacities>
+          <power>400</power>
+          <extraMeleeDamages>
+            <li>
+              <def>EMP</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>4</cooldownTime>
+          <armorPenetrationSharp>150</armorPenetrationSharp>
+          <armorPenetrationBlunt>3600</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_ShipSlayer"]/statBases</xpath>
+    <value>
+      <Bulk>100</Bulk>
+      <MeleeCounterParryBonus>0.3</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_ShipSlayer"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>2</MeleeCritChance>
+      <MeleeParryChance>2</MeleeParryChance>
+    </value>
+  </Operation>
+
+  <!--电击剑-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_VoltSword"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>point</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>36</power>
+          <extraMeleeDamages>
+            <li>
+              <def>EMP</def>
+              <amount>30</amount>
+            </li>
+            <li>
+              <def>Stun</def>
+              <amount>10</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>2</cooldownTime>
+          <armorPenetrationSharp>30</armorPenetrationSharp>
+          <armorPenetrationBlunt>120</armorPenetrationBlunt>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>72</power>
+          <extraMeleeDamages>
+            <li>
+              <def>EMP</def>
+              <amount>15</amount>
+            </li>
+            <li>
+              <def>Stun</def>
+              <amount>5</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>2</cooldownTime>
+          <armorPenetrationSharp>20</armorPenetrationSharp>
+          <armorPenetrationBlunt>100</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_VoltSword"]/statBases</xpath>
+    <value>
+      <Bulk>8</Bulk>
+      <MeleeCounterParryBonus>0.7</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_VoltSword"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>0.3</MeleeCritChance>
+      <MeleeParryChance>0.4</MeleeParryChance>
+    </value>
+  </Operation>
+
+  <!--电流长棍-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Cadus"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>Top</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>24</power>
+          <extraMeleeDamages>
+            <li>
+              <def>EMP</def>
+              <amount>30</amount>
+            </li>
+            <li>
+              <def>Stun</def>
+              <amount>15</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>1</cooldownTime>
+          <armorPenetrationBlunt>200</armorPenetrationBlunt>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>Bottom</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>24</power>
+          <extraMeleeDamages>
+            <li>
+              <def>EMP</def>
+              <amount>30</amount>
+            </li>
+            <li>
+              <def>Stun</def>
+              <amount>15</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>1</cooldownTime>
+          <armorPenetrationBlunt>200</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Cadus"]/statBases</xpath>
+    <value>
+      <Bulk>16</Bulk>
+      <MeleeCounterParryBonus>0.2</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Cadus"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>0.5</MeleeCritChance>
+      <MeleeParryChance>1.1</MeleeParryChance>
+    </value>
+  </Operation>
+
+  <!--光剑-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Lightsaber"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>80</power>
+          <extraMeleeDamages>
+            <li>
+              <def>Burn</def>
+              <amount>80</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>0.8</cooldownTime>
+          <armorPenetrationSharp>200</armorPenetrationSharp>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Lightsaber"]/statBases</xpath>
+    <value>
+      <Bulk>1</Bulk>
+      <MeleeCounterParryBonus>1.5</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Lightsaber"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>2.5</MeleeCritChance>
+      <MeleeParryChance>2.3</MeleeParryChance>
+    </value>
+  </Operation>
+
+</Patch>

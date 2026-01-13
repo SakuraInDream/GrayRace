@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: SCC DownLink -->
+  <GR_SCC_DownLink.label>战略指挥中心下行链路</GR_SCC_DownLink.label>
+  <!-- EN: A Strategic Coordination Link that boosts Mech Control Groups and Bandwidth for the Mechanitor. -->
+  <GR_SCC_DownLink.description>TODO</GR_SCC_DownLink.description>
+  <!-- EN: Implant sublink -->
+  <GR_SCC_DownLink.comps.CompUsableImplant.useLabel>TODO</GR_SCC_DownLink.comps.CompUsableImplant.useLabel>
+  
+</LanguageData>

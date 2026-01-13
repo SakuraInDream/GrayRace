@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: thorax -->
+  <GR_AntiTorpedoBulge.label>防鱼雷带</GR_AntiTorpedoBulge.label>
+  
+  <!-- EN: thorax -->
+  <GR_ArmoredBelt.label>装甲带</GR_ArmoredBelt.label>
+  
+  <!-- EN: Keel -->
+  <GR_MechKeel.label>龙骨</GR_MechKeel.label>
+  
+</LanguageData>

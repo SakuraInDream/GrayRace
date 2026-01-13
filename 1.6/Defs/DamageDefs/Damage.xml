@@ -14,14 +14,19 @@
     <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been melted.</deathMessage>
-    <hediff>Gunshot</hediff>
+    <hediff>Burn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Blunt</impactSoundType>
     <isRanged>true</isRanged>
+    <isExplosive>true</isExplosive>
     <ignoreShields>true</ignoreShields>
     <makesAnimalsFlee>true</makesAnimalsFlee>
-    <buildingDamageFactor>15</buildingDamageFactor>
+    <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
     <plantDamageFactor>15</plantDamageFactor>
+    <explosionHeatEnergyPerCell>20</explosionHeatEnergyPerCell>
+    <explosionCellFleck>Fleck_Vaporize</explosionCellFleck>
+    <soundExplosion>Explosion_Vaporize</soundExplosion>
     <combatLogRules>Damage_Flame</combatLogRules>
   </DamageDef>
 
@@ -82,9 +87,17 @@
     <defName>GR_Laser</defName>
     <label>Laser</label>
     <isExplosive>true</isExplosive>
+    <defaultDamage>25</defaultDamage>
     <defaultArmorPenetration>1</defaultArmorPenetration>
     <workerClass>DamageWorker_AddInjury</workerClass>
-    <isExplosive>true</isExplosive>
+  </DamageDef>
+
+  <!--撬棍用破墙锐伤-->
+  <DamageDef ParentName="CutBase">
+    <defName>GR_CrowbarDamage</defName>
+    <label>Crowbar Damage</label>
+    <buildingDamageFactorImpassable>60</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>30</buildingDamageFactorPassable>
   </DamageDef>
 
 </Defs>

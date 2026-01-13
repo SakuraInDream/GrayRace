@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Analyzer>
+  <GrayRace_CompResource_Nanites>
+    <Types>
+      <li>SD.GrayRace.CompResource_Nanites</li>
+    </Types>
+  </GrayRace_CompResource_Nanites>
+  <GrayRace_NanitesRegeneration>
+    <Types>
+      <li>SD.GrayRace.HediffComp_NanitesRegeneration</li>
+    </Types>
+  </GrayRace_NanitesRegeneration>
+</Analyzer>

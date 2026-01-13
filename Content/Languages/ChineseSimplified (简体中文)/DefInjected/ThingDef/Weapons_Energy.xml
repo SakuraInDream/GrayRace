@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Energy battle rifle bullet -->
+  <Bullet_GR_EnergyBattleRifle.label>TODO</Bullet_GR_EnergyBattleRifle.label>
+  
+  <!-- EN: Energy heavy Launcher bullet -->
+  <Bullet_GR_EnergyHL.label>TODO</Bullet_GR_EnergyHL.label>
+  
+  <!-- EN: Energy minigun bullet -->
+  <Bullet_GR_EnergyMinigun.label>TODO</Bullet_GR_EnergyMinigun.label>
+  
+  <!-- EN: Energy shotgun blast -->
+  <Bullet_GR_EnergyShotgun.label>TODO</Bullet_GR_EnergyShotgun.label>
+  
+  <!-- EN: Energy SMG bullet -->
+  <Bullet_GR_EnergySMG.label>TODO</Bullet_GR_EnergySMG.label>
+  
+  <!-- EN: Energy Sniper Rifle bullet -->
+  <Bullet_GR_EnergySniperRifle.label>TODO</Bullet_GR_EnergySniperRifle.label>
+  
+  <!-- EN: Gray Energy Rifle -->
+  <GR_EnergyBattleRifle.label>灰裔能量步枪</GR_EnergyBattleRifle.label>
+  <!-- EN: Aetherglow.Utilizing a high-pressure energy cell coupled with a stabilizer, it delivers substantial firepower without compromising on weight or size. As a weapon that excels in range, accuracy, power, compactness, and weight, it is the preferred choice for the majority of Grays. -->
+  <GR_EnergyBattleRifle.description>TODO</GR_EnergyBattleRifle.description>
+  <!-- EN: stock -->
+  <GR_EnergyBattleRifle.tools.stock.label>TODO</GR_EnergyBattleRifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <GR_EnergyBattleRifle.tools.barrel.label>TODO</GR_EnergyBattleRifle.tools.barrel.label>
+  <!-- EN: Gray Energy Rifle -->
+  <GR_EnergyBattleRifle.verbs.Verb_Shoot.label>TODO</GR_EnergyBattleRifle.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Gray Energy Heavy Launcher -->
+  <GR_EnergyHL.label>灰裔能量发射器</GR_EnergyHL.label>
+  <!-- EN: Supernova.This platform serves dual roles in anti-armor and anti-fortification warfare. The entire cannon is essentially a gigantic particle accelerator, retaining only the most basic stabilizer to prevent catastrophic failure. Each shot consumes an entire high-pressure energy cell, firing an unstable orb of energy that detonates upon impact with a terrifying blast, obliterating everything within its radius. -->
+  <GR_EnergyHL.description>TODO</GR_EnergyHL.description>
+  <!-- EN: barrels -->
+  <GR_EnergyHL.tools.barrels.label>TODO</GR_EnergyHL.tools.barrels.label>
+  <!-- EN: Gray Energy Heavy Launcher -->
+  <GR_EnergyHL.verbs.Verb_Shoot.label>TODO</GR_EnergyHL.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Gray Energy MachineGun -->
+  <GR_EnergyHMG.label>灰裔能量机枪</GR_EnergyHMG.label>
+  <!-- EN: Lumenward.Its massive size and staggering weight mean even a Gray can only wield it by hand. This bulk, however, allows it to house a particle accelerator, energy stabilizer, and rapid heat sink simultaneously. Powered by multiple large high-pressure energy cells at the rear, it unleashes a relentless, devastating hail of high-energy projectiles, turning any engagement zone into a bloody wilderness. Due to its bulk and overkill nature, Grays deploy it only for outpost defense, rarely carrying it on routine patrols—even in teams. -->
+  <GR_EnergyHMG.description>TODO</GR_EnergyHMG.description>
+  <!-- EN: barrels -->
+  <GR_EnergyHMG.tools.barrels.label>TODO</GR_EnergyHMG.tools.barrels.label>
+  <!-- EN: Gray Energy MachineGun -->
+  <GR_EnergyHMG.verbs.Verb_Shoot.label>TODO</GR_EnergyHMG.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Gray Energy Launcher -->
+  <GR_EnergyLauncher.label>极光</GR_EnergyLauncher.label>
+  <!-- EN: . -->
+  <GR_EnergyLauncher.description>灰裔尚未诞生的年代，开拓者们常用的等离子切割器。在灰裔们接管了开拓建设的工作后，她们将已经被淘汰的切割器改造成了穿透式激光武器，能将一条直线上的目标切割成绚丽的万华镜之花。灰裔尚未诞生的年代，开拓者们常用的等离子切割器。在灰裔们接管了开拓建设的工作后，她们将已经被淘汰的切割器改造成了激光发射器，能轻易的融化大片的敌人。</GR_EnergyLauncher.description>
+  <!-- EN: stock -->
+  <GR_EnergyLauncher.tools.stock.label>TODO</GR_EnergyLauncher.tools.stock.label>
+  <!-- EN: barrel -->
+  <GR_EnergyLauncher.tools.barrel.label>TODO</GR_EnergyLauncher.tools.barrel.label>
+  <!-- EN: Gray Energy Launcher -->
+  <GR_EnergyLauncher.verbs.Verb_ShootBeam.label>TODO</GR_EnergyLauncher.verbs.Verb_ShootBeam.label>
+  
+  <!-- EN: Gray Energy PDW -->
+  <GR_EnergyPDW.label>灰裔能量冲锋枪</GR_EnergyPDW.label>
+  <!-- EN: Flowglow.Its compact frame is almost entirely dedicated to the particle accelerator, enabling true instant-fire capability. However, its low stopping power makes it effective only against humans and smaller foes, rendering it unpopular among Grays who frequently encounter bizarre alien lifeforms. -->
+  <GR_EnergyPDW.description>TODO</GR_EnergyPDW.description>
+  <!-- EN: grip -->
+  <GR_EnergyPDW.tools.grip.label>TODO</GR_EnergyPDW.tools.grip.label>
+  <!-- EN: barrel -->
+  <GR_EnergyPDW.tools.barrel.label>TODO</GR_EnergyPDW.tools.barrel.label>
+  <!-- EN: Gray Energy PDW -->
+  <GR_EnergyPDW.verbs.Verb_Shoot.label>TODO</GR_EnergyPDW.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Gray Energy Shotgun -->
+  <GR_EnergyShotgun.label>灰裔能量霰弹枪</GR_EnergyShotgun.label>
+  <!-- EN: Lucifer.An energy compressor forces a high-yield charge into a single point, maximizing penetration and burst damage. However, due to a lack of containment, the projectile is highly unstable and dissipates shortly after leaving the barrel. This inherent limitation led to its design and deployment as a shotgun. -->
+  <GR_EnergyShotgun.description>TODO</GR_EnergyShotgun.description>
+  <!-- EN: stock -->
+  <GR_EnergyShotgun.tools.stock.label>TODO</GR_EnergyShotgun.tools.stock.label>
+  <!-- EN: barrel -->
+  <GR_EnergyShotgun.tools.barrel.label>TODO</GR_EnergyShotgun.tools.barrel.label>
+  <!-- EN: Gray Energy Shotgun -->
+  <GR_EnergyShotgun.verbs.Verb_Shoot.label>TODO</GR_EnergyShotgun.verbs.Verb_Shoot.label>
+  
+  <!-- EN: Gray Energy Sniper Rifle -->
+  <GR_EnergySniperRifle.label>灰裔能量狙击枪</GR_EnergySniperRifle.label>
+  <!-- EN: Radiant.A high-energy particle focuser channels the raw power of a Diabolus main cannon into a single, devastating beam. The shot's brilliance remains visible even from dozens of kilometers away, and its armor-piercing capability is absolute. This is no assassin's tool—it is a weapon of pure, lethal, and efficient annihilation. -->
+  <GR_EnergySniperRifle.description>TODO</GR_EnergySniperRifle.description>
+  <!-- EN: stock -->
+  <GR_EnergySniperRifle.tools.stock.label>TODO</GR_EnergySniperRifle.tools.stock.label>
+  <!-- EN: barrel -->
+  <GR_EnergySniperRifle.tools.barrel.label>TODO</GR_EnergySniperRifle.tools.barrel.label>
+  <!-- EN: Gray Energy Sniper Rifle -->
+  <GR_EnergySniperRifle.verbs.Verb_Shoot.label>TODO</GR_EnergySniperRifle.verbs.Verb_Shoot.label>
+  
+</LanguageData>

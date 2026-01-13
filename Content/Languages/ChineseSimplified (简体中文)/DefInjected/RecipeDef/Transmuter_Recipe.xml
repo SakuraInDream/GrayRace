@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: make component x2 -->
+  <GR_Make_ComponentIndustrial_Nanites.label>制作零部件 x2</GR_Make_ComponentIndustrial_Nanites.label>
+  <!-- EN: Make component. -->
+  <GR_Make_ComponentIndustrial_Nanites.description>使用灰潮源质制造零部件。</GR_Make_ComponentIndustrial_Nanites.description>
+  <!-- EN: Making component. -->
+  <GR_Make_ComponentIndustrial_Nanites.jobString>正在制作零部件</GR_Make_ComponentIndustrial_Nanites.jobString>
+
+  <!-- EN: make advanced component x2 -->
+  <GR_Make_ComponentSpacer_Nanites.label>制作高级零部件 x2</GR_Make_ComponentSpacer_Nanites.label>
+  <!-- EN: Make advanced component. -->
+  <GR_Make_ComponentSpacer_Nanites.description>使用灰潮源质制造高级零部件。</GR_Make_ComponentSpacer_Nanites.description>
+  <!-- EN: Making advanced component. -->
+  <GR_Make_ComponentSpacer_Nanites.jobString>正在制作高级零部件</GR_Make_ComponentSpacer_Nanites.jobString>
+
+  <!-- EN: make Plasteel x100 -->
+  <GR_Make_Plasteel.label>制作玻璃钢 x100</GR_Make_Plasteel.label>
+  <!-- EN: Make Plasteel. -->
+  <GR_Make_Plasteel.description>使用灰潮源质制造玻璃钢。</GR_Make_Plasteel.description>
+  <!-- EN: Making Plasteel. -->
+  <GR_Make_Plasteel.jobString>正在将灰潮源质转化成玻璃钢</GR_Make_Plasteel.jobString>
+
+  <!-- EN: make Plasteel x1000 -->
+  <GR_Make_Plasteel_More.label>制作玻璃钢 x1000</GR_Make_Plasteel_More.label>
+  <!-- EN: Make Plasteel. -->
+  <GR_Make_Plasteel_More.description>使用灰潮源质制造玻璃钢。</GR_Make_Plasteel_More.description>
+  <!-- EN: Making Plasteel. -->
+  <GR_Make_Plasteel_More.jobString>正在将灰潮源质转化成玻璃钢</GR_Make_Plasteel_More.jobString>
+
+  <!-- EN: make Steel x100 -->
+  <GR_Make_Steel.label>制作钢铁 x100</GR_Make_Steel.label>
+  <!-- EN: Make Steel. -->
+  <GR_Make_Steel.description>使用灰潮源质制造钢铁。</GR_Make_Steel.description>
+  <!-- EN: Making Steel. -->
+  <GR_Make_Steel.jobString>正在将灰潮源质转化成钢铁</GR_Make_Steel.jobString>
+
+  <!-- EN: make Steel x1000 -->
+  <GR_Make_Steel_More.label>制作钢铁 x1000</GR_Make_Steel_More.label>
+  <!-- EN: Make Steel. -->
+  <GR_Make_Steel_More.description>使用灰潮源质制造钢铁。</GR_Make_Steel_More.description>
+  <!-- EN: Making Steel. -->
+  <GR_Make_Steel_More.jobString>正在将灰潮源质转化成钢铁</GR_Make_Steel_More.jobString>
+
+  <!-- EN: make Uranium x100 -->
+  <GR_Make_Uranium.label>制作铀 x100</GR_Make_Uranium.label>
+  <!-- EN: Make Uranium. -->
+  <GR_Make_Uranium.description>使用灰潮源质制造铀。</GR_Make_Uranium.description>
+  <!-- EN: Making Uranium. -->
+  <GR_Make_Uranium.jobString>正在将灰潮源质转化成铀</GR_Make_Uranium.jobString>
+
+  <!-- EN: make Uranium x1000 -->
+  <GR_Make_Uranium_More.label>制作铀 x1000</GR_Make_Uranium_More.label>
+  <!-- EN: Make Uranium. -->
+  <GR_Make_Uranium_More.description>使用灰潮源质制造铀。</GR_Make_Uranium_More.description>
+  <!-- EN: Making Uranium. -->
+  <GR_Make_Uranium_More.jobString>正在将灰潮源质转化成铀</GR_Make_Uranium_More.jobString>
+
+</LanguageData>

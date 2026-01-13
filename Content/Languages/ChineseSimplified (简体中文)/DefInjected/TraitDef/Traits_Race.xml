@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Natural Engineers -->
+  <GR_Engineers.degreeDatas.Natural_Engineers.label>天生工程学家</GR_Engineers.degreeDatas.Natural_Engineers.label>
+  <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
+  <GR_Engineers.degreeDatas.Natural_Engineers.description>TODO</GR_Engineers.degreeDatas.Natural_Engineers.description>
+  
+  <!-- EN: Learning Algorithms -->
+  <GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.label>学习算法</GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.label>
+  <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
+  <GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.description>TODO</GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.description>
+  
+  <!-- EN: Perfect And Dainty -->
+  <GR_Maid.degreeDatas.Perfect_And_Dainty.label>完美潇洒的女仆</GR_Maid.degreeDatas.Perfect_And_Dainty.label>
+  <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
+  <GR_Maid.degreeDatas.Perfect_And_Dainty.description>TODO</GR_Maid.degreeDatas.Perfect_And_Dainty.description>
+  
+  <!-- EN: Natural Physicists -->
+  <GR_Physicists.degreeDatas.Natural_Physicists.label>天生物理学家</GR_Physicists.degreeDatas.Natural_Physicists.label>
+  <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
+  <GR_Physicists.degreeDatas.Natural_Physicists.description>TODO</GR_Physicists.degreeDatas.Natural_Physicists.description>
+  
+  <!-- EN: Natural Sociologists -->
+  <GR_Sociologists.degreeDatas.Natural_Sociologists.label>天生社会学家</GR_Sociologists.degreeDatas.Natural_Sociologists.label>
+  <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
+  <GR_Sociologists.degreeDatas.Natural_Sociologists.description>TODO</GR_Sociologists.degreeDatas.Natural_Sociologists.description>
+  
+</LanguageData>

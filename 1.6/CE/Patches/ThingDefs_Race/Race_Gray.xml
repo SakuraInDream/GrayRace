@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAddModExtension">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]</xpath>
+        <value>
+            <li Class="CombatExtended.RacePropertiesExtensionCE">
+                <bodyShape>Humanoid</bodyShape>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/statBases/ArmorRating_Sharp</xpath>
+        <value>
+            <ArmorRating_Sharp>8</ArmorRating_Sharp>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/statBases/ArmorRating_Blunt</xpath>
+        <value>
+            <ArmorRating_Blunt>32</ArmorRating_Blunt>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/statBases</xpath>
+        <value>
+            <CarryWeight>1000</CarryWeight>
+            <CarryBulk>1500</CarryBulk>
+            <SmokeSensitivity>0</SmokeSensitivity>
+            <AimingAccuracy>1.5</AimingAccuracy>
+            <MeleeCritChance>5</MeleeCritChance>
+            <MeleeParryChance>5</MeleeParryChance>
+            <NightVisionEfficiency>0.8</NightVisionEfficiency>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/tools</xpath>
+        <value>
+            <tools>
+                <li Class="CombatExtended.ToolCE">
+                    <label>left fist</label>
+                    <capacities>
+                        <li>GR_NanoScratch</li>
+                    </capacities>
+                    <power>30</power>
+                    <cooldownTime>2</cooldownTime>
+                    <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+                    <armorPenetrationSharp>6</armorPenetrationSharp>
+                    <armorPenetrationBlunt>18</armorPenetrationBlunt>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                    <label>right fist</label>
+                    <capacities>
+                        <li>GR_NanoScratch</li>
+                    </capacities>
+                    <power>30</power>
+                    <cooldownTime>2</cooldownTime>
+                    <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+                    <armorPenetrationSharp>6</armorPenetrationSharp>
+                    <armorPenetrationBlunt>18</armorPenetrationBlunt>
+                </li>
+            </tools>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/comps</xpath>
+        <value>
+            <li>
+                <compClass>CombatExtended.CompPawnGizmo</compClass>
+            </li>
+            <li Class="CombatExtended.CompProperties_ArmorDurability">
+                <Durability>1600</Durability>
+                <Regenerates>true</Regenerates>
+                <RegenInterval>1200</RegenInterval>
+                <RegenValue>20</RegenValue>
+            </li>
+            <li Class="CombatExtended.CompProperties_Suppressable" />
+            <li>
+                <compClass>CombatExtended.CompAmmoGiver</compClass>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Gray_Race"]/alienRace/raceRestriction/whiteApparelList</xpath>
+        <value>
+            <li>CE_Apparel_BallisticShield</li>
+            <li>CE_Apparel_MeleeShield</li>
+        </value>
+    </Operation>
+
+</Patch>

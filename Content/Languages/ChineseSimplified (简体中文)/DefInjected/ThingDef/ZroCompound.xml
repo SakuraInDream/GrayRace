@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Zro Compound -->
+  <GR_ZroCompound.label>泽珞合剂</GR_ZroCompound.label>
+  <!-- EN: A psychotropic agent derived from Zro, employed by psionics to amplify mental powers. It markedly elevates Psionic Sensitivity and generates a long-lasting stimulatory effect, which sustains user vigilance for 24 hours and augments bodily functions. Be warned: it carries a high risk of addiction. -->
+  <GR_ZroCompound.description>一种从泽珞中提取的致幻剂，被灵能者用来增强精神力量。它显著提升灵能敏感度并产生持久的刺激效果，维持使用者24小时的警觉性并增强身体机能。请注意：它具有很高的成瘾风险。</GR_ZroCompound.description>
+  <!-- EN: Inject {0} -->
+  <GR_ZroCompound.ingestible.ingestCommandString>注射{0}</GR_ZroCompound.ingestible.ingestCommandString>
+  <!-- EN: Injecting {0}. -->
+  <GR_ZroCompound.ingestible.ingestReportString>正在注射{0}。</GR_ZroCompound.ingestible.ingestReportString>
+
+</LanguageData>

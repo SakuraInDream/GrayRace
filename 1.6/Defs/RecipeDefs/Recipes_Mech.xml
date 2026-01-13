@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RecipeDef ParentName="LightMechanoidRecipe">
+    <defName>GR_Mech_FF</defName>
+    <label>gestate frigate</label>
+    <description>Gestate a frigate mechanoid.</description>
+    <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
+    <recipeUsers>
+      <li>MechGestator</li>
+    </recipeUsers>
+    <ingredients Inherit="False">
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Alloy</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SubcoreBasic</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <GR_Mech_FF>1</GR_Mech_FF>
+    </products>
+    <descriptionHyperlinks>
+      <ThingDef>GR_Mech_FF</ThingDef>
+    </descriptionHyperlinks>
+  </RecipeDef>
+
+</Defs>

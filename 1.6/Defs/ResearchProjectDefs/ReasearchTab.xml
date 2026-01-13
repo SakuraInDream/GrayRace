@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchTabDef>
+		<defName>GR_ResearchTab</defName>
+		<label>Gray Race</label>
+		<generalDescription>A technology replicated by the Gray from the Galactic Empire, which has been adapted to better align with their biological strengths and operational requirements.</generalDescription>
+		<generalTitle>Galactic Empire Technology</generalTitle>
+	</ResearchTabDef>
+</Defs>

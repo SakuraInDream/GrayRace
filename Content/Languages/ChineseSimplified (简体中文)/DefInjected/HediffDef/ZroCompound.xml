@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Zro addiction -->
+  <GR_ZroAddiction.label>泽珞成瘾</GR_ZroAddiction.label>
+  <!-- EN: A chemical addiction to go-juice. Long-term presence of go-juice has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\n\nWithout regular doses of go-juice, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction. -->
+  <GR_ZroAddiction.description>一种对泽珞的化学成瘾。长期接触泽珞会在细胞水平上引起神经适应性变化，因此大脑无法在没有药物的情况下正常运作。\n\n如果没有定期服用泽珞，会出现戒断症状。然而，长期戒断将迫使大脑重新适应到正常状态，从而解决成瘾问题。</GR_ZroAddiction.description>
+  <!-- EN: withdrawal -->
+  <GR_ZroAddiction.stages.withdrawal.label>戒断</GR_ZroAddiction.stages.withdrawal.label>
+
+  <!-- EN: high on zro -->
+  <GR_ZroHigh.label>泽珞亢奋</GR_ZroHigh.label>
+  <!-- EN: Go-juice in the bloodstream. It supercharges combat-related abilities, and instantly increases psyfocus when first injected. -->
+  <GR_ZroHigh.description>血液中的泽珞。它能增强战斗相关的能力，并在首次注射时立即提升心灵集中度。</GR_ZroHigh.description>
+  <!-- EN: a zro high -->
+  <GR_ZroHigh.labelNoun>泽珞亢奋</GR_ZroHigh.labelNoun>
+
+  <!-- EN: Zro tolerance -->
+  <GR_ZroTolerance.label>泽珞耐受性</GR_ZroTolerance.label>
+  <!-- EN: A built-up tolerance to zro. The more severe this tolerance is, the more zro it takes to get the same effect. -->
+  <GR_ZroTolerance.description>对泽珞的耐受性。耐受性越严重，需要的泽珞剂量越大才能达到相同的效果。</GR_ZroTolerance.description>
+  <!-- EN: small -->
+  <GR_ZroTolerance.stages.small.label>轻</GR_ZroTolerance.stages.small.label>
+  <!-- EN: large -->
+  <GR_ZroTolerance.stages.large.label>重</GR_ZroTolerance.stages.large.label>
+  <!-- EN: massive -->
+  <GR_ZroTolerance.stages.massive.label>严重</GR_ZroTolerance.stages.massive.label>
+
+</LanguageData>

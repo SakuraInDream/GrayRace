@@ -1,53 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- 在 .csproj 同级目录下创建 Local.props 手动指定自己的 RW 路径 -->
+  <!--
+  Local.props:
+    <Project>
+      <PropertyGroup>
+        <RimWorldPath>path\to\rimworld</RimWorldPath>
+      </PropertyGroup>
+    </Project>
+  -->
+  <!-- 使用 Directory.Build.props 也行，内容跟上面的一样 -->
+  <Import Project="Local.props" Condition="Exists('Local.props')" />
+
+  <!-- 如果没有，查找环境变量 RIMWORLD_DIR -->
+  <PropertyGroup Condition=" '$(RimWorldPath)' == '' ">
+    <RimWorldPath>$(RIMWORLD_DIR)</RimWorldPath>
+  </PropertyGroup>
+
+  <!-- 都没有，全平台兜底碰运气 -->
+  <!-- https://learn.microsoft.com/zh-cn/visualstudio/msbuild/property-functions?view=vs-2022 -->
+  <PropertyGroup Condition=" '$(RimWorldPath)' == '' and $([System.OperatingSystem]::IsWindows()) and Exists('C:\Program Files (x86)\Steam\steamapps\common\RimWorld') ">
+    <RimWorldPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld</RimWorldPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RimWorldPath)' == '' and $([System.OperatingSystem]::IsLinux()) and Exists('$(HOME)/.steam/steam/steamapps/common/RimWorld') ">
+    <RimWorldPath>$(HOME)/.steam/steam/steamapps/common/RimWorld</RimWorldPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RimWorldPath)' == '' and $([System.OperatingSystem]::IsMacOS()) and Exists('$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app') ">
+    <RimWorldPath>$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app</RimWorldPath>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition=" $([System.OperatingSystem]::IsWindows()) ">
+      <PropertyGroup>
+        <RimWorldManagedPath>$(RimWorldPath)\RimWorldWin64_Data\Managed</RimWorldManagedPath>
+      </PropertyGroup>
+    </When>
+
+    <When Condition=" $([System.OperatingSystem]::IsLinux()) ">
+      <PropertyGroup>
+        <RimWorldManagedPath>$(RimWorldPath)/RimWorldLinux_Data/Managed</RimWorldManagedPath>
+      </PropertyGroup>
+    </When>
+
+    <When Condition=" $([System.OperatingSystem]::IsMacOS()) ">
+      <PropertyGroup>
+        <RimWorldManagedPath>$(RimWorldPath)/Contents/Resources/Data/Managed</RimWorldManagedPath>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <!-- 我简直是太 TM 天才了，知道利用 Version.txt + 正则匹配游戏版本 -->
+  <!-- 只希望其他平台也有这个文件 -->
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F77FD251-0D59-40AF-A431-9FC47116DD5B}</ProjectGuid>
+    <RimWorldVersionFile>$(RimWorldPath)\Version.txt</RimWorldVersionFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="Exists('$(RimWorldVersionFile)')">
+    <RawVersionContent>$([System.IO.File]::ReadAllText('$(RimWorldVersionFile)'))</RawVersionContent>
+    <RimWorldVersion>$([System.Text.RegularExpressions.Regex]::Match($(RawVersionContent), '^\d+\.\d+'))</RimWorldVersion>
+  </PropertyGroup>
+  <!-- 兜底 -->
+  <PropertyGroup Condition=" '$(RimWorldVersion)' == '' ">
+    <RimWorldVersion>1.6</RimWorldVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GrayRace</RootNamespace>
+    <RootNamespace>SD.GrayRace</RootNamespace>
     <AssemblyName>GrayRace</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
+    <LangVersion>9</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <Deterministic>false</Deterministic>
+
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <OutputPath>..\..\$(RimWorldVersion)\Assemblies\</OutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\$(RimWorldVersion)\Assemblies\</OutputPath>
+    <DebugType>none</DebugType>
   </PropertyGroup>
+
+  <!-- 别人的包可能会存在更新不及时的情况，尽可能引用游戏路径的 dll -->
   <ItemGroup>
+    <Reference Include="$(RimWorldManagedPath)\Assembly-CSharp.dll" Private="False"/>
+    <Reference Include="$(RimWorldManagedPath)\Unity*" Private="False"/>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
     </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" />
+    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.2" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

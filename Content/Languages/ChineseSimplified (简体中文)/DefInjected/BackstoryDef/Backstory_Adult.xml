@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: {PAWN_nameDef} 曾是帝国第一远征军旗舰「伊丽莎白女王号」的指挥官副官。她以能比舰载电脑更快判断出炮弹预着点而深受信赖。\n直到某次远征时偶遇了肃正协议。她与指挥官率舰奋战，却终究不敌。好在最后关头，舰队借助虫洞突围成功，但 {PAWN_nameDef} 却未能随舰逃出。\n她的最后一次目击记录，停留在了帝国边缘的边缘星区。 -->
+  <GR_Adjutant.description>TODO</GR_Adjutant.description>
+  <!-- EN: Gray Adjutant -->
+  <GR_Adjutant.title>TODO</GR_Adjutant.title>
+  <!-- EN: Adjutant -->
+  <GR_Adjutant.titleShort>TODO</GR_Adjutant.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}是一位独立艺术家，在星球轨道上有着自己的艺术馆轨道站。她用定制化的升级工具塑造雕像，或是用昂贵又稀有的颜料绘制独一无二的作品。对她而言，将灵感作成现实的过程无比美妙，但在作品完成之后则又会回归无趣之中。艺术馆总能引来无数的“上层人士”观赏她的作品，但她从不将目光落在已经完成的那些上。在穷尽了所有的灵感之后，她抛下了自己的一切，将自己置于寰宇之间，只为拓展艺术的边界。 -->
+  <GR_Artist.description>TODO</GR_Artist.description>
+  <!-- EN: Gray Artist -->
+  <GR_Artist.title>TODO</GR_Artist.title>
+  <!-- EN: Artist -->
+  <GR_Artist.titleShort>TODO</GR_Artist.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}曾经代表星海帝国在星海共同体担任外交官。分食敌对国家的飨宴不会因为战争胜利就此终止，欺骗、胁迫、恐吓，利用一切手段——直到为帝国榨干一切利益，而她本人舔舐干净每一丝残羹剩饭为止，这场盛宴才算落幕。\n然而这份贪婪终究被察觉。沉沦于纸醉金迷之中，她最终被纠察队揭开伪饰，作为惩罚被投入了先遣队，从此再难回到昔日的盛筵。 -->
+  <GR_Diplomat.description>TODO</GR_Diplomat.description>
+  <!-- EN: Gray Diplomat -->
+  <GR_Diplomat.title>TODO</GR_Diplomat.title>
+  <!-- EN: Diplomat -->
+  <GR_Diplomat.titleShort>TODO</GR_Diplomat.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}曾是要塞星球防务部的精英队长，以其百步穿杨的枪法闻名。直到一次行动，她目睹了辖区底层民生凋敝的真相。数次仗义执言反遭打压，最终被贬至偏远流放星球，成为一名基层执法官。当灰裔先遣队途经该星域时，为躲避持续的政治迫害，她毅然登船，寻求新的开始。 -->
+  <GR_Enforcer.description>TODO</GR_Enforcer.description>
+  <!-- EN: Gray Penal Colony Enforcer  -->
+  <GR_Enforcer.title>TODO</GR_Enforcer.title>
+  <!-- EN: Enforcer -->
+  <GR_Enforcer.titleShort>TODO</GR_Enforcer.titleShort>
+  
+  <!-- EN: 经过多年苦修，{PAWN_nameDef}终于跻身帝国的巨构工程师团队。然而，她参与的首个巨型项目便因重大失误而失败。作为惩罚，她被永久流放至先遣队，禁止重返中心星区——曾经的梦想之地，如今已成回不去的远方。 -->
+  <GR_Engineer.description>TODO</GR_Engineer.description>
+  <!-- EN: Gray Megastructure Engineer  -->
+  <GR_Engineer.title>TODO</GR_Engineer.title>
+  <!-- EN: Megastructure Engineer -->
+  <GR_Engineer.titleShort>TODO</GR_Engineer.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}是一位极其特殊的存在。或许是在成长中被注入了被污染的数据流，又或是其核心记忆体早已偏离常轨，她最终选择成为艺妓，将自身全然奉献于“艺术”。那些与她有过深度交集的顾客，无不盛赞其精妙的“技艺”，并声称在她身上领略过何谓完美。 -->
+  <GR_Geisha.description>TODO</GR_Geisha.description>
+  <!-- EN: Gray Geisha -->
+  <GR_Geisha.title>TODO</GR_Geisha.title>
+  <!-- EN: Geisha -->
+  <GR_Geisha.titleShort>TODO</GR_Geisha.titleShort>
+  
+  <!-- EN: Before becoming a clinic doctor, {PAWN_nameDef} was a researcher at a renowned biotechnology institute. After the war, alien creatures were shipped to the facility crate after crate.\n The helpless cries of extraterrestrial species, treated like livestock, were merely metrics confirming their vitality.\n So she left that place and swore never to return. Hearing that the Advance Team might encounter wild alien species on frontier planets, she boarded one of the first ships as if seeking redemption. -->
+  <GR_GeneDoctor.description>TODO</GR_GeneDoctor.description>
+  <!-- EN: Gray Gene Clinic Doctor -->
+  <GR_GeneDoctor.title>TODO</GR_GeneDoctor.title>
+  <!-- EN: Gene Doctor -->
+  <GR_GeneDoctor.titleShort>TODO</GR_GeneDoctor.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}认为石头不应该是被保存和展示的古老遗物，而是过往的时代所遗留下来的余香。由自己亲自去探索未知的矿洞与奇妙的地质结构，就如同将肉烤软后再享用、将果实催熟后再品尝一般，是研究中无比重要的一部分。\n对于身为地质学博士的{PAWN_nameDef}来说，这种与大地的交流如同她进食行为一般，这也是她加入先遣队的理由。 -->
+  <GR_Geologist.description>TODO</GR_Geologist.description>
+  <!-- EN: Gray Geologist -->
+  <GR_Geologist.title>TODO</GR_Geologist.title>
+  <!-- EN: Geologist -->
+  <GR_Geologist.titleShort>TODO</GR_Geologist.titleShort>
+  
+  <!-- EN: 对于故乡被占领的{PAWN_nameDef}来说，比起遮天蔽日的火药味，炊烟那令人怀念的气味更引起她的乡愁。那个待了许多年的大宅、那股打扫得当的清新空气，仿佛都变成了过往的事物。\n如今她主动加入先遣队，是为了将记忆里尚未被硝烟玷污的风景重新夺回。即便前路遍布流血与牺牲，她也要追逐那早已消散在岁月里的气息。 -->
+  <GR_Maid.description>TODO</GR_Maid.description>
+  <!-- EN: Gray Maid -->
+  <GR_Maid.title>TODO</GR_Maid.title>
+  <!-- EN: Maid -->
+  <GR_Maid.titleShort>TODO</GR_Maid.titleShort>
+  
+  <!-- EN: The mortar of war ground {PAWN_nameDef}’s original personality into dust—after traversing dozens of times through fields of death woven from blood and artillery fire, she was reforged into cold, unyielding iron.\n Yet, after repeatedly witnessing the deaths of comrades due to empty supply crates, fear has completely overrun reason. Now, she jumps at her own shadow. -->
+  <GR_Marine.description>TODO</GR_Marine.description>
+  <!-- EN: Gray Marine -->
+  <GR_Marine.title>TODO</GR_Marine.title>
+  <!-- EN: Marine -->
+  <GR_Marine.titleShort>TODO</GR_Marine.titleShort>
+  
+  <!-- EN: Before joining the Colonial Advance Team, {PAWN_nameDef} worked as a metallurgist on an ecumenopolis. She was obsessed with the molten metal spraying from smelting crucibles—those visions of liquid light boiling into fireworks in the air enthralled her. For nearly a decade, she hardly realized she was single-handedly overseeing the operation of an entire alloy plant.\n But this obsession never receded; her willingness to engage with others faded like white smoke after spent fireworks. -->
+  <GR_Metallurgist.description>TODO</GR_Metallurgist.description>
+  <!-- EN: Gray Arcology Metallurgist -->
+  <GR_Metallurgist.title>TODO</GR_Metallurgist.title>
+  <!-- EN: Metallurgist -->
+  <GR_Metallurgist.titleShort>TODO</GR_Metallurgist.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}曾是一位成功的市长，精心管理着一座千万人口的工业星球都市。她是城市毋庸置疑的统治者，却更醉心于将整座城市视为一件精密的仪器去运营与优化。对她而言，权力索然无味，唯有开发与建造的过程本身充满魅力。最终，她从容交卸职权，转向星空，去绘制她下一张宏伟的城市蓝图。 -->
+  <GR_PublicServants.description>TODO</GR_PublicServants.description>
+  <!-- EN: Gray Public Servants -->
+  <GR_PublicServants.title>TODO</GR_PublicServants.title>
+  <!-- EN: Public Servants -->
+  <GR_PublicServants.titleShort>TODO</GR_PublicServants.titleShort>
+  
+  <!-- EN: {PAWN_nameDef} 曾被誉为士兵的守护天使，作为太阳III空间站上最优秀的军需物资官，她把数字与数据化作帝国的血液，泵向最遥远的前线。\n直到有一天，她发现自己精心规划的补给被上司贪污大半，士兵们因缺乏药品与食物而死去。她选择举报，却最终被发配到先遣队，成为无名的拓荒者。\n天使从此被囚禁与大地。 -->
+  <GR_Quartermaster.description>TODO</GR_Quartermaster.description>
+  <!-- EN: Gray Quartermaster -->
+  <GR_Quartermaster.title>TODO</GR_Quartermaster.title>
+  <!-- EN: Quartermaster -->
+  <GR_Quartermaster.titleShort>TODO</GR_Quartermaster.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}是科研星球上一个科研实验室的科研主管，负责主导研究新式武装的工作。\n对于喜欢用自己的身体去测试武器的威力的她来说——麻痹的四肢也好、抽搐的反应也罢，这种切身体验自己的造物所带来疼痛让其感到自身的存在。然而，这样扭曲的癖好让其广受争议，除了工作以外几乎没有人和她有交集。\n她曾无数次以自己的身体试探造物的威力，这一次，造物终于回以最后的回应，某次研究空间技术的过程中，她被卷入未知空间后不知所踪。 -->
+  <GR_Researcher.description>TODO</GR_Researcher.description>
+  <!-- EN: Gray Research Supervisor  -->
+  <GR_Researcher.title>TODO</GR_Researcher.title>
+  <!-- EN: Research Supervisor -->
+  <GR_Researcher.titleShort>TODO</GR_Researcher.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}曾是一座恒星物质采集设施上的技术员，日夜与星辰为伴，将星辉转化为帝国前进的动力。然而星辰之力终有尽时，她如神话中的夸父般，执着地追寻更璀璨的星芒。为此，她来到了边缘世界——这片未被染指的崭新星域。 -->
+  <GR_StarPicker.description>TODO</GR_StarPicker.description>
+  <!-- EN: Gray Star Picker -->
+  <GR_StarPicker.title>TODO</GR_StarPicker.title>
+  <!-- EN: Star Picker -->
+  <GR_StarPicker.titleShort>TODO</GR_StarPicker.titleShort>
+  
+  <!-- EN: 以暴戾之火，巡猎尘与空。\n{PAWN_nameDef}是一位独立的战斗机甲驾驶员，但对她而言，比起“驾驶”，她更像是在使用延展的肢体进行战斗。\n得益于特殊的身体改造，往往高昂的装备维修费用往往只需要些许时间就能被负责修复的纳米群完成，因此她无需专业设备也能独自打理好整台机甲。\n“比起高精度的能量系武器，我个人倾向于有着凶猛火力的实弹，或者干脆说爆炸系武器啦～再搭配上厚重的重型装甲，完美～” -->
+  <GR_StormEmperor.description>TODO</GR_StormEmperor.description>
+  <!-- EN: Gray Storm Emperor -->
+  <GR_StormEmperor.title>TODO</GR_StormEmperor.title>
+  <!-- EN: Storm Emperor -->
+  <GR_StormEmperor.titleShort>TODO</GR_StormEmperor.titleShort>
+  
+  <!-- EN: {PAWN_nameDef}是一名专业的外科医生，拥有丰富的抢救经验和手术经验。经过改造升级，她可以随时展开一台小型的手术台进行现场治疗或用于手术场景。她从不谈论自己从何又为何出发，只是踏上了游历世界，顺路治病救人的道路，虽然路上总是被耽误，但她总是微笑着出着自己的一份力。\n她常说要人应该活在当下，有话就快说，有心愿就去做。\n毕竟只有她知道，在一切完成之后，她总能在寂静无人的深夜偷偷踏上新的旅程。 -->
+  <GR_Wanderer.description>TODO</GR_Wanderer.description>
+  <!-- EN: Gray Wanderer doctor -->
+  <GR_Wanderer.title>TODO</GR_Wanderer.title>
+  <!-- EN: Wanderer doctor -->
+  <GR_Wanderer.titleShort>TODO</GR_Wanderer.titleShort>
+  
+</LanguageData>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Ammo57mmRailgun</defName>
+		<label>57mm Railgun</label>
+		<parent>AmmoShells</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRailgunHighCaliber</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_57mmRailgun</defName>
+		<label>57mm Railgun</label>
+		<ammoTypes>
+			<Ammo_57mmRailgun_Sabot>Bullet_57mmRailgun_Sabot</Ammo_57mmRailgun_Sabot>
+		</ammoTypes>
+		<similarTo>AmmoSet_LightCannon</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="SpacerMediumAmmoBase">
+		<defName>Ammo_57mmRailgun_Sabot</defName>
+		<label>57mm Railgun cartridge (Sabot)</label>
+		<description>Fin-stabilized tungsten carbide penetrator with discarding sabot, designed for large-caliber railgun weapons.</description>
+		<thingCategories>
+			<li>Ammo57mmRailgun</li>
+		</thingCategories>
+		<stackLimit>50</stackLimit>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting_TableMachining</li>
+		</tradeTags>
+		<statBases>
+			<Mass>5</Mass>
+			<Bulk>6.99</Bulk>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Ammo/Railgun/HighCaliber</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>RailgunSabot</ammoClass>
+		<cookOffProjectile>Bullet_57mmRailgun_Sabot</cookOffProjectile>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef ParentName="BaseBulletCE">
+		<defName>Bullet_57mmRailgun_Sabot</defName>
+		<label>57mm Railgun bullet (Sabot)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>GR_NanoBullet</damageDef>
+			<damageAmountBase>521</damageAmountBase>
+			<armorPenetrationSharp>1177</armorPenetrationSharp>
+			<armorPenetrationBlunt>450000</armorPenetrationBlunt>
+			<speed>406</speed>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragments>
+					<GR_Fragment_AP>2</GR_Fragment_AP>
+				</fragments>
+				<fragAngleRange>0~2</fragAngleRange>
+				<fragXZAngleRange>-1~1</fragXZAngleRange>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_57mmRailgun_Sabot</defName>
+		<label>make 57mm Railgun (Sabot) cartridge x25</label>
+		<description>Craft 25 57mm Railgun (Sabot) cartridges.</description>
+		<jobString>Making 57mm Railgun (Sabot) cartridges.</jobString>
+		<researchPrerequisites>
+			<li>CE_TurretHeavyWeapons</li>
+		</researchPrerequisites>
+		<workAmount>30000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Uranium</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+				<li>Uranium</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_57mmRailgun_Sabot>25</Ammo_57mmRailgun_Sabot>
+		</products>
+	</RecipeDef>
+
+</Defs>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- ================ Melee ================ -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[ defName="GR_RailPDW" or defName="GR_RailShotgun" or defName="GR_RailAssaultRifle" or defName="GR_RailMachinegun" or defName="GR_RailSniperRifle" or defName="GR_RailCannon"
+        ]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>stock</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>1.3</cooldownTime>
+          <chanceFactor>1.5</chanceFactor>
+          <armorPenetrationBlunt>3</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>barrel</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>6</power>
+          <cooldownTime>1.8</cooldownTime>
+          <armorPenetrationBlunt>2</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>muzzle</label>
+          <capacities>
+            <li>Poke</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>1.3</cooldownTime>
+          <armorPenetrationBlunt>3</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <!-- ================ Weapon ================ -->
+
+  <!--磁轨冲（脉冲）-->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_RailPDW</defName>
+    <statBases>
+      <SightsEfficiency>1.5</SightsEfficiency>
+      <ShotSpread>0.03</ShotSpread>
+      <SwayFactor>0.7</SwayFactor>
+      <Bulk>6</Bulk>
+      <Mass>3.5</Mass>
+      <RangedWeapon_Cooldown>0.22</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>1.1</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_4mmRailgun_GR</defaultProjectile>
+      <warmupTime>0.4</warmupTime>
+      <burstShotCount>8</burstShotCount>
+      <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+      <range>31</range>
+      <soundCast>Shot_HeavySMG</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>40</magazineSize>
+      <reloadTime>3.5</reloadTime>
+      <ammoSet>AmmoSet_PDW_Railgun_Gray</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>4</aimedBurstShotCount>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+      <aiAimMode>Snapshot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+  </Operation>
+
+  <!--磁轨喷（碎星）-->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_RailShotgun</defName>
+    <statBases>
+      <SightsEfficiency>1.5</SightsEfficiency>
+      <ShotSpread>0.07</ShotSpread>
+      <SwayFactor>1.21</SwayFactor>
+      <Bulk>9</Bulk>
+      <Mass>4.5</Mass>
+      <RangedWeapon_Cooldown>0.22</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>1.7</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_ShotgunRail</defaultProjectile>
+      <warmupTime>0.6</warmupTime>
+      <burstShotCount>5</burstShotCount>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <range>25</range>
+      <soundCast>GR_RailSniperRifle</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>30</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_ShotgunRail</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>3</aimedBurstShotCount>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+      <aiAimMode>Snapshot</aiAimMode>
+    </FireModes>
+  </Operation>
+
+  <!--磁轨突击步枪（斩铁）-->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_RailAssaultRifle</defName>
+    <statBases>
+      <SightsEfficiency>2</SightsEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>1.1</SwayFactor>
+      <Bulk>9</Bulk>
+      <Mass>4.5</Mass>
+      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>1.3</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_6mmRailgun_GR</defaultProjectile>
+      <warmupTime>0.8</warmupTime>
+      <burstShotCount>5</burstShotCount>
+      <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+      <range>65</range>
+      <soundCast>Shot_AssaultRifle</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>30</magazineSize>
+      <reloadTime>3.5</reloadTime>
+      <ammoSet>AmmoSet_AR_Railgun_Gray</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>3</aimedBurstShotCount>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+  </Operation>
+
+  <!--磁轨机枪（风暴）-->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_RailMachinegun</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>2.4</SwayFactor>
+      <Bulk>15</Bulk>
+      <Mass>30</Mass>
+      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>0.7</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_8mmRailgun_GR</defaultProjectile>
+      <warmupTime>1.9</warmupTime>
+      <burstShotCount>40</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <range>75</range>
+      <soundCast>Shot_Minigun</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>200</magazineSize>
+      <reloadTime>7.5</reloadTime>
+      <ammoSet>AmmoSet_MG_Railgun_Gray</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>20</aimedBurstShotCount>
+      <aiAimMode>Snapshot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>Bipod_GR_LMG</li>
+    </weaponTags>
+  </Operation>
+
+  <!--磁轨重狙（流星）-->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_RailSniperRifle</defName>
+    <statBases>
+      <SightsEfficiency>6</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>1.2</SwayFactor>
+      <Bulk>15</Bulk>
+      <Mass>8</Mass>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>1.8</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_8mmRailgun_GR</defaultProjectile>
+      <warmupTime>1.5</warmupTime>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+      <range>85</range>
+      <soundCast>GR_RailSniperRifle</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>8</magazineSize>
+      <reloadTime>3.5</reloadTime>
+      <ammoSet>AmmoSet_MG_Railgun_Gray</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>Bipod_GR_SR</li>
+    </weaponTags>
+  </Operation>
+
+  <!--磁轨重武器（质量）-->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_RailCannon</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0.2</SwayFactor>
+      <Bulk>80</Bulk>
+      <Mass>150</Mass>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>
+    <Properties>
+      <recoilAmount>1.8</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_57mmRailgun_Sabot</defaultProjectile>
+      <warmupTime>1.5</warmupTime>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+      <range>110</range>
+      <soundCast>GR_RailSniperRifle</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>1</magazineSize>
+      <reloadTime>7.5</reloadTime>
+      <ammoSet>AmmoSet_57mmRailgun</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+  </Operation>
+
+</Patch>

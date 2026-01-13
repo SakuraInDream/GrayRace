@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: longjump -->
+  <GR_Longjump.label>长距跳跃</GR_Longjump.label>
+  <!-- EN: Utilize the suspension device embedded in the armor to quickly jump to a distance. -->
+  <GR_Longjump.description>利用装甲内置的悬浮装置，快速跳跃到远处。</GR_Longjump.description>
+  <!-- EN: jump -->
+  <GR_Longjump.verbProperties.label>TODO</GR_Longjump.verbProperties.label>
+  
+</LanguageData>

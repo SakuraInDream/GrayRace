@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--机械师背包-->
+  <ThingDef ParentName="MechanitorPackBase">
+    <defName>Gray_Apparel_MechanitorBelt</defName>
+    <label>Gray auxiliary robotic arm</label>
+    <description>A backpack containing bandwidth-expansion computer and antenna. It can increase a mechanitor's maximum total bandwidth.</description>
+    <techLevel>Spacer</techLevel>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
+      <researchPrerequisite>GR_T2MechTech</researchPrerequisite>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <GR_Alloy>80</GR_Alloy>
+      <GR_Nanites>60</GR_Nanites>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <graphicData>
+      <texPath>Apparel/Mechanitor/Gray_MechanitorBelt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>3</Mass>
+      <Flammability>0</Flammability>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>GR_ApparelMisc</li>
+    </thingCategories>
+    <equippedStatOffsets>
+      <MechBandwidth>12</MechBandwidth>
+      <MechRepairSpeed>2</MechRepairSpeed>
+      <SubcoreEncodingSpeed>1</SubcoreEncodingSpeed>
+      <MeleeDamageFactor>0.4</MeleeDamageFactor>
+      <GeneralLaborSpeed>0.5</GeneralLaborSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <scoreOffset>4</scoreOffset>
+      <mechanitorApparel>true</mechanitorApparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <wornGraphicPath>Apparel/Mechanitor/Gray_MechanitorBelt</wornGraphicPath>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+    </apparel>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <allowedArchonexusCount>1</allowedArchonexusCount>
+  </ThingDef>
+</Defs>

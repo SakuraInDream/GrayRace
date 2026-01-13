@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--机械师软甲-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_MechanitorISA</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray mechanitor ISA</label>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_CombatClothing</li>
+        <li>GR_T2MechTech</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Apparel/Mechanitor/Gray_MechanitorISA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>60</GR_Alloy>
+      <GR_Nanites>80</GR_Nanites>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MechBandwidth>12</MechBandwidth>
+      <MechFormingSpeed>0.5</MechFormingSpeed>
+      <MechRepairSpeed>0.5</MechRepairSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Mechanitor/Gray_MechanitorISA</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>GR_Combat</li>
+        <li>GR_MechanitorArmor</li>
+        <li>GR_Underwear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+  </ThingDef>
+
+  <!--通用软甲-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_UniversalISA</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Universal ISA</label>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_CombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Apparel/UniversalISA/Gray_UniversalISA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>60</GR_Alloy>
+      <GR_Nanites>40</GR_Nanites>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>21000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>3</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <IncomingDamageFactor>-0.1</IncomingDamageFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/UniversalISA/Gray_UniversalISA</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>GR_Combat</li>
+        <li>GR_Underwear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+  </ThingDef>
+
+  <!--舰员制服A-->
+  <ThingDef ParentName="ApparelMakeableBase" Name="Gray_Apparel_CrewUniform">
+    <defName>Gray_Apparel_CrewUniformA</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Crew Uniform(Style A)</label>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>GR_Apparel</li>
+    </thingCategories>
+    <possessionCount>1</possessionCount>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+      </skillRequirements>
+    </recipeMaker>
+    <graphicData>
+      <texPath>Apparel/CrewUniform/Gray_CrewUniformA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costList>
+      <GR_Nanites>10</GR_Nanites>
+    </costList>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>2</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <RestRateMultiplier>0.2</RestRateMultiplier>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/CrewUniform/Gray_CrewUniformA</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>GR_Daily</li>
+        <li>GR_Underwear</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+  </ThingDef>
+
+  <!--舰员制服B-->
+  <ThingDef ParentName="Gray_Apparel_CrewUniform">
+    <defName>Gray_Apparel_CrewUniformB</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Crew Uniform(Style B)</label>
+    <graphicData>
+      <texPath>Apparel/CrewUniform/Gray_CrewUniformB</texPath>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Apparel/CrewUniform/Gray_CrewUniformB</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <!--舰员制服C-->
+  <ThingDef ParentName="Gray_Apparel_CrewUniform">
+    <defName>Gray_Apparel_CrewUniformC</defName>
+    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <label>Gray Crew Uniform(Style C)</label>
+    <graphicData>
+      <texPath>Apparel/CrewUniform/Gray_CrewUniformC</texPath>
+    </graphicData>
+    <apparel>
+      <wornGraphicPath>Apparel/CrewUniform/Gray_CrewUniformC</wornGraphicPath>
+    </apparel>
+  </ThingDef>
+
+  <!--尼罗河纱衣-->
+  <ThingDef ParentName="GR_ApparelProfessional">
+    <defName>Gray_Apparel_NileGauze</defName>
+    <description>.</description>
+    <label>Gray Nile Gauze Garment</label>
+    <graphicData>
+      <texPath>Apparel/NileGauze/Gray_NileGauze</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <equippedStatOffsets>
+      <PawnBeauty>2</PawnBeauty>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Apparel/NileGauze/Gray_NileGauze</wornGraphicPath>
+      <layers Inherit="False">
+        <li>OnSkin</li>
+      </layers>
+      <tags Inherit="False">
+        <li>GR_Decorative</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  <!--奇怪护士-->
+  <ThingDef ParentName="GR_ApparelProfessional">
+    <defName>Gray_Apparel_StrangeNurse</defName>
+    <description>.</description>
+    <label>Gray Strange Nurse Underwear</label>
+    <graphicData>
+      <texPath>Apparel/StrangeNurse/Gray_StrangeNurse</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <equippedStatOffsets>
+      <PawnBeauty>2</PawnBeauty>
+    </equippedStatOffsets>
+    <apparel>
+      <wornGraphicPath>Apparel/StrangeNurse/Gray_StrangeNurse</wornGraphicPath>
+      <layers Inherit="False">
+        <li>OnSkin</li>
+      </layers>
+      <tags Inherit="False">
+        <li>GR_Daily</li>
+        <li>GR_Underwear</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+</Defs>

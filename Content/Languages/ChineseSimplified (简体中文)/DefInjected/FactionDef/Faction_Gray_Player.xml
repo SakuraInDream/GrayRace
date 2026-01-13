@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Gray colonial outpost -->
+  <Gray_PlayerFaction.label>灰裔殖民前哨站</Gray_PlayerFaction.label>
+  <!-- EN: A colony of recently-arrived Grays. -->
+  <Gray_PlayerFaction.description>新的殖民地将会发生怎样的故事？</Gray_PlayerFaction.description>
+  <!-- EN: leader -->
+  <Gray_PlayerFaction.leaderTitle>TODO</Gray_PlayerFaction.leaderTitle>
+  <!-- EN: {0} from {1} are attacking your {2}. -->
+  <Gray_PlayerFaction.messageDefendersAttacking>TODO</Gray_PlayerFaction.messageDefendersAttacking>
+  <!-- EN: gray colonist -->
+  <Gray_PlayerFaction.pawnSingular>TODO</Gray_PlayerFaction.pawnSingular>
+  <!-- EN: kiiro colonists -->
+  <Gray_PlayerFaction.pawnsPlural>TODO</Gray_PlayerFaction.pawnsPlural>
+  
+</LanguageData>

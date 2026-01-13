@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: Gray -->
+  <Gray.label>灰裔</Gray.label>
+  <!-- EN: AI Persona Core -->
+  <Gray.corePart.parts.MechanicalNeck.parts.Head.parts.Nano_Brain.parts.AI_Persona_Core.customLabel>人格核心</Gray.corePart.parts.MechanicalNeck.parts.Head.parts.Nano_Brain.parts.AI_Persona_Core.customLabel>
+  <!-- EN: left eye -->
+  <Gray.corePart.parts.MechanicalNeck.parts.Head.parts.left_eye.customLabel>左眼</Gray.corePart.parts.MechanicalNeck.parts.Head.parts.left_eye.customLabel>
+  <!-- EN: right eye -->
+  <Gray.corePart.parts.MechanicalNeck.parts.Head.parts.right_eye.customLabel>右眼</Gray.corePart.parts.MechanicalNeck.parts.Head.parts.right_eye.customLabel>
+  <!-- EN: left ear -->
+  <Gray.corePart.parts.MechanicalNeck.parts.Head.parts.left_ear.customLabel>左耳</Gray.corePart.parts.MechanicalNeck.parts.Head.parts.left_ear.customLabel>
+  <!-- EN: right ear -->
+  <Gray.corePart.parts.MechanicalNeck.parts.Head.parts.right_ear.customLabel>右耳</Gray.corePart.parts.MechanicalNeck.parts.Head.parts.right_ear.customLabel>
+  <!-- EN: left shoulder -->
+  <Gray.corePart.parts.left_shoulder.customLabel>左肩</Gray.corePart.parts.left_shoulder.customLabel>
+  <!-- EN: left arm -->
+  <Gray.corePart.parts.left_shoulder.parts.left_arm.customLabel>左臂</Gray.corePart.parts.left_shoulder.parts.left_arm.customLabel>
+  <!-- EN: left hand -->
+  <Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.customLabel>左手</Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.customLabel>
+  <!-- EN: left pinky -->
+  <Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_pinky.customLabel>左小指</Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_pinky.customLabel>
+  <!-- EN: left ring finger -->
+  <Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_ring_finger.customLabel>左无名指</Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_ring_finger.customLabel>
+  <!-- EN: left middle finger -->
+  <Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>左中指</Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_middle_finger.customLabel>
+  <!-- EN: left index finger -->
+  <Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>左食指</Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_index_finger.customLabel>
+  <!-- EN: left thumb -->
+  <Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>左拇指</Gray.corePart.parts.left_shoulder.parts.left_arm.parts.left_hand.parts.left_thumb.customLabel>
+  <!-- EN: right shoulder -->
+  <Gray.corePart.parts.right_shoulder.customLabel>右肩</Gray.corePart.parts.right_shoulder.customLabel>
+  <!-- EN: right arm -->
+  <Gray.corePart.parts.right_shoulder.parts.right_arm.customLabel>右臂</Gray.corePart.parts.right_shoulder.parts.right_arm.customLabel>
+  <!-- EN: right hand -->
+  <Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.customLabel>右手</Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.customLabel>
+  <!-- EN: right pinky -->
+  <Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_pinky.customLabel>右小指</Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_pinky.customLabel>
+  <!-- EN: right ring finger -->
+  <Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_ring_finger.customLabel>右无名指</Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_ring_finger.customLabel>
+  <!-- EN: right middle finger -->
+  <Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>右中指</Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_middle_finger.customLabel>
+  <!-- EN: right index finger -->
+  <Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>右食指</Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_index_finger.customLabel>
+  <!-- EN: right thumb -->
+  <Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>右拇指</Gray.corePart.parts.right_shoulder.parts.right_arm.parts.right_hand.parts.right_thumb.customLabel>
+  <!-- EN: left leg -->
+  <Gray.corePart.parts.left_leg.customLabel>左腿</Gray.corePart.parts.left_leg.customLabel>
+  <!-- EN: left foot -->
+  <Gray.corePart.parts.left_leg.parts.left_foot.customLabel>左足</Gray.corePart.parts.left_leg.parts.left_foot.customLabel>
+  <!-- EN: left little toe -->
+  <Gray.corePart.parts.left_leg.parts.left_foot.parts.left_little_toe.customLabel>左小趾</Gray.corePart.parts.left_leg.parts.left_foot.parts.left_little_toe.customLabel>
+  <!-- EN: left fourth toe -->
+  <Gray.corePart.parts.left_leg.parts.left_foot.parts.left_fourth_toe.customLabel>左次小趾</Gray.corePart.parts.left_leg.parts.left_foot.parts.left_fourth_toe.customLabel>
+  <!-- EN: left middle toe -->
+  <Gray.corePart.parts.left_leg.parts.left_foot.parts.left_middle_toe.customLabel>左三趾</Gray.corePart.parts.left_leg.parts.left_foot.parts.left_middle_toe.customLabel>
+  <!-- EN: left second toe -->
+  <Gray.corePart.parts.left_leg.parts.left_foot.parts.left_second_toe.customLabel>左二趾</Gray.corePart.parts.left_leg.parts.left_foot.parts.left_second_toe.customLabel>
+  <!-- EN: left big toe -->
+  <Gray.corePart.parts.left_leg.parts.left_foot.parts.left_big_toe.customLabel>左大拇趾</Gray.corePart.parts.left_leg.parts.left_foot.parts.left_big_toe.customLabel>
+  <!-- EN: right leg -->
+  <Gray.corePart.parts.right_leg.customLabel>右腿</Gray.corePart.parts.right_leg.customLabel>
+  <!-- EN: right foot -->
+  <Gray.corePart.parts.right_leg.parts.right_foot.customLabel>右足</Gray.corePart.parts.right_leg.parts.right_foot.customLabel>
+  <!-- EN: right little toe -->
+  <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_little_toe.customLabel>右小趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_little_toe.customLabel>
+  <!-- EN: right fourth toe -->
+  <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_fourth_toe.customLabel>右次小趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_fourth_toe.customLabel>
+  <!-- EN: right middle toe -->
+  <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_middle_toe.customLabel>右三趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_middle_toe.customLabel>
+  <!-- EN: right second toe -->
+  <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>右二趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>
+  <!-- EN: right big toe -->
+  <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>右大拇趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>
+  
+  <!-- UNUSED -->
+  <Gray.corePart.parts.Neck.parts.Head.parts.Nano_Brain.parts.AI_Persona_Core.customLabel>人格核心</Gray.corePart.parts.Neck.parts.Head.parts.Nano_Brain.parts.AI_Persona_Core.customLabel>
+  <Gray.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>左眼</Gray.corePart.parts.Neck.parts.Head.parts.left_eye.customLabel>
+  <Gray.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>右眼</Gray.corePart.parts.Neck.parts.Head.parts.right_eye.customLabel>
+  <Gray.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>左耳</Gray.corePart.parts.Neck.parts.Head.parts.left_ear.customLabel>
+  <Gray.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>右耳</Gray.corePart.parts.Neck.parts.Head.parts.right_ear.customLabel>
+  
+</LanguageData>

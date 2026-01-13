@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: make AI Persona Core -->
+  <GR_Make_AICore.label>制作人格核心</GR_Make_AICore.label>
+  <!-- EN: Make AI Persona Core. -->
+  <GR_Make_AICore.description>制作一个人格核心。</GR_Make_AICore.description>
+  <!-- EN: Making AI Persona Core. -->
+  <GR_Make_AICore.jobString>正在制作人格核心。</GR_Make_AICore.jobString>
+
+  <!-- EN: make component x2 -->
+  <GR_Make_ComponentIndustrial.label>制作零部件 x2</GR_Make_ComponentIndustrial.label>
+  <!-- EN: Make component. -->
+  <GR_Make_ComponentIndustrial.description>制作零部件。</GR_Make_ComponentIndustrial.description>
+  <!-- EN: Making component. -->
+  <GR_Make_ComponentIndustrial.jobString>正在制作零部件。</GR_Make_ComponentIndustrial.jobString>
+
+  <!-- EN: make advanced component x2 -->
+  <GR_Make_ComponentSpacer.label>制作高级零部件 x2</GR_Make_ComponentSpacer.label>
+  <!-- EN: Make  advanced component. -->
+  <GR_Make_ComponentSpacer.description>制作高级零部件。</GR_Make_ComponentSpacer.description>
+  <!-- EN: Making advanced component. -->
+  <GR_Make_ComponentSpacer.jobString>正在制作高级零部件。</GR_Make_ComponentSpacer.jobString>
+
+  <!-- EN: make Fundamental Cube -->
+  <GR_Make_FundamentalCube.label>制作基本立方</GR_Make_FundamentalCube.label>
+  <!-- EN: Make Fundamental Cube. -->
+  <GR_Make_FundamentalCube.description>制作基本立方。</GR_Make_FundamentalCube.description>
+  <!-- EN: Making Fundamental Cube. -->
+  <GR_Make_FundamentalCube.jobString>正在制作基本立方。</GR_Make_FundamentalCube.jobString>
+
+  <!-- EN: make Nanite Core -->
+  <GR_Make_GrayCore.label>制作灰潮核心</GR_Make_GrayCore.label>
+  <!-- EN: Make Nanite Core. -->
+  <GR_Make_GrayCore.description>制作灰潮核心。</GR_Make_GrayCore.description>
+  <!-- EN: Making Nanite Core. -->
+  <GR_Make_GrayCore.jobString>正在制作灰潮核心。</GR_Make_GrayCore.jobString>
+
+  <!-- EN: make Imitation Nanite Core -->
+  <GR_Make_GrayCorePoor.label>制作仿制灰潮核心</GR_Make_GrayCorePoor.label>
+  <!-- EN: Make Imitation Nanite Core. -->
+  <GR_Make_GrayCorePoor.description>制作仿制灰潮核心。</GR_Make_GrayCorePoor.description>
+  <!-- EN: Making Imitation Nanite Core. -->
+  <GR_Make_GrayCorePoor.jobString>正在制作仿制灰潮核心。</GR_Make_GrayCorePoor.jobString>
+
+</LanguageData>

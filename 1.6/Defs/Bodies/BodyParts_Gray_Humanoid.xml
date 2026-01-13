@@ -3,12 +3,36 @@
 
   <BodyPartDef>
     <defName>Nano_Torso</defName>
-    <label>Nano torso</label>
-    <hitPoints>60</hitPoints>
+    <label>Nanite torso</label>
+    <hitPoints>40</hitPoints>
     <skinCovered>true</skinCovered>
     <canScarify>false</canScarify>
     <canSuggestAmputation>false</canSuggestAmputation>
     <executionPartPriority>400</executionPartPriority>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Nano_Heart</defName>
+    <label>Nanite Core</label>
+    <hitPoints>15</hitPoints>
+    <skinCovered>false</skinCovered>
+    <canScarify>false</canScarify>
+    <tags>
+      <li>BloodPumpingSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <spawnThingOnRemoved>GR_GrayCore</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Nano_Brain</defName>
+    <label>AI Persona Core Shield</label>
+    <hitPoints>25</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <canScarify>false</canScarify>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <spawnThingOnRemoved>AIPersonaCore</spawnThingOnRemoved>
   </BodyPartDef>
 
 </Defs>

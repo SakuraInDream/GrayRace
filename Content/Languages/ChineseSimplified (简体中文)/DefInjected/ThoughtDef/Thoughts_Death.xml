@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: compatriot died -->
+  <GR_KnowCompatriotDied.stages.compatriot_died.label>同胞去世</GR_KnowCompatriotDied.stages.compatriot_died.label>
+  <!-- EN: Our compatriot has passed away, and we should carry on with her legacy. -->
+  <GR_KnowCompatriotDied.stages.compatriot_died.description>我们的同胞已经去世，我们应该继续她的遗志。</GR_KnowCompatriotDied.stages.compatriot_died.description>
+
+  <!-- EN: witnessed ally's death -->
+  <GR_WitnessedDeathAlly.stages.witnessed_allys_death.label>目睹盟友死亡</GR_WitnessedDeathAlly.stages.witnessed_allys_death.label>
+  <!-- EN: Our compatriots have sacrificed, and we must make the enemy pay the price! -->
+  <GR_WitnessedDeathAlly.stages.witnessed_allys_death.description>我们的同胞已经牺牲，我们必须让敌人付出代价！</GR_WitnessedDeathAlly.stages.witnessed_allys_death.description>
+
+</LanguageData>
