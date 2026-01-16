@@ -15,9 +15,9 @@
       <li>
         <totalBleedFactor>0</totalBleedFactor>
         <minSeverity>0</minSeverity>
-        <statOffsets>
+        <!-- <statOffsets>
           <GRStat_NaniteRegenRate>-0.02</GRStat_NaniteRegenRate>
-        </statOffsets>
+        </statOffsets> -->
         <!-- <regeneration>5000</regeneration> -->
         <!-- <painFactor>0</painFactor> -->
       </li>

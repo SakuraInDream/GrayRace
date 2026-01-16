@@ -3,7 +3,7 @@
 
   <HeadTypeDef ParentName="AverageBase">
     <defName>GR_Feature0</defName>
-    <graphicPath>Race/Gray/Head/Gray_Female</graphicPath>
+    <graphicPath>Race/Gray/Head/Gray_Female0</graphicPath>
     <gender>None</gender>
   </HeadTypeDef>
 

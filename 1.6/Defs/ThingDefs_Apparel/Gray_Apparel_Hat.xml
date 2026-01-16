@@ -475,4 +475,71 @@
     </tradeTags>
   </ThingDef>
 
+  <!--女仆发带-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_MaidBand</defName>
+    <label>Gray Maid Band</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Maid/Gray_MaidBand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_ProfessionalClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costList>
+    </costList>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>0.1</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Maid/Gray_MaidBand</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_Maid</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
 </Defs>

@@ -113,6 +113,7 @@
           <headTypes>            <!--头部的种类，动态表情貌似就是引用的这玩意做的脸？但是貌似空路径都没事，只要别空着，这玩意干嘛的，不会是什么泰南的神秘历史遗留吧-->
             <li>GR_Feature0</li>
             <li>GR_Feature1</li>
+            <li>GR_Feature2</li>
           </headTypes>
           <bodyTypes>            <!--体型-->
             <li>Female</li>
@@ -121,7 +122,7 @@
           </bodyTypes>
           <atlasScale>4</atlasScale>
           <borderScale>1</borderScale>
-          <headOffset>(0.0, -0.35)</headOffset>          <!--头部贴图的偏移-->
+          <headOffset>(0.0, 0.05)</headOffset>          <!--头部贴图的偏移-->
           <headOffsetDirectional>
             <east>
               <offset>(-0.1, 0.0)</offset>
@@ -556,8 +557,8 @@
         <li Class="AlienRace.LifeStageAgeAlien">
           <def>HumanlikeBaby</def>
           <minAge>0</minAge>
-          <headOffset>(0, -0.35)</headOffset>
-          <headFemaleOffset>(0, -0.35)</headFemaleOffset>
+          <headOffset>(0, 0.05)</headOffset>
+          <headFemaleOffset>(0, 0.05)</headFemaleOffset>
           <customDrawSize>(1.5,1.5)</customDrawSize>
           <customPortraitDrawSize>(1.5,1.5)</customPortraitDrawSize>
           <customHeadDrawSize>(0.01,0.01)</customHeadDrawSize>
@@ -566,8 +567,8 @@
         <li Class="AlienRace.LifeStageAgeAlien">
           <def>HumanlikeChild</def>
           <minAge>1</minAge>
-          <headOffset>(0, -0.55)</headOffset>
-          <headFemaleOffset>(0, -0.55)</headFemaleOffset>
+          <headOffset>(0, -0.15)</headOffset>
+          <headFemaleOffset>(0, -0.15)</headFemaleOffset>
           <customDrawSize>(2.5,2.5)</customDrawSize>
           <customPortraitDrawSize>(2.5,2.5)</customPortraitDrawSize>
           <customHeadDrawSize>(0.01,0.01)</customHeadDrawSize>
@@ -576,14 +577,14 @@
         <li Class="AlienRace.LifeStageAgeAlien" MayRequire="Ludeon.RimWorld.Biotech">
           <def>HumanlikePreTeenager</def>
           <minAge>4</minAge>
-          <headOffset>(0, -0.55)</headOffset>
-          <headFemaleOffset>(0, -0.55)</headFemaleOffset>
+          <headOffset>(0, -0.15)</headOffset>
+          <headFemaleOffset>(0, -0.15)</headFemaleOffset>
         </li>
         <li Class="AlienRace.LifeStageAgeAlien">
           <def>HumanlikeTeenager</def>
           <minAge>10</minAge>
-          <headOffset>(0, -0.35)</headOffset>
-          <headFemaleOffset>(0, -0.35)</headFemaleOffset>
+          <headOffset>(0, 0.05)</headOffset>
+          <headFemaleOffset>(0, 0.05)</headFemaleOffset>
           <customDrawSize>(0.8,0.8)</customDrawSize>
           <customPortraitDrawSize>(0.8,0.8)</customPortraitDrawSize>
           <customHeadDrawSize>(0.8,0.8)</customHeadDrawSize>
