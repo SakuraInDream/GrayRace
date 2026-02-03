@@ -1,34 +1,44 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Arc -->
   <GR_Arc.label>电弧</GR_Arc.label>
   <!-- EN: {0} was shattered by an arc. -->
   <GR_Arc.deathMessage>TODO</GR_Arc.deathMessage>
-  
+
+  <!-- EN: Cold Claw -->
+  <GR_ColdClaw.label>寒爪</GR_ColdClaw.label>
+  <!-- EN: {0} has succumbed to frostbite. -->
+  <GR_ColdClaw.deathMessage>TODO</GR_ColdClaw.deathMessage>
+
   <!-- EN: Crowbar Damage -->
-  <GR_CrowbarDamage.label>TODO</GR_CrowbarDamage.label>
+  <GR_CrowbarDamage.label>撬棍伤</GR_CrowbarDamage.label>
   <!-- EN: {0} has been cut to death. -->
   <GR_CrowbarDamage.deathMessage>TODO</GR_CrowbarDamage.deathMessage>
-  
+
   <!-- EN: Disintegration -->
   <GR_Disintegration.label>裂解</GR_Disintegration.label>
   <!-- EN: {0} has been melted. -->
   <GR_Disintegration.deathMessage>TODO</GR_Disintegration.deathMessage>
-  
+
+  <!-- EN: Heat Claw -->
+  <GR_HeatClaw.label>热爪</GR_HeatClaw.label>
+  <!-- EN: {0} has burned to death. -->
+  <GR_HeatClaw.deathMessage>TODO</GR_HeatClaw.deathMessage>
+
   <!-- EN: Laser -->
   <GR_Laser.label>激光</GR_Laser.label>
   <!-- EN: {0} has been beamed to death. -->
   <GR_Laser.deathMessage>TODO</GR_Laser.deathMessage>
-  
+
   <!-- EN: Nano Bullet -->
   <GR_NanoBullet.label>纳米子弹伤</GR_NanoBullet.label>
   <!-- EN: {0} has been shot to death. -->
   <GR_NanoBullet.deathMessage>TODO</GR_NanoBullet.deathMessage>
-  
+
   <!-- EN: Nanite scratch -->
   <GR_NanoScratch.label>纳米侵蚀伤</GR_NanoScratch.label>
   <!-- EN: {0} has been torn to death. -->
   <GR_NanoScratch.deathMessage>TODO</GR_NanoScratch.deathMessage>
-  
+
 </LanguageData>

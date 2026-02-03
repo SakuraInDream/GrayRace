@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 备用灰潮源质上限 -->
+  <GRStat_NaniteMax.label>TODO</GRStat_NaniteMax.label>
+  <!-- EN: 灰裔体内能够储存的备用纳米机械最大值。 -->
+  <GRStat_NaniteMax.description>TODO</GRStat_NaniteMax.description>
+  
+  <!-- EN: 备用灰潮源质回复率 -->
+  <GRStat_NaniteRegenRate.label>TODO</GRStat_NaniteRegenRate.label>
+  <!-- EN: 灰裔每秒自动回复的纳米机械数量。 -->
+  <GRStat_NaniteRegenRate.description>TODO</GRStat_NaniteRegenRate.description>
+  
+</LanguageData>

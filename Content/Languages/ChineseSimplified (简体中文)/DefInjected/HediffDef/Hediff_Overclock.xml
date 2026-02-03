@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 手臂超频 -->
+  <GR_Overclock_Arm.label>TODO</GR_Overclock_Arm.label>
+  <!-- EN: 加速能量消耗对部位进行效率超频。 -->
+  <GR_Overclock_Arm.description>TODO</GR_Overclock_Arm.description>
+  
+  <!-- EN: 人格核心超频 -->
+  <GR_Overclock_Brain.label>TODO</GR_Overclock_Brain.label>
+  <!-- EN: 提升意识水平。 -->
+  <GR_Overclock_Brain.description>TODO</GR_Overclock_Brain.description>
+  
+  <!-- EN: 眼部超频 -->
+  <GR_Overclock_Eye.label>TODO</GR_Overclock_Eye.label>
+  <!-- EN: 加速能量消耗对部位进行效率超频。 -->
+  <GR_Overclock_Eye.description>TODO</GR_Overclock_Eye.description>
+  
+  <!-- EN: 核心超频 -->
+  <GR_Overclock_Heart.label>TODO</GR_Overclock_Heart.label>
+  <!-- EN: 大幅提升血液循环效率。 -->
+  <GR_Overclock_Heart.description>TODO</GR_Overclock_Heart.description>
+  
+  <!-- EN: 腿部超频 -->
+  <GR_Overclock_Leg.label>TODO</GR_Overclock_Leg.label>
+  <!-- EN: 加速能量消耗对部位进行效率超频。 -->
+  <GR_Overclock_Leg.description>TODO</GR_Overclock_Leg.description>
+  
+</LanguageData>

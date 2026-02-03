@@ -1,47 +1,56 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
-  <!-- EN: Stun stick -->
+  <!-- EN: Stun Stick -->
   <GR_Cadus.label>电流长棍</GR_Cadus.label>
-  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
-  <GR_Cadus.description>TODO</GR_Cadus.description>
+  <!-- EN: . -->
+  <GR_Cadus.description>在电击剑的成功基础上研发的进阶武器。这根长棍的两端均搭载了高压电流发生器，牺牲切割能力换来的是更强劲的电流。其高压电流可轻易穿透肉体和机械，实现更高效的群体控制效果。</GR_Cadus.description>
   <!-- EN: Top -->
   <GR_Cadus.tools.Top.label>TODO</GR_Cadus.tools.Top.label>
   <!-- EN: Bottom -->
   <GR_Cadus.tools.Bottom.label>TODO</GR_Cadus.tools.Bottom.label>
 
-  <!-- EN: HolySword -->
+  <!-- EN: Crowbar of Physics -->
   <GR_Crowbar.label>物理学圣剑</GR_Crowbar.label>
-  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
-  <GR_Crowbar.description>TODO</GR_Crowbar.description>
+  <!-- EN: . -->
+  <GR_Crowbar.description>看上去只是一把普通的撬棍，但有人说它可以在一定程度上掌握物理规则。</GR_Crowbar.description>
   <!-- EN: edge -->
   <GR_Crowbar.tools.edge.label>TODO</GR_Crowbar.tools.edge.label>
 
+  <!-- EN: Force Field Ripper -->
+  <GR_FFR.label>力场撕裂者</GR_FFR.label>
+  <!-- EN: . -->
+  <GR_FFR.description>宇宙创生的大统一理论和现实编辑的实验性具现化物品，用一种无法理解的方式直接对四大基本力进行操控，任意操控所触碰到的物质。发射器被做成了爪子的形状，不知道为何没有任何重量，仿佛不存在于这个位面一样。</GR_FFR.description>
+  <!-- EN: left claw -->
+  <GR_FFR.tools.left_claw.label>TODO</GR_FFR.tools.left_claw.label>
+  <!-- EN: right claw -->
+  <GR_FFR.tools.right_claw.label>TODO</GR_FFR.tools.right_claw.label>
+
   <!-- EN: HF Murasama -->
   <GR_HFMurasama.label>“村雨”</GR_HFMurasama.label>
-  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
-  <GR_HFMurasama.description>TODO</GR_HFMurasama.description>
+  <!-- EN: . -->
+  <GR_HFMurasama.description>复刻自星海帝国传奇剑客的佩刀。刀身每秒千次的高速振动，带来的是足以熔穿装甲的高温和惊人的切割能力，甚至可以轻易的斩断一辆主战坦克。握柄设有生物锁，只有灰裔可以正常使用。</GR_HFMurasama.description>
   <!-- EN: edge -->
   <GR_HFMurasama.tools.edge.label>TODO</GR_HFMurasama.tools.edge.label>
 
   <!-- EN: Lightsaber -->
   <GR_Lightsaber.label>辉光</GR_Lightsaber.label>
-  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
-  <GR_Lightsaber.description>TODO</GR_Lightsaber.description>
+  <!-- EN: . -->
+  <GR_Lightsaber.description>使用聚变核心驱动剑柄内的等离子体发射器，通过特制磁场将其约束成一道灼热的光刃。由于等离子体没有任何质量，挥舞时几乎感受不到惯性，这赐予了他令人目不暇接的攻速，受害者往往只能看到一道光弧闪过。</GR_Lightsaber.description>
   <!-- EN: edge -->
   <GR_Lightsaber.tools.edge.label>TODO</GR_Lightsaber.tools.edge.label>
 
   <!-- EN: Ship Slayer -->
   <GR_ShipSlayer.label>破舰者</GR_ShipSlayer.label>
-  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
-  <GR_ShipSlayer.description>TODO</GR_ShipSlayer.description>
+  <!-- EN: . -->
+  <GR_ShipSlayer.description>这并非一把真正的武器，而是一块被装上握柄的舰用装甲板。边缘被灰潮源质侵蚀，锐利且带有侵蚀性。其沉重的质量纵使对于灰裔来说也略显吃力，但每一次挥动都带着足以令大地碎裂，山脉崩解的毁灭动能。</GR_ShipSlayer.description>
   <!-- EN: edge -->
   <GR_ShipSlayer.tools.edge.label>TODO</GR_ShipSlayer.tools.edge.label>
 
-  <!-- EN: Electric shock sword -->
+  <!-- EN: Electric Shock Sword -->
   <GR_VoltSword.label>电击剑</GR_VoltSword.label>
-  <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
-  <GR_VoltSword.description>TODO</GR_VoltSword.description>
+  <!-- EN: . -->
+  <GR_VoltSword.description>灰裔中最常见的制式武器。双层合金剑刃内嵌电流发生器，能在劈砍的同时释放电流麻痹敌人。其尖端经过放电特化，可将高压电流聚焦于一点。是集攻防于一体的防身首选。</GR_VoltSword.description>
   <!-- EN: point -->
   <GR_VoltSword.tools.point.label>TODO</GR_VoltSword.tools.point.label>
   <!-- EN: edge -->

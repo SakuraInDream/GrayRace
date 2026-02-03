@@ -371,7 +371,7 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_GR_RailMechgun</defaultProjectile>
-        <warmupTime>0.5</warmupTime>
+        <warmupTime>1.5</warmupTime>
         <range>41.9</range>
         <burstShotCount>25</burstShotCount>
         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>

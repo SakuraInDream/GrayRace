@@ -40,8 +40,8 @@
     <description>大幅提升血液循环效率。</description>
 
     <capacityToBoost>BloodPumping</capacityToBoost>
-    <capacityRange>0~0.8</capacityRange>
-    <baseEnergyDrain>5.0</baseEnergyDrain>
+    <capacityRange>0~1</capacityRange>
+    <baseEnergyDrain>1.0</baseEnergyDrain>
   </SD.GrayRace.Hediffs.HediffDef_Overclock>
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
@@ -53,7 +53,7 @@
     <!-- 这里直接写 <efficiencyRange>0~0.5</efficiencyRange> 也行，不要同时使用，二选一 -->
     <capacityToBoost>Consciousness</capacityToBoost>
     <!-- 指定超频的范围，跟 efficiencyRange 相同类型，都是 FloatRange -->
-    <capacityRange>0~0.5</capacityRange>
-    <baseEnergyDrain>5.0</baseEnergyDrain>
+    <capacityRange>0~1</capacityRange>
+    <baseEnergyDrain>1.0</baseEnergyDrain>
   </SD.GrayRace.Hediffs.HediffDef_Overclock>
 </Defs>

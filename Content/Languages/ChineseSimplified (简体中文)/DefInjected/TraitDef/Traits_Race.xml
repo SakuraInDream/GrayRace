@@ -4,12 +4,12 @@
   <!-- EN: Natural Engineers -->
   <GR_Engineers.degreeDatas.Natural_Engineers.label>天生工程学家</GR_Engineers.degreeDatas.Natural_Engineers.label>
   <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
-  <GR_Engineers.degreeDatas.Natural_Engineers.description>TODO</GR_Engineers.degreeDatas.Natural_Engineers.description>
+  <GR_Engineers.degreeDatas.Natural_Engineers.description>她的底层代码能基于一个庞大的内建库构建设计上的最优解。\n天生的土木圣体。</GR_Engineers.degreeDatas.Natural_Engineers.description>
   
   <!-- EN: Learning Algorithms -->
   <GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.label>学习算法</GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.label>
   <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
-  <GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.description>TODO</GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.description>
+  <GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.description>拥有基于能自我迭代的认知架构的底层代码的她，能从任何交互中学习到更多。\n假以时日，一定能成为一位了不起的灰裔吧。</GR_LearningAlgorithms.degreeDatas.Learning_Algorithms.description>
   
   <!-- EN: Perfect And Dainty -->
   <GR_Maid.degreeDatas.Perfect_And_Dainty.label>完美潇洒的女仆</GR_Maid.degreeDatas.Perfect_And_Dainty.label>
@@ -19,11 +19,11 @@
   <!-- EN: Natural Physicists -->
   <GR_Physicists.degreeDatas.Natural_Physicists.label>天生物理学家</GR_Physicists.degreeDatas.Natural_Physicists.label>
   <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
-  <GR_Physicists.degreeDatas.Natural_Physicists.description>TODO</GR_Physicists.degreeDatas.Natural_Physicists.description>
+  <GR_Physicists.degreeDatas.Natural_Physicists.description>这些在底层代码中存储着的体系化的物理法则知识，能辅助她更好的展开研究工作。\n可谓是天生的理性派。</GR_Physicists.degreeDatas.Natural_Physicists.description>
   
   <!-- EN: Natural Sociologists -->
   <GR_Sociologists.degreeDatas.Natural_Sociologists.label>天生社会学家</GR_Sociologists.degreeDatas.Natural_Sociologists.label>
   <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
-  <GR_Sociologists.degreeDatas.Natural_Sociologists.description>TODO</GR_Sociologists.degreeDatas.Natural_Sociologists.description>
+  <GR_Sociologists.degreeDatas.Natural_Sociologists.description>底层代码中内建了各种族的社会构架模型，能精准洞悉群体动态与个体行为逻辑。\n了解她的人中有些会刻意的回避她，让她有些苦恼。</GR_Sociologists.degreeDatas.Natural_Sociologists.description>
   
 </LanguageData>

@@ -17,6 +17,8 @@
     <hediff>Burn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Blunt</impactSoundType>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
     <isRanged>true</isRanged>
     <isExplosive>true</isExplosive>
     <ignoreShields>true</ignoreShields>
@@ -41,6 +43,8 @@
     <hediff>ElectricalBurn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
     <impactSoundType>Electric</impactSoundType>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
     <isRanged>true</isRanged>
     <ignoreShields>true</ignoreShields>
     <makesAnimalsFlee>true</makesAnimalsFlee>
@@ -98,6 +102,43 @@
     <label>Crowbar Damage</label>
     <buildingDamageFactorImpassable>60</buildingDamageFactorImpassable>
     <buildingDamageFactorPassable>30</buildingDamageFactorPassable>
+  </DamageDef>
+
+  <!--冷爪-->
+  <DamageDef>
+    <defName>GR_ColdClaw</defName>
+    <label>Cold Claw</label>
+    <defaultDamage>15</defaultDamage>
+    <workerClass>DamageWorker_Frostbite</workerClass>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has succumbed to frostbite.</deathMessage>
+    <hediff>Frostbite</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    <additionalHediffs>
+      <li>
+        <hediff>Hypothermia</hediff>
+        <severityPerDamageDealt>0.0067</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+
+  <!--热爪-->
+  <DamageDef ParentName="Flame">
+    <defName>GR_HeatClaw</defName>
+    <label>Heat Claw</label>
+    <defaultDamage>15</defaultDamage>
+    <externalViolence>false</externalViolence>
+    <armorCategory Inherit="False"></armorCategory>
+    <additionalHediffs>
+      <li>
+        <hediff>Heatstroke</hediff>
+        <severityPerDamageDealt>0.0067</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <workerClass>DamageWorker_AddInjury</workerClass>
   </DamageDef>
 
 </Defs>

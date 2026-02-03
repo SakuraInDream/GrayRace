@@ -66,7 +66,7 @@
         <requiredTag>GR_Underwear</requiredTag>
       </li>
     </specificApparelRequirements>
-    <weaponMoney>500~5000</weaponMoney>
+    <weaponMoney>2000~5000</weaponMoney>
     <weaponTags>
       <li>GR_BasicWeapon</li>
     </weaponTags>

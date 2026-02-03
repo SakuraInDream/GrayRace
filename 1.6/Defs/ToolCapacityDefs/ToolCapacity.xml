@@ -10,4 +10,15 @@
         <defName>GR_CrowbarDamage</defName>
         <label>Crowbar Damage</label>
     </ToolCapacityDef>
+
+    <ToolCapacityDef>
+        <defName>GR_ColdClaw</defName>
+        <label>Cold Claw</label>
+    </ToolCapacityDef>
+
+    <ToolCapacityDef>
+        <defName>GR_HeatClaw</defName>
+        <label>Heat Claw</label>
+    </ToolCapacityDef>
+
 </Defs>
