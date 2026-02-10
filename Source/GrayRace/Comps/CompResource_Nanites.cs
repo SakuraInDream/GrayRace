@@ -1,136 +1,136 @@
 using System.Collections.Generic;
+using RimWorld;
 using SD.GrayRace.Needs;
 using SD.GrayRace.UISet.Gizmos;
 using UnityEngine;
 using Verse;
 
-namespace SD.GrayRace.Comps
+namespace SD.GrayRace.Comps;
+
+// 纳米机械资源实现
+public class CompResource_Nanites: ThingComp
 {
-    // 纳米机械资源实现
-    // public class CompResource_Nanites: ThingComp
-    // {
-    //     protected float cur;
-    //
-    //     protected float max;
-    //
-    //     protected Gizmo_NaniteResources gizmo;
-    //
-    //     private Need_GrayRaceEnergy energy => Pawn.needs.TryGetNeed<Need_GrayRaceEnergy>();
-    //
-    //     public virtual string ResourceLabel => Props.resourceLabel;
-    //
-    //     public Pawn Pawn => parent as Pawn;
-    //
-    //     public CompProperties_Nanites Props => (CompProperties_Nanites)props;
-    //
-    //     public virtual float InitialResourceMax => Props.maxResource;
-    //
-    //     public float RegenPerSecond { get; set; }
-    //
-    //     public bool HasEnoughResource(float cost)
-    //     {
-    //         return cur >= cost;
-    //     }
-    //
-    //     public float CurResource => cur;
-    //
-    //     public bool CanRegenNanites
-    //     {
-    //         get
-    //         {
-    //             if (Pawn.InMentalState || Pawn.Dead || Pawn.Deathresting || CurResource >= Max) return false;
-    //
-    //             return energy != null && energy.CurLevelPercentage > 0.01f;
-    //         }
-    //     }
-    //     // 当前资源显示
-    //     public virtual int ValueForDisplay => PostProcessValue(cur);
-    //
-    //     // 最大资源显示
-    //     public virtual int MaxForDisplay => PostProcessValue(max);
-    //     // 获取最大资源量
-    //     public virtual float Max => max;
-    //
-    //     // 获取当前资源量
-    //     public virtual float Value
-    //     {
-    //         get => cur;
-    //         set => cur = Mathf.Clamp(value, 0f, max);
-    //     }
-    //     // 获取当前资源百分比
-    //     public virtual float ValuePercent
-    //     {
-    //         get => cur / Props.maxResource;
-    //         set => cur = value * Props.maxResource;
-    //     }
-    //
-    //     protected virtual void Reset()
-    //     {
-    //         max = InitialResourceMax;
-    //     }
-    //
-    //     public virtual int PostProcessValue(float value) => Mathf.RoundToInt(value * 100f);
-    //
-    //
-    //     public override void Initialize(CompProperties prop)
-    //     {
-    //         base.Initialize(prop);
-    //         gizmo = new Gizmo_NaniteResources(this);
-    //         RegenPerSecond = Props.regenPerSecond;
-    //     }
-    //
-    //     public override void PostExposeData()
-    //     {
-    //         base.PostExposeData();
-    //         Scribe_Values.Look(ref cur, "cur");
-    //         Scribe_Values.Look(ref max, "max");
-    //     }
-    //
-    //     public override void PostSpawnSetup(bool respawningAfterLoad)
-    //     {
-    //         base.PostSpawnSetup(respawningAfterLoad);
-    //         Reset();
-    //     }
-    //
-    //     public override void CompTickInterval(int delta)
-    //     {
-    //         if (!parent.IsHashIntervalTick(60, delta) || CurResource >= Props.maxResource) return;
-    //
-    //         // 还需要一个根据 NeedDef 影响回复速度的判断
-    //         if (CanRegenNanites)
-    //         {
-    //             cur += RegenPerSecond;
-    //         }
-    //
-    //         if (!Pawn.health.hediffSet.HasHediff(GrayRaceDefOf.NanitesRegeneration))
-    //         {
-    //             Pawn.health.AddHediff(GrayRaceDefOf.NanitesRegeneration);
-    //         }
-    //     }
-    //
-    //     public override IEnumerable<Gizmo> CompGetGizmosExtra()
-    //     {
-    //         yield return gizmo;
-    //
-    //         if (DebugSettings.ShowDevGizmos)
-    //         {
-    //             yield return new Command_Action
-    //             {
-    //                 defaultLabel = $"-20% {ResourceLabel}",
-    //                 action = () =>
-    //                 {
-    //                     GrayRaceUtilities.OffsetNanites(Pawn, -max * 0.2f);
-    //                 }
-    //             };
-    //             yield return new Command_Action
-    //             {
-    //                 defaultLabel = $"+20% {ResourceLabel}",
-    //                 action = () =>
-    //                 {
-    //                     GrayRaceUtilities.OffsetNanites(Pawn, max * 0.2f);
-    //                 }
-    //             };
-    //         }
-    //     }
-    // }
+    private float _curNanites;
+
+    private Gizmo_NaniteResources _gizmo;
+    private Need_GrayRaceEnergy _energyNeed;
+
+    public Need_GrayRaceEnergy EnergyNeed
+    {
+        get
+        {
+            _energyNeed ??= Pawn.needs.TryGetNeed<Need_GrayRaceEnergy>();
+
+            return _energyNeed;
+        }
+    }
+    public Pawn Pawn => parent as Pawn;
+    public CompProperties_Nanites Props => (CompProperties_Nanites)props;
+
+    public float Max
+    {
+        get
+        {
+            return Pawn.GetStatValue(GrayRaceDefOf.GRStat_NaniteMax);
+        }
+    }
+    public float CurrentNanites
+    {
+        get => _curNanites;
+        set => _curNanites = value;
+    }
+
+    public float CurrentNanitesPercent => Max > 0 ? _curNanites / Max : 0f;
+
+    public override void PostSpawnSetup(bool respawningAfterLoad)
+    {
+        base.PostSpawnSetup(respawningAfterLoad);
+        _gizmo ??= new Gizmo_NaniteResources(this);
+
+        _curNanites = Mathf.Clamp(_curNanites, 0f, Max);
+        EnsureRegenHediff();
+    }
+
+    public override void PostExposeData()
+    {
+        base.PostExposeData();
+        Scribe_Values.Look(ref _curNanites, "curNanites");
+    }
+
+    public override void CompTick()
+    {
+        base.CompTick();
+
+        if (Pawn.IsHashIntervalTick(60))
+        {
+            TickCal();
+        }
+    }
+
+    // 控制资源的消耗再生
+    private void TickCal()
+    {
+        float regenAmount = Pawn.GetStatValue(GrayRaceDefOf.GRStat_NaniteRegenRate);
+        _curNanites = Mathf.Min(_curNanites + regenAmount, Max);
+    }
+
+    // 存档加载纠错机制，防止被别的 Mod 或手段误 "治疗" 掉我们的核心 Hediff —— NanitesRegeneration
+    private void EnsureRegenHediff()
+    {
+        if (!Pawn.health.hediffSet.HasHediff(GrayRaceDefOf.NanitesRegeneration))
+        {
+            Pawn.health.AddHediff(GrayRaceDefOf.NanitesRegeneration);
+        }
+    }
+
+    public bool TrySpendNanites(float amount, string reason = "")
+    {
+        if (EnergyNeed != null && EnergyNeed.CurLevel <= 0f)
+        {
+            if (Pawn.IsColonistPlayerControlled)
+            {
+                Messages.Message(reason, Pawn, MessageTypeDefOf.RejectInput, false);
+            }
+
+            return false;
+        }
+
+        if (_curNanites >= amount)
+        {
+            _curNanites -= amount;
+            return true;
+        }
+
+        return false;
+    }
+
+    public void OffsetNanites(float amount)
+    {
+        _curNanites = Mathf.Clamp(_curNanites + amount, 0f, Max);
+    }
+
+    public override IEnumerable<Gizmo> CompGetGizmosExtra()
+    {
+        if (Pawn.IsColonistPlayerControlled && Pawn.IsGrayRace())
+        {
+            _gizmo ??= new Gizmo_NaniteResources(this);
+            yield return _gizmo;
+        }
+
+        if (DebugSettings.ShowDevGizmos)
+        {
+            yield return new Command_Action
+            {
+                defaultLabel = "DEBUG: -10 Nanites", action = () => OffsetNanites(-10f)
+            };
+            yield return new Command_Action
+            {
+                defaultLabel = "DEBUG: Fill Nanites", action = () => OffsetNanites(Max)
+            };
+            yield return new Command_Action
+            {
+                defaultLabel = "DEBUG: +10 Nanites", action = () => OffsetNanites(10f)
+            };
+        }
+    }
 }

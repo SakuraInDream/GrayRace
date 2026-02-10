@@ -13,7 +13,7 @@ namespace SD.GrayRace.Comps
             get
             {
                 // var comp = parent.pawn.TryGetComp<CompResource_Nanites>();
-                var comp = parent.pawn.TryGetComp<CompResource_NanitesNew>();
+                var comp = parent.pawn.TryGetComp<CompResource_Nanites>();
                 // return comp?.CurResource >= Props.nanitesCost;
                 return comp?.CurrentNanites >= Props.nanitesCost;
             }
@@ -37,7 +37,7 @@ namespace SD.GrayRace.Comps
         public override bool GizmoDisabled(out string reason)
         {
             // var resource = parent.pawn.TryGetComp<CompResource_Nanites>();
-            var resource = parent.pawn.TryGetComp<CompResource_NanitesNew>();
+            var resource = parent.pawn.TryGetComp<CompResource_Nanites>();
             if (resource == null)
             {
                 reason = "无使用纳米机械能力"; // 待本地化

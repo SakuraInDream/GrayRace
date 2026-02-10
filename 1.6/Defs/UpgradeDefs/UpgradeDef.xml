@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Hand_Claw</defName>
+    <label>利爪形态</label>
+    <description>将手部纳米机械重组为高硬度利爪，大幅提升近战伤害，但降低操作能力。</description>
+    <targetBodyPart>Hand</targetBodyPart> <!-- 针对 Hand 部位 -->
+    <!-- <hediffToApply>GR_Hediff_HandClaw</hediffToApply> -->
+    <hediffToApply>FieldHand</hediffToApply>
+    <researchPrerequisite>Electricity</researchPrerequisite> <!-- 解锁科技 -->
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- <HediffDef>
+    <defName>GR_Hediff_HandClaw</defName>
+    <label>纳米利爪</label>
+    <description>手部变形为利爪形态。</description>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.8</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>claw</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>15</power>
+            <cooldownTime>1.5</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+  </HediffDef> -->
+</Defs>

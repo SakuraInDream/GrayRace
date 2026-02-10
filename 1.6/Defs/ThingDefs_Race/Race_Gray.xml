@@ -461,7 +461,6 @@
       <LearningRateFactor>5</LearningRateFactor>      <!--儿童学习速度-->
       <!-- 纳米机械 Comp 迁移 StatDef -->
       <GRStat_NaniteMax>500</GRStat_NaniteMax>
-      <GRStat_NaniteRegenRate>0.1</GRStat_NaniteRegenRate>
     </statBases>
     <comps>
       <li Class="CompProperties_Spawner">

@@ -17,7 +17,7 @@ namespace SD.GrayRace.Comps
         public CompProperties_Nanites()
         {
             // compClass = typeof(CompResource_Nanites);
-            compClass = typeof(CompResource_NanitesNew);
+            compClass = typeof(CompResource_Nanites);
         }
     }
 }

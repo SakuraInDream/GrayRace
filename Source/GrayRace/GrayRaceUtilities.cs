@@ -23,7 +23,7 @@ namespace SD.GrayRace
         public static void OffsetNanites(Pawn pawn, float offset)
         {
             // var compNanites = pawn.TryGetComp<CompResource_Nanites>();
-            var compNanites = pawn.TryGetComp<CompResource_NanitesNew>();
+            var compNanites = pawn.TryGetComp<CompResource_Nanites>();
             if (compNanites != null)
             {
                 compNanites.CurrentNanites += offset;
@@ -42,7 +42,7 @@ namespace SD.GrayRace
         public static bool TryConsumeNanites(Pawn pawn, float amount)
         {
             // var comp = pawn.TryGetComp<CompResource_Nanites>();
-            var comp = pawn.TryGetComp<CompResource_NanitesNew>();
+            var comp = pawn.TryGetComp<CompResource_Nanites>();
 
             if (comp == null) return false;
 

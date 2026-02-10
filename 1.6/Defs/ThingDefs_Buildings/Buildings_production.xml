@@ -303,9 +303,9 @@
     <uiOrder>200</uiOrder>
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <inspectorTabs>
+    <!-- <inspectorTabs>
       <li>ITab_BiosculpterNutritionStorage</li>
-    </inspectorTabs>
+    </inspectorTabs> -->
     <researchPrerequisites>
       <li>GrowthVats</li>
     </researchPrerequisites>
