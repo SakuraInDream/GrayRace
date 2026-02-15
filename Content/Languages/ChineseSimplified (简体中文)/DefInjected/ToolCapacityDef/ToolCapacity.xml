@@ -1,8 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: Cold Claw -->
+  <GR_ColdClaw.label>TODO</GR_ColdClaw.label>
+  
   <!-- EN: Crowbar Damage -->
   <GR_CrowbarDamage.label>TODO</GR_CrowbarDamage.label>
+  
+  <!-- EN: Heat Claw -->
+  <GR_HeatClaw.label>TODO</GR_HeatClaw.label>
   
   <!-- EN: Nanite Scratch -->
   <GR_NanoScratch.label>TODO</GR_NanoScratch.label>

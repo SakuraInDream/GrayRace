@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Disintegration Corrosion -->
   <GR_Disintegration_Corrosion.label>裂解侵蚀</GR_Disintegration_Corrosion.label>
   <!-- EN: The creature is being consumed by a lethal disintegrative corrosion, its armor relentlessly flaking away into nothingness, exposing vulnerable tissues beneath. Its movements turn sluggish and uncoordinated as its very flesh dissolves into molecular debris. -->
-  <GR_Disintegration_Corrosion.description>该生物正被致命的裂解腐蚀所侵蚀，其装甲不断剥落成虚无，暴露出下方脆弱的组织。随着其肉体逐渐溶解为分子碎片，它的动作变得迟缓且不协调。</GR_Disintegration_Corrosion.description>
+  <GR_Disintegration_Corrosion.description>该生物正被致命的裂解能量侵蚀，其装甲不断剥落，暴露出下方脆弱的组织。随着其肉体逐渐溶解为分子，它的动作将会变得迟缓且不协调。</GR_Disintegration_Corrosion.description>
   <!-- EN: Initial -->
   <GR_Disintegration_Corrosion.stages.Initial.label>初始</GR_Disintegration_Corrosion.stages.Initial.label>
   <!-- EN: Infiltration -->
@@ -17,11 +17,11 @@
   <GR_Disintegration_Corrosion.stages.Collapse.label>崩溃</GR_Disintegration_Corrosion.stages.Collapse.label>
   <!-- EN: Annihilation -->
   <GR_Disintegration_Corrosion.stages.Annihilation.label>湮灭</GR_Disintegration_Corrosion.stages.Annihilation.label>
-
+  
   <!-- EN: Nanite Corrosion -->
-  <GR_Nanite_Corrosion.label>纳米体腐蚀</GR_Nanite_Corrosion.label>
+  <GR_Nanite_Corrosion.label>纳米侵蚀</GR_Nanite_Corrosion.label>
   <!-- EN: This lethal nanite infection progressively disassembles the target's molecular structure, inducing excruciating neural pain while systematically degrading defensive capabilities. Affected subjects undergo a cascading failure—from localized corrosion to total systemic collapse. -->
-  <GR_Nanite_Corrosion.description>这种致命的纳米体感染会逐步分解目标的分子结构，在引发剧烈神经疼痛的同时，系统性地削弱其防御能力。受影响的个体将经历级联失效——从局部腐蚀到全面系统崩溃。</GR_Nanite_Corrosion.description>
+  <GR_Nanite_Corrosion.description>这种致命的纳米感染会逐步分解目标的结构，在引发剧烈神经疼痛的同时，蚕食他们的装甲。受影响的个体将会经历他们生命中最大的痛苦——从局部侵蚀到全面崩溃。</GR_Nanite_Corrosion.description>
   <!-- EN: Initial -->
   <GR_Nanite_Corrosion.stages.Initial.label>初始</GR_Nanite_Corrosion.stages.Initial.label>
   <!-- EN: Infiltration -->
@@ -32,5 +32,5 @@
   <GR_Nanite_Corrosion.stages.Corrosion.label>侵蚀</GR_Nanite_Corrosion.stages.Corrosion.label>
   <!-- EN: Neural -->
   <GR_Nanite_Corrosion.stages.Neural.label>神经</GR_Nanite_Corrosion.stages.Neural.label>
-
+  
 </LanguageData>

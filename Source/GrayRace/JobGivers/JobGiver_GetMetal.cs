@@ -40,9 +40,11 @@ namespace SD.GrayRace.JobGivers
 
             if (steel != null)
             {
+                // 优先找钢铁
                 return JobMaker.MakeJob(GrayRaceDefOf.GR_ConsumeMetal, steel);
             }
 
+            // 否则找最大质量的金属
             Thing bestBigMassMetal = GenClosest.ClosestThingReachable(
                 pawn.Position,
                 pawn.Map,

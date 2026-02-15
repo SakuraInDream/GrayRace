@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using RimWorld;
-using SD.GrayRace.Attributes;
+using SD.GrayRace.Comps;
 using UnityEngine;
 using Verse;
 
@@ -27,29 +22,32 @@ namespace SD.GrayRace
         // 消耗资源
         public static void OffsetNanites(Pawn pawn, float offset)
         {
+            // var compNanites = pawn.TryGetComp<CompResource_Nanites>();
             var compNanites = pawn.TryGetComp<CompResource_Nanites>();
             if (compNanites != null)
             {
-                compNanites.Value += offset;
-                if (compNanites.Value > compNanites.Max)
+                compNanites.CurrentNanites += offset;
+                if (compNanites.CurrentNanites > compNanites.Max)
                 {
-                    compNanites.Value = compNanites.Max;
+                    compNanites.CurrentNanites = compNanites.Max;
                 }
 
-                if (compNanites.Value <= 0.01f)
+                if (compNanites.CurrentNanites <= 0.01f)
                 {
-                    compNanites.Value = 0f;
+                    compNanites.CurrentNanites = 0f;
                 }
             }
         }
 
         public static bool TryConsumeNanites(Pawn pawn, float amount)
         {
+            // var comp = pawn.TryGetComp<CompResource_Nanites>();
             var comp = pawn.TryGetComp<CompResource_Nanites>();
 
             if (comp == null) return false;
 
-            if (!comp.HasEnoughResource(amount)) return false;
+            // if (!comp.HasEnoughResource(amount)) return false;
+            if(comp.CurrentNanites < amount) return false;
 
             OffsetNanites(pawn, 0f - amount);
 

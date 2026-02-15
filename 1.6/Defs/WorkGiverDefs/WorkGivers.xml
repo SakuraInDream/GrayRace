@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
   <WorkGiverDef>
     <defName>GR_FillIncubatorNanites</defName>
     <label>Filling Incubator.</label>
@@ -12,4 +13,39 @@
       <li>Manipulation</li>
     </requiredCapacities>
   </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>GR_DoBillsNaniteReconfigurator</defName>
+    <label>reshaping things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+      <li>GR_NaniteReconfigurator</li>
+    </fixedBillGiverDefs>
+    <verb>reshaping things at</verb>
+    <gerund>reshaping things at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>GR_DoBillsNaniteTransmuter</defName>
+    <label>transmuting things</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>50</priorityInType>
+    <fixedBillGiverDefs>
+      <li>GR_NaniteTransmuter</li>
+    </fixedBillGiverDefs>
+    <verb>transmuting things at</verb>
+    <gerund>transmuting things at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
 </Defs>

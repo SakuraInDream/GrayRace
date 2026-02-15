@@ -1,311 +1,171 @@
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using RimWorld;
+using SD.GrayRace.Comps;
 using UnityEngine;
 using Verse;
+using Verse.Sound;
 
-namespace SD.GrayRace
+namespace SD.GrayRace.Hediffs;
+
+public class HediffComp_NanitesRegeneration : HediffComp
 {
-    public class HediffComp_NanitesRegeneration : HediffComp
+    private CompResource_Nanites _resNanites;
+
+    public bool isRegenerationActive = false;
+
+    private List<Hediff_Injury> _tmpInjuries = new List<Hediff_Injury>();
+    private List<Hediff_MissingPart> _tmpMissingParts = new List<Hediff_MissingPart>();
+
+    private const int HealingTickInterval = 60;
+
+    public HediffCompProperties_NanitesRegeneration Props => (HediffCompProperties_NanitesRegeneration)props;
+
+    public override void CompPostMake()
     {
-        private CompResource_Nanites _resNanites;
+        base.CompPostMake();
+        _resNanites = Pawn.TryGetComp<CompResource_Nanites>();
+    }
 
-        private List<Hediff_Injury> _tmpHediffInjuries = new List<Hediff_Injury>();
+    public override void CompExposeData()
+    {
+        base.CompExposeData();
+        Scribe_Values.Look(ref isRegenerationActive, "isRegenerationActive");
+    }
 
-        private List<Hediff_MissingPart> _tmpHediffMissingParts = new List<Hediff_MissingPart>();
-        public HediffCompProperties_NanitesRegeneration Pros => (HediffCompProperties_NanitesRegeneration)props;
-        private HediffSet HediffSet => Pawn.health.hediffSet;
 
-        private static readonly IComparer<Hediff_Injury> s_injurySeverityComparer = Comparer<Hediff_Injury>.Create((a, b) => b.Severity.CompareTo(a.Severity));
+    public override void CompPostTickInterval(ref float severityAdjustment, int delta)
+    {
+        base.CompPostTickInterval(ref severityAdjustment, delta);
+        if (Pawn.Dead) return;
 
-        private static readonly Dictionary<BodyPartTagDef, float> s_partImportanceMap = new Dictionary<BodyPartTagDef, float>
+        Regen(delta);
+    }
+
+    public override IEnumerable<Gizmo> CompGetGizmos()
+    {
+        if (Pawn.Faction == Faction.OfPlayer && (Pawn.Drafted || Pawn.Downed || isRegenerationActive))
         {
-            { BodyPartTagDefOf.BloodFiltrationSource, 2.0f },
-            { BodyPartTagDefOf.BloodFiltrationLiver, 1.9f },
-            { BodyPartTagDefOf.BloodFiltrationKidney, 1.8f },
-            { BodyPartTagDefOf.BloodPumpingSource, 1.5f },
-            { BodyPartTagDefOf.BreathingSource, 1.5f },
-            { BodyPartTagDefOf.BreathingPathway, 1.9f },
-            { BodyPartTagDefOf.ConsciousnessSource, 2.0f },
-            { BodyPartTagDefOf.MovingLimbCore, 1.8f },
-            { BodyPartTagDefOf.Spine, 1.7f }
-        };
-
-        // 完全仿食尸鬼的高速再生，但是恢复速率可调 —— 诶，灵感菇来了
-        // private void NaniteHeal(HediffSet hediffSet)
-        // {
-        //     var healBudget = Pros.healAmountPerSeconds;
-        //     if (healBudget > 0f)
-        //     {
-        //         hediffSet.GetHediffs(ref tmpHediffInjuries, injury => true);
-        //         foreach (var tmpHediffInjury in tmpHediffInjuries)
-        //         {
-        //             float healMax = Mathf.Min(healBudget, tmpHediffInjury.Severity);
-        //             healBudget -= healMax;
-        //             if (tmpHediffInjury.Bleeding || tmpHediffInjury.TendableNow())
-        //                 tmpHediffInjury.Tended(new FloatRange(0.2f, healMax).RandomInRange * 1f, healMax * 1);
-        //             tmpHediffInjury.Heal(healMax);
-        //             hediffSet.Notify_Regenerated(Pros.naniteCostPerSeconds);
-        //             if (healBudget < 0f)
-        //                 break;
-        //         }
-        //
-        //         if (healBudget > 0f)
-        //         {
-        //             hediffSet.GetHediffs(
-        //                 ref tmpHediffMissingParts,
-        //                 h =>
-        //                     h.Part.parent != null &&
-        //                     !tmpHediffInjuries.Any(x => x.Part == h.Part.parent) &&
-        //                     hediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(h.Part.parent) == null
-        //                     && hediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(h.Part.parent) == null
-        //             );
-        //             var missingPart = tmpHediffMissingParts.FirstOrDefault(h => true);
-        //             if (missingPart != null)
-        //             {
-        //                 if (missingPart.Bleeding || missingPart.TendableNow())
-        //                     missingPart.Tended(new FloatRange(0.2f, 1f).RandomInRange * 1f, 1f, 1);
-        //                 BodyPartRecord part = missingPart.Part;
-        //                 Pawn.health.RemoveHediff(missingPart);
-        //
-        //                 Hediff regenHediff = Pawn.health.AddHediff(HediffDefOf.Misc, part);
-        //                 float parthealth = hediffSet.GetPartHealth(part);
-        //
-        //                 regenHediff.Severity = Mathf.Max(parthealth - 1f, parthealth * 0.9f);
-        //                 hediffSet.Notify_Regenerated(parthealth - regenHediff.Severity);
-        //             }
-        //         }
-        //     }
-        // }
-
-        private void NaniteHeal_NewTemp()
-        {
-            var resourceFraction = Mathf.Clamp01(_resNanites.CurResource / _resNanites.Max);
-
-            // 可用资源影响治疗速度 当见底时 直接不治疗，充盈时全速治疗
-            var speedMultiplier = Mathf.Lerp(0f, 1f, resourceFraction);
-
-            // 每次治疗的最大纳米机械消耗量
-            var maxConsumableNanites = Pros.naniteCostPerSeconds * speedMultiplier * 100f;
-
-            var availableNanites = Mathf.Min(_resNanites.ValueForDisplay, maxConsumableNanites);
-
-            if (availableNanites <= 0f) return;
-
-            // 评估伤势和缺失部件的紧急程度
-            var (injuryUrgency, missingUrgency) = EvaluateMedicalUrgency();
-            // Log.Message($"Urgency Weight => Injury={injuryUrgency:F2}, Missing={missingUrgency:F2}");
-            // 根据紧急程度计算资源分配权重
-            var (weightInjury, weightMissing) = CalculateAllocationWeights(injuryUrgency, missingUrgency);
-
-            // 计算总权重
-            var totalWeight = weightInjury + weightMissing;
-
-            if (totalWeight <= 0f) return;
-
-            // 按权重分配纳米机械资源
-            var allocatedForInjuries = availableNanites * (weightInjury /  totalWeight);
-            var allocatedForMissing = availableNanites * (weightMissing / totalWeight);
-
-            // Log.Message($"Allocation => Injuries={allocatedForInjuries:F2}, Missing={allocatedForMissing:F2}");
-            if (allocatedForInjuries > 0)
+            yield return new Command_Toggle
             {
-                var remainingInjuryAllocation = ProcessInjuryHealing(allocatedForInjuries);
-                // 没用完的资源就给断肢再生
-                // Log.Message($"Unused {remainingInjuryAllocation:F2} nanites from injuries, reallocated to missing parts");
-                allocatedForMissing += remainingInjuryAllocation;
-            }
-
-            // Log.Message($"Allocation After InjueryHealing => Missing={allocatedForMissing:F2}");
-            if (allocatedForMissing > 0 && Pawn.IsHashIntervalTick(600))
-            {
-                ProcessMissingPartRepair(allocatedForMissing);
-            }
-        }
-
-        // 逻辑分离1 伤口修复
-        private float ProcessInjuryHealing(float allocatedNanites)
-        {
-            _tmpHediffInjuries.Sort(s_injurySeverityComparer);
-
-            var remainingAllocation = allocatedNanites;
-
-            foreach (var injury in _tmpHediffInjuries)
-            {
-                if (remainingAllocation <= 0f) break;
-
-                float maxHealable = Mathf.Min(injury.Severity, Pros.healAmountPerSeconds);
-
-                if (maxHealable <= 0f) continue;
-
-                var cost = maxHealable / Pros.healAmountPerSeconds * Pros.naniteCostPerSeconds;
-                if (GrayRaceUtilities.TryConsumeNanites(Pawn, cost))
+                defaultLabel = "超级修复", // 待本地化
+                defaultDesc = "消耗灰潮源质快速修复机体", // 待本地化
+                icon = ContentFinder<Texture2D>.Get("UI/Icons/Medical/Bleeding"), // 图标要换
+                isActive = () => isRegenerationActive,
+                toggleAction = () =>
                 {
-                    if(injury.Bleeding || injury.TendableNow())
-                        injury.Tended(new  FloatRange(0.5f, 1f).RandomInRange, 1f);
-
-                    injury.Heal(maxHealable);
-                    remainingAllocation -= cost;
+                    isRegenerationActive = !isRegenerationActive;
+                    if (isRegenerationActive) SoundDefOf.Tick_High.PlayOneShotOnCamera();
+                    else SoundDefOf.Tick_Low.PlayOneShotOnCamera();
                 }
-            }
-
-            return remainingAllocation;
-        }
-
-        // 逻辑分离2 断肢再生
-        private void ProcessMissingPartRepair(float allocatedNanites)
-        {
-            var remainingAllocation = allocatedNanites;
-
-            // tmpHediffMissingParts.SortByDescending(h => GetBodyPartImportance(h.Part));
-
-            // Log.Message($"MissingPartRepair => remainingAllocation={remainingAllocation:F2} count={tmpHediffMissingParts.Count}");
-
-            foreach (var missingPart in _tmpHediffMissingParts)
-            {
-                if(remainingAllocation <= 0f) break;
-
-                BodyPartRecord part = missingPart.Part;
-
-                var partImportance = GetBodyPartImportance(part);
-
-                var nanitesPerHP = Pros.naniteCostPerSeconds * partImportance / Pros.healAmountPerSeconds;
-
-                var partMaxHealth = part.def.GetMaxHealth(Pawn);
-
-                // var maxRestorable = Mathf.Min(remainingAllocation / nanitesPerHP, partMaxHealth * 0.1f);
-                var maxRestorable = Mathf.Min(nanitesPerHP * partMaxHealth, Pros.healAmountPerSeconds);
-
-                // Log.Message($"maxRestorable: {maxRestorable} partMaxHealth: {partMaxHealth}");
-                if (maxRestorable <= 0f) continue;
-
-                var cost = maxRestorable * nanitesPerHP;
-
-                // Log.Message($"maxRestorable: {maxRestorable} nanitesPerHP: {nanitesPerHP} cost:{cost:F2}");
-
-                if(missingPart.Bleeding || missingPart.TendableNow())
-                    missingPart.Tended(new FloatRange(0.5f, 1f).RandomInRange, 1f);
-
-                if (Pawn.health.hediffSet.HasNaturallyHealingInjury()) continue;
-                if (GrayRaceUtilities.TryConsumeNanites(Pawn, cost))
-                {
-                    Pawn.health.RemoveHediff(missingPart);
-                    var partHealth = HediffSet.GetPartHealth(part);
-                    var regenHediff = Pawn.health.AddHediff(HediffDefOf.Misc, part);
-                    regenHediff.Severity = Mathf.Max(partHealth - 1f, partHealth * 0.9f);
-
-                    remainingAllocation -= cost;
-                }
-            }
-        }
-        // 评估伤势和缺失部件的紧急程度
-        private (float injuryUrgency, float missingUrgency) EvaluateMedicalUrgency()
-        {
-            float totalInjurySeverity = 0f;
-            float criticalInjuries = 0f;
-            float totalMissingImpact = 0f;
-
-            // 评估伤势紧急程度
-            foreach (var injury in _tmpHediffInjuries)
-            {
-                totalInjurySeverity += injury.Severity;
-                if (injury.Severity > 0.7f || injury.Bleeding) // 严重伤势
-                    criticalInjuries += injury.Severity;
-            }
-
-            // 评估缺失部件紧急程度
-            foreach (var missing in _tmpHediffMissingParts)
-            {
-                var partImportance = GetBodyPartImportance(missing.Part);
-                if(missing.Bleeding)
-                    totalMissingImpact += missing.Severity;
-                totalMissingImpact += partImportance;
-            }
-
-            // 计算紧急程度评分
-            float injuryUrgency = totalInjurySeverity * 0.7f + criticalInjuries * 0.3f;
-            float missingUrgency = totalMissingImpact * 1.2f; // 缺失部件通常更紧急
-
-            return (injuryUrgency, missingUrgency);
-        }
-        // 根据紧急程度计算资源分配权重
-        private (float weightInjury, float weightMissing) CalculateAllocationWeights(float injuryUrgency, float missingUrgency)
-        {
-            if (injuryUrgency > 5.0f)
-                return (0.9f, 0.1f);
-
-            if (missingUrgency > 4.0f)
-                return (0.2f, 0.8f);
-
-            float weightInjury = Mathf.Max(0.1f, injuryUrgency);
-            float weightMissing = Mathf.Max(0.1f, missingUrgency * 1.5f);
-            return (weightInjury, weightMissing);
-        }
-
-        // 优先保活，再保移动能力 根据后续器官随时更改 参考 BodyPartTagDef
-        private float GetBodyPartImportance(BodyPartRecord part)
-        {
-            if (part == null) return 0f;
-            foreach (var tag in part.def.tags)
-            {
-                if (s_partImportanceMap.TryGetValue(tag, out var value))
-                {
-                    return value;
-                }
-            }
-
-            return 1f;
-        }
-
-        private void RefreshTmpHediffLists()
-        {
-            _tmpHediffInjuries.Clear();
-            _tmpHediffMissingParts.Clear();
-
-            HediffSet.GetHediffs(ref _tmpHediffInjuries, h => true);
-
-            HediffSet.GetHediffs(
-                ref _tmpHediffMissingParts,
-                h =>
-                    h.Part.parent != null &&
-                    // !tmpHediffInjuries.Any(x => x.Part == h.Part.parent) &&
-                    HediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(h.Part.parent) == null
-                    && HediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(h.Part.parent) == null
-            );
-        }
-
-        public override void CompPostMake()
-        {
-            base.CompPostMake();
-            _resNanites = Pawn?.TryGetComp<CompResource_Nanites>();
-        }
-
-        public override void CompPostTickInterval(ref float severityAdjustment, int delta)
-        {
-            _resNanites ??= Pawn.TryGetComp<CompResource_Nanites>();
-
-            if (_resNanites.CurResource < Pros.naniteCostPerSeconds) return;
-
-            // Log.Message($"InCompTick");
-            // 每 300tick 重建一次伤口和断肢列表
-            if (Pawn.IsHashIntervalTick(300))
-            {
-                // Log.Message("HashIntervalTick 300");
-                RefreshTmpHediffLists();
-            }
-
-            if (Pawn.IsHashIntervalTick(600, delta))
-            {
-                // Log.Message("HashIntervalTick 600");
-                NaniteHeal_NewTemp();
             };
-
-        }
-
-        public override string CompDebugString()
-        {
-            return $"Injuries: {_tmpHediffInjuries.Count}, MissingParts: {_tmpHediffMissingParts.Count}";
         }
     }
+
+
+    private void Regen(int delta)
+    {
+        if (!Pawn.IsGrayRace()) return;
+
+        _resNanites ??= Pawn.TryGetComp<CompResource_Nanites>();
+        if (_resNanites is null) return;
+
+        if (isRegenerationActive && _resNanites.CurrentNanites < Props.naniteCostPerSeconds)
+        {
+            Messages.Message("资源耗尽，修复中止。", Pawn, MessageTypeDefOf.NegativeEvent);
+            isRegenerationActive = false;
+            SoundDefOf.ClickReject.PlayOneShotOnCamera();
+        }
+
+        if (!isRegenerationActive)
+        {
+            if (Pawn.IsHashIntervalTick(HealingTickInterval, delta))
+            {
+                DoPassiveHealing();
+            }
+        }
+        else
+        {
+            if (Pawn.IsHashIntervalTick(HealingTickInterval, delta))
+            {
+                DoActiveHealing();
+            }
+        }
+    }
+
+    // 被动只做紧急止血
+    private void DoPassiveHealing()
+    {
+        List<Hediff> hediffs = Pawn.health.hediffSet.hediffs;
+        foreach (Hediff hediff in hediffs)
+        {
+            if (hediff.Bleeding || hediff.TendableNow())
+            {
+                hediff.Tended(new FloatRange(0.1f, 0.4f).RandomInRange, 0.4f);
+            }
+        }
+    }
+
+    // 治疗和断肢再生
+    private void DoActiveHealing()
+    {
+        List<Hediff> hediffs = Pawn.health.hediffSet.hediffs;
+        // 疯狂高质量包扎
+        foreach (Hediff hediff in hediffs)
+        {
+            if (hediff.Bleeding || hediff.TendableNow())
+            {
+                hediff.Tended(1f, 1f);
+            }
+        }
+        // 疯狂恢复
+        if (Pawn.IsHashIntervalTick(HealingTickInterval))
+        {
+            Pawn.health.hediffSet.GetHediffs<Hediff_Injury>(ref _tmpInjuries);
+            foreach (Hediff_Injury hediffInjury in _tmpInjuries)
+            {
+                hediffInjury.Heal(Props.healAmountPerSeconds);
+
+                Pawn.health.hediffSet.Notify_Regenerated(Props.healAmountPerSeconds);
+            }
+
+            if (!HasAnyHealableCondition())
+            {
+                isRegenerationActive = false;
+                Messages.Message("无伤口，机体修复已中止。", Pawn, MessageTypeDefOf.PositiveEvent); // 待本地化
+                SoundDefOf.Click.PlayOneShotOnCamera();
+                return;
+            }
+        }
+
+        if (Pawn.IsHashIntervalTick(HealingTickInterval * 10))
+        {
+            // 化繁为简，重新使用原版食尸鬼的再生逻辑
+            Pawn.health.hediffSet.GetHediffs(ref _tmpMissingParts,
+                h => h.Part.parent != null && !_tmpInjuries.Any(x => x.Part == h.Part.parent) &&
+                     Pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(h.Part.parent) == null &&
+                     Pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(h.Part.parent) == null);
+
+            foreach (Hediff_MissingPart hediffMissingPart in _tmpMissingParts)
+            {
+                BodyPartRecord part = hediffMissingPart.Part;
+                Pawn.health.RemoveHediff(hediffMissingPart);
+                Hediff hediff2 = Pawn.health.AddHediff(HediffDefOf.Misc, part);
+                float partHealth = Pawn.health.hediffSet.GetPartHealth(part);
+
+                hediff2.Severity = Mathf.Max(partHealth - 1f, partHealth * 0.9f);
+                Pawn.health.hediffSet.Notify_Regenerated(partHealth - hediff2.Severity);
+            }
+        }
+    }
+
+    private bool HasAnyHealableCondition()
+    {
+        List<Hediff> allHediffs = Pawn.health.hediffSet.hediffs;
+        if (allHediffs.Any(h => h is Hediff_Injury or Hediff_MissingPart))
+        {
+            return true;
+        }
+        return false;
+    }
 }
+

@@ -192,7 +192,7 @@
       <AccuracyShort>0.9</AccuracyShort>
       <AccuracyMedium>1</AccuracyMedium>
       <AccuracyLong>1</AccuracyLong>
-      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
       <Flammability>0</Flammability>
     </statBases>
     <costList>

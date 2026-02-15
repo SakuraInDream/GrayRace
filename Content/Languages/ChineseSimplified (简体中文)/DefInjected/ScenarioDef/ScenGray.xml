@@ -2,14 +2,16 @@
 <LanguageData>
   
   <!-- EN: Advance team -->
-  <GR_Crashlanded.label>TODO</GR_Crashlanded.label>
-  <!-- EN: 你们三人作为殖民舰队的先遣队来到了这颗充满未知的边缘世界，殖民舰队很快就会到来并和你们建立联系，但你们仍然要依靠自己一草一木、一砖一瓦地建立起新的殖民地。在这个未知的星球上，将会有怎样的故事等待着你们来见证？\n另外，好像有个已经宣称了这片星域的派系和你们不太友好，小心为上。 -->
-  <GR_Crashlanded.description>TODO</GR_Crashlanded.description>
-  <!-- EN: 你们三人作为殖民舰队的先遣队来到了这颗充满未知的边缘世界，殖民舰队很快就会到来并和你们建立联系，但你们仍然要依靠自己一草一木、一砖一瓦地建立起新的殖民地。在这个未知的星球上，将会有怎样的故事等待着你们来见证？\n另外，好像有个已经宣称了这片星域的派系和你们不太友好，小心为上。 -->
-  <GR_Crashlanded.scenario.description>TODO</GR_Crashlanded.scenario.description>
+  <GR_Crashlanded.label>灰裔先遣队</GR_Crashlanded.label>
+  <!-- EN: Scenario description TODO -->
+  <GR_Crashlanded.description>通常来说，在殖民舰队抵达前，往往会事先派出先遣队进行星球早期勘察，包括估计星球宜居度，了解本地势力分布，与对潜在的威胁进行等级评估……\n你将作为本次勘察行动的队长，指导一组先遣队执行任务。\n充分发挥队员的长处，收集资源并建立据点，与当地势力接触，并扫清潜在威胁。\nA7勘察小组成员信息上传中，地轨双向传输链路已建立，诱导已亮，前方净空，准许投射。祝君武运昌隆。</GR_Crashlanded.description>
+  <!-- EN: Scenario description TODO -->
+  <GR_Crashlanded.scenario.description>通常来说，在殖民舰队抵达前，往往会事先派出先遣队进行星球早期勘察，包括估计星球宜居度，了解本地势力分布，与对潜在的威胁进行等级评估……\n你将作为本次勘察行动的队长，指导一组先遣队执行任务。\n充分发挥队员的长处，收集资源并建立据点，与当地势力接触，并扫清潜在威胁。\nA7勘察小组成员信息上传中，地轨双向传输链路已建立，诱导已亮，前方净空，准许投射。祝君武运昌隆。</GR_Crashlanded.scenario.description>
   <!-- EN: Advance team -->
-  <GR_Crashlanded.scenario.name>TODO</GR_Crashlanded.scenario.name>
-  <!-- EN: 三名灰裔殖民者在边缘世界建立殖民地的故事。 -->
-  <GR_Crashlanded.scenario.summary>TODO</GR_Crashlanded.scenario.summary>
+  <GR_Crashlanded.scenario.name>先遣队</GR_Crashlanded.scenario.name>
+  <!-- EN: GameeStartDialog TODO -->
+  <GR_Crashlanded.scenario.parts.GameStartDialog.text>踩上结实泥土的那一刻，总会让长期漂泊在太空中的人产生一种无从解释的欣喜。\n“通讯畅通，这里是先遣队主舰。”\n脱离舰队、如流星般坠落在这颗星球上的三人，各自怀着不同的念头。\n“嗯，已经收到星球的初步探测样本了，做的不错，调遣的人手已经在路上了，在那之前，你们得靠自己了。”\n联络官琐碎的嘱托在耳边回荡，伴随着信号的杂音，却显得有些遥远。\n“另外，监测到敌对派系的宣称，数据已同步过去了，请务必小心。”\n往日的故事已成序章，新的篇章将从第一座简陋的木墙开始。\n“祝开拓成功。”\n愿这场故事，有个美好的结局。</GR_Crashlanded.scenario.parts.GameStartDialog.text>
+  <!-- EN: Scenario summary TODO -->
+  <GR_Crashlanded.scenario.summary>三名灰裔殖民者在边缘世界建立殖民地的故事。</GR_Crashlanded.scenario.summary>
   
 </LanguageData>

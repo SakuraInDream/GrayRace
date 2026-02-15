@@ -6,8 +6,13 @@
   <!-- EN: {0} was shattered by an arc. -->
   <GR_Arc.deathMessage>TODO</GR_Arc.deathMessage>
   
+  <!-- EN: Cold Claw -->
+  <GR_ColdClaw.label>寒爪</GR_ColdClaw.label>
+  <!-- EN: {0} has succumbed to frostbite. -->
+  <GR_ColdClaw.deathMessage>TODO</GR_ColdClaw.deathMessage>
+  
   <!-- EN: Crowbar Damage -->
-  <GR_CrowbarDamage.label>TODO</GR_CrowbarDamage.label>
+  <GR_CrowbarDamage.label>撬棍伤</GR_CrowbarDamage.label>
   <!-- EN: {0} has been cut to death. -->
   <GR_CrowbarDamage.deathMessage>TODO</GR_CrowbarDamage.deathMessage>
   
@@ -15,6 +20,11 @@
   <GR_Disintegration.label>裂解</GR_Disintegration.label>
   <!-- EN: {0} has been melted. -->
   <GR_Disintegration.deathMessage>TODO</GR_Disintegration.deathMessage>
+  
+  <!-- EN: Heat Claw -->
+  <GR_HeatClaw.label>热爪</GR_HeatClaw.label>
+  <!-- EN: {0} has burned to death. -->
+  <GR_HeatClaw.deathMessage>TODO</GR_HeatClaw.deathMessage>
   
   <!-- EN: Laser -->
   <GR_Laser.label>激光</GR_Laser.label>

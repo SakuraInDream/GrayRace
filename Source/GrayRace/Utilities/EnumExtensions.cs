@@ -6,6 +6,7 @@ using Verse;
 
 namespace SD.GrayRace.Utilities
 {
+    // 这里参考了 KSP(Kerbal Space Program) 的 Mod - KSP Community Fixes 对于枚举类型本地化的实现
     public class EnumMemberLocalization
     {
         public readonly string key;

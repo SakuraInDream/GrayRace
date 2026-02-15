@@ -140,22 +140,14 @@
     </apparel>
   </ThingDef>
 
-  <!--夜宴晚礼服-->
-  <ThingDef ParentName="ApparelMakeableBase" Name="GR_ApparelProfessional">
-    <defName>Gray_Apparel_BanquetDress</defName>
-    <description>.</description>
-    <label>Gray Evening Banquet Dress</label>
-    <graphicData>
-      <texPath>Apparel/BanquetDress/Gray_BanquetDress</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>1.0</drawSize>
-    </graphicData>
+  <!--装饰性衣服父级-->
+  <ThingDef ParentName="ApparelMakeableBase" Name="GR_ApparelDecorative" Abstract="true">
     <thingCategories>
       <li>GR_ApparelSpecial</li>
     </thingCategories>
     <recipeMaker>
       <researchPrerequisites>
-        <li>GR_ProfessionalClothing</li>
+        <li>GR_DecorativeClothing</li>
       </researchPrerequisites>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
@@ -178,11 +170,30 @@
       <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>1</EquipDelay>
     </statBases>
-    <equippedStatOffsets>
-      <PawnBeauty>2</PawnBeauty>
-    </equippedStatOffsets>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>false</smeltable>
+    <apparel>
+      <tags>
+        <li>GR_Decorative</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--夜宴晚礼服-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_BanquetDress</defName>
+    <description>.</description>
+    <label>Gray Evening Banquet Dress</label>
+    <graphicData>
+      <texPath>Apparel/BanquetDress/Gray_BanquetDress</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
     <apparel>
       <bodyPartGroups>
         <li>Torso</li>
@@ -198,19 +209,11 @@
         <li>Middle</li>
         <li>Shell</li>
       </layers>
-      <tags>
-        <li>GR_Decorative</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Worker</li>
-      </defaultOutfitTags>
-      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
-      <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
   </ThingDef>
 
   <!--神道巫女-->
-  <ThingDef ParentName="GR_ApparelProfessional">
+  <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_MikoOutfit</defName>
     <description>.</description>
     <label>Gray miko outfit</label>
@@ -220,7 +223,6 @@
       <drawSize>1.0</drawSize>
     </graphicData>
     <equippedStatOffsets>
-      <PawnBeauty>2</PawnBeauty>
       <StudyEfficiency MayRequire="Ludeon.RimWorld.Anomaly">0.2</StudyEfficiency>
       <EntityStudyRate MayRequire="Ludeon.RimWorld.Anomaly">0.2</EntityStudyRate>
       <ActivitySuppressionRate MayRequire="Ludeon.RimWorld.Anomaly">0.2</ActivitySuppressionRate>
@@ -234,6 +236,612 @@
       <tags>
         <li>GR_Decorative</li>
       </tags>
+    </apparel>
+  </ThingDef>
+
+  <!--女仆装-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Maid</defName>
+    <description>.</description>
+    <label>Gray Maid</label>
+    <graphicData>
+      <texPath>Apparel/Maid/Gray_Maid</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelSpecial</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_ProfessionalClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <ButcheryFleshEfficiency>0.2</ButcheryFleshEfficiency>
+      <ButcheryFleshSpeed>0.75</ButcheryFleshSpeed>
+      <AnimalGatherYield>0.2</AnimalGatherYield>
+      <AnimalGatherSpeed>0.75</AnimalGatherSpeed>
+      <CookSpeed>1</CookSpeed>
+      <FoodPoisonChance>-500</FoodPoisonChance>
+      <DrugCookingSpeed>0.5</DrugCookingSpeed>
+      <CleaningSpeed>1</CleaningSpeed>
+      <PlantHarvestYield>0.2</PlantHarvestYield>
+      <PlantWorkSpeed>0.75</PlantWorkSpeed>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Maid/Gray_Maid</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>GR_Maid</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--工装-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Workwear</defName>
+    <description>.</description>
+    <label>Gray Workwear</label>
+    <graphicData>
+      <texPath>Apparel/Worker/Gray_Worker</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelSpecial</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_ProfessionalClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <ButcheryMechanoidEfficiency>0.2</ButcheryMechanoidEfficiency>
+      <ButcheryMechanoidSpeed>1</ButcheryMechanoidSpeed>
+      <GeneralLaborSpeed>1</GeneralLaborSpeed>
+      <ConstructionSpeed>1</ConstructionSpeed>
+      <SmeltingSpeed>1</SmeltingSpeed>
+      <SmoothingSpeed>1</SmoothingSpeed>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Worker/Gray_Worker</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>GR_Worker</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--实验服-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Researcher</defName>
+    <description>.</description>
+    <label>Gray Lab Coat</label>
+    <graphicData>
+      <texPath>Apparel/Researcher/Gray_Researcher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelSpecial</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_ProfessionalClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>120</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <DrugSynthesisSpeed>1</DrugSynthesisSpeed>
+      <MedicalSurgerySuccessChance>0.5</MedicalSurgerySuccessChance>
+      <MedicalOperationSpeed>1</MedicalOperationSpeed>
+      <MedicalTendQuality>0.5</MedicalTendQuality>
+      <MedicalTendSpeed>1</MedicalTendSpeed>
+      <DrugHarvestYield>0.2</DrugHarvestYield>
+      <HackingSpeed>1.5</HackingSpeed>
+      <HackingStealth>15</HackingStealth>
+      <ResearchSpeed>1.5</ResearchSpeed>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Researcher/Gray_Researcher</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>GR_Worker</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--防尘大衣-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Duster</defName>
+    <description>.</description>
+    <label>Gray Duster</label>
+    <graphicData>
+      <texPath>Apparel/Duster/Gray_Duster</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Duster/Gray_Duster</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>GR_Daily</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--OL装-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_OL</defName>
+    <description>.</description>
+    <label>Gray Office Lady Outfit</label>
+    <graphicData>
+      <texPath>Apparel/OL/Gray_OL</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/OL/Gray_OL</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>GR_Daily</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--雨衣-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Raincoat</defName>
+    <description>.</description>
+    <label>Gray Raincoat</label>
+    <graphicData>
+      <texPath>Apparel/Raincoat/Gray_Raincoat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Raincoat/Gray_Raincoat</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>GR_Daily</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--水手服-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_SailorSuit</defName>
+    <description>.</description>
+    <label>Gray Sailor Suit</label>
+    <graphicData>
+      <texPath>Apparel/SailorSuit/Gray_SailorSuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/SailorSuit/Gray_SailorSuit</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>GR_Daily</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
+  <!--希玛纯-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_Himation</defName>
+    <description>.</description>
+    <label>Gray Himation</label>
+    <graphicData>
+      <texPath>Apparel/Himation/Gray_Himation</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Himation/Gray_Himation</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--修女-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_Nun</defName>
+    <description>.</description>
+    <label>Gray Nun</label>
+    <graphicData>
+      <texPath>Apparel/Nun/Gray_Nun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Nun/Gray_Nun</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--道袍-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_TaoistRobe</defName>
+    <description>.</description>
+    <label>Gray Taoist Robe</label>
+    <graphicData>
+      <texPath>Apparel/TaoistRobe/Gray_TaoistRobe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/TaoistRobe/Gray_TaoistRobe</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--情趣婚纱-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_SensualWeddingDress</defName>
+    <description>.</description>
+    <label>Gray Sensual Wedding Dress</label>
+    <graphicData>
+      <texPath>Apparel/Wedding/Gray_SensualWeddingDress</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Wedding/Gray_SensualWeddingDress</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
     </apparel>
   </ThingDef>
 

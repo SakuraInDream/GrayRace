@@ -103,7 +103,7 @@
         <researchViewY>1</researchViewY>
     </ResearchProjectDef>
 
-    <!--Gray Basic Clothing灰裔基础服装-->
+    <!--Gray Basic Clothing 灰裔基础服装-->
     <ResearchProjectDef>
         <tab>GR_ResearchTab</tab>
         <defName>GR_BasicClothing</defName>
@@ -119,12 +119,12 @@
         <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
-    <!--Gray Special Clothing灰裔特殊服装-->
+    <!--Gray Professional Clothing 灰裔专业服装-->
     <ResearchProjectDef>
         <tab>GR_ResearchTab</tab>
         <defName>GR_ProfessionalClothing</defName>
-        <label>Gray Special Clothing</label>
-        <description>Unlock Gray's special clothing</description>
+        <label>Gray Professional Clothing</label>
+        <description>Unlock Gray's Professional clothing</description>
         <baseCost>1000</baseCost>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <prerequisites>
@@ -135,12 +135,12 @@
         <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
-    <!--Gray Combat Clothing灰裔战斗服装-->
+    <!--Gray Combat Clothing 灰裔战斗服装-->
     <ResearchProjectDef>
         <tab>GR_ResearchTab</tab>
         <defName>GR_CombatClothing</defName>
         <label>Gray Combat Clothing</label>
-        <description>Unlock Gray's basic clothing</description>
+        <description>Unlock Gray's combat clothing</description>
         <baseCost>3000</baseCost>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
@@ -156,12 +156,12 @@
         <researchViewY>0</researchViewY>
     </ResearchProjectDef>
 
-    <!--Gray Advanced Combat Clothing灰裔高级战斗服装-->
+    <!--Gray Advanced Combat Clothing 灰裔高级战斗服装-->
     <ResearchProjectDef>
         <tab>GR_ResearchTab</tab>
         <defName>GR_AdvancedCombatClothing</defName>
         <label>Gray Advanced Combat Clothing</label>
-        <description>Unlock Gray's basic clothing</description>
+        <description>Unlock Gray's advanced combat clothing</description>
         <baseCost>6000</baseCost>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
@@ -246,6 +246,22 @@
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <techLevel>Spacer</techLevel>
         <researchViewX>4</researchViewX>
+        <researchViewY>4</researchViewY>
+    </ResearchProjectDef>
+
+    <!--Gray Decorative Clothing 灰裔装饰服装-->
+    <ResearchProjectDef>
+        <tab>GR_ResearchTab</tab>
+        <defName>GR_DecorativeClothing</defName>
+        <label>Decorative Clothing</label>
+        <description>Unlock decorative clothing, which can enhance the appearance of characters.</description>
+        <baseCost>1000</baseCost>
+        <requiredResearchBuilding>SimpleResearchBench</requiredResearchBuilding>
+        <prerequisites>
+            <li>ComplexClothing</li>
+        </prerequisites>
+        <techLevel>Industrial</techLevel>
+        <researchViewX>5</researchViewX>
         <researchViewY>4</researchViewY>
     </ResearchProjectDef>
 

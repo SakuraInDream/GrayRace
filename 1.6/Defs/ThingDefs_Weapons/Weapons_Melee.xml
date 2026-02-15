@@ -5,7 +5,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_HFMurasama</defName>
     <label>HF Murasama</label>
-    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <description>.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_HFMurasama</texPath>
@@ -69,7 +69,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_ShipSlayer</defName>
     <label>Ship Slayer</label>
-    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <description>.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_ShipSlayer</texPath>
@@ -89,7 +89,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>12000</WorkToMake>
+      <WorkToMake>6000</WorkToMake>
       <Mass>150</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -134,8 +134,8 @@
   <!--电击剑-->
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_VoltSword</defName>
-    <label>Electric shock sword</label>
-    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <label>Electric Shock Sword</label>
+    <description>.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_VoltSword</texPath>
@@ -154,7 +154,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>12000</WorkToMake>
+      <WorkToMake>9000</WorkToMake>
       <Mass>3</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -181,11 +181,11 @@
         <extraMeleeDamages>
           <li>
             <def>EMP</def>
-            <amount>30</amount>
+            <amount>45</amount>
           </li>
           <li>
             <def>Stun</def>
-            <amount>10</amount>
+            <amount>15</amount>
           </li>
         </extraMeleeDamages>
         <cooldownTime>3</cooldownTime>
@@ -220,8 +220,8 @@
   <!--电流长棍-->
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_Cadus</defName>
-    <label>Stun stick</label>
-    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <label>Stun Stick</label>
+    <description>.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_Cadus</texPath>
@@ -240,7 +240,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>12000</WorkToMake>
+      <WorkToMake>18000</WorkToMake>
       <Mass>5</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -308,7 +308,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_Lightsaber</defName>
     <label>Lightsaber</label>
-    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <description>.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_Lightsaber</texPath>
@@ -327,7 +327,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>24000</WorkToMake>
+      <WorkToMake>48000</WorkToMake>
       <Mass>0.5</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -368,11 +368,11 @@
   <!--撬棍-->
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_Crowbar</defName>
-    <label>HolySword</label>
-    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <label>Crowbar of Physics</label>
+    <description>.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
-      <texPath>Things/Item/Weapon/Melee/Melee_Lightsaber</texPath>
+      <texPath>Things/Item/Weapon/Melee/Melee_Crowbar</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1</drawSize>
     </graphicData>
@@ -410,7 +410,7 @@
         <capacities>
           <li>GR_CrowbarDamage</li>
         </capacities>
-        <power>33.3</power>
+        <power>33</power>
         <extraMeleeDamages>
           <li>
             <def>Stun</def>
@@ -419,6 +419,65 @@
         </extraMeleeDamages>
         <cooldownTime>1</cooldownTime>
         <armorPenetration>333.333</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>GR_Cosmogenesis</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <!--力场撕裂者-->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>GR_FFR</defName>
+    <label>Force Field Ripper</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Weapon/Melee/Melee_ForceFieldRipper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <techLevel>Archotech</techLevel>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>GR_T4MeleeWeapon</li>
+    </weaponTags>
+    <thingCategories>
+      <li>GR_WeaponsMelee</li>
+    </thingCategories>
+    <statBases>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>0</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <costList>
+      <GR_Alloy>1500</GR_Alloy>
+      <GR_Nanites>200</GR_Nanites>
+      <ComponentSpacer>20</ComponentSpacer>
+      <GR_FundamentalCube>1</GR_FundamentalCube>
+    </costList>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>GR_ColdClaw</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>0.2</cooldownTime>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>GR_HeatClaw</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>0.2</cooldownTime>
       </li>
     </tools>
     <recipeMaker>

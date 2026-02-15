@@ -4,10 +4,9 @@
   <ScenarioDef ParentName="ScenarioBase">
     <defName>GR_Crashlanded</defName>
     <label>Advance team</label>
-    <description>你们三人作为殖民舰队的先遣队来到了这颗充满未知的边缘世界，殖民舰队很快就会到来并和你们建立联系，但你们仍然要依靠自己一草一木、一砖一瓦地建立起新的殖民地。在这个未知的星球上，将会有怎样的故事等待着你们来见证？
-另外，好像有个已经宣称了这片星域的派系和你们不太友好，小心为上。</description>
+    <description>Scenario description TODO</description>
     <scenario>
-      <summary>三名灰裔殖民者在边缘世界建立殖民地的故事。</summary>
+      <summary>Scenario summary TODO</summary>
       <playerFaction Inherit="false">
         <def>PlayerFaction</def>
         <factionDef>Gray_PlayerFaction</factionDef>
@@ -117,7 +116,7 @@
         <!-- 游戏开始文本 -->
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
-          <text>准备……建造……殖民地！</text>
+          <text>GameeStartDialog TODO</text>
           <closeSound>GameStartSting</closeSound>
         </li>
 

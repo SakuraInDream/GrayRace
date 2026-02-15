@@ -1,6 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
+  <!-- EN: Gray Bikini -->
+  <Gray_Apparel_Bikini.label>灰裔比基尼</Gray_Apparel_Bikini.label>
+  <!-- EN: . -->
+  <Gray_Apparel_Bikini.description>TODO</Gray_Apparel_Bikini.description>
+
+  <!-- EN: Gray Bondage -->
+  <Gray_Apparel_Bondage.label>灰裔束缚装</Gray_Apparel_Bondage.label>
+  <!-- EN: . -->
+  <Gray_Apparel_Bondage.description>TODO</Gray_Apparel_Bondage.description>
+
+  <!-- EN: Gray Bunny Girl -->
+  <Gray_Apparel_BunnyGirl.label>灰裔兔女郎</Gray_Apparel_BunnyGirl.label>
+  <!-- EN: . -->
+  <Gray_Apparel_BunnyGirl.description>TODO</Gray_Apparel_BunnyGirl.description>
+
+  <!-- EN: Gray Bunny Girl Reverse -->
+  <Gray_Apparel_BunnyGirl_Reverse.label>灰裔逆兔女郎</Gray_Apparel_BunnyGirl_Reverse.label>
+  <!-- EN: . -->
+  <Gray_Apparel_BunnyGirl_Reverse.description>TODO</Gray_Apparel_BunnyGirl_Reverse.description>
+
+  <!-- EN: Gray Bunny Girl Reverse(Alter) -->
+  <Gray_Apparel_BunnyGirl_Reverse_Alter.label>灰裔逆兔女郎（变体）</Gray_Apparel_BunnyGirl_Reverse_Alter.label>
+  <!-- EN: . -->
+  <Gray_Apparel_BunnyGirl_Reverse_Alter.description>TODO</Gray_Apparel_BunnyGirl_Reverse_Alter.description>
+
   <!-- EN: Gray Crew Uniform(Style A) -->
   <Gray_Apparel_CrewUniformA.label>灰裔舰员制服（款式A）</Gray_Apparel_CrewUniformA.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
@@ -26,10 +51,25 @@
   <!-- EN: . -->
   <Gray_Apparel_NileGauze.description>TODO</Gray_Apparel_NileGauze.description>
 
+  <!-- EN: Gray Sekebe Unit -->
+  <Gray_Apparel_SekebeUnit.label>灰裔露背毛衣</Gray_Apparel_SekebeUnit.label>
+  <!-- EN: . -->
+  <Gray_Apparel_SekebeUnit.description>TODO</Gray_Apparel_SekebeUnit.description>
+
   <!-- EN: Gray Strange Nurse Underwear -->
   <Gray_Apparel_StrangeNurse.label>灰裔奇怪护士内衣</Gray_Apparel_StrangeNurse.label>
   <!-- EN: . -->
   <Gray_Apparel_StrangeNurse.description>TODO</Gray_Apparel_StrangeNurse.description>
+
+  <!-- EN: Gray Sweater -->
+  <Gray_Apparel_Sweater.label>灰裔毛衣</Gray_Apparel_Sweater.label>
+  <!-- EN: . -->
+  <Gray_Apparel_Sweater.description>TODO</Gray_Apparel_Sweater.description>
+
+  <!-- EN: Gray Swimsuit -->
+  <Gray_Apparel_Swimsuit.label>灰裔泳装</Gray_Apparel_Swimsuit.label>
+  <!-- EN: . -->
+  <Gray_Apparel_Swimsuit.description>TODO</Gray_Apparel_Swimsuit.description>
 
   <!-- EN: Gray Universal ISA -->
   <Gray_Apparel_UniversalISA.label>灰裔通用软甲</Gray_Apparel_UniversalISA.label>

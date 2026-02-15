@@ -113,6 +113,7 @@
           <headTypes>            <!--头部的种类，动态表情貌似就是引用的这玩意做的脸？但是貌似空路径都没事，只要别空着，这玩意干嘛的，不会是什么泰南的神秘历史遗留吧-->
             <li>GR_Feature0</li>
             <li>GR_Feature1</li>
+            <li>GR_Feature2</li>
           </headTypes>
           <bodyTypes>            <!--体型-->
             <li>Female</li>
@@ -121,7 +122,7 @@
           </bodyTypes>
           <atlasScale>4</atlasScale>
           <borderScale>1</borderScale>
-          <headOffset>(0.0, -0.35)</headOffset>          <!--头部贴图的偏移-->
+          <headOffset>(0.0, 0.05)</headOffset>          <!--头部贴图的偏移-->
           <headOffsetDirectional>
             <east>
               <offset>(-0.1, 0.0)</offset>
@@ -191,7 +192,7 @@
                   <layerOffset>-0.274</layerOffset>
                 </south>
                 <north>
-                  <layerOffset>0.22</layerOffset>
+                  <layerOffset>-0.274</layerOffset>
                 </north>
                 <east>
                   <layerOffset>-0.274</layerOffset>
@@ -200,7 +201,6 @@
               <inFrontOfBody>true</inFrontOfBody>
               <layerInvert>false</layerInvert>
               <alignWithHead>true</alignWithHead>
-              <userCustomizable>true</userCustomizable>
               <defaultOffset>Center</defaultOffset>
               <drawSize>1</drawSize>
               <colorChannel>hair</colorChannel>
@@ -239,9 +239,7 @@
                 </east>
               </offsets>
               <inFrontOfBody>false</inFrontOfBody>
-              <layerInvert>false</layerInvert>
               <alignWithHead>true</alignWithHead>
-              <userCustomizable>true</userCustomizable>
               <defaultOffset>Center</defaultOffset>
               <drawSize>1</drawSize>
               <colorChannel>hair</colorChannel>
@@ -458,6 +456,8 @@
       <!--其他-->
       <RoyalFavorValue>14</RoyalFavorValue>      <!--皇权声望-->
       <LearningRateFactor>5</LearningRateFactor>      <!--儿童学习速度-->
+      <!-- 纳米机械 Comp 迁移 StatDef -->
+      <GRStat_NaniteMax>500</GRStat_NaniteMax>
     </statBases>
     <comps>
       <li Class="CompProperties_Spawner">
@@ -468,11 +468,12 @@
         <showMessageIfOwned>true</showMessageIfOwned>
       </li>
       <!-- 纳米机械Comp -->
-      <li Class="SD.GrayRace.CompProperties_Nanites">
-        <!-- 最大 500 -->
-        <maxResource>5</maxResource>
-        <!-- 每秒恢复 -->
-        <regenPerSecond>0.001</regenPerSecond>
+      <!-- <li Class="SD.GrayRace.CompProperties_Nanites"> -->
+      <li Class="SD.GrayRace.Comps.CompProperties_Nanites">
+        <!-- 弃用，改用 StatDef GRStat_NaniteMax -->
+        <!-- <maxResource>5</maxResource> -->
+        <!-- 弃用，改用 StatDef GRStat_NaniteRegenRate -->
+        <!-- <regenPerSecond>0.001</regenPerSecond> -->
         <!-- 资源名称，可本地化 -> <DefNAME.comps.CompResource_Nanites.resourceLabel> -->
         <resourceLabel>备用灰潮源质</resourceLabel>
         <!-- gizmo 的下方刻度显示 -->
@@ -482,6 +483,8 @@
           <li>0.75</li>
         </resourceGizmoThresholds>
       </li>
+      <!-- 超频系统 -->
+      <li Class="SD.GrayRace.Comps.CompProperties_Overclock" />
     </comps>
     <damageMultipliers>
       <li>
@@ -550,8 +553,8 @@
         <li Class="AlienRace.LifeStageAgeAlien">
           <def>HumanlikeBaby</def>
           <minAge>0</minAge>
-          <headOffset>(0, -0.35)</headOffset>
-          <headFemaleOffset>(0, -0.35)</headFemaleOffset>
+          <headOffset>(0, 0.05)</headOffset>
+          <headFemaleOffset>(0, 0.05)</headFemaleOffset>
           <customDrawSize>(1.5,1.5)</customDrawSize>
           <customPortraitDrawSize>(1.5,1.5)</customPortraitDrawSize>
           <customHeadDrawSize>(0.01,0.01)</customHeadDrawSize>
@@ -560,8 +563,8 @@
         <li Class="AlienRace.LifeStageAgeAlien">
           <def>HumanlikeChild</def>
           <minAge>1</minAge>
-          <headOffset>(0, -0.55)</headOffset>
-          <headFemaleOffset>(0, -0.55)</headFemaleOffset>
+          <headOffset>(0, -0.15)</headOffset>
+          <headFemaleOffset>(0, -0.15)</headFemaleOffset>
           <customDrawSize>(2.5,2.5)</customDrawSize>
           <customPortraitDrawSize>(2.5,2.5)</customPortraitDrawSize>
           <customHeadDrawSize>(0.01,0.01)</customHeadDrawSize>
@@ -570,14 +573,14 @@
         <li Class="AlienRace.LifeStageAgeAlien" MayRequire="Ludeon.RimWorld.Biotech">
           <def>HumanlikePreTeenager</def>
           <minAge>4</minAge>
-          <headOffset>(0, -0.55)</headOffset>
-          <headFemaleOffset>(0, -0.55)</headFemaleOffset>
+          <headOffset>(0, -0.15)</headOffset>
+          <headFemaleOffset>(0, -0.15)</headFemaleOffset>
         </li>
         <li Class="AlienRace.LifeStageAgeAlien">
           <def>HumanlikeTeenager</def>
           <minAge>10</minAge>
-          <headOffset>(0, -0.35)</headOffset>
-          <headFemaleOffset>(0, -0.35)</headFemaleOffset>
+          <headOffset>(0, 0.05)</headOffset>
+          <headFemaleOffset>(0, 0.05)</headFemaleOffset>
           <customDrawSize>(0.8,0.8)</customDrawSize>
           <customPortraitDrawSize>(0.8,0.8)</customPortraitDrawSize>
           <customHeadDrawSize>(0.8,0.8)</customHeadDrawSize>

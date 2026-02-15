@@ -46,20 +46,20 @@ namespace SD.GrayRace.JobDrivers
 
                     float kgNeedDelta = needDelta / KgToEnergy;
 
-                    int thingcountNeed = Mathf.CeilToInt(kgNeedDelta / metalMass);
+                    int thingCountNeed = Mathf.CeilToInt(kgNeedDelta / metalMass);
 
                     float energyGained = metalMass * KgToEnergy;
 
-                    if(thingcountNeed > Metal.stackCount)
+                    if(thingCountNeed > Metal.stackCount)
                     {
-                        thingcountNeed = Metal.stackCount;
+                        thingCountNeed = Metal.stackCount;
                         Metal.Destroy();
                     }
                     else
                     {
-                        Metal.SplitOff(thingcountNeed).Destroy();
+                        Metal.SplitOff(thingCountNeed).Destroy();
                     }
-                    energyGained *= thingcountNeed;
+                    energyGained *= thingCountNeed;
 
                     Energy.CurLevel += energyGained;
                 },
