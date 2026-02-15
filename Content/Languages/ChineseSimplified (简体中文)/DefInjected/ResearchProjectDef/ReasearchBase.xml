@@ -1,138 +1,143 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray Advanced Combat Clothing -->
   <GR_AdvancedCombatClothing.label>灰裔高级战斗服装</GR_AdvancedCombatClothing.label>
-  <!-- EN: Unlock Gray's basic clothing -->
+  <!-- EN: Unlock Gray's advanced combat clothing -->
   <GR_AdvancedCombatClothing.description>TODO</GR_AdvancedCombatClothing.description>
-  
+
   <!-- EN: Alloy Casting -->
   <GR_AlloyCasting.label>合金铸造</GR_AlloyCasting.label>
   <!-- EN: Unlocks the production of alloy. This space-age, high-quality metal offers near-perfect toughness, strength, and hardness, while also exhibiting exceptional malleability under specific conditions. -->
   <GR_AlloyCasting.description>TODO</GR_AlloyCasting.description>
   <!-- EN: 先空着，傻逼泰南的科技联动显示太抽象了，后面写个说明 -->
-  <GR_AlloyCasting.discoveredLetterText>TODO</GR_AlloyCasting.discoveredLetterText>
+  <GR_AlloyCasting.discoveredLetterText>合金的铸造配方在三个不同的科技研究完成时，会分别解锁三个不同的配方。</GR_AlloyCasting.discoveredLetterText>
   <!-- EN: About: Alloy production formula -->
   <GR_AlloyCasting.discoveredLetterTitle>TODO</GR_AlloyCasting.discoveredLetterTitle>
-  
+
   <!-- EN: Alloy process optimization -->
   <GR_AlloyProcessOptimization.label>合金工艺优化</GR_AlloyProcessOptimization.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
   <GR_AlloyProcessOptimization.description>TODO</GR_AlloyProcessOptimization.description>
-  
+
   <!-- EN: Gray Basic Clothing -->
   <GR_BasicClothing.label>灰裔基础服装</GR_BasicClothing.label>
   <!-- EN: Unlock Gray's basic clothing -->
   <GR_BasicClothing.description>TODO</GR_BasicClothing.description>
-  
+
   <!-- EN: Gray Combat Clothing -->
   <GR_CombatClothing.label>灰裔战斗服装</GR_CombatClothing.label>
-  <!-- EN: Unlock Gray's basic clothing -->
+  <!-- EN: Unlock Gray's combat clothing -->
   <GR_CombatClothing.description>TODO</GR_CombatClothing.description>
-  
+
   <!-- EN: Combat Mimicry -->
   <GR_CombatMimicry.label>战斗拟态</GR_CombatMimicry.label>
   <!-- EN: Unlock Mimicry,this is a substance that can greatly enhance spiritual abilities. -->
   <GR_CombatMimicry.description>TODO</GR_CombatMimicry.description>
-  
+
   <!-- EN: Combat Plugin -->
   <GR_CombatPlugin.label>战斗插件</GR_CombatPlugin.label>
   <!-- EN: Unlock plugin,this is a substance that can greatly enhance spiritual abilities. -->
   <GR_CombatPlugin.description>TODO</GR_CombatPlugin.description>
-  
+
   <!-- EN: Cosmogenesis -->
   <GR_Cosmogenesis.label>宇宙创生</GR_Cosmogenesis.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
   <GR_Cosmogenesis.description>TODO</GR_Cosmogenesis.description>
-  
+
   <!-- EN: Daily Mimicry -->
   <GR_DailyMimicry.label>生活拟态</GR_DailyMimicry.label>
   <!-- EN: Unlock Mimicry,this is a substance that can greatly enhance spiritual abilities. -->
   <GR_DailyMimicry.description>TODO</GR_DailyMimicry.description>
-  
+
   <!-- EN: Daily Plugin -->
   <GR_DailyPlugin.label>生活插件</GR_DailyPlugin.label>
   <!-- EN: Unlock plugin,this is a substance that can greatly enhance spiritual abilities. -->
   <GR_DailyPlugin.description>TODO</GR_DailyPlugin.description>
-  
+
+  <!-- EN: Decorative Clothing -->
+  <GR_DecorativeClothing.label>灰裔装饰服装</GR_DecorativeClothing.label>
+  <!-- EN: Unlock decorative clothing, which can enhance the appearance of characters. -->
+  <GR_DecorativeClothing.description>TODO</GR_DecorativeClothing.description>
+
   <!-- EN: Energy Weapon -->
   <GR_EnergyWeapon.label>能量武器</GR_EnergyWeapon.label>
   <!-- EN: Fires high-energy particle beams. These high-density beams are devastating at close range, but suffer from rapid diffusion in atmosphere, drastically reducing their effective range. -->
   <GR_EnergyWeapon.description>TODO</GR_EnergyWeapon.description>
-  
+
   <!-- EN: Fusion Reactor -->
   <GR_FusionReactor.label>聚变反应堆</GR_FusionReactor.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
   <GR_FusionReactor.description>TODO</GR_FusionReactor.description>
-  
+
   <!-- EN: Nanite Transmuter -->
   <GR_NaniteTransmuter.label>纳米变形器</GR_NaniteTransmuter.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
   <GR_NaniteTransmuter.description>TODO</GR_NaniteTransmuter.description>
-  
-  <!-- EN: Gray Special Clothing -->
+
+  <!-- EN: Gray Professional Clothing -->
   <GR_ProfessionalClothing.label>灰裔特殊服装</GR_ProfessionalClothing.label>
-  <!-- EN: Unlock Gray's special clothing -->
+  <!-- EN: Unlock Gray's Professional clothing -->
   <GR_ProfessionalClothing.description>TODO</GR_ProfessionalClothing.description>
-  
+
   <!-- EN: Railgun -->
   <GR_Railgun.label>磁轨武器</GR_Railgun.label>
   <!-- EN: A kinetic weapon that accelerates projectiles through multi-stage electromagnetic coils. The extremely high muzzle velocity grants superior range and armor penetration, though the relatively low mass of railgun slugs results in slightly reduced damage. Special nanite-composite ammunition can ignore the target's Damage Mitigation. -->
   <GR_Railgun.description>TODO</GR_Railgun.description>
-  
+
   <!-- EN: Science Nexus -->
   <GR_ScienceNexus.label>科研枢纽</GR_ScienceNexus.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
   <GR_ScienceNexus.description>TODO</GR_ScienceNexus.description>
-  
+
   <!-- EN: T1 Mech Tech -->
   <GR_T1MechTech.label>T1机械科技</GR_T1MechTech.label>
   <!-- EN: Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns. -->
   <GR_T1MechTech.description>TODO</GR_T1MechTech.description>
-  
+
   <!-- EN: T1 Weapon Tech -->
   <GR_T1WeaponTech.label>T1武器科技</GR_T1WeaponTech.label>
   <!-- EN: Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns. -->
   <GR_T1WeaponTech.description>TODO</GR_T1WeaponTech.description>
-  
+
   <!-- EN: T2 Mech Tech -->
   <GR_T2MechTech.label>T2机械科技</GR_T2MechTech.label>
   <!-- EN: Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns. -->
   <GR_T2MechTech.description>TODO</GR_T2MechTech.description>
-  
+
   <!-- EN: T2 Weapon Tech -->
   <GR_T2WeaponTech.label>T2武器科技</GR_T2WeaponTech.label>
   <!-- EN: Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns. -->
   <GR_T2WeaponTech.description>TODO</GR_T2WeaponTech.description>
-  
+
   <!-- EN: T3 Mech Tech -->
   <GR_T3MechTech.label>T3机械科技</GR_T3MechTech.label>
   <!-- EN: Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance. -->
   <GR_T3MechTech.description>TODO</GR_T3MechTech.description>
-  
+
   <!-- EN: T3 Weapon Tech -->
   <GR_T3WeaponTech.label>T3武器科技</GR_T3WeaponTech.label>
   <!-- EN: Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance. -->
   <GR_T3WeaponTech.description>TODO</GR_T3WeaponTech.description>
-  
+
   <!-- EN: T4 Mech Tech -->
   <GR_T4MechTech.label>T4机械科技</GR_T4MechTech.label>
   <!-- EN: Unlocks Tier 4 weaponry. These weapons are generally classified as heavy ordnance. -->
   <GR_T4MechTech.description>TODO</GR_T4MechTech.description>
-  
+
   <!-- EN: T5 Mech Tech -->
   <GR_T5Mechtech.label>T5机械科技</GR_T5Mechtech.label>
   <!-- EN: The technology needed for your mechanitor to create and control high-tier mechanoids.\n\nYou can get powerfocus chips by using a mechanitor to summon a war queen threat. -->
   <GR_T5Mechtech.description>TODO</GR_T5Mechtech.description>
-  
+
   <!-- EN: T6 Mech Tech -->
   <GR_T6Mechtech.label>T6机械科技</GR_T6Mechtech.label>
   <!-- EN: The advanced technology needed for your mechanitor to create and control ultra-tier mechanoids, including large mechs and ultra-tier mechanitor gear.\n\nYou can get nano structuring chips by using a mechanitor to summon an apocriton threat. -->
   <GR_T6Mechtech.description>TODO</GR_T6Mechtech.description>
-  
+
   <!-- EN: Zro -->
   <GR_Zro.label>泽珞</GR_Zro.label>
   <!-- EN: Unlock zro,this is a substance that can greatly enhance spiritual abilities. -->
   <GR_Zro.description>TODO</GR_Zro.description>
-  
+
 </LanguageData>

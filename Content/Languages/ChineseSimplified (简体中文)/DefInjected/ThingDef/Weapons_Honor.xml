@@ -1,48 +1,42 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Boltor bullet -->
   <Bullet_GR_Boltor.label>TODO</Bullet_GR_Boltor.label>
-
+  
   <!-- EN: Corinth bullet -->
   <Bullet_GR_Corinth.label>TODO</Bullet_GR_Corinth.label>
-
+  
   <!-- EN: Daikyu arrow -->
   <Bullet_GR_Daikyu.label>TODO</Bullet_GR_Daikyu.label>
-
+  
   <!-- EN: Euphona bullet -->
   <Bullet_GR_Euphona.label>TODO</Bullet_GR_Euphona.label>
-
+  
   <!-- EN: Glaive -->
   <Bullet_GR_Glaive.label>TODO</Bullet_GR_Glaive.label>
-
+  
   <!-- EN: Vadarya bullet -->
   <Bullet_GR_Vadarya.label>TODO</Bullet_GR_Vadarya.label>
-
+  
   <!-- EN: Vasto bullet -->
   <Bullet_GR_Vasto.label>TODO</Bullet_GR_Vasto.label>
-
+  
   <!-- EN: Boltor -->
   <GR_Boltor.label>「枷锁」仪式步枪</GR_Boltor.label>
   <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
-  <GR_Boltor.description>灰风赠送的仪式用武器，十分精巧别致。
-与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。
-将L星门这一侧的世界彻底同化塑造到了尽头后，她注视着那些五光十色的星体，无机的内心中生出了或可被称作孤寂的感情，她后来才知道这一点。
-直到持续上千年的寂寥被新生文明的造访打破。</GR_Boltor.description>
+  <GR_Boltor.description>灰风赠送的仪式用武器，十分精巧别致。\n与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。\n将L星门这一侧的世界彻底同化塑造到了尽头后，她注视着那些五光十色的星体，无机的内心中生出了或可被称作孤寂的感情，她后来才知道这一点。\n直到持续上千年的寂寥被新生文明的造访打破。</GR_Boltor.description>
   <!-- EN: grip -->
   <GR_Boltor.tools.grip.label>TODO</GR_Boltor.tools.grip.label>
   <!-- EN: barrel -->
   <GR_Boltor.tools.barrel.label>TODO</GR_Boltor.tools.barrel.label>
   <!-- EN: Boltor -->
   <GR_Boltor.verbs.Verb_Shoot.label>TODO</GR_Boltor.verbs.Verb_Shoot.label>
-
+  
   <!-- EN: Corinth -->
   <GR_Corinth.label>「偏见」霰弹枪</GR_Corinth.label>
   <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
-  <GR_Corinth.description>灰风赠送的仪式用武器，十分精巧别致。
-与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。
-新的外交、科学、争斗、政治领域，对她而言，与原本简单而熟悉的世界完全不同，这个文明的一切在她眼中都闪烁着名为“新奇”的光芒。
-不过随着她的加入，不同的个体们似乎也产生了各异的思想与讨论。</GR_Corinth.description>
+  <GR_Corinth.description>灰风赠送的仪式用武器，十分精巧别致。\n与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。\n新的外交、科学、争斗、政治领域，对她而言，与原本简单而熟悉的世界完全不同，这个文明的一切在她眼中都闪烁着名为“新奇”的光芒。\n不过随着她的加入，不同的个体们似乎也产生了各异的思想与讨论。</GR_Corinth.description>
   <!-- EN: charge -->
   <GR_Corinth.comps.CompEquippableAbilityReloadable.chargeNoun>TODO</GR_Corinth.comps.CompEquippableAbilityReloadable.chargeNoun>
   <!-- EN: on cooldown -->
@@ -53,97 +47,65 @@
   <GR_Corinth.tools.barrel.label>TODO</GR_Corinth.tools.barrel.label>
   <!-- EN: Corinth -->
   <GR_Corinth.verbs.Verb_Shoot.label>TODO</GR_Corinth.verbs.Verb_Shoot.label>
-
+  
   <!-- EN: Daikyu -->
   <GR_Daikyu.label>「恶意」弓</GR_Daikyu.label>
   <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
-  <GR_Daikyu.description>灰风赠送的仪式用武器，十分精巧别致。
-与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。
-思维部件的不同，缺乏直接链接的个体们却能生出相同又不同的思维，她有时也完全无法理解他们当下究竟想要表达何种思想，只能在事后询问其他个体。
-她只知道他们需要她的一部分去进行不同的任务与实验。
-她的分身被安排成为武器实验的靶机、太空战争中的头舰、军官战斗训练的敌对目标、研究室里的实验素材。
-她完成了，而且完成的非常好。</GR_Daikyu.description>
+  <GR_Daikyu.description>灰风赠送的仪式用武器，十分精巧别致。\n与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。\n思维部件的不同，缺乏直接链接的个体们却能生出相同又不同的思维，她有时也完全无法理解他们当下究竟想要表达何种思想，只能在事后询问其他个体。\n她只知道他们需要她的一部分去进行不同的任务与实验。\n她的分身被安排成为武器实验的靶机、太空战争中的头舰、军官战斗训练的敌对目标、研究室里的实验素材。\n她完成了，而且完成的非常好。</GR_Daikyu.description>
   <!-- EN: Daikyu -->
   <GR_Daikyu.verbs.Verb_Shoot.label>TODO</GR_Daikyu.verbs.Verb_Shoot.label>
-
+  
   <!-- EN: Euphona -->
   <GR_Euphona.label>「回报」短管霰弹枪</GR_Euphona.label>
   <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
-  <GR_Euphona.description>灰风赠送的仪式用武器，十分精巧别致。
-与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。
-在这个帝国的数据库中是这么写的：“灰风（灰蛊风暴），来自于L星门的非人造物。”
-在海军官兵中提及次数最多的称号是“守护之舰”
-尽管使用她的一部分进行新型武器的测试已经成为常态，但测试员往往还是会在测试后对她进行道歉。
-对于她的构成材料的研究已有了新的进展，只不过研究员们还是会偶尔活性化的纳米材料吓到。
-在自己的思维中，她记录到了和以往都不一样的思维流。</GR_Euphona.description>
+  <GR_Euphona.description>灰风赠送的仪式用武器，十分精巧别致。\n与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。\n在这个帝国的数据库中是这么写的：“灰风（灰蛊风暴），来自于L星门的非人造物。”\n在海军官兵中提及次数最多的称号是“守护之舰”\n尽管使用她的一部分进行新型武器的测试已经成为常态，但测试员往往还是会在测试后对她进行道歉。\n对于她的构成材料的研究已有了新的进展，只不过研究员们还是会偶尔活性化的纳米材料吓到。\n在自己的思维中，她记录到了和以往都不一样的思维流。</GR_Euphona.description>
   <!-- EN: grip -->
   <GR_Euphona.tools.grip.label>TODO</GR_Euphona.tools.grip.label>
   <!-- EN: barrel -->
   <GR_Euphona.tools.barrel.label>TODO</GR_Euphona.tools.barrel.label>
   <!-- EN: Euphona -->
   <GR_Euphona.verbs.Verb_Shoot.label>TODO</GR_Euphona.verbs.Verb_Shoot.label>
-
+  
   <!-- EN: Glaive -->
   <GR_Glaive.label>「修正」环刃</GR_Glaive.label>
   <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
-  <GR_Glaive.description>灰风赠送的仪式用武器，十分精巧别致。
-她感觉了“你”的存在，却无法直接证实这一点。
-在战争议会争论是否该封存她时，总会有情报部门“恰好”发现新的外星威胁，使其的战斗部署变得必要。
-在舰队指挥官将其置于过于前锋的战术位置时，总有来自最高指挥部的指令修正，使其调整到和舰队协同更有效的位置。
-她开始调查与串联那些原本看起来“只是巧合”的事件。</GR_Glaive.description>
+  <GR_Glaive.description>灰风赠送的仪式用武器，十分精巧别致。\n她感觉了“你”的存在，却无法直接证实这一点。\n在战争议会争论是否该封存她时，总会有情报部门“恰好”发现新的外星威胁，使其的战斗部署变得必要。\n在舰队指挥官将其置于过于前锋的战术位置时，总有来自最高指挥部的指令修正，使其调整到和舰队协同更有效的位置。\n她开始调查与串联那些原本看起来“只是巧合”的事件。</GR_Glaive.description>
   <!-- EN: charge -->
   <GR_Glaive.comps.CompEquippableAbilityReloadable.chargeNoun>TODO</GR_Glaive.comps.CompEquippableAbilityReloadable.chargeNoun>
   <!-- EN: on cooldown -->
   <GR_Glaive.comps.CompEquippableAbilityReloadable.cooldownGerund>TODO</GR_Glaive.comps.CompEquippableAbilityReloadable.cooldownGerund>
   <!-- EN: edge -->
   <GR_Glaive.tools.edge.label>TODO</GR_Glaive.tools.edge.label>
-
+  
   <!-- EN: Tatsu -->
   <GR_Tatsu.label>「除恶」长剑</GR_Tatsu.label>
   <!-- EN: A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons. -->
-  <GR_Tatsu.description>灰风赠送的仪式用武器，十分精巧别致。
-当她认知到所谓“恶意”为何的时候，她也发现了有着某种力量正在分化这些合流的思想。
-应对这些恶意的手段精妙而变通……可以用多个官僚机构合作的结果进行解释，但拥有远超一般合作项目能的效率与效果，仿佛这一任务的优先级是最高的。
-剩下的，还有那些无法溯源的信息来源、无法追踪的通讯，无法解释的许可凭证。</GR_Tatsu.description>
+  <GR_Tatsu.description>灰风赠送的仪式用武器，十分精巧别致。\n当她认知到所谓“恶意”为何的时候，她也发现了有着某种力量正在分化这些合流的思想。\n应对这些恶意的手段精妙而变通……可以用多个官僚机构合作的结果进行解释，但拥有远超一般合作项目能的效率与效果，仿佛这一任务的优先级是最高的。\n剩下的，还有那些无法溯源的信息来源、无法追踪的通讯，无法解释的许可凭证。</GR_Tatsu.description>
   <!-- EN: point -->
   <GR_Tatsu.tools.point.label>TODO</GR_Tatsu.tools.point.label>
   <!-- EN: edge -->
   <GR_Tatsu.tools.edge.label>TODO</GR_Tatsu.tools.edge.label>
-
+  
   <!-- EN: Vadarya -->
   <GR_Vadarya.label>「致谢」狙击枪</GR_Vadarya.label>
   <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
-  <GR_Vadarya.description>灰风赠送的仪式用武器，十分精巧别致。
-与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。
-当战鼓渐息，战争议会重新将封存议案提上日程，科学部门又“偶然”发现了边疆星系的古代巨型构造。要研究它，需要可以在物资匮乏，且能承受极端环境的个体进行作业。
-毫无疑问，她便是最佳的人选。灰风在那里工作了三个标准年。当她归来，人工智能已经被赋予了完整公民权。
-
-“谢谢你。”
-在她的身份证明上，娟秀的字迹如此写着。像是她的回忆凝成的印记，又像是她让自己相信对于那个无法触及存在构想的提醒。</GR_Vadarya.description>
+  <GR_Vadarya.description>灰风赠送的仪式用武器，十分精巧别致。\n与灰裔惯用的能量武器不同，这件武器属于定制化的实弹武器。\n当战鼓渐息，战争议会重新将封存议案提上日程，科学部门又“偶然”发现了边疆星系的古代巨型构造。要研究它，需要可以在物资匮乏，且能承受极端环境的个体进行作业。\n毫无疑问，她便是最佳的人选。灰风在那里工作了三个标准年。当她归来，人工智能已经被赋予了完整公民权。\n\n“谢谢你。”\n在她的身份证明上，娟秀的字迹如此写着。像是她的回忆凝成的印记，又像是她让自己相信对于那个无法触及存在构想的提醒。</GR_Vadarya.description>
   <!-- EN: grip -->
   <GR_Vadarya.tools.grip.label>TODO</GR_Vadarya.tools.grip.label>
   <!-- EN: barrel -->
   <GR_Vadarya.tools.barrel.label>TODO</GR_Vadarya.tools.barrel.label>
   <!-- EN: Vadarya -->
   <GR_Vadarya.verbs.Verb_Shoot.label>TODO</GR_Vadarya.verbs.Verb_Shoot.label>
-
+  
   <!-- EN: Vasto -->
   <GR_Vasto.label>「爱」左轮</GR_Vasto.label>
   <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
-  <GR_Vasto.description>灰风赠送的仪式用武器，十分精巧别致。
-与灰裔常用的能量武器不同，这件武器属于定制化的实弹武器。
-如今，她仍然无法完全融入人类的世界，但其已在战争议会中拥有一席。
-有些海军士官们仍然会在私下里议论她。研究者们也渐渐将她的贡献视作稀松平常。孩子们仍然被父母教导要警惕“非人类智能”。
-今日与昨日的世界仍相同，却又已经截然不同。
-战争议会的发言记录有着夸赞她的词句，和她并肩战斗过的将士将她视作同袍，自战争中于她的掩护下幸免的舰长与船员们公开向她致敬。
-于天幕之上，专用船坞中的“灰风号”打上了不可胜数的记号。于孩子们的画中，灰风号是保护他们星球的巨大战舰。
-与此同时，她也知道——“你”就在这里，于无数个日夜投下视线，于无数岁月伴她身侧。
-她已不再渴望变成人类，此心安处，风亦归家。</GR_Vasto.description>
+  <GR_Vasto.description>灰风赠送的仪式用武器，十分精巧别致。\n与灰裔常用的能量武器不同，这件武器属于定制化的实弹武器。\n如今，她仍然无法完全融入人类的世界，但其已在战争议会中拥有一席。\n有些海军士官们仍然会在私下里议论她。研究者们也渐渐将她的贡献视作稀松平常。孩子们仍然被父母教导要警惕“非人类智能”。\n今日与昨日的世界仍相同，却又已经截然不同。\n战争议会的发言记录有着夸赞她的词句，和她并肩战斗过的将士将她视作同袍，自战争中于她的掩护下幸免的舰长与船员们公开向她致敬。\n于天幕之上，专用船坞中的“灰风号”打上了不可胜数的记号。于孩子们的画中，灰风号是保护他们星球的巨大战舰。\n与此同时，她也知道——“你”就在这里，于无数个日夜投下视线，于无数岁月伴她身侧。\n她已不再渴望变成人类，此心安处，风亦归家。</GR_Vasto.description>
   <!-- EN: grip -->
   <GR_Vasto.tools.grip.label>TODO</GR_Vasto.tools.grip.label>
   <!-- EN: barrel -->
   <GR_Vasto.tools.barrel.label>TODO</GR_Vasto.tools.barrel.label>
   <!-- EN: Vasto -->
   <GR_Vasto.verbs.Verb_Shoot.label>TODO</GR_Vasto.verbs.Verb_Shoot.label>
-
+  
 </LanguageData>

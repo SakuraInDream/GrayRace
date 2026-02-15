@@ -251,4 +251,86 @@
     </value>
   </Operation>
 
+  <!--撬棍-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Crowbar"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>GR_CrowbarDamage</li>
+          </capacities>
+          <power>33.3</power>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>3.33</amount>
+            </li>
+          </extraMeleeDamages>
+          <cooldownTime>1</cooldownTime>
+          <armorPenetrationSharp>333</armorPenetrationSharp>
+          <armorPenetrationBlunt>3333.33</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Crowbar"]/statBases</xpath>
+    <value>
+      <Bulk>10</Bulk>
+      <MeleeCounterParryBonus>3.3</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Crowbar"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>3.33</MeleeCritChance>
+      <MeleeParryChance>3.3</MeleeParryChance>
+    </value>
+  </Operation>
+
+  <!--力场撕裂者-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_FFR"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>left claw</label>
+          <capacities>
+            <li>GR_ColdClaw</li>
+          </capacities>
+          <power>15</power>
+          <cooldownTime>0.2</cooldownTime>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right claw</label>
+          <capacities>
+            <li>GR_HeatClaw</li>
+          </capacities>
+          <power>15</power>
+          <cooldownTime>0.2</cooldownTime>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_FFR"]/statBases</xpath>
+    <value>
+      <Bulk>4</Bulk>
+      <MeleeCounterParryBonus>0</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_FFR"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>15</MeleeCritChance>
+      <MeleeParryChance>0</MeleeParryChance>
+    </value>
+  </Operation>
+
 </Patch>

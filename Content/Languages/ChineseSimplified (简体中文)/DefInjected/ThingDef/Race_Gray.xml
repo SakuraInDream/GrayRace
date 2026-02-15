@@ -6,7 +6,7 @@
   <!-- EN: 灰裔，是由纳米机械组成的生命体，借助人格核心和灰风的帮助获得了独立的意识与情感，成为具有自我认知的个体。她们曾是高效的杀戮机器，如今更专注于生产建设，战斗能力已大不如前。尽管拥有坚韧的机械身躯，但不能像灰风一样从被打散的状态重组，因此她们对死亡充满恐惧。 -->
   <Gray_Race.description>TODO</Gray_Race.description>
   <!-- EN: 备用灰潮源质 -->
-  <Gray_Race.comps.CompResource_NanitesNew.resourceLabel>TODO</Gray_Race.comps.CompResource_NanitesNew.resourceLabel>
+  <Gray_Race.comps.CompResource_Nanites.resourceLabel>TODO</Gray_Race.comps.CompResource_Nanites.resourceLabel>
   <!-- EN: left fist -->
   <Gray_Race.tools.left_fist.label>TODO</Gray_Race.tools.left_fist.label>
   <!-- EN: right fist -->

@@ -192,7 +192,7 @@
                   <layerOffset>-0.274</layerOffset>
                 </south>
                 <north>
-                  <layerOffset>0.22</layerOffset>
+                  <layerOffset>-0.274</layerOffset>
                 </north>
                 <east>
                   <layerOffset>-0.274</layerOffset>
@@ -201,7 +201,6 @@
               <inFrontOfBody>true</inFrontOfBody>
               <layerInvert>false</layerInvert>
               <alignWithHead>true</alignWithHead>
-              <userCustomizable>true</userCustomizable>
               <defaultOffset>Center</defaultOffset>
               <drawSize>1</drawSize>
               <colorChannel>hair</colorChannel>
@@ -240,9 +239,7 @@
                 </east>
               </offsets>
               <inFrontOfBody>false</inFrontOfBody>
-              <layerInvert>false</layerInvert>
               <alignWithHead>true</alignWithHead>
-              <userCustomizable>true</userCustomizable>
               <defaultOffset>Center</defaultOffset>
               <drawSize>1</drawSize>
               <colorChannel>hair</colorChannel>

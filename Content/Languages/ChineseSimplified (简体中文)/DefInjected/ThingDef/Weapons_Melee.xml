@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Stun Stick -->
   <GR_Cadus.label>电流长棍</GR_Cadus.label>
   <!-- EN: . -->
@@ -9,14 +9,14 @@
   <GR_Cadus.tools.Top.label>TODO</GR_Cadus.tools.Top.label>
   <!-- EN: Bottom -->
   <GR_Cadus.tools.Bottom.label>TODO</GR_Cadus.tools.Bottom.label>
-
+  
   <!-- EN: Crowbar of Physics -->
   <GR_Crowbar.label>物理学圣剑</GR_Crowbar.label>
   <!-- EN: . -->
   <GR_Crowbar.description>看上去只是一把普通的撬棍，但有人说它可以在一定程度上掌握物理规则。</GR_Crowbar.description>
   <!-- EN: edge -->
   <GR_Crowbar.tools.edge.label>TODO</GR_Crowbar.tools.edge.label>
-
+  
   <!-- EN: Force Field Ripper -->
   <GR_FFR.label>力场撕裂者</GR_FFR.label>
   <!-- EN: . -->
@@ -25,28 +25,28 @@
   <GR_FFR.tools.left_claw.label>TODO</GR_FFR.tools.left_claw.label>
   <!-- EN: right claw -->
   <GR_FFR.tools.right_claw.label>TODO</GR_FFR.tools.right_claw.label>
-
+  
   <!-- EN: HF Murasama -->
   <GR_HFMurasama.label>“村雨”</GR_HFMurasama.label>
   <!-- EN: . -->
   <GR_HFMurasama.description>复刻自星海帝国传奇剑客的佩刀。刀身每秒千次的高速振动，带来的是足以熔穿装甲的高温和惊人的切割能力，甚至可以轻易的斩断一辆主战坦克。握柄设有生物锁，只有灰裔可以正常使用。</GR_HFMurasama.description>
   <!-- EN: edge -->
   <GR_HFMurasama.tools.edge.label>TODO</GR_HFMurasama.tools.edge.label>
-
+  
   <!-- EN: Lightsaber -->
   <GR_Lightsaber.label>辉光</GR_Lightsaber.label>
   <!-- EN: . -->
   <GR_Lightsaber.description>使用聚变核心驱动剑柄内的等离子体发射器，通过特制磁场将其约束成一道灼热的光刃。由于等离子体没有任何质量，挥舞时几乎感受不到惯性，这赐予了他令人目不暇接的攻速，受害者往往只能看到一道光弧闪过。</GR_Lightsaber.description>
   <!-- EN: edge -->
   <GR_Lightsaber.tools.edge.label>TODO</GR_Lightsaber.tools.edge.label>
-
+  
   <!-- EN: Ship Slayer -->
   <GR_ShipSlayer.label>破舰者</GR_ShipSlayer.label>
   <!-- EN: . -->
   <GR_ShipSlayer.description>这并非一把真正的武器，而是一块被装上握柄的舰用装甲板。边缘被灰潮源质侵蚀，锐利且带有侵蚀性。其沉重的质量纵使对于灰裔来说也略显吃力，但每一次挥动都带着足以令大地碎裂，山脉崩解的毁灭动能。</GR_ShipSlayer.description>
   <!-- EN: edge -->
   <GR_ShipSlayer.tools.edge.label>TODO</GR_ShipSlayer.tools.edge.label>
-
+  
   <!-- EN: Electric Shock Sword -->
   <GR_VoltSword.label>电击剑</GR_VoltSword.label>
   <!-- EN: . -->
@@ -55,5 +55,5 @@
   <GR_VoltSword.tools.point.label>TODO</GR_VoltSword.tools.point.label>
   <!-- EN: edge -->
   <GR_VoltSword.tools.edge.label>TODO</GR_VoltSword.tools.edge.label>
-
+  
 </LanguageData>

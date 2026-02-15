@@ -16,6 +16,11 @@
   <!-- EN: . -->
   <Gray_Apparel_Envoy.description>TODO</Gray_Apparel_Envoy.description>
 
+  <!-- EN: Gray Himation -->
+  <Gray_Apparel_Himation.label>TODO</Gray_Apparel_Himation.label>
+  <!-- EN: . -->
+  <Gray_Apparel_Himation.description>TODO</Gray_Apparel_Himation.description>
+
   <!-- EN: Gray Maid -->
   <Gray_Apparel_Maid.label>灰裔女仆装</Gray_Apparel_Maid.label>
   <!-- EN: . -->
@@ -25,6 +30,11 @@
   <Gray_Apparel_MikoOutfit.label>灰裔神道巫女服</Gray_Apparel_MikoOutfit.label>
   <!-- EN: . -->
   <Gray_Apparel_MikoOutfit.description>TODO</Gray_Apparel_MikoOutfit.description>
+
+  <!-- EN: Gray Nun -->
+  <Gray_Apparel_Nun.label>灰裔修女服</Gray_Apparel_Nun.label>
+  <!-- EN: . -->
+  <Gray_Apparel_Nun.description>TODO</Gray_Apparel_Nun.description>
 
   <!-- EN: Gray Office Lady Outfit -->
   <Gray_Apparel_OL.label>灰裔OL装</Gray_Apparel_OL.label>
@@ -51,15 +61,15 @@
   <!-- EN: . -->
   <Gray_Apparel_SailorSuit.description>TODO</Gray_Apparel_SailorSuit.description>
 
-  <!-- EN: Gray Sekebe Unit -->
-  <Gray_Apparel_SekebeUnit.label>灰裔露背毛衣</Gray_Apparel_SekebeUnit.label>
+  <!-- EN: Gray Sensual Wedding Dress -->
+  <Gray_Apparel_SensualWeddingDress.label>灰裔性感新娘</Gray_Apparel_SensualWeddingDress.label>
   <!-- EN: . -->
-  <Gray_Apparel_SekebeUnit.description>TODO</Gray_Apparel_SekebeUnit.description>
+  <Gray_Apparel_SensualWeddingDress.description>TODO</Gray_Apparel_SensualWeddingDress.description>
 
-  <!-- EN: Gray Sweater -->
-  <Gray_Apparel_Sweater.label>灰裔毛衣</Gray_Apparel_Sweater.label>
+  <!-- EN: Gray Taoist Robe -->
+  <Gray_Apparel_TaoistRobe.label>灰裔道袍</Gray_Apparel_TaoistRobe.label>
   <!-- EN: . -->
-  <Gray_Apparel_Sweater.description>TODO</Gray_Apparel_Sweater.description>
+  <Gray_Apparel_TaoistRobe.description>TODO</Gray_Apparel_TaoistRobe.description>
 
   <!-- EN: Gray Workwear -->
   <Gray_Apparel_Workwear.label>灰裔工作服</Gray_Apparel_Workwear.label>

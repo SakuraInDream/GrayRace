@@ -272,4 +272,122 @@
     </FireModes>
   </Operation>
 
+  <!--龙辰-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Tatsu"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>point</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>30</power>
+          <cooldownTime>3</cooldownTime>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>60</power>
+          <cooldownTime>3</cooldownTime>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Tatsu"]/statBases</xpath>
+    <value>
+      <Bulk>16</Bulk>
+      <MeleeCounterParryBonus>0.7</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Tatsu"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>0.8</MeleeCritChance>
+      <MeleeParryChance>0.7</MeleeParryChance>
+    </value>
+  </Operation>
+
+  <!--战刃-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Glaive"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>edge</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>20</power>
+          <cooldownTime>1</cooldownTime>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Glaive"]/statBases</xpath>
+    <value>
+      <Bulk>5</Bulk>
+      <MeleeCounterParryBonus>0.2</MeleeCounterParryBonus>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Glaive"]/equippedStatOffsets</xpath>
+    <value>
+      <MeleeCritChance>0.4</MeleeCritChance>
+      <MeleeParryChance>0.2</MeleeParryChance>
+    </value>
+  </Operation>
+
+  <!--战刃 Patch Projectile-->
+  <Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Bullet_GR_Glaive"]/thingClass</xpath>
+		<value>
+			<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Bullet_GR_Glaive"]/projectile</xpath>
+		<value>
+			<projectile Class="CombatExtended.ProjectilePropertiesCE">
+				<damageDef>Bomb</damageDef>
+				<damageAmountBase>600</damageAmountBase>
+				<explosionRadius>1.5</explosionRadius>
+				<suppressionFactor>3.0</suppressionFactor>
+				<dangerFactor>2.0</dangerFactor>
+				<speed>150</speed>
+			</projectile>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName="Bullet_GR_Glaive"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName="Bullet_GR_Glaive"]</xpath>
+			<value>
+				<comps />
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Bullet_GR_Glaive"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Fragments">
+				<fragSpeedFactor>1</fragSpeedFactor>
+				<fragments>
+					<GR_Fragment_AP>8</GR_Fragment_AP>
+				</fragments>
+			</li>
+		</value>
+	</Operation>
+
 </Patch>

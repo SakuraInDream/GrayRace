@@ -403,22 +403,14 @@
     </tradeTags>
   </ThingDef>
 
-  <!--面纱-->
-  <ThingDef ParentName="HatMakeableBase">
-    <defName>Gray_Apparel_NileGauzeVeil</defName>
-    <label>Gray Nile Gauze Veil</label>
-    <description>.</description>
-    <possessionCount>1</possessionCount>
-    <graphicData>
-      <texPath>Apparel/NileGauze/Gray_NileGauzeVeil</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
+  <!--装饰性头饰父级-->
+  <ThingDef ParentName="HatMakeableBase" Name="GR_HatDecorative" Abstract="true">
     <thingCategories>
-      <li>GR_ApparelArmor</li>
+      <li>GR_ApparelSpecial</li>
     </thingCategories>
     <recipeMaker>
       <researchPrerequisites>
-        <li>GR_ProfessionalClothing</li>
+        <li>GR_DecorativeClothing</li>
       </researchPrerequisites>
       <recipeUsers>
         <li>ElectricTailoringBench</li>
@@ -432,20 +424,48 @@
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
-    <costList>
-    </costList>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToMake>6000</WorkToMake>
-      <Mass>0.1</Mass>
+      <Mass>0.5</Mass>
       <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <EquipDelay>2</EquipDelay>
+      <EquipDelay>1</EquipDelay>
     </statBases>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <tags>
+        <li>GR_Decorative</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <drawData>
+        <dataNorth>
+          <layer>200</layer>
+        </dataNorth>
+        <dataSouth>
+          <layer>70</layer>
+        </dataSouth>
+      </drawData>
+    </apparel>
+  </ThingDef>
+
+  <!--面纱-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_NileGauzeVeil</defName>
+    <label>Gray Nile Gauze Veil</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/NileGauze/Gray_NileGauzeVeil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <equippedStatOffsets>
     </equippedStatOffsets>
     <apparel>
-      <countsAsClothingForNudity>false</countsAsClothingForNudity>
-      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
       <bodyPartGroups>
         <li>FullHead</li>
       </bodyPartGroups>
@@ -458,25 +478,11 @@
           <layer>60</layer>
         </defaultData>
       </drawData>
-      <wornGraphicData>
-        <renderUtilityAsPack>true</renderUtilityAsPack>
-      </wornGraphicData>
-      <tags>
-        <li>GR_Decorative</li>
-      </tags>
-      <defaultOutfitTags>
-        <li>Worker</li>
-      </defaultOutfitTags>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
-    <tradeTags>
-      <li>BasicClothing</li>
-    </tradeTags>
   </ThingDef>
 
   <!--女仆发带-->
-  <ThingDef ParentName="HatMakeableBase">
+  <ThingDef ParentName="GR_HatDecorative">
     <defName>Gray_Apparel_MaidBand</defName>
     <label>Gray Maid Band</label>
     <description>.</description>
@@ -485,34 +491,6 @@
       <texPath>Apparel/Maid/Gray_MaidBand</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <thingCategories>
-      <li>GR_ApparelArmor</li>
-    </thingCategories>
-    <recipeMaker>
-      <researchPrerequisites>
-        <li>GR_ProfessionalClothing</li>
-      </researchPrerequisites>
-      <recipeUsers>
-        <li>ElectricTailoringBench</li>
-        <li>GR_NaniteReconfigurator</li>
-      </recipeUsers>
-      <skillRequirements>
-      </skillRequirements>
-      <displayPriority>215</displayPriority>
-    </recipeMaker>
-    <costStuffCount>30</costStuffCount>
-    <stuffCategories>
-      <li>Fabric</li>
-    </stuffCategories>
-    <costList>
-    </costList>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>6000</WorkToMake>
-      <Mass>0.1</Mass>
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
-      <EquipDelay>2</EquipDelay>
-    </statBases>
     <equippedStatOffsets>
     </equippedStatOffsets>
     <apparel>
@@ -531,15 +509,212 @@
       <tags>
         <li>GR_Maid</li>
       </tags>
-      <defaultOutfitTags>
-        <li>Worker</li>
-      </defaultOutfitTags>
-      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
-      <useWornGraphicMask>true</useWornGraphicMask>
     </apparel>
-    <tradeTags>
-      <li>BasicClothing</li>
-    </tradeTags>
+  </ThingDef>
+
+  <!--兔女郎发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BunnyGirlHeadbandA</defName>
+    <label>Gray Bunny Girl Headband A</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandA</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--兔女郎发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BunnyGirlHeadbandB</defName>
+    <label>Gray Bunny Girl Headband B</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandB</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandB</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--兔女郎发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BunnyGirlHeadbandC</defName>
+    <label>Gray Bunny Girl Headband C</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandC</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--兔女郎发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BunnyGirlHeadbandD</defName>
+    <label>Gray Bunny Girl Headband D</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandD</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandD</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--桂冠-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_Laurel</defName>
+    <label>Gray Laurel</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Himation/Gray_Laurel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Himation/Gray_Laurel</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--斗笠-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BambooHat</defName>
+    <label>Gray Bamboo Hat</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/TaoistRobe/Gray_BambooHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/TaoistRobe/Gray_BambooHat</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <drawData>
+        <dataNorth>
+          <layer>40000</layer>
+        </dataNorth>
+        <dataSouth>
+          <layer>100</layer>
+        </dataSouth>
+      </drawData>
+    </apparel>
+  </ThingDef>
+
+  <!--头纱-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_SensualBridaVeil</defName>
+    <label>Gray Sensual Brida Veil</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Wedding/Gray_SensualBridaVeil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Wedding/Gray_SensualBridaVeil</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <drawData>
+        <dataNorth>
+          <layer>40000</layer>
+          <offset>(0, 0, -0.35)</offset>
+        </dataNorth>
+        <dataSouth>
+          <layer>-10</layer>
+          <offset>(0, 0, -0.35)</offset>
+        </dataSouth>
+        <dataEast>
+          <offset>(0, 0, -0.35)</offset>
+        </dataEast>
+        <dataWest>
+          <offset>(0, 0, -0.35)</offset>
+        </dataWest>
+      </drawData>
+    </apparel>
   </ThingDef>
 
 </Defs>

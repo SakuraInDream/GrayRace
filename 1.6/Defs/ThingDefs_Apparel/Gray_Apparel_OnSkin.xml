@@ -253,7 +253,7 @@
   </ThingDef>
 
   <!--尼罗河纱衣-->
-  <ThingDef ParentName="GR_ApparelProfessional">
+  <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_NileGauze</defName>
     <description>.</description>
     <label>Gray Nile Gauze Garment</label>
@@ -277,7 +277,7 @@
   </ThingDef>
 
   <!--奇怪护士-->
-  <ThingDef ParentName="GR_ApparelProfessional">
+  <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_StrangeNurse</defName>
     <description>.</description>
     <label>Gray Strange Nurse Underwear</label>
@@ -301,4 +301,286 @@
     </apparel>
   </ThingDef>
 
+  <!--兔女郎-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_BunnyGirl</defName>
+    <description>.</description>
+    <label>Gray Bunny Girl</label>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Legs</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirl</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--逆兔女郎-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_BunnyGirl_Reverse</defName>
+    <description>.</description>
+    <label>Gray Bunny Girl Reverse</label>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_ReverseBunnyGirl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_ReverseBunnyGirl</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--逆兔女郎变体-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_BunnyGirl_Reverse_Alter</defName>
+    <description>.</description>
+    <label>Gray Bunny Girl Reverse(Alter)</label>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_ReverseBunnyGirlAlter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_ReverseBunnyGirlAlter</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--连体泳衣-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_Swimsuit</defName>
+    <description>.</description>
+    <label>Gray Swimsuit</label>
+    <graphicData>
+      <texPath>Apparel/Swimsuit/Gray_Swimsuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <recipeMaker Inherit="False">
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+    </recipeMaker>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Swimsuit/Gray_Swimsuit</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--分体泳衣-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_Bikini</defName>
+    <description>.</description>
+    <label>Gray Bikini</label>
+    <graphicData>
+      <texPath>Apparel/Swimsuit/Gray_Bikini</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <recipeMaker Inherit="False">
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+    </recipeMaker>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Swimsuit/Gray_Bikini</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--束缚装-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_Bondage</defName>
+    <description>.</description>
+    <label>Gray Bondage</label>
+    <graphicData>
+      <texPath>Apparel/Bondage/Gray_Bondage</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <recipeMaker Inherit="False">
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+    </recipeMaker>
+    <equippedStatOffsets>
+      <SlaveSuppressionOffset>0.3</SlaveSuppressionOffset>
+      <PawnBeauty>2</PawnBeauty>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bondage/Gray_Bondage</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--童贞杀手-->
+  <ThingDef ParentName="GR_ApparelDecorative">
+    <defName>Gray_Apparel_SekebeUnit</defName>
+    <description>.</description>
+    <label>Gray Sekebe Unit</label>
+    <graphicData>
+      <texPath>Apparel/Sweater/Gray_SekebeUnit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <recipeMaker Inherit="False">
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+    </recipeMaker>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Sweater/Gray_SekebeUnit</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>GR_Daily</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  <!--毛衣-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Sweater</defName>
+    <description>.</description>
+    <label>Gray Sweater</label>
+    <graphicData>
+      <texPath>Apparel/Sweater/Gray_Sweater</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Sweater/Gray_Sweater</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>GR_Daily</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
 </Defs>

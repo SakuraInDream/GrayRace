@@ -1,6 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: reshaping things -->
+  <GR_DoBillsNaniteReconfigurator.label>TODO</GR_DoBillsNaniteReconfigurator.label>
+  <!-- EN: reshaping things at -->
+  <GR_DoBillsNaniteReconfigurator.gerund>TODO</GR_DoBillsNaniteReconfigurator.gerund>
+  <!-- EN: reshaping things at -->
+  <GR_DoBillsNaniteReconfigurator.verb>TODO</GR_DoBillsNaniteReconfigurator.verb>
+  
+  <!-- EN: transmuting things -->
+  <GR_DoBillsNaniteTransmuter.label>TODO</GR_DoBillsNaniteTransmuter.label>
+  <!-- EN: transmuting things at -->
+  <GR_DoBillsNaniteTransmuter.gerund>TODO</GR_DoBillsNaniteTransmuter.gerund>
+  <!-- EN: transmuting things at -->
+  <GR_DoBillsNaniteTransmuter.verb>TODO</GR_DoBillsNaniteTransmuter.verb>
+  
   <!-- EN: Filling Incubator. -->
   <GR_FillIncubatorNanites.label>TODO</GR_FillIncubatorNanites.label>
   <!-- EN: filling -->
