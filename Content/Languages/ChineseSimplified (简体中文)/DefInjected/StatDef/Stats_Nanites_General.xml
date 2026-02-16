@@ -10,5 +10,10 @@
   <GRStat_NaniteRegenRate.label>TODO</GRStat_NaniteRegenRate.label>
   <!-- EN: 灰裔每秒自动回复的纳米机械数量。 -->
   <GRStat_NaniteRegenRate.description>TODO</GRStat_NaniteRegenRate.description>
+
+  <!-- EN: 超频上限 -->
+  <GRStat_OverclockMaxLevel.label>TODO</GRStat_OverclockMaxLevel.label>
+  <!-- EN: 该灰裔当前部位可达到的最大超频比例。 -->
+  <GRStat_OverclockMaxLevel.description>TODO</GRStat_OverclockMaxLevel.description>
   
 </LanguageData>

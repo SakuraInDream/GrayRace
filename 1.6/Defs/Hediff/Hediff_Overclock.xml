@@ -3,7 +3,6 @@
   <SD.GrayRace.Hediffs.Hediff_Overclock Name="GrayOverclockBase" Abstract="True">
     <defaultLabelColor>(1,0.8,0.8)</defaultLabelColor>
     <initialSeverity>0.01</initialSeverity>
-    <maxSeverity>1.0</maxSeverity>
     <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
     <countsAsAddedPartOrImplant>True</countsAsAddedPartOrImplant>
   </SD.GrayRace.Hediffs.Hediff_Overclock>

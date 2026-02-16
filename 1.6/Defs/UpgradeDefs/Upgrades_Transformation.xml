@@ -1,30 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- 手部变形升级 -->
-  <SD.GrayRace.Defs.GRUpgradeDef>
+  <!-- 手部 变形 -->
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Royalty">
     <defName>GR_Transform_Hand_PowerClaw</defName>
     <label>动力爪形态</label>
     <description>将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。</description>
+    <!-- upgradeType 表示该 def 是变形还是插件 Transformation 和 Plugin -->
     <upgradeType>Transformation</upgradeType>
+
+    <!-- 是否跟其他的类型的升级共存 -->
     <coexistWithUpgradeTypes>
       <li>Plugin</li>
     </coexistWithUpgradeTypes>
+
+    <!-- 施加的身体部位 -->
     <targetBodyPartGroups>
       <li>Hands</li>
     </targetBodyPartGroups>
+
+    <!-- 排除的身体部位Tags -->
     <excludedBodyPartTags>
       <li>ManipulationLimbDigit</li>
     </excludedBodyPartTags>
-    <hediffToApply>GR_Hediff_PowerClaw</hediffToApply>
-    <researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+
+    <!-- 要施加的 Hediff(要变形的 Hediff) -->
+    <!-- 示例为原版的 动力爪 -->
+    <hediffToApply>PowerClaw</hediffToApply>
+
+    <!-- 科技解锁需求 -->
+    <!-- 示例为 Royalty DLC 的 专业肢体 -->
+    <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+
+    <!-- 显示顺序 -->
     <uiOrder>10</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Hand_ToolArm</defName>
-    <label>工具手臂形态</label>
-    <description>将手部变形为多功能工具手臂，提升工作效率和建筑速度。</description>
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Royalty">
+    <defName>GR_Transform_Hand_DrillArm</defName>
+    <label>挖掘臂形态</label>
+    <description>将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
     <upgradeType>Transformation</upgradeType>
     <coexistWithUpgradeTypes>
       <li>Plugin</li>
@@ -35,46 +50,31 @@
     <excludedBodyPartTags>
       <li>ManipulationLimbDigit</li>
     </excludedBodyPartTags>
-    <hediffToApply>GR_Hediff_ToolArm</hediffToApply>
-    <researchPrerequisite>MultiAnalyzer</researchPrerequisite>
+    <hediffToApply>DrillArm</hediffToApply>
+    <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <!-- 腿部变形升级 -->
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Leg_SpringLeg</defName>
-    <label>弹簧腿形态</label>
-    <description>将腿部变形为弹簧结构，大幅提升移动速度和跳跃能力。</description>
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Royalty">
+    <defName>GR_Transform_Hand_FieldHand</defName>
+    <label>务农手形态</label>
+    <description>将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
     <upgradeType>Transformation</upgradeType>
     <coexistWithUpgradeTypes>
       <li>Plugin</li>
     </coexistWithUpgradeTypes>
     <targetBodyPartGroups>
-      <li>Legs</li>
+      <li>Hands</li>
     </targetBodyPartGroups>
-    <hediffToApply>GR_Hediff_SpringLeg</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
-    <uiOrder>30</uiOrder>
+    <excludedBodyPartTags>
+      <li>ManipulationLimbDigit</li>
+    </excludedBodyPartTags>
+    <hediffToApply>FieldHand</hediffToApply>
+    <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+    <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <!-- 眼部变形升级 -->
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Eye_Telescope</defName>
-    <label>望远镜形态</label>
-    <description>将眼部变形为高倍率望远镜，大幅提升视力和射击精度。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
-    <targetBodyPartTags>
-      <li>SightSource</li>
-    </targetBodyPartTags>
-    <hediffToApply>GR_Hediff_TelescopeEye</hediffToApply>
-    <researchPrerequisite>LongRangeMineralScanner</researchPrerequisite>
-    <uiOrder>40</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="CETeam.CombatExtended">
     <defName>GR_Transform_Eye_NightVision</defName>
     <label>夜视形态</label>
     <description>将眼部变形为夜视系统，在黑暗中也能清晰视物。</description>
@@ -86,11 +86,11 @@
       <li>SightSource</li>
     </targetBodyPartTags>
     <hediffToApply>GR_Hediff_NightVisionEye</hediffToApply>
-    <researchPrerequisite>ReconArmor</researchPrerequisite>
+    <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
     <uiOrder>50</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <!-- 原版可制作仿生体变形（不含远古仿生体） -->
+  <!-- 变形仿生体 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicArm</defName>
     <label>仿生臂形态</label>

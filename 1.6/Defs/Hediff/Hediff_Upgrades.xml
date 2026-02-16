@@ -1,108 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- 变形类型Hediff示例 -->
+  <!-- 变形Hediff -->
 
-  <!-- 动力爪 -->
-  <HediffDef>
-    <defName>GR_Hediff_PowerClaw</defName>
-    <label>动力爪</label>
-    <hediffClass>Hediff_AddedPart</hediffClass>
-    <description>手部变形为高硬度动力爪形态。</description>
-    <defaultLabelColor>(0.3, 0.8, 0.3)</defaultLabelColor>
-    <isBad>false</isBad>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.2</partEfficiency>
-      <betterThanNatural>true</betterThanNatural>
-    </addedPartProps>
-    <comps>
-      <li Class="HediffCompProperties_VerbGiver">
-        <tools>
-          <li>
-            <label>power claw</label>
-            <capacities>
-              <li>Cut</li>
-            </capacities>
-            <power>22</power>
-            <cooldownTime>1.2</cooldownTime>
-          </li>
-        </tools>
-      </li>
-    </comps>
-  </HediffDef>
-
-  <!-- 工具手臂 -->
-  <HediffDef>
-    <defName>GR_Hediff_ToolArm</defName>
-    <label>工具手臂</label>
-    <hediffClass>Hediff_AddedPart</hediffClass>
-    <description>手部变形为多功能工具手臂。</description>
-    <defaultLabelColor>(0.3, 0.6, 0.8)</defaultLabelColor>
-    <isBad>false</isBad>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.3</partEfficiency>
-      <betterThanNatural>true</betterThanNatural>
-    </addedPartProps>
-    <stages>
-      <li>
-        <statOffsets>
-          <ConstructionSpeed>0.3</ConstructionSpeed>
-          <MiningSpeed>0.25</MiningSpeed>
-          <CookSpeed>0.2</CookSpeed>
-        </statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
-
-  <!-- 弹簧腿 -->
-  <HediffDef>
-    <defName>GR_Hediff_SpringLeg</defName>
-    <label>弹簧腿</label>
-    <hediffClass>Hediff_AddedPart</hediffClass>
-    <description>腿部变形为弹簧结构。</description>
-    <defaultLabelColor>(0.8, 0.3, 0.3)</defaultLabelColor>
-    <isBad>false</isBad>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.4</partEfficiency>
-      <betterThanNatural>true</betterThanNatural>
-    </addedPartProps>
-    <stages>
-      <li>
-        <statOffsets>
-          <MoveSpeed>1.5</MoveSpeed>
-        </statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
-
-  <!-- 望远镜眼 -->
-  <HediffDef>
-    <defName>GR_Hediff_TelescopeEye</defName>
-    <label>望远镜眼</label>
-    <hediffClass>Hediff_AddedPart</hediffClass>
-    <description>眼部变形为高倍率望远镜。</description>
-    <defaultLabelColor>(0.8, 0.8, 0.3)</defaultLabelColor>
-    <isBad>false</isBad>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.2</partEfficiency>
-      <betterThanNatural>true</betterThanNatural>
-    </addedPartProps>
-    <stages>
-      <li>
-        <statOffsets>
-          <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
-          <MeleeHitChance>0.2</MeleeHitChance>
-        </statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
-
-  <!-- 夜视眼 -->
-  <HediffDef>
+  <!-- 夜视 CE 用的 -->
+  <HediffDef MayRequire="CETeam.CombatExtended">
     <defName>GR_Hediff_NightVisionEye</defName>
     <label>夜视眼</label>
     <hediffClass>Hediff_AddedPart</hediffClass>
@@ -117,13 +19,14 @@
     <stages>
       <li>
         <statOffsets>
-          <NightVisionEfficiency MayRequire="CETeam.CombatExtended">2.0</NightVisionEfficiency>
+          <!-- <NightVisionEfficiency MayRequire="CETeam.CombatExtended">2.0</NightVisionEfficiency> -->
+          <NightVisionEfficiency>2.0</NightVisionEfficiency>
         </statOffsets>
       </li>
     </stages>
   </HediffDef>
 
-  <!-- 插件类型Hediff示例 -->
+  <!-- 插件 Hediff 示例 -->
 
   <!-- 战斗芯片 -->
   <HediffDef>

@@ -3,6 +3,7 @@ using Verse;
 
 namespace SD.GrayRace.StatWorkers;
 
+// 备用
 public class StatPart_HediffMultiplier: StatPart
 {
     public HediffDef hediff;

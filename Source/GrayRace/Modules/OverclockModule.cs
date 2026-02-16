@@ -73,7 +73,12 @@ public class OverclockModule : GrayModuleBase
             Pawn.health.AddHediff(hediff);
         }
 
+        float oldSeverity = hediff.Severity;
         hediff.Severity = level;
+        if (Mathf.Abs(oldSeverity - level) > 0.0001f)
+        {
+            Pawn.health.Notify_HediffChanged(hediff);
+        }
     }
 
     private void RemoveOverclockHediff(BodyPartRecord part)

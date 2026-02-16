@@ -9,7 +9,7 @@ namespace SD.GrayRace.StatWorkers
         {
             if (req.Thing is Pawn pawn && pawn.IsGrayRace())
             {
-                return stat.defaultBaseValue;
+                return base.GetValueUnfinalized(req, applyPostProcess);
             }
 
             return 0f;
@@ -19,8 +19,7 @@ namespace SD.GrayRace.StatWorkers
         {
             if (req.Thing is Pawn pawn && pawn.IsGrayRace())
             {
-                // 基础值: x
-                return "StatsReport_BaseValue".Translate() + ": " + stat.defaultBaseValue.ToStringByStyle(stat.toStringStyle);
+                return base.GetExplanationUnfinalized(req, numberSense);
             }
             return string.Empty;
         }
@@ -29,9 +28,7 @@ namespace SD.GrayRace.StatWorkers
         {
             if (!base.ShouldShowFor(req)) return false;
 
-            Pawn pawn = req.Thing as Pawn;
-
-            return pawn.IsGrayRace();
+            return req.Thing is Pawn pawn && pawn.IsGrayRace();
         }
 
 

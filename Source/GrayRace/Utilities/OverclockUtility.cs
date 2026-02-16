@@ -78,10 +78,10 @@ namespace SD.GrayRace.Utilities
             {
                 if (ovhediffdef.capacityToBoost != null)
                 {
-                    return ovhediffdef.capacityRange.LerpThroughRange(level);
+                    return ovhediffdef.EvaluateCapacityAtLevel(level);
                 }
 
-                return ovhediffdef.efficiencyRange.LerpThroughRange(level);
+                return ovhediffdef.EvaluateEfficiencyAtLevel(level);
             }
 
             return 0f;

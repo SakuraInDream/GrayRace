@@ -14,7 +14,7 @@ namespace SD.GrayRace.Hediffs
             get
             {
                 _cachedStage ??= new HediffStage();
-                _cachedStage.partEfficiencyOffset = Def.efficiencyRange.LerpThroughRange(Severity);
+                _cachedStage.partEfficiencyOffset = Def.EvaluateEfficiencyAtLevel(Severity);
                 if (Def.capacityToBoost == null)
                 {
                     return _cachedStage;
@@ -26,7 +26,7 @@ namespace SD.GrayRace.Hediffs
                     PawnCapacityModifier modifier = new() { capacity = Def.capacityToBoost};
                     _cachedStage.capMods.Add(modifier);
                 }
-                _cachedStage.capMods[0].offset = Def.capacityRange.LerpThroughRange(Severity);
+                _cachedStage.capMods[0].offset = Def.EvaluateCapacityAtLevel(Severity);
 
                 return _cachedStage;
             }
