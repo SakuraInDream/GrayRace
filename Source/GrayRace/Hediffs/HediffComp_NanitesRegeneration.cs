@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using RimWorld;
 using SD.GrayRace.Comps;
+using SD.GrayRace.Modules;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -9,7 +10,8 @@ namespace SD.GrayRace.Hediffs;
 
 public class HediffComp_NanitesRegeneration : HediffComp
 {
-    private CompResource_Nanites _resNanites;
+    // private CompResource_Nanites _resNanites;
+    private NaniteModule _resNanites;
 
     public bool isRegenerationActive = false;
 
@@ -23,7 +25,7 @@ public class HediffComp_NanitesRegeneration : HediffComp
     public override void CompPostMake()
     {
         base.CompPostMake();
-        _resNanites = Pawn.TryGetComp<CompResource_Nanites>();
+        _resNanites = Pawn.GetManager().naniteModule; // Pawn.TryGetComp<CompResource_Nanites>();
     }
 
     public override void CompExposeData()
@@ -66,7 +68,7 @@ public class HediffComp_NanitesRegeneration : HediffComp
     {
         if (!Pawn.IsGrayRace()) return;
 
-        _resNanites ??= Pawn.TryGetComp<CompResource_Nanites>();
+        _resNanites ??= Pawn.GetManager().naniteModule; // Pawn.TryGetComp<CompResource_Nanites>();
         if (_resNanites is null) return;
 
         if (isRegenerationActive && _resNanites.CurrentNanites < Props.naniteCostPerSeconds)
@@ -168,4 +170,3 @@ public class HediffComp_NanitesRegeneration : HediffComp
         return false;
     }
 }
-

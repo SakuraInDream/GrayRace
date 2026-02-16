@@ -11,7 +11,7 @@ public class StatPart_NaniteDrain: StatPart
 {
     public override void TransformValue(StatRequest req, ref float val)
     {
-        if (req.Thing is Pawn pawn && pawn.health?.hediffSet != null)
+        if (req.HasThing && req.Thing is Pawn pawn && pawn.health?.hediffSet != null)
         {
             var hediffs = pawn.health.hediffSet.hediffs;
             for (int i = 0; i < hediffs.Count; i++)
@@ -28,7 +28,7 @@ public class StatPart_NaniteDrain: StatPart
 
     public override string ExplanationPart(StatRequest req)
     {
-        if (req.Thing is Pawn pawn && pawn.health?.hediffSet?.hediffs.Count > 0)
+        if (req.HasThing && req.Thing is Pawn pawn && pawn.health?.hediffSet?.hediffs.Count > 0)
         {
             List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
             foreach (Hediff hediff in hediffs)

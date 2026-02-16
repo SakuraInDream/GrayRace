@@ -16,7 +16,8 @@
     </statBases>
     <inspectorTabs>
       <!-- 超频面板 -->
-      <li>SD.GrayRace.ITabs.ITab_GrayRaceOverlock</li>
+      <!-- <li>SD.GrayRace.ITabs.ITab_GrayRaceOverlock</li> -->
+      <li>SD.GrayRace.ITabs.ITab_GrayRaceUpgrade</li>
     </inspectorTabs>
   </ThingDef>
 
@@ -467,24 +468,48 @@
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
         <showMessageIfOwned>true</showMessageIfOwned>
       </li>
-      <!-- 纳米机械Comp -->
-      <!-- <li Class="SD.GrayRace.CompProperties_Nanites"> -->
-      <li Class="SD.GrayRace.Comps.CompProperties_Nanites">
-        <!-- 弃用，改用 StatDef GRStat_NaniteMax -->
-        <!-- <maxResource>5</maxResource> -->
-        <!-- 弃用，改用 StatDef GRStat_NaniteRegenRate -->
-        <!-- <regenPerSecond>0.001</regenPerSecond> -->
-        <!-- 资源名称，可本地化 -> <DefNAME.comps.CompResource_Nanites.resourceLabel> -->
-        <resourceLabel>备用灰潮源质</resourceLabel>
-        <!-- gizmo 的下方刻度显示 -->
-        <resourceGizmoThresholds>
-          <li>0.25</li>
-          <li>0.5</li>
-          <li>0.75</li>
-        </resourceGizmoThresholds>
+      <!-- Comps 大一统 -->
+      <li Class="SD.GrayRace.Comps.CompPropertiesGrayManager">
+        <!-- 纳米资源相关设置 -->
+        <nanitesSetting>
+          <resourceLabel>备用灰潮源质</resourceLabel>
+          <resourceGizmoThresholds>
+            <li>0.25</li>
+            <li>0.5</li>
+            <li>0.75</li>
+          </resourceGizmoThresholds>
+        </nanitesSetting>
+        <!-- 超频系统相关设置 -->
+        <overclockSetting>
+          <overclockMaps>
+            <!-- 超频部位-效果 Hediff 映射关系 -->
+            <li>
+              <tag>ManipulationLimbCore</tag>
+              <hediff>GR_Overclock_Arm</hediff>
+            </li>
+            <li>
+              <tag>MovingLimbCore</tag>
+              <hediff>GR_Overclock_Leg</hediff>
+            </li>
+            <li>
+              <tag>SightSource</tag>
+              <hediff>GR_Overclock_Eye</hediff>
+            </li>
+            <li>
+              <tag>ConsciousnessSource</tag>
+              <hediff>GR_Overclock_Brain</hediff>
+            </li>
+            <li>
+              <tag>BloodPumpingSource</tag>
+              <hediff>GR_Overclock_Heart</hediff>
+            </li>
+            <li>
+              <tag>HearingSource</tag>
+              <hediff>GR_Overclock_Ear</hediff>
+            </li>
+          </overclockMaps>
+        </overclockSetting>
       </li>
-      <!-- 超频系统 -->
-      <li Class="SD.GrayRace.Comps.CompProperties_Overclock" />
     </comps>
     <damageMultipliers>
       <li>

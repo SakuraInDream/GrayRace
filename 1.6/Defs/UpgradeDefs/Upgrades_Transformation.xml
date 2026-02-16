@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 手部变形升级 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Hand_PowerClaw</defName>
+    <label>动力爪形态</label>
+    <description>将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。</description>
+    <upgradeType>Transformation</upgradeType>
+    <targetBodyPartGroups>
+      <li>Hands</li>
+    </targetBodyPartGroups>
+    <excludedBodyPartTags>
+      <li>ManipulationLimbDigit</li>
+    </excludedBodyPartTags>
+    <hediffToApply>GR_Hediff_PowerClaw</hediffToApply>
+    <researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+    <uiOrder>10</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Hand_ToolArm</defName>
+    <label>工具手臂形态</label>
+    <description>将手部变形为多功能工具手臂，提升工作效率和建筑速度。</description>
+    <upgradeType>Transformation</upgradeType>
+    <targetBodyPartGroups>
+      <li>Hands</li>
+    </targetBodyPartGroups>
+    <excludedBodyPartTags>
+      <li>ManipulationLimbDigit</li>
+    </excludedBodyPartTags>
+    <hediffToApply>GR_Hediff_ToolArm</hediffToApply>
+    <researchPrerequisite>MultiAnalyzer</researchPrerequisite>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 腿部变形升级 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Leg_SpringLeg</defName>
+    <label>弹簧腿形态</label>
+    <description>将腿部变形为弹簧结构，大幅提升移动速度和跳跃能力。</description>
+    <upgradeType>Transformation</upgradeType>
+    <targetBodyPartGroups>
+      <li>Legs</li>
+    </targetBodyPartGroups>
+    <hediffToApply>GR_Hediff_SpringLeg</hediffToApply>
+    <researchPrerequisite>Bionics</researchPrerequisite>
+    <uiOrder>30</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 眼部变形升级 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Eye_Telescope</defName>
+    <label>望远镜形态</label>
+    <description>将眼部变形为高倍率望远镜，大幅提升视力和射击精度。</description>
+    <upgradeType>Transformation</upgradeType>
+    <targetBodyPartTags>
+      <li>SightSource</li>
+    </targetBodyPartTags>
+    <hediffToApply>GR_Hediff_TelescopeEye</hediffToApply>
+    <researchPrerequisite>LongRangeMineralScanner</researchPrerequisite>
+    <uiOrder>40</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Eye_NightVision</defName>
+    <label>夜视形态</label>
+    <description>将眼部变形为夜视系统，在黑暗中也能清晰视物。</description>
+    <upgradeType>Transformation</upgradeType>
+    <targetBodyPartTags>
+      <li>SightSource</li>
+    </targetBodyPartTags>
+    <hediffToApply>GR_Hediff_NightVisionEye</hediffToApply>
+    <researchPrerequisite>ReconArmor</researchPrerequisite>
+    <uiOrder>50</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+</Defs>

@@ -2,15 +2,16 @@ using System.Collections.Generic;
 using System.Text;
 using RimWorld;
 using SD.GrayRace.Comps;
+using SD.GrayRace.Modules;
 using UnityEngine;
 using Verse;
 
 namespace SD.GrayRace.UISet.Gizmos
 {
     [StaticConstructorOnStartup]
-    public class Gizmo_NaniteResources : Gizmo_Slider
+    public class Gizmo_NaniteModule : Gizmo_Slider
     {
-        protected CompResource_Nanites resource;
+        protected NaniteModule resource;
         protected override float Width => 300f;
         protected override float Target { get; set; }
 
@@ -21,7 +22,7 @@ namespace SD.GrayRace.UISet.Gizmos
         private static readonly Texture2D s_hover = ContentFinder<Texture2D>.Get("UI/Gizmo/Hover");
         private static readonly Texture2D s_normal = ContentFinder<Texture2D>.Get("UI/Gizmo/Normal");
 
-        public Gizmo_NaniteResources(CompResource_Nanites resource)
+        public Gizmo_NaniteModule(NaniteModule resource)
         {
             this.resource = resource;
         }
@@ -39,7 +40,7 @@ namespace SD.GrayRace.UISet.Gizmos
         {
             get
             {
-                string label = resource.Props.resourceLabel;
+                string label = resource.Settings.resourceLabel;
                 StringBuilder text = new StringBuilder(label.CapitalizeFirst());
 
                 if (Find.Selector.SelectedPawns.Count != 1)
@@ -55,7 +56,7 @@ namespace SD.GrayRace.UISet.Gizmos
         {
             StringBuilder sb = new StringBuilder();
 
-            string label = resource.Props.resourceLabel;
+            string label = resource.Settings.resourceLabel;
             sb.Append($"{label.Colorize(ColoredText.TipSectionTitleColor)}: {resource.CurrentNanites:F1} / {resource.Max:F0}\n");
 
             float regenRate = resource.Pawn.GetStatValue(GrayRaceDefOf.GRStat_NaniteRegenRate);
@@ -125,34 +126,34 @@ namespace SD.GrayRace.UISet.Gizmos
                 alphaMultiplier = 1f - (timePulse - 0.25f) / 0.6f;
             }
 
-            if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability commandAbility && resource.Max > 0f)
-            {
-                foreach (var effectComp in commandAbility.Ability.EffectComps)
-                {
-                    if (effectComp is not CompAbilityEffect_NanitesCost compAbilityEffectNanitesCost)
-                    {
-                        continue;
-                    }
-
-                    var props = compAbilityEffectNanitesCost.Props;
-
-                    if (props.nanitesCost < float.Epsilon) continue;
-
-                    var rect = barRect.ContractedBy(3f);
-                    float barWidth = rect.width;
-                    float currentPercent = resource.CurrentNanites / resource.Max;
-
-                    rect.xMax = rect.xMin + barWidth * currentPercent;
-
-                    float costPercent = Mathf.Min(props.nanitesCost / resource.Max, 1f);
-                    rect.xMin = Mathf.Max(rect.xMin, rect.xMax - barWidth * costPercent);
-
-                    GUI.color = new Color(1f, 1f, 1f, alphaMultiplier * 0.7f);
-                    GenUI.DrawTextureWithMaterial(rect, s_naniteCostTex, null);
-                    GUI.color = Color.white;
-                    return gizmoResult;
-                }
-            }
+            // if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability commandAbility && resource.Max > 0f)
+            // {
+            //     foreach (var effectComp in commandAbility.Ability.EffectComps)
+            //     {
+            //         if (effectComp is not CompAbilityEffect_NanitesCost compAbilityEffectNanitesCost)
+            //         {
+            //             continue;
+            //         }
+            //
+            //         var props = compAbilityEffectNanitesCost.Props;
+            //
+            //         if (props.nanitesCost < float.Epsilon) continue;
+            //
+            //         var rect = barRect.ContractedBy(3f);
+            //         float barWidth = rect.width;
+            //         float currentPercent = resource.CurrentNanites / resource.Max;
+            //
+            //         rect.xMax = rect.xMin + barWidth * currentPercent;
+            //
+            //         float costPercent = Mathf.Min(props.nanitesCost / resource.Max, 1f);
+            //         rect.xMin = Mathf.Max(rect.xMin, rect.xMax - barWidth * costPercent);
+            //
+            //         GUI.color = new Color(1f, 1f, 1f, alphaMultiplier * 0.7f);
+            //         GenUI.DrawTextureWithMaterial(rect, s_naniteCostTex, null);
+            //         GUI.color = Color.white;
+            //         return gizmoResult;
+            //     }
+            // }
 
             if (Mouse.IsOver(barRect))
             {
@@ -174,9 +175,9 @@ namespace SD.GrayRace.UISet.Gizmos
 
         protected override IEnumerable<float> GetBarThresholds()
         {
-            if (resource.Props.resourceGizmoThresholds != null)
+            if (resource.Settings.resourceGizmoThresholds != null)
             {
-                foreach (float thresholds in resource.Props.resourceGizmoThresholds)
+                foreach (float thresholds in resource.Settings.resourceGizmoThresholds)
                 {
                     yield return thresholds;
                 }

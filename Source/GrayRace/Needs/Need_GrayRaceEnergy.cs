@@ -23,7 +23,7 @@ namespace SD.GrayRace.Needs
             if (!IsFrozen)
             {
                 float fallPerTick = def.fallPerDay / 60000f * 150f;
-                var overclockComp = pawn.GetComp<CompOverclock>();
+                var overclockComp = pawn.GetManager().overclockModule; // pawn.GetComp<CompOverclock>();
                 if (overclockComp != null)
                 {
                     // 假设 CachedEnergyConsumptionFactor 是 0.5 (代表增加 50% 消耗)
@@ -40,7 +40,7 @@ namespace SD.GrayRace.Needs
             sb.AppendInNewLine($"{CurLevel:F2}/{MaxLevel:F2}");
             float fallPerDay = def.fallPerDay;
             float extraFactor = 0f;
-            var overclockComp = pawn.GetComp<CompOverclock>();
+            var overclockComp = pawn.GetManager().overclockModule; // pawn.GetComp<CompOverclock>();
             if (overclockComp != null)
             {
                 extraFactor = overclockComp.CachedEnergyConsumptionFactor;

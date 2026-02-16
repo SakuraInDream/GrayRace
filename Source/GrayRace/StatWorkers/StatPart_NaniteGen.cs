@@ -14,7 +14,7 @@ public class StatPart_NaniteGen: StatPart_Curve
 
     protected override float CurveXGetter(StatRequest req)
     {
-        if (req.Thing is Pawn pawn && pawn.needs.TryGetNeed<Need_GrayRaceEnergy>() != null)
+        if (req.Thing is Pawn pawn)
         {
             return pawn.needs.TryGetNeed<Need_GrayRaceEnergy>().CurLevelPercentage;
         }
@@ -26,11 +26,7 @@ public class StatPart_NaniteGen: StatPart_Curve
     {
         if (req.Thing is Pawn pawn)
         {
-            var need = pawn.needs.TryGetNeed<Need_GrayRaceEnergy>();
-            if (need != null)
-            {
-                return need.LabelCap;
-            }
+            return pawn.needs.TryGetNeed<Need_GrayRaceEnergy>().LabelCap;
         }
         return string.Empty;
     }

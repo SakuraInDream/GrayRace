@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 大脑插件 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_CombatChip</defName>
+    <label>战斗芯片插件</label>
+    <description>植入大脑的高级战斗芯片，提升战斗效率和反应速度。</description>
+    <upgradeType>Plugin</upgradeType>
+    <targetBodyParts>
+      <li>Brain</li>
+    </targetBodyParts>
+    <hediffToApply>GR_Hediff_CombatChip</hediffToApply>
+    <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+    <requiredMaterials>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <Plasteel>20</Plasteel>
+    </requiredMaterials>
+    <workAmount>2000</workAmount>
+    <requiredSkill>Crafting</requiredSkill>
+    <minSkillLevel>8</minSkillLevel>
+    <uiOrder>10</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_AnalysisChip</defName>
+    <label>分析芯片插件</label>
+    <description>植入大脑的超级分析芯片，提升研究速度和学习能力。</description>
+    <upgradeType>Plugin</upgradeType>
+    <targetBodyParts>
+      <li>Brain</li>
+    </targetBodyParts>
+    <hediffToApply>GR_Hediff_AnalysisChip</hediffToApply>
+    <researchPrerequisite>MultiAnalyzer</researchPrerequisite>
+    <requiredMaterials>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <Gold>10</Gold>
+    </requiredMaterials>
+    <workAmount>2500</workAmount>
+    <requiredSkill>Intellectual</requiredSkill>
+    <minSkillLevel>10</minSkillLevel>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 心脏插件 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Heart_EfficiencyBooster</defName>
+    <label>效率增强器插件</label>
+    <description>安装在灰潮核心的效率增强器，提升纳米机械恢复速度。</description>
+    <upgradeType>Plugin</upgradeType>
+    <targetBodyPartTags>
+      <li>BloodPumpingSource</li>
+    </targetBodyPartTags>
+    <hediffToApply>GR_Hediff_EfficiencyBooster</hediffToApply>
+    <researchPrerequisite>MedicineProduction</researchPrerequisite>
+    <requiredMaterials>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>30</Steel>
+      <MedicineHerbal>5</MedicineHerbal>
+    </requiredMaterials>
+    <workAmount>1500</workAmount>
+    <requiredSkill>Crafting</requiredSkill>
+    <minSkillLevel>6</minSkillLevel>
+    <uiOrder>30</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 手部插件 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Hand_PrecisionChip</defName>
+    <label>精密芯片插件</label>
+    <description>植入手部的精密操作芯片，提升制作精度和质量。</description>
+    <upgradeType>Plugin</upgradeType>
+    <targetBodyPartGroups>
+      <li>Hands</li>
+    </targetBodyPartGroups>
+    <excludedBodyPartTags>
+      <li>ManipulationLimbDigit</li>
+    </excludedBodyPartTags>
+    <hediffToApply>GR_Hediff_PrecisionChip</hediffToApply>
+    <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    <requiredMaterials>
+      <ComponentIndustrial>2</ComponentIndustrial>
+      <Steel>15</Steel>
+    </requiredMaterials>
+    <workAmount>1200</workAmount>
+    <requiredSkill>Crafting</requiredSkill>
+    <minSkillLevel>5</minSkillLevel>
+    <uiOrder>40</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 眼部插件 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Eye_TargetingSystem</defName>
+    <label>瞄准系统插件</label>
+    <description>植入眼部的先进瞄准系统，大幅提升射击精度。</description>
+    <upgradeType>Plugin</upgradeType>
+    <targetBodyPartTags>
+      <li>SightSource</li>
+    </targetBodyPartTags>
+    <hediffToApply>GR_Hediff_TargetingSystem</hediffToApply>
+    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    <requiredMaterials>
+      <ComponentIndustrial>3</ComponentIndustrial>
+      <Steel>10</Steel>
+    </requiredMaterials>
+    <workAmount>1800</workAmount>
+    <requiredSkill>Shooting</requiredSkill>
+    <minSkillLevel>7</minSkillLevel>
+    <uiOrder>50</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+</Defs>

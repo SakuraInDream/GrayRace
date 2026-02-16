@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 变形类型Hediff示例 -->
+
+  <!-- 动力爪 -->
+  <HediffDef>
+    <defName>GR_Hediff_PowerClaw</defName>
+    <label>动力爪</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <description>手部变形为高硬度动力爪形态。</description>
+    <defaultLabelColor>(0.3, 0.8, 0.3)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.2</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>power claw</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>22</power>
+            <cooldownTime>1.2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- 工具手臂 -->
+  <HediffDef>
+    <defName>GR_Hediff_ToolArm</defName>
+    <label>工具手臂</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <description>手部变形为多功能工具手臂。</description>
+    <defaultLabelColor>(0.3, 0.6, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.3</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ConstructionSpeed>0.3</ConstructionSpeed>
+          <MiningSpeed>0.25</MiningSpeed>
+          <CookSpeed>0.2</CookSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 弹簧腿 -->
+  <HediffDef>
+    <defName>GR_Hediff_SpringLeg</defName>
+    <label>弹簧腿</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <description>腿部变形为弹簧结构。</description>
+    <defaultLabelColor>(0.8, 0.3, 0.3)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.4</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>1.5</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 望远镜眼 -->
+  <HediffDef>
+    <defName>GR_Hediff_TelescopeEye</defName>
+    <label>望远镜眼</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <description>眼部变形为高倍率望远镜。</description>
+    <defaultLabelColor>(0.8, 0.8, 0.3)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.2</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.4</ShootingAccuracyPawn>
+          <MeleeHitChance>0.2</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 夜视眼 -->
+  <HediffDef>
+    <defName>GR_Hediff_NightVisionEye</defName>
+    <label>夜视眼</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <description>眼部变形为夜视系统。</description>
+    <defaultLabelColor>(0.3, 0.8, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.1</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <NightVisionEfficiency MayRequire="CETeam.CombatExtended">2.0</NightVisionEfficiency>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 插件类型Hediff示例 -->
+
+  <!-- 战斗芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_CombatChip</defName>
+    <label>战斗芯片</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>植入大脑的战斗芯片，提升战斗能力。</description>
+    <defaultLabelColor>(0.8, 0.3, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.05</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
+          <MeleeHitChance>0.2</MeleeHitChance>
+          <MeleeDodgeChance>0.15</MeleeDodgeChance>
+          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 分析芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_AnalysisChip</defName>
+    <label>分析芯片</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>植入大脑的分析芯片，提升学习能力。</description>
+    <defaultLabelColor>(0.3, 0.3, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.03</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ResearchSpeed>0.5</ResearchSpeed>
+          <GlobalLearningFactor>0.3</GlobalLearningFactor>
+          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 效率增强器 -->
+  <HediffDef>
+    <defName>GR_Hediff_EfficiencyBooster</defName>
+    <label>效率增强器</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>安装在灰潮核心的增强器。增加备用灰潮机械回复速度</description>
+    <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.04</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteRegenRate>1</GRStat_NaniteRegenRate>
+          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 精密芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_PrecisionChip</defName>
+    <label>精密芯片</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>植入手部的精密操作芯片。</description>
+    <defaultLabelColor>(0.6, 0.3, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.06</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
+          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 瞄准系统 -->
+  <HediffDef>
+    <defName>GR_Hediff_TargetingSystem</defName>
+    <label>瞄准系统</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>植入眼部的先进瞄准系统。</description>
+    <defaultLabelColor>(0.8, 0.6, 0.2)</defaultLabelColor>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.05</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.35</ShootingAccuracyPawn>
+          <AimingDelayFactor>-0.2</AimingDelayFactor>
+          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>
