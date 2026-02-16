@@ -36,7 +36,9 @@ public class UpgradeModule : GrayModuleBase
         if (part == null) return new List<GRUpgradeDef>();
 
         return DefDatabase<GRUpgradeDef>.AllDefsListForReading
-            .Where(def => IsValidUpgradeDef(def) && UpgradeTargetMatcher.Matches(def, part))
+            .Where(def => IsValidUpgradeDef(def)
+                          && UpgradeTargetMatcher.Matches(def, part)
+                          && (IsUpgradeVisible(def) || IsUpgradeActive(def, part)))
             .OrderBy(def => def.uiOrder)
             .ThenBy(def => def.upgradeType)
             .ThenBy(def => def.label)
@@ -48,7 +50,9 @@ public class UpgradeModule : GrayModuleBase
         if (part == null) return false;
 
         return DefDatabase<GRUpgradeDef>.AllDefsListForReading
-            .Any(def => IsValidUpgradeDef(def) && UpgradeTargetMatcher.Matches(def, part));
+            .Any(def => IsValidUpgradeDef(def)
+                        && UpgradeTargetMatcher.Matches(def, part)
+                        && IsUpgradeVisible(def));
     }
 
     public bool HasAnyActiveUpgrade(BodyPartRecord part)
@@ -142,16 +146,7 @@ public class UpgradeModule : GrayModuleBase
 
         if (IsUpgradeActive(def, part))
         {
-            Hediff existing = pawn.health.hediffSet.hediffs.FirstOrDefault(h => h.def == def.hediffToApply && h.Part == part);
-            if (existing != null)
-            {
-                pawn.health.RemoveHediff(existing);
-            }
-
-            if (def.upgradeType == UpgradeType.Plugin)
-            {
-                RefundPluginMaterialsToGround(def);
-            }
+            RemoveUpgradeInstance(def, part, refundPluginMaterials: def.upgradeType == UpgradeType.Plugin);
 
             feedback = $"已停用: {def.LabelCap}";
             messageType = MessageTypeDefOf.NeutralEvent;
@@ -179,7 +174,7 @@ public class UpgradeModule : GrayModuleBase
             return true;
         }
 
-        RemoveExistingUpgrades(part);
+        RemoveConflictingUpgrades(part, def, refundPluginMaterials: true);
         pawn.health.AddHediff(def.hediffToApply, part);
 
         feedback = $"已启用: {def.LabelCap}";
@@ -303,7 +298,7 @@ public class UpgradeModule : GrayModuleBase
 
         if (!TryConsumeMaterialPlan(materialPlan, out reason)) return false;
 
-        RemoveExistingUpgrades(part);
+        RemoveConflictingUpgrades(part, def, refundPluginMaterials: true);
         pawn.health.AddHediff(def.hediffToApply, part);
         ClearPendingPluginInstall();
         return true;
@@ -380,20 +375,85 @@ public class UpgradeModule : GrayModuleBase
         return true;
     }
 
-    private void RemoveExistingUpgrades(BodyPartRecord part)
+    private void RemoveConflictingUpgrades(BodyPartRecord part, GRUpgradeDef incomingDef, bool refundPluginMaterials)
     {
         if (pawn?.health?.hediffSet == null || part == null) return;
 
-        foreach (GRUpgradeDef upgrade in GetAvailableUpgradesForPart(part))
+        foreach (GRUpgradeDef upgrade in DefDatabase<GRUpgradeDef>.AllDefsListForReading)
         {
-            if (upgrade.hediffToApply == null) continue;
+            if (!IsValidUpgradeDef(upgrade)) continue;
+            if (!IsUpgradeActive(upgrade, part)) continue;
+            if (incomingDef != null && upgrade == incomingDef) continue;
+            if (incomingDef != null && UpgradesCanCoexist(upgrade, incomingDef)) continue;
 
-            Hediff existing = pawn.health.hediffSet.hediffs.FirstOrDefault(h => h.def == upgrade.hediffToApply && h.Part == part);
-            if (existing != null)
-            {
-                pawn.health.RemoveHediff(existing);
-            }
+            RemoveUpgradeInstance(upgrade, part, refundPluginMaterials);
         }
+    }
+
+    private void RemoveUpgradeInstance(GRUpgradeDef upgrade, BodyPartRecord part, bool refundPluginMaterials)
+    {
+        if (pawn?.health?.hediffSet == null || part == null || upgrade?.hediffToApply == null) return;
+
+        Hediff existing = pawn.health.hediffSet.hediffs.FirstOrDefault(h => h.def == upgrade.hediffToApply && h.Part == part);
+        if (existing == null) return;
+
+        if (existing is Hediff_AddedPart)
+        {
+            RemoveAddedPartWithoutResettingOtherUpgrades(existing);
+        }
+        else
+        {
+            pawn.health.RemoveHediff(existing);
+        }
+
+        if (refundPluginMaterials && upgrade.upgradeType == UpgradeType.Plugin)
+        {
+            RefundPluginMaterialsToGround(upgrade);
+        }
+    }
+
+    private void RemoveAddedPartWithoutResettingOtherUpgrades(Hediff addedPartHediff)
+    {
+        if (pawn?.health?.hediffSet == null || addedPartHediff?.Part == null) return;
+
+        BodyPartRecord rootPart = addedPartHediff.Part;
+        pawn.health.RemoveHediff(addedPartHediff);
+
+        List<Hediff> childMissingParts = pawn.health.hediffSet.hediffs
+            .OfType<Hediff_MissingPart>()
+            .Where(h => h.Part != null && IsPartInSubtree(h.Part, rootPart))
+            .Cast<Hediff>()
+            .ToList();
+
+        foreach (Hediff missing in childMissingParts)
+        {
+            pawn.health.RemoveHediff(missing);
+        }
+    }
+
+    private static bool IsPartInSubtree(BodyPartRecord part, BodyPartRecord root)
+    {
+        BodyPartRecord current = part;
+        while (current != null)
+        {
+            if (current == root) return true;
+            current = current.parent;
+        }
+
+        return false;
+    }
+
+    private static bool UpgradesCanCoexist(GRUpgradeDef left, GRUpgradeDef right)
+    {
+        if (left == null || right == null || left == right) return true;
+        return SupportsCoexistenceWith(left, right.upgradeType)
+               && SupportsCoexistenceWith(right, left.upgradeType);
+    }
+
+    private static bool SupportsCoexistenceWith(GRUpgradeDef def, UpgradeType otherType)
+    {
+        return def?.coexistWithUpgradeTypes != null
+               && def.coexistWithUpgradeTypes.Contains(otherType);
     }
 
     private bool CheckSkillRequirement(GRUpgradeDef def, out string reason)
@@ -529,5 +589,10 @@ public class UpgradeModule : GrayModuleBase
         return def != null
                && def.hediffToApply != null
                && UpgradeTargetMatcher.HasAnyTargetRule(def);
+    }
+
+    private static bool IsUpgradeVisible(GRUpgradeDef def)
+    {
+        return def?.researchPrerequisite == null || def.researchPrerequisite.IsFinished;
     }
 }

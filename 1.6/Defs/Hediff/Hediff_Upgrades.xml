@@ -130,6 +130,7 @@
     <defName>GR_Hediff_CombatChip</defName>
     <label>战斗芯片</label>
     <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <description>植入大脑的战斗芯片，提升战斗能力。</description>
     <defaultLabelColor>(0.8, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
@@ -155,6 +156,7 @@
     <defName>GR_Hediff_AnalysisChip</defName>
     <label>分析芯片</label>
     <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <description>植入大脑的分析芯片，提升学习能力。</description>
     <defaultLabelColor>(0.3, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
@@ -179,6 +181,7 @@
     <defName>GR_Hediff_EfficiencyBooster</defName>
     <label>效率增强器</label>
     <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <description>安装在灰潮核心的增强器。增加备用灰潮机械回复速度</description>
     <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
     <isBad>false</isBad>
@@ -202,6 +205,7 @@
     <defName>GR_Hediff_PrecisionChip</defName>
     <label>精密芯片</label>
     <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <description>植入手部的精密操作芯片。</description>
     <defaultLabelColor>(0.6, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
@@ -225,6 +229,7 @@
     <defName>GR_Hediff_TargetingSystem</defName>
     <label>瞄准系统</label>
     <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <description>植入眼部的先进瞄准系统。</description>
     <defaultLabelColor>(0.8, 0.6, 0.2)</defaultLabelColor>
     <isBad>false</isBad>

@@ -13,4 +13,11 @@
     <suspendable>false</suspendable>
     <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
   </JobDef>
+
+  <JobDef>
+    <defName>GR_InstallPluginUpgrade</defName>
+    <driverClass>SD.GrayRace.JobDrivers.JobDriver_InstallPluginUpgrade</driverClass>
+    <reportString>installing plugin upgrade.</reportString>
+    <suspendable>true</suspendable>
+  </JobDef>
 </Defs>

@@ -18,7 +18,6 @@
       </li>
     </stages>
     <comps>
-      <!-- <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NanitesRegeneration" /> -->
       <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NanitesRegeneration">
         <naniteCostPerSeconds>10</naniteCostPerSeconds>
         <healAmountPerSeconds>5</healAmountPerSeconds>

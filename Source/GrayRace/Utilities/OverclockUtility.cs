@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using RimWorld;
 using SD.GrayRace.Hediffs;
 using Verse;
@@ -8,7 +9,7 @@ namespace SD.GrayRace.Utilities
     {
         public static bool IsOverclockable(BodyPartRecord part)
         {
-            return IsArm(part) || IsLeg(part) || IsEye(part) || IsCorePart(part);
+            return IsArm(part) || IsLeg(part) || IsEye(part) || IsCorePart(part) || IsEar(part);
         }
 
         public static bool IsCorePart(BodyPartRecord part) => IsBrain(part) || IsHeart(part);
@@ -19,6 +20,7 @@ namespace SD.GrayRace.Utilities
         public static bool IsEye(BodyPartRecord part) => part.def.tags.Contains(BodyPartTagDefOf.SightSource);
         public static bool IsBrain(BodyPartRecord part) => part.def.tags.Contains(BodyPartTagDefOf.ConsciousnessSource);
         public static bool IsHeart(BodyPartRecord part) => part.def.tags.Contains(BodyPartTagDefOf.BloodPumpingSource);
+        public static bool IsEar(BodyPartRecord part) => part.def.tags.Contains(BodyPartTagDefOf.HearingSource);
 
         public static HediffDef GetHediffDefForPart(BodyPartRecord part)
         {
@@ -28,6 +30,7 @@ namespace SD.GrayRace.Utilities
             if (IsEye(part)) return GrayRaceDefOf.GR_Overclock_Eye;
             if (IsBrain(part)) return GrayRaceDefOf.GR_Overclock_Brain;
             if (IsHeart(part)) return GrayRaceDefOf.GR_Overclock_Heart;
+            if (IsEar(part)) return GrayRaceDefOf.GR_Overclock_Ear;
 
             return null;
         }
@@ -56,6 +59,11 @@ namespace SD.GrayRace.Utilities
             if (IsHeart(part))
             {
                 return PawnCapacityDefOf.BloodPumping.GetLabelFor(); // 血液循环
+            }
+
+            if (IsEar(part))
+            {
+                return PawnCapacityDefOf.Hearing.GetLabelFor();
             }
 
             return "Unknown".Translate();

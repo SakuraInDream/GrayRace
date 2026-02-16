@@ -53,7 +53,7 @@
   <StatDef>
     <defName>GRStat_OverclockMaxLevel</defName>
     <label>超频上限</label>
-    <description>该灰裔当前部位可达到的最大超频比例。</description>
+    <description>该灰裔当前部位可达到的最大超频百分比。</description>
     <category>BasicsPawn</category>
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0</minValue>

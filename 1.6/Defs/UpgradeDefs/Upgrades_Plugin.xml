@@ -7,6 +7,9 @@
     <label>战斗芯片插件</label>
     <description>植入大脑的高级战斗芯片，提升战斗效率和反应速度。</description>
     <upgradeType>Plugin</upgradeType>
+    <coexistWithUpgradeTypes>
+      <li>Transformation</li>
+    </coexistWithUpgradeTypes>
     <targetBodyParts>
       <li>Brain</li>
     </targetBodyParts>
@@ -27,6 +30,9 @@
     <label>分析芯片插件</label>
     <description>植入大脑的超级分析芯片，提升研究速度和学习能力。</description>
     <upgradeType>Plugin</upgradeType>
+    <coexistWithUpgradeTypes>
+      <li>Transformation</li>
+    </coexistWithUpgradeTypes>
     <targetBodyParts>
       <li>Brain</li>
     </targetBodyParts>
@@ -48,6 +54,9 @@
     <label>效率增强器插件</label>
     <description>安装在灰潮核心的效率增强器，提升纳米机械恢复速度。</description>
     <upgradeType>Plugin</upgradeType>
+    <coexistWithUpgradeTypes>
+      <li>Transformation</li>
+    </coexistWithUpgradeTypes>
     <targetBodyPartTags>
       <li>BloodPumpingSource</li>
     </targetBodyPartTags>
@@ -70,6 +79,9 @@
     <label>精密芯片插件</label>
     <description>植入手部的精密操作芯片，提升制作精度和质量。</description>
     <upgradeType>Plugin</upgradeType>
+    <coexistWithUpgradeTypes>
+      <li>Transformation</li>
+    </coexistWithUpgradeTypes>
     <targetBodyPartGroups>
       <li>Hands</li>
     </targetBodyPartGroups>
@@ -94,6 +106,9 @@
     <label>瞄准系统插件</label>
     <description>植入眼部的先进瞄准系统，大幅提升射击精度。</description>
     <upgradeType>Plugin</upgradeType>
+    <coexistWithUpgradeTypes>
+      <li>Transformation</li>
+    </coexistWithUpgradeTypes>
     <targetBodyPartTags>
       <li>SightSource</li>
     </targetBodyPartTags>

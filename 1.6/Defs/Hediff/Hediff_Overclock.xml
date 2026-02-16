@@ -5,7 +5,7 @@
     <initialSeverity>0.01</initialSeverity>
     <maxSeverity>1.0</maxSeverity>
     <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+    <countsAsAddedPartOrImplant>True</countsAsAddedPartOrImplant>
   </SD.GrayRace.Hediffs.Hediff_Overclock>
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
@@ -40,6 +40,16 @@
     <description>大幅提升血液循环效率。</description>
 
     <capacityToBoost>BloodPumping</capacityToBoost>
+    <capacityRange>0~1</capacityRange>
+    <baseEnergyDrain>1.0</baseEnergyDrain>
+  </SD.GrayRace.Hediffs.HediffDef_Overclock>
+
+  <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
+    <defName>GR_Overclock_Ear</defName>
+    <label>听觉超频</label>
+    <description>大幅提升听力效率。</description>
+
+    <capacityToBoost>Hearing</capacityToBoost>
     <capacityRange>0~1</capacityRange>
     <baseEnergyDrain>1.0</baseEnergyDrain>
   </SD.GrayRace.Hediffs.HediffDef_Overclock>

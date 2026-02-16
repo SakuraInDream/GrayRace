@@ -20,38 +20,43 @@ namespace SD.GrayRace
         }
 
         // 消耗资源
-        public static void OffsetNanites(Pawn pawn, float offset)
+        // public static void OffsetNanites(Pawn pawn, float offset)
+        // {
+        //     // var compNanites = pawn.TryGetComp<CompResource_Nanites>();
+        //     var compNanites = pawn.TryGetComp<CompResource_Nanites>();
+        //     if (compNanites != null)
+        //     {
+        //         compNanites.CurrentNanites += offset;
+        //         if (compNanites.CurrentNanites > compNanites.Max)
+        //         {
+        //             compNanites.CurrentNanites = compNanites.Max;
+        //         }
+        //
+        //         if (compNanites.CurrentNanites <= 0.01f)
+        //         {
+        //             compNanites.CurrentNanites = 0f;
+        //         }
+        //     }
+        // }
+
+        // public static bool TryConsumeNanites(Pawn pawn, float amount)
+        // {
+        //     // var comp = pawn.TryGetComp<CompResource_Nanites>();
+        //     var comp = pawn.TryGetComp<CompResource_Nanites>();
+        //
+        //     if (comp == null) return false;
+        //
+        //     // if (!comp.HasEnoughResource(amount)) return false;
+        //     if(comp.CurrentNanites < amount) return false;
+        //
+        //     OffsetNanites(pawn, 0f - amount);
+        //
+        //     return true;
+        // }
+
+        public static CompGrayManager GetManager(this Pawn pawn)
         {
-            // var compNanites = pawn.TryGetComp<CompResource_Nanites>();
-            var compNanites = pawn.TryGetComp<CompResource_Nanites>();
-            if (compNanites != null)
-            {
-                compNanites.CurrentNanites += offset;
-                if (compNanites.CurrentNanites > compNanites.Max)
-                {
-                    compNanites.CurrentNanites = compNanites.Max;
-                }
-
-                if (compNanites.CurrentNanites <= 0.01f)
-                {
-                    compNanites.CurrentNanites = 0f;
-                }
-            }
-        }
-
-        public static bool TryConsumeNanites(Pawn pawn, float amount)
-        {
-            // var comp = pawn.TryGetComp<CompResource_Nanites>();
-            var comp = pawn.TryGetComp<CompResource_Nanites>();
-
-            if (comp == null) return false;
-
-            // if (!comp.HasEnoughResource(amount)) return false;
-            if(comp.CurrentNanites < amount) return false;
-
-            OffsetNanites(pawn, 0f - amount);
-
-            return true;
+            return pawn.TryGetComp<CompGrayManager>();
         }
 
         public static Dialog_NamePawn NameGrayRaceDialog(this Pawn pawn)

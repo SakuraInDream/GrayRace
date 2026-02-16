@@ -179,10 +179,7 @@ public class Page_Upgrade : BasePageITab
             TryToggleUpgrade(def);
         }
 
-        if (!canApply && !isActive && !reason.NullOrEmpty())
-        {
-            TooltipHandler.TipRegion(rowRect, reason);
-        }
+        TooltipHandler.TipRegion(rowRect, BuildUpgradeTooltip(def, isActive, canApply, reason));
 
         listing.Gap(5f);
     }
@@ -233,11 +230,92 @@ public class Page_Upgrade : BasePageITab
         if (success)
         {
             SoundDefOf.Click.PlayOneShotOnCamera();
-            _refreshRequested = true; // 不要这里直接 RefreshAvailableUpgrades()
+            _refreshRequested = true;
         }
         else
         {
             SoundDefOf.ClickReject.PlayOneShotOnCamera();
         }
+    }
+
+    private string BuildUpgradeTooltip(GRUpgradeDef def, bool isActive, bool canApply, string reason)
+    {
+        if (def == null) return string.Empty;
+
+        string effectText = BuildEffectTooltipText(def);
+
+        return $"{def.LabelCap}\n{def.description}\n\n{effectText}";
+    }
+
+    private string BuildEffectTooltipText(GRUpgradeDef def)
+    {
+        HediffDef hediffDef = def?.hediffToApply;
+        if (hediffDef == null) return "效果: 无";
+
+        List<string> lines = new List<string>();
+
+        if (hediffDef.addedPartProps != null)
+        {
+            float partEfficiency = hediffDef.addedPartProps.partEfficiency;
+            if (Mathf.Abs(partEfficiency - 1f) > 0.0001f)
+            {
+                lines.Add($"部位效率: {FormatPercentDelta(partEfficiency - 1f)}");
+            }
+        }
+
+        if (hediffDef.stages != null && hediffDef.stages.Count > 0)
+        {
+            bool multiStage = hediffDef.stages.Count > 1;
+
+            for (int i = 0; i < hediffDef.stages.Count; i++)
+            {
+                HediffStage stage = hediffDef.stages[i];
+                if (stage == null) continue;
+
+                string stagePrefix = multiStage ? $"阶段{i + 1} " : string.Empty;
+                AppendStatOffsets(lines, stage.statOffsets, stagePrefix);
+                AppendStatFactors(lines, stage.statFactors, stagePrefix);
+            }
+        }
+
+        if (lines.Count == 0) return "效果: 无明确数值加成";
+        return "效果:\n" + string.Join("\n", lines);
+    }
+
+    private static void AppendStatOffsets(List<string> output, List<StatModifier> modifiers, string prefix)
+    {
+        if (output == null || modifiers == null || modifiers.Count == 0) return;
+
+        foreach (StatModifier modifier in modifiers)
+        {
+            if (modifier?.stat == null || Mathf.Abs(modifier.value) <= 0.0001f) continue;
+
+            string valueText = modifier.value.ToStringByStyle(modifier.stat.toStringStyle);
+            if (modifier.value > 0f && !valueText.StartsWith("+"))
+            {
+                valueText = "+" + valueText;
+            }
+
+            output.Add($"{prefix}{modifier.stat.LabelCap}: {valueText}");
+        }
+    }
+
+    private static void AppendStatFactors(List<string> output, List<StatModifier> modifiers, string prefix)
+    {
+        if (output == null || modifiers == null || modifiers.Count == 0) return;
+
+        foreach (StatModifier modifier in modifiers)
+        {
+            if (modifier?.stat == null || Mathf.Abs(modifier.value - 1f) <= 0.0001f) continue;
+
+            output.Add($"{prefix}{modifier.stat.LabelCap}: x{modifier.value:0.##} ({FormatPercentDelta(modifier.value - 1f)})");
+        }
+    }
+
+    private static string FormatPercentDelta(float delta)
+    {
+        float percent = delta * 100f;
+        string sign = percent >= 0f ? "+" : string.Empty;
+        return $"{sign}{percent:0.#}%";
     }
 }

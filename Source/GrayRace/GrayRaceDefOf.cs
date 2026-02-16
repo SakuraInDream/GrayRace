@@ -20,14 +20,17 @@ namespace SD.GrayRace
         public static HediffDef GR_Overclock_Heart;
         public static HediffDef GR_Overclock_Brain;
         public static HediffDef GR_Overclock_Eye;
+        public static HediffDef GR_Overclock_Ear;
 
         // JobDefs
         public static JobDef GR_ConsumeMetal;
         public static JobDef GR_HaulToIncubator;
+        public static JobDef GR_InstallPluginUpgrade;
 
         // StatDefs
         public static StatDef GRStat_NaniteMax;
         public static StatDef GRStat_NaniteRegenRate;
+        public static StatDef GRStat_OverclockMaxLevel;
 
         static GrayRaceDefOf()
         {
