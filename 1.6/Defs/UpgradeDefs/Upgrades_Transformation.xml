@@ -2,7 +2,7 @@
 <Defs>
 
   <!-- 手部 变形 -->
-  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Royalty">
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_PowerClaw</defName>
     <label>动力爪形态</label>
     <description>将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。</description>
@@ -36,7 +36,7 @@
     <uiOrder>10</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Royalty">
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_DrillArm</defName>
     <label>挖掘臂形态</label>
     <description>将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
@@ -55,7 +55,7 @@
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Royalty">
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_FieldHand</defName>
     <label>务农手形态</label>
     <description>将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
