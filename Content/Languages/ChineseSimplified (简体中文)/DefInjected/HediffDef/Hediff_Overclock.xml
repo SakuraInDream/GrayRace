@@ -11,6 +11,11 @@
   <!-- EN: 提升意识水平。 -->
   <GR_Overclock_Brain.description>TODO</GR_Overclock_Brain.description>
   
+  <!-- EN: 听觉超频 -->
+  <GR_Overclock_Ear.label>TODO</GR_Overclock_Ear.label>
+  <!-- EN: 大幅提升听力效率。 -->
+  <GR_Overclock_Ear.description>TODO</GR_Overclock_Ear.description>
+  
   <!-- EN: 眼部超频 -->
   <GR_Overclock_Eye.label>TODO</GR_Overclock_Eye.label>
   <!-- EN: 加速能量消耗对部位进行效率超频。 -->

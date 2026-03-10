@@ -1,79 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<CombatExtended.AmmoSetDef>
-		<defName>AmmoSet_Daikyu</defName>
-		<label>Daikyu Arrows</label>
-		<ammoTypes>
-			<Ammo_Daikyu>Projectile_Daikyu</Ammo_Daikyu>
-		</ammoTypes>
-	</CombatExtended.AmmoSetDef>
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Daikyu</defName>
+    <label>Daikyu Arrows</label>
+    <ammoTypes>
+      <Ammo_Daikyu_GR>Bullet_Daikyu_GR</Ammo_Daikyu_GR>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
 
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGreatArrowBase">
-		<defName>Ammo_Daikyu</defName>
-		<label>Daikyu arrow</label>
-		<graphicData>
-			<texPath>Things/Ammo/Neolithic/GreatArrow/Plasteel</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
-		</graphicData>
-		<statBases>
-			<Mass>0.25</Mass>
-			<Bulk>0.25</Bulk>
-		</statBases>
-		<generateAllowChance>0.1</generateAllowChance>
-	</ThingDef>
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="AmmoGreatArrowBase">
+    <defName>Ammo_Daikyu_GR</defName>
+    <label>Daikyu arrow</label>
+    <graphicData>
+      <texPath>Things/Ammo/Neolithic/GreatArrow/Plasteel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.25</Mass>
+      <Bulk>0.25</Bulk>
+    </statBases>
+    <ammoClass>PlasteelArrow</ammoClass>
+    <generateAllowChance>0.1</generateAllowChance>
+  </ThingDef>
 
-	<ThingDef ParentName="BaseGreatArrowProjectile">
-		<defName>Projectile_Daikyu</defName>
-		<label>arrow</label>
-		<graphicData>
-			<texPath>Things/Projectile/Arrows/Arrow_Plasteel</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<speed>115</speed>
-			<damageAmountBase>75</damageAmountBase>
-			<armorPenetrationBlunt>200</armorPenetrationBlunt>
-			<armorPenetrationSharp>40</armorPenetrationSharp>
-		</projectile>
-	</ThingDef>
+  <ThingDef ParentName="BaseArrowProjectile">
+    <defName>Bullet_Daikyu_GR</defName>
+    <label>arrow (daikyu)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrows/Arrow_Plasteel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <speed>115</speed>
+      <damageAmountBase>75</damageAmountBase>
+      <armorPenetrationSharp>40</armorPenetrationSharp>
+      <armorPenetrationBlunt>200</armorPenetrationBlunt>
+      <preExplosionSpawnChance>0.8</preExplosionSpawnChance>
+      <preExplosionSpawnThingDef>Ammo_Daikyu_GR</preExplosionSpawnThingDef>
+    </projectile>
+    <modExtensions>
+      <li Class="ProjectileImpactFX.EffectProjectileExtension">
+        <AutoAssign>false</AutoAssign>
+        <CreateTerrainEffects>true</CreateTerrainEffects>
+        <StuckProjectileFleckDef>Fleck_CELandedArrow_Plasteel</StuckProjectileFleckDef>
+        <StuckProjectileFleckSize>0.65</StuckProjectileFleckSize>
+      </li>
+    </modExtensions>
+  </ThingDef>
 
-	<RecipeDef ParentName="AmmoRecipeNeolithicBase">
-		<defName>MakeAmmo_Daikyu</defName>
-		<label>make Daikyu arrows x10</label>
-		<description>Craft 10 Daikyu arrows.</description>
-		<jobString>Making Daikyu arrows.</jobString>
-		<workAmount>6000</workAmount>
-		<recipeUsers>
-			<li>TableMachining</li>
-		</recipeUsers>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Steel</li>
-					</thingDefs>
-				</filter>
-				<count>30</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Plasteel</li>
-					</thingDefs>
-				</filter>
-				<count>50</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>Steel</li>
-				<li>Plasteel</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<products>
-			<Ammo_Daikyu>50</Ammo_Daikyu>
-		</products>
-	</RecipeDef>
+  <RecipeDef ParentName="AmmoRecipeNeolithicBase">
+    <defName>MakeAmmo_Daikyu_GR</defName>
+    <label>make Daikyu arrows x50</label>
+    <description>Craft 50 Daikyu arrows.</description>
+    <jobString>Making Daikyu arrows.</jobString>
+    <workAmount>6000</workAmount>
+    <recipeUsers>
+      <li>TableMachining</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_Daikyu_GR>50</Ammo_Daikyu_GR>
+    </products>
+  </RecipeDef>
 
 </Defs>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 仿生臂形态 -->
+  <GR_Transform_Vanilla_BionicArm.label>TODO</GR_Transform_Vanilla_BionicArm.label>
+  <!-- EN: 将手臂重构为原版仿生臂。 -->
+  <GR_Transform_Vanilla_BionicArm.description>TODO</GR_Transform_Vanilla_BionicArm.description>
+  
+  <!-- EN: 仿生耳形态 -->
+  <GR_Transform_Vanilla_BionicEar.label>TODO</GR_Transform_Vanilla_BionicEar.label>
+  <!-- EN: 将听觉器官重构为原版仿生耳。 -->
+  <GR_Transform_Vanilla_BionicEar.description>TODO</GR_Transform_Vanilla_BionicEar.description>
+  
+  <!-- EN: 仿生眼形态 -->
+  <GR_Transform_Vanilla_BionicEye.label>TODO</GR_Transform_Vanilla_BionicEye.label>
+  <!-- EN: 将视觉器官重构为原版仿生眼。 -->
+  <GR_Transform_Vanilla_BionicEye.description>TODO</GR_Transform_Vanilla_BionicEye.description>
+  
+  <!-- EN: 仿生心脏形态 -->
+  <GR_Transform_Vanilla_BionicHeart.label>TODO</GR_Transform_Vanilla_BionicHeart.label>
+  <!-- EN: 将循环核心重构为原版仿生心脏。 -->
+  <GR_Transform_Vanilla_BionicHeart.description>TODO</GR_Transform_Vanilla_BionicHeart.description>
+  
+  <!-- EN: 仿生下颌形态 -->
+  <GR_Transform_Vanilla_BionicJaw.label>TODO</GR_Transform_Vanilla_BionicJaw.label>
+  <!-- EN: 将下颌重构为原版仿生下颌。 -->
+  <GR_Transform_Vanilla_BionicJaw.description>TODO</GR_Transform_Vanilla_BionicJaw.description>
+  
+  <!-- EN: 仿生腿形态 -->
+  <GR_Transform_Vanilla_BionicLeg.label>TODO</GR_Transform_Vanilla_BionicLeg.label>
+  <!-- EN: 将腿部重构为原版仿生腿。 -->
+  <GR_Transform_Vanilla_BionicLeg.description>TODO</GR_Transform_Vanilla_BionicLeg.description>
+  
+  <!-- EN: 仿生脊椎形态 -->
+  <GR_Transform_Vanilla_BionicSpine.label>TODO</GR_Transform_Vanilla_BionicSpine.label>
+  <!-- EN: 将脊椎重构为原版仿生脊椎。 -->
+  <GR_Transform_Vanilla_BionicSpine.description>TODO</GR_Transform_Vanilla_BionicSpine.description>
+  
+  <!-- EN: 仿生胃形态 -->
+  <GR_Transform_Vanilla_BionicStomach.label>TODO</GR_Transform_Vanilla_BionicStomach.label>
+  <!-- EN: 将代谢器官重构为原版仿生胃。 -->
+  <GR_Transform_Vanilla_BionicStomach.description>TODO</GR_Transform_Vanilla_BionicStomach.description>
+  
+  <!-- EN: 仿生舌形态 -->
+  <GR_Transform_Vanilla_BionicTongue.label>TODO</GR_Transform_Vanilla_BionicTongue.label>
+  <!-- EN: 将舌部重构为原版仿生舌。 -->
+  <GR_Transform_Vanilla_BionicTongue.description>TODO</GR_Transform_Vanilla_BionicTongue.description>
+  
+</LanguageData>

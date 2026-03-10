@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 分析芯片 -->
+  <GR_Hediff_AnalysisChip.label>TODO</GR_Hediff_AnalysisChip.label>
+  <!-- EN: 植入大脑的分析芯片，提升学习能力。 -->
+  <GR_Hediff_AnalysisChip.description>TODO</GR_Hediff_AnalysisChip.description>
+  
+  <!-- EN: 战斗芯片 -->
+  <GR_Hediff_CombatChip.label>TODO</GR_Hediff_CombatChip.label>
+  <!-- EN: 植入大脑的战斗芯片，提升战斗能力。 -->
+  <GR_Hediff_CombatChip.description>TODO</GR_Hediff_CombatChip.description>
+  
+  <!-- EN: 效率增强器 -->
+  <GR_Hediff_EfficiencyBooster.label>TODO</GR_Hediff_EfficiencyBooster.label>
+  <!-- EN: 安装在灰潮核心的增强器。增加备用灰潮机械回复速度 -->
+  <GR_Hediff_EfficiencyBooster.description>TODO</GR_Hediff_EfficiencyBooster.description>
+  
+  <!-- EN: 精密芯片 -->
+  <GR_Hediff_PrecisionChip.label>TODO</GR_Hediff_PrecisionChip.label>
+  <!-- EN: 植入手部的精密操作芯片。 -->
+  <GR_Hediff_PrecisionChip.description>TODO</GR_Hediff_PrecisionChip.description>
+  
+  <!-- EN: 瞄准系统 -->
+  <GR_Hediff_TargetingSystem.label>TODO</GR_Hediff_TargetingSystem.label>
+  <!-- EN: 植入眼部的先进瞄准系统。 -->
+  <GR_Hediff_TargetingSystem.description>TODO</GR_Hediff_TargetingSystem.description>
+  
+</LanguageData>

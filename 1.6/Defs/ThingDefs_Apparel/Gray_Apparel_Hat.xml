@@ -675,12 +675,12 @@
 
   <!--头纱-->
   <ThingDef ParentName="GR_HatDecorative">
-    <defName>Gray_Apparel_SensualBridaVeil</defName>
-    <label>Gray Sensual Brida Veil</label>
+    <defName>Gray_Apparel_SensualBrideVeil</defName>
+    <label>Gray Sensual Bride Veil</label>
     <description>.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
-      <texPath>Apparel/Wedding/Gray_SensualBridaVeil</texPath>
+      <texPath>Apparel/Wedding/Gray_SensualBrideVeil</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedStatOffsets>
@@ -691,7 +691,51 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <wornGraphicPath>Apparel/Wedding/Gray_SensualBridaVeil</wornGraphicPath>
+      <wornGraphicPath>Apparel/Wedding/Gray_SensualBrideVeil</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <drawData>
+        <dataNorth>
+          <layer>40000</layer>
+          <offset>(0, 0, -0.35)</offset>
+        </dataNorth>
+        <dataSouth>
+          <layer>-10</layer>
+          <offset>(0, 0, -0.35)</offset>
+        </dataSouth>
+        <dataEast>
+          <offset>(0, 0, -0.35)</offset>
+        </dataEast>
+        <dataWest>
+          <offset>(0, 0, -0.35)</offset>
+        </dataWest>
+      </drawData>
+    </apparel>
+  </ThingDef>
+
+  <!--头纱-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BrideVeil</defName>
+    <label>Gray Bride Veil</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Wedding/Gray_BrideVeil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Wedding/Gray_BrideVeil</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>

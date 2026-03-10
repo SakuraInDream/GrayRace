@@ -64,8 +64,8 @@
         <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
       </li>
     </additionalHediffs>
-    <buildingDamageFactor>30</buildingDamageFactor>
-    <buildingDamageFactorImpassable>2</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>30</buildingDamageFactorPassable>
+    <buildingDamageFactorImpassable>60</buildingDamageFactorImpassable>
     <externalViolence>false</externalViolence>
     <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
     <impactSoundType>Toxic</impactSoundType>
@@ -84,6 +84,8 @@
         <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
       </li>
     </additionalHediffs>
+    <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
+    <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
   </DamageDef>
 
   <!--激光-->

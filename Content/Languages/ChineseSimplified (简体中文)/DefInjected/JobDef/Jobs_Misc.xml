@@ -7,4 +7,7 @@
   <!-- EN: hauling TargetA to TargetB. -->
   <GR_HaulToIncubator.reportString>TODO</GR_HaulToIncubator.reportString>
   
+  <!-- EN: installing plugin upgrade. -->
+  <GR_InstallPluginUpgrade.reportString>TODO</GR_InstallPluginUpgrade.reportString>
+  
 </LanguageData>

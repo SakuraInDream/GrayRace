@@ -101,7 +101,7 @@
       <recoilAmount>1.7</recoilAmount>
       <verbClass>CombatExtended.Verb_ShootCE</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
-      <defaultProjectile>Bullet_ShotgunRail</defaultProjectile>
+      <defaultProjectile>Bullet_ShotgunRail_GR</defaultProjectile>
       <warmupTime>0.6</warmupTime>
       <burstShotCount>5</burstShotCount>
       <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
@@ -252,7 +252,7 @@
       <recoilAmount>1.8</recoilAmount>
       <verbClass>CombatExtended.Verb_ShootCE</verbClass>
       <hasStandardCommand>true</hasStandardCommand>
-      <defaultProjectile>Bullet_57mmRailgun_Sabot</defaultProjectile>
+      <defaultProjectile>Bullet_57mmRailgun_GR_Sabot</defaultProjectile>
       <warmupTime>1.5</warmupTime>
       <burstShotCount>1</burstShotCount>
       <ticksBetweenBurstShots>15</ticksBetweenBurstShots>

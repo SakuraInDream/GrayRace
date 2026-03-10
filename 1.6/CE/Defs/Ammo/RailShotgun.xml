@@ -14,8 +14,8 @@
 		<defName>AmmoSet_ShotgunRail</defName>
 		<label>Rail Shotgun</label>
 		<ammoTypes>
-			<Ammo_ShotgunRail>Bullet_ShotgunRail</Ammo_ShotgunRail>
-			<Ammo_ShotgunRail_Slug>Bullet_ShotgunRail_Slug</Ammo_ShotgunRail_Slug>
+			<Ammo_ShotgunRail_GR>Bullet_ShotgunRail_GR</Ammo_ShotgunRail_GR>
+			<Ammo_ShotgunRail_GR_Slug>Bullet_ShotgunRail_GR_Slug</Ammo_ShotgunRail_GR_Slug>
 		</ammoTypes>
 		<similarTo>AmmoSet_ChargedShotgun</similarTo>
 	</CombatExtended.AmmoSetDef>
@@ -38,7 +38,7 @@
 	</ThingDef>
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="ShotgunRailBase">
-		<defName>Ammo_ShotgunRail</defName>
+		<defName>Ammo_ShotgunRail_GR</defName>
 		<label>Rail shotgun</label>
 		<graphicData>
 			<texPath>Things/Ammo/Railgun/Pistol</texPath>
@@ -48,7 +48,7 @@
 	</ThingDef>
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="ShotgunRailBase">
-		<defName>Ammo_ShotgunRail_Slug</defName>
+		<defName>Ammo_ShotgunRail_GR_Slug</defName>
 		<label>Rail shotgun (Slug)</label>
 		<graphicData>
 			<texPath>Things/Ammo/Railgun/HighCaliber</texPath>
@@ -74,7 +74,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="Base12GaugeChargedBullet">
-		<defName>Bullet_ShotgunRail</defName>
+		<defName>Bullet_ShotgunRail_GR</defName>
 		<label>Rail shotgun pellet</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>15</damageAmountBase>
@@ -86,7 +86,7 @@
 	</ThingDef>
 
 	<ThingDef ParentName="Base12GaugeChargedBullet">
-		<defName>Bullet_ShotgunRail_Slug</defName>
+		<defName>Bullet_ShotgunRail_GR_Slug</defName>
 		<label>Rail shotgun (Slug)</label>
 		<graphicData>
 			<drawSize>(1.5,1.5)</drawSize>
@@ -103,7 +103,7 @@
 	<!-- ==================== Recipes ========================== -->
 
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
-		<defName>MakeAmmo_ShotgunRail</defName>
+		<defName>MakeAmmo_ShotgunRail_GR</defName>
 		<label>make Rail shotgun shell x200</label>
 		<description>Craft 200 Rail shotgun shells.</description>
 		<jobString>Making Rail shotgun shells.</jobString>
@@ -132,13 +132,13 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_ShotgunRail>200</Ammo_ShotgunRail>
+			<Ammo_ShotgunRail_GR>200</Ammo_ShotgunRail_GR>
 		</products>
 		<workAmount>1000</workAmount>
 	</RecipeDef>
 
 	<RecipeDef ParentName="ChargeAmmoRecipeBase">
-		<defName>MakeAmmo_ShotgunRail_Slug</defName>
+		<defName>MakeAmmo_ShotgunRail_GR_Slug</defName>
 		<label>make Rail shotgun (Slug) shell x200</label>
 		<description>Craft 200 Rail shotgun (Slug) shells.</description>
 		<jobString>Making Rail shotgun (Slug) shells.</jobString>
@@ -167,7 +167,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_ShotgunRail_Slug>200</Ammo_ShotgunRail_Slug>
+			<Ammo_ShotgunRail_GR_Slug>200</Ammo_ShotgunRail_GR_Slug>
 		</products>
 		<workAmount>1000</workAmount>
 	</RecipeDef>
