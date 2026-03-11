@@ -6,6 +6,8 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
+
+// 此处代码托管 AI 生成
 public abstract class BasePageITab
 {
     public abstract string PageLabel { get; }

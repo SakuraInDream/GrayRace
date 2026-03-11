@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- 手部 变形 -->
+  <!-- 变形 -->
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_PowerClaw</defName>
     <label>动力爪形态</label>
     <description>将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。</description>
-    <!-- upgradeType 表示该 def 是变形还是插件 Transformation 和 Plugin -->
-    <upgradeType>Transformation</upgradeType>
 
-    <!-- 是否跟其他的类型的升级共存 -->
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+    <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
+    <iconPath>UI/Upgrades/CombatChip</iconPath>
 
     <!-- 施加的身体部位 -->
     <targetBodyPartGroups>
@@ -28,10 +24,18 @@
     <!-- 示例为原版的 动力爪 -->
     <hediffToApply>PowerClaw</hediffToApply>
 
+    <!-- 身体变形不需要材料 -->
+    <!-- 判定是否属于变形的依据 -->
+    <!-- <requiredMaterials> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+      <!-- <Plasteel>20</Plasteel> -->
+    <!-- </requiredMaterials> -->
+
     <!-- 科技解锁需求 -->
     <!-- 示例为 Royalty DLC 的 专业肢体 -->
-    <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
-
+    <researchPrerequisites>
+      <li>SpecializedLimbs</li>
+    </researchPrerequisites>
     <!-- 显示顺序 -->
     <uiOrder>10</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
@@ -40,10 +44,7 @@
     <defName>GR_Transform_Hand_DrillArm</defName>
     <label>挖掘臂形态</label>
     <description>将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartGroups>
       <li>Hands</li>
     </targetBodyPartGroups>
@@ -51,7 +52,9 @@
       <li>ManipulationLimbDigit</li>
     </excludedBodyPartTags>
     <hediffToApply>DrillArm</hediffToApply>
-    <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+    <researchPrerequisites>
+      <li>SpecializedLimbs</li>
+    </researchPrerequisites>
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -59,10 +62,7 @@
     <defName>GR_Transform_Hand_FieldHand</defName>
     <label>务农手形态</label>
     <description>将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartGroups>
       <li>Hands</li>
     </targetBodyPartGroups>
@@ -70,7 +70,9 @@
       <li>ManipulationLimbDigit</li>
     </excludedBodyPartTags>
     <hediffToApply>FieldHand</hediffToApply>
-    <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+    <researchPrerequisites>
+      <li>SpecializedLimbs</li>
+    </researchPrerequisites>
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -78,15 +80,14 @@
     <defName>GR_Transform_Eye_NightVision</defName>
     <label>夜视形态</label>
     <description>将眼部变形为夜视系统，在黑暗中也能清晰视物。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>SightSource</li>
     </targetBodyPartTags>
     <hediffToApply>GR_Hediff_NightVisionEye</hediffToApply>
-    <researchPrerequisite>SpecializedLimbs</researchPrerequisite>
+    <researchPrerequisites>
+      <li>SpecializedLimbs</li>
+    </researchPrerequisites>
     <uiOrder>50</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -95,15 +96,14 @@
     <defName>GR_Transform_Vanilla_BionicArm</defName>
     <label>仿生臂形态</label>
     <description>将手臂重构为原版仿生臂。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartGroups>
       <li>Arms</li>
     </targetBodyPartGroups>
     <hediffToApply>BionicArm</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>60</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -111,15 +111,14 @@
     <defName>GR_Transform_Vanilla_BionicLeg</defName>
     <label>仿生腿形态</label>
     <description>将腿部重构为原版仿生腿。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartGroups>
       <li>Legs</li>
     </targetBodyPartGroups>
     <hediffToApply>BionicLeg</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>70</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -127,15 +126,14 @@
     <defName>GR_Transform_Vanilla_BionicEye</defName>
     <label>仿生眼形态</label>
     <description>将视觉器官重构为原版仿生眼。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>SightSource</li>
     </targetBodyPartTags>
     <hediffToApply>BionicEye</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>80</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -143,15 +141,14 @@
     <defName>GR_Transform_Vanilla_BionicEar</defName>
     <label>仿生耳形态</label>
     <description>将听觉器官重构为原版仿生耳。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>HearingSource</li>
     </targetBodyPartTags>
     <hediffToApply>BionicEar</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>90</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -159,15 +156,14 @@
     <defName>GR_Transform_Vanilla_BionicHeart</defName>
     <label>仿生心脏形态</label>
     <description>将循环核心重构为原版仿生心脏。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>BloodPumpingSource</li>
     </targetBodyPartTags>
     <hediffToApply>BionicHeart</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>100</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -175,15 +171,14 @@
     <defName>GR_Transform_Vanilla_BionicStomach</defName>
     <label>仿生胃形态</label>
     <description>将代谢器官重构为原版仿生胃。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>MetabolismSource</li>
     </targetBodyPartTags>
     <hediffToApply>BionicStomach</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>110</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -191,15 +186,14 @@
     <defName>GR_Transform_Vanilla_BionicJaw</defName>
     <label>仿生下颌形态</label>
     <description>将下颌重构为原版仿生下颌。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyParts>
       <li>Jaw</li>
     </targetBodyParts>
     <hediffToApply>BionicJaw</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>120</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -207,15 +201,14 @@
     <defName>GR_Transform_Vanilla_BionicTongue</defName>
     <label>仿生舌形态</label>
     <description>将舌部重构为原版仿生舌。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>Tongue</li>
     </targetBodyPartTags>
     <hediffToApply>BionicTongue</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>130</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -223,15 +216,14 @@
     <defName>GR_Transform_Vanilla_BionicSpine</defName>
     <label>仿生脊椎形态</label>
     <description>将脊椎重构为原版仿生脊椎。</description>
-    <upgradeType>Transformation</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Plugin</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>Spine</li>
     </targetBodyPartTags>
     <hediffToApply>BionicSpine</hediffToApply>
-    <researchPrerequisite>Bionics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
     <uiOrder>140</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 

@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <!-- 大脑插件 -->
+  <!-- 下列插件均为临时示例用，随时会删 -->
+  <!-- 大脑插件示例 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_CombatChip</defName>
     <label>战斗芯片插件</label>
     <description>植入大脑的高级战斗芯片，提升战斗效率和反应速度。</description>
-    <upgradeType>Plugin</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Transformation</li>
-    </coexistWithUpgradeTypes>
+
+    <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+
+    <!-- 施加的身体部位 -->
     <targetBodyParts>
       <li>Brain</li>
     </targetBodyParts>
+
+    <!-- 要上的 Hediff-->
     <hediffToApply>GR_Hediff_CombatChip</hediffToApply>
-    <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+
+    <!-- 科技前置 -->
+    <researchPrerequisites>
+      <li>MicroelectronicsBasics</li>
+    </researchPrerequisites>
+
+    <!-- 需要材料则为插件类型 -->
     <requiredMaterials>
       <ComponentIndustrial>5</ComponentIndustrial>
       <Plasteel>20</Plasteel>
     </requiredMaterials>
+
     <workAmount>2000</workAmount>
+    <!-- 需要技能 -->
     <requiredSkill>Crafting</requiredSkill>
+    <!-- 需要技能等级 -->
     <minSkillLevel>8</minSkillLevel>
+
     <uiOrder>10</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -29,15 +42,13 @@
     <defName>GR_Plugin_Brain_AnalysisChip</defName>
     <label>分析芯片插件</label>
     <description>植入大脑的超级分析芯片，提升研究速度和学习能力。</description>
-    <upgradeType>Plugin</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Transformation</li>
-    </coexistWithUpgradeTypes>
     <targetBodyParts>
       <li>Brain</li>
     </targetBodyParts>
     <hediffToApply>GR_Hediff_AnalysisChip</hediffToApply>
-    <researchPrerequisite>MultiAnalyzer</researchPrerequisite>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
     <requiredMaterials>
       <ComponentIndustrial>8</ComponentIndustrial>
       <Gold>10</Gold>
@@ -53,15 +64,14 @@
     <defName>GR_Plugin_Heart_EfficiencyBooster</defName>
     <label>效率增强器插件</label>
     <description>安装在灰潮核心的效率增强器，提升纳米机械恢复速度。</description>
-    <upgradeType>Plugin</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Transformation</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>BloodPumpingSource</li>
     </targetBodyPartTags>
     <hediffToApply>GR_Hediff_EfficiencyBooster</hediffToApply>
-    <researchPrerequisite>MedicineProduction</researchPrerequisite>
+    <researchPrerequisites>
+      <li>MedicineProduction</li>
+    </researchPrerequisites>
     <requiredMaterials>
       <ComponentIndustrial>3</ComponentIndustrial>
       <Steel>30</Steel>
@@ -78,10 +88,7 @@
     <defName>GR_Plugin_Hand_PrecisionChip</defName>
     <label>精密芯片插件</label>
     <description>植入手部的精密操作芯片，提升制作精度和质量。</description>
-    <upgradeType>Plugin</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Transformation</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartGroups>
       <li>Hands</li>
     </targetBodyPartGroups>
@@ -89,7 +96,9 @@
       <li>ManipulationLimbDigit</li>
     </excludedBodyPartTags>
     <hediffToApply>GR_Hediff_PrecisionChip</hediffToApply>
-    <researchPrerequisite>ComplexClothing</researchPrerequisite>
+    <researchPrerequisites>
+      <li>ComplexClothing</li>
+    </researchPrerequisites>
     <requiredMaterials>
       <ComponentIndustrial>2</ComponentIndustrial>
       <Steel>15</Steel>
@@ -105,15 +114,14 @@
     <defName>GR_Plugin_Eye_TargetingSystem</defName>
     <label>瞄准系统插件</label>
     <description>植入眼部的先进瞄准系统，大幅提升射击精度。</description>
-    <upgradeType>Plugin</upgradeType>
-    <coexistWithUpgradeTypes>
-      <li>Transformation</li>
-    </coexistWithUpgradeTypes>
+
     <targetBodyPartTags>
       <li>SightSource</li>
     </targetBodyPartTags>
     <hediffToApply>GR_Hediff_TargetingSystem</hediffToApply>
-    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Gunsmithing</li>
+    </researchPrerequisites>
     <requiredMaterials>
       <ComponentIndustrial>3</ComponentIndustrial>
       <Steel>10</Steel>

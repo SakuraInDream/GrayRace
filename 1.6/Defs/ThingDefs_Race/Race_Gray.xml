@@ -15,8 +15,7 @@
     <statBases>
     </statBases>
     <inspectorTabs>
-      <!-- 超频面板 -->
-      <!-- <li>SD.GrayRace.ITabs.ITab_GrayRaceOverlock</li> -->
+      <!-- 超频/升级面板 -->
       <li>SD.GrayRace.ITabs.ITab_GrayRaceUpgrade</li>
     </inspectorTabs>
   </ThingDef>

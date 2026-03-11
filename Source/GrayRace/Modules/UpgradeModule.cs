@@ -40,7 +40,7 @@ public class UpgradeModule : GrayModuleBase
                           && UpgradeTargetMatcher.Matches(def, part)
                           && (IsUpgradeVisible(def) || IsUpgradeActive(def, part)))
             .OrderBy(def => def.uiOrder)
-            .ThenBy(def => def.upgradeType)
+            .ThenBy(def => def.IsPlugin)
             .ThenBy(def => def.label)
             .ToList();
     }
@@ -103,9 +103,9 @@ public class UpgradeModule : GrayModuleBase
             return false;
         }
 
-        if (def.researchPrerequisite != null && !def.researchPrerequisite.IsFinished)
+        if (!def.AreResearchPrerequisitesMet(out ResearchProjectDef missingResearch))
         {
-            reason = $"未解锁科技: {def.researchPrerequisite.LabelCap}";
+            reason = $"未解锁科技: {missingResearch.LabelCap}";
             return false;
         }
 
@@ -117,7 +117,7 @@ public class UpgradeModule : GrayModuleBase
             return false;
         }
 
-        if (def.upgradeType == UpgradeType.Plugin)
+        if (def.IsPlugin)
         {
             if (checkPendingInstall && HasPendingPluginInstall)
             {
@@ -146,7 +146,7 @@ public class UpgradeModule : GrayModuleBase
 
         if (IsUpgradeActive(def, part))
         {
-            RemoveUpgradeInstance(def, part, refundPluginMaterials: def.upgradeType == UpgradeType.Plugin);
+            RemoveUpgradeInstance(def, part, refundPluginMaterials: def.IsPlugin);
 
             feedback = $"已停用: {def.LabelCap}";
             messageType = MessageTypeDefOf.NeutralEvent;
@@ -160,7 +160,7 @@ public class UpgradeModule : GrayModuleBase
             return false;
         }
 
-        if (def.upgradeType == UpgradeType.Plugin)
+        if (def.IsPlugin)
         {
             if (!TryStartPluginInstallJob(def, part, out reason))
             {
@@ -406,7 +406,7 @@ public class UpgradeModule : GrayModuleBase
             pawn.health.RemoveHediff(existing);
         }
 
-        if (refundPluginMaterials && upgrade.upgradeType == UpgradeType.Plugin)
+        if (refundPluginMaterials && upgrade.IsPlugin)
         {
             RefundPluginMaterialsToGround(upgrade);
         }
@@ -446,14 +446,7 @@ public class UpgradeModule : GrayModuleBase
     private static bool UpgradesCanCoexist(GRUpgradeDef left, GRUpgradeDef right)
     {
         if (left == null || right == null || left == right) return true;
-        return SupportsCoexistenceWith(left, right.upgradeType)
-               && SupportsCoexistenceWith(right, left.upgradeType);
-    }
-
-    private static bool SupportsCoexistenceWith(GRUpgradeDef def, UpgradeType otherType)
-    {
-        return def?.coexistWithUpgradeTypes != null
-               && def.coexistWithUpgradeTypes.Contains(otherType);
+        return left.IsPlugin != right.IsPlugin;
     }
 
     private bool CheckSkillRequirement(GRUpgradeDef def, out string reason)
@@ -593,6 +586,7 @@ public class UpgradeModule : GrayModuleBase
 
     private static bool IsUpgradeVisible(GRUpgradeDef def)
     {
-        return def?.researchPrerequisite == null || def.researchPrerequisite.IsFinished;
+        if (def == null) return false;
+        return def.AreResearchPrerequisitesMet(out _);
     }
 }

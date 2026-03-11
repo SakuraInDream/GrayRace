@@ -1,17 +1,9 @@
 using System.Collections.Generic;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace SD.GrayRace.Defs;
-
-/// <summary>
-/// 升级类型枚举
-/// </summary>
-public enum UpgradeType
-{
-    Transformation,  // 变形 - 免费解锁科技后使用
-    Plugin          // 插件 - 需要材料制作
-}
 
 public class GRUpgradeDef : Def
 {
@@ -19,6 +11,15 @@ public class GRUpgradeDef : Def
     /// 精确目标部位（优先级最高）
     /// </summary>
     public List<BodyPartDef> targetBodyParts = new List<BodyPartDef>();
+
+    /// <summary>
+    /// 图标
+    /// </summary>
+    [NoTranslate]
+    public string iconPath;
+
+    [Unsaved(false)]
+    public Texture2D uiIcon = BaseContent.BadTex;
 
     /// <summary>
     /// 目标部位标签（例如 SightSource、BloodPumpingSource）
@@ -46,12 +47,7 @@ public class GRUpgradeDef : Def
     public List<BodyPartGroupDef> excludedBodyPartGroups = new List<BodyPartGroupDef>();
 
     public HediffDef hediffToApply;
-    public ResearchProjectDef researchPrerequisite;
-
-    /// <summary>
-    /// 升级类型：变形（免费）或插件（需要制作）
-    /// </summary>
-    public UpgradeType upgradeType = UpgradeType.Transformation;
+    public List<ResearchProjectDef> researchPrerequisites = new List<ResearchProjectDef>();
 
     /// <summary>
     /// 插件类型需要的材料（仅插件类型使用）
@@ -84,12 +80,56 @@ public class GRUpgradeDef : Def
     public bool allowOnAddedParts = false;
 
     /// <summary>
-    /// 可共存的升级类型。仅当双方都声明互相可共存时，才允许同部位共存。
-    /// </summary>
-    public List<UpgradeType> coexistWithUpgradeTypes = new List<UpgradeType>();
-
-    /// <summary>
     /// 列表排序权重，越小越靠前
     /// </summary>
     public int uiOrder = 0;
+
+    public bool IsPlugin => requiredMaterials != null && requiredMaterials.Count > 0;
+
+    public bool IsTransformation => !IsPlugin;
+
+    public override void PostLoad()
+    {
+        base.PostLoad();
+        if (!iconPath.NullOrEmpty())
+        {
+            LongEventHandler.ExecuteWhenFinished(delegate
+            {
+                uiIcon = ContentFinder<Texture2D>.Get(iconPath);
+            });
+        }
+    }
+
+    public IEnumerable<ResearchProjectDef> EnumerateResearchPrerequisites()
+    {
+        if (researchPrerequisites == null || researchPrerequisites.Count == 0)
+        {
+            yield break;
+        }
+
+        HashSet<ResearchProjectDef> seen = new HashSet<ResearchProjectDef>();
+        foreach (ResearchProjectDef project in researchPrerequisites)
+        {
+            if (project == null) continue;
+            if (seen.Add(project))
+            {
+                yield return project;
+            }
+        }
+    }
+
+    public bool AreResearchPrerequisitesMet(out ResearchProjectDef firstMissing)
+    {
+        foreach (ResearchProjectDef project in EnumerateResearchPrerequisites())
+        {
+            if (!project.IsFinished)
+            {
+                firstMissing = project;
+                return false;
+            }
+        }
+
+        firstMissing = null;
+        return true;
+    }
 }

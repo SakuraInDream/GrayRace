@@ -145,15 +145,20 @@ public class Page_Upgrade : BasePageITab
         Widgets.DrawHighlightIfMouseover(rowRect);
 
         Rect iconRect = new Rect(rowRect.x + 5f, rowRect.y + 5f, 45f, 45f);
-        Widgets.DrawTextureFitted(iconRect, BaseContent.PlaceholderImage, 1f);
+        Texture2D icon = def.uiIcon;
+        if (icon == null || icon == BaseContent.BadTex)
+        {
+            icon = BaseContent.PlaceholderImage;
+        }
+        Widgets.DrawTextureFitted(iconRect, icon, 1f);
 
         Rect textRect = new Rect(iconRect.xMax + 10f, rowRect.y + 2f, rowRect.width - 170f, rowRect.height - 4f);
         Rect labelRect = new Rect(textRect.x, textRect.y, textRect.width, 20f);
         Rect descRect = new Rect(textRect.x, labelRect.yMax + 1f, textRect.width, 20f);
         Rect extraRect = new Rect(textRect.x, descRect.yMax + 1f, textRect.width, 40f);
 
-        string typeLabel = def.upgradeType == UpgradeType.Transformation ? "[变形]" : "[插件]";
-        Color typeColor = def.upgradeType == UpgradeType.Transformation ? Color.cyan : Color.magenta;
+        string typeLabel = def.IsTransformation ? "[变形]" : "[插件]";
+        Color typeColor = def.IsTransformation ? Color.cyan : Color.magenta;
 
         GUI.color = Color.white;
         Text.Font = GameFont.Small;
@@ -172,7 +177,7 @@ public class Page_Upgrade : BasePageITab
         GUI.color = Color.white;
 
         Rect btnRect = new Rect(rowRect.xMax - 95f, rowRect.y + 30f, 90f, 28f);
-        string buttonLabel = isActive ? "停用" : (def.upgradeType == UpgradeType.Plugin ? "安装" : "启用");
+        string buttonLabel = isActive ? "停用" : (def.IsPlugin ? "安装" : "启用");
 
         if (Widgets.ButtonText(btnRect, buttonLabel))
         {
@@ -189,15 +194,25 @@ public class Page_Upgrade : BasePageITab
         Text.Anchor = TextAnchor.UpperLeft;
         Text.Font = GameFont.Tiny;
 
-        string researchText = def.researchPrerequisite == null
-            ? "科技: 无前置"
-            : (def.researchPrerequisite.IsFinished
-                ? $"科技: {def.researchPrerequisite.LabelCap} (已解锁)"
-                : $"科技: {def.researchPrerequisite.LabelCap} (未解锁)");
+        List<ResearchProjectDef> researchProjects = def.EnumerateResearchPrerequisites().ToList();
+        string researchText;
+        if (researchProjects.Count == 0)
+        {
+            researchText = "科技: 无前置";
+        }
+        else
+        {
+            int finishedCount = researchProjects.Count(project => project.IsFinished);
+            string statusText = finishedCount == researchProjects.Count
+                ? "已解锁"
+                : $"未解锁 {researchProjects.Count - finishedCount}/{researchProjects.Count}";
+
+            researchText = $"科技: {researchProjects.Select(project => project.LabelCap.ToString()).ToCommaList()} ({statusText})";
+        }
 
         Widgets.Label(new Rect(rect.x, rect.y, rect.width, 18f), researchText);
 
-        string requirementText = def.upgradeType == UpgradeType.Plugin
+        string requirementText = def.IsPlugin
             ? (UpgradeComp?.BuildPluginRequirementSummary(def) ?? "需求: 无")
             : "变形无需材料消耗";
         Widgets.Label(new Rect(rect.x, rect.y + 16f, rect.width, 18f), requirementText.Truncate(rect.width));
