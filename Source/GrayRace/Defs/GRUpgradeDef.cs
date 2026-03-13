@@ -10,7 +10,7 @@ public class GRUpgradeDef : Def
     /// <summary>
     /// 精确目标部位（优先级最高）
     /// </summary>
-    public List<BodyPartDef> targetBodyParts = new List<BodyPartDef>();
+    public BodyPartDef targetBodyPart;
 
     /// <summary>
     /// 图标

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- 下列插件均为临时示例用，随时会删 -->
   <!-- 大脑插件示例 -->
@@ -11,9 +11,7 @@
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
 
     <!-- 施加的身体部位 -->
-    <targetBodyParts>
-      <li>Brain</li>
-    </targetBodyParts>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
 
     <!-- 要上的 Hediff-->
     <hediffToApply>GR_Hediff_CombatChip</hediffToApply>
@@ -42,11 +40,10 @@
     <defName>GR_Plugin_Brain_AnalysisChip</defName>
     <label>分析芯片插件</label>
     <description>植入大脑的超级分析芯片，提升研究速度和学习能力。</description>
-    <targetBodyParts>
-      <li>Brain</li>
-    </targetBodyParts>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_AnalysisChip</hediffToApply>
     <researchPrerequisites>
+      <!-- T1 机械科技 -->
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
     <requiredMaterials>
@@ -65,9 +62,7 @@
     <label>效率增强器插件</label>
     <description>安装在灰潮核心的效率增强器，提升纳米机械恢复速度。</description>
 
-    <targetBodyPartTags>
-      <li>BloodPumpingSource</li>
-    </targetBodyPartTags>
+    <targetBodyPart>Nano_Heart</targetBodyPart>
     <hediffToApply>GR_Hediff_EfficiencyBooster</hediffToApply>
     <researchPrerequisites>
       <li>MedicineProduction</li>
@@ -89,12 +84,8 @@
     <label>精密芯片插件</label>
     <description>植入手部的精密操作芯片，提升制作精度和质量。</description>
 
-    <targetBodyPartGroups>
-      <li>Hands</li>
-    </targetBodyPartGroups>
-    <excludedBodyPartTags>
-      <li>ManipulationLimbDigit</li>
-    </excludedBodyPartTags>
+    <targetBodyPart>MechanicalHand</targetBodyPart>
+
     <hediffToApply>GR_Hediff_PrecisionChip</hediffToApply>
     <researchPrerequisites>
       <li>ComplexClothing</li>
@@ -132,4 +123,83 @@
     <uiOrder>50</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_OverclockingChipPrimary</defName>
+    <label>Primary overclocking chip</label>
+    <description>小幅增加超频上限。</description>
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <hediffToApply>GR_Hediff_OverclockingChipPrimary</hediffToApply>
+
+    <researchPrerequisites>
+      <li>GR_DailyPlugin</li>
+    </researchPrerequisites>
+
+    <requiredMaterials>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </requiredMaterials>
+
+    <workAmount>120</workAmount>
+
+  </SD.GrayRace.Defs.GRUpgradeDef>
+  
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_OverclockingChipIntermediate</defName>
+    <label>Intermediate overclocking chip</label>
+    <description>增加超频上限。</description>
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <hediffToApply>GR_Hediff_OverclockingChipIntermediate</hediffToApply>
+
+    <researchPrerequisites>
+      <li>GR_DailyPlugin</li>
+    </researchPrerequisites>
+
+    <requiredMaterials>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </requiredMaterials>
+
+    <workAmount>120</workAmount>
+
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_OverclockingChipAdvanced</defName>
+    <label>Advanced overclocking chip</label>
+    <description>大幅增加超频上限。</description>
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <hediffToApply>GR_Hediff_OverclockingChipAdvanced</hediffToApply>
+
+    <researchPrerequisites>
+      <li>GR_DailyPlugin</li>
+    </researchPrerequisites>
+
+    <requiredMaterials>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </requiredMaterials>
+
+    <workAmount>120</workAmount>
+
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_OverclockingChipUltimate</defName>
+    <label>Ultimate overclocking chip</label>
+    <description>大幅增加超频上限。</description>
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <hediffToApply>GR_Hediff_OverclockingChipUltimate</hediffToApply>
+
+    <researchPrerequisites>
+      <li>GR_DailyPlugin</li>
+    </researchPrerequisites>
+
+    <requiredMaterials>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </requiredMaterials>
+
+    <workAmount>120</workAmount>
+
+  </SD.GrayRace.Defs.GRUpgradeDef>
 </Defs>

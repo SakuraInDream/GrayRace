@@ -70,9 +70,7 @@ public class UpgradeModule : GrayModuleBase
 
     public bool IsUpgradeActive(GRUpgradeDef def, BodyPartRecord part)
     {
-        if (pawn?.health?.hediffSet == null || def?.hediffToApply == null || part == null) return false;
-
-        return pawn.health.hediffSet.hediffs.Any(h => h.def == def.hediffToApply && h.Part == part);
+        return TryGetActiveUpgradeHediff(def, part, out _);
     }
 
     public bool CanApplyUpgrade(
@@ -144,9 +142,9 @@ public class UpgradeModule : GrayModuleBase
             return false;
         }
 
-        if (IsUpgradeActive(def, part))
+        if (TryGetActiveUpgradeHediff(def, part, out Hediff activeHediff))
         {
-            RemoveUpgradeInstance(def, part, refundPluginMaterials: def.IsPlugin);
+            RemoveUpgradeInstance(def, activeHediff.Part, refundPluginMaterials: def.IsPlugin);
 
             feedback = $"已停用: {def.LabelCap}";
             messageType = MessageTypeDefOf.NeutralEvent;
@@ -382,11 +380,11 @@ public class UpgradeModule : GrayModuleBase
         foreach (GRUpgradeDef upgrade in DefDatabase<GRUpgradeDef>.AllDefsListForReading)
         {
             if (!IsValidUpgradeDef(upgrade)) continue;
-            if (!IsUpgradeActive(upgrade, part)) continue;
+            if (!TryGetActiveUpgradeHediff(upgrade, part, out Hediff activeHediff)) continue;
             if (incomingDef != null && upgrade == incomingDef) continue;
             if (incomingDef != null && UpgradesCanCoexist(upgrade, incomingDef)) continue;
 
-            RemoveUpgradeInstance(upgrade, part, refundPluginMaterials);
+            RemoveUpgradeInstance(upgrade, activeHediff.Part, refundPluginMaterials);
         }
     }
 
@@ -410,6 +408,27 @@ public class UpgradeModule : GrayModuleBase
         {
             RefundPluginMaterialsToGround(upgrade);
         }
+    }
+
+    private bool TryGetActiveUpgradeHediff(GRUpgradeDef def, BodyPartRecord part, out Hediff activeHediff)
+    {
+        activeHediff = null;
+        if (pawn?.health?.hediffSet == null || def?.hediffToApply == null || part == null) return false;
+
+        List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
+        for (int i = 0; i < hediffs.Count; i++)
+        {
+            Hediff hediff = hediffs[i];
+            if (hediff == null || hediff.def != def.hediffToApply || hediff.Part == null) continue;
+
+            if (IsPartInSubtree(part, hediff.Part) || IsPartInSubtree(hediff.Part, part))
+            {
+                activeHediff = hediff;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private void RemoveAddedPartWithoutResettingOtherUpgrades(Hediff addedPartHediff)

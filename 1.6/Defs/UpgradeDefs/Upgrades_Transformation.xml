@@ -8,24 +8,21 @@
     <description>将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。</description>
 
     <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
-    <iconPath>UI/Upgrades/CombatChip</iconPath>
+    <iconPath>Things/projectile/Rail_Shotgun</iconPath>
 
-    <!-- 施加的身体部位 -->
-    <targetBodyPartGroups>
-      <li>Hands</li>
-    </targetBodyPartGroups>
+    <!-- 施加的身体部位 填 BodyPartDef -->
+    <targetBodyPart>MechanicalHand</targetBodyPart>
 
-    <!-- 排除的身体部位Tags -->
-    <excludedBodyPartTags>
-      <li>ManipulationLimbDigit</li>
-    </excludedBodyPartTags>
+    <!-- 如果不确定是什么身体部位可用 targetBodyPartGroups 填 BodyPartGroupDef -->
+    <!-- <targetBodyPartGroups>
+      <li></li>
+    </targetBodyPartGroups> -->
 
     <!-- 要施加的 Hediff(要变形的 Hediff) -->
     <!-- 示例为原版的 动力爪 -->
     <hediffToApply>PowerClaw</hediffToApply>
 
-    <!-- 身体变形不需要材料 -->
-    <!-- 判定是否属于变形的依据 -->
+    <!-- 身体变形不需要材料删掉 -->
     <!-- <requiredMaterials> -->
       <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
       <!-- <Plasteel>20</Plasteel> -->
@@ -45,12 +42,8 @@
     <label>挖掘臂形态</label>
     <description>将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
 
-    <targetBodyPartGroups>
-      <li>Hands</li>
-    </targetBodyPartGroups>
-    <excludedBodyPartTags>
-      <li>ManipulationLimbDigit</li>
-    </excludedBodyPartTags>
+    <targetBodyPart>MechanicalArm</targetBodyPart>
+
     <hediffToApply>DrillArm</hediffToApply>
     <researchPrerequisites>
       <li>SpecializedLimbs</li>
@@ -63,9 +56,7 @@
     <label>务农手形态</label>
     <description>将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
 
-    <targetBodyPartGroups>
-      <li>Hands</li>
-    </targetBodyPartGroups>
+    <targetBodyPart>MechanicalHand</targetBodyPart>
     <excludedBodyPartTags>
       <li>ManipulationLimbDigit</li>
     </excludedBodyPartTags>
@@ -81,9 +72,8 @@
     <label>夜视形态</label>
     <description>将眼部变形为夜视系统，在黑暗中也能清晰视物。</description>
 
-    <targetBodyPartTags>
-      <li>SightSource</li>
-    </targetBodyPartTags>
+    <targetBodyPart>SightSensor</targetBodyPart>
+
     <hediffToApply>GR_Hediff_NightVisionEye</hediffToApply>
     <researchPrerequisites>
       <li>SpecializedLimbs</li>
@@ -97,9 +87,7 @@
     <label>仿生臂形态</label>
     <description>将手臂重构为原版仿生臂。</description>
 
-    <targetBodyPartGroups>
-      <li>Arms</li>
-    </targetBodyPartGroups>
+    <targetBodyPart>MechanicalArm</targetBodyPart>
     <hediffToApply>BionicArm</hediffToApply>
     <researchPrerequisites>
       <li>Bionics</li>
@@ -112,9 +100,7 @@
     <label>仿生腿形态</label>
     <description>将腿部重构为原版仿生腿。</description>
 
-    <targetBodyPartGroups>
-      <li>Legs</li>
-    </targetBodyPartGroups>
+    <targetBodyPart>MechanicalLeg</targetBodyPart>
     <hediffToApply>BionicLeg</hediffToApply>
     <researchPrerequisites>
       <li>Bionics</li>
@@ -127,9 +113,8 @@
     <label>仿生眼形态</label>
     <description>将视觉器官重构为原版仿生眼。</description>
 
-    <targetBodyPartTags>
-      <li>SightSource</li>
-    </targetBodyPartTags>
+    <targetBodyPart>SightSensor</targetBodyPart>
+
     <hediffToApply>BionicEye</hediffToApply>
     <researchPrerequisites>
       <li>Bionics</li>
@@ -142,9 +127,8 @@
     <label>仿生耳形态</label>
     <description>将听觉器官重构为原版仿生耳。</description>
 
-    <targetBodyPartTags>
-      <li>HearingSource</li>
-    </targetBodyPartTags>
+    <targetBodyPart>HearingSensor</targetBodyPart>
+
     <hediffToApply>BionicEar</hediffToApply>
     <researchPrerequisites>
       <li>Bionics</li>
@@ -155,11 +139,10 @@
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicHeart</defName>
     <label>仿生心脏形态</label>
-    <description>将循环核心重构为原版仿生心脏。</description>
+    <description>将灰潮核心重构为原版仿生心脏。</description>
 
-    <targetBodyPartTags>
-      <li>BloodPumpingSource</li>
-    </targetBodyPartTags>
+    <targetBodyPart>Nano_Heart</targetBodyPart>
+
     <hediffToApply>BionicHeart</hediffToApply>
     <researchPrerequisites>
       <li>Bionics</li>
@@ -168,28 +151,11 @@
   </SD.GrayRace.Defs.GRUpgradeDef>
 
   <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicStomach</defName>
-    <label>仿生胃形态</label>
-    <description>将代谢器官重构为原版仿生胃。</description>
-
-    <targetBodyPartTags>
-      <li>MetabolismSource</li>
-    </targetBodyPartTags>
-    <hediffToApply>BionicStomach</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>110</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicJaw</defName>
     <label>仿生下颌形态</label>
     <description>将下颌重构为原版仿生下颌。</description>
 
-    <targetBodyParts>
-      <li>Jaw</li>
-    </targetBodyParts>
+    <targetBodyPart>Jaw</targetBodyPart>
     <hediffToApply>BionicJaw</hediffToApply>
     <researchPrerequisites>
       <li>Bionics</li>
@@ -211,20 +177,4 @@
     </researchPrerequisites>
     <uiOrder>130</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicSpine</defName>
-    <label>仿生脊椎形态</label>
-    <description>将脊椎重构为原版仿生脊椎。</description>
-
-    <targetBodyPartTags>
-      <li>Spine</li>
-    </targetBodyPartTags>
-    <hediffToApply>BionicSpine</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>140</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
 </Defs>

@@ -10,7 +10,7 @@ public static class UpgradeTargetMatcher
     {
         if (def == null) return false;
 
-        return HasItems(def.targetBodyParts)
+        return def.targetBodyPart != null
                || HasItems(def.targetBodyPartTags)
                || HasItems(def.targetBodyPartGroups);
     }
@@ -32,7 +32,7 @@ public static class UpgradeTargetMatcher
 
     private static bool MatchesIncludeRule(GRUpgradeDef def, BodyPartRecord part)
     {
-        if (HasItems(def.targetBodyParts) && def.targetBodyParts.Contains(part.def)) return true;
+        if (def.targetBodyPart != null && def.targetBodyPart == part.def) return true;
         if (HasItems(def.targetBodyPartTags) && HasAnyTag(part, def.targetBodyPartTags)) return true;
         if (HasItems(def.targetBodyPartGroups) && HasAnyGroup(part, def.targetBodyPartGroups)) return true;
 

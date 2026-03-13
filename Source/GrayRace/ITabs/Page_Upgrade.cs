@@ -3,6 +3,7 @@ using System.Linq;
 using RimWorld;
 using SD.GrayRace.Defs;
 using SD.GrayRace.Modules;
+using SD.GrayRace.Utilities;
 using UnityEngine;
 using Verse;
 using Verse.Sound;
@@ -15,9 +16,12 @@ namespace SD.GrayRace.ITabs;
 public class Page_Upgrade : BasePageITab
 {
     private bool _refreshRequested;
-    private List<BodyPartRecord> _upgradeableParts = new List<BodyPartRecord>();
-    private List<GRUpgradeDef> _availableUpgradesForSelectedPart = new List<GRUpgradeDef>();
+    private readonly List<BodyPartRecord> _upgradeableParts = new List<BodyPartRecord>();
+    private readonly HashSet<BodyPartRecord> _upgradeablePartSet = new HashSet<BodyPartRecord>();
+    private readonly List<GRUpgradeDef> _availableUpgradesForSelectedPart = new List<GRUpgradeDef>();
     private BodyPartRecord _selectedPart;
+    private Vector2 _detailScrollPosition = Vector2.zero;
+    private float _detailViewHeight;
 
     private UpgradeModule UpgradeComp => pawn?.GetManager()?.upgradeModule;
 
@@ -26,14 +30,15 @@ public class Page_Upgrade : BasePageITab
     public override void OnPawnChanged()
     {
         _upgradeableParts.Clear();
+        _upgradeablePartSet.Clear();
         _availableUpgradesForSelectedPart.Clear();
         _selectedPart = null;
+        _detailScrollPosition = Vector2.zero;
+        _detailViewHeight = 0f;
 
         if (pawn == null || UpgradeComp == null) return;
 
-        _upgradeableParts = GetDisplayableBodyParts()
-            .Where(part => UpgradeComp.HasUpgradeDefinitionForPart(part) || UpgradeComp.HasAnyActiveUpgrade(part))
-            .ToList();
+        RebuildUpgradeableParts();
 
         SetDefaultSelection();
         RefreshAvailableUpgrades();
@@ -48,6 +53,8 @@ public class Page_Upgrade : BasePageITab
             part =>
             {
                 _selectedPart = part;
+                _detailScrollPosition = Vector2.zero;
+                _detailViewHeight = 0f;
                 RefreshAvailableUpgrades();
             },
             GetPartLabel,
@@ -69,8 +76,14 @@ public class Page_Upgrade : BasePageITab
             return;
         }
 
+        Rect outRect = rect;
+        Rect viewRect = new Rect(0f, 0f, outRect.width - 16f, Mathf.Max(_detailViewHeight, outRect.height));
+
+        Widgets.BeginScrollView(outRect, ref _detailScrollPosition, viewRect);
+
         Listing_Standard listing = new Listing_Standard();
-        listing.Begin(rect);
+        listing.maxOneColumn = true;
+        listing.Begin(new Rect(0f, 0f, viewRect.width, viewRect.height));
 
         listing.Label($"<b>当前部位:</b> {_selectedPart.LabelCap}");
         listing.GapLine();
@@ -88,6 +101,13 @@ public class Page_Upgrade : BasePageITab
         }
 
         listing.End();
+
+        if (Event.current.type == EventType.Layout)
+        {
+            _detailViewHeight = Mathf.Max(listing.CurHeight + 6f, outRect.height);
+        }
+
+        Widgets.EndScrollView();
 
         if (_refreshRequested)
         {
@@ -113,11 +133,12 @@ public class Page_Upgrade : BasePageITab
     {
         if (_selectedPart == null || UpgradeComp == null)
         {
-            _availableUpgradesForSelectedPart = new List<GRUpgradeDef>();
+            _availableUpgradesForSelectedPart.Clear();
             return;
         }
 
-        _availableUpgradesForSelectedPart = UpgradeComp.GetAvailableUpgradesForPart(_selectedPart);
+        _availableUpgradesForSelectedPart.Clear();
+        _availableUpgradesForSelectedPart.AddRange(UpgradeComp.GetAvailableUpgradesForPart(_selectedPart));
     }
 
     private string GetPartLabel(BodyPartRecord part)
@@ -140,59 +161,11 @@ public class Page_Upgrade : BasePageITab
         string reason = string.Empty;
         bool canApply = isActive || (UpgradeComp != null && UpgradeComp.CanApplyUpgrade(def, _selectedPart, out reason));
 
-        Rect rowRect = listing.GetRect(90f);
-        Widgets.DrawBoxSolid(rowRect, new Color(0.1f, 0.1f, 0.1f, 0.5f));
-        Widgets.DrawHighlightIfMouseover(rowRect);
-
-        Rect iconRect = new Rect(rowRect.x + 5f, rowRect.y + 5f, 45f, 45f);
-        Texture2D icon = def.uiIcon;
-        if (icon == null || icon == BaseContent.BadTex)
-        {
-            icon = BaseContent.PlaceholderImage;
-        }
-        Widgets.DrawTextureFitted(iconRect, icon, 1f);
-
-        Rect textRect = new Rect(iconRect.xMax + 10f, rowRect.y + 2f, rowRect.width - 170f, rowRect.height - 4f);
-        Rect labelRect = new Rect(textRect.x, textRect.y, textRect.width, 20f);
-        Rect descRect = new Rect(textRect.x, labelRect.yMax + 1f, textRect.width, 20f);
-        Rect extraRect = new Rect(textRect.x, descRect.yMax + 1f, textRect.width, 40f);
-
         string typeLabel = def.IsTransformation ? "[变形]" : "[插件]";
         Color typeColor = def.IsTransformation ? Color.cyan : Color.magenta;
-
-        GUI.color = Color.white;
-        Text.Font = GameFont.Small;
-        Text.Anchor = TextAnchor.MiddleLeft;
-        Widgets.Label(labelRect, $"{typeLabel.Colorize(typeColor)} {def.LabelCap}");
-
-        Text.Font = GameFont.Tiny;
-        GUI.color = Color.gray;
-        Widgets.Label(descRect, (def.description ?? string.Empty).Truncate(textRect.width));
-
-        GUI.color = Color.white;
-        DrawUpgradeExtraInfo(extraRect, def, canApply, reason, isActive);
-
-        Text.Font = GameFont.Small;
-        Text.Anchor = TextAnchor.UpperLeft;
-        GUI.color = Color.white;
-
-        Rect btnRect = new Rect(rowRect.xMax - 95f, rowRect.y + 30f, 90f, 28f);
-        string buttonLabel = isActive ? "停用" : (def.IsPlugin ? "安装" : "启用");
-
-        if (Widgets.ButtonText(btnRect, buttonLabel))
-        {
-            TryToggleUpgrade(def);
-        }
-
-        TooltipHandler.TipRegion(rowRect, BuildUpgradeTooltip(def, isActive, canApply, reason));
-
-        listing.Gap(5f);
-    }
-
-    private void DrawUpgradeExtraInfo(Rect rect, GRUpgradeDef def, bool canApply, string reason, bool isActive)
-    {
-        Text.Anchor = TextAnchor.UpperLeft;
-        Text.Font = GameFont.Tiny;
+        string labelName = def.LabelCap.ToString();
+        string labelText = typeLabel + " " + labelName;
+        string descText = def.description ?? string.Empty;
 
         List<ResearchProjectDef> researchProjects = def.EnumerateResearchPrerequisites().ToList();
         string researchText;
@@ -210,23 +183,132 @@ public class Page_Upgrade : BasePageITab
             researchText = $"科技: {researchProjects.Select(project => project.LabelCap.ToString()).ToCommaList()} ({statusText})";
         }
 
-        Widgets.Label(new Rect(rect.x, rect.y, rect.width, 18f), researchText);
-
         string requirementText = def.IsPlugin
             ? (UpgradeComp?.BuildPluginRequirementSummary(def) ?? "需求: 无")
             : "变形无需材料消耗";
-        Widgets.Label(new Rect(rect.x, rect.y + 16f, rect.width, 18f), requirementText.Truncate(rect.width));
 
+        bool showStateLine = false;
+        string stateText = string.Empty;
+        Color stateColor = Color.white;
         if (!isActive && !canApply && !reason.NullOrEmpty())
         {
-            GUI.color = ColorLibrary.RedReadable;
-            Widgets.Label(new Rect(rect.x, rect.y + 30f, rect.width, 18f), reason.Truncate(rect.width));
-            GUI.color = Color.white;
+            showStateLine = true;
+            stateText = reason;
+            stateColor = ColorLibrary.RedReadable;
         }
         else if (isActive)
         {
-            GUI.color = Color.green;
-            Widgets.Label(new Rect(rect.x, rect.y + 30f, rect.width, 18f), "当前已启用");
+            showStateLine = true;
+            stateText = "当前已启用";
+            stateColor = Color.green;
+        }
+
+        bool prevWordWrap = Text.WordWrap;
+        Text.WordWrap = true;
+
+        float rowWidth = listing.ColumnWidth;
+        float textWidth = rowWidth - 170f;
+
+        Text.Font = GameFont.Small;
+        float labelHeight = Mathf.Max(20f, Text.CalcHeight(labelText, textWidth));
+
+        Text.Font = GameFont.Tiny;
+        float descHeight = Mathf.Max(20f, Text.CalcHeight(descText, textWidth));
+        float researchHeight = Mathf.Max(18f, Text.CalcHeight(researchText, textWidth));
+        float requirementHeight = Mathf.Max(18f, Text.CalcHeight(requirementText, textWidth));
+        float stateHeight = showStateLine ? Mathf.Max(18f, Text.CalcHeight(stateText, textWidth)) : 0f;
+
+        float lineGap = 2f;
+        float extraHeight = researchHeight + lineGap + requirementHeight + (showStateLine ? lineGap + stateHeight : 0f);
+        float contentHeight = labelHeight + 1f + descHeight + 1f + extraHeight;
+        float rowHeight = Mathf.Max(90f, contentHeight + 4f);
+
+        Rect rowRect = listing.GetRect(rowHeight);
+        Widgets.DrawBoxSolid(rowRect, new Color(0.1f, 0.1f, 0.1f, 0.5f));
+        Widgets.DrawHighlightIfMouseover(rowRect);
+
+        Rect iconRect = new Rect(rowRect.x + 5f, rowRect.y + 5f, 45f, 45f);
+        Texture2D icon = def.uiIcon;
+        if (icon == null || icon == BaseContent.BadTex)
+        {
+            icon = BaseContent.PlaceholderImage;
+        }
+        Widgets.DrawTextureFitted(iconRect, icon, 1f);
+
+        Rect textRect = new Rect(iconRect.xMax + 10f, rowRect.y + 2f, rowRect.width - 170f, rowRect.height - 4f);
+        Rect labelRect = new Rect(textRect.x, textRect.y, textRect.width, labelHeight);
+        Rect descRect = new Rect(textRect.x, labelRect.yMax + 1f, textRect.width, descHeight);
+        Rect extraRect = new Rect(textRect.x, descRect.yMax + 1f, textRect.width, extraHeight);
+
+        GUI.color = Color.white;
+        Text.Font = GameFont.Small;
+        Text.Anchor = TextAnchor.UpperLeft;
+        Widgets.Label(labelRect, $"{typeLabel.Colorize(typeColor)} {labelName}");
+
+        Text.Font = GameFont.Tiny;
+        GUI.color = Color.gray;
+        Widgets.Label(descRect, descText);
+
+        GUI.color = Color.white;
+        DrawUpgradeExtraInfo(
+            extraRect,
+            researchText,
+            researchHeight,
+            requirementText,
+            requirementHeight,
+            stateText,
+            stateHeight,
+            showStateLine,
+            stateColor,
+            lineGap
+        );
+
+        Text.Font = GameFont.Small;
+        Text.Anchor = TextAnchor.UpperLeft;
+        GUI.color = Color.white;
+
+        Rect btnRect = new Rect(rowRect.xMax - 95f, rowRect.y + 30f, 90f, 28f);
+        string buttonLabel = isActive ? "停用" : (def.IsPlugin ? "安装" : "启用");
+
+        if (Widgets.ButtonText(btnRect, buttonLabel))
+        {
+            TryToggleUpgrade(def);
+        }
+
+        TooltipHandler.TipRegion(rowRect, BuildUpgradeTooltip(def, isActive, canApply, reason));
+
+        listing.Gap(5f);
+
+        Text.WordWrap = prevWordWrap;
+    }
+
+    private void DrawUpgradeExtraInfo(
+        Rect rect,
+        string researchText,
+        float researchHeight,
+        string requirementText,
+        float requirementHeight,
+        string stateText,
+        float stateHeight,
+        bool showStateLine,
+        Color stateColor,
+        float lineGap
+    )
+    {
+        Text.Anchor = TextAnchor.UpperLeft;
+        Text.Font = GameFont.Tiny;
+
+        float y = rect.y;
+        Widgets.Label(new Rect(rect.x, y, rect.width, researchHeight), researchText);
+        y += researchHeight + lineGap;
+
+        Widgets.Label(new Rect(rect.x, y, rect.width, requirementHeight), requirementText);
+        y += requirementHeight + lineGap;
+
+        if (showStateLine && !stateText.NullOrEmpty())
+        {
+            GUI.color = stateColor;
+            Widgets.Label(new Rect(rect.x, y, rect.width, stateHeight), stateText);
             GUI.color = Color.white;
         }
     }
@@ -332,5 +414,74 @@ public class Page_Upgrade : BasePageITab
         float percent = delta * 100f;
         string sign = percent >= 0f ? "+" : string.Empty;
         return $"{sign}{percent:0.#}%";
+    }
+
+    private void RebuildUpgradeableParts()
+    {
+        _upgradeableParts.Clear();
+        _upgradeablePartSet.Clear();
+
+        List<BodyPartRecord> allParts = pawn?.RaceProps?.body?.AllParts;
+        if (allParts == null || allParts.Count == 0) return;
+
+        List<GRUpgradeDef> allDefs = DefDatabase<GRUpgradeDef>.AllDefsListForReading;
+        for (int i = 0; i < allDefs.Count; i++)
+        {
+            GRUpgradeDef def = allDefs[i];
+            if (!IsValidUpgradeDef(def)) continue;
+
+            for (int j = 0; j < allParts.Count; j++)
+            {
+                BodyPartRecord part = allParts[j];
+                if (part == null) continue;
+
+                if (UpgradeTargetMatcher.Matches(def, part) && _upgradeablePartSet.Add(part))
+                {
+                    _upgradeableParts.Add(part);
+                }
+            }
+        }
+
+        if (UpgradeComp != null)
+        {
+            for (int j = 0; j < allParts.Count; j++)
+            {
+                BodyPartRecord part = allParts[j];
+                if (part == null) continue;
+
+                if (UpgradeComp.HasAnyActiveUpgrade(part) && _upgradeablePartSet.Add(part))
+                {
+                    _upgradeableParts.Add(part);
+                }
+            }
+        }
+
+        _upgradeableParts.Sort(CompareParts);
+    }
+
+    private static bool IsValidUpgradeDef(GRUpgradeDef def)
+    {
+        return def != null
+               && def.hediffToApply != null
+               && UpgradeTargetMatcher.HasAnyTargetRule(def);
+    }
+
+    private static float GetListPriority(BodyPartRecord rec)
+    {
+        if (rec == null) return 9999999f;
+        return ((int)rec.height * 10000) + rec.coverageAbsWithChildren;
+    }
+
+    private static int CompareParts(BodyPartRecord a, BodyPartRecord b)
+    {
+        float pa = GetListPriority(a);
+        float pb = GetListPriority(b);
+
+        if (pa > pb) return -1;
+        if (pa < pb) return 1;
+
+        string la = a?.LabelCap ?? string.Empty;
+        string lb = b?.LabelCap ?? string.Empty;
+        return string.CompareOrdinal(la, lb);
     }
 }

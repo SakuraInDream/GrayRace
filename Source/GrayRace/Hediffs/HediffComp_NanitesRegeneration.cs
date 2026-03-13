@@ -143,7 +143,7 @@ public class HediffComp_NanitesRegeneration : HediffComp
         {
             // 化繁为简，重新使用原版食尸鬼的再生逻辑
             Pawn.health.hediffSet.GetHediffs(ref _tmpMissingParts,
-                h => h.Part.parent != null && !_tmpInjuries.Any(x => x.Part == h.Part.parent) &&
+                h => h.Part.parent != null && !HasInjuryOnPart(h.Part.parent) &&
                      Pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(h.Part.parent) == null &&
                      Pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(h.Part.parent) == null);
 
@@ -162,10 +162,43 @@ public class HediffComp_NanitesRegeneration : HediffComp
 
     private bool HasAnyHealableCondition()
     {
-        List<Hediff> allHediffs = Pawn.health.hediffSet.hediffs;
-        if (allHediffs.Any(h => h is Hediff_Injury or Hediff_MissingPart))
+        Pawn.health.hediffSet.GetHediffs<Hediff_Injury>(ref _tmpInjuries);
+        for (int i = 0; i < _tmpInjuries.Count; i++)
         {
+            Hediff_Injury injury = _tmpInjuries[i];
+            if (injury != null)
+            {
+                return true;
+            }
+        }
+
+        Pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>(ref _tmpMissingParts);
+        for (int i = 0; i < _tmpMissingParts.Count; i++)
+        {
+            Hediff_MissingPart missingPart = _tmpMissingParts[i];
+            if (missingPart?.Part?.parent == null) continue;
+
+            BodyPartRecord parent = missingPart.Part.parent;
+            if (HasInjuryOnPart(parent)) continue;
+            if (Pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_MissingPart>(parent) != null) continue;
+            if (Pawn.health.hediffSet.GetFirstHediffMatchingPart<Hediff_AddedPart>(parent) != null) continue;
+
             return true;
+        }
+
+        return false;
+    }
+
+    private bool HasInjuryOnPart(BodyPartRecord part)
+    {
+        if (part == null || _tmpInjuries == null || _tmpInjuries.Count == 0) return false;
+        for (int i = 0; i < _tmpInjuries.Count; i++)
+        {
+            Hediff_Injury injury = _tmpInjuries[i];
+            if (injury?.Part == part)
+            {
+                return true;
+            }
         }
         return false;
     }

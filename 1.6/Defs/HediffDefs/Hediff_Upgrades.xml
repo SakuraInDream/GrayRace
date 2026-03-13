@@ -37,11 +37,6 @@
     <description>植入大脑的战斗芯片，提升战斗能力。</description>
     <defaultLabelColor>(0.8, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.05</severityPerDay>
-      </li>
-    </comps>
     <stages>
       <li>
         <statOffsets>
@@ -63,11 +58,6 @@
     <description>植入大脑的分析芯片，提升学习能力。</description>
     <defaultLabelColor>(0.3, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.03</severityPerDay>
-      </li>
-    </comps>
     <stages>
       <li>
         <statOffsets>
@@ -88,11 +78,6 @@
     <description>安装在灰潮核心的增强器。增加备用灰潮机械回复速度</description>
     <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
     <isBad>false</isBad>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.04</severityPerDay>
-      </li>
-    </comps>
     <stages>
       <li>
         <statOffsets>
@@ -112,11 +97,6 @@
     <description>植入手部的精密操作芯片。</description>
     <defaultLabelColor>(0.6, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.06</severityPerDay>
-      </li>
-    </comps>
     <stages>
       <li>
         <statOffsets>
@@ -136,17 +116,78 @@
     <description>植入眼部的先进瞄准系统。</description>
     <defaultLabelColor>(0.8, 0.6, 0.2)</defaultLabelColor>
     <isBad>false</isBad>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.05</severityPerDay>
-      </li>
-    </comps>
     <stages>
       <li>
         <statOffsets>
           <ShootingAccuracyPawn>0.35</ShootingAccuracyPawn>
           <AimingDelayFactor>-0.2</AimingDelayFactor>
           <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_OverclockingChipPrimary</defName>
+    <label>初级超频芯片</label>
+    <description>增加25%超频上限。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_OverclockMaxLevel>0.25</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>GR_Hediff_OverclockingChipIntermediate</defName>
+    <label>中级超频芯片</label>
+    <description>增加75%超频上限。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_OverclockMaxLevel>0.75</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_OverclockingChipAdvanced</defName>
+    <label>高级超频芯片</label>
+    <description>增加150%超频上限。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_OverclockMaxLevel>1.5</GRStat_OverclockMaxLevel>
+          <GRStat_NaniteMax>-750</GRStat_NaniteMax>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef>
+    <defName>GR_Hediff_OverclockingChipUltimate</defName>
+    <label>终级超频芯片</label>
+    <description>增加250%超频上限。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_OverclockMaxLevel>2.5</GRStat_OverclockMaxLevel>
+          <GRStat_NaniteMax>-750</GRStat_NaniteMax>
         </statOffsets>
       </li>
     </stages>
