@@ -63,3 +63,5 @@ Source/GrayRace/GrayRace.sln.DotSettings.user
 Source/GrayRace/GrayRace.sln.DotSettings
 *.props
 /.vscode
+AGENTS.md
+/.gemini
