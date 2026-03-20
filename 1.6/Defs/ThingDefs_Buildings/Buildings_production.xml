@@ -160,6 +160,79 @@
     </researchPrerequisites>
   </ThingDef>
 
+  <!--灰裔干船坞-->
+
+  <ThingDef ParentName="BenchBase">
+    <defName>GR_Drydock</defName>
+    <label>Gray Drydock</label>
+    <description>A modular drydock used to assemble Gray warship-bodied mechanoids from predefined fitting packages.</description>
+    <thingClass>SD.GrayRace.ThingClasses.Building_GR_Drydock</thingClass>
+    <minifiedDef />
+    <thingCategories Inherit="false" />
+    <size>(5,5)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.85</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/Production/MechGestatorLarge</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(6,5)</drawSize>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1800</MaxHitPoints>
+      <WorkToBuild>16000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <WorkTableWorkSpeedFactor>1.25</WorkTableWorkSpeedFactor>
+    </statBases>
+    <costList>
+      <GR_Alloy>400</GR_Alloy>
+      <GR_Nanites>200</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>8000</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <recipes>
+      <li>GR_Mech_FF</li>
+    </recipes>
+    <inspectorTabs>
+      <li>SD.GrayRace.ITabs.ITab_GrayMechDrydock</li>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-3)</interactionCellOffset>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Gray_Building</designationCategory>
+    <uiOrder>350</uiOrder>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+  </ThingDef>
+
   <!--聚变反应堆-->
 
   <ThingDef ParentName="BuildingBase">

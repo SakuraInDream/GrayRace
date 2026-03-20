@@ -42,6 +42,9 @@
       <GR_Nanites>100</GR_Nanites>
       <GR_Alloy>10</GR_Alloy>
     </butcherProducts>
+    <comps>
+      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechLoadout" />
+    </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">

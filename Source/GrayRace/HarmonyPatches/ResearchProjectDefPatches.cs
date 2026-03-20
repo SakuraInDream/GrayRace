@@ -63,18 +63,42 @@ public static class ResearchProjectDefPatches
         extraByProject = new Dictionary<ResearchProjectDef, List<Def>>();
         foreach (GRUpgradeDef up in DefDatabase<GRUpgradeDef>.AllDefsListForReading)
         {
-            foreach (ResearchProjectDef project in up.EnumerateResearchPrerequisites())
-            {
-                if (!extraByProject.TryGetValue(project, out List<Def> list))
-                {
-                    list = new List<Def>();
-                    extraByProject.Add(project, list);
-                }
+            AddExtraUnlocks(up, up.EnumerateResearchPrerequisites());
+        }
 
-                if (!list.Contains(up))
-                {
-                    list.Add(up);
-                }
+        foreach (GRMechChassisDef chassis in DefDatabase<GRMechChassisDef>.AllDefsListForReading)
+        {
+            AddExtraUnlocks(chassis, chassis.EnumerateResearchPrerequisites());
+        }
+
+        foreach (GRMechSectionLayoutDef layout in DefDatabase<GRMechSectionLayoutDef>.AllDefsListForReading)
+        {
+            AddExtraUnlocks(layout, layout.EnumerateResearchPrerequisites());
+        }
+
+        foreach (GRMechModuleDef module in DefDatabase<GRMechModuleDef>.AllDefsListForReading)
+        {
+            AddExtraUnlocks(module, module.EnumerateResearchPrerequisites());
+        }
+    }
+
+    private static void AddExtraUnlocks(Def def, IEnumerable<ResearchProjectDef> projects)
+    {
+        if (def == null || projects == null) return;
+
+        foreach (ResearchProjectDef project in projects)
+        {
+            if (project == null) continue;
+
+            if (!extraByProject.TryGetValue(project, out List<Def> list))
+            {
+                list = new List<Def>();
+                extraByProject.Add(project, list);
+            }
+
+            if (!list.Contains(def))
+            {
+                list.Add(def);
             }
         }
     }

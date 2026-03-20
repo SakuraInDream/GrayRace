@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <SD.GrayRace.Defs.GRMechSlotTypeDef>
+    <defName>GR_MechSlot_Weapon</defName>
+    <label>weapon slot</label>
+    <description>Weapon hardpoint that follows Stellaris-style size rules.</description>
+  </SD.GrayRace.Defs.GRMechSlotTypeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotTypeDef>
+    <defName>GR_MechSlot_Utility</defName>
+    <label>utility slot</label>
+    <description>Utility slot for size-based defensive and support components.</description>
+  </SD.GrayRace.Defs.GRMechSlotTypeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotTypeDef>
+    <defName>GR_MechSlot_Aux</defName>
+    <label>aux slot</label>
+    <description>Auxiliary slot that does not use S/M/L/X/T sizes, matching Stellaris A-slot behavior.</description>
+    <ignoreSize>true</ignoreSize>
+  </SD.GrayRace.Defs.GRMechSlotTypeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_S</defName>
+    <label>S slot</label>
+    <description>Small module slot.</description>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_M</defName>
+    <label>M slot</label>
+    <description>Medium module slot.</description>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_L</defName>
+    <label>L slot</label>
+    <description>Large module slot.</description>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_X</defName>
+    <label>X slot</label>
+    <description>Super-heavy module slot.</description>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_T</defName>
+    <label>T slot</label>
+    <description>Torpedo and utility tube slot.</description>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechComponentSlotTemplateDef>
+    <defName>GR_MechComponentSlot_SmallTurret</defName>
+    <label>small turret</label>
+    <description>Stellaris-style small weapon hardpoint.</description>
+    <slotType>GR_MechSlot_Weapon</slotType>
+    <slotSize>GR_MechSlotSize_S</slotSize>
+  </SD.GrayRace.Defs.GRMechComponentSlotTemplateDef>
+
+  <SD.GrayRace.Defs.GRMechSectionRoleDef>
+    <defName>GR_MechSection_Bow</defName>
+    <label>bow section</label>
+    <description>Forward combat section.</description>
+  </SD.GrayRace.Defs.GRMechSectionRoleDef>
+
+  <SD.GrayRace.Defs.GRMechSectionRoleDef>
+    <defName>GR_MechSection_Core</defName>
+    <label>core section</label>
+    <description>Central systems section.</description>
+  </SD.GrayRace.Defs.GRMechSectionRoleDef>
+
+  <SD.GrayRace.Defs.GRMechSectionRoleDef>
+    <defName>GR_MechSection_Stern</defName>
+    <label>stern section</label>
+    <description>Rear propulsion section.</description>
+  </SD.GrayRace.Defs.GRMechSectionRoleDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+    <defName>GR_FF_Bow_Interceptor</defName>
+    <label>interceptor bow</label>
+    <description>Light forward combat section for compact ship-killer batteries.</description>
+    <sectionRole>GR_MechSection_Bow</sectionRole>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <additionalCostList>
+      <GR_Alloy>10</GR_Alloy>
+    </additionalCostList>
+    <componentSlots>
+      <li>
+        <key>ff_main_gun</key>
+        <label>bow gun mount</label>
+        <template>GR_MechComponentSlot_SmallTurret</template>
+        <anchorBodyPart>MechanicalHand</anchorBodyPart>
+      </li>
+    </componentSlots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+    <defName>GR_FF_Bow_Assault</defName>
+    <label>assault bow</label>
+    <description>Forward combat section with a primary gun mount and a dedicated precision uplink hardpoint.</description>
+    <sectionRole>GR_MechSection_Bow</sectionRole>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <additionalCostList>
+      <GR_Alloy>20</GR_Alloy>
+      <GR_Nanites>10</GR_Nanites>
+    </additionalCostList>
+    <componentSlots>
+      <li>
+        <key>ff_main_gun</key>
+        <label>forward gun mount</label>
+        <template>GR_MechComponentSlot_SmallTurret</template>
+        <anchorBodyPart>MechanicalHand</anchorBodyPart>
+        <uiOrder>10</uiOrder>
+      </li>
+    </componentSlots>
+    <auxUtilitySlots>1</auxUtilitySlots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+    <defName>GR_FF_Core_Scout</defName>
+    <label>scout core</label>
+    <description>Compact command and sensor package optimized for fast reconnaissance.</description>
+    <sectionRole>GR_MechSection_Core</sectionRole>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <smallUtilitySlots>1</smallUtilitySlots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+    <defName>GR_FF_Core_Command</defName>
+    <label>command core</label>
+    <description>Expanded command section with dedicated combat analysis and communications hardpoints.</description>
+    <sectionRole>GR_MechSection_Core</sectionRole>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <additionalCostList>
+      <GR_Alloy>15</GR_Alloy>
+      <GR_Nanites>20</GR_Nanites>
+    </additionalCostList>
+    <smallUtilitySlots>1</smallUtilitySlots>
+    <auxUtilitySlots>2</auxUtilitySlots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+    <defName>GR_FF_Stern_Vector</defName>
+    <label>vector stern</label>
+    <description>Rear propulsion frame built around a single high-response thruster bank.</description>
+    <sectionRole>GR_MechSection_Stern</sectionRole>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <auxUtilitySlots>1</auxUtilitySlots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+    <defName>GR_FF_Stern_Endurance</defName>
+    <label>endurance stern</label>
+    <description>Rear propulsion section that trades burst agility for reactor management and sustained output.</description>
+    <sectionRole>GR_MechSection_Stern</sectionRole>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <additionalCostList>
+      <GR_Alloy>15</GR_Alloy>
+      <GR_Nanites>10</GR_Nanites>
+    </additionalCostList>
+    <smallUtilitySlots>1</smallUtilitySlots>
+    <auxUtilitySlots>1</auxUtilitySlots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef>
+    <defName>GR_Chassis_FF</defName>
+    <label>frigate frame</label>
+    <description>Baseline light warship chassis used by Gray autonomous combat craft.</description>
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>60000</fixedWorkTicks>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <baseCostList>
+      <GR_Alloy>60</GR_Alloy>
+      <SubcoreBasic>1</SubcoreBasic>
+    </baseCostList>
+    <sections>
+      <li>
+        <role>GR_MechSection_Bow</role>
+        <layouts>
+          <li>GR_FF_Bow_Interceptor</li>
+          <li>GR_FF_Bow_Assault</li>
+        </layouts>
+        <defaultLayout>GR_FF_Bow_Interceptor</defaultLayout>
+      </li>
+      <li>
+        <role>GR_MechSection_Core</role>
+        <layouts>
+          <li>GR_FF_Core_Scout</li>
+          <li>GR_FF_Core_Command</li>
+        </layouts>
+        <defaultLayout>GR_FF_Core_Scout</defaultLayout>
+      </li>
+      <li>
+        <role>GR_MechSection_Stern</role>
+        <layouts>
+          <li>GR_FF_Stern_Vector</li>
+          <li>GR_FF_Stern_Endurance</li>
+        </layouts>
+        <defaultLayout>GR_FF_Stern_Vector</defaultLayout>
+      </li>
+    </sections>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_AA12mm</defName>
+    <label>12mm AA battery</label>
+    <description>Compact rapid-fire gun battery intended for light Gray frigate hulls.</description>
+    <allowedChassis>
+      <li>GR_Chassis_FF</li>
+    </allowedChassis>
+    <allowedSlotTypes>
+      <li>GR_MechSlot_Weapon</li>
+    </allowedSlotTypes>
+    <allowedSlotSizes>
+      <li>GR_MechSlotSize_S</li>
+    </allowedSlotSizes>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_12mmAA</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_ScoutSuite</defName>
+    <label>scout electronics suite</label>
+    <description>Integrated reconnaissance array and command electronics package.</description>
+    <allowedChassis>
+      <li>GR_Chassis_FF</li>
+    </allowedChassis>
+    <allowedSlotTypes>
+      <li>GR_MechSlot_Utility</li>
+    </allowedSlotTypes>
+    <allowedSlotSizes>
+      <li>GR_MechSlotSize_S</li>
+    </allowedSlotSizes>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Nanites>20</GR_Nanites>
+    </costList>
+    <hediffToApply>GR_Hediff_AnalysisChip</hediffToApply>
+    <anchorBodyPart>HearingSensor</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_VectorThruster</defName>
+    <label>vector thruster</label>
+    <description>High-response propulsion package tuned for abrupt course correction.</description>
+    <allowedChassis>
+      <li>GR_Chassis_FF</li>
+    </allowedChassis>
+    <allowedSlotTypes>
+      <li>GR_MechSlot_Aux</li>
+    </allowedSlotTypes>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <hediffToApply>GR_Hediff_EfficiencyBooster</hediffToApply>
+    <anchorBodyPart>MechanicalFoot</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_TargetingRelay</defName>
+    <label>targeting relay</label>
+    <description>Bow-mounted targeting relay that improves tracking and first-shot accuracy.</description>
+    <allowedChassis>
+      <li>GR_Chassis_FF</li>
+    </allowedChassis>
+    <allowedSlotTypes>
+      <li>GR_MechSlot_Aux</li>
+    </allowedSlotTypes>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>8</GR_Alloy>
+      <GR_Nanites>12</GR_Nanites>
+    </costList>
+    <hediffToApply>GR_Hediff_TargetingSystem</hediffToApply>
+    <anchorBodyPart>SightSensor</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_CombatCore</defName>
+    <label>combat core</label>
+    <description>Dedicated battle computation core for aggressive engagement profiles.</description>
+    <allowedChassis>
+      <li>GR_Chassis_FF</li>
+    </allowedChassis>
+    <allowedSlotTypes>
+      <li>GR_MechSlot_Aux</li>
+    </allowedSlotTypes>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+      <GR_Nanites>25</GR_Nanites>
+    </costList>
+    <hediffToApply>GR_Hediff_CombatChip</hediffToApply>
+    <anchorBodyPart>ArtificialBrain</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_RadioAnalyzer</defName>
+    <label>radio analyzer</label>
+    <description>Signal analysis module that improves battlefield awareness and support processing.</description>
+    <allowedChassis>
+      <li>GR_Chassis_FF</li>
+    </allowedChassis>
+    <allowedSlotTypes>
+      <li>GR_MechSlot_Aux</li>
+    </allowedSlotTypes>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>6</GR_Alloy>
+      <GR_Nanites>10</GR_Nanites>
+    </costList>
+    <hediffToApply>GR_Hediff_AnalysisChip</hediffToApply>
+    <anchorBodyPart>HearingSensor</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_ReactorBooster</defName>
+    <label>reactor booster</label>
+    <description>Auxiliary reactor management package tuned for longer deployments.</description>
+    <allowedChassis>
+      <li>GR_Chassis_FF</li>
+    </allowedChassis>
+    <allowedSlotTypes>
+      <li>GR_MechSlot_Utility</li>
+    </allowedSlotTypes>
+    <allowedSlotSizes>
+      <li>GR_MechSlotSize_S</li>
+    </allowedSlotSizes>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+      <GR_Nanites>15</GR_Nanites>
+    </costList>
+    <hediffToApply>GR_Hediff_EfficiencyBooster</hediffToApply>
+    <anchorBodyPart>Reactor</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_OverclockChip</defName>
+    <label>overclock control chip</label>
+    <description>Experimental command processor that expands safe overclock tolerance for test builds.</description>
+    <allowedChassis>
+      <li>GR_Chassis_FF</li>
+    </allowedChassis>
+    <allowedSlotTypes>
+      <li>GR_MechSlot_Aux</li>
+    </allowedSlotTypes>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+      <GR_Nanites>30</GR_Nanites>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <hediffToApply>GR_Hediff_OverclockingChipPrimary</hediffToApply>
+    <anchorBodyPart>ArtificialBrain</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechPresetDef>
+    <defName>GR_MechPreset_FF_Interceptor</defName>
+    <label>interceptor package</label>
+    <description>Default Gray frigate fit tuned for screening and light ship interception.</description>
+    <chassis>GR_Chassis_FF</chassis>
+    <sections>
+      <li>
+        <role>GR_MechSection_Bow</role>
+        <layout>GR_FF_Bow_Interceptor</layout>
+      </li>
+      <li>
+        <role>GR_MechSection_Core</role>
+        <layout>GR_FF_Core_Scout</layout>
+      </li>
+      <li>
+        <role>GR_MechSection_Stern</role>
+        <layout>GR_FF_Stern_Vector</layout>
+      </li>
+    </sections>
+    <modules>
+      <li>
+        <slotKey>ff_main_gun</slotKey>
+        <module>GR_MechModule_FF_AA12mm</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Core_Scout_SMALL_UTILITY_GR_MechSlotSize_S_1</slotKey>
+        <module>GR_MechModule_FF_ScoutSuite</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Stern_Vector_AUX_UTILITY_1</slotKey>
+        <module>GR_MechModule_FF_VectorThruster</module>
+      </li>
+    </modules>
+  </SD.GrayRace.Defs.GRMechPresetDef>
+
+  <SD.GrayRace.Defs.GRMechPresetDef>
+    <defName>GR_MechPreset_FF_Assault</defName>
+    <label>assault package</label>
+    <description>Test preset with expanded bow and command-core layout for close-action combat.</description>
+    <chassis>GR_Chassis_FF</chassis>
+    <sections>
+      <li>
+        <role>GR_MechSection_Bow</role>
+        <layout>GR_FF_Bow_Assault</layout>
+      </li>
+      <li>
+        <role>GR_MechSection_Core</role>
+        <layout>GR_FF_Core_Command</layout>
+      </li>
+      <li>
+        <role>GR_MechSection_Stern</role>
+        <layout>GR_FF_Stern_Vector</layout>
+      </li>
+    </sections>
+    <modules>
+      <li>
+        <slotKey>ff_main_gun</slotKey>
+        <module>GR_MechModule_FF_AA12mm</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Bow_Assault_AUX_UTILITY_1</slotKey>
+        <module>GR_MechModule_FF_TargetingRelay</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Core_Command_SMALL_UTILITY_GR_MechSlotSize_S_1</slotKey>
+        <module>GR_MechModule_FF_ScoutSuite</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Core_Command_AUX_UTILITY_1</slotKey>
+        <module>GR_MechModule_FF_CombatCore</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Core_Command_AUX_UTILITY_2</slotKey>
+        <module>GR_MechModule_FF_RadioAnalyzer</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Stern_Vector_AUX_UTILITY_1</slotKey>
+        <module>GR_MechModule_FF_VectorThruster</module>
+      </li>
+    </modules>
+  </SD.GrayRace.Defs.GRMechPresetDef>
+
+  <SD.GrayRace.Defs.GRMechPresetDef>
+    <defName>GR_MechPreset_FF_Endurance</defName>
+    <label>endurance package</label>
+    <description>Test preset focused on reactor endurance and sustained sortie time.</description>
+    <chassis>GR_Chassis_FF</chassis>
+    <sections>
+      <li>
+        <role>GR_MechSection_Bow</role>
+        <layout>GR_FF_Bow_Interceptor</layout>
+      </li>
+      <li>
+        <role>GR_MechSection_Core</role>
+        <layout>GR_FF_Core_Command</layout>
+      </li>
+      <li>
+        <role>GR_MechSection_Stern</role>
+        <layout>GR_FF_Stern_Endurance</layout>
+      </li>
+    </sections>
+    <modules>
+      <li>
+        <slotKey>ff_main_gun</slotKey>
+        <module>GR_MechModule_FF_AA12mm</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Core_Command_SMALL_UTILITY_GR_MechSlotSize_S_1</slotKey>
+        <module>GR_MechModule_FF_ScoutSuite</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Core_Command_AUX_UTILITY_1</slotKey>
+        <module>GR_MechModule_FF_OverclockChip</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Core_Command_AUX_UTILITY_2</slotKey>
+        <module>GR_MechModule_FF_RadioAnalyzer</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Stern_Endurance_AUX_UTILITY_1</slotKey>
+        <module>GR_MechModule_FF_VectorThruster</module>
+      </li>
+      <li>
+        <slotKey>GR_FF_Stern_Endurance_SMALL_UTILITY_GR_MechSlotSize_S_1</slotKey>
+        <module>GR_MechModule_FF_ReactorBooster</module>
+      </li>
+    </modules>
+  </SD.GrayRace.Defs.GRMechPresetDef>
+
+</Defs>

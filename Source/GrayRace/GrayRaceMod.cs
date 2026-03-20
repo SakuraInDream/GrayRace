@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using HarmonyLib;
+using RimWorld;
 using SD.GrayRace.HarmonyPatches;
 using Verse;
 
@@ -18,11 +19,14 @@ namespace SD.GrayRace
 #endif
             HarmonyInstance = new Harmony("sd.grayrace.mod");
             MethodInfo originalMethod = AccessTools.PropertyGetter(typeof(ResearchProjectDef), nameof(ResearchProjectDef.UnlockedDefs));
+            MethodInfo makeNewBillMethod = AccessTools.Method(typeof(BillUtility), nameof(BillUtility.MakeNewBill));
             // HarmonyMethod patch = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsPostfix));
             HarmonyMethod transpiler = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsTranspiler));
+            HarmonyMethod makeNewBillPostfix = new HarmonyMethod(typeof(BillUtilityPatches), nameof(BillUtilityPatches.MakeNewBillPostfix));
 
             // HarmonyInstance.Patch(original: originalMethod, postfix: patch);
             HarmonyInstance.Patch(original: originalMethod, transpiler: transpiler);
+            HarmonyInstance.Patch(original: makeNewBillMethod, postfix: makeNewBillPostfix);
         }
     }
 }

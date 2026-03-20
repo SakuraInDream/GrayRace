@@ -3,12 +3,14 @@
 
   <RecipeDef ParentName="LightMechanoidRecipe">
     <defName>GR_Mech_FF</defName>
-    <label>gestate frigate</label>
-    <description>Gestate a frigate mechanoid.</description>
+    <label>assemble frigate</label>
+    <description>Assemble a Gray interceptor frigate from a predefined drydock package.</description>
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
-    <recipeUsers>
-      <li>MechGestator</li>
+    <recipeUsers Inherit="False">
+      <li>GR_Drydock</li>
     </recipeUsers>
+    <gestationCycles>4</gestationCycles>
+    <formingTicks>15000</formingTicks>
     <ingredients Inherit="False">
       <li>
         <filter>
@@ -16,7 +18,15 @@
             <li>GR_Alloy</li>
           </thingDefs>
         </filter>
-        <count>100</count>
+        <count>90</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
       </li>
       <li>
         <filter>
@@ -33,6 +43,11 @@
     <descriptionHyperlinks>
       <ThingDef>GR_Mech_FF</ThingDef>
     </descriptionHyperlinks>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+        <preset>GR_MechPreset_FF_Interceptor</preset>
+      </li>
+    </modExtensions>
   </RecipeDef>
 
 </Defs>
