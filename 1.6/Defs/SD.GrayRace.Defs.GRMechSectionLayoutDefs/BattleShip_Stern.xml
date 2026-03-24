@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+    <defName>GR_BB_Stern_L1</defName>
+    <label>巨炮舰艉</label>
+    <description>Artillery stern copied from Stellaris BATTLESHIP_STERN_L1.</description>
+    <sectionSlot>GR_MechSection_Stern</sectionSlot>
+    <shipSize>GR_Chassis_Battleship</shipSize>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>640</GR_Alloy>
+    </costList>
+    <uiOrder>100</uiOrder>
+    <slots>
+      <li>
+        <key>LARGE_GUN_01</key>
+        <label>large gun 1</label>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <uiOrder>10</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <label>auxiliary 1</label>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>100</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_02</key>
+        <label>auxiliary 2</label>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>110</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+    <defName>GR_BB_Stern_M2</defName>
+    <label>齐射舰艉</label>
+    <description>Line stern copied from Stellaris BATTLESHIP_STERN_M2.</description>
+    <sectionSlot>GR_MechSection_Stern</sectionSlot>
+    <shipSize>GR_Chassis_Battleship</shipSize>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>640</GR_Alloy>
+    </costList>
+    <uiOrder>200</uiOrder>
+    <slots>
+      <li>
+        <key>MEDIUM_GUN_01</key>
+        <label>medium gun 1</label>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <uiOrder>10</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_GUN_02</key>
+        <label>medium gun 2</label>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <uiOrder>20</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <label>auxiliary 1</label>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>100</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_02</key>
+        <label>auxiliary 2</label>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>110</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_03</key>
+        <label>auxiliary 3</label>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>120</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+</Defs>

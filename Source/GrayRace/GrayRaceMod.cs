@@ -19,14 +19,14 @@ namespace SD.GrayRace
 #endif
             HarmonyInstance = new Harmony("sd.grayrace.mod");
             MethodInfo originalMethod = AccessTools.PropertyGetter(typeof(ResearchProjectDef), nameof(ResearchProjectDef.UnlockedDefs));
-            MethodInfo makeNewBillMethod = AccessTools.Method(typeof(BillUtility), nameof(BillUtility.MakeNewBill));
+            MethodInfo tryGetAttackVerbMethod = AccessTools.Method(typeof(Pawn), nameof(Pawn.TryGetAttackVerb));
             // HarmonyMethod patch = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsPostfix));
             HarmonyMethod transpiler = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsTranspiler));
-            HarmonyMethod makeNewBillPostfix = new HarmonyMethod(typeof(BillUtilityPatches), nameof(BillUtilityPatches.MakeNewBillPostfix));
+            HarmonyMethod tryGetAttackVerbPostfix = new HarmonyMethod(typeof(PawnPatches), nameof(PawnPatches.TryGetAttackVerbPostfix));
 
             // HarmonyInstance.Patch(original: originalMethod, postfix: patch);
             HarmonyInstance.Patch(original: originalMethod, transpiler: transpiler);
-            HarmonyInstance.Patch(original: makeNewBillMethod, postfix: makeNewBillPostfix);
+            HarmonyInstance.Patch(original: tryGetAttackVerbMethod, postfix: tryGetAttackVerbPostfix);
         }
     }
 }

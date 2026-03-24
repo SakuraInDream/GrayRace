@@ -1,4 +1,5 @@
 using RimWorld;
+using SD.GrayRace.Comps;
 using SD.GrayRace.Defs;
 using Verse;
 
@@ -8,14 +9,21 @@ public static class GrayMechModuleApplier
 {
     public static void ApplyLoadout(Pawn pawn, GrayMechDesignSnapshot snapshot)
     {
-        if (pawn == null || snapshot?.modules == null)
+        if (pawn == null)
         {
             return;
         }
 
-        if (pawn.equipment != null && GrayMechDesignUtility.HasAnyEquipmentModules(snapshot))
+        if (pawn.equipment != null && snapshot != null && GrayMechDesignUtility.HasAnyEquipmentModules(snapshot))
         {
             pawn.equipment.DestroyAllEquipment();
+        }
+
+        CompGrayMechTurretBank turretBank = pawn.TryGetComp<CompGrayMechTurretBank>();
+        if (snapshot?.modules == null)
+        {
+            turretBank?.RebuildFromSnapshot(snapshot);
+            return;
         }
 
         for (int i = 0; i < snapshot.modules.Count; i++)
@@ -30,11 +38,13 @@ public static class GrayMechModuleApplier
             ApplyEquipment(pawn, module);
             ApplyHediff(pawn, snapshot, assignment, module);
         }
+
+        turretBank?.RebuildFromSnapshot(snapshot);
     }
 
     private static void ApplyEquipment(Pawn pawn, GRMechModuleDef module)
     {
-        if (module?.equipmentDef == null || pawn?.equipment == null)
+        if (module?.equipmentDef == null || pawn?.equipment == null || ShouldUseInternalTurret(module))
         {
             return;
         }
@@ -58,6 +68,11 @@ public static class GrayMechModuleApplier
 
         PawnGenerator.PostProcessGeneratedGear(equipment, pawn);
         pawn.equipment.AddEquipment(equipment);
+    }
+
+    private static bool ShouldUseInternalTurret(GRMechModuleDef module)
+    {
+        return module?.equipmentDef != null && module.UsesSlotCategory(GRMechSlotCategory.Weapon);
     }
 
     private static void ApplyHediff(Pawn pawn, GrayMechDesignSnapshot snapshot, GrayMechModuleAssignment assignment, GRMechModuleDef module)
@@ -98,7 +113,7 @@ public static class GrayMechModuleApplier
             return null;
         }
 
-        if (!GrayMechDesignUtility.TryResolveSlot(snapshot, assignment.slotKey, out GRMechSlotDef slot, out _))
+        if (!GrayMechDesignUtility.TryResolveSlot(snapshot, assignment.sectionSlot, assignment.slotKey, out GRMechSlotEntry slot, out _))
         {
             return null;
         }

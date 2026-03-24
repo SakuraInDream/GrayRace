@@ -15,6 +15,14 @@
   </JobDef>
 
   <JobDef>
+    <defName>GR_HaulToDrydock</defName>
+    <driverClass>SD.GrayRace.JobDrivers.JobDriver_HaulToDrydock</driverClass>
+    <reportString>hauling TargetA to TargetB.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
     <defName>GR_InstallPluginUpgrade</defName>
     <driverClass>SD.GrayRace.JobDrivers.JobDriver_InstallPluginUpgrade</driverClass>
     <reportString>installing plugin upgrade.</reportString>

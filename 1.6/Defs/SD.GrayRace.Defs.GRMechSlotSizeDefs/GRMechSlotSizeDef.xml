@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 定义 Slot 类型，在群星里就是那堆 Small、Medium 等 -->
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_Small</defName>
+    <label>small</label>
+    <stellarisSizeKey>small</stellarisSizeKey>
+    <glyph>S</glyph>
+    <uiOrder>100</uiOrder>
+    <allowedComponentTypes>
+      <li>Weapon</li>
+      <li>Utility</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_PointDefense</defName>
+    <label>point-defence</label>
+    <stellarisSizeKey>point_defence</stellarisSizeKey>
+    <glyph>P</glyph>
+    <uiOrder>150</uiOrder>
+    <allowedComponentTypes>
+      <li>Weapon</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_Medium</defName>
+    <label>medium</label>
+    <stellarisSizeKey>medium</stellarisSizeKey>
+    <glyph>M</glyph>
+    <uiOrder>200</uiOrder>
+    <allowedComponentTypes>
+      <li>Weapon</li>
+      <li>Utility</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_Large</defName>
+    <label>large</label>
+    <stellarisSizeKey>large</stellarisSizeKey>
+    <glyph>L</glyph>
+    <uiOrder>300</uiOrder>
+    <allowedComponentTypes>
+      <li>Weapon</li>
+      <li>Utility</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_ExtraLarge</defName>
+    <label>extra-large</label>
+    <stellarisSizeKey>extra_large</stellarisSizeKey>
+    <glyph>X</glyph>
+    <uiOrder>400</uiOrder>
+    <allowedComponentTypes>
+      <li>Weapon</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_Torpedo</defName>
+    <label>torpedo</label>
+    <stellarisSizeKey>torpedo</stellarisSizeKey>
+    <glyph>G</glyph>
+    <uiOrder>500</uiOrder>
+    <allowedComponentTypes>
+      <li>Weapon</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_Hangar</defName>
+    <label>hangar</label>
+    <stellarisSizeKey>hangar</stellarisSizeKey>
+    <glyph>H</glyph>
+    <uiOrder>600</uiOrder>
+    <allowedComponentTypes>
+      <li>StrikeCraft</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_Titanic</defName>
+    <label>titanic</label>
+    <stellarisSizeKey>titanic</stellarisSizeKey>
+    <glyph>T</glyph>
+    <uiOrder>700</uiOrder>
+    <allowedComponentTypes>
+      <li>Weapon</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+
+  <SD.GrayRace.Defs.GRMechSlotSizeDef>
+    <defName>GR_MechSlotSize_Auxiliary</defName>
+    <label>auxiliary</label>
+    <stellarisSizeKey>aux</stellarisSizeKey>
+    <glyph>A</glyph>
+    <uiOrder>800</uiOrder>
+    <allowedComponentTypes>
+      <li>Auxiliary</li>
+    </allowedComponentTypes>
+  </SD.GrayRace.Defs.GRMechSlotSizeDef>
+</Defs>

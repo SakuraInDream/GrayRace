@@ -36,20 +36,29 @@ public class ITab_GrayMechDrydock : ITab
         state.EnsureCaches(dock);
         GrayMechDrydockTabContext context = new(dock, state, controller);
 
-        Rect root = new Rect(0f, 0f, size.x, size.y).ContractedBy(GrayMechDrydockTabStyle.Margin);
+        Rect root = new Rect(
+            GrayMechDrydockTabStyle.Margin,
+            GrayMechDrydockTabStyle.Margin + GrayMechDrydockTabStyle.CloseButtonReserveTop,
+            size.x - GrayMechDrydockTabStyle.Margin * 2f - GrayMechDrydockTabStyle.CloseButtonReserveRight,
+            size.y - GrayMechDrydockTabStyle.Margin * 2f - GrayMechDrydockTabStyle.CloseButtonReserveTop);
         float topBarHeight = state.GetTopBarHeight(dock, root.width);
-        float bottomBarHeight = state.GetBottomBarHeight(dock, root.width);
-
         Rect topRect = new Rect(root.x, root.y, root.width, topBarHeight);
-        Rect contentRect = new Rect(root.x, topRect.yMax + GrayMechDrydockTabStyle.PanelGap, root.width, root.height - topBarHeight - bottomBarHeight - GrayMechDrydockTabStyle.PanelGap * 2f);
-        Rect bottomRect = new Rect(root.x, contentRect.yMax + GrayMechDrydockTabStyle.PanelGap, root.width, bottomBarHeight);
+        Rect bodyRect = new Rect(root.x, topRect.yMax + GrayMechDrydockTabStyle.PanelGap, root.width, root.height - topBarHeight - GrayMechDrydockTabStyle.PanelGap);
+        Rect mainBodyRect = new Rect(bodyRect.x, bodyRect.y, bodyRect.width - GrayMechDrydockTabStyle.RightPanelWidth - GrayMechDrydockTabStyle.PanelGap, bodyRect.height);
+        Rect rightRect = new Rect(mainBodyRect.xMax + GrayMechDrydockTabStyle.PanelGap, bodyRect.y, GrayMechDrydockTabStyle.RightPanelWidth, bodyRect.height);
 
-        Rect centerRect = new Rect(contentRect.x, contentRect.y, contentRect.width - GrayMechDrydockTabStyle.RightPanelWidth - GrayMechDrydockTabStyle.PanelGap, contentRect.height);
-        Rect rightRect = new Rect(centerRect.xMax + GrayMechDrydockTabStyle.PanelGap, contentRect.y, GrayMechDrydockTabStyle.RightPanelWidth, contentRect.height);
+        float bottomBarHeight = state.GetBottomBarHeight(mainBodyRect.width);
+        float centerHeight = Mathf.Max(120f, mainBodyRect.height - bottomBarHeight - GrayMechDrydockTabStyle.PanelGap);
+        Rect upperRect = new Rect(mainBodyRect.x, mainBodyRect.y, mainBodyRect.width, centerHeight);
+        float leftPanelWidth = Mathf.Min(GrayMechDrydockTabStyle.LeftPanelWidth, upperRect.width - 420f);
+        Rect leftRect = new Rect(upperRect.x, upperRect.y, leftPanelWidth, upperRect.height);
+        Rect centerRect = new Rect(leftRect.xMax + GrayMechDrydockTabStyle.PanelGap, upperRect.y, upperRect.width - leftPanelWidth - GrayMechDrydockTabStyle.PanelGap, upperRect.height);
+        Rect bottomRect = new Rect(mainBodyRect.x, upperRect.yMax + GrayMechDrydockTabStyle.PanelGap, mainBodyRect.width, bottomBarHeight);
 
         topBarPanel.Draw(context, topRect);
         designerPanel.Draw(context, centerRect);
-        focusPanel.Draw(context, rightRect);
+        focusPanel.DrawSelection(context, leftRect);
+        focusPanel.DrawSummary(context, rightRect);
         bottomBarPanel.Draw(context, bottomRect);
     }
 }

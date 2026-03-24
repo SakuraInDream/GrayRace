@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 这一块的 modding 稍微麻烦一点 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_AA12mm</defName>
+    <label>12mm AA battery</label>
+    <description>Compact rapid-fire gun battery intended for light Gray frigate hulls.</description>
+    <iconPath>Things/Item/Weapon/RailGun/Rail_MG</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_12mmAA</equipmentDef>
+    <uiOrder>1100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_FF_PDArray</defName>
+    <label>point-defence array</label>
+    <description>Rapid interception battery for point-defence hardpoints on Gray light hulls.</description>
+    <iconPath>Things/Item/Weapon/RailGun/Rail_MG</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_PointDefenseTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>18</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <uiOrder>1110</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+</Defs>

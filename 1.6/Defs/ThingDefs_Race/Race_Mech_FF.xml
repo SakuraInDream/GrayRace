@@ -44,6 +44,8 @@
     </butcherProducts>
     <comps>
       <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechLoadout" />
+      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechTurretBank" />
+      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechShield" />
     </comps>
   </ThingDef>
 

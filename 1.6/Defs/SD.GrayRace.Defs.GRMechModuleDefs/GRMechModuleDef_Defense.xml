@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_Armor_S1</defName>
+    <label>小型纳米装甲</label>
+    <description>纳米</description>
+    <!-- Icon\ShipParts\ship_part_armor_1 -->
+    <iconPath>Icon/ShipParts/ship_part_armor_1</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallUtility</li>
+    </compatibleSlots>
+    <upgradeTo>GR_MechModule_Armor_S2</upgradeTo>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>5</GR_Alloy>
+    </costList>
+    <hediffToApply>GR_Hediff_MechArmor_S1</hediffToApply>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_Armor_S2</defName>
+    <label>小型瓷金装甲</label>
+    <description>瓷金</description>
+    <iconPath>Icon/ShipParts/ship_part_armor_2</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallUtility</li>
+    </compatibleSlots>
+    <upgradeTo>GR_MechModule_Armor_S3</upgradeTo>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>8</GR_Alloy>
+    </costList>
+    <hediffToApply>GR_Hediff_MechArmor_S2</hediffToApply>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_Armor_S3</defName>
+    <label>小型塑钢装甲</label>
+    <description>塑钢</description>
+    <iconPath>Icon/ShipParts/ship_part_armor_3</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallUtility</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>12</GR_Alloy>
+    </costList>
+    <hediffToApply>GR_Hediff_MechArmor_S3</hediffToApply>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+</Defs>

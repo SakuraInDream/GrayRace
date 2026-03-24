@@ -5,5 +5,5 @@ namespace SD.GrayRace.DefModExtensions;
 
 public class DefModExtension_MechAssemblyRecipe : DefModExtension
 {
-    public GRMechPresetDef preset;
+    public GRMechChassisDef chassis;
 }

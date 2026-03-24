@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechComponentSetDef>
+    <defName>GR_MechComponentSet_PowerCore</defName>
+    <label>power core</label>
+    <description>TODO</description>
+    <coreRole>PowerCore</coreRole>
+    <glyph>R</glyph>
+    <uiOrder>100</uiOrder>
+  </SD.GrayRace.Defs.GRMechComponentSetDef>
+
+  <SD.GrayRace.Defs.GRMechComponentSetDef>
+    <defName>GR_MechComponentSet_Thruster</defName>
+    <label>thruster</label>
+    <description>TODO</description>
+    <coreRole>Thruster</coreRole>
+    <glyph>E</glyph>
+    <uiOrder>200</uiOrder>
+  </SD.GrayRace.Defs.GRMechComponentSetDef>
+
+  <SD.GrayRace.Defs.GRMechComponentSetDef>
+    <defName>GR_MechComponentSet_Sensor</defName>
+    <label>sensor</label>
+    <description>TODO</description>
+    <coreRole>Sensor</coreRole>
+    <glyph>S</glyph>
+    <uiOrder>300</uiOrder>
+  </SD.GrayRace.Defs.GRMechComponentSetDef>
+
+  <SD.GrayRace.Defs.GRMechComponentSetDef>
+    <defName>GR_MechComponentSet_CombatComputer</defName>
+    <label>combat computer</label>
+    <description>TODO</description>
+    <coreRole>CombatComputer</coreRole>
+    <glyph>C</glyph>
+    <uiOrder>400</uiOrder>
+  </SD.GrayRace.Defs.GRMechComponentSetDef>
+</Defs>

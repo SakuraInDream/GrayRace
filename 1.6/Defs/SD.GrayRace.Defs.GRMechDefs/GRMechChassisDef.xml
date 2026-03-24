@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 没做超空间引擎的槽，所以少 1 个槽，不懂 RW 里效果怎么体现 -->
+  <SD.GrayRace.Defs.GRMechChassisDef Name="GR_ChassisBase" Abstract="True">
+    <requiredComponentSlots>
+      <li>
+        <!-- key 是用来保存数据的，让模块知道安装在哪个槽位里，仿群星设计 -->
+        <key>POWER_CORE_01</key>
+        <label>反应堆</label>
+        <slotDef>GR_MechSlot_PowerCore</slotDef>
+        <anchorBodyPart>Reactor</anchorBodyPart>
+        <uiOrder>10</uiOrder>
+      </li>
+      <li>
+        <key>THRUSTER_01</key>
+        <label>推进器</label>
+        <slotDef>GR_MechSlot_Thruster</slotDef>
+        <anchorBodyPart>MechanicalFoot</anchorBodyPart>
+        <uiOrder>20</uiOrder>
+      </li>
+      <li>
+        <key>SENSOR_01</key>
+        <label>传感设备</label>
+        <slotDef>GR_MechSlot_Sensor</slotDef>
+        <anchorBodyPart>HearingSensor</anchorBodyPart>
+        <uiOrder>30</uiOrder>
+      </li>
+      <li>
+        <key>COMBAT_COMPUTER_01</key>
+        <label>舰船作战电脑</label>
+        <slotDef>GR_MechSlot_CombatComputer</slotDef>
+        <anchorBodyPart>ArtificialBrain</anchorBodyPart>
+        <uiOrder>40</uiOrder>
+      </li>
+    </requiredComponentSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+
+  <!-- 都是仿群星的设计 -->
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Battleship</defName>
+    <label>战列舰</label>
+    <description>作为最大的标准化军用战舰，战列舰自然配备了厚重的装甲和数个移动炮塔。</description>
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>60000</fixedWorkTicks>
+    <uiOrder>100</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <!-- 支持哪些区段（GRMechSectionSlotDef） -->
+      <li>GR_MechSection_Bow</li>
+      <li>GR_MechSection_Mid</li>
+      <li>GR_MechSection_Stern</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Corvette</defName>
+    <label>护卫舰</label>
+    <description>体型相对小，速度快，操纵性强但是火力有限的机动机械。</description>
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>6000</fixedWorkTicks>
+    <uiOrder>100</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <!-- 像护卫舰只支持核心区段 -->
+      <li>GR_MechSection_Mid</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+</Defs>

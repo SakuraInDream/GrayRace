@@ -10,21 +10,23 @@ internal static class GrayMechDrydockTabStyle
 {
     private static readonly Dictionary<string, Texture2D> CachedTextures = new(StringComparer.Ordinal);
 
-    internal static readonly Vector2 WindowSize = new(1280f, 820f);
+    internal static readonly Vector2 WindowSize = new(1780f, 820f);
 
     internal const float Margin = 10f;
-    internal const float MinTopBarHeight = 78f;
-    internal const float MinBottomBarHeight = 164f;
+    internal const float CloseButtonReserveTop = 8f;
+    internal const float CloseButtonReserveRight = 44f;
+    internal const float MinTopBarHeight = 68f;
+    internal const float MinBottomBarHeight = 96f;
+    internal const float LeftPanelWidth = 360f;
     internal const float RightPanelWidth = 324f;
     internal const float PanelGap = 12f;
     internal const float RowHeight = 30f;
-    internal const float SlotButtonSize = 42f;
-    internal const float DesignerStripMinHeight = 86f;
+    internal const float SlotButtonSize = 50f;
+    internal const float SlotGridGap = 3f;
+    internal const int SlotGridColumns = 5;
+    internal const int FixedDisplaySlotCount = 10;
     internal const float LibraryCardWidth = 164f;
-    internal const float LibraryCardHeight = 118f;
-    internal const float LibraryActionWidth = 122f;
-    internal const float SummaryPanelHeight = 136f;
-    internal const float SlotGroupGap = 10f;
+    internal const float SummaryPanelHeight = 200f;
 
     internal static readonly Color BgDark = new(0.04f, 0.07f, 0.08f);
     internal static readonly Color BgPanel = new(0.07f, 0.11f, 0.12f);
@@ -39,6 +41,7 @@ internal static class GrayMechDrydockTabStyle
     internal static readonly Color MainWeaponColor = new(0.96f, 0.53f, 0.22f);
     internal static readonly Color AuxiliaryColor = new(0.3f, 0.86f, 0.79f);
     internal static readonly Color EngineColor = new(0.3f, 0.76f, 1f);
+    internal static readonly Color UtilitySlotColor = new(0.46f, 0.86f, 0.79f);
     internal static readonly Color GridLineColor = new(0.84f, 1f, 0.95f, 0.045f);
     internal static readonly Color HeaderLineColor = new(0.31f, 0.78f, 0.76f, 0.44f);
     internal static readonly Color HullPlateColor = new(0.13f, 0.18f, 0.2f, 0.75f);
@@ -78,5 +81,72 @@ internal static class GrayMechDrydockTabStyle
         }
 
         return GetTexture(chassis.designerPreviewPath) ?? chassis.ProducedRace?.uiIcon;
+    }
+
+    internal static Texture2D GetModuleIcon(GRMechModuleDef module)
+    {
+        if (module == null)
+        {
+            return null;
+        }
+
+        if (module.uiIcon != null && module.uiIcon != BaseContent.BadTex)
+        {
+            return module.uiIcon;
+        }
+
+        return null;
+    }
+
+    internal static Color GetSlotColor(GRMechSlotEntry slot)
+    {
+        if (slot == null)
+        {
+            return AuxiliaryColor;
+        }
+
+        if (slot.slotCategory == GRMechSlotCategory.CoreSystem)
+        {
+            switch (slot.coreRole)
+            {
+                case GRMechCoreComponentRole.PowerCore:
+                    return UtilitySlotColor;
+                case GRMechCoreComponentRole.Thruster:
+                    return EngineColor;
+                case GRMechCoreComponentRole.Sensor:
+                    return AuxiliaryColor;
+                case GRMechCoreComponentRole.CombatComputer:
+                    return SelectedColor;
+            }
+        }
+
+        if (slot.slotDef != null)
+        {
+            return slot.designerColor;
+        }
+
+        switch (slot.slotCategory)
+        {
+            case GRMechSlotCategory.Weapon:
+            case GRMechSlotCategory.Utility:
+            case GRMechSlotCategory.Auxiliary:
+                return AuxiliaryColor;
+            case GRMechSlotCategory.CoreSystem:
+                switch (slot.coreRole)
+                {
+                    case GRMechCoreComponentRole.PowerCore:
+                        return UtilitySlotColor;
+                    case GRMechCoreComponentRole.Thruster:
+                        return EngineColor;
+                    case GRMechCoreComponentRole.Sensor:
+                        return AuxiliaryColor;
+                    case GRMechCoreComponentRole.CombatComputer:
+                        return SelectedColor;
+                }
+
+                return AuxiliaryColor;
+        }
+
+        return AuxiliaryColor;
     }
 }

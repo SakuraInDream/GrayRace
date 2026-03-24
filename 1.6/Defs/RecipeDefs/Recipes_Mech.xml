@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
   <RecipeDef ParentName="LightMechanoidRecipe">
     <defName>GR_Mech_FF</defName>
-    <label>assemble frigate</label>
+    <label>护卫舰</label>
     <description>Assemble a Gray interceptor frigate from a predefined drydock package.</description>
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
-    <recipeUsers Inherit="False">
-      <li>GR_Drydock</li>
-    </recipeUsers>
     <gestationCycles>4</gestationCycles>
     <formingTicks>15000</formingTicks>
     <ingredients Inherit="False">
@@ -45,7 +42,8 @@
     </descriptionHyperlinks>
     <modExtensions>
       <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
-        <preset>GR_MechPreset_FF_Interceptor</preset>
+        <!-- 需要指定一个基础机体布局，这里指定护卫舰布局 -->
+        <chassis>GR_Chassis_Corvette</chassis>
       </li>
     </modExtensions>
   </RecipeDef>

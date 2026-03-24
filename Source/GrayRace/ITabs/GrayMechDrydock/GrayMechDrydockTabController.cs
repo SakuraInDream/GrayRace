@@ -81,12 +81,12 @@ internal sealed class GrayMechDrydockTabController
         Messages.Message("Design updated.", dock, MessageTypeDefOf.PositiveEvent);
     }
 
-    internal void QueueAssemblyBill(Building_GR_Drydock dock)
+    internal void QueueAssemblyOrder(Building_GR_Drydock dock)
     {
-        if (dock.TryQueueAssemblyBill(out string reason))
+        if (dock.TryQueueAssemblyOrder(out string reason))
         {
             SoundDefOf.Tick_Low.PlayOneShotOnCamera();
-            Messages.Message("Queued mech assembly bill.", dock, MessageTypeDefOf.PositiveEvent);
+            Messages.Message("Added design to construction queue.", dock, MessageTypeDefOf.PositiveEvent);
         }
         else
         {
@@ -95,14 +95,14 @@ internal sealed class GrayMechDrydockTabController
         }
     }
 
-    internal void LoadPreset(Building_GR_Drydock dock, GRMechPresetDef preset)
+    internal void LoadChassis(Building_GR_Drydock dock, GRMechChassisDef chassis)
     {
-        if (preset == null)
+        if (chassis == null)
         {
             return;
         }
 
-        dock.LoadFromPreset(preset);
+        dock.LoadFromChassis(chassis);
         state.ResetFocusState();
         state.InvalidateDraft();
         SoundDefOf.Click.PlayOneShotOnCamera();
@@ -121,18 +121,18 @@ internal sealed class GrayMechDrydockTabController
         SoundDefOf.Click.PlayOneShotOnCamera();
     }
 
-    internal void SelectSection(GRMechSectionRoleDef role)
+    internal void SelectSection(GRMechSectionSlotDef sectionSlot)
     {
-        if (role == null)
+        if (sectionSlot == null)
         {
             return;
         }
 
-        state.SelectSection(role);
+        state.SelectSection(sectionSlot);
         SoundDefOf.Click.PlayOneShotOnCamera();
     }
 
-    internal void SelectSlot(Building_GR_Drydock dock, GrayMechResolvedSlot resolvedSlot, bool openFloatMenu)
+    internal void SelectSlot(Building_GR_Drydock dock, GrayMechResolvedSlot resolvedSlot)
     {
         if (resolvedSlot?.slot == null)
         {
@@ -142,92 +142,50 @@ internal sealed class GrayMechDrydockTabController
         state.SelectSlot(resolvedSlot);
         state.EnsureCompatibleModuleCache(dock);
         SoundDefOf.Click.PlayOneShotOnCamera();
-
-        if (openFloatMenu)
-        {
-            OpenSlotFloatMenu(dock, resolvedSlot);
-        }
     }
 
-    internal void SetSectionLayout(Building_GR_Drydock dock, GRMechSectionRoleDef role, GRMechSectionLayoutDef layout)
+    internal void ClearSlotModule(Building_GR_Drydock dock, GrayMechResolvedSlot resolvedSlot)
     {
-        if (role == null || layout == null)
+        if (resolvedSlot?.slot == null)
         {
             return;
         }
 
-        if (dock.SetSectionLayout(role, layout))
+        if (dock.SetModule(resolvedSlot.sectionSlot, resolvedSlot.slot.key, null))
         {
-            state.SelectSection(role);
+            state.SelectSlot(resolvedSlot);
+            state.InvalidateDraft();
+            state.EnsureCompatibleModuleCache(dock);
+            SoundDefOf.Click.PlayOneShotOnCamera();
+        }
+    }
+
+    internal void SetSectionLayout(Building_GR_Drydock dock, GRMechSectionSlotDef sectionSlot, GRMechSectionLayoutDef layout)
+    {
+        if (sectionSlot == null || layout == null)
+        {
+            return;
+        }
+
+        if (dock.SetSectionLayout(sectionSlot, layout))
+        {
+            state.SelectSection(sectionSlot);
             state.InvalidateDraft();
             SoundDefOf.Click.PlayOneShotOnCamera();
         }
     }
 
-    internal void SetModule(Building_GR_Drydock dock, string slotKey, GRMechModuleDef module)
+    internal void SetModule(Building_GR_Drydock dock, GRMechSectionSlotDef sectionSlot, string slotKey, GRMechModuleDef module)
     {
         if (slotKey.NullOrEmpty())
         {
             return;
         }
 
-        if (dock.SetModule(slotKey, module))
+        if (dock.SetModule(sectionSlot, slotKey, module))
         {
             state.InvalidateDraft();
             SoundDefOf.Click.PlayOneShotOnCamera();
         }
-    }
-
-    internal void OpenSlotFloatMenu(Building_GR_Drydock dock, GrayMechResolvedSlot resolvedSlot)
-    {
-        if (dock?.DesignDraft == null || resolvedSlot?.slot == null)
-        {
-            return;
-        }
-
-        state.EnsureCompatibleModuleCache(dock);
-        GrayMechDesignUtility.TryGetSelectedModule(dock.DesignDraft, resolvedSlot.slot.key, out GRMechModuleDef currentModule);
-
-        List<FloatMenuOption> options = new()
-        {
-            new FloatMenuOption("None", delegate
-            {
-                SetModule(dock, resolvedSlot.slot.key, null);
-            })
-        };
-
-        for (int i = 0; i < state.CompatibleModules.Count; i++)
-        {
-            GRMechModuleDef module = state.CompatibleModules[i];
-            if (module == null)
-            {
-                continue;
-            }
-
-            bool available = GrayMechDesignUtility.IsResearchAvailable(module);
-            string label = module.LabelCap.ToString();
-            if (module == currentModule)
-            {
-                label += " (Installed)";
-            }
-            else if (!available)
-            {
-                label += " (Locked)";
-            }
-
-            if (available || module == currentModule)
-            {
-                options.Add(new FloatMenuOption(label, delegate
-                {
-                    SetModule(dock, resolvedSlot.slot.key, module);
-                }));
-            }
-            else
-            {
-                options.Add(new FloatMenuOption(label, null));
-            }
-        }
-
-        Find.WindowStack.Add(new FloatMenu(options));
     }
 }

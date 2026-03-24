@@ -6,23 +6,25 @@ namespace SD.GrayRace.Mechs;
 
 public class GrayMechSectionSelection : IExposable
 {
-    public GRMechSectionRoleDef role;
+    public GRMechSectionSlotDef sectionSlot;
     public GRMechSectionLayoutDef layout;
 
     public void ExposeData()
     {
-        Scribe_Defs.Look(ref role, "role");
+        Scribe_Defs.Look(ref sectionSlot, "sectionSlot");
         Scribe_Defs.Look(ref layout, "layout");
     }
 }
 
 public class GrayMechModuleAssignment : IExposable
 {
+    public GRMechSectionSlotDef sectionSlot;
     public string slotKey;
     public GRMechModuleDef module;
 
     public void ExposeData()
     {
+        Scribe_Defs.Look(ref sectionSlot, "sectionSlot");
         Scribe_Values.Look(ref slotKey, "slotKey");
         Scribe_Defs.Look(ref module, "module");
     }
@@ -52,9 +54,11 @@ public class GrayMechDesignSnapshot : IExposable
 
 public class GrayMechResolvedSlot
 {
-    public GRMechSectionRoleDef role;
+    public GRMechSectionSlotDef sectionSlot;
     public GRMechSectionLayoutDef layout;
-    public GRMechSlotDef slot;
+    public GRMechSlotEntry slot;
+
+    public bool IsRequiredComponentSlot => sectionSlot == null;
 }
 
 public class GrayMechDesignRecord : IExposable, IRenameable
@@ -62,7 +66,6 @@ public class GrayMechDesignRecord : IExposable, IRenameable
     public int id;
     public string label;
     public GrayMechDesignSnapshot snapshot = new();
-    public string sourcePresetDefName;
 
     public string RenamableLabel
     {
@@ -78,7 +81,6 @@ public class GrayMechDesignRecord : IExposable, IRenameable
     {
         Scribe_Values.Look(ref id, "id", 0);
         Scribe_Values.Look(ref label, "label");
-        Scribe_Values.Look(ref sourcePresetDefName, "sourcePresetDefName");
         Scribe_Deep.Look(ref snapshot, "snapshot");
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)

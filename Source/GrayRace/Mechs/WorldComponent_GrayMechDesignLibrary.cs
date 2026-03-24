@@ -102,14 +102,13 @@ public class WorldComponent_GrayMechDesignLibrary : WorldComponent
         return root + " " + Find.TickManager.TicksGame;
     }
 
-    public GrayMechDesignRecord CreateDesign(GrayMechDesignSnapshot snapshot, string preferredLabel, string sourcePresetDefName = null)
+    public GrayMechDesignRecord CreateDesign(GrayMechDesignSnapshot snapshot, string preferredLabel)
     {
         GrayMechDesignRecord record = new()
         {
             id = nextDesignId++,
             label = MakeUniqueLabel(preferredLabel),
-            snapshot = GrayMechDesignUtility.CloneSnapshot(snapshot) ?? new GrayMechDesignSnapshot(),
-            sourcePresetDefName = sourcePresetDefName
+            snapshot = GrayMechDesignUtility.CloneSnapshot(snapshot) ?? new GrayMechDesignSnapshot()
         };
 
         designs.Add(record);
@@ -117,7 +116,7 @@ public class WorldComponent_GrayMechDesignLibrary : WorldComponent
         return record;
     }
 
-    public bool OverwriteDesign(int id, GrayMechDesignSnapshot snapshot, string sourcePresetDefName = null)
+    public bool OverwriteDesign(int id, GrayMechDesignSnapshot snapshot)
     {
         GrayMechDesignRecord design = GetDesign(id);
         if (design == null)
@@ -126,7 +125,6 @@ public class WorldComponent_GrayMechDesignLibrary : WorldComponent
         }
 
         design.snapshot = GrayMechDesignUtility.CloneSnapshot(snapshot) ?? new GrayMechDesignSnapshot();
-        design.sourcePresetDefName = sourcePresetDefName;
         version++;
         return true;
     }

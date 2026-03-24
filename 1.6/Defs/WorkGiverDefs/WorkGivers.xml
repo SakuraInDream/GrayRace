@@ -15,20 +15,16 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>GR_DoBillsDrydock</defName>
-    <label>assembling gray mechanoids</label>
-    <giverClass>SD.GrayRace.WorkGivers.WorkGiver_DoGrayMechAssembly</giverClass>
-    <workType>Smithing</workType>
-    <priorityInType>60</priorityInType>
-    <fixedBillGiverDefs>
-      <li>GR_Drydock</li>
-    </fixedBillGiverDefs>
-    <verb>assembling gray mechanoids at</verb>
-    <gerund>assembling gray mechanoids at</gerund>
+    <defName>GR_FillDrydockMaterials</defName>
+    <label>filling drydock materials</label>
+    <giverClass>SD.GrayRace.WorkGivers.WorkGiver_CarryToDrydock</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>5</priorityInType>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
 
   <WorkGiverDef>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_PowerCore</defName>
+    <label>power core slot</label>
+    <description>TODO</description>
+    <requiredComponentSet>GR_MechComponentSet_PowerCore</requiredComponentSet>
+    <designerColor>(0.46, 0.86, 0.79)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_Thruster</defName>
+    <label>thruster slot</label>
+    <description>TODO</description>
+    <requiredComponentSet>GR_MechComponentSet_Thruster</requiredComponentSet>
+    <designerColor>(0.3, 0.76, 1)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_Sensor</defName>
+    <label>sensor slot</label>
+    <description>TODO</description>
+    <requiredComponentSet>GR_MechComponentSet_Sensor</requiredComponentSet>
+    <designerColor>(0.3, 0.86, 0.79)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_CombatComputer</defName>
+    <label>combat computer slot</label>
+    <description>TODO</description>
+    <requiredComponentSet>GR_MechComponentSet_CombatComputer</requiredComponentSet>
+    <designerColor>(0.96, 0.73, 0.29)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_SmallTurret</defName>
+    <label>small turret slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_Small</slotSize>
+    <designerColor>(0.95, 0.42, 0.34)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_PointDefenseTurret</defName>
+    <label>point-defence slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_PointDefense</slotSize>
+    <designerColor>(0.9, 0.18, 0.2)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_MediumTurret</defName>
+    <label>medium turret slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_Medium</slotSize>
+    <designerColor>(0.94, 0.64, 0.24)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_LargeTurret</defName>
+    <label>large turret slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_Large</slotSize>
+    <designerColor>(0.34, 0.68, 0.98)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_ExtraLarge</defName>
+    <label>extra-large spinal slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_ExtraLarge</slotSize>
+    <isFixed>true</isFixed>
+    <designerColor>(0.7, 0.44, 0.96)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_TorpedoTube</defName>
+    <label>torpedo slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_Torpedo</slotSize>
+    <designerColor>(0.38, 0.88, 0.52)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_StrikeCraftBay</defName>
+    <label>strike craft slot</label>
+    <description>TODO</description>
+    <componentType>StrikeCraft</componentType>
+    <slotSize>GR_MechSlotSize_Hangar</slotSize>
+    <designerColor>(0.95, 0.84, 0.26)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_SmallUtility</defName>
+    <label>small utility slot</label>
+    <description>TODO</description>
+    <componentType>Utility</componentType>
+    <slotSize>GR_MechSlotSize_Small</slotSize>
+    <designerColor>(0.46, 0.86, 0.79)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_MediumUtility</defName>
+    <label>medium utility slot</label>
+    <description>TODO</description>
+    <componentType>Utility</componentType>
+    <slotSize>GR_MechSlotSize_Medium</slotSize>
+    <designerColor>(0.94, 0.64, 0.24)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_LargeUtility</defName>
+    <label>large utility slot</label>
+    <description>TODO</description>
+    <componentType>Utility</componentType>
+    <slotSize>GR_MechSlotSize_Large</slotSize>
+    <designerColor>(0.34, 0.68, 0.98)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_Auxiliary</defName>
+    <label>auxiliary slot</label>
+    <description>TODO</description>
+    <componentType>Auxiliary</componentType>
+    <slotSize>GR_MechSlotSize_Auxiliary</slotSize>
+    <designerColor>(0.3, 0.76, 1)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+</Defs>

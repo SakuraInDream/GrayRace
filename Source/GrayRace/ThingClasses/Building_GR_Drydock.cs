@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using System.Text;
 using RimWorld;
-using SD.GrayRace.Bills;
+using SD.GrayRace.Comps;
 using SD.GrayRace.DefModExtensions;
 using SD.GrayRace.Defs;
 using SD.GrayRace.Mechs;
@@ -8,16 +9,38 @@ using Verse;
 
 namespace SD.GrayRace.ThingClasses;
 
-public class Building_GR_Drydock : Building_WorkTableAutonomous
+public class Building_GR_Drydock : Building, IThingHolder
 {
+    private const int MaxQueueCount = 16;
+
+    public ThingOwner innerContainer;
+
     private GrayMechDesignSnapshot designDraft;
     private int editingDesignId = -1;
-    private string sourcePresetDefName;
     private int designRevision;
+    private GrayMechAssemblyOrder currentOrder;
+    private List<GrayMechAssemblyOrder> queuedOrders = new();
+
+    [Unsaved(false)]
+    private CompPowerTrader cachedPowerComp;
+
+    [Unsaved(false)]
+    private CompBreakdownable cachedBreakdownableComp;
 
     private static readonly List<RecipeDef> tmpMatchingRecipes = new();
+    private static readonly List<IngredientCount> tmpRequiredIngredients = new();
+    private static readonly List<ThingDefCountClass> tmpRequiredCosts = new();
 
     private WorldComponent_GrayMechDesignLibrary DesignLibrary => Find.World?.GetComponent<WorldComponent_GrayMechDesignLibrary>();
+
+    private CompPowerTrader PowerTraderComp => cachedPowerComp ??= this.TryGetComp<CompPowerTrader>();
+
+    private CompBreakdownable BreakdownableComp => cachedBreakdownableComp ??= this.TryGetComp<CompBreakdownable>();
+
+    public Building_GR_Drydock()
+    {
+        innerContainer = new ThingOwner<Thing>(this);
+    }
 
     public GrayMechDesignSnapshot DesignDraft
     {
@@ -30,66 +53,195 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
 
     public int EditingDesignId => editingDesignId;
 
-    public string SourcePresetDefName => sourcePresetDefName;
-
     public int DesignRevision => designRevision;
 
     public bool IsEditingSavedDesign => editingDesignId >= 0;
 
     public GrayMechDesignRecord EditingDesignRecord => editingDesignId >= 0 ? DesignLibrary?.GetDesign(editingDesignId) : null;
 
+    public GrayMechAssemblyOrder CurrentOrder => currentOrder;
+
+    public int QueuedOrderCount => queuedOrders?.Count ?? 0;
+
+    public int TotalQueuedOrderCount => QueuedOrderCount + (currentOrder != null ? 1 : 0);
+
+    public bool HasActiveOrder => currentOrder != null;
+
+    public int CurrentOrderTicksRemaining => currentOrder?.ticksRemaining ?? 0;
+
+    public int CurrentOrderTotalTicks => currentOrder?.totalTicks ?? 0;
+
+    public float CurrentOrderProgressPercent => currentOrder?.ProgressPercent ?? 0f;
+
+    public bool CurrentOrderNeedsMaterials => currentOrder != null && !HasAllRequiredMaterials(currentOrder);
+
+    public bool CanProgressNow
+    {
+        get
+        {
+            if (currentOrder == null || CurrentOrderNeedsMaterials)
+            {
+                return false;
+            }
+
+            if (PowerTraderComp != null && !PowerTraderComp.PowerOn)
+            {
+                return false;
+            }
+
+            return BreakdownableComp == null || !BreakdownableComp.BrokenDown;
+        }
+    }
+
+    public string CurrentOrderStatus
+    {
+        get
+        {
+            if (currentOrder == null)
+            {
+                return QueuedOrderCount > 0 ? "Queued" : "Idle";
+            }
+
+            if (CurrentOrderNeedsMaterials)
+            {
+                return "Waiting for materials";
+            }
+
+            if (PowerTraderComp != null && !PowerTraderComp.PowerOn)
+            {
+                return "Paused: No power";
+            }
+
+            if (BreakdownableComp != null && BreakdownableComp.BrokenDown)
+            {
+                return "Paused: Broken down";
+            }
+
+            return "Building";
+        }
+    }
+
     public override void ExposeData()
     {
         base.ExposeData();
+        Scribe_Deep.Look(ref innerContainer, "innerContainer", this);
         Scribe_Deep.Look(ref designDraft, "designDraft");
         Scribe_Values.Look(ref editingDesignId, "editingDesignId", -1);
-        Scribe_Values.Look(ref sourcePresetDefName, "sourcePresetDefName");
+        Scribe_Deep.Look(ref currentOrder, "currentOrder");
+        Scribe_Collections.Look(ref queuedOrders, "queuedOrders", LookMode.Deep);
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
+            innerContainer ??= new ThingOwner<Thing>(this);
+            queuedOrders ??= new List<GrayMechAssemblyOrder>();
             EnsureDesignDraft();
+            FixupOrder(currentOrder);
+            for (int i = 0; i < queuedOrders.Count; i++)
+            {
+                FixupOrder(queuedOrders[i]);
+            }
+
+            TryStartNextQueuedOrder();
         }
     }
 
-    protected override string GetInspectStringExtra()
+    protected override void Tick()
     {
-        EnsureDesignDraft();
+        base.Tick();
 
-        if (ActiveBill is Bill_GrayMechAssembly bill)
+        if (this.IsHashIntervalTick(250) && PowerTraderComp != null)
         {
-            return "Active design: " + bill.LabelCap;
+            bool active = currentOrder != null && CanProgressNow;
+            PowerTraderComp.PowerOutput = active ? 0f - PowerTraderComp.Props.PowerConsumption : 0f - PowerTraderComp.Props.idlePowerDraw;
         }
 
-        if (designDraft?.chassis != null)
+        if (currentOrder == null)
         {
-            return "Draft: " + designDraft.designLabel;
+            TryStartNextQueuedOrder();
+            return;
         }
 
-        return null;
-    }
-
-    public override void Notify_FormingCompleted()
-    {
-        Thing thing = activeBill?.CreateProducts();
-        innerContainer.ClearAndDestroyContents();
-        if (thing != null)
-        {
-            innerContainer.TryAdd(thing);
-            Messages.Message("Assembly complete: " + thing.LabelCap, this, MessageTypeDefOf.PositiveEvent);
-        }
-    }
-
-    public void LoadFromPreset(GRMechPresetDef preset)
-    {
-        if (preset == null)
+        if (!CanProgressNow)
         {
             return;
         }
 
-        designDraft = GrayMechDesignUtility.CreateSnapshot(preset);
+        currentOrder.ticksRemaining--;
+        if (currentOrder.ticksRemaining <= 0)
+        {
+            CompleteCurrentOrder();
+        }
+    }
+
+    public override string GetInspectString()
+    {
+        StringBuilder sb = new(base.GetInspectString());
+
+        if (designDraft?.chassis != null)
+        {
+            sb.AppendInNewLine("Draft: " + designDraft.designLabel);
+        }
+
+        if (currentOrder != null)
+        {
+            sb.AppendInNewLine("Current build: " + currentOrder.Label);
+            sb.AppendInNewLine("Status: " + CurrentOrderStatus);
+            sb.AppendInNewLine("Progress: " + CurrentOrderProgressPercent.ToStringPercent());
+            if (CurrentOrderTotalTicks > 0)
+            {
+                sb.AppendInNewLine("Time left: " + CurrentOrderTicksRemaining.ToStringTicksToPeriod());
+            }
+
+            AppendMaterialStatus(sb, currentOrder);
+        }
+
+        if (QueuedOrderCount > 0)
+        {
+            sb.AppendInNewLine("Queued builds: " + QueuedOrderCount);
+        }
+
+        return sb.ToString().TrimEndNewlines();
+    }
+
+    public override IEnumerable<Gizmo> GetGizmos()
+    {
+        foreach (Gizmo gizmo in base.GetGizmos())
+        {
+            yield return gizmo;
+        }
+
+        if (!DebugSettings.ShowDevGizmos || currentOrder == null)
+        {
+            yield break;
+        }
+
+        yield return new Command_Action
+        {
+            action = CompleteCurrentOrder,
+            defaultLabel = "DEV: Complete build"
+        };
+    }
+
+    public ThingOwner GetDirectlyHeldThings()
+    {
+        return innerContainer;
+    }
+
+    public void GetChildHolders(List<IThingHolder> outChildren)
+    {
+        ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, GetDirectlyHeldThings());
+    }
+
+    public void LoadFromChassis(GRMechChassisDef chassis)
+    {
+        if (chassis == null)
+        {
+            return;
+        }
+
+        designDraft = GrayMechDesignUtility.CreateDefaultSnapshot(chassis);
         GrayMechDesignUtility.EnsureSnapshotDefaults(designDraft);
         editingDesignId = -1;
-        sourcePresetDefName = preset.defName;
         TouchDesignDraft();
     }
 
@@ -103,7 +255,6 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
         designDraft = GrayMechDesignUtility.CloneSnapshot(record.snapshot);
         GrayMechDesignUtility.EnsureSnapshotDefaults(designDraft);
         editingDesignId = record.id;
-        sourcePresetDefName = record.sourcePresetDefName;
         if (designDraft != null)
         {
             designDraft.designLabel = record.label;
@@ -112,10 +263,10 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
         TouchDesignDraft();
     }
 
-    public bool SetSectionLayout(GRMechSectionRoleDef role, GRMechSectionLayoutDef layout)
+    public bool SetSectionLayout(GRMechSectionSlotDef sectionSlot, GRMechSectionLayoutDef layout)
     {
         EnsureDesignDraft();
-        if (!GrayMechDesignUtility.SetSectionLayout(designDraft, role, layout))
+        if (!GrayMechDesignUtility.SetSectionLayout(designDraft, sectionSlot, layout))
         {
             return false;
         }
@@ -124,10 +275,10 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
         return true;
     }
 
-    public bool SetModule(string slotKey, GRMechModuleDef module)
+    public bool SetModule(GRMechSectionSlotDef sectionSlot, string slotKey, GRMechModuleDef module)
     {
         EnsureDesignDraft();
-        if (!GrayMechDesignUtility.SetModule(designDraft, slotKey, module))
+        if (!GrayMechDesignUtility.SetModule(designDraft, sectionSlot, slotKey, module))
         {
             return false;
         }
@@ -145,7 +296,7 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
             return null;
         }
 
-        GrayMechDesignRecord record = library.CreateDesign(designDraft, designDraft.designLabel, sourcePresetDefName);
+        GrayMechDesignRecord record = library.CreateDesign(designDraft, designDraft.designLabel);
         editingDesignId = record.id;
         designDraft.designLabel = record.label;
         TouchDesignDraft();
@@ -161,7 +312,7 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
             return false;
         }
 
-        if (!DesignLibrary.OverwriteDesign(record.id, designDraft, sourcePresetDefName))
+        if (!DesignLibrary.OverwriteDesign(record.id, designDraft))
         {
             return false;
         }
@@ -196,33 +347,69 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
         }
     }
 
-    public bool TryQueueAssemblyBill(out string reason)
+    public bool TryQueueAssemblyOrder(out string reason)
     {
-        if (!CanQueueAssemblyBill(out RecipeDef recipe, out reason))
+        if (!TryCreateAssemblyOrder(out GrayMechAssemblyOrder order, out reason))
         {
             return false;
         }
 
-        Bill bill = recipe.MakeNewBill();
-        if (bill is not Bill_GrayMechAssembly assemblyBill)
+        if (currentOrder == null)
         {
-            reason = "Recipe did not create a Gray mech assembly bill.";
-            return false;
+            currentOrder = order;
+        }
+        else
+        {
+            queuedOrders.Add(order);
         }
 
-        assemblyBill.SetDesignSnapshot(designDraft);
-        billStack.AddBill(assemblyBill);
         return true;
     }
 
-    public bool CanQueueAssemblyBill(out string reason)
+    public bool CanQueueAssemblyOrder(out string reason)
     {
-        return CanQueueAssemblyBill(out _, out reason);
+        return TryCreateAssemblyOrder(out _, out reason);
     }
 
-    public GRMechPresetDef GetSourcePreset()
+    public bool CanAcceptIngredient(Thing thing)
     {
-        return sourcePresetDefName.NullOrEmpty() ? null : DefDatabase<GRMechPresetDef>.GetNamedSilentFail(sourcePresetDefName);
+        if (thing == null || currentOrder == null)
+        {
+            return false;
+        }
+
+        int missingCount = GetMissingCountForCurrentOrder(thing.def);
+        return missingCount > 0;
+    }
+
+    public int GetRequiredCountOf(ThingDef thingDef)
+    {
+        if (thingDef == null || currentOrder == null)
+        {
+            return 0;
+        }
+
+        BuildIngredientBuffers(currentOrder, tmpRequiredIngredients, tmpRequiredCosts);
+        for (int i = 0; i < tmpRequiredIngredients.Count; i++)
+        {
+            IngredientCount ingredient = tmpRequiredIngredients[i];
+            if (ingredient?.FixedIngredient == thingDef)
+            {
+                return ingredient.CountRequiredOfFor(thingDef, currentOrder.recipe, null);
+            }
+        }
+
+        return 0;
+    }
+
+    public int GetLoadedCountOf(ThingDef thingDef)
+    {
+        return thingDef == null ? 0 : innerContainer.TotalStackCountOfDef(thingDef);
+    }
+
+    public static bool WasLoadingCancelled(Thing thing)
+    {
+        return thing is not Building_GR_Drydock drydock || !drydock.HasActiveOrder || !drydock.CurrentOrderNeedsMaterials;
     }
 
     private void EnsureDesignDraft()
@@ -242,21 +429,6 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
             return;
         }
 
-        GRMechPresetDef preset = GetSourcePreset();
-        if (preset != null)
-        {
-            designDraft = GrayMechDesignUtility.CreateSnapshot(preset);
-            GrayMechDesignUtility.EnsureSnapshotDefaults(designDraft);
-            return;
-        }
-
-        GRMechPresetDef firstPreset = FindFirstPreset();
-        if (firstPreset != null)
-        {
-            LoadFromPreset(firstPreset);
-            return;
-        }
-
         GRMechChassisDef firstChassis = FindFirstChassis();
         if (firstChassis != null)
         {
@@ -268,7 +440,7 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
     private RecipeDef FindAssemblyRecipeForDraft()
     {
         tmpMatchingRecipes.Clear();
-        List<RecipeDef> recipes = def.AllRecipes;
+        List<RecipeDef> recipes = DefDatabase<RecipeDef>.AllDefsListForReading;
         for (int i = 0; i < recipes.Count; i++)
         {
             RecipeDef recipe = recipes[i];
@@ -278,7 +450,7 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
             }
 
             DefModExtension_MechAssemblyRecipe extension = recipe.GetModExtension<DefModExtension_MechAssemblyRecipe>();
-            if (extension?.preset?.chassis == designDraft?.chassis)
+            if (extension?.chassis == designDraft?.chassis)
             {
                 tmpMatchingRecipes.Add(recipe);
             }
@@ -293,15 +465,15 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
         return tmpMatchingRecipes[0];
     }
 
-    private bool CanQueueAssemblyBill(out RecipeDef recipe, out string reason)
+    private bool TryCreateAssemblyOrder(out GrayMechAssemblyOrder order, out string reason)
     {
+        order = null;
         reason = string.Empty;
-        recipe = null;
         EnsureDesignDraft();
 
-        if (billStack.Count >= BillStack.MaxCount)
+        if (TotalQueuedOrderCount >= MaxQueueCount)
         {
-            reason = "Bill limit reached.";
+            reason = "Build queue is full.";
             return false;
         }
 
@@ -317,7 +489,7 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
             return false;
         }
 
-        recipe = FindAssemblyRecipeForDraft();
+        RecipeDef recipe = FindAssemblyRecipeForDraft();
         if (recipe == null)
         {
             reason = "No compatible assembly recipe found.";
@@ -330,55 +502,365 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
             return false;
         }
 
-        if (ModsConfig.BiotechActive && recipe.mechanitorOnlyRecipe && !AnyMechanitorAvailable())
+        if (!TryFindAssignedMechanitor(recipe, out Pawn mechanitor, out reason))
         {
-            reason = "A mechanitor is required to queue this design.";
             return false;
+        }
+
+        int totalTicks = GetBuildTicks(designDraft, recipe);
+        order = new GrayMechAssemblyOrder
+        {
+            designSnapshot = GrayMechDesignUtility.CloneSnapshot(designDraft),
+            recipe = recipe,
+            assignedMechanitor = mechanitor,
+            totalTicks = totalTicks,
+            ticksRemaining = totalTicks
+        };
+        return true;
+    }
+
+    private bool TryFindAssignedMechanitor(RecipeDef recipe, out Pawn mechanitor, out string reason)
+    {
+        mechanitor = null;
+        reason = string.Empty;
+
+        if (Map?.mapPawns?.FreeColonists == null)
+        {
+            reason = "No colonist available.";
+            return false;
+        }
+
+        List<Pawn> colonists = Map.mapPawns.FreeColonists;
+        Pawn fallback = null;
+        float bandwidthCost = GetBandwidthCost(designDraft?.chassis?.ProducedRace);
+        for (int i = 0; i < colonists.Count; i++)
+        {
+            Pawn colonist = colonists[i];
+            if (colonist == null || colonist.Dead || colonist.Downed || colonist.MapHeld != Map)
+            {
+                continue;
+            }
+
+            fallback ??= colonist;
+            if (!recipe.mechanitorOnlyRecipe)
+            {
+                mechanitor = fallback;
+                return true;
+            }
+
+            if (!MechanitorUtility.IsMechanitor(colonist))
+            {
+                continue;
+            }
+
+            if (!HasAvailableQueuedBandwidth(colonist, bandwidthCost))
+            {
+                continue;
+            }
+
+            mechanitor = colonist;
+            return true;
+        }
+
+        if (!recipe.mechanitorOnlyRecipe)
+        {
+            if (fallback != null)
+            {
+                mechanitor = fallback;
+                return true;
+            }
+
+            reason = "No colonist available.";
+            return false;
+        }
+
+        reason = "No mechanitor has enough available bandwidth.";
+        return false;
+    }
+
+    private void TryStartNextQueuedOrder()
+    {
+        if (currentOrder != null || queuedOrders == null || queuedOrders.Count == 0)
+        {
+            return;
+        }
+
+        currentOrder = queuedOrders[0];
+        queuedOrders.RemoveAt(0);
+        FixupOrder(currentOrder);
+    }
+
+    private void CompleteCurrentOrder()
+    {
+        GrayMechAssemblyOrder completedOrder = currentOrder;
+        currentOrder = null;
+        if (completedOrder?.designSnapshot?.chassis?.pawnKindDef == null || Map == null)
+        {
+            TryStartNextQueuedOrder();
+            return;
+        }
+
+        ConsumeCurrentOrderIngredients(completedOrder);
+
+        Pawn mech = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
+            completedOrder.designSnapshot.chassis.pawnKindDef,
+            completedOrder.assignedMechanitor?.Faction ?? Faction.OfPlayer,
+            PawnGenerationContext.NonPlayer,
+            null,
+            forceGenerateNewPawn: false,
+            allowDead: false,
+            allowDowned: true,
+            canGeneratePawnRelations: true,
+            mustBeCapableOfViolence: false,
+            1f,
+            forceAddFreeWarmLayerIfNeeded: false,
+            allowGay: true,
+            allowPregnant: false,
+            allowFood: true,
+            allowAddictions: true,
+            inhabitant: false,
+            certainlyBeenInCryptosleep: false,
+            forceRedressWorldPawnIfFormerColonist: false,
+            worldPawnFactionDoesntMatter: false,
+            0f,
+            0f,
+            null,
+            1f,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            forceNoIdeo: false,
+            forceNoBackstory: false,
+            forbidAnyTitle: false,
+            forceDead: false,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0f,
+            DevelopmentalStage.Newborn));
+
+        if (completedOrder.assignedMechanitor != null && !completedOrder.assignedMechanitor.Dead)
+        {
+            completedOrder.assignedMechanitor.relations.AddDirectRelation(PawnRelationDefOf.Overseer, mech);
+        }
+
+        if (!GenPlace.TryPlaceThing(mech, InteractionCell, Map, ThingPlaceMode.Near, out Thing resultingThing))
+        {
+            GenPlace.TryPlaceThing(mech, Position, Map, ThingPlaceMode.Near, out resultingThing);
+        }
+
+        if (resultingThing is Pawn mechPawn)
+        {
+            mechPawn.TryGetComp<CompGrayMechLoadout>()?.ApplyDesign(completedOrder.designSnapshot);
+        }
+
+        Messages.Message("Assembly complete: " + (resultingThing ?? mech).LabelCap, this, MessageTypeDefOf.PositiveEvent);
+        TryStartNextQueuedOrder();
+    }
+
+    private bool HasAllRequiredMaterials(GrayMechAssemblyOrder order)
+    {
+        if (order == null)
+        {
+            return false;
+        }
+
+        BuildIngredientBuffers(order, tmpRequiredIngredients, tmpRequiredCosts);
+        for (int i = 0; i < tmpRequiredIngredients.Count; i++)
+        {
+            IngredientCount ingredient = tmpRequiredIngredients[i];
+            ThingDef thingDef = ingredient?.FixedIngredient;
+            if (thingDef == null)
+            {
+                continue;
+            }
+
+            int required = ingredient.CountRequiredOfFor(thingDef, order.recipe, null);
+            if (GetLoadedCountOf(thingDef) < required)
+            {
+                return false;
+            }
         }
 
         return true;
     }
 
-    private void TouchDesignDraft()
+    private int GetMissingCountForCurrentOrder(ThingDef thingDef)
     {
-        designRevision++;
-    }
-
-    private bool AnyMechanitorAvailable()
-    {
-        if (Map?.mapPawns?.FreeColonists == null)
+        if (thingDef == null || currentOrder == null)
         {
-            return false;
+            return 0;
         }
 
-        List<Pawn> colonists = Map.mapPawns.FreeColonists;
-        for (int i = 0; i < colonists.Count; i++)
-        {
-            if (MechanitorUtility.IsMechanitor(colonists[i]))
-            {
-                return true;
-            }
-        }
-
-        return false;
+        int required = GetRequiredCountOf(thingDef);
+        int loaded = GetLoadedCountOf(thingDef);
+        int missing = required - loaded;
+        return missing > 0 ? missing : 0;
     }
 
-    private static GRMechPresetDef FindFirstPreset()
+    private void ConsumeCurrentOrderIngredients(GrayMechAssemblyOrder order)
     {
-        List<GRMechPresetDef> presets = DefDatabase<GRMechPresetDef>.AllDefsListForReading;
-        GRMechPresetDef best = null;
-        for (int i = 0; i < presets.Count; i++)
+        BuildIngredientBuffers(order, tmpRequiredIngredients, tmpRequiredCosts);
+        for (int i = 0; i < tmpRequiredIngredients.Count; i++)
         {
-            GRMechPresetDef current = presets[i];
-            if (current == null || (best != null && ComparePresetDefs(current, best) >= 0))
+            IngredientCount ingredient = tmpRequiredIngredients[i];
+            ThingDef thingDef = ingredient?.FixedIngredient;
+            if (thingDef == null)
             {
                 continue;
             }
 
-            best = current;
+            int remaining = ingredient.CountRequiredOfFor(thingDef, order.recipe, null);
+            for (int j = innerContainer.Count - 1; j >= 0 && remaining > 0; j--)
+            {
+                Thing storedThing = innerContainer[j];
+                if (storedThing.def != thingDef)
+                {
+                    continue;
+                }
+
+                int consumeCount = remaining < storedThing.stackCount ? remaining : storedThing.stackCount;
+                Thing consumedThing = consumeCount >= storedThing.stackCount ? storedThing : storedThing.SplitOff(consumeCount);
+                remaining -= consumeCount;
+                order.recipe.Worker.ConsumeIngredient(consumedThing, order.recipe, Map);
+            }
+        }
+    }
+
+    private static void BuildIngredientBuffers(GrayMechAssemblyOrder order, List<IngredientCount> ingredientBuffer, List<ThingDefCountClass> costBuffer)
+    {
+        GrayMechDesignUtility.BuildIngredientList(order?.designSnapshot, ingredientBuffer, costBuffer);
+    }
+
+    private void AppendMaterialStatus(StringBuilder sb, GrayMechAssemblyOrder order)
+    {
+        BuildIngredientBuffers(order, tmpRequiredIngredients, tmpRequiredCosts);
+        if (tmpRequiredIngredients.Count == 0)
+        {
+            return;
         }
 
-        return best;
+        sb.AppendInNewLine("Materials:");
+        for (int i = 0; i < tmpRequiredIngredients.Count; i++)
+        {
+            IngredientCount ingredient = tmpRequiredIngredients[i];
+            ThingDef thingDef = ingredient?.FixedIngredient;
+            if (thingDef == null)
+            {
+                continue;
+            }
+
+            int required = ingredient.CountRequiredOfFor(thingDef, order.recipe, null);
+            int loaded = GetLoadedCountOf(thingDef);
+            sb.AppendInNewLine("  " + thingDef.LabelCap + " " + loaded + " / " + required);
+        }
+    }
+
+    private static int GetBuildTicks(GrayMechDesignSnapshot snapshot, RecipeDef recipe)
+    {
+        int chassisTicks = snapshot?.chassis?.fixedWorkTicks ?? 0;
+        if (chassisTicks > 0)
+        {
+            return chassisTicks;
+        }
+
+        int gestationCycles = recipe?.gestationCycles ?? 1;
+        if (gestationCycles < 1)
+        {
+            gestationCycles = 1;
+        }
+
+        int formingTicks = recipe?.formingTicks ?? 0;
+        int totalTicks = formingTicks * gestationCycles;
+        return totalTicks > 0 ? totalTicks : 60000;
+    }
+
+    private static float GetBandwidthCost(ThingDef producedRace)
+    {
+        if (producedRace != null)
+        {
+            return producedRace.GetStatValueAbstract(StatDefOf.BandwidthCost);
+        }
+
+        return 0f;
+    }
+
+    private bool HasAvailableQueuedBandwidth(Pawn mechanitor, float bandwidthCost)
+    {
+        if (bandwidthCost <= 0f)
+        {
+            return true;
+        }
+
+        if (mechanitor?.mechanitor == null)
+        {
+            return false;
+        }
+
+        float usedBandwidth = mechanitor.mechanitor.UsedBandwidthFromSubjects + GetReservedQueuedBandwidth(mechanitor);
+        return usedBandwidth + bandwidthCost <= mechanitor.mechanitor.TotalBandwidth;
+    }
+
+    private float GetReservedQueuedBandwidth(Pawn mechanitor)
+    {
+        float total = 0f;
+        if (mechanitor == null)
+        {
+            return total;
+        }
+
+        if (currentOrder?.assignedMechanitor == mechanitor)
+        {
+            total += GetBandwidthCost(currentOrder.ProducedRace);
+        }
+
+        if (queuedOrders != null)
+        {
+            for (int i = 0; i < queuedOrders.Count; i++)
+            {
+                GrayMechAssemblyOrder order = queuedOrders[i];
+                if (order?.assignedMechanitor == mechanitor)
+                {
+                    total += GetBandwidthCost(order.ProducedRace);
+                }
+            }
+        }
+
+        return total;
+    }
+
+    private void FixupOrder(GrayMechAssemblyOrder order)
+    {
+        if (order == null)
+        {
+            return;
+        }
+
+        if (order.totalTicks <= 0)
+        {
+            order.totalTicks = GetBuildTicks(order.designSnapshot, order.recipe);
+        }
+
+        if (order.ticksRemaining <= 0)
+        {
+            order.ticksRemaining = order.totalTicks;
+        }
+    }
+
+    private void TouchDesignDraft()
+    {
+        designRevision++;
     }
 
     private static GRMechChassisDef FindFirstChassis()
@@ -397,17 +879,6 @@ public class Building_GR_Drydock : Building_WorkTableAutonomous
         }
 
         return best;
-    }
-
-    private static int ComparePresetDefs(GRMechPresetDef left, GRMechPresetDef right)
-    {
-        int order = left.uiOrder.CompareTo(right.uiOrder);
-        if (order != 0)
-        {
-            return order;
-        }
-
-        return string.CompareOrdinal(left.label, right.label);
     }
 
     private static int CompareChassisDefs(GRMechChassisDef left, GRMechChassisDef right)
