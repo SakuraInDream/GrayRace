@@ -2,7 +2,7 @@
 <Defs>
   <!-- 这一块的 modding 稍微麻烦一点 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_FF_AA12mm</defName>
+    <defName>GR_MechModule_AA12mm</defName>
     <label>12mm AA battery</label>
     <description>Compact rapid-fire gun battery intended for light Gray frigate hulls.</description>
     <iconPath>Things/Item/Weapon/RailGun/Rail_MG</iconPath>
@@ -19,11 +19,256 @@
     <uiOrder>1100</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
+  <!-- 下面的 iconPath 均为 Stellaris 经过垂直翻转处理后的文件 -->
+  <!-- 红色激光 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_InfraredBase" Abstract="True">
+    <label>红色激光</label>
+    <description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>1100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
+    <defName>GR_MechModule_PulseLaser_Infrared</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_Blue</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Infrared</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
+    <defName>GR_MechModule_PulseLaser_Infrared_M</defName>
+    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <upgradeTo>GR_MechModule_PulseLaser_Blue_M</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Infrared_M</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
+    <defName>GR_MechModule_PulseLaser_Infrared_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <upgradeTo>GR_MechModule_PulseLaser_Blue_L</upgradeTo>
+    <costList>
+      <GR_Alloy>63</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Infrared_L</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 蓝色激光 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_BlueBase" Abstract="True">
+    <label>蓝色激光</label>
+    <description>比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>1100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
+    <defName>GR_MechModule_PulseLaser_Blue</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_UV</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>15</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Blue</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
+    <defName>GR_MechModule_PulseLaser_Blue_M</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_UV_M</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>38</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Blue_M</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
+    <defName>GR_MechModule_PulseLaser_Blue_L</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_UV_L</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>95</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Blue_L</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 紫外激光 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_UVBase" Abstract="True">
+    <label>紫外激光</label>
+    <description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
+    <upgradeTo>GR_MechModule_PulseLaser_XrayBase</upgradeTo>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>1100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
+    <defName>GR_MechModule_PulseLaser_UV</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_Xray</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>23</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_UV</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
+    <defName>GR_MechModule_PulseLaser_UV_M</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_Xray_M</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>58</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_UV_M</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
+    <defName>GR_MechModule_PulseLaser_UV_L</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_Xray_L</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>145</GR_Alloy>
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_UV_L</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- X射线激光 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_XrayBase" Abstract="True">
+    <label>X射线激光</label>
+    <description>这种激光的波长较紫外线短一些，但是更具毁灭性。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_4</iconPath>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
+    <defName>GR_MechModule_PulseLaser_Xray</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_Gamma</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>23</GR_Alloy>
+      <!-- stellaris 还需要一个稀有水晶 -->
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_XRay</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
+    <defName>GR_MechModule_PulseLaser_Xray_M</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_Gamma_M</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>58</GR_Alloy>
+      <!-- stellaris 还需要一个稀有水晶 -->
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_XRay_M</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
+    <defName>GR_MechModule_PulseLaser_Xray_L</defName>
+    <upgradeTo>GR_MechModule_PulseLaser_Gamma_L</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>145</GR_Alloy>
+      <!-- stellaris 还需要一个稀有水晶 -->
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_XRay_L</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 伽马激光 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_GammaBase" Abstract="True">
+    <defName>GR_MechModule_PulseLaser_Gamma</defName>
+    <label>伽马激光</label>
+    <description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_GammaBase">
+    <defName>GR_MechModule_PulseLaser_Gamma</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>35</GR_Alloy>
+      <!-- stellaris 还需要一个稀有水晶 -->
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Gamma</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_GammaBase">
+    <defName>GR_MechModule_PulseLaser_Gamma_M</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>35</GR_Alloy>
+      <!-- stellaris 还需要一个稀有水晶 -->
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_M</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_GammaBase">
+    <defName>GR_MechModule_PulseLaser_Gamma_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>35</GR_Alloy>
+      <!-- stellaris 还需要一个稀有水晶 -->
+    </costList>
+    <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_L</equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 点防御 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_FF_PDArray</defName>
-    <label>point-defence array</label>
-    <description>Rapid interception battery for point-defence hardpoints on Gray light hulls.</description>
-    <iconPath>Things/Item/Weapon/RailGun/Rail_MG</iconPath>
+    <defName>GR_MechModule_PDArray1</defName>
+    <label>哨兵点防御</label>
+    <description>对于那些又大又笨重的军用舰船来说，在船体上安装反导弹和反攻击机的装置是很有必要的。</description>
+    <iconPath>Icon/ShipParts/ship_part_point_defense_1</iconPath>
+    <upgradeTo>GR_MechModule_PDArray2</upgradeTo>
     <compatibleSlots>
       <li>GR_MechSlot_PointDefenseTurret</li>
     </compatibleSlots>
@@ -31,8 +276,47 @@
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
     <costList>
-      <GR_Alloy>18</GR_Alloy>
+      <GR_Alloy>8</GR_Alloy>
     </costList>
+    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <uiOrder>1110</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_PDArray2</defName>
+    <label>屏障点防御</label>
+    <description>升级后的弹道预测算法可以提升追踪和点防御的效能。</description>
+    <iconPath>Icon/ShipParts/ship_part_point_defense_2</iconPath>
+    <upgradeTo>GR_MechModule_PDArray3</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_PointDefenseTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <!-- 占位 -->
+    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <uiOrder>1110</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_PDArray3</defName>
+    <label>守护者点防御</label>
+    <description>种类丰富的弹药能够显著提升拦截威胁的能力。</description>
+    <iconPath>Icon/ShipParts/ship_part_point_defense_3</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_PointDefenseTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <!-- 占位 -->
     <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
     <uiOrder>1110</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>

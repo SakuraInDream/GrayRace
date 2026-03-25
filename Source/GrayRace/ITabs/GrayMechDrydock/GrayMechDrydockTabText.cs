@@ -342,7 +342,13 @@ internal static class GrayMechDrydockTabText
     {
         string title = GetSlotDisplayName(resolvedSlot.slot);
         string state = module != null ? "Installed: " + module.LabelCap : "Installed: None";
-        return title + "\n" + GetSlotOwnerLabel(resolvedSlot) + "\n" + BuildSlotTypeSummary(resolvedSlot.slot) + "\n" + state;
+        return title
+               + "\n"
+               + GetSlotOwnerLabel(resolvedSlot)
+               + "\n"
+               + BuildSlotTypeSummary(resolvedSlot.slot)
+               + "\n"
+               + state;
     }
 
     internal static string BuildSlotTypeSummary(GRMechSlotEntry slot)

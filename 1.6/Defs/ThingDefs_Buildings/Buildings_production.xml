@@ -277,10 +277,7 @@
     <rotatable>false</rotatable>
     <castEdgeShadows>true</castEdgeShadows>
     <size>(1,1)</size>
-    <recipes>
-      <!-- 默认基础型灰裔，只会选第一个 -->
-      <li>GRRecipe_GrayRace</li>
-    </recipes>
+    <!-- 这里不用原版 bill 系统，避免被归入 PotentialBillGiver -->
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
       <WorkToBuild>8000</WorkToBuild>

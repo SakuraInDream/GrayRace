@@ -15,7 +15,7 @@
 
   <SD.GrayRace.Defs.GRMechSlotSizeDef>
     <defName>GR_MechSlotSize_PointDefense</defName>
-    <label>point-defence</label>
+    <label>点防御</label>
     <stellarisSizeKey>point_defence</stellarisSizeKey>
     <glyph>P</glyph>
     <uiOrder>150</uiOrder>
@@ -61,7 +61,7 @@
 
   <SD.GrayRace.Defs.GRMechSlotSizeDef>
     <defName>GR_MechSlotSize_Torpedo</defName>
-    <label>torpedo</label>
+    <label>鱼雷</label>
     <stellarisSizeKey>torpedo</stellarisSizeKey>
     <glyph>G</glyph>
     <uiOrder>500</uiOrder>
@@ -72,7 +72,7 @@
 
   <SD.GrayRace.Defs.GRMechSlotSizeDef>
     <defName>GR_MechSlotSize_Hangar</defName>
-    <label>hangar</label>
+    <label>机库</label>
     <stellarisSizeKey>hangar</stellarisSizeKey>
     <glyph>H</glyph>
     <uiOrder>600</uiOrder>
@@ -83,7 +83,7 @@
 
   <SD.GrayRace.Defs.GRMechSlotSizeDef>
     <defName>GR_MechSlotSize_Titanic</defName>
-    <label>titanic</label>
+    <label>泰坦</label>
     <stellarisSizeKey>titanic</stellarisSizeKey>
     <glyph>T</glyph>
     <uiOrder>700</uiOrder>

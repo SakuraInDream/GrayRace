@@ -235,15 +235,17 @@ internal sealed class GrayMechDrydockTabState
             return value;
         }
 
+        float totalOffset = 0f;
+        float totalFactor = 1f;
         for (int i = 0; i < snapshot.modules.Count; i++)
         {
             GRMechModuleDef module = snapshot.modules[i]?.module;
-            if (module?.hediffToApply?.stages == null || module.hediffToApply.stages.Count == 0)
+            if (module == null)
             {
                 continue;
             }
 
-            List<StatModifier> statOffsets = module.hediffToApply.stages[0]?.statOffsets;
+            List<StatModifier> statOffsets = module.statOffsets;
             if (statOffsets == null)
             {
                 continue;
@@ -254,12 +256,27 @@ internal sealed class GrayMechDrydockTabState
                 StatModifier modifier = statOffsets[j];
                 if (modifier?.stat == stat)
                 {
-                    value += modifier.value;
+                    totalOffset += modifier.value;
+                }
+            }
+
+            List<StatModifier> statFactors = module.statFactors;
+            if (statFactors == null)
+            {
+                continue;
+            }
+
+            for (int j = 0; j < statFactors.Count; j++)
+            {
+                StatModifier modifier = statFactors[j];
+                if (modifier?.stat == stat)
+                {
+                    totalFactor *= modifier.value;
                 }
             }
         }
 
-        return value;
+        return (value + totalOffset) * totalFactor;
     }
 
     private void BuildChassisCache()

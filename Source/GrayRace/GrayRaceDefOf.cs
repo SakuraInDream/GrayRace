@@ -15,6 +15,9 @@ namespace SD.GrayRace
         public static ThingDef GR_Incubator;
         public static ThingDef GR_Drydock;
 
+        // RecipeDefs
+        public static RecipeDef GRRecipe_GrayRace;
+
         // HediffDefs
         public static HediffDef NanitesRegeneration;
         public static HediffDef GR_Overclock_Arm;

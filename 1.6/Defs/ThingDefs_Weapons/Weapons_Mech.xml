@@ -17,7 +17,7 @@
       <AccuracyShort>1</AccuracyShort>
       <AccuracyMedium>0.9</AccuracyMedium>
       <AccuracyLong>0.7</AccuracyLong>
-      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>GR_MechWeapon_FF</li>
@@ -29,7 +29,7 @@
         <defaultProjectile>Bullet_12mmAA</defaultProjectile>
         <warmupTime>0.1</warmupTime>
         <range>34.9</range>
-        <burstShotCount>40</burstShotCount>
+        <burstShotCount>4</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -55,7 +55,7 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_PDArray</defName>
-    <label>point-defence array</label>
+    <label>点防御</label>
     <description>A rapid interception array used to swat down incoming threats and screen light hulls.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
@@ -69,7 +69,7 @@
       <AccuracyShort>1</AccuracyShort>
       <AccuracyMedium>0.82</AccuracyMedium>
       <AccuracyLong>0.55</AccuracyLong>
-      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>GR_MechWeapon_FF</li>
@@ -79,10 +79,10 @@
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_PDArray</defaultProjectile>
-        <warmupTime>0.08</warmupTime>
+        <warmupTime>0.1</warmupTime>
         <range>29.9</range>
-        <burstShotCount>6</burstShotCount>
-        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>4</muzzleFlashScale>

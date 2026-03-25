@@ -302,6 +302,11 @@ public static class GrayMechDesignUtility
         return true;
     }
 
+    public static bool IsWeaponModule(GRMechModuleDef module)
+    {
+        return module?.equipmentDef != null && module.UsesSlotCategory(GRMechSlotCategory.Weapon);
+    }
+
     public static bool TryResolveSlot(GrayMechDesignSnapshot snapshot, GRMechSectionSlotDef sectionSlot, string slotKey, out GRMechSlotEntry slot, out GRMechSectionLayoutDef layout)
     {
         if (snapshot?.chassis != null && !slotKey.NullOrEmpty())

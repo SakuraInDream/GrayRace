@@ -13,6 +13,7 @@ namespace SD.GrayRace
             return pawn?.kindDef.race == DefDatabase<ThingDef>.GetNamedSilentFail("Gray_Race");
             // return pawn.HasComp<CompResource_Nanites>();
         }
+
         public static void DrawWindowBackgroundWithTexture(Rect rect, Texture2D texture)
         {
             GUI.DrawTexture(rect, texture);

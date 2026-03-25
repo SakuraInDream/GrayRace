@@ -53,4 +53,64 @@
     </graphicData>
   </ThingDef>
 
+  <!-- 激光颜色 -->
+  <ThingDef Name="Mote_GRLaserBeamBase" ParentName="MoteBase" Abstract="True">
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <solidTime>0.1</solidTime>
+      <rotateTowardsTarget>True</rotateTowardsTarget>
+      <scaleToConnectTargets>True</scaleToConnectTargets>
+    </mote>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Things/Mote/GraserBeam</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteBeam</shaderType>
+      <shaderParameters>
+        <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
+        <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+        <_ScrollSpeedA>0</_ScrollSpeedA>
+        <_ScrollSpeedB>0</_ScrollSpeedB>
+        <_Intensity>2</_Intensity>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase">
+    <defName>Mote_GRLaserBeam_Infrared</defName>
+    <graphicData>
+      <color>(1.0, 0.4, 0.4, 0.15)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase">
+    <defName>Mote_GRLaserBeam_Blue</defName>
+    <graphicData>
+      <color>(0.15, 0.4, 1.0, 2)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase">
+    <defName>Mote_GRLaserBeam_UV</defName>
+    <graphicData>
+      <color>(0.8, 0.3, 1.0, 0.2)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase">
+    <defName>Mote_GRLaserBeam_XRay</defName>
+    <graphicData>
+      <color>(0.4, 1.0, 0.4, 0.2)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase">
+    <defName>Mote_GRLaserBeam_Gamma</defName>
+    <graphicData>
+      <color>(1.0, 0.45, 0.15, 0.2)</color>
+    </graphicData>
+  </ThingDef>
 </Defs>

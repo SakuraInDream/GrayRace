@@ -275,7 +275,15 @@ internal sealed class GrayMechDrydockDesignerPanel
         return -1;
     }
 
-    private void DrawSectionColumn(GrayMechDrydockTabContext context, GRMechSectionSlotDef sectionSlot, GRMechSectionLayoutDef layout, Rect headerRect, Rect topAreaRect, Rect bottomAreaRect, bool selected, bool ownsSelectedSlot)
+    private void DrawSectionColumn(
+        GrayMechDrydockTabContext context,
+        GRMechSectionSlotDef sectionSlot,
+        GRMechSectionLayoutDef layout,
+        Rect headerRect,
+        Rect topAreaRect,
+        Rect bottomAreaRect,
+        bool selected,
+        bool ownsSelectedSlot)
     {
         GrayMechDrydockTabState state = context.State;
         state.PrepareSectionSlotBuffers(sectionSlot);
@@ -331,7 +339,11 @@ internal sealed class GrayMechDrydockDesignerPanel
         return new Rect(x, y, width, height);
     }
 
-    private void DrawSlotArea(GrayMechDrydockTabContext context, Rect areaRect, List<GrayMechResolvedSlot> slots, Color accent)
+    private void DrawSlotArea(
+        GrayMechDrydockTabContext context,
+        Rect areaRect,
+        List<GrayMechResolvedSlot> slots,
+        Color accent)
     {
         Widgets.DrawBoxSolidWithOutline(areaRect, new Color(accent.r, accent.g, accent.b, 0.035f), new Color(accent.r, accent.g, accent.b, 0.28f));
         Widgets.DrawBoxSolid(new Rect(areaRect.x + 2f, areaRect.y + 2f, areaRect.width - 4f, 4f), new Color(accent.r, accent.g, accent.b, 0.75f));
@@ -459,7 +471,11 @@ internal sealed class GrayMechDrydockDesignerPanel
         return false;
     }
 
-    private void DrawSlotGrid(GrayMechDrydockTabContext context, Rect gridRect, List<GrayMechResolvedSlot> slots, Color accent)
+    private void DrawSlotGrid(
+        GrayMechDrydockTabContext context,
+        Rect gridRect,
+        List<GrayMechResolvedSlot> slots,
+        Color accent)
     {
         int activeSlotCount = Mathf.Min(GrayMechDrydockTabStyle.FixedDisplaySlotCount, slots.Count);
         for (int i = 0; i < GrayMechDrydockTabStyle.FixedDisplaySlotCount; i++)

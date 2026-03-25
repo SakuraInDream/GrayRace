@@ -1,59 +1,383 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_Armor_S1</defName>
-    <label>小型纳米装甲</label>
-    <description>纳米</description>
-    <!-- Icon\ShipParts\ship_part_armor_1 -->
+  <!-- 护甲模块支持 statOffset 来实现添加护甲、护盾等数据 -->
+
+  <!-- 纳米装甲 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor1Base" Abstract="True">
+    <label>纳米装甲</label>
+    <description>加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。</description>
     <iconPath>Icon/ShipParts/ship_part_armor_1</iconPath>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor1Base">
+    <defName>GR_MechModule_Armor1_S</defName>
     <compatibleSlots>
       <li>GR_MechSlot_SmallUtility</li>
     </compatibleSlots>
-    <upgradeTo>GR_MechModule_Armor_S2</upgradeTo>
+    <upgradeTo>GR_MechModule_Armor2_S</upgradeTo>
+    <costList>
+      <GR_Alloy>5</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+    </statOffsets>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor1Base">
+    <defName>GR_MechModule_Armor1_M</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumUtility</li>
+    </compatibleSlots>
+    <upgradeTo>GR_MechModule_Armor2_M</upgradeTo>
+    <costList>
+      <GR_Alloy>13</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+    </statOffsets>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor1Base">
+    <defName>GR_MechModule_Armor1_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeUtility</li>
+    </compatibleSlots>
+    <upgradeTo>GR_MechModule_Armor2_L</upgradeTo>
+    <costList>
+      <GR_Alloy>33</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.09</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.09</ArmorRating_Blunt>
+    </statOffsets>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 瓷金装甲 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor2Base" Abstract="True">
+    <label>瓷金装甲</label>
+    <description>不同金属和陶瓷的结合物，坚硬而又不失柔韧性。</description>
+    <iconPath>Icon/ShipParts/ship_part_armor_2</iconPath>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor2Base">
+    <defName>GR_MechModule_Armor2_S</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallUtility</li>
+    </compatibleSlots>
+    <upgradeTo>GR_MechModule_Armor3_S</upgradeTo>
+    <costList>
+      <GR_Alloy>8</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.0125</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.0125</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor2Base">
+    <defName>GR_MechModule_Armor2_M</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumUtility</li>
+    </compatibleSlots>
+    <upgradeTo>GR_MechModule_Armor3_M</upgradeTo>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.0375</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.0375</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor2Base">
+    <defName>GR_MechModule_Armor2_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeUtility</li>
+    </compatibleSlots>
+    <upgradeTo>GR_MechModule_Armor3_L</upgradeTo>
+    <costList>
+      <GR_Alloy>50</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.1125</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.1125</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 塑钢装甲 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor3Base" Abstract="True">
+    <label>塑钢装甲</label>
+    <description>塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。</description>
+    <iconPath>Icon/ShipParts/ship_part_armor_3</iconPath>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor3Base">
+    <defName>GR_MechModule_Armor3_S</defName>
+    <upgradeTo>GR_MechModule_Armor4_S</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>12</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.016</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.016</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor3Base">
+    <defName>GR_MechModule_Armor3_M</defName>
+    <upgradeTo>GR_MechModule_Armor4_M</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>30</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.048</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.048</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor3Base">
+    <defName>GR_MechModule_Armor3_L</defName>
+    <upgradeTo>GR_MechModule_Armor4_L</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>75</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.144</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.144</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 耐钢装甲 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor4Base" Abstract="True">
+    <label>耐钢装甲</label>
+    <description>此种材料质地强韧、耐冲击，是合适的舰体材料。</description>
+    <iconPath>Icon/ShipParts/ship_part_armor_4</iconPath>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor4Base">
+    <defName>GR_MechModule_Armor4_S</defName>
+    <upgradeTo>GR_MechModule_Armor5_S</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>18</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.0205</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.0205</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor4Base">
+    <defName>GR_MechModule_Armor4_M</defName>
+    <upgradeTo>GR_MechModule_Armor5_M</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>45</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.0615</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.0615</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor4Base">
+    <defName>GR_MechModule_Armor4_L</defName>
+    <upgradeTo>GR_MechModule_Armor5_L</upgradeTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>113</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.1845</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.1845</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 零素装甲 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor5Base" Abstract="True">
+    <label>零素装甲</label>
+    <description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</description>
+    <iconPath>Icon/ShipParts/ship_part_armor_5</iconPath>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor5Base">
+    <defName>GR_MechModule_Armor5_S</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>27</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.026</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.026</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor5Base">
+    <defName>GR_MechModule_Armor5_M</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>68</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.078</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.078</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor5Base">
+    <defName>GR_MechModule_Armor5_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeUtility</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>170</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ArmorRating_Sharp>0.2340</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.2340</ArmorRating_Blunt>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- S 槽护盾 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_SmallShieldBase" Abstract="True">
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallUtility</li>
+    </compatibleSlots>
+    <uiOrder>5100</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_SmallShieldBase">
+    <defName>GR_MechModule_Shield_S1</defName>
+    <label>小型偏射盾</label>
+    <description>能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_1</iconPath>
+    <upgradeTo>GR_MechModule_Shield_S2</upgradeTo>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
     <costList>
       <GR_Alloy>5</GR_Alloy>
     </costList>
-    <hediffToApply>GR_Hediff_MechArmor_S1</hediffToApply>
-    <uiOrder>5100</uiOrder>
+    <statOffsets>
+      <EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+    </statOffsets>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
-  <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_Armor_S2</defName>
-    <label>小型瓷金装甲</label>
-    <description>瓷金</description>
-    <iconPath>Icon/ShipParts/ship_part_armor_2</iconPath>
-    <compatibleSlots>
-      <li>GR_MechSlot_SmallUtility</li>
-    </compatibleSlots>
-    <upgradeTo>GR_MechModule_Armor_S3</upgradeTo>
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_SmallShieldBase">
+    <defName>GR_MechModule_Shield_S2</defName>
+    <label>改良偏射盾</label>
+    <description>能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_2</iconPath>
+    <upgradeTo>GR_MechModule_Shield_S3</upgradeTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
     <costList>
       <GR_Alloy>8</GR_Alloy>
     </costList>
-    <hediffToApply>GR_Hediff_MechArmor_S2</hediffToApply>
-    <uiOrder>5100</uiOrder>
+    <statOffsets>
+      <EnergyShieldEnergyMax>1.25</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>0.625</EnergyShieldRechargeRate>
+    </statOffsets>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
-  <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_Armor_S3</defName>
-    <label>小型塑钢装甲</label>
-    <description>塑钢</description>
-    <iconPath>Icon/ShipParts/ship_part_armor_3</iconPath>
-    <compatibleSlots>
-      <li>GR_MechSlot_SmallUtility</li>
-    </compatibleSlots>
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_SmallShieldBase">
+    <defName>GR_MechModule_Shield_S3</defName>
+    <label>护盾</label>
+    <description>新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_3</iconPath>
+    <upgradeTo>GR_MechModule_Shield_S4</upgradeTo>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
     <costList>
       <GR_Alloy>12</GR_Alloy>
     </costList>
-    <hediffToApply>GR_Hediff_MechArmor_S3</hediffToApply>
-    <uiOrder>5100</uiOrder>
+    <statOffsets>
+      <EnergyShieldEnergyMax>1.6</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>0.8</EnergyShieldRechargeRate>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_SmallShieldBase">
+    <defName>GR_MechModule_Shield_S4</defName>
+    <label>先进护盾</label>
+    <description>升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_4</iconPath>
+    <upgradeTo>GR_MechModule_Shield_S5</upgradeTo>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>12</GR_Alloy>
+      <!-- 群星开始要异星天然气 -->
+    </costList>
+    <statOffsets>
+      <EnergyShieldEnergyMax>2.05</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>1.025</EnergyShieldRechargeRate>
+    </statOffsets>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_SmallShieldBase">
+    <defName>GR_MechModule_Shield_S5</defName>
+    <label>超级护盾</label>
+    <description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_5</iconPath>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>18</GR_Alloy>
+      <!-- 要异星天然气 -->
+    </costList>
+    <statOffsets>
+      <EnergyShieldEnergyMax>2.6</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>1.3</EnergyShieldRechargeRate>
+    </statOffsets>
   </SD.GrayRace.Defs.GRMechModuleDef>
 </Defs>

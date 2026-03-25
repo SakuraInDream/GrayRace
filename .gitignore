@@ -64,6 +64,3 @@ Source/GrayRace/GrayRace.sln.DotSettings
 *.props
 /.vscode
 AGENTS.md
-/.gemini
-/.dotnet
-/.dotnet-home

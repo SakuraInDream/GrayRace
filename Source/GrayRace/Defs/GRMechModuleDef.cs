@@ -11,6 +11,10 @@ public class GRMechModuleDef : Def
     public GRMechModuleDef upgradeFrom;
     public GRMechModuleDef upgradeTo;
     public GRMechCombatComputerBehavior combatComputerBehavior;
+    public GRMechCombatComputerWeaponSelectionMode combatComputerWeaponSelection;
+    public GRMechCombatComputerPositioningMode combatComputerPositioning;
+    public GRMechCombatComputerCoverPreference combatComputerCoverPreference;
+    public float combatComputerPreferredRangeFactor;
     public int combatComputerPowerDraw;
     public float combatComputerFireRateBonus;
     public float combatComputerAccuracyBonus;
@@ -29,7 +33,8 @@ public class GRMechModuleDef : Def
     public Texture2D uiIcon = BaseContent.BadTex;
     public ThingDef equipmentDef;
     public ThingDef equipmentStuff;
-    public HediffDef hediffToApply;
+    public List<StatModifier> statOffsets = new();
+    public List<StatModifier> statFactors = new();
     public BodyPartDef anchorBodyPart;
     public int uiOrder;
 
@@ -228,17 +233,62 @@ public class GRMechModuleDef : Def
         {
             yield return defName + " defines combatComputerBehavior outside the combat-computer slot.";
         }
+
+        if (isCombatComputer)
+        {
+            if (combatComputerWeaponSelection == GRMechCombatComputerWeaponSelectionMode.Undefined)
+            {
+                yield return defName + " is a combat computer module but has undefined combatComputerWeaponSelection.";
+            }
+
+            if (combatComputerPositioning == GRMechCombatComputerPositioningMode.Undefined)
+            {
+                yield return defName + " is a combat computer module but has undefined combatComputerPositioning.";
+            }
+
+            if (combatComputerCoverPreference == GRMechCombatComputerCoverPreference.Undefined)
+            {
+                yield return defName + " is a combat computer module but has undefined combatComputerCoverPreference.";
+            }
+
+            if (combatComputerPositioning != GRMechCombatComputerPositioningMode.Vanilla && combatComputerPreferredRangeFactor <= 0f)
+            {
+                yield return defName + " uses non-vanilla combatComputerPositioning but has invalid combatComputerPreferredRangeFactor.";
+            }
+        }
+        else
+        {
+            if (combatComputerWeaponSelection != GRMechCombatComputerWeaponSelectionMode.Undefined)
+            {
+                yield return defName + " defines combatComputerWeaponSelection outside the combat-computer slot.";
+            }
+
+            if (combatComputerPositioning != GRMechCombatComputerPositioningMode.Undefined)
+            {
+                yield return defName + " defines combatComputerPositioning outside the combat-computer slot.";
+            }
+
+            if (combatComputerCoverPreference != GRMechCombatComputerCoverPreference.Undefined)
+            {
+                yield return defName + " defines combatComputerCoverPreference outside the combat-computer slot.";
+            }
+
+            if (combatComputerPreferredRangeFactor != 0f)
+            {
+                yield return defName + " defines combatComputerPreferredRangeFactor outside the combat-computer slot.";
+            }
+        }
     }
 
     private bool CompatibleSlotsEqual(GRMechModuleDef other)
     {
-        if (other == null)
+        if (other == null || other.compatibleSlots == null)
         {
             return false;
         }
 
         int thisCount = compatibleSlots?.Count ?? 0;
-        int otherCount = other.compatibleSlots?.Count ?? 0;
+        int otherCount = other.compatibleSlots.Count;
         if (thisCount != otherCount)
         {
             return false;

@@ -36,7 +36,6 @@ public static class GrayMechModuleApplier
             }
 
             ApplyEquipment(pawn, module);
-            ApplyHediff(pawn, snapshot, assignment, module);
         }
 
         turretBank?.RebuildFromSnapshot(snapshot);
@@ -44,7 +43,12 @@ public static class GrayMechModuleApplier
 
     private static void ApplyEquipment(Pawn pawn, GRMechModuleDef module)
     {
-        if (module?.equipmentDef == null || pawn?.equipment == null || ShouldUseInternalTurret(module))
+        if (module?.equipmentDef == null || pawn?.equipment == null)
+        {
+            return;
+        }
+
+        if (GrayMechDesignUtility.IsWeaponModule(module))
         {
             return;
         }
@@ -68,66 +72,5 @@ public static class GrayMechModuleApplier
 
         PawnGenerator.PostProcessGeneratedGear(equipment, pawn);
         pawn.equipment.AddEquipment(equipment);
-    }
-
-    private static bool ShouldUseInternalTurret(GRMechModuleDef module)
-    {
-        return module?.equipmentDef != null && module.UsesSlotCategory(GRMechSlotCategory.Weapon);
-    }
-
-    private static void ApplyHediff(Pawn pawn, GrayMechDesignSnapshot snapshot, GrayMechModuleAssignment assignment, GRMechModuleDef module)
-    {
-        if (module?.hediffToApply == null || pawn?.health?.hediffSet == null)
-        {
-            return;
-        }
-
-        BodyPartRecord targetPart = ResolveTargetPart(pawn, snapshot, assignment, module);
-        if (targetPart != null)
-        {
-            if (!pawn.health.hediffSet.HasHediff(module.hediffToApply, targetPart))
-            {
-                pawn.health.AddHediff(module.hediffToApply, targetPart);
-            }
-
-            return;
-        }
-
-        if (!pawn.health.hediffSet.HasHediff(module.hediffToApply))
-        {
-            pawn.health.AddHediff(module.hediffToApply);
-        }
-    }
-
-    private static BodyPartRecord ResolveTargetPart(Pawn pawn, GrayMechDesignSnapshot snapshot, GrayMechModuleAssignment assignment, GRMechModuleDef module)
-    {
-        if (module?.anchorBodyPart != null
-            && pawn.health.hediffSet.TryGetBodyPartRecord(module.anchorBodyPart, out BodyPartRecord anchoredPart)
-            && !pawn.health.hediffSet.PartIsMissing(anchoredPart))
-        {
-            return anchoredPart;
-        }
-
-        if (assignment == null || assignment.slotKey.NullOrEmpty())
-        {
-            return null;
-        }
-
-        if (!GrayMechDesignUtility.TryResolveSlot(snapshot, assignment.sectionSlot, assignment.slotKey, out GRMechSlotEntry slot, out _))
-        {
-            return null;
-        }
-
-        if (slot?.anchorBodyPart == null)
-        {
-            return null;
-        }
-
-        if (!pawn.health.hediffSet.TryGetBodyPartRecord(slot.anchorBodyPart, out BodyPartRecord slotPart))
-        {
-            return null;
-        }
-
-        return pawn.health.hediffSet.PartIsMissing(slotPart) ? null : slotPart;
     }
 }

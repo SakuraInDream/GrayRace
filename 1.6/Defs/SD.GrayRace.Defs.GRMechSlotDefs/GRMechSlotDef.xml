@@ -42,15 +42,6 @@
   </SD.GrayRace.Defs.GRMechSlotDef>
 
   <SD.GrayRace.Defs.GRMechSlotDef>
-    <defName>GR_MechSlot_PointDefenseTurret</defName>
-    <label>point-defence slot</label>
-    <description>TODO</description>
-    <componentType>Weapon</componentType>
-    <slotSize>GR_MechSlotSize_PointDefense</slotSize>
-    <designerColor>(0.9, 0.18, 0.2)</designerColor>
-  </SD.GrayRace.Defs.GRMechSlotDef>
-
-  <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_MediumTurret</defName>
     <label>medium turret slot</label>
     <description>TODO</description>
@@ -76,6 +67,15 @@
     <slotSize>GR_MechSlotSize_ExtraLarge</slotSize>
     <isFixed>true</isFixed>
     <designerColor>(0.7, 0.44, 0.96)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_PointDefenseTurret</defName>
+    <label>point-defence slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_PointDefense</slotSize>
+    <designerColor>(0.9, 0.18, 0.2)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
   <SD.GrayRace.Defs.GRMechSlotDef>

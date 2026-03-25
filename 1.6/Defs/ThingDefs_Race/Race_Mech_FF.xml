@@ -19,7 +19,7 @@
       <baseBodySize>1</baseBodySize>
       <baseHealthScale>1</baseHealthScale>
       <intelligence>ToolUser</intelligence>
-      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <thinkTreeMain>GR_Mechanoid</thinkTreeMain>
       <mechWeightClass>Light</mechWeightClass>
       <lifeStageAges>
         <li>

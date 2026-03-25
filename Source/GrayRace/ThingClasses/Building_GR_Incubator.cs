@@ -221,8 +221,7 @@ namespace SD.GrayRace.ThingClasses
                     action = () =>
                     {
                         State = IncubatorState.Preparing;
-                        var recipe = def.recipes.FirstOrDefault();
-                        selectedRecipe = recipe;
+                        selectedRecipe = GrayRaceDefOf.GRRecipe_GrayRace;
                     }
                 };
             }
