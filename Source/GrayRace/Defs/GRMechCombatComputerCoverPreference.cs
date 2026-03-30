@@ -1,6 +1,6 @@
 namespace SD.GrayRace.Defs;
 
-public enum GRMechCombatComputerCoverPreference : byte
+public enum GRMechCombatComputerCoverPreference
 {
     Undefined,
     Vanilla,

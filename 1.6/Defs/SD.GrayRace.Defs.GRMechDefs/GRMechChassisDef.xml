@@ -38,28 +38,9 @@
 
   <!-- 都是仿群星的设计 -->
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
-    <defName>GR_Chassis_Battleship</defName>
-    <label>战列舰</label>
-    <description>作为最大的标准化军用战舰，战列舰自然配备了厚重的装甲和数个移动炮塔。</description>
-    <pawnKindDef>GR_Mech_FF</pawnKindDef>
-    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
-    <fixedWorkTicks>60000</fixedWorkTicks>
-    <uiOrder>100</uiOrder>
-    <researchPrerequisites>
-      <li>GR_T2MechTech</li>
-    </researchPrerequisites>
-    <sectionSlots>
-      <!-- 支持哪些区段（GRMechSectionSlotDef） -->
-      <li>GR_MechSection_Bow</li>
-      <li>GR_MechSection_Mid</li>
-      <li>GR_MechSection_Stern</li>
-    </sectionSlots>
-  </SD.GrayRace.Defs.GRMechChassisDef>
-
-  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Corvette</defName>
     <label>护卫舰</label>
-    <description>体型相对小，速度快，操纵性强但是火力有限的机动机械。</description>
+    <description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</description>
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
@@ -70,6 +51,113 @@
     <sectionSlots>
       <!-- 像护卫舰只支持核心区段 -->
       <li>GR_MechSection_Mid</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Battleship</defName>
+    <label>战列舰</label>
+    <description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</description>
+    <!-- 这两个绑定对应的机械体 -->
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>60000</fixedWorkTicks>
+    <uiOrder>100</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <!-- 支持哪些区段（GRMechSectionSlotDef） -->
+      <li>GR_MechSection_Bow</li>
+      <li>GR_MechSection_Mid</li>
+      <li>GR_MechSection_Stern</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Frigate</defName>
+    <label>雷击舰</label>
+    <description>雷击舰是护卫舰的一种先进衍生型号，专职发射鱼雷。他们更慢更脆弱，但可以对大型目标造成毁灭性的打击。</description>
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>6000</fixedWorkTicks>
+    <uiOrder>100</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <li>GR_MechSection_Mid</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Destroyer</defName>
+    <label>驱逐舰</label>
+    <description>采用双区段设计的驱逐舰可以提供多种多样的战略性武装。</description>
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>6000</fixedWorkTicks>
+    <uiOrder>100</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <li>GR_MechSection_Bow</li>
+      <li>GR_MechSection_Stern</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Cruiser</defName>
+    <label>巡洋舰</label>
+    <description>巡洋舰采用三段式设计，在愿意加钱的情况下可自由进行各种追加模组改装。</description>
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>6000</fixedWorkTicks>
+    <uiOrder>100</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <li>GR_MechSection_Bow</li>
+      <li>GR_MechSection_Mid</li>
+      <li>GR_MechSection_Stern</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Titan</defName>
+    <label>泰坦</label>
+    <description>这些巨型战舰是整个舰队的骄傲，泰坦上携带有多种武器，一般作为旗舰使用。</description>
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>6000</fixedWorkTicks>
+    <uiOrder>100</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <li>GR_MechSection_Bow</li>
+      <li>GR_MechSection_Mid</li>
+      <li>GR_MechSection_Stern</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Juggernaut</defName>
+    <label>主宰</label>
+    <description>这些巨型构造物既是舰船也是空间站。主宰是一种庞大的可移动空间站，可以维修和建造舰船，也就是说，它可以作为进攻性战役中行动时的前进基地使用。</description>
+    <pawnKindDef>GR_Mech_FF</pawnKindDef>
+    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <fixedWorkTicks>6000</fixedWorkTicks>
+    <uiOrder>100</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <li>GR_MechSection_Bow</li>
+      <li>GR_MechSection_Mid</li>
+      <li>GR_MechSection_Stern</li>
     </sectionSlots>
   </SD.GrayRace.Defs.GRMechChassisDef>
 </Defs>

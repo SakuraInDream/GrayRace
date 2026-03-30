@@ -10,8 +10,7 @@ namespace SD.GrayRace
     {
         public static bool IsGrayRace(this Pawn pawn)
         {
-            return pawn?.kindDef.race == DefDatabase<ThingDef>.GetNamedSilentFail("Gray_Race");
-            // return pawn.HasComp<CompResource_Nanites>();
+            return pawn?.def == GrayRaceDefOf.Gray_Race;
         }
 
         public static void DrawWindowBackgroundWithTexture(Rect rect, Texture2D texture)

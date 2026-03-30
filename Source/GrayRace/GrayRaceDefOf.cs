@@ -11,6 +11,7 @@ namespace SD.GrayRace
         public static PawnKindDef GR_colonist;
 
         // ThingDefs
+        public static ThingDef Gray_Race;
         public static ThingDef GR_Nanites;
         public static ThingDef GR_Incubator;
         public static ThingDef GR_Drydock;

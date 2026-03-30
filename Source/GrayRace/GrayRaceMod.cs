@@ -19,14 +19,8 @@ namespace SD.GrayRace
 #endif
             HarmonyInstance = new Harmony("sd.grayrace.mod");
             MethodInfo originalMethod = AccessTools.PropertyGetter(typeof(ResearchProjectDef), nameof(ResearchProjectDef.UnlockedDefs));
-            MethodInfo tryGetAttackVerbMethod = AccessTools.Method(typeof(Pawn), nameof(Pawn.TryGetAttackVerb));
-            // HarmonyMethod patch = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsPostfix));
             HarmonyMethod transpiler = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsTranspiler));
-            HarmonyMethod tryGetAttackVerbPostfix = new HarmonyMethod(typeof(PawnPatches), nameof(PawnPatches.TryGetAttackVerbPostfix));
-
-            // HarmonyInstance.Patch(original: originalMethod, postfix: patch);
             HarmonyInstance.Patch(original: originalMethod, transpiler: transpiler);
-            HarmonyInstance.Patch(original: tryGetAttackVerbMethod, postfix: tryGetAttackVerbPostfix);
         }
     }
 }

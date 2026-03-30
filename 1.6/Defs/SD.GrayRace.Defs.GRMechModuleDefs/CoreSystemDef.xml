@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    反应堆现在只负责供能预算。
+    沿用 Stellaris 同样的 power
+    powerByChassis 控制不同的机型提供的power
+  -->
+
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorBase" Abstract="True">
+    <iconPath>Things/Building/Reactor</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_PowerCore</li>
+    </compatibleSlots>
+    <anchorBodyPart>Reactor</anchorBodyPart>
+    <uiOrder>4010</uiOrder>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
+    <defName>GR_MechModule_CC_FissionReactor</defName>
+    <label>裂变反应堆</label>
+    <description>通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。</description>
+    <upgradesTo>
+      <li>GR_MechModule_CC_FusionReactor</li>
+    </upgradesTo>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <power>75</power>
+    <powerByChassis>
+      <li>
+        <chassis>GR_Chassis_Battleship</chassis>
+        <power>550</power>
+      </li>
+    </powerByChassis>
+    <uiOrder>4010</uiOrder>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
+    <defName>GR_MechModule_CC_FusionReactor</defName>
+    <label>聚变反应堆</label>
+    <description>核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。</description>
+    <upgradesTo>
+      <li>GR_MechModule_CC_ColdFusionReactor</li>
+    </upgradesTo>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>15</GR_Alloy>
+    </costList>
+    <power>100</power>
+    <powerByChassis>
+      <li>
+        <chassis>GR_Chassis_Battleship</chassis>
+        <power>720</power>
+      </li>
+    </powerByChassis>
+    <uiOrder>4020</uiOrder>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
+    <defName>GR_MechModule_CC_ColdFusionReactor</defName>
+    <label>冷聚变反应堆</label>
+    <description>在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。</description>
+    <upgradesTo>
+      <li>GR_MechModule_CC_AntimatterReactor</li>
+    </upgradesTo>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>23</GR_Alloy>
+    </costList>
+    <power>130</power>
+    <powerByChassis>
+      <li>
+        <chassis>GR_Chassis_Battleship</chassis>
+        <power>950</power>
+      </li>
+    </powerByChassis>
+    <uiOrder>4030</uiOrder>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
+    <defName>GR_MechModule_CC_AntimatterReactor</defName>
+    <label>反物质反应堆</label>
+    <description>利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。</description>
+    <upgradesTo>
+      <li>GR_MechModule_CC_ZeroPointReactor</li>
+    </upgradesTo>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>34</GR_Alloy>
+    </costList>
+    <power>170</power>
+    <powerByChassis>
+      <li>
+        <chassis>GR_Chassis_Battleship</chassis>
+        <power>1250</power>
+      </li>
+    </powerByChassis>
+    <uiOrder>4040</uiOrder>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
+    <defName>GR_MechModule_CC_ZeroPointReactor</defName>
+    <label>零点反应堆</label>
+    <description>直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。</description>
+    <upgradesTo>
+      <li>GR_MechModule_CC_DarkMatterReactor</li>
+    </upgradesTo>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>51</GR_Alloy>
+    </costList>
+    <power>220</power>
+    <powerByChassis>
+      <li>
+        <chassis>GR_Chassis_Battleship</chassis>
+        <power>1550</power>
+      </li>
+    </powerByChassis>
+    <uiOrder>4050</uiOrder>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
+    <defName>GR_MechModule_CC_DarkMatterReactor</defName>
+    <label>暗物质反应堆</label>
+    <description>这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。</description>
+    <researchPrerequisites>
+      <li>GR_T6Mechtech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>76</GR_Alloy>
+      <!-- 未来补上暗物质类稀有资源后，再按群星补充额外材料消耗。 -->
+    </costList>
+    <power>285</power>
+    <powerByChassis>
+      <li>
+        <chassis>GR_Chassis_Battleship</chassis>
+        <power>2000</power>
+      </li>
+    </powerByChassis>
+    <uiOrder>4060</uiOrder>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+</Defs>

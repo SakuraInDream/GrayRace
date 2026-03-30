@@ -52,7 +52,7 @@ public class GrayMechDesignSnapshot : IExposable
     }
 }
 
-public class GrayMechResolvedSlot
+public class GRMechResolvedSlot
 {
     public GRMechSectionSlotDef sectionSlot;
     public GRMechSectionLayoutDef layout;

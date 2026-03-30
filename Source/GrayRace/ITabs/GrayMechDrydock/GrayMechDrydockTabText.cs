@@ -50,7 +50,7 @@ internal static class GrayMechDrydockTabText
 
     private static readonly Dictionary<TextMeasureKey, float> CachedTextHeights = new();
     private static readonly Dictionary<GRMechSectionLayoutDef, string> CachedLayoutExpressions = new();
-    private static readonly Dictionary<GRMechModuleDef, string> CachedModuleCostSummaries = new();
+    private static readonly Dictionary<string, string> CachedModuleCostSummaries = new();
 
     internal static float MeasureWrappedTextHeight(string text, float width, GameFont font)
     {
@@ -301,54 +301,80 @@ internal static class GrayMechDrydockTabText
         return design.label + "\n" + "Chassis: " + snapshot.chassis.LabelCap + (modules.NullOrEmpty() ? string.Empty : "\nModules: " + modules);
     }
 
-    internal static string BuildModuleCostSummary(GRMechModuleDef module, StringBuilder buffer)
+    internal static string BuildModuleCostSummary(GRMechModuleDef module, GRMechChassisDef chassis, StringBuilder buffer)
     {
-        if (module?.costList == null || module.costList.Count == 0)
+        if (module == null)
         {
             return "Cost: None";
         }
 
-        if (CachedModuleCostSummaries.TryGetValue(module, out string cached))
+        string cacheKey = module.defName + "|" + (chassis?.defName ?? string.Empty);
+        if (CachedModuleCostSummaries.TryGetValue(cacheKey, out string cached))
         {
             return cached;
         }
 
         buffer.Clear();
         buffer.Append("Cost: ");
-        for (int i = 0; i < module.costList.Count; i++)
+        bool wroteCost = false;
+        if (module.costList != null)
         {
-            ThingDefCountClass cost = module.costList[i];
-            if (cost?.thingDef == null || cost.count <= 0)
+            for (int i = 0; i < module.costList.Count; i++)
             {
-                continue;
-            }
+                ThingDefCountClass cost = module.costList[i];
+                if (cost?.thingDef == null || cost.count <= 0)
+                {
+                    continue;
+                }
 
-            if (buffer.Length > 6)
-            {
-                buffer.Append(", ");
-            }
+                if (wroteCost)
+                {
+                    buffer.Append(", ");
+                }
 
-            buffer.Append(cost.thingDef.LabelCap);
-            buffer.Append(" x");
-            buffer.Append(cost.count);
+                buffer.Append(cost.thingDef.LabelCap);
+                buffer.Append(" x");
+                buffer.Append(cost.count);
+                wroteCost = true;
+            }
+        }
+
+        if (!wroteCost)
+        {
+            buffer.Append("None");
+        }
+
+        int power = module.GetNetPower(chassis);
+        if (power != 0)
+        {
+            buffer.Append("  |  Power: ");
+            AppendSignedInt(buffer, power);
         }
 
         string summary = buffer.ToString();
-        CachedModuleCostSummaries[module] = summary;
+        if (CachedModuleCostSummaries.Count > 4096)
+        {
+            CachedModuleCostSummaries.Clear();
+        }
+
+        CachedModuleCostSummaries[cacheKey] = summary;
         return summary;
     }
 
-    internal static string BuildSlotTooltip(GrayMechResolvedSlot resolvedSlot, GRMechModuleDef module)
+    internal static string BuildSlotTooltip(GRMechChassisDef chassis, GRMechResolvedSlot resolvedSlot, GRMechModuleDef module)
     {
         string title = GetSlotDisplayName(resolvedSlot.slot);
         string state = module != null ? "Installed: " + module.LabelCap : "Installed: None";
-        return title
-               + "\n"
-               + GetSlotOwnerLabel(resolvedSlot)
-               + "\n"
-               + BuildSlotTypeSummary(resolvedSlot.slot)
-               + "\n"
-               + state;
+        string power = module != null && module.GetNetPower(chassis) != 0
+            ? "\nPower: " + FormatSignedInt(module.GetNetPower(chassis))
+            : string.Empty;
+        string body = GetSlotOwnerLabel(resolvedSlot)
+                      + "\n"
+                      + BuildSlotTypeSummary(resolvedSlot.slot)
+                      + "\n"
+                      + state
+                      + power;
+        return title.NullOrEmpty() ? body : title + "\n" + body;
     }
 
     internal static string BuildSlotTypeSummary(GRMechSlotEntry slot)
@@ -400,13 +426,13 @@ internal static class GrayMechDrydockTabText
     {
         if (slot == null)
         {
-            return "Unknown Slot";
+            return Prefs.DevMode ? "Unknown Slot" : string.Empty;
         }
 
-        return slot.label.NullOrEmpty() ? slot.key : slot.label;
+        return Prefs.DevMode ? (slot.key ?? string.Empty) : string.Empty;
     }
 
-    internal static string GetSlotOwnerLabel(GrayMechResolvedSlot resolvedSlot)
+    internal static string GetSlotOwnerLabel(GRMechResolvedSlot resolvedSlot)
     {
         if (resolvedSlot?.sectionSlot != null)
         {
@@ -434,6 +460,21 @@ internal static class GrayMechDrydockTabText
         }
 
         return GrayMechDrydockTabStyle.AuxiliaryColor;
+    }
+
+    private static void AppendSignedInt(StringBuilder buffer, int value)
+    {
+        if (value > 0)
+        {
+            buffer.Append('+');
+        }
+
+        buffer.Append(value);
+    }
+
+    private static string FormatSignedInt(int value)
+    {
+        return value > 0 ? "+" + value : value.ToString();
     }
 
     internal static int CompareChassisDefs(GRMechChassisDef left, GRMechChassisDef right)

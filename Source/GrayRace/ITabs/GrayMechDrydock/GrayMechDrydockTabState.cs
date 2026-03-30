@@ -27,27 +27,31 @@ internal sealed class GrayMechDrydockTabState
 
     internal readonly List<GRMechChassisDef> ChassisCache = new();
     internal readonly List<GrayMechDesignRecord> DesignCache = new();
-    internal readonly List<GrayMechResolvedSlot> SlotCache = new();
+    internal readonly List<GRMechResolvedSlot> SlotCache = new();
     internal readonly List<GRMechModuleDef> CompatibleModules = new();
     internal readonly List<ThingDefCountClass> CostCache = new();
     internal readonly StringBuilder TextBuilder = new();
-    internal readonly List<GrayMechResolvedSlot> WeaponSlotBuffer = new();
-    internal readonly List<GrayMechResolvedSlot> SmallUtilitySlotBuffer = new();
-    internal readonly List<GrayMechResolvedSlot> MediumUtilitySlotBuffer = new();
-    internal readonly List<GrayMechResolvedSlot> LargeUtilitySlotBuffer = new();
-    internal readonly List<GrayMechResolvedSlot> AuxSlotBuffer = new();
-    internal readonly List<GrayMechResolvedSlot> SupportSlotBuffer = new();
-    internal readonly List<GrayMechResolvedSlot> SectionSlotBuffer = new();
-    internal readonly List<GrayMechResolvedSlot> RequiredSlotBuffer = new();
+    internal readonly List<GRMechResolvedSlot> WeaponSlotBuffer = new();
+    internal readonly List<GRMechResolvedSlot> SmallUtilitySlotBuffer = new();
+    internal readonly List<GRMechResolvedSlot> MediumUtilitySlotBuffer = new();
+    internal readonly List<GRMechResolvedSlot> LargeUtilitySlotBuffer = new();
+    internal readonly List<GRMechResolvedSlot> AuxSlotBuffer = new();
+    internal readonly List<GRMechResolvedSlot> SupportSlotBuffer = new();
+    internal readonly List<GRMechResolvedSlot> SectionSlotBuffer = new();
+    internal readonly List<GRMechResolvedSlot> RequiredSlotBuffer = new();
 
     internal Vector2 FocusScrollPosition = Vector2.zero;
     internal Vector2 SummaryScrollPosition = Vector2.zero;
+    internal Vector2 QueueScrollPosition = Vector2.zero;
     internal Vector2 LibraryScrollPosition = Vector2.zero;
 
     internal string CachedCostSummary = string.Empty;
     internal int CachedFilledSlotCount;
     internal int CachedTotalSlotCount;
     internal int CachedFixedWorkTicks;
+    internal int CachedPowerGeneration;
+    internal int CachedPowerConsumption;
+    internal int CachedPowerNet;
     internal float CachedBandwidthCost;
     internal float CachedMoveSpeed;
     internal float CachedArmorSharp;
@@ -79,6 +83,7 @@ internal sealed class GrayMechDrydockTabState
             BuildChassisCache();
             ResetFocusState();
             SummaryScrollPosition = Vector2.zero;
+            QueueScrollPosition = Vector2.zero;
         }
 
         WorldComponent_GrayMechDesignLibrary library = Find.World?.GetComponent<WorldComponent_GrayMechDesignLibrary>();
@@ -127,7 +132,7 @@ internal sealed class GrayMechDrydockTabState
     private void EnsureFocusState(Building_GR_Drydock dock)
     {
         GrayMechDesignSnapshot draft = dock.DesignDraft;
-        if (!SelectedSlotKey.NullOrEmpty() && TryGetResolvedSlot(SelectedSectionSlot, SelectedSlotKey, out GrayMechResolvedSlot resolvedSlot1))
+        if (!SelectedSlotKey.NullOrEmpty() && TryGetResolvedSlot(SelectedSectionSlot, SelectedSlotKey, out GRMechResolvedSlot resolvedSlot1))
         {
             SelectedSectionSlot = resolvedSlot1.sectionSlot;
             return;
@@ -147,7 +152,7 @@ internal sealed class GrayMechDrydockTabState
 
         if (!SelectedSlotKey.NullOrEmpty())
         {
-            if (TryGetResolvedSlot(SelectedSectionSlot, SelectedSlotKey, out GrayMechResolvedSlot resolvedSlot2))
+            if (TryGetResolvedSlot(SelectedSectionSlot, SelectedSlotKey, out GRMechResolvedSlot resolvedSlot2))
             {
                 SelectedSectionSlot = resolvedSlot2.sectionSlot;
             }
@@ -177,7 +182,7 @@ internal sealed class GrayMechDrydockTabState
             return;
         }
 
-        if (TryGetResolvedSlot(SelectedSectionSlot, SelectedSlotKey, out GrayMechResolvedSlot resolvedSlot))
+        if (TryGetResolvedSlot(SelectedSectionSlot, SelectedSlotKey, out GRMechResolvedSlot resolvedSlot))
         {
             GrayMechDesignUtility.FillCompatibleModules(dock.DesignDraft, resolvedSlot.slot, CompatibleModules, ShowObsoleteModules);
         }
@@ -197,6 +202,7 @@ internal sealed class GrayMechDrydockTabState
         GrayMechDesignSnapshot draft = dock.DesignDraft;
         GrayMechDesignUtility.BuildCostList(draft, CostCache);
         CachedCostSummary = GrayMechDrydockTabText.BuildCostSummary(CostCache, TextBuilder);
+        GrayMechDesignUtility.GetPowerBudget(draft, out CachedPowerGeneration, out CachedPowerConsumption, out CachedPowerNet);
 
         CachedTotalSlotCount = SlotCache.Count;
         CachedFilledSlotCount = 0;
@@ -315,13 +321,13 @@ internal sealed class GrayMechDrydockTabState
         DesignCache.Sort(GrayMechDrydockTabText.CompareSavedDesigns);
     }
 
-    internal bool TryGetResolvedSlot(GRMechSectionSlotDef sectionSlot, string slotKey, out GrayMechResolvedSlot resolvedSlot)
+    internal bool TryGetResolvedSlot(GRMechSectionSlotDef sectionSlot, string slotKey, out GRMechResolvedSlot resolvedSlot)
     {
         if (!slotKey.NullOrEmpty())
         {
             for (int i = 0; i < SlotCache.Count; i++)
             {
-                GrayMechResolvedSlot current = SlotCache[i];
+                GRMechResolvedSlot current = SlotCache[i];
                 if (current != null
                     && GRMechSectionSlotUtility.Matches(current.sectionSlot, sectionSlot)
                     && current.slot != null
@@ -402,20 +408,10 @@ internal sealed class GrayMechDrydockTabState
     internal float GetSummaryPanelHeight(float width)
     {
         float innerWidth = width - 16f;
-        float pillWidth = Mathf.Min(160f, innerWidth * 0.36f);
+        float pillWidth = Mathf.Min(GrayMechDrydockTabStyle.SummaryStatusMaxWidth, innerWidth * 0.34f);
         string queueStatus = CachedHasActiveOrder ? CachedProductionStatus : (CachedCanQueueOrder ? "Ready for assembly" : CachedQueueReason);
         float pillHeight = GrayMechDrydockTabText.GetPillHeight(queueStatus, pillWidth);
-
-        float textWidth = Mathf.Max(1f, innerWidth - 78f - 12f - pillWidth - 12f);
-        GrayMechDesignSnapshot draft = cachedDock?.DesignDraft;
-        string nameText = "<b>" + (draft?.designLabel ?? "No design") + "</b>";
-        string chassisText = "Chassis: " + (draft?.chassis?.LabelCap.ToString() ?? "None");
-        string sourceText = GrayMechDrydockTabText.GetSourceLabel(cachedDock);
-        float nameHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(nameText, textWidth, GameFont.Small);
-        float chassisHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(chassisText, textWidth, GameFont.Small);
-        float sourceHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(sourceText, textWidth, GameFont.Small);
-        float textBlockHeight = nameHeight + 2f + chassisHeight + 2f + sourceHeight;
-        float headerHeight = Mathf.Max(56f, Mathf.Max(pillHeight, textBlockHeight));
+        float headerHeight = Mathf.Max(GrayMechDrydockTabStyle.SummaryThumbHeight, pillHeight);
 
         float rowHeight = 26f;
         float sectionHeaderHeight = 22f;
@@ -472,7 +468,7 @@ internal sealed class GrayMechDrydockTabState
     {
         float leftWidth = width - 84f;
         string title = "<b>" + (module?.LabelCap.ToString() ?? "Empty Slot") + "</b>";
-        string cost = module == null ? "Cost: None" : GrayMechDrydockTabText.BuildModuleCostSummary(module, TextBuilder);
+        string cost = module == null ? "Cost: None" : GrayMechDrydockTabText.BuildModuleCostSummary(module, cachedDock?.DesignDraft?.chassis, TextBuilder);
         return 8f
                + GrayMechDrydockTabText.MeasureWrappedTextHeight(title, leftWidth, GameFont.Small)
                + 2f
@@ -510,7 +506,7 @@ internal sealed class GrayMechDrydockTabState
         FocusScrollPosition = Vector2.zero;
     }
 
-    internal void SelectSlot(GrayMechResolvedSlot resolvedSlot)
+    internal void SelectSlot(GRMechResolvedSlot resolvedSlot)
     {
         if (resolvedSlot?.slot == null)
         {
@@ -537,7 +533,7 @@ internal sealed class GrayMechDrydockTabState
 
         for (int i = 0; i < SlotCache.Count; i++)
         {
-            GrayMechResolvedSlot slot = SlotCache[i];
+            GRMechResolvedSlot slot = SlotCache[i];
             if (slot == null || !GRMechSectionSlotUtility.Matches(slot.sectionSlot, sectionSlot) || slot.slot == null)
             {
                 continue;
@@ -579,7 +575,7 @@ internal sealed class GrayMechDrydockTabState
         RequiredSlotBuffer.Clear();
         for (int i = 0; i < SlotCache.Count; i++)
         {
-            GrayMechResolvedSlot slot = SlotCache[i];
+            GRMechResolvedSlot slot = SlotCache[i];
             if (slot?.slot == null || slot.sectionSlot != null)
             {
                 continue;
@@ -596,7 +592,7 @@ internal sealed class GrayMechDrydockTabState
             return false;
         }
 
-        return TryGetResolvedSlot(SelectedSectionSlot, SelectedSlotKey, out GrayMechResolvedSlot resolvedSlot)
+        return TryGetResolvedSlot(SelectedSectionSlot, SelectedSlotKey, out GRMechResolvedSlot resolvedSlot)
             && GRMechSectionSlotUtility.Matches(resolvedSlot.sectionSlot, sectionSlot);
     }
 }
