@@ -1,6 +1,6 @@
 namespace SD.GrayRace.Defs;
 
-public enum GRMechCombatComputerPositioningMode : byte
+public enum GRMechCombatComputerPositioningMode
 {
     Undefined,
     Vanilla,

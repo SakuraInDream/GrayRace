@@ -28,13 +28,13 @@ internal sealed class GrayMechDrydockTabController
         }
 
         Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
-            "Delete saved design \"" + record.label + "\"?",
+            "移除设计 \"" + record.label + "\"?",
             delegate
             {
                 if (dock.DeleteCurrentDesign())
                 {
                     SoundDefOf.Tick_Low.PlayOneShotOnCamera();
-                    Messages.Message("Design deleted.", dock, MessageTypeDefOf.PositiveEvent);
+                    Messages.Message("设计蓝图已删除.", dock, MessageTypeDefOf.PositiveEvent);
                 }
             },
             destructive: true));
@@ -78,7 +78,7 @@ internal sealed class GrayMechDrydockTabController
         }
 
         SoundDefOf.Tick_Low.PlayOneShotOnCamera();
-        Messages.Message("Design updated.", dock, MessageTypeDefOf.PositiveEvent);
+        Messages.Message("设计蓝图已更新", dock, MessageTypeDefOf.PositiveEvent);
     }
 
     internal void QueueAssemblyOrder(Building_GR_Drydock dock)
@@ -93,6 +93,32 @@ internal sealed class GrayMechDrydockTabController
             SoundDefOf.ClickReject.PlayOneShotOnCamera();
             Messages.Message(reason, dock, MessageTypeDefOf.RejectInput);
         }
+    }
+
+    internal void CancelQueuedOrder(Building_GR_Drydock dock, int index)
+    {
+        if (dock.TryCancelQueuedOrder(index, out GrayMechAssemblyOrder removedOrder))
+        {
+            SoundDefOf.Tick_Low.PlayOneShotOnCamera();
+            Messages.Message("已取消队列项: " + (removedOrder?.Label ?? "Unnamed Order"), dock, MessageTypeDefOf.PositiveEvent);
+            return;
+        }
+
+        SoundDefOf.ClickReject.PlayOneShotOnCamera();
+        Messages.Message("无法取消该建造队列项。", dock, MessageTypeDefOf.RejectInput);
+    }
+
+    internal void CancelCurrentOrder(Building_GR_Drydock dock)
+    {
+        if (dock.TryCancelCurrentOrder(out GrayMechAssemblyOrder removedOrder))
+        {
+            SoundDefOf.Tick_Low.PlayOneShotOnCamera();
+            Messages.Message("已取消当前建造: " + (removedOrder?.Label ?? "Unnamed Order"), dock, MessageTypeDefOf.PositiveEvent);
+            return;
+        }
+
+        SoundDefOf.ClickReject.PlayOneShotOnCamera();
+        Messages.Message("无法取消当前建造。", dock, MessageTypeDefOf.RejectInput);
     }
 
     internal void LoadChassis(Building_GR_Drydock dock, GRMechChassisDef chassis)
@@ -132,7 +158,7 @@ internal sealed class GrayMechDrydockTabController
         SoundDefOf.Click.PlayOneShotOnCamera();
     }
 
-    internal void SelectSlot(Building_GR_Drydock dock, GrayMechResolvedSlot resolvedSlot)
+    internal void SelectSlot(Building_GR_Drydock dock, GRMechResolvedSlot resolvedSlot)
     {
         if (resolvedSlot?.slot == null)
         {
@@ -144,7 +170,7 @@ internal sealed class GrayMechDrydockTabController
         SoundDefOf.Click.PlayOneShotOnCamera();
     }
 
-    internal void ClearSlotModule(Building_GR_Drydock dock, GrayMechResolvedSlot resolvedSlot)
+    internal void ClearSlotModule(Building_GR_Drydock dock, GRMechResolvedSlot resolvedSlot)
     {
         if (resolvedSlot?.slot == null)
         {

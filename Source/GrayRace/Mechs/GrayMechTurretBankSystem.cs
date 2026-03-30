@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using RimWorld;
+using SD.GrayRace.Comps;
 using SD.GrayRace.Defs;
-using SD.GrayRace.Mechs;
 using UnityEngine;
 using Verse;
 using Verse.AI;
 
-namespace SD.GrayRace.Comps;
+namespace SD.GrayRace.Mechs;
 
 [StaticConstructorOnStartup]
-public class CompGrayMechTurretBank : ThingComp
+public class GrayMechTurretBankSystem : GrayMechSystemBase
 {
     private static readonly CachedTexture ToggleTurretIcon = new("UI/Gizmos/ToggleTurret");
     private static readonly CachedTexture ForceTargetIcon = new("UI/Commands/Attack");
@@ -20,7 +20,7 @@ public class CompGrayMechTurretBank : ThingComp
 
     private sealed class GrayMechTurretState : IAttackTargetSearcher
     {
-        private readonly CompGrayMechTurretBank bank;
+        private readonly GrayMechTurretBankSystem bank;
 
         public GRMechModuleDef module;
         public GRMechSectionSlotDef sectionSlot;
@@ -34,12 +34,12 @@ public class CompGrayMechTurretBank : ThingComp
         public int lastAttackTargetTick;
         public float curRotation;
 
-        public GrayMechTurretState(CompGrayMechTurretBank bank)
+        public GrayMechTurretState(GrayMechTurretBankSystem bank)
         {
             this.bank = bank;
         }
 
-        public Thing Thing => bank.parent;
+        public Thing Thing => bank.ParentThing;
 
         public Verb CurrentEffectiveVerb => AttackVerb;
 
@@ -60,7 +60,7 @@ public class CompGrayMechTurretBank : ThingComp
             }
 
             Thing targetThing = target.Thing;
-            if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != bank.parent.MapHeld)
+            if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != bank.ParentThing.MapHeld)
             {
                 return false;
             }
@@ -164,7 +164,7 @@ public class CompGrayMechTurretBank : ThingComp
                 VerbProperties clonedProps = verb.verbProps.MemberwiseClone();
                 clonedProps.warmupTime = 0f;
                 verb.verbProps = clonedProps;
-                verb.caster = bank.parent;
+                verb.caster = bank.ParentThing;
                 verb.castCompleteCallback = OnCastComplete;
             }
         }
@@ -184,7 +184,7 @@ public class CompGrayMechTurretBank : ThingComp
             if (currentTarget.HasThing)
             {
                 Thing currentThing = currentTarget.Thing;
-                if (currentThing == null || currentThing.Destroyed || !currentThing.Spawned || currentThing.Map != bank.parent.MapHeld)
+                if (currentThing == null || currentThing.Destroyed || !currentThing.Spawned || currentThing.Map != bank.ParentThing.MapHeld)
                 {
                     ResetCurrentTarget();
                     return;
@@ -235,24 +235,41 @@ public class CompGrayMechTurretBank : ThingComp
     private bool fireAtWill = true;
     private bool pendingRebuild;
     private LocalTargetInfo forcedTarget = LocalTargetInfo.Invalid;
-    private GRMechModuleDef activeCombatComputer;
+    private GRMechCombatComputerModuleDef activeCombatComputer;
 
-    public CompGrayMechTurretBank()
+    public GrayMechTurretBankSystem()
     {
         unreservedTargetValidator = ValidateUnreservedTarget;
         forcedTargetValidator = CanForceAttack;
     }
 
-    private Pawn Pawn => parent as Pawn;
+    private Pawn Pawn => pawn;
+    private ThingWithComps ParentThing => Parent;
     private Thing ForcedTargetThing => forcedTarget.HasThing ? forcedTarget.Thing : null;
 
     public int TurretCount => turrets.Count;
-    public GRMechModuleDef ActiveCombatComputer => activeCombatComputer;
-    public GRMechCombatComputerBehavior CombatComputerBehavior => activeCombatComputer?.combatComputerBehavior ?? GRMechCombatComputerBehavior.Undefined;
+    public GRMechCombatComputerModuleDef ActiveCombatComputer
+    {
+        get
+        {
+            if (pendingRebuild)
+            {
+                TryRebuildFromLoadout();
+            }
+
+            return activeCombatComputer;
+        }
+    }
+
+    public GRMechCombatComputerBehavior CombatComputerBehavior => ActiveCombatComputer?.behavior ?? GRMechCombatComputerBehavior.Undefined;
+
+    public override void Notify_LoadoutChanged()
+    {
+        RebuildFromSnapshot(Pawn?.TryGetComp<CompGrayMechLoadout>()?.DesignSnapshot);
+    }
 
     public override void PostExposeData()
     {
-        base.PostExposeData();
         Scribe_Values.Look(ref fireAtWill, "fireAtWill", defaultValue: true);
         Scribe_TargetInfo.Look(ref forcedTarget, "forcedTarget");
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
@@ -263,14 +280,12 @@ public class CompGrayMechTurretBank : ThingComp
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
     {
-        base.PostSpawnSetup(respawningAfterLoad);
         pendingRebuild = pendingRebuild || respawningAfterLoad || turrets.Count == 0;
         TryRebuildFromLoadout();
     }
 
     public override void PostDestroy(DestroyMode mode, Map previousMap)
     {
-        base.PostDestroy(mode, previousMap);
         ClearTurrets();
     }
 
@@ -307,12 +322,7 @@ public class CompGrayMechTurretBank : ThingComp
 
     public override IEnumerable<Gizmo> CompGetGizmosExtra()
     {
-        foreach (Gizmo item in base.CompGetGizmosExtra())
-        {
-            yield return item;
-        }
-
-        if (parent is Pawn { IsColonyMechPlayerControlled: true })
+        if (pawn is { IsColonyMechPlayerControlled: true })
         {
             Command_Target forceAttackCommand = new();
             forceAttackCommand.defaultLabel = "CommandSetForceAttackTarget".Translate();
@@ -354,19 +364,18 @@ public class CompGrayMechTurretBank : ThingComp
 
     public override void PostDrawExtraSelectionOverlays()
     {
-        base.PostDrawExtraSelectionOverlays();
         if (!forcedTarget.IsValid || !forcedTarget.HasThing)
         {
             return;
         }
 
         Thing targetThing = forcedTarget.Thing;
-        if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != parent.MapHeld)
+        if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != ParentThing.MapHeld)
         {
             return;
         }
 
-        Vector3 a = parent.TrueCenter();
+        Vector3 a = ParentThing.TrueCenter();
         Vector3 b = targetThing.TrueCenter();
         b.y = AltitudeLayer.MetaOverlays.AltitudeFor();
         a.y = b.y;
@@ -420,6 +429,7 @@ public class CompGrayMechTurretBank : ThingComp
             return false;
         }
 
+        target = ResolveVerbSelectionTarget(target);
         GRMechCombatComputerWeaponSelectionMode selectionMode = GrayMechCombatComputerUtility.ResolveWeaponSelection(activeCombatComputer);
         return TryGetCombatComputerVerb(target, selectionMode, out verb);
     }
@@ -431,8 +441,7 @@ public class CompGrayMechTurretBank : ThingComp
             return;
         }
 
-        CompGrayMechLoadout loadout = Pawn?.TryGetComp<CompGrayMechLoadout>();
-        RebuildFromSnapshot(loadout?.DesignSnapshot);
+        RebuildFromSnapshot(Pawn?.TryGetComp<CompGrayMechLoadout>()?.DesignSnapshot);
     }
 
     private bool TryGetCombatComputerVerb(Thing target, GRMechCombatComputerWeaponSelectionMode selectionMode, out Verb verb)
@@ -505,6 +514,31 @@ public class CompGrayMechTurretBank : ThingComp
         return false;
     }
 
+    private Thing ResolveVerbSelectionTarget(Thing target)
+    {
+        if (IsValidVerbSelectionTarget(target))
+        {
+            return target;
+        }
+
+        if (IsValidVerbSelectionTarget(ForcedTargetThing))
+        {
+            return ForcedTargetThing;
+        }
+
+        Thing enemyTarget = Pawn?.mindState?.enemyTarget;
+        return IsValidVerbSelectionTarget(enemyTarget) ? enemyTarget : null;
+    }
+
+    private bool IsValidVerbSelectionTarget(Thing target)
+    {
+        return target != null
+            && !target.Destroyed
+            && target.Spawned
+            && target.Map == ParentThing.MapHeld
+            && ParentThing.HostileTo(target);
+    }
+
     private void ClearTurrets()
     {
         for (int i = 0; i < turrets.Count; i++)
@@ -533,7 +567,7 @@ public class CompGrayMechTurretBank : ThingComp
             return false;
         }
 
-        CompCanBeDormant dormant = parent.TryGetComp<CompCanBeDormant>();
+        CompCanBeDormant dormant = ParentThing.TryGetComp<CompCanBeDormant>();
         return dormant == null || dormant.Awake;
     }
 
@@ -585,7 +619,7 @@ public class CompGrayMechTurretBank : ThingComp
         }
 
         Thing targetThing = forcedTarget.Thing;
-        if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || !parent.Spawned || targetThing.Map != parent.MapHeld)
+        if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || !ParentThing.Spawned || targetThing.Map != ParentThing.MapHeld)
         {
             ResetForcedTarget();
         }
@@ -655,13 +689,13 @@ public class CompGrayMechTurretBank : ThingComp
 
     private bool CanForceAttack(TargetInfo target)
     {
-        if (!target.IsValid || target.Thing == null || !parent.Spawned)
+        if (!target.IsValid || target.Thing == null || !ParentThing.Spawned)
         {
             return false;
         }
 
         Thing targetThing = target.Thing;
-        if (targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != parent.MapHeld)
+        if (targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != ParentThing.MapHeld)
         {
             return false;
         }
@@ -688,7 +722,7 @@ public class CompGrayMechTurretBank : ThingComp
 
     private void DrawTargetingPreview(LocalTargetInfo target)
     {
-        if (!parent.Spawned)
+        if (!ParentThing.Spawned)
         {
             return;
         }
@@ -698,7 +732,7 @@ public class CompGrayMechTurretBank : ThingComp
             Verb attackVerb = turrets[i].AttackVerb;
             if (attackVerb != null)
             {
-                attackVerb.verbProps.DrawRadiusRing(parent.Position, attackVerb);
+                attackVerb.verbProps.DrawRadiusRing(ParentThing.Position, attackVerb);
             }
         }
     }
@@ -724,7 +758,7 @@ public class CompGrayMechTurretBank : ThingComp
         return GrayMechDesignUtility.IsWeaponModule(module);
     }
 
-    private static GRMechModuleDef ResolveCombatComputer(GrayMechDesignSnapshot snapshot)
+    private static GRMechCombatComputerModuleDef ResolveCombatComputer(GrayMechDesignSnapshot snapshot)
     {
         if (snapshot?.modules == null)
         {
@@ -733,8 +767,7 @@ public class CompGrayMechTurretBank : ThingComp
 
         for (int i = 0; i < snapshot.modules.Count; i++)
         {
-            GRMechModuleDef module = snapshot.modules[i]?.module;
-            if (module != null && module.UsesCoreRole(GRMechCoreComponentRole.CombatComputer))
+            if (snapshot.modules[i]?.module is GRMechCombatComputerModuleDef module)
             {
                 return module;
             }

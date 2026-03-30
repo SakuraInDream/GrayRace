@@ -16,45 +16,38 @@
     <slots>
       <li>
         <key>SMALL_GUN_01</key>
-        <label>small gun 1</label>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <uiOrder>10</uiOrder>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_02</key>
-        <label>small gun 2</label>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <uiOrder>20</uiOrder>
+        <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_03</key>
-        <label>small gun 3</label>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <uiOrder>30</uiOrder>
+        <uiOrder>2</uiOrder>
       </li>
       <li>
         <key>SMALL_UTILITY_01</key>
-        <label>small utility 1</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>SMALL_UTILITY_02</key>
-        <label>small utility 2</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>SMALL_UTILITY_03</key>
-        <label>small utility 3</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>120</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
       <li>
         <key>AUX_UTILITY_01</key>
-        <label>auxiliary 1</label>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>200</uiOrder>
+        <uiOrder>8</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
@@ -75,55 +68,49 @@
     <slots>
       <li>
         <key>PD_01</key>
-        <label>point defence 1</label>
         <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
-        <uiOrder>10</uiOrder>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_01</key>
-        <label>small gun 1</label>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <uiOrder>20</uiOrder>
+        <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_02</key>
-        <label>small gun 2</label>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <uiOrder>30</uiOrder>
+        <uiOrder>2</uiOrder>
       </li>
       <li>
         <key>SMALL_UTILITY_01</key>
-        <label>small utility 1</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>SMALL_UTILITY_02</key>
-        <label>small utility 2</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>SMALL_UTILITY_03</key>
-        <label>small utility 3</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>120</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
       <li>
         <key>AUX_UTILITY_01</key>
-        <label>auxiliary 1</label>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>200</uiOrder>
+        <uiOrder>8</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
+  <!-- 雷击舰 -->
   <SD.GrayRace.Defs.GRMechSectionLayoutDef>
     <defName>GR_Corvette_MID_M1S1</defName>
     <label>鱼雷核心</label>
     <description>从Stellaris那复制的CORVETTE_MID_M1S1。</description>
     <sectionSlot>GR_MechSection_Mid</sectionSlot>
-    <shipSize>GR_Chassis_Corvette</shipSize>
+    <shipSize>GR_Chassis_Frigate</shipSize>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
@@ -133,40 +120,51 @@
     <uiOrder>600</uiOrder>
     <slots>
       <li>
-        <key>TORPEDO_01</key>
-        <label>torpedo 1</label>
-        <slotDef>GR_MechSlot_TorpedoTube</slotDef>
-        <uiOrder>10</uiOrder>
+        <key>SMALL_GUN_01</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
-        <key>SMALL_GUN_01</key>
-        <label>small gun 1</label>
-        <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <uiOrder>20</uiOrder>
+        <key>TORPEDO_01</key>
+        <slotDef>GR_MechSlot_TorpedoTube</slotDef>
+        <uiOrder>1</uiOrder>
       </li>
+      <!-- 2 个 A 槽 -->
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_02</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>1</uiOrder>
+      </li>
+      <!-- 5 个 S 槽 -->
       <li>
         <key>SMALL_UTILITY_01</key>
-        <label>small utility 1</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>SMALL_UTILITY_02</key>
-        <label>small utility 2</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>SMALL_UTILITY_03</key>
-        <label>small utility 3</label>
         <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>120</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
       <li>
-        <key>AUX_UTILITY_01</key>
-        <label>auxiliary 1</label>
-        <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>200</uiOrder>
+        <key>SMALL_UTILITY_04</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>8</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_05</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>9</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>

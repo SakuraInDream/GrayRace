@@ -45,17 +45,11 @@ namespace SD.GrayRace.JobGivers
             }
 
             // 否则找最大质量的金属
-            Thing bestBigMassMetal = GenClosest.ClosestThingReachable(
-                pawn.Position,
-                pawn.Map,
-                ThingRequest.ForGroup(ThingRequestGroup.HaulableAlways),
-                PathEndMode.Touch,
-                TraverseParms.For(pawn),
-                9999f,
-                x => !x.IsForbidden(pawn) && pawn.CanReserve(x) && IsMaxMassMetal(x, pawn));
-
-            if(bestBigMassMetal != null)
+            Thing bestBigMassMetal = IsMaxMassMetal(pawn);
+            if (bestBigMassMetal != null)
+            {
                 return JobMaker.MakeJob(GrayRaceDefOf.GR_ConsumeMetal, bestBigMassMetal);
+            }
 
             return null;
         }
@@ -74,30 +68,35 @@ namespace SD.GrayRace.JobGivers
             return 8f;
         }
 
-        private bool IsMaxMassMetal(Thing thing, Pawn pawn)
+        private Thing IsMaxMassMetal(Pawn pawn)
         {
-            var things = pawn.Map.listerThings.AllThings;
-            float maxMass = 0f;
-            Thing maxthing = null;
-
-            if (things.Count < 1)
-                return false;
-
-            foreach (var t in things)
+            Map map = pawn.Map;
+            if (map == null)
             {
-                if(t.IsForbidden(pawn) || !pawn.CanReserve(t) || !t.def.IsMetal)
-                    continue;
-
-                float mass = t.GetStatValue(StatDefOf.Mass);
-
-                if (mass < maxMass) continue;
-
-                maxMass = mass;
-
-                maxthing = t;
+                return null;
             }
 
-            return maxthing == thing;
+            var candidates = map.listerThings.ThingsInGroup(ThingRequestGroup.HaulableAlways);
+            Thing best = null;
+            float bestMass = -1f;
+
+            for (int i = 0; i < candidates.Count; i++)
+            {
+                Thing t = candidates[i];
+                if (!t.def.IsMetal || t.IsForbidden(pawn) || !pawn.CanReserve(t))
+                {
+                    continue;
+                }
+
+                float mass = t.GetStatValue(StatDefOf.Mass);
+                if (mass > bestMass)
+                {
+                    bestMass = mass;
+                    best = t;
+                }
+            }
+
+            return best;
         }
     }
 }

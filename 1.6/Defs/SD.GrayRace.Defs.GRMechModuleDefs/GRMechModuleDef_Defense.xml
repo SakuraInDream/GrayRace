@@ -18,7 +18,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_SmallUtility</li>
     </compatibleSlots>
-    <upgradeTo>GR_MechModule_Armor2_S</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor2_S</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>5</GR_Alloy>
     </costList>
@@ -34,7 +36,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_MediumUtility</li>
     </compatibleSlots>
-    <upgradeTo>GR_MechModule_Armor2_M</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor2_M</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>13</GR_Alloy>
     </costList>
@@ -50,7 +54,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_LargeUtility</li>
     </compatibleSlots>
-    <upgradeTo>GR_MechModule_Armor2_L</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor2_L</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>33</GR_Alloy>
     </costList>
@@ -77,7 +83,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_SmallUtility</li>
     </compatibleSlots>
-    <upgradeTo>GR_MechModule_Armor3_S</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor3_S</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>8</GR_Alloy>
     </costList>
@@ -92,7 +100,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_MediumUtility</li>
     </compatibleSlots>
-    <upgradeTo>GR_MechModule_Armor3_M</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor3_M</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>20</GR_Alloy>
     </costList>
@@ -107,7 +117,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_LargeUtility</li>
     </compatibleSlots>
-    <upgradeTo>GR_MechModule_Armor3_L</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor3_L</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>50</GR_Alloy>
     </costList>
@@ -130,7 +142,9 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor3Base">
     <defName>GR_MechModule_Armor3_S</defName>
-    <upgradeTo>GR_MechModule_Armor4_S</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor4_S</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_SmallUtility</li>
     </compatibleSlots>
@@ -145,7 +159,9 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor3Base">
     <defName>GR_MechModule_Armor3_M</defName>
-    <upgradeTo>GR_MechModule_Armor4_M</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor4_M</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_MediumUtility</li>
     </compatibleSlots>
@@ -160,7 +176,9 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor3Base">
     <defName>GR_MechModule_Armor3_L</defName>
-    <upgradeTo>GR_MechModule_Armor4_L</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor4_L</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_LargeUtility</li>
     </compatibleSlots>
@@ -186,7 +204,9 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor4Base">
     <defName>GR_MechModule_Armor4_S</defName>
-    <upgradeTo>GR_MechModule_Armor5_S</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor5_S</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_SmallUtility</li>
     </compatibleSlots>
@@ -201,7 +221,9 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor4Base">
     <defName>GR_MechModule_Armor4_M</defName>
-    <upgradeTo>GR_MechModule_Armor5_M</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor5_M</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_MediumUtility</li>
     </compatibleSlots>
@@ -216,7 +238,9 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Armor4Base">
     <defName>GR_MechModule_Armor4_L</defName>
-    <upgradeTo>GR_MechModule_Armor5_L</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Armor5_L</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_LargeUtility</li>
     </compatibleSlots>
@@ -295,13 +319,16 @@
     <label>小型偏射盾</label>
     <description>能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。</description>
     <iconPath>Icon/ShipParts/ship_part_shield_1</iconPath>
-    <upgradeTo>GR_MechModule_Shield_S2</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Shield_S2</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
     <costList>
       <GR_Alloy>5</GR_Alloy>
     </costList>
+    <power>-15</power>
     <statOffsets>
       <EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
@@ -313,13 +340,16 @@
     <label>改良偏射盾</label>
     <description>能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。</description>
     <iconPath>Icon/ShipParts/ship_part_shield_2</iconPath>
-    <upgradeTo>GR_MechModule_Shield_S3</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Shield_S3</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
     <costList>
       <GR_Alloy>8</GR_Alloy>
     </costList>
+    <power>-20</power>
     <statOffsets>
       <EnergyShieldEnergyMax>1.25</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>0.625</EnergyShieldRechargeRate>
@@ -331,13 +361,16 @@
     <label>护盾</label>
     <description>新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。</description>
     <iconPath>Icon/ShipParts/ship_part_shield_3</iconPath>
-    <upgradeTo>GR_MechModule_Shield_S4</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Shield_S4</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
     <costList>
       <GR_Alloy>12</GR_Alloy>
     </costList>
+    <power>-25</power>
     <statOffsets>
       <EnergyShieldEnergyMax>1.6</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>0.8</EnergyShieldRechargeRate>
@@ -349,7 +382,9 @@
     <label>先进护盾</label>
     <description>升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。</description>
     <iconPath>Icon/ShipParts/ship_part_shield_4</iconPath>
-    <upgradeTo>GR_MechModule_Shield_S5</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_Shield_S5</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
     </researchPrerequisites>
@@ -357,6 +392,7 @@
       <GR_Alloy>12</GR_Alloy>
       <!-- 群星开始要异星天然气 -->
     </costList>
+    <power>-35</power>
     <statOffsets>
       <EnergyShieldEnergyMax>2.05</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>1.025</EnergyShieldRechargeRate>
@@ -375,6 +411,7 @@
       <GR_Alloy>18</GR_Alloy>
       <!-- 要异星天然气 -->
     </costList>
+    <power>-45</power>
     <statOffsets>
       <EnergyShieldEnergyMax>2.6</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>1.3</EnergyShieldRechargeRate>

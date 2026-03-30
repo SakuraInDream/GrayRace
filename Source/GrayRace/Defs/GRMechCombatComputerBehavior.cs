@@ -1,6 +1,6 @@
 namespace SD.GrayRace.Defs;
 
-public enum GRMechCombatComputerBehavior : byte
+public enum GRMechCombatComputerBehavior
 {
     Undefined,
     Default,

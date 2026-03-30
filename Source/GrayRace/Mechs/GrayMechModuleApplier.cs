@@ -1,5 +1,4 @@
 using RimWorld;
-using SD.GrayRace.Comps;
 using SD.GrayRace.Defs;
 using Verse;
 
@@ -19,10 +18,8 @@ public static class GrayMechModuleApplier
             pawn.equipment.DestroyAllEquipment();
         }
 
-        CompGrayMechTurretBank turretBank = pawn.TryGetComp<CompGrayMechTurretBank>();
         if (snapshot?.modules == null)
         {
-            turretBank?.RebuildFromSnapshot(snapshot);
             return;
         }
 
@@ -37,8 +34,6 @@ public static class GrayMechModuleApplier
 
             ApplyEquipment(pawn, module);
         }
-
-        turretBank?.RebuildFromSnapshot(snapshot);
     }
 
     private static void ApplyEquipment(Pawn pawn, GRMechModuleDef module)

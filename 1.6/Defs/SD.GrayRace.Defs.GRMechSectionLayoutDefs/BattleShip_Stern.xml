@@ -16,21 +16,18 @@
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
-        <label>large gun 1</label>
         <slotDef>GR_MechSlot_LargeTurret</slotDef>
-        <uiOrder>10</uiOrder>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>AUX_UTILITY_01</key>
-        <label>auxiliary 1</label>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>AUX_UTILITY_02</key>
-        <label>auxiliary 2</label>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
@@ -51,33 +48,28 @@
     <slots>
       <li>
         <key>MEDIUM_GUN_01</key>
-        <label>medium gun 1</label>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <uiOrder>10</uiOrder>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>MEDIUM_GUN_02</key>
-        <label>medium gun 2</label>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <uiOrder>20</uiOrder>
+        <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>AUX_UTILITY_01</key>
-        <label>auxiliary 1</label>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>AUX_UTILITY_02</key>
-        <label>auxiliary 2</label>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>AUX_UTILITY_03</key>
-        <label>auxiliary 3</label>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>120</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>

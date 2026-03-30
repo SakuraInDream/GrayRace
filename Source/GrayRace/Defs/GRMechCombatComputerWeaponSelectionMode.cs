@@ -1,6 +1,6 @@
 namespace SD.GrayRace.Defs;
 
-public enum GRMechCombatComputerWeaponSelectionMode : byte
+public enum GRMechCombatComputerWeaponSelectionMode
 {
     Undefined,
     LongestRange,

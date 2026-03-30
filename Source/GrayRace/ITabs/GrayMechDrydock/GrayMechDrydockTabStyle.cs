@@ -11,14 +11,15 @@ internal static class GrayMechDrydockTabStyle
     private static readonly Dictionary<string, Texture2D> CachedTextures = new(StringComparer.Ordinal);
 
     internal static readonly Vector2 WindowSize = new(1780f, 820f);
+    internal static readonly Vector2 QueueWindowSize = new(560f, 620f);
 
     internal const float Margin = 10f;
-    internal const float CloseButtonReserveTop = 8f;
-    internal const float CloseButtonReserveRight = 44f;
+    internal const float CloseButtonReserveTop = 4f;
+    internal const float CloseButtonReserveRight = 22f;
     internal const float MinTopBarHeight = 68f;
     internal const float MinBottomBarHeight = 96f;
     internal const float LeftPanelWidth = 360f;
-    internal const float RightPanelWidth = 324f;
+    internal const float RightPanelWidth = 360f;
     internal const float PanelGap = 12f;
     internal const float RowHeight = 30f;
     internal const float SlotButtonSize = 50f;
@@ -27,6 +28,11 @@ internal static class GrayMechDrydockTabStyle
     internal const int FixedDisplaySlotCount = 10;
     internal const float LibraryCardWidth = 164f;
     internal const float SummaryPanelHeight = 200f;
+    internal const float SummaryThumbWidth = 64f;
+    internal const float SummaryThumbHeight = 48f;
+    internal const float SummaryStatusMaxWidth = 136f;
+    internal const float MinSectionColumnWidth = SlotButtonSize * SlotGridColumns + SlotGridGap * (SlotGridColumns - 1) + 16f;
+    internal const float MinCenterCanvasWidth = MinSectionColumnWidth * 3f + PanelGap * 2f;
 
     internal static readonly Color BgDark = new(0.04f, 0.07f, 0.08f);
     internal static readonly Color BgPanel = new(0.07f, 0.11f, 0.12f);
