@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 炮击 -->
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef Name="GR_MechCombatComputer_ArtilleryBase" ParentName="GR_MechCombatComputerBase" Abstract="True">
+    <description>舰船将停留在中距离上，使用长射程的武器来攻击目标。</description>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <behavior>Artillery</behavior>
+    <weaponSelection>LongestRange</weaponSelection>
+    <positioning>HoldPreferredRange</positioning>
+    <coverPreference>IgnoreCover</coverPreference>
+    <preferredRangeFactor>1.0</preferredRangeFactor>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <!-- Artillery -->
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
+    <defName>GR_MechModule_CC_Artillery_Basic</defName>
+    <label>作战电脑(炮击)</label>
+    <upgradesTo>
+      <li>GR_MechModule_CC_Artillery_Advanced</li>
+    </upgradesTo>
+    <powerDraw>10</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>5</GR_Alloy>
+    </costList>
+    <statFactors>
+      <RangedCooldownFactor>0.95</RangedCooldownFactor>
+      <ShootingAccuracyFactor_Long>1.05</ShootingAccuracyFactor_Long>
+    </statFactors>
+    <uiOrder>4500</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
+    <defName>GR_MechModule_CC_Artillery_Advanced</defName>
+    <label>高级作战电脑(炮击)</label>
+    <upgradesTo>
+      <li>GR_MechModule_CC_Artillery_Sapient</li>
+      <li>GR_MechModule_CC_Artillery_Autonomous</li>
+      <li>GR_MechModule_CC_Artillery_Precognitive</li>
+    </upgradesTo>
+    <powerDraw>15</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <statFactors>
+      <RangedCooldownFactor>0.90</RangedCooldownFactor>
+      <ShootingAccuracyFactor_Long>1.10</ShootingAccuracyFactor_Long>
+    </statFactors>
+    <uiOrder>4501</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
+    <defName>GR_MechModule_CC_Artillery_Sapient</defName>
+    <label>智能作战电脑(炮击)</label>
+    <powerDraw>25</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <statFactors>
+      <RangedCooldownFactor>0.80</RangedCooldownFactor>
+      <ShootingAccuracyFactor_Long>1.20</ShootingAccuracyFactor_Long>
+    </statFactors>
+    <uiOrder>4502</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
+    <defName>GR_MechModule_CC_Artillery_Autonomous</defName>
+    <label>自主舰载智能(炮击)</label>
+    <powerDraw>25</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <statFactors>
+      <RangedCooldownFactor>0.80</RangedCooldownFactor>
+      <ShootingAccuracyFactor_Long>1.20</ShootingAccuracyFactor_Long>
+    </statFactors>
+    <uiOrder>4503</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
+    <defName>GR_MechModule_CC_Artillery_Precognitive</defName>
+    <label>预知接口(炮击)</label>
+    <powerDraw>25</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+      <li>GR_Zro</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+    </statOffsets>
+    <statFactors>
+      <RangedCooldownFactor>0.85</RangedCooldownFactor>
+      <ShootingAccuracyFactor_Long>1.15</ShootingAccuracyFactor_Long>
+    </statFactors>
+    <uiOrder>4504</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+</Defs>

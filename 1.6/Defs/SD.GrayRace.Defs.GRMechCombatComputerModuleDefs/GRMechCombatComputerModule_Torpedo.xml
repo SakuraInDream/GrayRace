@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 纯搬 Stellaris 感觉没有用武之地，可能要改成像原版机械白蚁那样真正的攻城 -->
+  <!-- 攻城 -->
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef Name="GR_MechCombatComputer_TorpedoBase" ParentName="GR_MechCombatComputerBase" Abstract="True">
+    <description>这类舰船将对敌人发起直线冲锋，通过扫射式攻击对付大型对手。该舰擅长地表轰炸。</description>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+    </allowedChassis>
+    <behavior>Torpedo</behavior>
+    <weaponSelection>ShortestRange</weaponSelection>
+    <positioning>CloseToPreferredRange</positioning>
+    <coverPreference>IgnoreCover</coverPreference>
+    <preferredRangeFactor>1.0</preferredRangeFactor>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <!-- Torpedo -->
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_TorpedoBase">
+    <defName>GR_MechModule_CC_Torpedo_Basic</defName>
+    <label>作战电脑(攻城)</label>
+    <upgradesTo>
+      <li>GR_MechModule_CC_Torpedo_Advanced</li>
+    </upgradesTo>
+    <powerDraw>10</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>5</GR_Alloy>
+    </costList>
+    <statFactors>
+      <RangedCooldownFactor>0.95</RangedCooldownFactor>
+    </statFactors>
+    <uiOrder>4200</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_TorpedoBase">
+    <defName>GR_MechModule_CC_Torpedo_Advanced</defName>
+    <label>高级作战电脑(攻城)</label>
+    <upgradesTo>
+      <li>GR_MechModule_CC_Torpedo_Sapient</li>
+      <!-- <li>GR_MechModule_CC_Torpedo_Autonomous</li> -->
+      <li>GR_MechModule_CC_Torpedo_Precognitive</li>
+    </upgradesTo>
+    <powerDraw>15</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <statFactors>
+      <RangedCooldownFactor>0.90</RangedCooldownFactor>
+    </statFactors>
+    <uiOrder>4201</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_TorpedoBase">
+    <defName>GR_MechModule_CC_Torpedo_Sapient</defName>
+    <label>智能作战电脑(攻城)</label>
+    <powerDraw>25</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <MeleeDodgeChance>0.10</MeleeDodgeChance>
+    </statOffsets>
+    <statFactors>
+      <RangedCooldownFactor>0.85</RangedCooldownFactor>
+    </statFactors>
+    <uiOrder>4202</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <!-- <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_TorpedoBase">
+    <defName>GR_MechModule_CC_Torpedo_Autonomous</defName>
+    <label>自主舰载智能(攻城)</label>
+    <description>自主化围攻逻辑会在高压态势下保持稳定突防节奏，不再依赖外部指令链。</description>
+    <powerDraw>25</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <MeleeDodgeChance>0.10</MeleeDodgeChance>
+    </statOffsets>
+    <statFactors>
+      <RangedCooldownFactor>0.85</RangedCooldownFactor>
+    </statFactors>
+    <uiOrder>4203</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef> -->
+
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_TorpedoBase">
+    <defName>GR_MechModule_CC_Torpedo_Precognitive</defName>
+    <label>预知接口(攻城)</label>
+    <powerDraw>25</powerDraw>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+      <li>GR_Zro</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <statOffsets>
+      <ShootingAccuracyPawn>0.10</ShootingAccuracyPawn>
+    </statOffsets>
+    <statFactors>
+      <RangedCooldownFactor>0.85</RangedCooldownFactor>
+    </statFactors>
+    <uiOrder>4204</uiOrder>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+</Defs>

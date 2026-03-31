@@ -35,7 +35,7 @@
       <speed>115</speed>
       <damageAmountBase>75</damageAmountBase>
       <armorPenetrationSharp>40</armorPenetrationSharp>
-      <armorPenetrationBlunt>200</armorPenetrationBlunt>
+      <armorPenetrationBlunt>2000</armorPenetrationBlunt>
       <preExplosionSpawnChance>0.8</preExplosionSpawnChance>
       <preExplosionSpawnThingDef>Ammo_Daikyu_GR</preExplosionSpawnThingDef>
     </projectile>
@@ -70,7 +70,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>Plasteel</li>
+            <li>GR_Alloy</li>
           </thingDefs>
         </filter>
         <count>50</count>

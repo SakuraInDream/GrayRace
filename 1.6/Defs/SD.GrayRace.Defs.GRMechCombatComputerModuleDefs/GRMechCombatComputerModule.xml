@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef Name="GR_MechCombatComputerBase" Abstract="True">
+    <iconPath>Icon/ShipParts//ship_part_computer_default</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_CombatComputer</li>
+    </compatibleSlots>
+    <anchorBodyPart>ArtificialBrain</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+</Defs>

@@ -66,7 +66,7 @@
       <burstShotCount>8</burstShotCount>
       <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
       <range>31</range>
-      <soundCast>Shot_HeavySMG</soundCast>
+      <soundCast>GR_RailPDWShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -106,7 +106,7 @@
       <burstShotCount>5</burstShotCount>
       <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
       <range>25</range>
-      <soundCast>GR_RailSniperRifle</soundCast>
+      <soundCast>GR_RailShotGunShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -143,7 +143,7 @@
       <burstShotCount>5</burstShotCount>
       <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
       <range>65</range>
-      <soundCast>Shot_AssaultRifle</soundCast>
+      <soundCast>GR_RailAssaultRifleShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -180,7 +180,7 @@
       <burstShotCount>40</burstShotCount>
       <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
       <range>75</range>
-      <soundCast>Shot_Minigun</soundCast>
+      <soundCast>GR_RailMechGunShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -219,7 +219,7 @@
       <burstShotCount>1</burstShotCount>
       <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
       <range>85</range>
-      <soundCast>GR_RailSniperRifle</soundCast>
+      <soundCast>GR_RailSniperRifleShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -257,7 +257,7 @@
       <burstShotCount>1</burstShotCount>
       <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
       <range>110</range>
-      <soundCast>GR_RailSniperRifle</soundCast>
+      <soundCast>GR_RailLauncherShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>

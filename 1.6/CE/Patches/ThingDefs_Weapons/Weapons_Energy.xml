@@ -66,7 +66,7 @@
       <burstShotCount>8</burstShotCount>
       <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
       <range>25</range>
-      <soundCast>GR_EnergyPDW</soundCast>
+      <soundCast>GR_EnergyPDWShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -106,7 +106,7 @@
       <burstShotCount>3</burstShotCount>
       <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
       <range>18</range>
-      <soundCast>GR_EnergyShotgun</soundCast>
+      <soundCast>GR_EnergyShotgunShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -141,7 +141,7 @@
       <burstShotCount>5</burstShotCount>
       <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
       <range>60</range>
-      <soundCast>GR_EnergyBattleRifle</soundCast>
+      <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -178,7 +178,7 @@
       <burstShotCount>40</burstShotCount>
       <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
       <range>70</range>
-      <soundCast>GR_EnergyBattleRifle</soundCast>
+      <soundCast>GR_EnergyMechGunShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -217,7 +217,7 @@
       <burstShotCount>1</burstShotCount>
       <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
       <range>85</range>
-      <soundCast>GR_EnergySniperRifle</soundCast>
+      <soundCast>GR_EnergySniperRifleShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
@@ -255,7 +255,7 @@
       <burstShotCount>1</burstShotCount>
       <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
       <range>110</range>
-      <soundCast>GR_RailSniperRifle</soundCast>
+      <soundCast>GR_EnergyLauncherShoot</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>

@@ -283,7 +283,9 @@
             <li>Stab</li>
           </capacities>
           <power>30</power>
-          <cooldownTime>3</cooldownTime>
+          <armorPenetrationSharp>24</armorPenetrationSharp>
+          <armorPenetrationBlunt>60</armorPenetrationBlunt>
+          <cooldownTime>2.5</cooldownTime>
         </li>
         <li Class="CombatExtended.ToolCE">
           <label>edge</label>
@@ -291,7 +293,9 @@
             <li>Cut</li>
           </capacities>
           <power>60</power>
-          <cooldownTime>3</cooldownTime>
+          <armorPenetrationSharp>16</armorPenetrationSharp>
+          <armorPenetrationBlunt>140</armorPenetrationBlunt>
+          <cooldownTime>1.5</cooldownTime>
         </li>
       </tools>
     </value>
@@ -324,6 +328,8 @@
             <li>Cut</li>
           </capacities>
           <power>20</power>
+          <armorPenetrationSharp>12</armorPenetrationSharp>
+          <armorPenetrationBlunt>8</armorPenetrationBlunt>
           <cooldownTime>1</cooldownTime>
         </li>
       </tools>
