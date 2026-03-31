@@ -32,33 +32,67 @@
     <designerColor>(0.96, 0.73, 0.29)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
+  <!-- S 武器槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_SmallTurret</defName>
     <label>small turret slot</label>
     <description>TODO</description>
     <componentType>Weapon</componentType>
     <slotSize>GR_MechSlotSize_Small</slotSize>
-    <designerColor>(0.95, 0.42, 0.34)</designerColor>
+    <designerColor>(0.8, 0.42, 0.16)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
+  <!-- M 武器槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_MediumTurret</defName>
     <label>medium turret slot</label>
     <description>TODO</description>
     <componentType>Weapon</componentType>
     <slotSize>GR_MechSlotSize_Medium</slotSize>
-    <designerColor>(0.94, 0.64, 0.24)</designerColor>
+    <designerColor>(0.8, 0.42, 0.16)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
+  <!-- L 武器槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_LargeTurret</defName>
     <label>large turret slot</label>
     <description>TODO</description>
     <componentType>Weapon</componentType>
     <slotSize>GR_MechSlotSize_Large</slotSize>
-    <designerColor>(0.34, 0.68, 0.98)</designerColor>
+    <designerColor>(0.8, 0.42, 0.16)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
+  <!-- P 武器槽 -->
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_PointDefenseTurret</defName>
+    <label>point-defence slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_PointDefense</slotSize>
+    <designerColor>(0.83, 0.05, 0.07)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <!-- G 武器槽 -->
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_TorpedoTube</defName>
+    <label>torpedo slot</label>
+    <description>TODO</description>
+    <componentType>Weapon</componentType>
+    <slotSize>GR_MechSlotSize_Torpedo</slotSize>
+    <designerColor>(0.18, 0.2, 0.81)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <!-- H 武器槽 -->
+  <SD.GrayRace.Defs.GRMechSlotDef>
+    <defName>GR_MechSlot_StrikeCraftBay</defName>
+    <label>strike craft slot</label>
+    <description>TODO</description>
+    <componentType>StrikeCraft</componentType>
+    <slotSize>GR_MechSlotSize_Hangar</slotSize>
+    <designerColor>(0.85, 0.73, 0.11)</designerColor>
+  </SD.GrayRace.Defs.GRMechSlotDef>
+
+  <!-- X 武器槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_ExtraLarge</defName>
     <label>extra-large spinal slot</label>
@@ -66,69 +100,57 @@
     <componentType>Weapon</componentType>
     <slotSize>GR_MechSlotSize_ExtraLarge</slotSize>
     <isFixed>true</isFixed>
-    <designerColor>(0.7, 0.44, 0.96)</designerColor>
+    <designerColor>(0.42, 0.22, 0.62)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
+  <!-- T 武器槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
-    <defName>GR_MechSlot_PointDefenseTurret</defName>
-    <label>point-defence slot</label>
+    <defName>GR_MechSlot_Titanic</defName>
+    <label>Titan Laser</label>
     <description>TODO</description>
     <componentType>Weapon</componentType>
-    <slotSize>GR_MechSlotSize_PointDefense</slotSize>
-    <designerColor>(0.9, 0.18, 0.2)</designerColor>
+    <slotSize>GR_MechSlotSize_Titanic</slotSize>
+    <isFixed>true</isFixed>
+    <designerColor>(0.62, 0.51, 0.38)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
-  <SD.GrayRace.Defs.GRMechSlotDef>
-    <defName>GR_MechSlot_TorpedoTube</defName>
-    <label>torpedo slot</label>
-    <description>TODO</description>
-    <componentType>Weapon</componentType>
-    <slotSize>GR_MechSlotSize_Torpedo</slotSize>
-    <designerColor>(0.38, 0.88, 0.52)</designerColor>
-  </SD.GrayRace.Defs.GRMechSlotDef>
-
-  <SD.GrayRace.Defs.GRMechSlotDef>
-    <defName>GR_MechSlot_StrikeCraftBay</defName>
-    <label>strike craft slot</label>
-    <description>TODO</description>
-    <componentType>StrikeCraft</componentType>
-    <slotSize>GR_MechSlotSize_Hangar</slotSize>
-    <designerColor>(0.95, 0.84, 0.26)</designerColor>
-  </SD.GrayRace.Defs.GRMechSlotDef>
-
+  <!-- S 通用槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_SmallUtility</defName>
     <label>small utility slot</label>
     <description>TODO</description>
     <componentType>Utility</componentType>
     <slotSize>GR_MechSlotSize_Small</slotSize>
-    <designerColor>(0.46, 0.86, 0.79)</designerColor>
+    <designerColor>(0.36, 0.61, 0.52)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
+  <!-- M 通用槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_MediumUtility</defName>
     <label>medium utility slot</label>
     <description>TODO</description>
     <componentType>Utility</componentType>
     <slotSize>GR_MechSlotSize_Medium</slotSize>
-    <designerColor>(0.94, 0.64, 0.24)</designerColor>
+    <designerColor>(0.36, 0.61, 0.52)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
+  <!-- L 通用槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_LargeUtility</defName>
     <label>large utility slot</label>
     <description>TODO</description>
     <componentType>Utility</componentType>
     <slotSize>GR_MechSlotSize_Large</slotSize>
-    <designerColor>(0.34, 0.68, 0.98)</designerColor>
+    <designerColor>(0.36, 0.61, 0.52)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
+  <!-- A 槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_Auxiliary</defName>
     <label>auxiliary slot</label>
     <description>TODO</description>
     <componentType>Auxiliary</componentType>
     <slotSize>GR_MechSlotSize_Auxiliary</slotSize>
-    <designerColor>(0.3, 0.76, 1)</designerColor>
+    <designerColor>(0.09, 0.54, 0.22)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 </Defs>

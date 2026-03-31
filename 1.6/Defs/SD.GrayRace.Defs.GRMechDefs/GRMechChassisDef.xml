@@ -18,13 +18,14 @@
         <anchorBodyPart>MechanicalFoot</anchorBodyPart>
         <uiOrder>20</uiOrder>
       </li>
-      <li>
+      <!-- 这部分不要了 -->
+      <!-- <li>
         <key>SENSOR_01</key>
         <label>传感设备</label>
         <slotDef>GR_MechSlot_Sensor</slotDef>
         <anchorBodyPart>HearingSensor</anchorBodyPart>
         <uiOrder>30</uiOrder>
-      </li>
+      </li> -->
       <li>
         <key>COMBAT_COMPUTER_01</key>
         <label>舰船作战电脑</label>
@@ -34,7 +35,6 @@
       </li>
     </requiredComponentSlots>
   </SD.GrayRace.Defs.GRMechChassisDef>
-
 
   <!-- 都是仿群星的设计 -->
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
@@ -62,7 +62,7 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>60000</fixedWorkTicks>
-    <uiOrder>100</uiOrder>
+    <uiOrder>140</uiOrder>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
     </researchPrerequisites>
@@ -81,7 +81,7 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>100</uiOrder>
+    <uiOrder>110</uiOrder>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
@@ -97,7 +97,7 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>100</uiOrder>
+    <uiOrder>120</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -114,7 +114,7 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>100</uiOrder>
+    <uiOrder>130</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -132,7 +132,7 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>100</uiOrder>
+    <uiOrder>150</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -150,7 +150,7 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>100</uiOrder>
+    <uiOrder>160</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>

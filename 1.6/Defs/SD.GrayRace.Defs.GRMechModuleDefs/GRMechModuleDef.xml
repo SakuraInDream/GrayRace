@@ -26,6 +26,7 @@
     <label>红色激光</label>
     <description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</description>
     <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <slotFamily>PulseLaser_Infrared</slotFamily>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
@@ -83,6 +84,7 @@
     <label>蓝色激光</label>
     <description>比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。</description>
     <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
+    <slotFamily>PulseLaser_Blue</slotFamily>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -142,6 +144,7 @@
     <label>紫外激光</label>
     <description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</description>
     <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
+    <slotFamily>PulseLaser_UV</slotFamily>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -198,6 +201,7 @@
     <label>X射线激光</label>
     <description>这种激光的波长较紫外线短一些，但是更具毁灭性。</description>
     <iconPath>Icon/ShipParts/ship_part_laser_4</iconPath>
+    <slotFamily>PulseLaser_Xray</slotFamily>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
     </researchPrerequisites>
@@ -257,6 +261,7 @@
     <label>伽马激光</label>
     <description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</description>
     <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <slotFamily>PulseLaser_Gamma</slotFamily>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
     </researchPrerequisites>

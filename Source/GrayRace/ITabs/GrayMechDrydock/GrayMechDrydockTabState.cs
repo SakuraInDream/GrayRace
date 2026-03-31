@@ -11,24 +11,42 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
+internal sealed class GrayMechLibraryGroup
+{
+    internal GRMechChassisDef Chassis;
+    internal readonly List<GrayMechDesignRecord> Designs = new();
+
+    internal bool ShowChassisCard => Chassis != null && Designs.Count == 0;
+
+    internal int VisibleCardCount => ShowChassisCard ? 1 : Designs.Count;
+}
+
 internal sealed class GrayMechDrydockTabState
 {
     private Building_GR_Drydock cachedDock;
     private int cachedLibraryVersion = -1;
     private int cachedDraftRevision = -1;
     private int cachedCompatibleRevision = -1;
+    private int cachedCoreCompatibleRevision = -1;
+    private int cachedVisibleChassisHash = int.MinValue;
     private GRMechSectionSlotDef cachedCompatibleSectionSlot;
     private string cachedCompatibleSlotKey;
     private bool cachedCompatibleShowObsolete;
+    private string cachedCoreCompatibleSlotKey;
 
     internal GRMechSectionSlotDef SelectedSectionSlot;
     internal string SelectedSlotKey;
+    internal string SelectedCoreSlotKey;
+    internal GRMechModuleDef ArmedModule;
     internal bool ShowObsoleteModules;
+    internal bool HasArmedModule => ArmedModule != null;
 
     internal readonly List<GRMechChassisDef> ChassisCache = new();
     internal readonly List<GrayMechDesignRecord> DesignCache = new();
+    internal readonly List<GrayMechLibraryGroup> LibraryGroups = new();
     internal readonly List<GRMechResolvedSlot> SlotCache = new();
     internal readonly List<GRMechModuleDef> CompatibleModules = new();
+    internal readonly List<GRMechModuleDef> CoreCompatibleModules = new();
     internal readonly List<ThingDefCountClass> CostCache = new();
     internal readonly StringBuilder TextBuilder = new();
     internal readonly List<GRMechResolvedSlot> WeaponSlotBuffer = new();
@@ -68,6 +86,7 @@ internal sealed class GrayMechDrydockTabState
     internal string CachedProductionStatus = string.Empty;
     internal string CachedBuildTimeLabel = string.Empty;
     internal string CachedQueueCountLabel = "0";
+    internal float CachedLibraryMaxCardHeight = GrayMechDrydockTabStyle.LibraryCardHeight;
 
     internal void EnsureCaches(Building_GR_Drydock dock)
     {
@@ -77,13 +96,22 @@ internal sealed class GrayMechDrydockTabState
             cachedLibraryVersion = -1;
             cachedDraftRevision = -1;
             cachedCompatibleRevision = -1;
+            cachedCoreCompatibleRevision = -1;
+            cachedVisibleChassisHash = int.MinValue;
             cachedCompatibleSectionSlot = null;
             cachedCompatibleSlotKey = null;
             cachedCompatibleShowObsolete = ShowObsoleteModules;
-            BuildChassisCache();
+            cachedCoreCompatibleSlotKey = null;
             ResetFocusState();
             SummaryScrollPosition = Vector2.zero;
             QueueScrollPosition = Vector2.zero;
+        }
+
+        int visibleChassisHash = GetVisibleChassisHash();
+        if (visibleChassisHash != cachedVisibleChassisHash)
+        {
+            BuildChassisCache();
+            cachedVisibleChassisHash = visibleChassisHash;
         }
 
         WorldComponent_GrayMechDesignLibrary library = Find.World?.GetComponent<WorldComponent_GrayMechDesignLibrary>();
@@ -99,6 +127,7 @@ internal sealed class GrayMechDrydockTabState
         else if (cachedLibraryVersion != -1 || DesignCache.Count > 0)
         {
             DesignCache.Clear();
+            RebuildLibraryGroupCache();
             cachedLibraryVersion = -1;
         }
 
@@ -109,8 +138,10 @@ internal sealed class GrayMechDrydockTabState
             RebuildDerivedCache(dock);
             cachedDraftRevision = dock.DesignRevision;
         }
+
         EnsureFocusState(dock);
         EnsureCompatibleModuleCache(dock);
+        EnsureCoreCompatibleModuleCache(dock);
         CachedCanQueueOrder = dock.CanQueueAssemblyOrder(out CachedQueueReason);
         CachedHasActiveOrder = dock.HasActiveOrder;
         CachedProductionStatus = dock.HasActiveOrder
@@ -126,7 +157,19 @@ internal sealed class GrayMechDrydockTabState
     {
         SelectedSectionSlot = null;
         SelectedSlotKey = null;
+        SelectedCoreSlotKey = null;
+        ArmedModule = null;
         FocusScrollPosition = Vector2.zero;
+    }
+
+    internal void SetArmedModule(GRMechModuleDef module)
+    {
+        ArmedModule = module;
+    }
+
+    internal void ClearArmedModule()
+    {
+        ArmedModule = null;
     }
 
     private void EnsureFocusState(Building_GR_Drydock dock)
@@ -163,6 +206,25 @@ internal sealed class GrayMechDrydockTabState
         }
     }
 
+    private void EnsureCoreSelectionState()
+    {
+        if (SelectedCoreSlotKey.NullOrEmpty())
+        {
+            return;
+        }
+
+        for (int i = 0; i < SlotCache.Count; i++)
+        {
+            GRMechResolvedSlot slot = SlotCache[i];
+            if (slot?.slot != null && slot.sectionSlot == null && slot.slot.key == SelectedCoreSlotKey)
+            {
+                return;
+            }
+        }
+
+        SelectedCoreSlotKey = null;
+    }
+
     internal void EnsureCompatibleModuleCache(Building_GR_Drydock dock)
     {
         if (SelectedSlotKey.NullOrEmpty())
@@ -195,6 +257,36 @@ internal sealed class GrayMechDrydockTabState
         cachedCompatibleSlotKey = SelectedSlotKey;
         cachedCompatibleShowObsolete = ShowObsoleteModules;
         cachedCompatibleRevision = dock.DesignRevision;
+    }
+
+    internal void EnsureCoreCompatibleModuleCache(Building_GR_Drydock dock)
+    {
+        EnsureCoreSelectionState();
+        if (SelectedCoreSlotKey.NullOrEmpty())
+        {
+            CoreCompatibleModules.Clear();
+            cachedCoreCompatibleSlotKey = null;
+            cachedCoreCompatibleRevision = dock.DesignRevision;
+            return;
+        }
+
+        if (cachedCoreCompatibleRevision == dock.DesignRevision
+            && cachedCoreCompatibleSlotKey == SelectedCoreSlotKey)
+        {
+            return;
+        }
+
+        if (TryGetResolvedSlot(null, SelectedCoreSlotKey, out GRMechResolvedSlot resolvedSlot))
+        {
+            GrayMechDesignUtility.FillCompatibleModules(dock.DesignDraft, resolvedSlot.slot, CoreCompatibleModules, true);
+        }
+        else
+        {
+            CoreCompatibleModules.Clear();
+        }
+
+        cachedCoreCompatibleSlotKey = SelectedCoreSlotKey;
+        cachedCoreCompatibleRevision = dock.DesignRevision;
     }
 
     private void RebuildDerivedCache(Building_GR_Drydock dock)
@@ -292,13 +384,14 @@ internal sealed class GrayMechDrydockTabState
         for (int i = 0; i < chassisDefs.Count; i++)
         {
             GRMechChassisDef chassis = chassisDefs[i];
-            if (chassis != null)
+            if (chassis != null && GrayMechDesignUtility.IsResearchAvailable(chassis))
             {
                 ChassisCache.Add(chassis);
             }
         }
 
         ChassisCache.Sort(GrayMechDrydockTabText.CompareChassisDefs);
+        RebuildLibraryGroupCache();
     }
 
     private void BuildDesignCache(WorldComponent_GrayMechDesignLibrary library)
@@ -306,6 +399,7 @@ internal sealed class GrayMechDrydockTabState
         DesignCache.Clear();
         if (library?.Designs == null)
         {
+            RebuildLibraryGroupCache();
             return;
         }
 
@@ -319,6 +413,63 @@ internal sealed class GrayMechDrydockTabState
         }
 
         DesignCache.Sort(GrayMechDrydockTabText.CompareSavedDesigns);
+        RebuildLibraryGroupCache();
+    }
+
+    private static int GetVisibleChassisHash()
+    {
+        unchecked
+        {
+            int hash = 17;
+            List<GRMechChassisDef> chassisDefs = DefDatabase<GRMechChassisDef>.AllDefsListForReading;
+            for (int i = 0; i < chassisDefs.Count; i++)
+            {
+                GRMechChassisDef chassis = chassisDefs[i];
+                if (chassis != null && GrayMechDesignUtility.IsResearchAvailable(chassis))
+                {
+                    hash = hash * 31 + chassis.shortHash;
+                }
+            }
+
+            return hash;
+        }
+    }
+
+    private void RebuildLibraryGroupCache()
+    {
+        LibraryGroups.Clear();
+        CachedLibraryMaxCardHeight = GrayMechDrydockTabStyle.LibraryCardHeight;
+        for (int i = 0; i < ChassisCache.Count; i++)
+        {
+            GRMechChassisDef chassis = ChassisCache[i];
+            if (chassis == null)
+            {
+                continue;
+            }
+
+            GrayMechLibraryGroup group = new()
+            {
+                Chassis = chassis
+            };
+            for (int j = 0; j < DesignCache.Count; j++)
+            {
+                GrayMechDesignRecord design = DesignCache[j];
+                if (design?.snapshot?.chassis != chassis)
+                {
+                    continue;
+                }
+
+                group.Designs.Add(design);
+                CachedLibraryMaxCardHeight = Mathf.Max(CachedLibraryMaxCardHeight, GetLibraryCardHeight(design));
+            }
+
+            if (group.ShowChassisCard)
+            {
+                CachedLibraryMaxCardHeight = Mathf.Max(CachedLibraryMaxCardHeight, GetLibraryCardHeight(chassis));
+            }
+
+            LibraryGroups.Add(group);
+        }
     }
 
     internal bool TryGetResolvedSlot(GRMechSectionSlotDef sectionSlot, string slotKey, out GRMechResolvedSlot resolvedSlot)
@@ -354,9 +505,11 @@ internal sealed class GrayMechDrydockTabState
     {
         cachedDraftRevision = -1;
         cachedCompatibleRevision = -1;
+        cachedCoreCompatibleRevision = -1;
         cachedCompatibleSectionSlot = null;
         cachedCompatibleSlotKey = null;
         cachedCompatibleShowObsolete = ShowObsoleteModules;
+        cachedCoreCompatibleSlotKey = null;
     }
 
     internal void SetShowObsoleteModules(bool value)
@@ -389,20 +542,14 @@ internal sealed class GrayMechDrydockTabState
 
     internal float GetBottomBarHeight(float width)
     {
-        float maxContentHeight = 0f;
-        for (int i = 0; i < ChassisCache.Count; i++)
-        {
-            maxContentHeight = Mathf.Max(maxContentHeight, GetLibraryCardHeight(ChassisCache[i]));
-        }
-
-        for (int i = 0; i < DesignCache.Count; i++)
-        {
-            maxContentHeight = Mathf.Max(maxContentHeight, GetLibraryCardHeight(DesignCache[i]));
-        }
-
-        float innerWidth = width - 20f;
-        float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight("<b>Blueprint Library</b>", innerWidth, GameFont.Small);
-        return Mathf.Max(GrayMechDrydockTabStyle.MinBottomBarHeight, maxContentHeight + 18f + titleHeight + 4f);
+        float contentHeight = GrayMechDrydockTabStyle.LibraryHeaderHeight
+                              + GrayMechDrydockTabStyle.LibraryHeaderGap
+                              + CachedLibraryMaxCardHeight;
+        const float panelChromeHeight = 24f;
+        const float horizontalScrollbarHeight = 16f;
+        return Mathf.Max(
+            GrayMechDrydockTabStyle.MinBottomBarHeight,
+            contentHeight + panelChromeHeight + horizontalScrollbarHeight);
     }
 
     internal float GetSummaryPanelHeight(float width)
@@ -423,20 +570,33 @@ internal sealed class GrayMechDrydockTabState
         float costHeight = Mathf.Max(rowHeight, GrayMechDrydockTabText.MeasureWrappedTextHeight(costText, valueWidth - 12f, GameFont.Tiny) + 8f);
         float productionHeight = sectionHeaderHeight + rowGap + rowHeight + rowGap + rowHeight + rowGap + rowHeight + rowGap + costHeight;
         float shipStatsHeight = sectionHeaderHeight + rowGap + rowHeight * 8f + rowGap * 7f;
-        float totalHeight = 8f + headerHeight + 8f + 8f + productionHeight + sectionGap + shipStatsHeight + 10f;
+        float designManagementHeight = GetDesignManagementSectionHeight(innerWidth);
+        float totalHeight = 8f + headerHeight + 8f + 8f + productionHeight + sectionGap + shipStatsHeight + sectionGap + designManagementHeight + 10f;
         return Mathf.Max(GrayMechDrydockTabStyle.SummaryPanelHeight, totalHeight);
+    }
+
+    internal float GetDesignManagementSectionHeight(float width)
+    {
+        const float sectionHeaderHeight = 22f;
+        const float nameGap = 4f;
+        const float rowGap = 8f;
+        const float nameFieldHeight = 30f;
+        const float checkboxHeight = 24f;
+        const float buttonRowHeight = 28f;
+        const float saveButtonHeight = 54f;
+        return sectionHeaderHeight + nameGap + nameFieldHeight + rowGap + checkboxHeight + rowGap + buttonRowHeight + rowGap + saveButtonHeight;
     }
 
     internal float GetLibraryCardHeight(GRMechChassisDef chassis)
     {
         float textWidth = GrayMechDrydockTabStyle.LibraryCardWidth - 12f;
-        string kindText = "Chassis";
         string titleText = "<b>" + (chassis?.LabelCap.ToString() ?? "Unnamed") + "</b>";
-        string footerText = GrayMechDesignUtility.IsResearchAvailable(chassis) ? "Start new draft" : "Locked";
-        float kindHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(kindText, textWidth, GameFont.Tiny);
+        const string footerText = "开始新设计";
         float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(titleText, textWidth, GameFont.Small);
         float footerHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(footerText, textWidth, GameFont.Tiny);
-        return 4f + kindHeight + 2f + 36f + 2f + titleHeight + 2f + footerHeight + 4f;
+        return Mathf.Max(
+            GrayMechDrydockTabStyle.LibraryCardHeight,
+            4f + titleHeight + 2f + 36f + 2f + footerHeight + 4f);
     }
 
     internal float GetLibraryCardHeight(GrayMechDesignRecord design)
@@ -449,7 +609,21 @@ internal sealed class GrayMechDrydockTabState
         float kindHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(kindText, textWidth, GameFont.Tiny);
         float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(titleText, textWidth, GameFont.Small);
         float footerHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(footerText, textWidth, GameFont.Tiny);
-        return 4f + kindHeight + 2f + 36f + 2f + titleHeight + 2f + footerHeight + 4f;
+        return Mathf.Max(
+            GrayMechDrydockTabStyle.LibraryCardHeight,
+            4f + kindHeight + 2f + 36f + 2f + titleHeight + 2f + footerHeight + 4f);
+    }
+
+    internal float GetLibraryGroupWidth(GrayMechLibraryGroup group)
+    {
+        int cardCount = group?.VisibleCardCount ?? 0;
+        if (cardCount <= 0)
+        {
+            return 0f;
+        }
+
+        return cardCount * GrayMechDrydockTabStyle.LibraryCardWidth
+               + Mathf.Max(0, cardCount - 1) * GrayMechDrydockTabStyle.LibraryCardGap;
     }
 
     internal float GetLayoutOptionHeight(GRMechSectionLayoutDef layout, float width)
@@ -501,6 +675,7 @@ internal sealed class GrayMechDrydockTabState
             return;
         }
 
+        SelectedCoreSlotKey = null;
         SelectedSectionSlot = sectionSlot;
         SelectedSlotKey = null;
         FocusScrollPosition = Vector2.zero;
@@ -513,12 +688,51 @@ internal sealed class GrayMechDrydockTabState
             return;
         }
 
+        SelectedCoreSlotKey = null;
         SelectedSectionSlot = resolvedSlot.sectionSlot;
         SelectedSlotKey = resolvedSlot.slot.key;
         FocusScrollPosition = Vector2.zero;
         cachedCompatibleRevision = -1;
         cachedCompatibleSectionSlot = null;
         cachedCompatibleSlotKey = null;
+    }
+
+    internal void SelectCoreSlot(GRMechResolvedSlot resolvedSlot)
+    {
+        if (resolvedSlot?.slot == null || resolvedSlot.sectionSlot != null)
+        {
+            return;
+        }
+
+        SelectedCoreSlotKey = resolvedSlot.slot.key;
+        cachedCoreCompatibleRevision = -1;
+        cachedCoreCompatibleSlotKey = null;
+    }
+
+    internal void ClearCoreSelection()
+    {
+        SelectedCoreSlotKey = null;
+        cachedCoreCompatibleRevision = -1;
+        cachedCoreCompatibleSlotKey = null;
+    }
+
+    internal bool ClearFocusedSlotSelection()
+    {
+        bool hadSelection = !SelectedSlotKey.NullOrEmpty() || !SelectedCoreSlotKey.NullOrEmpty();
+        if (!hadSelection)
+        {
+            return false;
+        }
+
+        SelectedSlotKey = null;
+        SelectedCoreSlotKey = null;
+        cachedCompatibleRevision = -1;
+        cachedCompatibleSectionSlot = null;
+        cachedCompatibleSlotKey = null;
+        cachedCoreCompatibleRevision = -1;
+        cachedCoreCompatibleSlotKey = null;
+        FocusScrollPosition = Vector2.zero;
+        return true;
     }
 
     internal void PrepareSectionSlotBuffers(GRMechSectionSlotDef sectionSlot)

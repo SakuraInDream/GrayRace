@@ -26,7 +26,7 @@ internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvas
 
     public List<GRMechResolvedSlot> BottomSlots => context.State.SupportSlotBuffer;
 
-    public bool CoreOwnsSelectedSlot => context.State.SelectedSectionSlot == null && !context.State.SelectedSlotKey.NullOrEmpty();
+    public bool CoreOwnsSelectedSlot => !context.State.SelectedCoreSlotKey.NullOrEmpty();
 
     public List<GRMechResolvedSlot> CoreSlots => context.State.RequiredSlotBuffer;
 
@@ -66,11 +66,27 @@ internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvas
 
     public void OnSlotActivated(GRMechResolvedSlot resolvedSlot)
     {
+        if (context.Controller.TryApplyArmedModuleToSlot(context.Dock, resolvedSlot))
+        {
+            return;
+        }
+
         context.Controller.SelectSlot(context.Dock, resolvedSlot);
     }
 
     public void OnSlotSecondaryActivated(GRMechResolvedSlot resolvedSlot)
     {
+        if (context.Controller.CancelModuleBrush(playSound: true))
+        {
+            return;
+        }
+
+        if (resolvedSlot == null)
+        {
+            context.Controller.CloseFocusedSlotUi(playSound: true);
+            return;
+        }
+
         if (GrayMechDesignUtility.TryGetSelectedModule(context.Draft, resolvedSlot, out GRMechModuleDef module) && module != null)
         {
             context.Controller.ClearSlotModule(context.Dock, resolvedSlot);
@@ -91,7 +107,9 @@ internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvas
     {
         GrayMechDesignUtility.TryGetSelectedModule(context.Draft, resolvedSlot, out module);
         tooltip = GrayMechDrydockTabText.BuildSlotTooltip(context.Draft?.chassis, resolvedSlot, module);
-        selected = GRMechSectionSlotUtility.Matches(context.State.SelectedSectionSlot, resolvedSlot.sectionSlot) && context.State.SelectedSlotKey == resolvedSlot.slot?.key;
+        selected = resolvedSlot?.sectionSlot == null
+            ? context.State.SelectedCoreSlotKey == resolvedSlot?.slot?.key
+            : GRMechSectionSlotUtility.Matches(context.State.SelectedSectionSlot, resolvedSlot.sectionSlot) && context.State.SelectedSlotKey == resolvedSlot.slot?.key;
         drawSlotMarker = true;
     }
 
@@ -111,14 +129,13 @@ internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvas
         currentModule = null;
         if (resolvedSlot?.slot == null
             || resolvedSlot.sectionSlot != null
-            || !GRMechSectionSlotUtility.Matches(context.State.SelectedSectionSlot, resolvedSlot.sectionSlot)
-            || context.State.SelectedSlotKey != resolvedSlot.slot.key)
+            || context.State.SelectedCoreSlotKey != resolvedSlot.slot.key)
         {
             return false;
         }
 
         GrayMechDesignUtility.TryGetSelectedModule(context.Draft, resolvedSlot, out currentModule);
-        compatibleModules = context.State.CompatibleModules;
+        compatibleModules = context.State.CoreCompatibleModules;
         return compatibleModules is { Count: > 0 } || currentModule != null;
     }
 

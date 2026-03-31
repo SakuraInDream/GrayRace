@@ -19,8 +19,8 @@ internal sealed class GrayMechSectionCanvasPanel
     private const float PreviewGap = 18f;
     private const float CorePanelSideMargin = 4f;
     private const float CorePanelTopBottomMargin = 72f;
-    private const float MaxCoreSlotSize = 34f;
-    private const float MinCoreSlotSize = 14f;
+    private const float MaxCoreSlotSize = 44f;
+    private const float MinCoreSlotSize = 18f;
     private const float MaxCoreRowGap = 6f;
     private const float CorePickerGap = 12f;
     private const float CorePickerOuterPadding = 6f;
@@ -89,6 +89,11 @@ internal sealed class GrayMechSectionCanvasPanel
         {
             Rect corePanelRect = GetCoreSystemsPanelRect(canvasRect, previewRect, host.CoreSlots.Count);
             DrawCoreSystemsColumn(host, canvasRect, corePanelRect);
+        }
+
+        if (host.AllowSecondarySlotAction && WasSecondaryClick(canvasRect))
+        {
+            host.OnSlotSecondaryActivated(null);
         }
     }
 

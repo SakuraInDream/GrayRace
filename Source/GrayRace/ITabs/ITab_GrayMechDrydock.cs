@@ -1,4 +1,5 @@
 using RimWorld;
+using SD.GrayRace.Defs;
 using SD.GrayRace.ThingClasses;
 using UnityEngine;
 using Verse;
@@ -41,9 +42,7 @@ public class ITab_GrayMechDrydock : ITab
             GrayMechDrydockTabStyle.Margin + GrayMechDrydockTabStyle.CloseButtonReserveTop,
             size.x - GrayMechDrydockTabStyle.Margin * 2f - GrayMechDrydockTabStyle.CloseButtonReserveRight,
             size.y - GrayMechDrydockTabStyle.Margin * 2f - GrayMechDrydockTabStyle.CloseButtonReserveTop);
-        float topBarHeight = state.GetTopBarHeight(dock, root.width);
-        Rect topRect = new Rect(root.x, root.y, root.width, topBarHeight);
-        Rect bodyRect = new Rect(root.x, topRect.yMax + GrayMechDrydockTabStyle.PanelGap, root.width, root.height - topBarHeight - GrayMechDrydockTabStyle.PanelGap);
+        Rect bodyRect = root;
         Rect mainBodyRect = new Rect(bodyRect.x, bodyRect.y, bodyRect.width - GrayMechDrydockTabStyle.RightPanelWidth - GrayMechDrydockTabStyle.PanelGap, bodyRect.height);
         Rect summaryRect = new Rect(mainBodyRect.xMax + GrayMechDrydockTabStyle.PanelGap, bodyRect.y, GrayMechDrydockTabStyle.RightPanelWidth, bodyRect.height);
 
@@ -56,10 +55,42 @@ public class ITab_GrayMechDrydock : ITab
         Rect centerRect = new Rect(leftRect.xMax + GrayMechDrydockTabStyle.PanelGap, upperRect.y, upperRect.width - leftPanelWidth - GrayMechDrydockTabStyle.PanelGap, upperRect.height);
         Rect bottomRect = new Rect(mainBodyRect.x, upperRect.yMax + GrayMechDrydockTabStyle.PanelGap, mainBodyRect.width, bottomBarHeight);
 
-        topBarPanel.Draw(context, topRect);
         designerPanel.Draw(context, centerRect);
         focusPanel.DrawSelection(context, leftRect);
         focusPanel.DrawSummary(context, summaryRect);
         bottomBarPanel.Draw(context, bottomRect);
+        DrawArmedModuleCursor(context);
+    }
+
+    private void DrawArmedModuleCursor(GrayMechDrydockTabContext context)
+    {
+        GRMechModuleDef armedModule = context.State.ArmedModule;
+        if (armedModule == null)
+        {
+            return;
+        }
+
+        Vector2 mousePosition = Event.current.mousePosition;
+        Rect tabRect = new Rect(0f, 0f, size.x, size.y);
+        if (!tabRect.Contains(mousePosition))
+        {
+            return;
+        }
+
+        const float cursorOffset = 14f;
+        const float iconSize = 32f;
+        Rect iconRect = new Rect(mousePosition.x + cursorOffset, mousePosition.y + cursorOffset, iconSize, iconSize);
+        iconRect.x = Mathf.Min(iconRect.x, size.x - iconRect.width - 4f);
+        iconRect.y = Mathf.Min(iconRect.y, size.y - iconRect.height - 4f);
+
+        Texture2D icon = GrayMechDrydockTabStyle.GetModuleIcon(armedModule);
+        if (icon != null)
+        {
+            Widgets.DrawTextureFitted(iconRect, icon, 1f);
+        }
+        else if (armedModule.equipmentDef != null)
+        {
+            Widgets.ThingIcon(iconRect, armedModule.equipmentDef, armedModule.equipmentStuff);
+        }
     }
 }

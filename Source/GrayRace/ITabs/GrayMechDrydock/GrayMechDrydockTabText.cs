@@ -424,12 +424,7 @@ internal static class GrayMechDrydockTabText
 
     internal static string GetSlotDisplayName(GRMechSlotEntry slot)
     {
-        if (slot == null)
-        {
-            return Prefs.DevMode ? "Unknown Slot" : string.Empty;
-        }
-
-        return Prefs.DevMode ? (slot.key ?? string.Empty) : string.Empty;
+        return DebugSettings.godMode ? slot.key : string.Empty;
     }
 
     internal static string GetSlotOwnerLabel(GRMechResolvedSlot resolvedSlot)

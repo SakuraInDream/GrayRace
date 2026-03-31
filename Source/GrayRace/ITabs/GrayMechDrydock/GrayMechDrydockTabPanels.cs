@@ -659,6 +659,10 @@ internal sealed class GrayMechDrydockFocusPanel
         y = DrawSummaryInfoRow(statsRect, y, "Bandwidth".Translate(), context.State.CachedBandwidthCost.ToString("0.#"), new Color(0.74f, 0.52f, 0.95f));
         // y = DrawSummaryInfoRow(statsRect, y, "CooldownTime".Translate(), FormatDeltaPercent(1f - context.State.CachedRangedCooldownFactor), GrayMechDrydockTabStyle.MainWeaponColor);
         // y = DrawSummaryInfoRow(statsRect, y, "Accuracy", BuildAccuracySummary(context), GrayMechDrydockTabStyle.SelectedColor);
+
+        float designManagementHeight = context.State.GetDesignManagementSectionHeight(statsRect.width);
+        float designManagementY = Mathf.Max(y + 8f, rect.yMax - designManagementHeight - 10f);
+        DrawDesignManagementSection(context, new Rect(statsRect.x, designManagementY, statsRect.width, designManagementHeight));
     }
 
     private void DrawQueuePanel(GrayMechDrydockTabContext context, Rect rect)
@@ -985,6 +989,71 @@ internal sealed class GrayMechDrydockFocusPanel
         return "0";
     }
 
+    private void DrawDesignManagementSection(GrayMechDrydockTabContext context, Rect rect)
+    {
+        float y = rect.y;
+        y = DrawSummarySectionHeader(new Rect(rect.x, y, rect.width, 22f), "设计管理", GrayMechDrydockTabStyle.SelectedColor);
+        y += 4f;
+
+        y = DrawDesignNameField(context, rect, y);
+
+        Rect checkboxRect = new Rect(rect.x, y, rect.width, 24f);
+        bool autoUpgrade = context.Dock.AutoUpgradeEnabled;
+        Widgets.CheckboxLabeled(checkboxRect, "自动升级", ref autoUpgrade);
+        if (autoUpgrade != context.Dock.AutoUpgradeEnabled)
+        {
+            context.Dock.AutoUpgradeEnabled = autoUpgrade;
+        }
+
+        y = checkboxRect.yMax + 8f;
+        float buttonGap = 8f;
+        float smallButtonWidth = (rect.width - buttonGap) * 0.5f;
+        Rect clearRect = new Rect(rect.x, y, smallButtonWidth, 28f);
+        Rect queueRect = new Rect(clearRect.xMax + buttonGap, y, smallButtonWidth, 28f);
+        if (GrayMechDrydockPanelWidgets.DrawButton(clearRect, "清除设计"))
+        {
+            context.Controller.ClearDesign(context.Dock);
+        }
+
+        if (GrayMechDrydockPanelWidgets.DrawButton(queueRect, "加入队列", context.State.CachedCanQueueOrder, true))
+        {
+            context.Controller.QueueAssemblyOrder(context.Dock);
+        }
+
+        y = clearRect.yMax + 8f;
+        Rect saveRect = new Rect(rect.x, y, rect.width, 54f);
+        if (GrayMechDrydockPanelWidgets.DrawButton(saveRect, "保存", highlighted: true))
+        {
+            context.Controller.SaveDesign(context.Dock);
+        }
+    }
+
+    private static float DrawDesignNameField(GrayMechDrydockTabContext context, Rect areaRect, float y)
+    {
+        Rect fieldRect = new Rect(areaRect.x, y, areaRect.width, 30f);
+        Color fieldBg = new Color(0.05f, 0.08f, 0.09f, 0.98f);
+        Widgets.DrawBoxSolid(fieldRect, fieldBg);
+        Widgets.DrawBoxSolidWithOutline(fieldRect, Color.clear, new Color(GrayMechDrydockTabStyle.SelectedColor.r, GrayMechDrydockTabStyle.SelectedColor.g, GrayMechDrydockTabStyle.SelectedColor.b, 0.4f));
+
+        TextAnchor oldAnchor = Text.Anchor;
+        GameFont oldFont = Text.Font;
+        Color oldColor = GUI.color;
+        Text.Font = GameFont.Tiny;
+        Text.Anchor = TextAnchor.MiddleLeft;
+        GUI.color = Color.white;
+        string currentName = context.Draft?.designLabel ?? string.Empty;
+        string editedName = Widgets.TextField(new Rect(fieldRect.x + 6f, fieldRect.y + 4f, fieldRect.width - 12f, fieldRect.height - 8f), currentName);
+        if (editedName != currentName)
+        {
+            context.Dock.SetDraftLabel(editedName);
+        }
+
+        GUI.color = oldColor;
+        Text.Anchor = oldAnchor;
+        Text.Font = oldFont;
+        return y + fieldRect.height + 4f;
+    }
+
     private void DrawSectionFocusPanel(GrayMechDrydockTabContext context, Rect rect)
     {
         Widgets.DrawBoxSolidWithOutline(rect, GrayMechDrydockTabStyle.CardFill, GrayMechDrydockTabStyle.HullOutline);
@@ -1106,7 +1175,7 @@ internal sealed class GrayMechDrydockFocusPanel
         GrayMechDrydockTabState state = context.State;
         Rect toggleRect = new Rect(inner.x, headerY, inner.width, 24f);
         bool showObsolete = state.ShowObsoleteModules;
-        Widgets.CheckboxLabeled(toggleRect, "Show obsolete components", ref showObsolete);
+        Widgets.CheckboxLabeled(toggleRect, "显示淘汰部件", ref showObsolete);
         if (showObsolete != state.ShowObsoleteModules)
         {
             state.SetShowObsoleteModules(showObsolete);
@@ -1206,62 +1275,166 @@ internal sealed class GrayMechDrydockBottomBarPanel
         Widgets.DrawMenuSection(rect);
         Widgets.DrawBoxSolid(rect.ContractedBy(1f), GrayMechDrydockTabStyle.BgPanelAlt);
         Rect inner = rect.ContractedBy(10f);
+        float contentHeight = GrayMechDrydockTabStyle.LibraryHeaderHeight
+                              + GrayMechDrydockTabStyle.LibraryHeaderGap
+                              + context.State.CachedLibraryMaxCardHeight;
+        Rect newDesignRect = new Rect(inner.x, inner.y + 4f, GrayMechDrydockTabStyle.LibraryNewDesignWidth, contentHeight);
+        float groupAreaX = newDesignRect.xMax + GrayMechDrydockTabStyle.LibraryNewDesignGap;
+        Rect groupScrollRect = new Rect(
+            groupAreaX,
+            inner.y + 4f,
+            Mathf.Max(0f, inner.xMax - groupAreaX),
+            Mathf.Max(0f, inner.height - 4f));
 
-        Rect contentRect = new Rect(inner.x, inner.y + 4f, inner.width, inner.height - 4f);
-        DrawLibraryCards(context, contentRect);
+        DrawNewDesignButton(context, newDesignRect);
+        if (groupScrollRect.width > 0f)
+        {
+            DrawLibraryGroups(context, groupScrollRect, contentHeight);
+        }
     }
 
-    private void DrawLibraryCards(GrayMechDrydockTabContext context, Rect rect)
+    private void DrawNewDesignButton(GrayMechDrydockTabContext context, Rect rect)
     {
         GrayMechDrydockTabState state = context.State;
-        int cardCount = state.ChassisCache.Count + state.DesignCache.Count;
-        float contentWidth = 8f + cardCount * (GrayMechDrydockTabStyle.LibraryCardWidth + 8f);
-        float maxCardHeight = 0f;
-        for (int i = 0; i < state.ChassisCache.Count; i++)
+        bool hasUnlockedChassis = state.ChassisCache.Count > 0;
+        Color accent = hasUnlockedChassis ? GrayMechDrydockTabStyle.UtilitySlotColor : GrayMechDrydockTabStyle.LockedColor;
+        Widgets.DrawBoxSolidWithOutline(rect, GrayMechDrydockTabStyle.CardFillMuted, accent);
+        Widgets.DrawBoxSolid(new Rect(rect.x + 1f, rect.y + 1f, rect.width - 2f, 4f), accent);
+        if (Mouse.IsOver(rect))
         {
-            maxCardHeight = Mathf.Max(maxCardHeight, state.GetLibraryCardHeight(state.ChassisCache[i]));
+            Widgets.DrawHighlight(rect);
         }
 
-        for (int i = 0; i < state.DesignCache.Count; i++)
+        if (Widgets.ButtonInvisible(rect))
         {
-            maxCardHeight = Mathf.Max(maxCardHeight, state.GetLibraryCardHeight(state.DesignCache[i]));
+            context.Controller.OpenNewDesignMenu(context.Dock, state.ChassisCache);
         }
 
-        Rect viewRect = new Rect(0f, 0f, Mathf.Max(rect.width - 16f, contentWidth), Mathf.Max(rect.height - 16f, maxCardHeight + 8f));
+        Rect titleRect = new Rect(rect.x + 8f, rect.y, rect.width - 16f, rect.height);
+        DrawLibraryTextLine(titleRect, "新设计", GameFont.Small, TextAnchor.MiddleCenter, hasUnlockedChassis ? Color.white : Color.gray);
+    }
+
+    private void DrawLibraryGroups(GrayMechDrydockTabContext context, Rect rect, float contentHeight)
+    {
+        GrayMechDrydockTabState state = context.State;
+        float contentWidth = 0f;
+        for (int i = 0; i < state.LibraryGroups.Count; i++)
+        {
+            float groupWidth = state.GetLibraryGroupWidth(state.LibraryGroups[i]);
+            if (groupWidth <= 0f)
+            {
+                continue;
+            }
+
+            if (contentWidth > 0f)
+            {
+                contentWidth += GrayMechDrydockTabStyle.LibraryGroupGap;
+            }
+
+            contentWidth += groupWidth;
+        }
+
+        Rect viewRect = new Rect(
+            0f,
+            0f,
+            Mathf.Max(rect.width - 16f, contentWidth),
+            Mathf.Max(rect.height - 16f, contentHeight));
+
+        if (viewRect.width > rect.width)
+        {
+            Widgets.ScrollHorizontal(rect, ref state.LibraryScrollPosition, viewRect);
+        }
 
         Widgets.BeginScrollView(rect, ref state.LibraryScrollPosition, viewRect);
-        float x = 8f;
-        float minVisibleX = state.LibraryScrollPosition.x - GrayMechDrydockTabStyle.LibraryCardWidth - 24f;
-        float maxVisibleX = state.LibraryScrollPosition.x + rect.width + GrayMechDrydockTabStyle.LibraryCardWidth + 24f;
-        for (int i = 0; i < state.ChassisCache.Count; i++)
+        float x = 0f;
+        float minVisibleX = state.LibraryScrollPosition.x - GrayMechDrydockTabStyle.LibraryCardWidth - 32f;
+        float maxVisibleX = state.LibraryScrollPosition.x + rect.width + GrayMechDrydockTabStyle.LibraryCardWidth + 32f;
+        for (int i = 0; i < state.LibraryGroups.Count; i++)
         {
-            GRMechChassisDef chassis = state.ChassisCache[i];
-            Rect cardRect = new Rect(x, 4f, GrayMechDrydockTabStyle.LibraryCardWidth, state.GetLibraryCardHeight(chassis));
-            if (cardRect.xMax >= minVisibleX && cardRect.x <= maxVisibleX)
+            GrayMechLibraryGroup group = state.LibraryGroups[i];
+            float groupWidth = state.GetLibraryGroupWidth(group);
+            if (groupWidth <= 0f)
             {
-                bool selected = !context.Dock.IsEditingSavedDesign
-                    && context.Draft?.chassis == chassis
-                    && context.Draft?.designLabel == chassis?.LabelCap.ToString();
-                DrawChassisCard(context, cardRect, chassis, selected);
+                continue;
             }
 
-            x += GrayMechDrydockTabStyle.LibraryCardWidth + 8f;
-        }
-
-        for (int i = 0; i < state.DesignCache.Count; i++)
-        {
-            GrayMechDesignRecord design = state.DesignCache[i];
-            Rect cardRect = new Rect(x, 4f, GrayMechDrydockTabStyle.LibraryCardWidth, state.GetLibraryCardHeight(design));
-            if (cardRect.xMax >= minVisibleX && cardRect.x <= maxVisibleX)
+            Rect groupRect = new Rect(x, 0f, groupWidth, contentHeight);
+            if (groupRect.xMax >= minVisibleX && groupRect.x <= maxVisibleX)
             {
-                bool selected = context.Dock.IsEditingSavedDesign && context.Dock.EditingDesignId == design.id;
-                DrawDesignCard(context, cardRect, design, selected);
+                DrawLibraryGroup(context, group, groupRect, i > 0);
             }
 
-            x += GrayMechDrydockTabStyle.LibraryCardWidth + 8f;
+            x += groupWidth + GrayMechDrydockTabStyle.LibraryGroupGap;
         }
 
         Widgets.EndScrollView();
+    }
+
+    private void DrawLibraryGroup(GrayMechDrydockTabContext context, GrayMechLibraryGroup group, Rect rect, bool drawLeadingSeparator)
+    {
+        Color separatorColor = new Color(
+            GrayMechDrydockTabStyle.HeaderLineColor.r,
+            GrayMechDrydockTabStyle.HeaderLineColor.g,
+            GrayMechDrydockTabStyle.HeaderLineColor.b,
+            0.48f);
+        if (drawLeadingSeparator)
+        {
+            float separatorX = rect.x - GrayMechDrydockTabStyle.LibraryGroupGap * 0.5f;
+            Widgets.DrawBoxSolid(new Rect(separatorX, rect.y + 4f, 1f, rect.height - 8f), separatorColor);
+        }
+
+        Rect headerRect = new Rect(rect.x, rect.y, rect.width, GrayMechDrydockTabStyle.LibraryHeaderHeight);
+        DrawLibraryGroupHeader(headerRect, group.Chassis?.LabelCap.ToString() ?? "Unknown");
+
+        float cardX = rect.x;
+        float cardY = headerRect.yMax + GrayMechDrydockTabStyle.LibraryHeaderGap;
+        float cardHeight = context.State.CachedLibraryMaxCardHeight;
+        if (group.ShowChassisCard)
+        {
+            Rect chassisCardRect = new Rect(cardX, cardY, GrayMechDrydockTabStyle.LibraryCardWidth, cardHeight);
+            DrawChassisCard(context, chassisCardRect, group.Chassis, selected: false);
+            return;
+        }
+
+        for (int i = 0; i < group.Designs.Count; i++)
+        {
+            GrayMechDesignRecord design = group.Designs[i];
+            Rect cardRect = new Rect(cardX, cardY, GrayMechDrydockTabStyle.LibraryCardWidth, cardHeight);
+            bool selected = context.Dock.IsEditingSavedDesign && context.Dock.EditingDesignId == design.id;
+            DrawDesignCard(context, cardRect, design, selected);
+            cardX += GrayMechDrydockTabStyle.LibraryCardWidth + GrayMechDrydockTabStyle.LibraryCardGap;
+        }
+    }
+
+    private static void DrawLibraryGroupHeader(Rect rect, string label)
+    {
+        DrawLibraryTextLine(rect, label, GameFont.Small, TextAnchor.MiddleLeft, Color.white);
+        Widgets.DrawBoxSolid(
+            new Rect(rect.x, rect.yMax - 2f, rect.width, 2f),
+            new Color(
+                GrayMechDrydockTabStyle.HeaderLineColor.r,
+                GrayMechDrydockTabStyle.HeaderLineColor.g,
+                GrayMechDrydockTabStyle.HeaderLineColor.b,
+                0.55f));
+    }
+
+    private static void DrawLibraryTextLine(Rect rect, string text, GameFont font, TextAnchor anchor, Color color)
+    {
+        TextAnchor oldAnchor = Text.Anchor;
+        GameFont oldFont = Text.Font;
+        Color oldColor = GUI.color;
+        bool oldWrap = Text.WordWrap;
+
+        Text.Anchor = anchor;
+        Text.Font = font;
+        Text.WordWrap = false;
+        GUI.color = color;
+        Widgets.Label(rect, (text ?? string.Empty).Truncate(rect.width));
+
+        GUI.color = oldColor;
+        Text.WordWrap = oldWrap;
+        Text.Font = oldFont;
+        Text.Anchor = oldAnchor;
     }
 
     private void DrawChassisCard(GrayMechDrydockTabContext context, Rect rect, GRMechChassisDef chassis, bool selected)
@@ -1284,24 +1457,22 @@ internal sealed class GrayMechDrydockBottomBarPanel
             }
         }
 
-        float headerHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight("Chassis", rect.width - 12f, GameFont.Tiny);
-        Rect previewRect = new Rect(rect.x + 4f, rect.y + 4f + headerHeight + 2f, rect.width - 8f, 36f);
-        DrawChassisPreview(previewRect, chassis);
-        GameFont oldFont = Text.Font;
-        Text.Font = GameFont.Tiny;
-        GrayMechDrydockTabText.DrawWrappedLabel(new Rect(rect.x + 6f, rect.y + 4f, rect.width - 12f, headerHeight), "Chassis");
-        Text.Font = oldFont;
-
         string title = chassis?.LabelCap.ToString() ?? "Unnamed";
-        string footer = !buildableHere ? "Unavailable here" : (available ? "Start new draft" : "Locked");
+        string footer = buildableHere ? "开始新设计" : "此处不可用";
         float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight("<b>" + title + "</b>", rect.width - 12f, GameFont.Small);
         float footerHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(footer, rect.width - 12f, GameFont.Tiny);
-        float textY = previewRect.yMax + 2f;
-        GrayMechDrydockTabText.DrawWrappedLabel(new Rect(rect.x + 6f, textY, rect.width - 12f, titleHeight), "<b>" + title + "</b>");
-        textY += titleHeight + 2f;
-        oldFont = Text.Font;
+        Rect titleRect = new Rect(rect.x + 6f, rect.y + 4f, rect.width - 12f, titleHeight);
+        Rect previewRect = new Rect(rect.x + 4f, titleRect.yMax + 2f, rect.width - 8f, 36f);
+        Rect footerRect = new Rect(rect.x + 6f, previewRect.yMax + 2f, rect.width - 12f, footerHeight);
+        GameFont oldFont = Text.Font;
+        Text.Font = GameFont.Small;
+        GrayMechDrydockTabText.DrawWrappedLabel(titleRect, "<b>" + title + "</b>");
+        DrawChassisPreview(previewRect, chassis);
         Text.Font = GameFont.Tiny;
-        GrayMechDrydockTabText.DrawWrappedLabel(new Rect(rect.x + 6f, textY, rect.width - 12f, footerHeight), footer);
+        Color oldColor = GUI.color;
+        GUI.color = new Color(0.82f, 0.9f, 0.94f, 0.92f);
+        GrayMechDrydockTabText.DrawWrappedLabel(footerRect, footer);
+        GUI.color = oldColor;
         Text.Font = oldFont;
         string tooltip = chassis?.description ?? string.Empty;
         if (!buildableHere && !restrictionReason.NullOrEmpty())
@@ -1315,7 +1486,8 @@ internal sealed class GrayMechDrydockBottomBarPanel
     {
         GrayMechDesignSnapshot snapshot = design?.snapshot;
         bool buildableHere = context.Dock.CanBuildChassis(snapshot?.chassis, out string restrictionReason);
-        DrawLibraryCardChrome(rect, selected, buildableHere ? GrayMechDrydockTabStyle.MainWeaponColor : GrayMechDrydockTabStyle.LockedColor);
+        Color accent = buildableHere ? GrayMechDrydockTabStyle.UtilitySlotColor : GrayMechDrydockTabStyle.LockedColor;
+        DrawLibraryCardChrome(rect, selected, accent);
 
         if (Widgets.ButtonInvisible(rect))
         {
@@ -1338,12 +1510,16 @@ internal sealed class GrayMechDrydockBottomBarPanel
         Text.Font = oldFont;
 
         string title = design?.label ?? "Unnamed";
-        string chassis = snapshot?.chassis?.LabelCap.ToString() ?? "No chassis";
-        string footer = buildableHere ? chassis + "   Modules " + CountInstalledModules(snapshot) : "Unavailable here";
+        string footer = buildableHere
+            ? (snapshot?.chassis?.LabelCap.ToString() ?? "No chassis") + "   Modules " + CountInstalledModules(snapshot)
+            : "此处不可用";
         float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight("<b>" + title + "</b>", rect.width - 12f, GameFont.Small);
         float footerHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(footer, rect.width - 12f, GameFont.Tiny);
         float textY = previewRect.yMax + 2f;
+        Color oldColor = GUI.color;
+        GUI.color = selected ? GrayMechDrydockTabStyle.SelectedColor : new Color(1f, 0.8f, 0.35f);
         GrayMechDrydockTabText.DrawWrappedLabel(new Rect(rect.x + 6f, textY, rect.width - 12f, titleHeight), "<b>" + title + "</b>");
+        GUI.color = oldColor;
         textY += titleHeight + 2f;
         oldFont = Text.Font;
         Text.Font = GameFont.Tiny;

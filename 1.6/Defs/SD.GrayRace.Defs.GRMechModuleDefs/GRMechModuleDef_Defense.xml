@@ -7,6 +7,7 @@
     <label>纳米装甲</label>
     <description>加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。</description>
     <iconPath>Icon/ShipParts/ship_part_armor_1</iconPath>
+    <slotFamily>Armor_1</slotFamily>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
@@ -72,6 +73,7 @@
     <label>瓷金装甲</label>
     <description>不同金属和陶瓷的结合物，坚硬而又不失柔韧性。</description>
     <iconPath>Icon/ShipParts/ship_part_armor_2</iconPath>
+    <slotFamily>Armor_2</slotFamily>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -134,6 +136,7 @@
     <label>塑钢装甲</label>
     <description>塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。</description>
     <iconPath>Icon/ShipParts/ship_part_armor_3</iconPath>
+    <slotFamily>Armor_3</slotFamily>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
@@ -196,6 +199,7 @@
     <label>耐钢装甲</label>
     <description>此种材料质地强韧、耐冲击，是合适的舰体材料。</description>
     <iconPath>Icon/ShipParts/ship_part_armor_4</iconPath>
+    <slotFamily>Armor_4</slotFamily>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
     </researchPrerequisites>
@@ -258,6 +262,7 @@
     <label>零素装甲</label>
     <description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</description>
     <iconPath>Icon/ShipParts/ship_part_armor_5</iconPath>
+    <slotFamily>Armor_5</slotFamily>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
     </researchPrerequisites>

@@ -13,6 +13,7 @@ public class Building_GR_Drydock : Building, IThingHolder
     private GrayMechDesignSnapshot designDraft;
     private int editingDesignId = -1;
     private int designRevision;
+    private bool autoUpgradeEnabled = true;
 
     [Unsaved(false)]
     private CompGrayMechAssemblyBay cachedAssemblyBayComp;
@@ -33,6 +34,12 @@ public class Building_GR_Drydock : Building, IThingHolder
     public int EditingDesignId => editingDesignId;
 
     public int DesignRevision => designRevision;
+
+    public bool AutoUpgradeEnabled
+    {
+        get => autoUpgradeEnabled;
+        set => autoUpgradeEnabled = value;
+    }
 
     public bool IsEditingSavedDesign => editingDesignId >= 0;
 
@@ -65,6 +72,7 @@ public class Building_GR_Drydock : Building, IThingHolder
         base.ExposeData();
         Scribe_Deep.Look(ref designDraft, "designDraft");
         Scribe_Values.Look(ref editingDesignId, "editingDesignId", -1);
+        Scribe_Values.Look(ref autoUpgradeEnabled, "autoUpgradeEnabled", true);
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
@@ -240,6 +248,102 @@ public class Building_GR_Drydock : Building, IThingHolder
         return deleted;
     }
 
+    public bool ClearSectionModules()
+    {
+        EnsureDesignDraft();
+        if (designDraft?.modules == null || designDraft.modules.Count == 0)
+        {
+            return false;
+        }
+
+        bool changed = false;
+        for (int i = designDraft.modules.Count - 1; i >= 0; i--)
+        {
+            GrayMechModuleAssignment assignment = designDraft.modules[i];
+            if (assignment?.sectionSlot == null)
+            {
+                continue;
+            }
+
+            designDraft.modules.RemoveAt(i);
+            changed = true;
+        }
+
+        if (!changed)
+        {
+            return false;
+        }
+
+        GrayMechDesignUtility.EnsureSnapshotDefaults(designDraft);
+        TouchDesignDraft();
+        return true;
+    }
+
+    public void SetDraftLabel(string label)
+    {
+        EnsureDesignDraft();
+        if (designDraft == null)
+        {
+            return;
+        }
+
+        designDraft.designLabel = label ?? string.Empty;
+    }
+
+    public bool SaveDesignByDraftLabel(out GrayMechDesignRecord record, out bool createdNew, out bool overwroteExisting)
+    {
+        record = null;
+        createdNew = false;
+        overwroteExisting = false;
+        EnsureDesignDraft();
+        WorldComponent_GrayMechDesignLibrary library = DesignLibrary;
+        if (designDraft == null || library == null)
+        {
+            return false;
+        }
+
+        string targetLabel = designDraft.designLabel?.Trim();
+        if (targetLabel.NullOrEmpty())
+        {
+            targetLabel = designDraft.chassis?.LabelCap.ToString() ?? "Gray mech design";
+            designDraft.designLabel = targetLabel;
+        }
+
+        GrayMechDesignRecord currentRecord = EditingDesignRecord;
+        GrayMechDesignRecord matchingRecord = library.GetDesignByLabel(targetLabel, currentRecord?.id ?? -1);
+        if (matchingRecord != null)
+        {
+            if (!library.OverwriteDesign(matchingRecord.id, designDraft, targetLabel))
+            {
+                return false;
+            }
+
+            editingDesignId = matchingRecord.id;
+            record = library.GetDesign(matchingRecord.id);
+            overwroteExisting = true;
+        }
+        else if (currentRecord != null)
+        {
+            if (!library.OverwriteDesign(currentRecord.id, designDraft, targetLabel))
+            {
+                return false;
+            }
+
+            editingDesignId = currentRecord.id;
+            record = library.GetDesign(currentRecord.id);
+        }
+        else
+        {
+            record = library.CreateDesignExact(designDraft, targetLabel);
+            editingDesignId = record.id;
+            createdNew = true;
+        }
+
+        designDraft.designLabel = record?.label ?? targetLabel;
+        TouchDesignDraft();
+        return true;
+    }
+
     public void SyncDraftLabelFromSavedDesign()
     {
         GrayMechDesignRecord record = EditingDesignRecord;
@@ -367,7 +471,7 @@ public class Building_GR_Drydock : Building, IThingHolder
         for (int i = 0; i < chassisDefs.Count; i++)
         {
             GRMechChassisDef current = chassisDefs[i];
-            if (current == null || (best != null && CompareChassisDefs(current, best) >= 0))
+            if (current == null || !GrayMechDesignUtility.IsResearchAvailable(current) || (best != null && CompareChassisDefs(current, best) >= 0))
             {
                 continue;
             }

@@ -1,6 +1,6 @@
 namespace SD.GrayRace.Defs;
 
-public enum GRMechSlotCategory : byte
+public enum GRMechSlotCategory
 {
     Undefined,
     Weapon,

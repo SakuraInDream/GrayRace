@@ -135,10 +135,10 @@ public class GRMechChassisDef : Def
                     yield return defName + " has duplicate section slot " + sectionSlot.defName + ".";
                 }
 
-                if (!GRMechSectionLayoutCatalog.TryGetLayouts(this, sectionSlot, out List<GRMechSectionLayoutDef> layouts) || layouts.Count == 0)
-                {
-                    yield return defName + " section slot " + sectionSlot.defName + " has no section layouts.";
-                }
+                // if (!GRMechSectionLayoutCatalog.TryGetLayouts(this, sectionSlot, out List<GRMechSectionLayoutDef> layouts) || layouts.Count == 0)
+                // {
+                //     yield return defName + " section slot " + sectionSlot.defName + " has no section layouts.";
+                // }
             }
         }
     }
