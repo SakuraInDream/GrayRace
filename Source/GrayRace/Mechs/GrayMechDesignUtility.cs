@@ -96,6 +96,7 @@ public static class GrayMechDesignUtility
             }
         }
 
+        EnsureRequiredCoreModuleAssignments(snapshot);
         return snapshot;
     }
 
@@ -164,6 +165,7 @@ public static class GrayMechDesignUtility
         }
 
         PruneInvalidModuleAssignments(snapshot);
+        EnsureRequiredCoreModuleAssignments(snapshot);
     }
 
     public static GrayMechSectionSelection GetSectionSelection(GrayMechDesignSnapshot snapshot, GRMechSectionSlotDef sectionSlot)
@@ -261,6 +263,17 @@ public static class GrayMechDesignUtility
         }
 
         snapshot.modules ??= new List<GrayMechModuleAssignment>();
+        if (!TryResolveSlot(snapshot, sectionSlot, slotKey, out GRMechSlotEntry resolvedSlot, out _))
+        {
+            return false;
+        }
+
+        if (module == null
+            && resolvedSlot.slotCategory == GRMechSlotCategory.CoreSystem
+            && HasAnyAvailableModuleForSlot(snapshot.chassis, resolvedSlot))
+        {
+            return false;
+        }
 
         for (int i = snapshot.modules.Count - 1; i >= 0; i--)
         {
@@ -273,7 +286,7 @@ public static class GrayMechDesignUtility
                     return true;
                 }
 
-                if (!TryResolveSlot(snapshot, sectionSlot, slotKey, out GRMechSlotEntry slot, out _) || !module.Matches(snapshot.chassis, slot))
+                if (!module.Matches(snapshot.chassis, resolvedSlot))
                 {
                     return false;
                 }
@@ -288,7 +301,7 @@ public static class GrayMechDesignUtility
             return true;
         }
 
-        if (!TryResolveSlot(snapshot, sectionSlot, slotKey, out GRMechSlotEntry resolvedSlot, out _) || !module.Matches(snapshot.chassis, resolvedSlot))
+        if (!module.Matches(snapshot.chassis, resolvedSlot))
         {
             return false;
         }
@@ -402,22 +415,71 @@ public static class GrayMechDesignUtility
 
     private static bool HasAnyAvailableModuleForSlot(GRMechChassisDef chassis, GRMechSlotEntry slot)
     {
+        return TryGetPreferredAvailableModuleForSlot(chassis, slot, out _);
+    }
+
+    private static void EnsureRequiredCoreModuleAssignments(GrayMechDesignSnapshot snapshot)
+    {
+        if (snapshot?.chassis?.requiredComponentSlots == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < snapshot.chassis.requiredComponentSlots.Count; i++)
+        {
+            GRMechSlotEntry slot = snapshot.chassis.requiredComponentSlots[i];
+            if (slot == null)
+            {
+                continue;
+            }
+
+            if (TryGetSelectedModule(snapshot, null, slot.key, out GRMechModuleDef selectedModule) && selectedModule != null)
+            {
+                continue;
+            }
+
+            if (TryGetPreferredAvailableModuleForSlot(snapshot.chassis, slot, out GRMechModuleDef preferredModule))
+            {
+                SetModule(snapshot, null, slot.key, preferredModule);
+            }
+        }
+    }
+
+    private static bool TryGetPreferredAvailableModuleForSlot(GRMechChassisDef chassis, GRMechSlotEntry slot, out GRMechModuleDef module)
+    {
+        module = null;
         if (chassis == null || slot == null)
         {
             return false;
         }
 
+        GRMechModuleDef fallback = null;
         List<GRMechModuleDef> defs = DefDatabase<GRMechModuleDef>.AllDefsListForReading;
         for (int i = 0; i < defs.Count; i++)
         {
-            GRMechModuleDef module = defs[i];
-            if (module != null && module.Matches(chassis, slot) && IsResearchAvailable(module))
+            GRMechModuleDef candidate = defs[i];
+            if (candidate == null || !candidate.Matches(chassis, slot) || !IsResearchAvailable(candidate))
             {
-                return true;
+                continue;
+            }
+
+            if (fallback == null || CompareModules(candidate, fallback) < 0)
+            {
+                fallback = candidate;
+            }
+
+            if (!IsObsoleteForSlot(chassis, slot, candidate) && (module == null || CompareModules(candidate, module) < 0))
+            {
+                module = candidate;
             }
         }
 
-        return false;
+        if (module == null)
+        {
+            module = fallback;
+        }
+
+        return module != null;
     }
 
     public static void GetPowerBudget(GrayMechDesignSnapshot snapshot, out int generation, out int consumption, out int net)

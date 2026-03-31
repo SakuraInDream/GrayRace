@@ -157,16 +157,6 @@ internal sealed class GrayMechDrydockCanvasRenderer
         }
     }
 
-    private static string GetModuleGlyph(GRMechModuleDef module)
-    {
-        if (module?.label.NullOrEmpty() ?? true)
-        {
-            return "?";
-        }
-
-        return module.label.Substring(0, 1).ToUpperInvariant();
-    }
-
     private static void DrawSlotMarkerBadge(Rect rect, GRMechSlotEntry slot, Color accent)
     {
         if ((slot?.slotCategory ?? GRMechSlotCategory.Undefined) == GRMechSlotCategory.CoreSystem)
@@ -218,32 +208,6 @@ internal sealed class GrayMechDrydockCanvasRenderer
             return;
         }
 
-    }
-
-    private static void DrawClearGlyph(Rect rect, Color accent)
-    {
-        Color lineColor = new(accent.r, accent.g, accent.b, 0.82f);
-        Widgets.DrawLine(new Vector2(rect.x + 4f, rect.y + 4f), new Vector2(rect.xMax - 4f, rect.yMax - 4f), lineColor, 2f);
-        Widgets.DrawLine(new Vector2(rect.x + 4f, rect.yMax - 4f), new Vector2(rect.xMax - 4f, rect.y + 4f), lineColor, 2f);
-    }
-
-    private static void DrawTierBadge(Rect rect, string badgeLabel, Color accent)
-    {
-        bool wide = badgeLabel.Length > 2;
-        float badgeWidth = wide ? 20f : 16f;
-        Rect badgeRect = new(rect.xMax - badgeWidth - 2f, rect.yMax - 15f, badgeWidth, 13f);
-        Widgets.DrawBoxSolidWithOutline(badgeRect, new Color(0f, 0f, 0f, 0.72f), new Color(accent.r, accent.g, accent.b, 0.65f));
-
-        Color oldColor = GUI.color;
-        TextAnchor oldAnchor = Text.Anchor;
-        GameFont oldFont = Text.Font;
-        GUI.color = new Color(0.92f, 0.96f, 0.94f, 0.96f);
-        Text.Anchor = TextAnchor.MiddleCenter;
-        Text.Font = GameFont.Tiny;
-        Widgets.Label(badgeRect, badgeLabel);
-        GUI.color = oldColor;
-        Text.Anchor = oldAnchor;
-        Text.Font = oldFont;
     }
 
     private void DrawMidline(Rect rect)

@@ -27,6 +27,13 @@ internal static class GrayMechDrydockTabStyle
     internal const int SlotGridColumns = 5;
     internal const int FixedDisplaySlotCount = 10;
     internal const float LibraryCardWidth = 164f;
+    internal const float LibraryCardHeight = 78f;
+    internal const float LibraryCardGap = 8f;
+    internal const float LibraryGroupGap = 14f;
+    internal const float LibraryHeaderHeight = 20f;
+    internal const float LibraryHeaderGap = 4f;
+    internal const float LibraryNewDesignWidth = 94f;
+    internal const float LibraryNewDesignGap = 14f;
     internal const float SummaryPanelHeight = 200f;
     internal const float SummaryThumbWidth = 64f;
     internal const float SummaryThumbHeight = 48f;

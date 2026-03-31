@@ -134,6 +134,18 @@ internal sealed class GrayMechDrydockTabController
         SoundDefOf.Click.PlayOneShotOnCamera();
     }
 
+    internal void OpenNewDesignMenu(Building_GR_Drydock dock, List<GRMechChassisDef> chassisOptions)
+    {
+        if (dock == null || chassisOptions == null || chassisOptions.Count == 0)
+        {
+            SoundDefOf.ClickReject.PlayOneShotOnCamera();
+            Messages.Message("当前没有已解锁的底盘。", dock, MessageTypeDefOf.RejectInput);
+            return;
+        }
+
+        Find.WindowStack.Add(new Dialog_SelectGrayMechChassis(dock, chassisOptions, LoadChassis));
+    }
+
     internal void LoadSavedDesign(Building_GR_Drydock dock, GrayMechDesignRecord design)
     {
         if (design == null)
@@ -165,8 +177,17 @@ internal sealed class GrayMechDrydockTabController
             return;
         }
 
-        state.SelectSlot(resolvedSlot);
-        state.EnsureCompatibleModuleCache(dock);
+        if (resolvedSlot.sectionSlot == null)
+        {
+            state.SelectCoreSlot(resolvedSlot);
+            state.EnsureCoreCompatibleModuleCache(dock);
+        }
+        else
+        {
+            state.SelectSlot(resolvedSlot);
+            state.EnsureCompatibleModuleCache(dock);
+        }
+
         SoundDefOf.Click.PlayOneShotOnCamera();
     }
 
@@ -179,10 +200,22 @@ internal sealed class GrayMechDrydockTabController
 
         if (dock.SetModule(resolvedSlot.sectionSlot, resolvedSlot.slot.key, null))
         {
-            state.SelectSlot(resolvedSlot);
             state.InvalidateDraft();
-            state.EnsureCompatibleModuleCache(dock);
+            if (resolvedSlot.sectionSlot == null)
+            {
+                state.ClearCoreSelection();
+            }
+            else
+            {
+                state.SelectSlot(resolvedSlot);
+                state.EnsureCompatibleModuleCache(dock);
+            }
+
             SoundDefOf.Click.PlayOneShotOnCamera();
+        }
+        else
+        {
+            SoundDefOf.ClickReject.PlayOneShotOnCamera();
         }
     }
 
@@ -211,6 +244,15 @@ internal sealed class GrayMechDrydockTabController
         if (dock.SetModule(sectionSlot, slotKey, module))
         {
             state.InvalidateDraft();
+            if (sectionSlot == null)
+            {
+                state.ClearCoreSelection();
+            }
+            else
+            {
+                state.EnsureCompatibleModuleCache(dock);
+            }
+
             SoundDefOf.Click.PlayOneShotOnCamera();
         }
     }

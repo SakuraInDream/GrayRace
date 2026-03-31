@@ -367,7 +367,7 @@ public class Building_GR_Drydock : Building, IThingHolder
         for (int i = 0; i < chassisDefs.Count; i++)
         {
             GRMechChassisDef current = chassisDefs[i];
-            if (current == null || (best != null && CompareChassisDefs(current, best) >= 0))
+            if (current == null || !GrayMechDesignUtility.IsResearchAvailable(current) || (best != null && CompareChassisDefs(current, best) >= 0))
             {
                 continue;
             }
