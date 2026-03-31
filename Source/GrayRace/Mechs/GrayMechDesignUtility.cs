@@ -607,6 +607,46 @@ public static class GrayMechDesignUtility
         buffer.Sort(CompareModules);
     }
 
+    public static bool TryResolveBrushModuleForSlot(GRMechChassisDef chassis, GRMechSlotEntry slot, GRMechModuleDef armedModule, out GRMechModuleDef resolvedModule)
+    {
+        resolvedModule = null;
+        if (chassis == null || slot == null || armedModule == null || slot.slotCategory == GRMechSlotCategory.CoreSystem)
+        {
+            return false;
+        }
+
+        if (IsResearchAvailable(armedModule) && armedModule.Matches(chassis, slot))
+        {
+            resolvedModule = armedModule;
+            return true;
+        }
+
+        if (armedModule.slotFamily.NullOrEmpty())
+        {
+            return false;
+        }
+
+        List<GRMechModuleDef> defs = DefDatabase<GRMechModuleDef>.AllDefsListForReading;
+        for (int i = 0; i < defs.Count; i++)
+        {
+            GRMechModuleDef candidate = defs[i];
+            if (candidate == null
+                || candidate.slotFamily != armedModule.slotFamily
+                || !IsResearchAvailable(candidate)
+                || !candidate.Matches(chassis, slot))
+            {
+                continue;
+            }
+
+            if (resolvedModule == null || CompareModules(candidate, resolvedModule) < 0)
+            {
+                resolvedModule = candidate;
+            }
+        }
+
+        return resolvedModule != null;
+    }
+
     public static bool IsObsoleteForSlot(GRMechChassisDef chassis, GRMechSlotEntry slot, GRMechModuleDef module)
     {
         if (chassis == null || slot == null || module == null)

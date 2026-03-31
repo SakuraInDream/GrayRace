@@ -37,7 +37,9 @@ internal sealed class GrayMechDrydockTabState
     internal GRMechSectionSlotDef SelectedSectionSlot;
     internal string SelectedSlotKey;
     internal string SelectedCoreSlotKey;
+    internal GRMechModuleDef ArmedModule;
     internal bool ShowObsoleteModules;
+    internal bool HasArmedModule => ArmedModule != null;
 
     internal readonly List<GRMechChassisDef> ChassisCache = new();
     internal readonly List<GrayMechDesignRecord> DesignCache = new();
@@ -156,7 +158,18 @@ internal sealed class GrayMechDrydockTabState
         SelectedSectionSlot = null;
         SelectedSlotKey = null;
         SelectedCoreSlotKey = null;
+        ArmedModule = null;
         FocusScrollPosition = Vector2.zero;
+    }
+
+    internal void SetArmedModule(GRMechModuleDef module)
+    {
+        ArmedModule = module;
+    }
+
+    internal void ClearArmedModule()
+    {
+        ArmedModule = null;
     }
 
     private void EnsureFocusState(Building_GR_Drydock dock)
@@ -557,8 +570,21 @@ internal sealed class GrayMechDrydockTabState
         float costHeight = Mathf.Max(rowHeight, GrayMechDrydockTabText.MeasureWrappedTextHeight(costText, valueWidth - 12f, GameFont.Tiny) + 8f);
         float productionHeight = sectionHeaderHeight + rowGap + rowHeight + rowGap + rowHeight + rowGap + rowHeight + rowGap + costHeight;
         float shipStatsHeight = sectionHeaderHeight + rowGap + rowHeight * 8f + rowGap * 7f;
-        float totalHeight = 8f + headerHeight + 8f + 8f + productionHeight + sectionGap + shipStatsHeight + 10f;
+        float designManagementHeight = GetDesignManagementSectionHeight(innerWidth);
+        float totalHeight = 8f + headerHeight + 8f + 8f + productionHeight + sectionGap + shipStatsHeight + sectionGap + designManagementHeight + 10f;
         return Mathf.Max(GrayMechDrydockTabStyle.SummaryPanelHeight, totalHeight);
+    }
+
+    internal float GetDesignManagementSectionHeight(float width)
+    {
+        const float sectionHeaderHeight = 22f;
+        const float nameGap = 4f;
+        const float rowGap = 8f;
+        const float nameFieldHeight = 30f;
+        const float checkboxHeight = 24f;
+        const float buttonRowHeight = 28f;
+        const float saveButtonHeight = 54f;
+        return sectionHeaderHeight + nameGap + nameFieldHeight + rowGap + checkboxHeight + rowGap + buttonRowHeight + rowGap + saveButtonHeight;
     }
 
     internal float GetLibraryCardHeight(GRMechChassisDef chassis)
@@ -688,6 +714,25 @@ internal sealed class GrayMechDrydockTabState
         SelectedCoreSlotKey = null;
         cachedCoreCompatibleRevision = -1;
         cachedCoreCompatibleSlotKey = null;
+    }
+
+    internal bool ClearFocusedSlotSelection()
+    {
+        bool hadSelection = !SelectedSlotKey.NullOrEmpty() || !SelectedCoreSlotKey.NullOrEmpty();
+        if (!hadSelection)
+        {
+            return false;
+        }
+
+        SelectedSlotKey = null;
+        SelectedCoreSlotKey = null;
+        cachedCompatibleRevision = -1;
+        cachedCompatibleSectionSlot = null;
+        cachedCompatibleSlotKey = null;
+        cachedCoreCompatibleRevision = -1;
+        cachedCoreCompatibleSlotKey = null;
+        FocusScrollPosition = Vector2.zero;
+        return true;
     }
 
     internal void PrepareSectionSlotBuffers(GRMechSectionSlotDef sectionSlot)

@@ -108,6 +108,11 @@ internal static class GrayMechDrydockTabStyle
             return module.uiIcon;
         }
 
+        if (module.equipmentDef?.uiIcon != null)
+        {
+            return module.equipmentDef.uiIcon;
+        }
+
         return null;
     }
 

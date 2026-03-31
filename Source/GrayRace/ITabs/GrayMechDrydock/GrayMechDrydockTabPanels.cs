@@ -659,6 +659,10 @@ internal sealed class GrayMechDrydockFocusPanel
         y = DrawSummaryInfoRow(statsRect, y, "Bandwidth".Translate(), context.State.CachedBandwidthCost.ToString("0.#"), new Color(0.74f, 0.52f, 0.95f));
         // y = DrawSummaryInfoRow(statsRect, y, "CooldownTime".Translate(), FormatDeltaPercent(1f - context.State.CachedRangedCooldownFactor), GrayMechDrydockTabStyle.MainWeaponColor);
         // y = DrawSummaryInfoRow(statsRect, y, "Accuracy", BuildAccuracySummary(context), GrayMechDrydockTabStyle.SelectedColor);
+
+        float designManagementHeight = context.State.GetDesignManagementSectionHeight(statsRect.width);
+        float designManagementY = Mathf.Max(y + 8f, rect.yMax - designManagementHeight - 10f);
+        DrawDesignManagementSection(context, new Rect(statsRect.x, designManagementY, statsRect.width, designManagementHeight));
     }
 
     private void DrawQueuePanel(GrayMechDrydockTabContext context, Rect rect)
@@ -983,6 +987,71 @@ internal sealed class GrayMechDrydockFocusPanel
         }
 
         return "0";
+    }
+
+    private void DrawDesignManagementSection(GrayMechDrydockTabContext context, Rect rect)
+    {
+        float y = rect.y;
+        y = DrawSummarySectionHeader(new Rect(rect.x, y, rect.width, 22f), "设计管理", GrayMechDrydockTabStyle.SelectedColor);
+        y += 4f;
+
+        y = DrawDesignNameField(context, rect, y);
+
+        Rect checkboxRect = new Rect(rect.x, y, rect.width, 24f);
+        bool autoUpgrade = context.Dock.AutoUpgradeEnabled;
+        Widgets.CheckboxLabeled(checkboxRect, "自动升级", ref autoUpgrade);
+        if (autoUpgrade != context.Dock.AutoUpgradeEnabled)
+        {
+            context.Dock.AutoUpgradeEnabled = autoUpgrade;
+        }
+
+        y = checkboxRect.yMax + 8f;
+        float buttonGap = 8f;
+        float smallButtonWidth = (rect.width - buttonGap) * 0.5f;
+        Rect clearRect = new Rect(rect.x, y, smallButtonWidth, 28f);
+        Rect queueRect = new Rect(clearRect.xMax + buttonGap, y, smallButtonWidth, 28f);
+        if (GrayMechDrydockPanelWidgets.DrawButton(clearRect, "清除设计"))
+        {
+            context.Controller.ClearDesign(context.Dock);
+        }
+
+        if (GrayMechDrydockPanelWidgets.DrawButton(queueRect, "加入队列", context.State.CachedCanQueueOrder, true))
+        {
+            context.Controller.QueueAssemblyOrder(context.Dock);
+        }
+
+        y = clearRect.yMax + 8f;
+        Rect saveRect = new Rect(rect.x, y, rect.width, 54f);
+        if (GrayMechDrydockPanelWidgets.DrawButton(saveRect, "保存", highlighted: true))
+        {
+            context.Controller.SaveDesign(context.Dock);
+        }
+    }
+
+    private static float DrawDesignNameField(GrayMechDrydockTabContext context, Rect areaRect, float y)
+    {
+        Rect fieldRect = new Rect(areaRect.x, y, areaRect.width, 30f);
+        Color fieldBg = new Color(0.05f, 0.08f, 0.09f, 0.98f);
+        Widgets.DrawBoxSolid(fieldRect, fieldBg);
+        Widgets.DrawBoxSolidWithOutline(fieldRect, Color.clear, new Color(GrayMechDrydockTabStyle.SelectedColor.r, GrayMechDrydockTabStyle.SelectedColor.g, GrayMechDrydockTabStyle.SelectedColor.b, 0.4f));
+
+        TextAnchor oldAnchor = Text.Anchor;
+        GameFont oldFont = Text.Font;
+        Color oldColor = GUI.color;
+        Text.Font = GameFont.Tiny;
+        Text.Anchor = TextAnchor.MiddleLeft;
+        GUI.color = Color.white;
+        string currentName = context.Draft?.designLabel ?? string.Empty;
+        string editedName = Widgets.TextField(new Rect(fieldRect.x + 6f, fieldRect.y + 4f, fieldRect.width - 12f, fieldRect.height - 8f), currentName);
+        if (editedName != currentName)
+        {
+            context.Dock.SetDraftLabel(editedName);
+        }
+
+        GUI.color = oldColor;
+        Text.Anchor = oldAnchor;
+        Text.Font = oldFont;
+        return y + fieldRect.height + 4f;
     }
 
     private void DrawSectionFocusPanel(GrayMechDrydockTabContext context, Rect rect)

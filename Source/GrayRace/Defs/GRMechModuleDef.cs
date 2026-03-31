@@ -15,6 +15,8 @@ public class GRMechModuleDef : Def
     public List<ResearchProjectDef> researchPrerequisites = new();
     [NoTranslate]
     public string iconPath;
+    [NoTranslate]
+    public string slotFamily;
     [Unsaved]
     public Texture2D uiIcon = BaseContent.BadTex;
     public ThingDef equipmentDef;

@@ -66,11 +66,27 @@ internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvas
 
     public void OnSlotActivated(GRMechResolvedSlot resolvedSlot)
     {
+        if (context.Controller.TryApplyArmedModuleToSlot(context.Dock, resolvedSlot))
+        {
+            return;
+        }
+
         context.Controller.SelectSlot(context.Dock, resolvedSlot);
     }
 
     public void OnSlotSecondaryActivated(GRMechResolvedSlot resolvedSlot)
     {
+        if (context.Controller.CancelModuleBrush(playSound: true))
+        {
+            return;
+        }
+
+        if (resolvedSlot == null)
+        {
+            context.Controller.CloseFocusedSlotUi(playSound: true);
+            return;
+        }
+
         if (GrayMechDesignUtility.TryGetSelectedModule(context.Draft, resolvedSlot, out GRMechModuleDef module) && module != null)
         {
             context.Controller.ClearSlotModule(context.Dock, resolvedSlot);
