@@ -1,6 +1,6 @@
 namespace SD.GrayRace.Defs;
 
-public enum GRMechCoreComponentRole : byte
+public enum GRMechCoreComponentRole
 {
     Undefined,
     PowerCore,
