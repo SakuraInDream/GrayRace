@@ -1,4 +1,4 @@
-using SD.GrayRace.Defs;
+﻿using SD.GrayRace.Defs;
 using SD.GrayRace.Mechs;
 using UnityEngine;
 using Verse;
@@ -83,7 +83,7 @@ internal sealed class GrayMechDrydockCanvasRenderer
         Widgets.DrawLine(new Vector2(innerRect.x, innerRect.yMax), new Vector2(innerRect.xMax, innerRect.y), new Color(accent.r, accent.g, accent.b, 0.12f), 1f);
     }
 
-    internal void DrawSlotWidget(Rect rect, GRMechSlotEntry slot, GRMechModuleDef module, bool selected)
+    internal void DrawSlotWidget(Rect rect, GRMechSlotEntry slot, GRMechModuleDef module, bool selected, bool drawSlotMarker = true)
     {
         Color accent = GrayMechDrydockTabStyle.GetSlotColor(slot);
 
@@ -103,33 +103,17 @@ internal sealed class GrayMechDrydockCanvasRenderer
         Widgets.DrawBoxSolid(new Rect(rect.x + 2f, rect.y + 2f, rect.width - 4f, 5f), accent);
         Rect innerRect = rect.ContractedBy(5f);
         Widgets.DrawBoxSolid(innerRect, GrayMechDrydockTabStyle.SlotInnerColor);
-
-        Texture2D moduleIcon = GrayMechDrydockTabStyle.GetModuleIcon(module);
-        if (moduleIcon != null)
-        {
-            Widgets.DrawTextureFitted(new Rect(innerRect.x + 2f, innerRect.y + 2f, innerRect.width - 4f, innerRect.height - 4f), moduleIcon, 1f);
-        }
-        else if (module != null && module.equipmentDef != null)
-        {
-            Widgets.ThingIcon(new Rect(innerRect.x + 2f, innerRect.y + 2f, innerRect.width - 4f, innerRect.height - 4f), module.equipmentDef, module.equipmentStuff, null, 0.9f);
-        }
-        else if (module != null)
-        {
-            TextAnchor oldAnchor = Text.Anchor;
-            GameFont oldFont = Text.Font;
-            Text.Anchor = TextAnchor.MiddleCenter;
-            Text.Font = GameFont.Small;
-            Widgets.Label(innerRect, GetModuleGlyph(module));
-            Text.Anchor = oldAnchor;
-            Text.Font = oldFont;
-        }
+        DrawModuleIconContent(new Rect(innerRect.x + 2f, innerRect.y + 2f, innerRect.width - 4f, innerRect.height - 4f), module);
 
         if (module != null)
         {
             Widgets.DrawBoxSolid(new Rect(rect.x + 4f, rect.yMax - 7f, rect.width - 8f, 3f), GrayMechDrydockTabStyle.SlotInstalledColor);
         }
 
-        DrawSlotMarkerBadge(rect, slot, accent);
+        if (drawSlotMarker)
+        {
+            DrawSlotMarkerBadge(rect, slot, accent);
+        }
 
         if (hovered && !selected)
         {
@@ -143,32 +127,34 @@ internal sealed class GrayMechDrydockCanvasRenderer
         Widgets.DrawBoxSolidWithOutline(rect, new Color(accent.r, accent.g, accent.b, 0.12f), accent);
         Rect innerRect = rect.ContractedBy(4f);
         Widgets.DrawBoxSolid(innerRect, GrayMechDrydockTabStyle.SlotInnerColor);
-        Texture2D moduleIcon = GrayMechDrydockTabStyle.GetModuleIcon(module);
-        if (moduleIcon != null)
+        DrawModuleIconContent(innerRect, module);
+    }
+
+    internal void DrawInlineModuleOption(Rect rect, GRMechSlotEntry slot, GRMechModuleDef module, bool selected)
+    {
+        Color accent = GrayMechDrydockTabStyle.GetSlotColor(slot);
+        bool hovered = Mouse.IsOver(rect);
+        Color outline = selected
+            ? GrayMechDrydockTabStyle.SelectedColor
+            : (hovered ? Color.white : new Color(accent.r, accent.g, accent.b, 0.78f));
+        Color fill = selected
+            ? new Color(GrayMechDrydockTabStyle.SelectedColor.r, GrayMechDrydockTabStyle.SelectedColor.g, GrayMechDrydockTabStyle.SelectedColor.b, hovered ? 0.22f : 0.15f)
+            : new Color(accent.r, accent.g, accent.b, hovered ? 0.16f : 0.1f);
+        Widgets.DrawBoxSolidWithOutline(rect, fill, outline, selected || hovered ? 2 : 1);
+
+        Rect innerRect = rect.ContractedBy(4f);
+        Widgets.DrawBoxSolid(innerRect, GrayMechDrydockTabStyle.SlotInnerColor);
+        DrawModuleIconContent(innerRect, module);
+
+        if (selected)
         {
-            Widgets.DrawTextureFitted(innerRect, moduleIcon, 1f);
-            return;
+            Widgets.DrawBoxSolid(new Rect(rect.x + 4f, rect.yMax - 6f, rect.width - 8f, 2f), GrayMechDrydockTabStyle.SlotInstalledColor);
         }
 
-        if (module?.equipmentDef != null)
+        if (hovered && !selected)
         {
-            Widgets.ThingIcon(innerRect, module.equipmentDef, module.equipmentStuff, null, 0.85f);
-            return;
+            Widgets.DrawHighlight(rect);
         }
-
-        if (module == null)
-        {
-            return;
-        }
-
-        string glyph = GetModuleGlyph(module);
-        TextAnchor oldAnchor = Text.Anchor;
-        GameFont oldFont = Text.Font;
-        Text.Anchor = TextAnchor.MiddleCenter;
-        Text.Font = GameFont.Small;
-        Widgets.Label(innerRect, glyph);
-        Text.Anchor = oldAnchor;
-        Text.Font = oldFont;
     }
 
     private static string GetModuleGlyph(GRMechModuleDef module)
@@ -215,6 +201,49 @@ internal sealed class GrayMechDrydockCanvasRenderer
     private static string GetSlotMarker(GRMechSlotEntry slot)
     {
         return slot?.glyph ?? string.Empty;
+    }
+
+    private void DrawModuleIconContent(Rect rect, GRMechModuleDef module)
+    {
+        Texture2D moduleIcon = GrayMechDrydockTabStyle.GetModuleIcon(module);
+        if (moduleIcon != null)
+        {
+            Widgets.DrawTextureFitted(rect, moduleIcon, 1f);
+            return;
+        }
+
+        if (module?.equipmentDef != null)
+        {
+            Widgets.ThingIcon(rect, module.equipmentDef, module.equipmentStuff, null, 0.85f);
+            return;
+        }
+
+    }
+
+    private static void DrawClearGlyph(Rect rect, Color accent)
+    {
+        Color lineColor = new(accent.r, accent.g, accent.b, 0.82f);
+        Widgets.DrawLine(new Vector2(rect.x + 4f, rect.y + 4f), new Vector2(rect.xMax - 4f, rect.yMax - 4f), lineColor, 2f);
+        Widgets.DrawLine(new Vector2(rect.x + 4f, rect.yMax - 4f), new Vector2(rect.xMax - 4f, rect.y + 4f), lineColor, 2f);
+    }
+
+    private static void DrawTierBadge(Rect rect, string badgeLabel, Color accent)
+    {
+        bool wide = badgeLabel.Length > 2;
+        float badgeWidth = wide ? 20f : 16f;
+        Rect badgeRect = new(rect.xMax - badgeWidth - 2f, rect.yMax - 15f, badgeWidth, 13f);
+        Widgets.DrawBoxSolidWithOutline(badgeRect, new Color(0f, 0f, 0f, 0.72f), new Color(accent.r, accent.g, accent.b, 0.65f));
+
+        Color oldColor = GUI.color;
+        TextAnchor oldAnchor = Text.Anchor;
+        GameFont oldFont = Text.Font;
+        GUI.color = new Color(0.92f, 0.96f, 0.94f, 0.96f);
+        Text.Anchor = TextAnchor.MiddleCenter;
+        Text.Font = GameFont.Tiny;
+        Widgets.Label(badgeRect, badgeLabel);
+        GUI.color = oldColor;
+        Text.Anchor = oldAnchor;
+        Text.Font = oldFont;
     }
 
     private void DrawMidline(Rect rect)

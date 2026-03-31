@@ -16,45 +16,38 @@
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
-        <label>large gun 1</label>
         <slotDef>GR_MechSlot_LargeTurret</slotDef>
-        <uiOrder>10</uiOrder>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>MEDIUM_GUN_01</key>
-        <label>medium gun 1</label>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <uiOrder>20</uiOrder>
+        <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_01</key>
-        <label>small gun 1</label>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <uiOrder>30</uiOrder>
+        <uiOrder>2</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_02</key>
-        <label>small gun 2</label>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <uiOrder>40</uiOrder>
+        <uiOrder>3</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_01</key>
-        <label>large utility 1</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_02</key>
-        <label>large utility 2</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_03</key>
-        <label>large utility 3</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>120</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
@@ -75,33 +68,28 @@
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
-        <label>large gun 1</label>
         <slotDef>GR_MechSlot_LargeTurret</slotDef>
-        <uiOrder>10</uiOrder>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>LARGE_GUN_02</key>
-        <label>large gun 2</label>
         <slotDef>GR_MechSlot_LargeTurret</slotDef>
-        <uiOrder>20</uiOrder>
+        <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_01</key>
-        <label>large utility 1</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_02</key>
-        <label>large utility 2</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_03</key>
-        <label>large utility 3</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>120</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
@@ -122,45 +110,38 @@
     <slots>
       <li>
         <key>MEDIUM_GUN_01</key>
-        <label>medium gun 1</label>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <uiOrder>10</uiOrder>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>PD_01</key>
-        <label>point defence 1</label>
         <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
-        <uiOrder>20</uiOrder>
+        <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>PD_02</key>
-        <label>point defence 2</label>
         <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
-        <uiOrder>30</uiOrder>
+        <uiOrder>2</uiOrder>
       </li>
       <li>
         <key>STRIKE_CRAFT_01</key>
-        <label>strike craft bay 1</label>
         <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
-        <uiOrder>40</uiOrder>
+        <uiOrder>3</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_01</key>
-        <label>large utility 1</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_02</key>
-        <label>large utility 2</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_03</key>
-        <label>large utility 3</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>120</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
@@ -168,7 +149,7 @@
   <SD.GrayRace.Defs.GRMechSectionLayoutDef>
     <defName>GR_BB_Bow_M2S4</defName>
     <label>脊峰舰艏</label>
-    <description>Spinal artillery bow copied from Stellaris BATTLESHIP_BOW_M2S4. The live Stellaris data behind this legacy key exposes a single X-slot spinal mount.</description>
+    <description>从Stellaris那复制过来的BATTLESHIP_BOW_M2S4</description>
     <sectionSlot>GR_MechSection_Bow</sectionSlot>
     <shipSize>GR_Chassis_Battleship</shipSize>
     <researchPrerequisites>
@@ -181,27 +162,23 @@
     <slots>
       <li>
         <key>EXTRA_LARGE_01</key>
-        <label>spinal mount 1</label>
         <slotDef>GR_MechSlot_ExtraLarge</slotDef>
-        <uiOrder>10</uiOrder>
+        <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_01</key>
-        <label>large utility 1</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>100</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_02</key>
-        <label>large utility 2</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>110</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_03</key>
-        <label>large utility 3</label>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>120</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>

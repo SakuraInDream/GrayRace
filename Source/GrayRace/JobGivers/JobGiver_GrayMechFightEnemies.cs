@@ -1,4 +1,6 @@
 using RimWorld;
+using SD.GrayRace.Comps;
+using SD.GrayRace.Defs;
 using SD.GrayRace.Mechs;
 using Verse;
 using Verse.AI;
@@ -56,7 +58,9 @@ public class JobGiver_GrayMechFightEnemies : JobGiver_AIFightEnemies
             return abilityMoveJob;
         }
 
-        Verb verb = pawn.TryGetAttackVerb(enemyTarget, allowAbilityVerbs, allowTurrets);
+        GRMechCombatComputerModuleDef combatComputer = GrayMechCombatComputerUtility.GetActiveCombatComputer(pawn);
+        Thing tacticalTarget = GrayMechCombatComputerUtility.ResolveTacticalTarget(pawn, combatComputer, enemyTarget);
+        Verb verb = ResolveCombatVerb(pawn, tacticalTarget);
         if (verb == null)
         {
             return null;
@@ -64,28 +68,28 @@ public class JobGiver_GrayMechFightEnemies : JobGiver_AIFightEnemies
 
         if (verb.verbProps.IsMeleeAttack)
         {
-            return MeleeAttackJob(pawn, enemyTarget);
+            return MeleeAttackJob(pawn, tacticalTarget ?? enemyTarget);
         }
 
-        bool hasCover = CoverUtility.CalculateOverallBlockChance(pawn, enemyTarget.Position, pawn.Map) > 0.01f;
+        Thing movementTarget = tacticalTarget ?? enemyTarget;
+        bool hasCover = CoverUtility.CalculateOverallBlockChance(pawn, movementTarget.Position, pawn.Map) > 0.01f;
         bool canReserveCurrentCell = pawn.Position.WalkableBy(pawn.Map, pawn) && pawn.Map.pawnDestinationReservationManager.CanReserve(pawn.Position, pawn, pawn.Drafted);
-        bool canHitTarget = verb.CanHitTarget(enemyTarget);
-        bool targetVeryClose = (pawn.Position - enemyTarget.Position).LengthHorizontalSquared < 25;
-        if (GrayMechCombatComputerUtility.ShouldWaitAtCurrentPosition(GrayMechCombatComputerUtility.GetActiveCombatComputer(pawn), pawn, enemyTarget, verb, hasCover, canReserveCurrentCell, canHitTarget, targetVeryClose))
+        bool canHitTarget = verb.CanHitTarget(movementTarget);
+        bool targetVeryClose = (pawn.Position - movementTarget.Position).LengthHorizontalSquared < 25;
+        if (GrayMechCombatComputerUtility.ShouldWaitAtCurrentPosition(combatComputer, pawn, movementTarget, verb, hasCover, canReserveCurrentCell, canHitTarget, targetVeryClose, out int waitTicks))
         {
-            pawn.pather?.StopDead();
-            return JobMaker.MakeJob(JobDefOf.Wait_Combat, ExpiryInterval_ShooterSucceeded.RandomInRange, checkOverrideOnExpiry: true);
+            return MakeCombatWaitJob(pawn, waitTicks);
         }
 
-        if (!TryFindShootingPosition(pawn, out IntVec3 dest, verb))
+        if (!TryFindShootingPosition(pawn, out IntVec3 dest, verb, movementTarget))
         {
             return null;
         }
 
         if (dest == pawn.Position)
         {
-            pawn.pather?.StopDead();
-            return JobMaker.MakeJob(JobDefOf.Wait_Combat, ExpiryInterval_ShooterSucceeded.RandomInRange, checkOverrideOnExpiry: true);
+            GrayMechCombatComputerUtility.ShouldWaitAtCurrentPosition(combatComputer, pawn, movementTarget, verb, hasCover, canReserveCurrentCell, canHitTarget, targetVeryClose, out waitTicks);
+            return MakeCombatWaitJob(pawn, waitTicks > 0 ? waitTicks : GrayMechCombatComputerUtility.TacticalWaitCombatExpiryTicks);
         }
 
         Job moveJob = JobMaker.MakeJob(JobDefOf.Goto, dest);
@@ -97,19 +101,54 @@ public class JobGiver_GrayMechFightEnemies : JobGiver_AIFightEnemies
     protected override bool TryFindShootingPosition(Pawn pawn, out IntVec3 dest, Verb verbToUse = null)
     {
         Thing enemyTarget = pawn?.mindState?.enemyTarget;
-        bool allowManualCastWeapons = pawn != null && !pawn.IsColonist && !pawn.IsColonySubhuman;
-        Verb verb = verbToUse ?? pawn?.TryGetAttackVerb(enemyTarget, allowManualCastWeapons, allowTurrets);
+        return TryFindShootingPosition(pawn, out dest, verbToUse, enemyTarget);
+    }
+
+    private bool TryFindShootingPosition(Pawn pawn, out IntVec3 dest, Verb verbToUse, Thing movementTarget)
+    {
+        Verb verb = verbToUse ?? ResolveRangedVerb(pawn, movementTarget);
         if (verb == null)
         {
             dest = IntVec3.Invalid;
             return false;
         }
 
-        if (GrayMechCombatComputerUtility.TryFindPosition(pawn, GrayMechCombatComputerUtility.GetActiveCombatComputer(pawn), verb, out dest))
+        if (GrayMechCombatComputerUtility.TryFindPosition(pawn, GrayMechCombatComputerUtility.GetActiveCombatComputer(pawn), movementTarget, verb, out dest))
         {
             return true;
         }
 
         return base.TryFindShootingPosition(pawn, out dest, verb);
+    }
+
+    private static Job MakeCombatWaitJob(Pawn pawn, int waitTicks)
+    {
+        pawn.pather?.StopDead();
+        return JobMaker.MakeJob(
+            JobDefOf.Wait_Combat,
+            waitTicks > 0 ? waitTicks : ExpiryInterval_ShooterSucceeded.RandomInRange,
+            checkOverrideOnExpiry: true);
+    }
+
+    private static Verb ResolveCombatVerb(Pawn pawn, Thing target)
+    {
+        Verb rangedVerb = ResolveRangedVerb(pawn, target);
+        if (rangedVerb != null)
+        {
+            return rangedVerb;
+        }
+
+        return pawn?.meleeVerbs?.TryGetMeleeVerb(target);
+    }
+
+    private static Verb ResolveRangedVerb(Pawn pawn, Thing target)
+    {
+        GrayMechTurretBankSystem turretBank = pawn?.TryGetComp<CompGrayMechSystems>()?.TurretBankSystem;
+        if (turretBank != null && turretBank.TryGetTacticalVerb(target, out Verb turretVerb))
+        {
+            return turretVerb;
+        }
+
+        return null;
     }
 }

@@ -242,7 +242,7 @@ public static class GrayMechDesignUtility
         return false;
     }
 
-    public static bool TryGetSelectedModule(GrayMechDesignSnapshot snapshot, GrayMechResolvedSlot resolvedSlot, out GRMechModuleDef module)
+    public static bool TryGetSelectedModule(GrayMechDesignSnapshot snapshot, GRMechResolvedSlot resolvedSlot, out GRMechModuleDef module)
     {
         if (resolvedSlot?.slot == null)
         {
@@ -371,7 +371,95 @@ public static class GrayMechDesignUtility
         return false;
     }
 
-    public static void FillResolvedSlots(GrayMechDesignSnapshot snapshot, List<GrayMechResolvedSlot> buffer)
+    public static bool TryGetFirstMissingRequiredModule(GrayMechDesignSnapshot snapshot, out GRMechSlotEntry missingSlot)
+    {
+        if (snapshot?.chassis?.requiredComponentSlots != null)
+        {
+            for (int i = 0; i < snapshot.chassis.requiredComponentSlots.Count; i++)
+            {
+                GRMechSlotEntry slot = snapshot.chassis.requiredComponentSlots[i];
+                if (slot == null)
+                {
+                    continue;
+                }
+
+                if (!HasAnyAvailableModuleForSlot(snapshot.chassis, slot))
+                {
+                    continue;
+                }
+
+                if (!TryGetSelectedModule(snapshot, null, slot.key, out GRMechModuleDef module) || module == null)
+                {
+                    missingSlot = slot;
+                    return true;
+                }
+            }
+        }
+
+        missingSlot = null;
+        return false;
+    }
+
+    private static bool HasAnyAvailableModuleForSlot(GRMechChassisDef chassis, GRMechSlotEntry slot)
+    {
+        if (chassis == null || slot == null)
+        {
+            return false;
+        }
+
+        List<GRMechModuleDef> defs = DefDatabase<GRMechModuleDef>.AllDefsListForReading;
+        for (int i = 0; i < defs.Count; i++)
+        {
+            GRMechModuleDef module = defs[i];
+            if (module != null && module.Matches(chassis, slot) && IsResearchAvailable(module))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static void GetPowerBudget(GrayMechDesignSnapshot snapshot, out int generation, out int consumption, out int net)
+    {
+        generation = 0;
+        consumption = 0;
+        net = 0;
+
+        if (snapshot?.modules == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < snapshot.modules.Count; i++)
+        {
+            GRMechModuleDef module = snapshot.modules[i]?.module;
+            if (module == null)
+            {
+                continue;
+            }
+
+            generation += module.GetPowerGeneration(snapshot.chassis);
+            consumption += module.GetPowerConsumption(snapshot.chassis);
+        }
+
+        net = generation - consumption;
+    }
+
+    public static bool TryGetPowerDeficit(GrayMechDesignSnapshot snapshot, out int deficit)
+    {
+        GetPowerBudget(snapshot, out _, out _, out int net);
+        if (net < 0)
+        {
+            deficit = -net;
+            return true;
+        }
+
+        deficit = 0;
+        return false;
+    }
+
+    public static void FillResolvedSlots(GrayMechDesignSnapshot snapshot, List<GRMechResolvedSlot> buffer)
     {
         buffer.Clear();
         if (snapshot?.chassis == null)
@@ -397,7 +485,7 @@ public static class GrayMechDesignUtility
                         continue;
                     }
 
-                    buffer.Add(new GrayMechResolvedSlot
+                    buffer.Add(new GRMechResolvedSlot
                     {
                         sectionSlot = selection.sectionSlot,
                         layout = layout,
@@ -417,7 +505,7 @@ public static class GrayMechDesignUtility
                     continue;
                 }
 
-                buffer.Add(new GrayMechResolvedSlot
+                buffer.Add(new GRMechResolvedSlot
                 {
                     sectionSlot = null,
                     layout = null,
@@ -464,7 +552,6 @@ public static class GrayMechDesignUtility
             return false;
         }
 
-        List<GRMechModuleDef> defs = DefDatabase<GRMechModuleDef>.AllDefsListForReading;
         List<GRMechModuleDef> pending = new() { module };
         HashSet<GRMechModuleDef> visited = new();
         for (int i = 0; i < pending.Count; i++)
@@ -480,15 +567,16 @@ public static class GrayMechDesignUtility
                 return true;
             }
 
-            if (current.upgradeTo != null)
+            List<GRMechModuleDef> nextModules = current.upgradesTo;
+            if (nextModules == null)
             {
-                pending.Add(current.upgradeTo);
+                continue;
             }
 
-            for (int j = 0; j < defs.Count; j++)
+            for (int j = 0; j < nextModules.Count; j++)
             {
-                GRMechModuleDef candidate = defs[j];
-                if (candidate != null && candidate.upgradeFrom == current)
+                GRMechModuleDef candidate = nextModules[j];
+                if (candidate != null)
                 {
                     pending.Add(candidate);
                 }
@@ -718,7 +806,7 @@ public static class GrayMechDesignUtility
         return string.CompareOrdinal(left.label, right.label);
     }
 
-    private static int CompareResolvedSlots(GrayMechResolvedSlot left, GrayMechResolvedSlot right)
+    private static int CompareResolvedSlots(GRMechResolvedSlot left, GRMechResolvedSlot right)
     {
         if (ReferenceEquals(left, right))
         {

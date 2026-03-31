@@ -13,6 +13,8 @@
       <BandwidthCost>1</BandwidthCost>
       <WastepacksPerRecharge>0</WastepacksPerRecharge>
       <MechEnergyLossPerHP>0.1</MechEnergyLossPerHP>
+      <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
+      <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
     </statBases>
     <race>
       <body>GR_MechBody</body>
@@ -42,10 +44,16 @@
       <GR_Nanites>100</GR_Nanites>
       <GR_Alloy>10</GR_Alloy>
     </butcherProducts>
+    <inspectorTabs>
+      <li>SD.GrayRace.ITabs.ITab_GrayMechLoadout</li>
+    </inspectorTabs>
     <comps>
       <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechLoadout" />
-      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechTurretBank" />
-      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechShield" />
+      <li Class="CompProperties_Shield">
+        <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+      </li>
+      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechSystems" />
     </comps>
   </ThingDef>
 
@@ -84,9 +92,7 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponTags>
-      <li>GR_MechWeapon_FF</li>
-    </weaponTags>
+    <weaponTags Inherit="False" />
   </PawnKindDef>
 
 </Defs>

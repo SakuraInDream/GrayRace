@@ -8,28 +8,14 @@ namespace SD.GrayRace.Defs;
 public class GRMechModuleDef : Def
 {
     public List<GRMechSlotDef> compatibleSlots = new();
-    public GRMechModuleDef upgradeFrom;
-    public GRMechModuleDef upgradeTo;
-    public GRMechCombatComputerBehavior combatComputerBehavior;
-    public GRMechCombatComputerWeaponSelectionMode combatComputerWeaponSelection;
-    public GRMechCombatComputerPositioningMode combatComputerPositioning;
-    public GRMechCombatComputerCoverPreference combatComputerCoverPreference;
-    public float combatComputerPreferredRangeFactor;
-    public int combatComputerPowerDraw;
-    public float combatComputerFireRateBonus;
-    public float combatComputerAccuracyBonus;
-    public float combatComputerTrackingBonus;
-    public float combatComputerEvasionBonus;
-    public float combatComputerWeaponRangeBonus;
-    public float combatComputerEngagementRangeBonus;
-    public float combatComputerExplosiveDamageBonus;
-    public float combatComputerStarbaseDamageBonus;
-    public float combatComputerOrbitalBombardmentBonus;
+    public List<GRMechChassisDef> allowedChassis = new();
+    public List<GRMechModuleDef> upgradesTo = new();
+    public int power;
     public List<ThingDefCountClass> costList = new();
     public List<ResearchProjectDef> researchPrerequisites = new();
     [NoTranslate]
     public string iconPath;
-    [Unsaved(false)]
+    [Unsaved]
     public Texture2D uiIcon = BaseContent.BadTex;
     public ThingDef equipmentDef;
     public ThingDef equipmentStuff;
@@ -74,9 +60,27 @@ public class GRMechModuleDef : Def
 
     public bool Matches(GRMechChassisDef chassis, GRMechSlotEntry slot)
     {
-        if (slot?.slotDef == null)
+        if (slot?.slotDef == null || chassis == null)
         {
             return false;
+        }
+
+        if (!allowedChassis.NullOrEmpty())
+        {
+            bool chassisAllowed = false;
+            for (int i = 0; i < allowedChassis.Count; i++)
+            {
+                if (allowedChassis[i] == chassis)
+                {
+                    chassisAllowed = true;
+                    break;
+                }
+            }
+
+            if (!chassisAllowed)
+            {
+                return false;
+            }
         }
 
         if (compatibleSlots == null)
@@ -87,24 +91,6 @@ public class GRMechModuleDef : Def
         for (int i = 0; i < compatibleSlots.Count; i++)
         {
             if (compatibleSlots[i] == slot.slotDef)
-            {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    public bool FitsSlot(GRMechSlotDef slotDef)
-    {
-        if (slotDef == null || compatibleSlots == null)
-        {
-            return false;
-        }
-
-        for (int i = 0; i < compatibleSlots.Count; i++)
-        {
-            if (compatibleSlots[i] == slotDef)
             {
                 return true;
             }
@@ -131,22 +117,41 @@ public class GRMechModuleDef : Def
         return false;
     }
 
-    public bool UsesCoreRole(GRMechCoreComponentRole role)
+    public virtual int GetConfiguredPower(GRMechChassisDef chassis) => power;
+
+    public virtual int GetNetPower(GRMechChassisDef chassis) => GetConfiguredPower(chassis);
+
+    public virtual int GetPowerGeneration(GRMechChassisDef chassis)
     {
-        if (compatibleSlots == null)
+        int netPower = GetNetPower(chassis);
+        return netPower > 0 ? netPower : 0;
+    }
+
+    public virtual int GetPowerConsumption(GRMechChassisDef chassis)
+    {
+        int netPower = GetNetPower(chassis);
+        return netPower < 0 ? -netPower : 0;
+    }
+
+    public override IEnumerable<StatDrawEntry> SpecialDisplayStats(StatRequest req)
+    {
+        foreach (StatDrawEntry item in base.SpecialDisplayStats(req))
         {
-            return false;
+            yield return item;
         }
 
-        for (int i = 0; i < compatibleSlots.Count; i++)
+        int baseNetPower = GetNetPower(null);
+        if (baseNetPower == 0)
         {
-            if (compatibleSlots[i]?.coreRole == role)
-            {
-                return true;
-            }
+            yield break;
         }
 
-        return false;
+        yield return new StatDrawEntry(
+            StatCategoryDefOf.BasicsImportant,
+            "Power Budget",
+            FormatSignedPower(baseNetPower),
+            "Positive values provide reactor output. Negative values consume reactor output.",
+            3900);
     }
 
     public override IEnumerable<string> ConfigErrors()
@@ -198,86 +203,54 @@ public class GRMechModuleDef : Def
             yield return defName + " equipmentStuff is not a stuff ThingDef.";
         }
 
-        if (upgradeFrom == this)
+        if (!allowedChassis.NullOrEmpty())
         {
-            yield return defName + " cannot upgradeFrom itself.";
-        }
-
-        if (upgradeTo == this)
-        {
-            yield return defName + " cannot upgradeTo itself.";
-        }
-
-        if (upgradeFrom != null)
-        {
-            if (!CompatibleSlotsEqual(upgradeFrom))
+            HashSet<GRMechChassisDef> seenChassis = new();
+            for (int i = 0; i < allowedChassis.Count; i++)
             {
-                yield return defName + " upgradeFrom has mismatched compatibleSlots.";
-            }
-        }
+                GRMechChassisDef chassis = allowedChassis[i];
+                if (chassis == null)
+                {
+                    yield return defName + " has null allowedChassis entry.";
+                    continue;
+                }
 
-        if (upgradeTo != null)
-        {
-            if (!CompatibleSlotsEqual(upgradeTo))
-            {
-                yield return defName + " upgradeTo has mismatched compatibleSlots.";
+                if (!seenChassis.Add(chassis))
+                {
+                    yield return defName + " contains duplicate allowed chassis " + chassis.defName + ".";
+                }
             }
         }
 
-        bool isCombatComputer = UsesCoreRole(GRMechCoreComponentRole.CombatComputer);
-        if (isCombatComputer && combatComputerBehavior == GRMechCombatComputerBehavior.Undefined)
+        if (upgradesTo != null && upgradesTo.Count > 0)
         {
-            yield return defName + " is a combat computer module but has undefined combatComputerBehavior.";
-        }
-        else if (!isCombatComputer && combatComputerBehavior != GRMechCombatComputerBehavior.Undefined)
-        {
-            yield return defName + " defines combatComputerBehavior outside the combat-computer slot.";
-        }
-
-        if (isCombatComputer)
-        {
-            if (combatComputerWeaponSelection == GRMechCombatComputerWeaponSelectionMode.Undefined)
+            HashSet<GRMechModuleDef> seenUpgradeTargets = new();
+            for (int i = 0; i < upgradesTo.Count; i++)
             {
-                yield return defName + " is a combat computer module but has undefined combatComputerWeaponSelection.";
-            }
+                GRMechModuleDef next = upgradesTo[i];
+                if (next == null)
+                {
+                    yield return defName + " has null upgradesTo entry.";
+                    continue;
+                }
 
-            if (combatComputerPositioning == GRMechCombatComputerPositioningMode.Undefined)
-            {
-                yield return defName + " is a combat computer module but has undefined combatComputerPositioning.";
-            }
+                if (next == this)
+                {
+                    yield return defName + " cannot upgrade to itself.";
+                }
 
-            if (combatComputerCoverPreference == GRMechCombatComputerCoverPreference.Undefined)
-            {
-                yield return defName + " is a combat computer module but has undefined combatComputerCoverPreference.";
-            }
+                if (!seenUpgradeTargets.Add(next))
+                {
+                    yield return defName + " has duplicate upgradesTo entry " + next.defName + ".";
+                }
 
-            if (combatComputerPositioning != GRMechCombatComputerPositioningMode.Vanilla && combatComputerPreferredRangeFactor <= 0f)
-            {
-                yield return defName + " uses non-vanilla combatComputerPositioning but has invalid combatComputerPreferredRangeFactor.";
+                if (!CompatibleSlotsEqual(next))
+                {
+                    yield return defName + " upgradesTo target " + next.defName + " has mismatched compatibleSlots.";
+                }
             }
         }
-        else
-        {
-            if (combatComputerWeaponSelection != GRMechCombatComputerWeaponSelectionMode.Undefined)
-            {
-                yield return defName + " defines combatComputerWeaponSelection outside the combat-computer slot.";
-            }
 
-            if (combatComputerPositioning != GRMechCombatComputerPositioningMode.Undefined)
-            {
-                yield return defName + " defines combatComputerPositioning outside the combat-computer slot.";
-            }
-
-            if (combatComputerCoverPreference != GRMechCombatComputerCoverPreference.Undefined)
-            {
-                yield return defName + " defines combatComputerCoverPreference outside the combat-computer slot.";
-            }
-
-            if (combatComputerPreferredRangeFactor != 0f)
-            {
-                yield return defName + " defines combatComputerPreferredRangeFactor outside the combat-computer slot.";
-            }
-        }
     }
 
     private bool CompatibleSlotsEqual(GRMechModuleDef other)
@@ -309,5 +282,10 @@ public class GRMechModuleDef : Def
         }
 
         return true;
+    }
+
+    private static string FormatSignedPower(int value)
+    {
+        return value > 0 ? "+" + value : value.ToString();
     }
 }

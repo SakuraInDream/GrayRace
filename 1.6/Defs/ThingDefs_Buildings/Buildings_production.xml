@@ -394,6 +394,7 @@
           <li>ToolCabinet</li>
         </linkableFacilities>
       </li>
+      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechAssemblyBay" />
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>8000</basePowerConsumption>
@@ -404,6 +405,7 @@
     </comps>
     <inspectorTabs>
       <li>SD.GrayRace.ITabs.ITab_GrayMechDrydock</li>
+      <li>SD.GrayRace.ITabs.ITab_GrayMechDrydockQueue</li>
     </inspectorTabs>
     <building>
       <workTableRoomRole>Workshop</workTableRoomRole>

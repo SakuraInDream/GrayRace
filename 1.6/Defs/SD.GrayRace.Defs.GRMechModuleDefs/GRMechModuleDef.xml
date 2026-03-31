@@ -15,6 +15,7 @@
     <costList>
       <GR_Alloy>20</GR_Alloy>
     </costList>
+    <power>-5</power>
     <equipmentDef>GR_MechWeapon_12mmAA</equipmentDef>
     <uiOrder>1100</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
@@ -33,26 +34,32 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
     <defName>GR_MechModule_PulseLaser_Infrared</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_Blue</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Blue</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_SmallTurret</li>
     </compatibleSlots>
     <costList>
       <GR_Alloy>10</GR_Alloy>
     </costList>
+    <power>-5</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Infrared</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
     <defName>GR_MechModule_PulseLaser_Infrared_M</defName>
     <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
-    <upgradeTo>GR_MechModule_PulseLaser_Blue_M</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Blue_M</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
     <costList>
       <GR_Alloy>25</GR_Alloy>
     </costList>
+    <power>-13</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Infrared_M</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -61,10 +68,13 @@
     <compatibleSlots>
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
-    <upgradeTo>GR_MechModule_PulseLaser_Blue_L</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Blue_L</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>63</GR_Alloy>
     </costList>
+    <power>-30</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Infrared_L</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -81,7 +91,9 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
     <defName>GR_MechModule_PulseLaser_Blue</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_UV</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_UV</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_SmallTurret</li>
     </compatibleSlots>
@@ -91,30 +103,37 @@
     <costList>
       <GR_Alloy>15</GR_Alloy>
     </costList>
+    <power>-7</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Blue</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
     <defName>GR_MechModule_PulseLaser_Blue_M</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_UV_M</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_UV_M</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
     <costList>
       <GR_Alloy>38</GR_Alloy>
     </costList>
+    <power>-17</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Blue_M</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
     <defName>GR_MechModule_PulseLaser_Blue_L</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_UV_L</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_UV_L</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
     <costList>
       <GR_Alloy>95</GR_Alloy>
     </costList>
+    <power>-39</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Blue_L</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -123,7 +142,6 @@
     <label>紫外激光</label>
     <description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</description>
     <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
-    <upgradeTo>GR_MechModule_PulseLaser_XrayBase</upgradeTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -132,37 +150,46 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
     <defName>GR_MechModule_PulseLaser_UV</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_Xray</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Xray</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_SmallTurret</li>
     </compatibleSlots>
     <costList>
       <GR_Alloy>23</GR_Alloy>
     </costList>
+    <power>-10</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_UV</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
     <defName>GR_MechModule_PulseLaser_UV_M</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_Xray_M</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Xray_M</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
     <costList>
       <GR_Alloy>58</GR_Alloy>
     </costList>
+    <power>-23</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_UV_M</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
     <defName>GR_MechModule_PulseLaser_UV_L</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_Xray_L</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Xray_L</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
     <costList>
       <GR_Alloy>145</GR_Alloy>
     </costList>
+    <power>-51</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_UV_L</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -178,7 +205,9 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
     <defName>GR_MechModule_PulseLaser_Xray</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_Gamma</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Gamma</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_SmallTurret</li>
     </compatibleSlots>
@@ -186,12 +215,15 @@
       <GR_Alloy>23</GR_Alloy>
       <!-- stellaris 还需要一个稀有水晶 -->
     </costList>
+    <power>-13</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
     <defName>GR_MechModule_PulseLaser_Xray_M</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_Gamma_M</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Gamma_M</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
@@ -199,12 +231,15 @@
       <GR_Alloy>58</GR_Alloy>
       <!-- stellaris 还需要一个稀有水晶 -->
     </costList>
+    <power>-30</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay_M</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
     <defName>GR_MechModule_PulseLaser_Xray_L</defName>
-    <upgradeTo>GR_MechModule_PulseLaser_Gamma_L</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PulseLaser_Gamma_L</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
@@ -212,6 +247,7 @@
       <GR_Alloy>145</GR_Alloy>
       <!-- stellaris 还需要一个稀有水晶 -->
     </costList>
+    <power>-67</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay_L</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -235,6 +271,7 @@
       <GR_Alloy>35</GR_Alloy>
       <!-- stellaris 还需要一个稀有水晶 -->
     </costList>
+    <power>-17</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -247,6 +284,7 @@
       <GR_Alloy>35</GR_Alloy>
       <!-- stellaris 还需要一个稀有水晶 -->
     </costList>
+    <power>-39</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_M</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -259,6 +297,7 @@
       <GR_Alloy>35</GR_Alloy>
       <!-- stellaris 还需要一个稀有水晶 -->
     </costList>
+    <power>-88</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_L</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -268,7 +307,9 @@
     <label>哨兵点防御</label>
     <description>对于那些又大又笨重的军用舰船来说，在船体上安装反导弹和反攻击机的装置是很有必要的。</description>
     <iconPath>Icon/ShipParts/ship_part_point_defense_1</iconPath>
-    <upgradeTo>GR_MechModule_PDArray2</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PDArray2</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_PointDefenseTurret</li>
     </compatibleSlots>
@@ -278,6 +319,7 @@
     <costList>
       <GR_Alloy>8</GR_Alloy>
     </costList>
+    <power>-5</power>
     <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
     <uiOrder>1110</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
@@ -287,7 +329,9 @@
     <label>屏障点防御</label>
     <description>升级后的弹道预测算法可以提升追踪和点防御的效能。</description>
     <iconPath>Icon/ShipParts/ship_part_point_defense_2</iconPath>
-    <upgradeTo>GR_MechModule_PDArray3</upgradeTo>
+    <upgradesTo>
+      <li>GR_MechModule_PDArray3</li>
+    </upgradesTo>
     <compatibleSlots>
       <li>GR_MechSlot_PointDefenseTurret</li>
     </compatibleSlots>
@@ -297,6 +341,7 @@
     <costList>
       <GR_Alloy>10</GR_Alloy>
     </costList>
+    <power>-7</power>
     <!-- 占位 -->
     <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
     <uiOrder>1110</uiOrder>
@@ -316,6 +361,7 @@
     <costList>
       <GR_Alloy>10</GR_Alloy>
     </costList>
+    <power>-10</power>
     <!-- 占位 -->
     <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
     <uiOrder>1110</uiOrder>

@@ -9,7 +9,7 @@ namespace SD.GrayRace.Comps;
 
 public class CompGrayMechLoadout : ThingComp
 {
-    private const string ModuleStatsExplanationHeader = "Gray mech modules";
+    private const string ModuleStatsExplanationHeader = "舰船组件";
     private GrayMechDesignSnapshot designSnapshot;
     private Dictionary<StatDef, float> cachedModuleStatOffsets;
     private Dictionary<StatDef, float> cachedModuleStatFactors;
@@ -30,6 +30,8 @@ public class CompGrayMechLoadout : ThingComp
         if (Pawn != null && designSnapshot != null)
         {
             GrayMechModuleApplier.ApplyLoadout(Pawn, designSnapshot);
+            Pawn.TryGetComp<CompGrayMechVanillaShield>()?.Notify_LoadoutChanged();
+            Pawn.TryGetComp<CompGrayMechSystems>()?.Notify_LoadoutChanged();
         }
     }
 
@@ -37,32 +39,23 @@ public class CompGrayMechLoadout : ThingComp
     {
         base.PostSpawnSetup(respawningAfterLoad);
         ClearAffectedStatCaches(designSnapshot);
+        if (!respawningAfterLoad && Pawn != null && designSnapshot == null && GrayMechRandomLoadoutGenerator.TryCreateSnapshotFor(Pawn, out GrayMechDesignSnapshot generatedSnapshot))
+        {
+            ApplyDesign(generatedSnapshot);
+            return;
+        }
+
         if (Pawn != null && designSnapshot != null)
         {
             GrayMechModuleApplier.ApplyLoadout(Pawn, designSnapshot);
+            Pawn.TryGetComp<CompGrayMechVanillaShield>()?.Notify_LoadoutChanged();
+            Pawn.TryGetComp<CompGrayMechSystems>()?.Notify_LoadoutChanged();
         }
     }
 
     public override string CompInspectStringExtra()
     {
-        if (designSnapshot?.chassis == null)
-        {
-            return string.Empty;
-        }
-
-        StringBuilder sb = new();
-        sb.Append("Design: ");
-        sb.Append(designSnapshot.designLabel.NullOrEmpty() ? designSnapshot.chassis.LabelCap : designSnapshot.designLabel);
-
-        string moduleSummary = GrayMechDesignUtility.BuildModuleSummary(designSnapshot);
-        if (!moduleSummary.NullOrEmpty())
-        {
-            sb.AppendLine();
-            sb.Append("Modules: ");
-            sb.Append(moduleSummary);
-        }
-
-        return sb.ToString();
+        return string.Empty;
     }
 
     public override void PostExposeData()
