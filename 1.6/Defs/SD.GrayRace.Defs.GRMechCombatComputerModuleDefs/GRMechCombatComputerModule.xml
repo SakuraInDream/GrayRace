@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <SD.GrayRace.Defs.GRMechCombatComputerModuleDef Name="GR_MechCombatComputerBase" Abstract="True">
-    <iconPath>Icon/ShipParts//ship_part_computer_default</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_computer_default</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_CombatComputer</li>
     </compatibleSlots>
     <anchorBodyPart>ArtificialBrain</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+
+  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputerBase">
+    <defName>GR_MechModule_Basic</defName>
+    <label>基础作战电脑</label>
+    <behavior>Default</behavior>
+    <weaponSelection>ShortestRange</weaponSelection>
+    <positioning>Vanilla</positioning>
+    <coverPreference>Vanilla</coverPreference>
+    <preferredRangeFactor>1.0</preferredRangeFactor>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+      <li>GR_Chassis_Cruiser</li>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <powerDraw>10</powerDraw>
+    <costList>
+      <GR_Alloy>5</GR_Alloy>
+    </costList>
+    <uiOrder>5500</uiOrder>
   </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
 </Defs>

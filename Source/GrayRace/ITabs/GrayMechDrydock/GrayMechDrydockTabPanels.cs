@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using RimWorld;
 using SD.GrayRace.Defs;
 using SD.GrayRace.Mechs;
@@ -920,14 +920,17 @@ internal sealed class GrayMechDrydockFocusPanel
             return "None";
         }
 
-        return state.CachedShieldEnergyMax.ToString("0.##") + "  (+" + state.CachedShieldRechargeRate.ToString("0.###") + "/s)";
+        string maxEnergy = StatDefOf.EnergyShieldEnergyMax.ValueToString(state.CachedShieldEnergyMax);
+        string rechargeRate = StatDefOf.EnergyShieldRechargeRate.ValueToString(state.CachedShieldRechargeRate, ToStringNumberSense.Offset);
+
+        return maxEnergy + "  (" + rechargeRate + ")";
     }
 
     private static string BuildPowerSummary(GrayMechDrydockTabContext context)
     {
         GrayMechDrydockTabState state = context.State;
         string net = state.CachedPowerNet > 0 ? "+" + state.CachedPowerNet : state.CachedPowerNet.ToString();
-        return net + "  (" + state.CachedPowerGeneration + " / " + state.CachedPowerConsumption + ")";
+        return net + "  (" + state.CachedPowerConsumption + " / " + state.CachedPowerGeneration + ")";
     }
 
     private static Color GetPowerBudgetColor(GrayMechDrydockTabState state)
@@ -999,7 +1002,7 @@ internal sealed class GrayMechDrydockFocusPanel
 
         Rect checkboxRect = new Rect(rect.x, y, rect.width, 24f);
         bool autoUpgrade = context.Dock.AutoUpgradeEnabled;
-        Widgets.CheckboxLabeled(checkboxRect, "自动升级", ref autoUpgrade);
+        Widgets.CheckboxLabeled(checkboxRect, "自动升级(未实装)", ref autoUpgrade);
         if (autoUpgrade != context.Dock.AutoUpgradeEnabled)
         {
             context.Dock.AutoUpgradeEnabled = autoUpgrade;
@@ -1231,18 +1234,20 @@ internal sealed class GrayMechDrydockFocusPanel
         {
             context.Controller.SetModule(context.Dock, resolvedSlot.sectionSlot, resolvedSlot.slot.key, module);
         }
-        Rect iconRect = new Rect(rowRect.x + 6f, rowRect.y + 6f, 36f, 36f);
+        float iconSize = rowRect.height - 2f;
+        Rect iconRect = new Rect(rowRect.x + 1f, rowRect.y + 1f, iconSize, iconSize);
         canvasRenderer.DrawModuleIconTile(iconRect, module, resolvedSlot.slot);
 
-        float leftWidth = rowRect.width - 58f;
         float leftX = iconRect.xMax + 8f;
+        float leftWidth = rowRect.width - (leftX - rowRect.x) - 8f;
         string title = module?.LabelCap.ToString() ?? "Empty Slot";
         string cost = module == null ? "Cost: None" : GrayMechDrydockTabText.BuildModuleCostSummary(module, context.Draft?.chassis, context.State.TextBuilder);
 
         string titleText = "<b>" + title + "</b>";
         float titleH = GrayMechDrydockTabText.MeasureWrappedTextHeight(titleText, leftWidth, GameFont.Small);
         float costH = GrayMechDrydockTabText.MeasureWrappedTextHeight(cost, leftWidth, GameFont.Small);
-        float localY = rowRect.y + 4f;
+        float totalTextH = titleH + 2f + costH;
+        float localY = rowRect.y + Mathf.Round((rowRect.height - totalTextH) * 0.5f);
         GrayMechDrydockTabText.DrawWrappedLabel(new Rect(leftX, localY, leftWidth, titleH), titleText);
         localY += titleH + 2f;
         GUI.color = new Color(0.8f, 0.8f, 0.8f);

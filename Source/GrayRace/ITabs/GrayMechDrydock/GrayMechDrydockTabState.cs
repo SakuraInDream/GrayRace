@@ -640,7 +640,7 @@ internal sealed class GrayMechDrydockTabState
 
     internal float GetModuleOptionHeight(GRMechModuleDef module, float width)
     {
-        float leftWidth = width - 84f;
+        float leftWidth = width - 100f;
         string title = "<b>" + (module?.LabelCap.ToString() ?? "Empty Slot") + "</b>";
         string cost = module == null ? "Cost: None" : GrayMechDrydockTabText.BuildModuleCostSummary(module, cachedDock?.DesignDraft?.chassis, TextBuilder);
         return 8f

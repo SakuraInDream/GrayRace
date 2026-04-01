@@ -19,6 +19,7 @@
   <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
     <defName>GR_MechModule_CC_Artillery_Basic</defName>
     <label>作战电脑(炮击)</label>
+    <iconPath>Icon/ShipParts/ship_part_computer_role_artillery_basic</iconPath>
     <upgradesTo>
       <li>GR_MechModule_CC_Artillery_Advanced</li>
     </upgradesTo>
@@ -39,9 +40,10 @@
   <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
     <defName>GR_MechModule_CC_Artillery_Advanced</defName>
     <label>高级作战电脑(炮击)</label>
+    <iconPath>Icon/ShipParts/ship_part_computer_role_artillery_advanced</iconPath>
     <upgradesTo>
       <li>GR_MechModule_CC_Artillery_Sapient</li>
-      <li>GR_MechModule_CC_Artillery_Autonomous</li>
+      <!-- <li>GR_MechModule_CC_Artillery_Autonomous</li> -->
       <li>GR_MechModule_CC_Artillery_Precognitive</li>
     </upgradesTo>
     <powerDraw>15</powerDraw>
@@ -61,6 +63,7 @@
   <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
     <defName>GR_MechModule_CC_Artillery_Sapient</defName>
     <label>智能作战电脑(炮击)</label>
+    <iconPath>Icon/ShipParts/ship_part_computer_role_artillery_sapient</iconPath>
     <powerDraw>25</powerDraw>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
@@ -75,7 +78,7 @@
     <uiOrder>4502</uiOrder>
   </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
 
-  <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
+  <!-- <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
     <defName>GR_MechModule_CC_Artillery_Autonomous</defName>
     <label>自主舰载智能(炮击)</label>
     <powerDraw>25</powerDraw>
@@ -90,11 +93,12 @@
       <ShootingAccuracyFactor_Long>1.20</ShootingAccuracyFactor_Long>
     </statFactors>
     <uiOrder>4503</uiOrder>
-  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef>
+  </SD.GrayRace.Defs.GRMechCombatComputerModuleDef> -->
 
   <SD.GrayRace.Defs.GRMechCombatComputerModuleDef ParentName="GR_MechCombatComputer_ArtilleryBase">
     <defName>GR_MechModule_CC_Artillery_Precognitive</defName>
     <label>预知接口(炮击)</label>
+    <iconPath>Icon/ShipParts/ship_part_computer_role_artillery_precog</iconPath>
     <powerDraw>25</powerDraw>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 护盾电容 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Base">
+    <defName>GR_MechModule_ShieldBooster</defName>
+    <label>护盾电容</label>
+    <description>储能电容器可用于增强舰船护盾。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <statFactors>
+      <EnergyShieldEnergyMax>1.1</EnergyShieldEnergyMax>
+    </statFactors>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+</Defs>

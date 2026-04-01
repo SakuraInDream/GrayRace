@@ -2,7 +2,7 @@
 <Defs>
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_PowerCore</defName>
-    <label>power core slot</label>
+    <label>反应堆</label>
     <description>TODO</description>
     <requiredComponentSet>GR_MechComponentSet_PowerCore</requiredComponentSet>
     <designerColor>(0.46, 0.86, 0.79)</designerColor>
@@ -10,23 +10,23 @@
 
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_Thruster</defName>
-    <label>thruster slot</label>
+    <label>推进器</label>
     <description>TODO</description>
     <requiredComponentSet>GR_MechComponentSet_Thruster</requiredComponentSet>
     <designerColor>(0.3, 0.76, 1)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef>
 
-  <SD.GrayRace.Defs.GRMechSlotDef>
+  <!-- <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_Sensor</defName>
     <label>sensor slot</label>
     <description>TODO</description>
     <requiredComponentSet>GR_MechComponentSet_Sensor</requiredComponentSet>
     <designerColor>(0.3, 0.86, 0.79)</designerColor>
-  </SD.GrayRace.Defs.GRMechSlotDef>
+  </SD.GrayRace.Defs.GRMechSlotDef> -->
 
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_CombatComputer</defName>
-    <label>combat computer slot</label>
+    <label>舰船作战电脑</label>
     <description>TODO</description>
     <requiredComponentSet>GR_MechComponentSet_CombatComputer</requiredComponentSet>
     <designerColor>(0.96, 0.73, 0.29)</designerColor>
