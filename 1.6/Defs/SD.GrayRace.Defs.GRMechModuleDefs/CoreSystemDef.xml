@@ -7,7 +7,6 @@
   -->
 
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorBase" Abstract="True">
-    <iconPath>Things/Building/Reactor</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_PowerCore</li>
     </compatibleSlots>
@@ -19,6 +18,7 @@
     <defName>GR_MechModule_CC_FissionReactor</defName>
     <label>裂变反应堆</label>
     <description>通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_1</iconPath>
     <upgradesTo>
       <li>GR_MechModule_CC_FusionReactor</li>
     </upgradesTo>
@@ -31,6 +31,10 @@
     <power>75</power>
     <powerByChassis>
       <li>
+        <chassis>GR_Chassis_Destroyer</chassis>
+        <power>250</power>
+      </li>
+      <li>
         <chassis>GR_Chassis_Battleship</chassis>
         <power>550</power>
       </li>
@@ -42,6 +46,7 @@
     <defName>GR_MechModule_CC_FusionReactor</defName>
     <label>聚变反应堆</label>
     <description>核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_2</iconPath>
     <upgradesTo>
       <li>GR_MechModule_CC_ColdFusionReactor</li>
     </upgradesTo>
@@ -65,6 +70,7 @@
     <defName>GR_MechModule_CC_ColdFusionReactor</defName>
     <label>冷聚变反应堆</label>
     <description>在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_3</iconPath>
     <upgradesTo>
       <li>GR_MechModule_CC_AntimatterReactor</li>
     </upgradesTo>
@@ -88,6 +94,7 @@
     <defName>GR_MechModule_CC_AntimatterReactor</defName>
     <label>反物质反应堆</label>
     <description>利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_4</iconPath>
     <upgradesTo>
       <li>GR_MechModule_CC_ZeroPointReactor</li>
     </upgradesTo>
@@ -111,6 +118,7 @@
     <defName>GR_MechModule_CC_ZeroPointReactor</defName>
     <label>零点反应堆</label>
     <description>直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_5</iconPath>
     <upgradesTo>
       <li>GR_MechModule_CC_DarkMatterReactor</li>
     </upgradesTo>
@@ -134,6 +142,7 @@
     <defName>GR_MechModule_CC_DarkMatterReactor</defName>
     <label>暗物质反应堆</label>
     <description>这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。</description>
+    <iconPath>Icon/ShipParts/ship_part_dark_matter_power_core</iconPath>
     <researchPrerequisites>
       <li>GR_T6Mechtech</li>
     </researchPrerequisites>

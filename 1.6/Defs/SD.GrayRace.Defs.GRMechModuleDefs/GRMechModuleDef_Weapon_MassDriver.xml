@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 质量投射器 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver1Base" Abstract="True">
+    <label>质量投射器</label>
+    <description>此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_1</iconPath>
+    <slotFamily>MassDriver1</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver1Base">
+    <defName>GR_MechModule_MassDriver1_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver2_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <power>-5</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver1Base">
+    <defName>GR_MechModule_MassDriver1_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver2_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver1Base">
+    <defName>GR_MechModule_MassDriver1_L</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver2_L</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 线圈炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver2Base" Abstract="True">
+    <label>线圈炮</label>
+    <description>线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_2</iconPath>
+    <slotFamily>MassDriver2</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver2Base">
+    <defName>GR_MechModule_MassDriver2_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver3_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver2Base">
+    <defName>GR_MechModule_MassDriver2_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver3_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver2Base">
+    <defName>GR_MechModule_MassDriver2_L</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver3_L</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 轨道炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver3Base" Abstract="True">
+    <label>轨道炮</label>
+    <description>轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_3</iconPath>
+    <slotFamily>MassDriver3</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver3Base">
+    <defName>GR_MechModule_MassDriver3_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver4_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver3Base">
+    <defName>GR_MechModule_MassDriver3_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver4_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver3Base">
+    <defName>GR_MechModule_MassDriver3_L</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver4_L</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 先进轨道炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver4Base" Abstract="True">
+    <label>先进轨道炮</label>
+    <description>经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_4</iconPath>
+    <slotFamily>MassDriver4</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver4Base">
+    <defName>GR_MechModule_MassDriver4_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver5_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver4Base">
+    <defName>GR_MechModule_MassDriver4_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver5_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver4Base">
+    <defName>GR_MechModule_MassDriver4_L</defName>
+    <upgradesTo>
+      <li>GR_MechModule_MassDriver5_L</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 高斯炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver5Base" Abstract="True">
+    <label>高斯炮</label>
+    <description>在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_4</iconPath>
+    <slotFamily>MassDriver5</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver5Base">
+    <defName>GR_MechModule_MassDriver5_S</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver5Base">
+    <defName>GR_MechModule_MassDriver5_M</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver5Base">
+    <defName>GR_MechModule_MassDriver5_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef></equipmentDef>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+</Defs>

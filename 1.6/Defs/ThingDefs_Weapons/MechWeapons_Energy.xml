@@ -3,6 +3,7 @@
   <ThingDef Name="GR_MechWeapon_PulseLaserBase" ParentName="LightMechanoidGunRanged" Abstract="True">
     <techLevel>Spacer</techLevel>
     <graphicData>
+      <!-- 占位 -->
       <texPath>Things/Item/Weapon/Energy/Energy_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>

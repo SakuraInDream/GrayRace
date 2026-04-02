@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 这一块的 modding 稍微麻烦一点 -->
-  <SD.GrayRace.Defs.GRMechModuleDef>
+  <!-- <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_AA12mm</defName>
     <label>12mm AA battery</label>
     <description>Compact rapid-fire gun battery intended for light Gray frigate hulls.</description>
@@ -18,14 +17,16 @@
     <power>-5</power>
     <equipmentDef>GR_MechWeapon_12mmAA</equipmentDef>
     <uiOrder>1100</uiOrder>
-  </SD.GrayRace.Defs.GRMechModuleDef>
+  </SD.GrayRace.Defs.GRMechModuleDef> -->
 
+  <!-- 这一块的 modding 稍微麻烦一点 -->
   <!-- 下面的 iconPath 均为 Stellaris 经过垂直翻转处理后的文件 -->
   <!-- 红色激光 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_InfraredBase" Abstract="True">
     <label>红色激光</label>
     <description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</description>
     <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <!-- slotFamily 用来解决同一武器的 S/M/L 切换问题 -->
     <slotFamily>PulseLaser_Infrared</slotFamily>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
@@ -45,12 +46,12 @@
       <GR_Alloy>10</GR_Alloy>
     </costList>
     <power>-5</power>
+    <!-- 每个武器模块必须都要有一把对应的武器ThingDef -->
     <equipmentDef>GR_MechWeapon_PulseLaser_Infrared</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
     <defName>GR_MechModule_PulseLaser_Infrared_M</defName>
-    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
     <upgradesTo>
       <li>GR_MechModule_PulseLaser_Blue_M</li>
     </upgradesTo>
@@ -305,71 +306,4 @@
     <power>-88</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_L</equipmentDef>
   </SD.GrayRace.Defs.GRMechModuleDef>
-
-  <!-- 点防御 -->
-  <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_PDArray1</defName>
-    <label>哨兵点防御</label>
-    <description>对于那些又大又笨重的军用舰船来说，在船体上安装反导弹和反攻击机的装置是很有必要的。</description>
-    <iconPath>Icon/ShipParts/ship_part_point_defense_1</iconPath>
-    <upgradesTo>
-      <li>GR_MechModule_PDArray2</li>
-    </upgradesTo>
-    <compatibleSlots>
-      <li>GR_MechSlot_PointDefenseTurret</li>
-    </compatibleSlots>
-    <researchPrerequisites>
-      <li>GR_T1MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>8</GR_Alloy>
-    </costList>
-    <power>-5</power>
-    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
-    <uiOrder>1110</uiOrder>
-  </SD.GrayRace.Defs.GRMechModuleDef>
-
-  <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_PDArray2</defName>
-    <label>屏障点防御</label>
-    <description>升级后的弹道预测算法可以提升追踪和点防御的效能。</description>
-    <iconPath>Icon/ShipParts/ship_part_point_defense_2</iconPath>
-    <upgradesTo>
-      <li>GR_MechModule_PDArray3</li>
-    </upgradesTo>
-    <compatibleSlots>
-      <li>GR_MechSlot_PointDefenseTurret</li>
-    </compatibleSlots>
-    <researchPrerequisites>
-      <li>GR_T2MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>10</GR_Alloy>
-    </costList>
-    <power>-7</power>
-    <!-- 占位 -->
-    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
-    <uiOrder>1110</uiOrder>
-  </SD.GrayRace.Defs.GRMechModuleDef>
-
-  <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_PDArray3</defName>
-    <label>守护者点防御</label>
-    <description>种类丰富的弹药能够显著提升拦截威胁的能力。</description>
-    <iconPath>Icon/ShipParts/ship_part_point_defense_3</iconPath>
-    <compatibleSlots>
-      <li>GR_MechSlot_PointDefenseTurret</li>
-    </compatibleSlots>
-    <researchPrerequisites>
-      <li>GR_T3MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>10</GR_Alloy>
-    </costList>
-    <power>-10</power>
-    <!-- 占位 -->
-    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
-    <uiOrder>1110</uiOrder>
-  </SD.GrayRace.Defs.GRMechModuleDef>
-
 </Defs>

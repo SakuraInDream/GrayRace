@@ -4,10 +4,10 @@
   <RecipeDef ParentName="LightMechanoidRecipe">
     <defName>GR_Mech_FF</defName>
     <label>护卫舰</label>
-    <description>Assemble a Gray interceptor frigate from a predefined drydock package.</description>
+    <description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</description>
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
-    <gestationCycles>4</gestationCycles>
-    <formingTicks>15000</formingTicks>
+    <gestationCycles>1</gestationCycles>
+    <formingTicks>6000</formingTicks>
     <ingredients Inherit="False">
       <li>
         <filter>

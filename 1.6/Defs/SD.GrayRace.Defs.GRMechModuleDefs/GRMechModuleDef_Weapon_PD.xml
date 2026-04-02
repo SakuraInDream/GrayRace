@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 点防御 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_PDArray1</defName>
+    <label>哨兵点防御</label>
+    <description>对于那些又大又笨重的军用舰船来说，在船体上安装反导弹和反攻击机的装置是很有必要的。</description>
+    <iconPath>Icon/ShipParts/ship_part_point_defense_1</iconPath>
+    <upgradesTo>
+      <li>GR_MechModule_PDArray2</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_PointDefenseTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>8</GR_Alloy>
+    </costList>
+    <power>-5</power>
+    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_PDArray2</defName>
+    <label>屏障点防御</label>
+    <description>升级后的弹道预测算法可以提升追踪和点防御的效能。</description>
+    <iconPath>Icon/ShipParts/ship_part_point_defense_2</iconPath>
+    <upgradesTo>
+      <li>GR_MechModule_PDArray3</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_PointDefenseTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <power>-7</power>
+    <!-- 占位 -->
+    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <uiOrder>1</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_PDArray3</defName>
+    <label>守护者点防御</label>
+    <description>种类丰富的弹药能够显著提升拦截威胁的能力。</description>
+    <iconPath>Icon/ShipParts/ship_part_point_defense_3</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_PointDefenseTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <power>-10</power>
+    <!-- 占位 -->
+    <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <uiOrder>2</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+</Defs>

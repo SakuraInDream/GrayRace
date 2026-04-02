@@ -18,14 +18,6 @@
         <anchorBodyPart>MechanicalFoot</anchorBodyPart>
         <uiOrder>20</uiOrder>
       </li>
-      <!-- 这部分不要了 -->
-      <!-- <li>
-        <key>SENSOR_01</key>
-        <label>传感设备</label>
-        <slotDef>GR_MechSlot_Sensor</slotDef>
-        <anchorBodyPart>HearingSensor</anchorBodyPart>
-        <uiOrder>30</uiOrder>
-      </li> -->
       <li>
         <key>COMBAT_COMPUTER_01</key>
         <label>舰船作战电脑</label>
@@ -37,6 +29,7 @@
   </SD.GrayRace.Defs.GRMechChassisDef>
 
   <!-- 都是仿群星的设计 -->
+  <!-- 每制作一个 ChassisDef 就要创建一个 RecipeDef 绑定机械体 -->
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Corvette</defName>
     <label>护卫舰</label>
@@ -78,6 +71,7 @@
     <defName>GR_Chassis_Frigate</defName>
     <label>雷击舰</label>
     <description>雷击舰是护卫舰的一种先进衍生型号，专职发射鱼雷。他们更慢更脆弱，但可以对大型目标造成毁灭性的打击。</description>
+    <!-- TODO -->
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
@@ -94,6 +88,7 @@
     <defName>GR_Chassis_Destroyer</defName>
     <label>驱逐舰</label>
     <description>采用双区段设计的驱逐舰可以提供多种多样的战略性武装。</description>
+    <!-- TODO -->
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
@@ -111,6 +106,7 @@
     <defName>GR_Chassis_Cruiser</defName>
     <label>巡洋舰</label>
     <description>巡洋舰采用三段式设计，在愿意加钱的情况下可自由进行各种追加模组改装。</description>
+    <!-- TODO -->
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
@@ -129,6 +125,7 @@
     <defName>GR_Chassis_Titan</defName>
     <label>泰坦</label>
     <description>这些巨型战舰是整个舰队的骄傲，泰坦上携带有多种武器，一般作为旗舰使用。</description>
+    <!-- TODO -->
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
@@ -147,6 +144,7 @@
     <defName>GR_Chassis_Juggernaut</defName>
     <label>主宰</label>
     <description>这些巨型构造物既是舰船也是空间站。主宰是一种庞大的可移动空间站，可以维修和建造舰船，也就是说，它可以作为进攻性战役中行动时的前进基地使用。</description>
+    <!-- TODO -->
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
