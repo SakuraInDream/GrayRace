@@ -1,4 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsWindows>false</IsWindows>
+    <IsLinux>false</IsLinux>
+    <IsOSX>false</IsOSX>
+    <IsWSL>false</IsWSL>
+    <IsWindows Condition="$([System.OperatingSystem]::IsWindows())">true</IsWindows>
+    <IsLinux Condition="$([System.OperatingSystem]::IsLinux())">true</IsLinux>
+    <IsOSX Condition="$([System.OperatingSystem]::IsMacOS())">true</IsOSX>
+    <IsWSL Condition="'$(WSL_DISTRO_NAME)' != ''">true</IsWSL>
+  </PropertyGroup>
   <!-- 在 .csproj 同级目录下创建 Local.props 手动指定自己的 RW 路径 -->
   <!--
   Local.props:
@@ -9,7 +19,7 @@
     </Project>
   -->
   <!-- 使用 Directory.Build.props 也行，内容跟上面的一样 -->
-  <Import Project="Local.props" Condition="Exists('Local.props')" />
+  <Import Project="Local.props" Condition="Exists('Local.props')"/>
 
   <!-- 如果没有，查找环境变量 RIMWORLD_DIR -->
   <PropertyGroup Condition=" '$(RimWorldPath)' == '' ">
@@ -18,42 +28,40 @@
 
   <!-- 都没有，全平台兜底碰运气 -->
   <!-- https://learn.microsoft.com/zh-cn/visualstudio/msbuild/property-functions?view=vs-2022 -->
-  <PropertyGroup Condition=" '$(RimWorldPath)' == '' and $([System.OperatingSystem]::IsWindows()) and Exists('C:\Program Files (x86)\Steam\steamapps\common\RimWorld') ">
-    <RimWorldPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld</RimWorldPath>
+  <PropertyGroup Condition="'$(IsWindows)' == 'true'">
+    <!-- 只能检测 Steam 安装所在盘的游戏，如果游戏安装在非 Steam 盘下，失效 -->
+    <RegSteamPath>$(registry:HKEY_CURRENT_USER\Software\Valve\Steam@SteamPath)\steamapps</RegSteamPath>
+
+    <SteamLibraryPath Condition="'$(SteamLibraryPath)' == '' and Exists('$(RegSteamPath)/common/RimWorld')">$(RegSteamPath)</SteamLibraryPath>
+
+    <SteamLibraryPath Condition="'$(SteamLibraryPath)' == ''">C:/Program Files (x86)/Steam/steamapps</SteamLibraryPath>
+
+    <RimWorldPath Condition="'$(RimWorldPath)' == ''">$(SteamLibraryPath)/common/RimWorld</RimWorldPath>
+    <RimWorldManagedPath>$(RimWorldPath)/RimWorldWin64_Data/Managed</RimWorldManagedPath>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(RimWorldPath)' == '' and $([System.OperatingSystem]::IsLinux()) and Exists('$(HOME)/.steam/steam/steamapps/common/RimWorld') ">
-    <RimWorldPath>$(HOME)/.steam/steam/steamapps/common/RimWorld</RimWorldPath>
+  <!-- WSL 专用 -->
+  <PropertyGroup Condition="'$(IsWSL)' == 'true'">
+    <RimWorldPath Condition="'$(RimWorldPath)' == ''">/mnt/g/RimWorldMods/RimWorld</RimWorldPath>
+    <RimWorldManagedPath>$(RimWorldPath)/RimWorldWin64_Data/Managed</RimWorldManagedPath>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(RimWorldPath)' == '' and $([System.OperatingSystem]::IsMacOS()) and Exists('$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app') ">
-    <RimWorldPath>$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app</RimWorldPath>
+  <!-- Linux -->
+  <PropertyGroup Condition="'$(IsLinux)' == 'true' and '$(IsWSL)' != 'true'">
+    <RimWorldPath Condition="'$(RimWorldPath)' == ''">$(HOME)/.local/share/Steam/steamapps/common/RimWorld</RimWorldPath>
+    <RimWorldManagedPath>$(RimWorldPath)/RimWorldLinux_Data/Managed</RimWorldManagedPath>
   </PropertyGroup>
 
-  <Choose>
-    <When Condition=" $([System.OperatingSystem]::IsWindows()) ">
-      <PropertyGroup>
-        <RimWorldManagedPath>$(RimWorldPath)\RimWorldWin64_Data\Managed</RimWorldManagedPath>
-      </PropertyGroup>
-    </When>
-
-    <When Condition=" $([System.OperatingSystem]::IsLinux()) ">
-      <PropertyGroup>
-        <RimWorldManagedPath>$(RimWorldPath)/RimWorldLinux_Data/Managed</RimWorldManagedPath>
-      </PropertyGroup>
-    </When>
-
-    <When Condition=" $([System.OperatingSystem]::IsMacOS()) ">
-      <PropertyGroup>
-        <RimWorldManagedPath>$(RimWorldPath)/Contents/Resources/Data/Managed</RimWorldManagedPath>
-      </PropertyGroup>
-    </When>
-  </Choose>
+  <!-- MacOS -->
+  <PropertyGroup Condition="'$(IsOSX)' == 'true'">
+    <RimWorldPath Condition="'$(RimWorldPath)' == ''">$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld</RimWorldPath>
+    <RimWorldManagedPath>$(RimWorldPath)/Contents/Resources/Data/Managed</RimWorldManagedPath>
+  </PropertyGroup>
 
   <!-- 我简直是太 TM 天才了，知道利用 Version.txt + 正则匹配游戏版本 -->
   <!-- 只希望其他平台也有这个文件 -->
   <PropertyGroup>
-    <RimWorldVersionFile>$(RimWorldPath)\Version.txt</RimWorldVersionFile>
+    <RimWorldVersionFile>$(RimWorldPath)/Version.txt</RimWorldVersionFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="Exists('$(RimWorldVersionFile)')">
@@ -90,7 +98,6 @@
   </PropertyGroup>
 
 
-
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>..\..\$(RimWorldVersion)\Assemblies\</OutputPath>
   </PropertyGroup>
@@ -107,6 +114,6 @@
 
   <ItemGroup>
     <!-- <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" /> -->
-    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.2" />
+    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.2"/>
   </ItemGroup>
 </Project>
