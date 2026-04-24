@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <GR_AbilityNanitesCost>备用灰潮源质消耗</GR_AbilityNanitesCost>
+  <GR_AbilityDisabledNoNanitesModule>{0} 没有备用灰潮源质 Comp。</GR_AbilityDisabledNoNanitesModule>
+  <GR_AbilityDisabledNoNanites>{0} 的备用灰潮源质不足。需要 {1}，可用 {2}。</GR_AbilityDisabledNoNanites>
+  <GR_AbilityFailedNoNanites>{PAWN} 的备用灰潮源质不足，能力释放失败。</GR_AbilityFailedNoNanites>
+
+</LanguageData>

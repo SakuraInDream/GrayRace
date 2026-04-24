@@ -7,14 +7,16 @@ internal readonly struct GrayMechDrydockTabContext
 {
     internal readonly Building_GR_Drydock Dock;
     internal readonly GrayMechDesignSnapshot Draft;
-    internal readonly GrayMechDrydockTabState State;
+    internal readonly GrayMechDrydockPresenter State;
+    internal readonly GrayMechDrydockViewState ViewState;
     internal readonly GrayMechDrydockTabController Controller;
 
-    internal GrayMechDrydockTabContext(Building_GR_Drydock dock, GrayMechDrydockTabState state, GrayMechDrydockTabController controller)
+    internal GrayMechDrydockTabContext(Building_GR_Drydock dock, GrayMechDrydockPresenter state, GrayMechDrydockViewState viewState, GrayMechDrydockTabController controller)
     {
         Dock = dock;
         Draft = dock.DesignDraft;
         State = state;
+        ViewState = viewState;
         Controller = controller;
     }
 }

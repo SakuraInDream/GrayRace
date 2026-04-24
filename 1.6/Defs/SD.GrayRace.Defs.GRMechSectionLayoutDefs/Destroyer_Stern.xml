@@ -17,11 +17,13 @@
       <li>
         <key>PD_01</key>
         <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointOffset>(-0.14,0,-0.16)</hardpointOffset>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>PD_02</key>
         <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointOffset>(0.14,0,-0.16)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
       <li>
@@ -49,11 +51,13 @@
       <li>
         <key>SMALL_GUN_01</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointOffset>(-0.16,0,-0.14)</hardpointOffset>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_02</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointOffset>(0.16,0,-0.14)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
       <li>
@@ -86,6 +90,7 @@
       <li>
         <key>MEDIUM_GUN_01</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointOffset>(0,0,-0.18)</hardpointOffset>
         <uiOrder>0</uiOrder>
       </li>
       <li>

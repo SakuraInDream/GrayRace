@@ -206,3 +206,31 @@ indent_size = 2
 end_of_line = lf
 [*.{cmd,bat}]
 end_of_line = crlf
+
+# RimWorld 专属命名规范适配
+[*.cs]
+# 禁用 CA1707 (标识符不应包含下划线)
+dotnet_diagnostic.CA1707.severity = none
+
+# 2. 定义 RimWorld 的基本类命名风格 (允许类名有下划线且不报波浪线)
+dotnet_naming_rule.rimworld_classes_rule.severity = none
+dotnet_naming_rule.rimworld_classes_rule.symbols = rimworld_class_symbols
+dotnet_naming_rule.rimworld_classes_rule.style = rimworld_class_style
+
+dotnet_naming_symbols.rimworld_class_symbols.applicable_kinds = class, struct
+dotnet_naming_symbols.rimworld_class_symbols.applicable_accessibilities = *
+# 采用默认 PascalCase 且关闭 severity，即可屏蔽 IDE 对类名下划线的格式警告
+dotnet_naming_style.rimworld_class_style.capitalization = pascal_case
+
+[**/ThingClasses/*.cs]
+resharper_class_never_instantiated_global_highlighting = none
+resharper_unused_type_global_highlighting = none
+dotnet_naming_rule.building_class_rule.severity = warning
+dotnet_naming_rule.building_class_rule.symbols = rimworld_class_symbols
+dotnet_naming_rule.building_class_rule.style = building_class_style
+
+[**/DefModExtensions/*.cs]
+resharper_class_never_instantiated_global_highlighting = none
+dotnet_naming_rule.defmodext_class_rule.severity = warning
+dotnet_naming_rule.defmodext_class_rule.symbols = rimworld_class_symbols
+dotnet_naming_rule.defmodext_class_rule.style = defmodext_class_style

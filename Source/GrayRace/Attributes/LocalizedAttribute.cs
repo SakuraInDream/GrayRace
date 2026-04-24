@@ -1,10 +1,9 @@
 using System;
-using Verse;
 
 namespace SD.GrayRace.Attributes
 {
     [AttributeUsage(AttributeTargets.Field)]
-    public class LocalizedAttribute: Attribute
+    public class LocalizedAttribute : Attribute
     {
         private string _text;
 
@@ -12,6 +11,7 @@ namespace SD.GrayRace.Attributes
         {
             _text = key;
         }
+
         /// <summary>
         /// 应该存储本地化键值，而非本地化文本
         /// </summary>

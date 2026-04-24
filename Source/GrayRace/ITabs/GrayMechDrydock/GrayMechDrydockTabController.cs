@@ -11,9 +11,9 @@ namespace SD.GrayRace.ITabs;
 
 internal sealed class GrayMechDrydockTabController
 {
-    private readonly GrayMechDrydockTabState state;
+    private readonly GrayMechDrydockPresenter state;
 
-    internal GrayMechDrydockTabController(GrayMechDrydockTabState state)
+    internal GrayMechDrydockTabController(GrayMechDrydockPresenter state)
     {
         this.state = state;
     }

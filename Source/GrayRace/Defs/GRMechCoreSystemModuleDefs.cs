@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Text;
+using System;
 using RimWorld;
 using Verse;
 
@@ -132,6 +133,12 @@ public class GRMechCombatComputerModuleDef : GRMechModuleDef
     public GRMechCombatComputerCoverPreference coverPreference;
     public float preferredRangeFactor;
     public int powerDraw;
+
+    /// <summary>
+    /// 火控策略类。继承自 IFireControlDirector。
+    /// 默认 null 时退化为使用 RangeBasedFireControl。
+    /// </summary>
+    public Type fireControlClass;
 
     public override int GetNetPower(GRMechChassisDef chassis)
     {

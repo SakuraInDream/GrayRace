@@ -17,21 +17,25 @@
       <li>
         <key>LARGE_GUN_01</key>
         <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointOffset>(0,0,0.34)</hardpointOffset>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>MEDIUM_GUN_01</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointOffset>(0,0,0.18)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_01</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointOffset>(-0.22,0,0.08)</hardpointOffset>
         <uiOrder>2</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_02</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointOffset>(0.22,0,0.08)</hardpointOffset>
         <uiOrder>3</uiOrder>
       </li>
       <li>
@@ -69,11 +73,13 @@
       <li>
         <key>LARGE_GUN_01</key>
         <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointOffset>(-0.15,0,0.28)</hardpointOffset>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>LARGE_GUN_02</key>
         <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointOffset>(0.15,0,0.28)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
       <li>
@@ -111,16 +117,19 @@
       <li>
         <key>MEDIUM_GUN_01</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointOffset>(0,0,0.22)</hardpointOffset>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>PD_01</key>
         <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointOffset>(-0.18,0,0.10)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>PD_02</key>
         <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointOffset>(0.18,0,0.10)</hardpointOffset>
         <uiOrder>2</uiOrder>
       </li>
       <li>
@@ -163,6 +172,7 @@
       <li>
         <key>EXTRA_LARGE_01</key>
         <slotDef>GR_MechSlot_ExtraLarge</slotDef>
+        <hardpointOffset>(0,0,0.34)</hardpointOffset>
         <uiOrder>0</uiOrder>
       </li>
       <li>

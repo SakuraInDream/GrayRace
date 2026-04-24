@@ -21,6 +21,7 @@ namespace SD.GrayRace
             MethodInfo originalMethod = AccessTools.PropertyGetter(typeof(ResearchProjectDef), nameof(ResearchProjectDef.UnlockedDefs));
             HarmonyMethod transpiler = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsTranspiler));
             HarmonyInstance.Patch(original: originalMethod, transpiler: transpiler);
+            HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
         }
     }
 }

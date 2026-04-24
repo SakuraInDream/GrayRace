@@ -8,7 +8,8 @@ namespace SD.GrayRace.ITabs;
 
 public class ITab_GrayMechDrydock : ITab
 {
-    private readonly GrayMechDrydockTabState state = new();
+    private readonly GrayMechDrydockViewState viewState = new();
+    private readonly GrayMechDrydockPresenter state = new();
     private readonly GrayMechDrydockTabController controller;
     private readonly GrayMechDrydockTopBarPanel topBarPanel = new();
     private readonly GrayMechDrydockDesignerPanel designerPanel = new();
@@ -34,8 +35,8 @@ public class ITab_GrayMechDrydock : ITab
             return;
         }
 
-        state.EnsureCaches(dock);
-        GrayMechDrydockTabContext context = new(dock, state, controller);
+        state.EnsureCaches(dock, viewState);
+        GrayMechDrydockTabContext context = new(dock, state, viewState, controller);
 
         Rect root = new Rect(
             GrayMechDrydockTabStyle.Margin,

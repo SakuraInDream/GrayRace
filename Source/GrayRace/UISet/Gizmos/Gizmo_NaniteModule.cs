@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Text;
 using RimWorld;
+using SD.GrayRace.Abilities;
 using SD.GrayRace.Comps;
 using SD.GrayRace.Modules;
 using UnityEngine;
@@ -126,34 +127,26 @@ public class Gizmo_NaniteModule : Gizmo_Slider
             alphaMultiplier = 1f - (timePulse - 0.25f) / 0.6f;
         }
 
-        // if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability commandAbility && resource.Max > 0f)
-        // {
-        //     foreach (var effectComp in commandAbility.Ability.EffectComps)
-        //     {
-        //         if (effectComp is not CompAbilityEffect_NanitesCost compAbilityEffectNanitesCost)
-        //         {
-        //             continue;
-        //         }
-        //
-        //         var props = compAbilityEffectNanitesCost.Props;
-        //
-        //         if (props.nanitesCost < float.Epsilon) continue;
-        //
-        //         var rect = barRect.ContractedBy(3f);
-        //         float barWidth = rect.width;
-        //         float currentPercent = resource.CurrentNanites / resource.Max;
-        //
-        //         rect.xMax = rect.xMin + barWidth * currentPercent;
-        //
-        //         float costPercent = Mathf.Min(props.nanitesCost / resource.Max, 1f);
-        //         rect.xMin = Mathf.Max(rect.xMin, rect.xMax - barWidth * costPercent);
-        //
-        //         GUI.color = new Color(1f, 1f, 1f, alphaMultiplier * 0.7f);
-        //         GenUI.DrawTextureWithMaterial(rect, s_naniteCostTex, null);
-        //         GUI.color = Color.white;
-        //         return gizmoResult;
-        //     }
-        // }
+        if (MapGizmoUtility.LastMouseOverGizmo is Command_Ability commandAbility && resource.Max > 0f)
+        {
+            float nanitesCost = AbilityComp_NanitesCost.CostOf(commandAbility.Ability);
+            if (nanitesCost > float.Epsilon)
+            {
+                var rect = barRect.ContractedBy(3f);
+                float barWidth = rect.width;
+                float currentPercent = resource.CurrentNanites / resource.Max;
+
+                rect.xMax = rect.xMin + barWidth * currentPercent;
+
+                float costPercent = Mathf.Min(nanitesCost / resource.Max, 1f);
+                rect.xMin = Mathf.Max(rect.xMin, rect.xMax - barWidth * costPercent);
+
+                GUI.color = new Color(1f, 1f, 1f, alphaMultiplier * 0.7f);
+                GenUI.DrawTextureWithMaterial(rect, s_naniteCostTex, null);
+                GUI.color = Color.white;
+                return gizmoResult;
+            }
+        }
 
         if (Mouse.IsOver(barRect))
         {

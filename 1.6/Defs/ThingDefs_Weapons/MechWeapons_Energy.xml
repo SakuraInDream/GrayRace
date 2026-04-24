@@ -2,6 +2,8 @@
 <Defs>
   <ThingDef Name="GR_MechWeapon_PulseLaserBase" ParentName="LightMechanoidGunRanged" Abstract="True">
     <techLevel>Spacer</techLevel>
+    <!-- 当前占位图是按 45 度斜向绘制的，先用原版角度偏移补偿 -->
+    <equippedAngleOffset>45</equippedAngleOffset>
     <graphicData>
       <!-- 占位 -->
       <texPath>Things/Item/Weapon/Energy/Energy_AR</texPath>

@@ -9,6 +9,7 @@ public class GRMechSlotEntry
     public string label;
     public GRMechSlotDef slotDef;
     public BodyPartDef anchorBodyPart;
+    public Vector3 hardpointOffset = Vector3.zero;
     public int uiOrder;
 
     public GRMechSlotComponentType componentType => slotDef?.componentType ?? GRMechSlotComponentType.Undefined;
@@ -26,4 +27,6 @@ public class GRMechSlotEntry
     public string glyph => slotDef?.DisplayGlyph ?? string.Empty;
 
     public Color designerColor => slotDef?.designerColor ?? Color.white;
+
+    public bool HasHardpointOffset => hardpointOffset.sqrMagnitude > 0.0001f;
 }
