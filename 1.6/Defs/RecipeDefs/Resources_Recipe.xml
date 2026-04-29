@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!--灰潮源质-->
+  <!--灰色血肉提取灰潮源质-->
   <RecipeDef>
     <defName>GR_Extract</defName>
     <label>Extract Nanites x500</label>
@@ -12,7 +12,7 @@
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>300</workAmount>
     <recipeUsers>
-      <li>TableMachining</li>
+      <li>FabricationBench</li>
     </recipeUsers>
     <ingredients>
       <li>
@@ -40,6 +40,44 @@
   </RecipeDef>
 
   <!--原材料制造灰潮源质-->
+
+  <!--低效率钢铁-->
+  <RecipeDef>
+    <defName>GR_Steel_Make_Nanites_LowEfficiency</defName>
+    <label>make Nanites x125</label>
+    <description>Make Nanites.</description>
+    <jobString>Making Nanites.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>6000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <recipeUsers>
+      <li>FabricationBench</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <GR_Nanites>125</GR_Nanites>
+    </products>
+    <workSkill>Crafting</workSkill>
+    <displayPriority>2</displayPriority>
+  </RecipeDef>
+
+  <!--钢铁-->
   <RecipeDef>
     <defName>GR_Steel_Make_Nanites</defName>
     <label>make Nanites x500</label>
@@ -112,6 +150,7 @@
     <displayPriority>3</displayPriority>
   </RecipeDef>
 
+  <!--铀-->
   <RecipeDef>
     <defName>GR_Uranium_Make_Nanites</defName>
     <label>make Nanites x1000</label>
@@ -184,6 +223,7 @@
     <displayPriority>5</displayPriority>
   </RecipeDef>
 
+  <!--玻璃钢-->
   <RecipeDef>
     <defName>GR_Plasteel_Make_Nanites</defName>
     <label>make Nanites x2500</label>
@@ -256,7 +296,7 @@
     <displayPriority>7</displayPriority>
   </RecipeDef>
 
-  <!--合金-->
+  <!--铸造合金-->
   <RecipeDef>
     <defName>GR_Alloy_recipe_Less</defName>
     <label>cast Alloy x200</label>
@@ -313,7 +353,7 @@
     <workSkill>Crafting</workSkill>
   </RecipeDef>
 
-  <!--合金2-->
+  <!--铸造合金2-->
   <RecipeDef>
     <defName>GR_Alloy_recipe_Normal</defName>
     <label>cast Alloy x500</label>
@@ -370,7 +410,7 @@
     <workSkill>Crafting</workSkill>
   </RecipeDef>
 
-  <!--合金3-->
+  <!--铸造合金3-->
   <RecipeDef>
     <defName>GR_Alloy_recipe_Much</defName>
     <label>cast Alloy x1000</label>

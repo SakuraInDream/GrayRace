@@ -412,6 +412,7 @@
       <MoveSpeed>7</MoveSpeed>      <!--移动速度-->
       <Flammability>-10</Flammability>      <!--可燃率-->
       <ToxicResistance>10</ToxicResistance>      <!--毒素抗性-->
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>     <!--真空抗性-->
       <ComfyTemperatureMin>-273</ComfyTemperatureMin>      <!--最低舒适温度-->
       <ComfyTemperatureMax>1453</ComfyTemperatureMax>      <!--最高舒适温度-->
       <Mass>10</Mass>      <!--质量-->
@@ -520,7 +521,7 @@
         <multiplier>0</multiplier>
       </li>
     </damageMultipliers>
-    <!--==맨손전투===================================================================================================================-->
+    <!--=====================================================================================================================-->
     <tools>      <!--空手攻击的设置-->
       <li>
         <label>left fist</label>

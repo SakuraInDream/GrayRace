@@ -20,6 +20,10 @@
         <countRange>10~25</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
+        <thingDef>GR_Nanites</thingDef>
+        <countRange>500~2000</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
         <thingDef>GR_Alloy</thingDef>
         <countRange>250~400</countRange>
       </li>
@@ -109,7 +113,7 @@
     </stockGenerators>
   </TraderKindDef>
 
-  <!--======================================================================================-->
+  <!--=========================================稀有品贸易商=============================================-->
 
   <TraderKindDef>
     <defName>Caravan_Gray_Exotic</defName>

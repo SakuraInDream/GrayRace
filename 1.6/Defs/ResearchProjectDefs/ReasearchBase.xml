@@ -88,7 +88,7 @@
     <techprintCount>1</techprintCount>
     <techprintCommonality>0</techprintCommonality>
     <heldByFactionCategoryTags>
-      <li>GR_Faction_NPC</li>
+      <li>Gray_Faction</li>
     </heldByFactionCategoryTags>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
@@ -222,7 +222,7 @@
     <techprintCount>1</techprintCount>
     <techprintCommonality>0</techprintCommonality>
     <heldByFactionCategoryTags>
-      <li>GR_Faction_NPC</li>
+      <li>Gray_Faction</li>
     </heldByFactionCategoryTags>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
@@ -377,7 +377,7 @@
     <techprintCount>1</techprintCount>
     <techprintCommonality>0</techprintCommonality>
     <heldByFactionCategoryTags>
-      <li>GR_Faction_NPC</li>
+      <li>Gray_Faction</li>
     </heldByFactionCategoryTags>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
