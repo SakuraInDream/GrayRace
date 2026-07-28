@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- <SD.GrayRace.Defs.GRMechModuleDef>
-    <defName>GR_MechModule_AA12mm</defName>
-    <label>12mm AA battery</label>
-    <description>Compact rapid-fire gun battery intended for light Gray frigate hulls.</description>
-    <iconPath>Things/Item/Weapon/RailGun/Rail_MG</iconPath>
-    <compatibleSlots>
-      <li>GR_MechSlot_SmallTurret</li>
-    </compatibleSlots>
-    <researchPrerequisites>
-      <li>GR_T1MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>20</GR_Alloy>
-    </costList>
-    <power>-5</power>
-    <equipmentDef>GR_MechWeapon_12mmAA</equipmentDef>
-    <uiOrder>1100</uiOrder>
-  </SD.GrayRace.Defs.GRMechModuleDef> -->
-
   <!-- 这一块的 modding 稍微麻烦一点 -->
   <!-- 下面的 iconPath 均为 Stellaris 经过垂直翻转处理后的文件 -->
   <!-- 红色激光 -->

@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using RimWorld;
-using SD.GrayRace.Comps;
 using SD.GrayRace.Defs;
+using SD.GrayRace.Mechs;
 using UnityEngine;
 using Verse;
 
-namespace SD.GrayRace.Mechs;
+namespace SD.GrayRace.Comps;
 
 [StaticConstructorOnStartup]
-public class GrayMechTurretBankSystem : GrayMechSystemBase
+public class CompMultiTurretGun : ThingComp
 {
     private static readonly CachedTexture ToggleTurretIcon = new("UI/Gizmos/ToggleTurret");
     private static readonly CachedTexture ForceTargetIcon = new("UI/Commands/Attack");
@@ -20,7 +20,6 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
     private const int TargetReticlePersistTicks = 36;
     private const int WeaponGraphicCombatGraceTicks = 300;
     private const float HardpointAltitudeLayer = 92f;
-    private const float SelectionWarmupPieOffset = 0.2f;
     private const float ProjectileOriginForwardOffset = 0.12f;
     private const float IdleAimAngle = 143f;
     private const float IdleAimAngleWest = 217f;
@@ -35,13 +34,13 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
     private bool pendingRebuild;
     private LocalTargetInfo forcedTarget = LocalTargetInfo.Invalid;
 
-    public GrayMechTurretBankSystem()
+    public CompMultiTurretGun()
     {
         forcedTargetValidator = CanForceAttack;
     }
 
-    private Pawn Pawn => pawn;
-    private ThingWithComps ParentThing => Parent;
+    private Pawn Pawn => parent as Pawn;
+    private ThingWithComps ParentThing => parent;
     private Thing ForcedTargetThing => forcedTarget.HasThing ? forcedTarget.Thing : null;
 
     public int HardpointCount => hardpointCount;
@@ -60,13 +59,14 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
 
     public GRMechCombatComputerBehavior CombatComputerBehavior => ActiveCombatComputer?.behavior ?? GRMechCombatComputerBehavior.Undefined;
 
-    public override void Notify_LoadoutChanged()
+    public void Notify_LoadoutChanged()
     {
         RebuildFromSnapshot(Pawn?.TryGetComp<CompGrayMechLoadout>()?.DesignSnapshot);
     }
 
     public override void PostExposeData()
     {
+        base.PostExposeData();
         Scribe_Values.Look(ref fireAtWill, "fireAtWill", defaultValue: true);
         Scribe_TargetInfo.Look(ref forcedTarget, "forcedTarget");
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
@@ -77,17 +77,20 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
 
     public override void PostSpawnSetup(bool respawningAfterLoad)
     {
-        pendingRebuild = pendingRebuild || respawningAfterLoad || hardpointCount == 0;
+        base.PostSpawnSetup(respawningAfterLoad);
+        pendingRebuild = pendingRebuild || hardpointCount == 0;
         TryRebuildFromLoadout();
     }
 
     public override void PostDestroy(DestroyMode mode, Map previousMap)
     {
+        base.PostDestroy(mode, previousMap);
         ClearHardpoints();
     }
 
     public override void CompTick()
     {
+        base.CompTick();
         Pawn p = Pawn;
         if (p == null)
         {
@@ -144,11 +147,7 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
             switch (hp.state)
             {
                 case MechHardpoint.State.Firing:
-                    if (verb.state != VerbState.Bursting)
-                    {
-                        hp.state = MechHardpoint.State.Cooling;
-                    }
-
+                    hp.state = MechHardpoint.State.Cooling;
                     break;
 
                 case MechHardpoint.State.WarmingUp:
@@ -158,15 +157,12 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
                         break;
                     }
 
-                    hp.TickWarmupEffects(
-                        ResolveHardpointOffset(hp).RotatedBy(p.Rotation),
-                        p.stances?.stunner?.Stunned ?? false);
-
                     if (--hp.warmupTicksLeft <= 0)
                     {
-                        if (TryStartHardpointCast(hp, p, baseDrawPos: p.DrawPos))
+                        if (TryStartHardpointCast(hp, p))
                         {
                             hp.NotifyCastStarted();
+                            hp.NotifyCastComplete();
                         }
                         else
                         {
@@ -226,16 +222,6 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
         target = ResolveVerbSelectionTarget(target);
         verb = director.SelectTacticalVerb(hardpoints, hardpointCount, target);
         return verb != null;
-    }
-
-    public Verb ResolveAttackVerbForVanilla(Thing target)
-    {
-        if (!TryGetTacticalVerb(target, out Verb verb))
-        {
-            return null;
-        }
-
-        return verb;
     }
 
     public void RebuildFromSnapshot(GrayMechDesignSnapshot snapshot)
@@ -301,15 +287,10 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
             hp.cooldownTicksLeft = 0;
             hp.warmupTicksLeft = 0;
             hp.curRotation = 0f;
-            hp.Setup(ParentThing, () => OnHardpointCastComplete(hp));
+            hp.Setup(ParentThing);
 
             hardpointCount++;
         }
-    }
-
-    private void OnHardpointCastComplete(MechHardpoint hp)
-    {
-        hp.NotifyCastComplete(Pawn);
     }
 
     private void TryRebuildFromLoadout()
@@ -436,28 +417,56 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
         hp.BeginWarmup(target);
     }
 
-    private bool TryStartHardpointCast(MechHardpoint hp, Pawn pawn, Vector3 baseDrawPos)
+    private bool TryStartHardpointCast(MechHardpoint hp, Pawn pawn)
     {
-        Verb verb = hp.AttackVerb;
-        if (verb == null)
-        {
-            return false;
-        }
-
-        if (!TryGetProjectileOrigin(baseDrawPos, pawn, hp, out Vector3 origin))
+        if (!TryGetProjectileOrigin(pawn.DrawPos, pawn, hp, out Vector3 origin))
         {
             origin = pawn.DrawPos;
         }
 
-        TurretVerbDrawUtility.BeginProjectileOriginOverride(hp.caster, origin);
-        try
+        ThingDef projectileDef = hp.module?.ProjectileDef;
+        if (projectileDef == null)
         {
-            return verb.TryStartCastOn(hp.currentTarget, surpriseAttack: false, canHitNonTargetPawns: true, preventFriendlyFire: false, nonInterruptingSelfCast: true);
+            return false;
         }
-        finally
+
+        TurretShotReport report = TurretShotReport.HitReportFor(pawn, hp, hp.currentTarget);
+        bool canMiss = hp.module?.forcedMissRadius <= 0f;
+
+        Projectile projectile = (Projectile)GenSpawn.Spawn(projectileDef, pawn.Position, pawn.Map);
+        ProjectileHitFlags hitFlags;
+        LocalTargetInfo usedTarget;
+
+        if (canMiss && !Rand.Chance(report.AimOnTargetChance))
         {
-            TurretVerbDrawUtility.EndProjectileOriginOverride(hp.caster);
+            ShootLine line = default;
+            hp.TryFindShootLineTo(hp.currentTarget, out line);
+            line.ChangeDestToMissWild(report.AimOnTargetChance, projectileDef.projectile.flyOverhead, pawn.Map);
+            hitFlags = ProjectileHitFlags.NonTargetWorld;
+            if (Rand.Chance(0.5f))
+            {
+                hitFlags |= ProjectileHitFlags.NonTargetPawns;
+            }
+            usedTarget = line.Dest;
         }
+        else if (canMiss && hp.currentTarget.Thing is { def.CanBenefitFromCover: true } && !Rand.Chance(report.PassCoverChance))
+        {
+            Thing hitCover = report.GetRandomCoverToMissInto();
+            hitFlags = ProjectileHitFlags.NonTargetWorld | ProjectileHitFlags.NonTargetPawns;
+            usedTarget = hitCover;
+        }
+        else
+        {
+            hitFlags = ProjectileHitFlags.IntendedTarget | ProjectileHitFlags.NonTargetPawns;
+            if (!hp.currentTarget.HasThing || hp.currentTarget.Thing.def.Fillage == FillCategory.Full)
+            {
+                hitFlags |= ProjectileHitFlags.NonTargetWorld;
+            }
+            usedTarget = hp.currentTarget;
+        }
+
+        projectile.Launch(pawn, origin, usedTarget, hp.currentTarget, hitFlags, equipment: hp.gun, targetCoverDef: null);
+        return true;
     }
 
     private Thing ResolveVerbSelectionTarget(Thing target)
@@ -487,7 +496,7 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
 
     public override IEnumerable<Gizmo> CompGetGizmosExtra()
     {
-        if (pawn is { IsColonyMechPlayerControlled: true })
+        if (Pawn is { IsColonyMechPlayerControlled: true })
         {
             Command_Target forceAttackCommand = new();
             forceAttackCommand.defaultLabel = "CommandSetForceAttackTarget".Translate();
@@ -579,11 +588,6 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
 
     public override void PostDrawExtraSelectionOverlays()
     {
-        if (Pawn != null)
-        {
-            DrawWarmupAimPies(Pawn, Pawn.DrawPos);
-        }
-
         if (!forcedTarget.IsValid || !forcedTarget.HasThing)
         {
             DrawActiveTargetHighlights(Pawn);
@@ -629,8 +633,6 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
             }
         }
 
-        // 瞄准扇形统一由 PostDrawExtraSelectionOverlays 绘制，这里不再重复调用。
-
         if (ShouldDrawHostileTargetIndicators(p))
         {
             DrawActiveTargetHighlights(p);
@@ -659,63 +661,6 @@ public class GrayMechTurretBankSystem : GrayMechSystemBase
                 attackVerb.DrawHighlight(highlightTarget);
             }
         }
-    }
-
-    public override void PostDraw()
-    {
-        // Pawn.DynamicDrawPhaseAt draws the renderer after ThingWithComps.Comps_PostDraw,
-        // so turret overlays must be drawn from a post-render hook to stay visible.
-    }
-
-    private void DrawWarmupAimPies(Pawn p, Vector3 baseDrawPos)
-    {
-        if (p == null || !Find.Selector.IsSelected(p))
-        {
-            return;
-        }
-
-        for (int i = 0; i < hardpointCount; i++)
-        {
-            MechHardpoint hp = hardpoints[i];
-            if (hp == null || hp.state != MechHardpoint.State.WarmingUp || !hp.currentTarget.IsValid)
-            {
-                continue;
-            }
-
-            int degreesWide = ComputeWarmupPieDegrees(hp);
-            if (degreesWide <= 0)
-            {
-                continue;
-            }
-
-            if (!TryGetHardpointDrawPos(baseDrawPos, p, hp, out Vector3 center))
-            {
-                continue;
-            }
-
-            center.y = AltitudeLayer.MetaOverlays.AltitudeFor() + SelectionWarmupPieOffset;
-            float facing = (GetTargetDrawPos(hp.currentTarget) - center).AngleFlat();
-            // DrawAimPieRaw 内部会将 center 再前推 0.8 格。我们传入的 center 已经是炮口位置，
-            // 提前扣掉这 0.8 格，确保扇形顶点真正落在炮口上，而非被推到炮口之外。
-            Vector3 pieApex = center - Quaternion.AngleAxis(facing, Vector3.up) * Vector3.forward * 0.8f;
-            GenDraw.DrawAimPieRaw(pieApex, facing, degreesWide);
-        }
-    }
-
-    private static int ComputeWarmupPieDegrees(MechHardpoint hp)
-    {
-        int ticksLeft = hp?.warmupTicksLeft ?? 0;
-        int total = hp?.baseWarmupTicks ?? 0;
-        if (ticksLeft <= 0 || total <= 0)
-        {
-            return 0;
-        }
-
-        // 起始张角：短 warmup(30-60 tick) 保底 60°，长 warmup 最多 180°；
-        // 线性按剩余 tick 比例收缩，与 vanilla Stance_Warmup 观感一致。
-        int maxSpan = Mathf.Clamp(total, 60, 180);
-        float progress = Mathf.Clamp01(ticksLeft / (float)total);
-        return Mathf.Max(1, Mathf.RoundToInt(maxSpan * progress));
     }
 
     private bool AnyHardpointDisplayingTarget()

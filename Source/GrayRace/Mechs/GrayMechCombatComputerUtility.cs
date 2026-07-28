@@ -22,7 +22,7 @@ public static class GrayMechCombatComputerUtility
 
     public static GRMechCombatComputerModuleDef GetActiveCombatComputer(Pawn pawn)
     {
-        return pawn?.TryGetComp<CompGrayMechSystems>()?.TurretBankSystem?.ActiveCombatComputer;
+        return pawn?.TryGetComp<CompMultiTurretGun>()?.ActiveCombatComputer;
     }
 
     public static GRMechCombatComputerWeaponSelectionMode ResolveWeaponSelection(GRMechCombatComputerModuleDef combatComputer)

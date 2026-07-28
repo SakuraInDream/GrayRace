@@ -53,7 +53,7 @@
         <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
         <blocksRangedWeapons>false</blocksRangedWeapons>
       </li>
-      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechSystems" />
+      <li Class="SD.GrayRace.Comps.CompPropertiesMultiTurretGun" />
     </comps>
   </ThingDef>
 

@@ -143,7 +143,7 @@ public class JobGiver_GrayMechFightEnemies : JobGiver_AIFightEnemies
 
     private static Verb ResolveRangedVerb(Pawn pawn, Thing target)
     {
-        GrayMechTurretBankSystem turretBank = pawn?.TryGetComp<CompGrayMechSystems>()?.TurretBankSystem;
+        CompMultiTurretGun turretBank = pawn?.TryGetComp<CompMultiTurretGun>();
         if (turretBank != null && turretBank.TryGetTacticalVerb(target, out Verb turretVerb))
         {
             return turretVerb;

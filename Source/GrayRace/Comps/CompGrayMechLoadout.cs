@@ -31,7 +31,7 @@ public class CompGrayMechLoadout : ThingComp
         {
             GrayMechModuleApplier.ApplyLoadout(Pawn, designSnapshot);
             Pawn.TryGetComp<CompGrayMechVanillaShield>()?.Notify_LoadoutChanged();
-            Pawn.TryGetComp<CompGrayMechSystems>()?.Notify_LoadoutChanged();
+            Pawn.TryGetComp<CompMultiTurretGun>()?.Notify_LoadoutChanged();
         }
     }
 
@@ -49,7 +49,7 @@ public class CompGrayMechLoadout : ThingComp
         {
             GrayMechModuleApplier.ApplyLoadout(Pawn, designSnapshot);
             Pawn.TryGetComp<CompGrayMechVanillaShield>()?.Notify_LoadoutChanged();
-            Pawn.TryGetComp<CompGrayMechSystems>()?.Notify_LoadoutChanged();
+            Pawn.TryGetComp<CompMultiTurretGun>()?.Notify_LoadoutChanged();
         }
     }
 

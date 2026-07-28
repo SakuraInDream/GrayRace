@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -25,6 +26,14 @@ public class GRMechModuleDef : Def
     public List<StatModifier> statFactors = new();
     public BodyPartDef anchorBodyPart;
     public int uiOrder;
+
+    public float accuracyTouch = 1f;
+    public float accuracyShort = 1f;
+    public float accuracyMedium = 1f;
+    public float accuracyLong = 1f;
+    public float forcedMissRadius;
+
+    public ThingDef ProjectileDef => equipmentDef?.Verbs?.FirstOrDefault()?.defaultProjectile;
 
     public override void PostLoad()
     {

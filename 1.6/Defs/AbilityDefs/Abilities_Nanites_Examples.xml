@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    模板：消耗备用灰潮源质的能力。
+    玩家新增能力时复制此 AbilityDef，保留 abilityClass 与 CompProperties_AbilityNanitesCost，
+    然后按需替换 verbProperties、nanitesCost 与后续原版/自定义效果 Comp。
+  -->
+  <AbilityDef Abstract="True" Name="GR_NaniteCostAbilityBase">
+    <abilityClass>SD.GrayRace.Abilities.Ability_NaniteCost</abilityClass>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <comps>
+      <li Class="SD.GrayRace.Abilities.CompProperties_AbilityNanitesCost">
+        <nanitesCost>10</nanitesCost>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>
