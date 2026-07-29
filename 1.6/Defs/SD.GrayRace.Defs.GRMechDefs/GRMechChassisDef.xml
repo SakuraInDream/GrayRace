@@ -153,9 +153,7 @@
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
     <sectionSlots>
-      <li>GR_MechSection_Bow</li>
       <li>GR_MechSection_Mid</li>
-      <li>GR_MechSection_Stern</li>
     </sectionSlots>
   </SD.GrayRace.Defs.GRMechChassisDef>
 </Defs>
