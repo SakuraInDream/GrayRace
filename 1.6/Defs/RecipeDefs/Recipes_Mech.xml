@@ -1,49 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-  <RecipeDef ParentName="LightMechanoidRecipe">
+  <!-- 所有的机械体（舰船）都只需要动态消耗合金。根据区段和实际安装的模块进行计算 -->
+  <RecipeDef>
     <defName>GR_Mech_FF</defName>
-    <label>护卫舰</label>
+    <label>建造护卫舰</label>
     <description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</description>
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
-    <gestationCycles>1</gestationCycles>
-    <formingTicks>6000</formingTicks>
-    <ingredients Inherit="False">
-      <li>
-        <filter>
-          <thingDefs>
-            <li>GR_Alloy</li>
-          </thingDefs>
-        </filter>
-        <count>90</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>GR_Nanites</li>
-          </thingDefs>
-        </filter>
-        <count>20</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>SubcoreBasic</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <products>
-      <GR_Mech_FF>1</GR_Mech_FF>
-    </products>
-    <descriptionHyperlinks>
-      <ThingDef>GR_Mech_FF</ThingDef>
-    </descriptionHyperlinks>
+
     <modExtensions>
       <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
         <!-- 需要指定一个基础机体布局，这里指定护卫舰布局 -->
         <chassis>GR_Chassis_Corvette</chassis>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GR_Mech_BB</defName>
+    <label>建造战列舰</label>
+    <description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</description>
+    <researchPrerequisite>GR_T5MechTech</researchPrerequisite>
+
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+        <chassis>GR_Chassis_Battleship</chassis>
       </li>
     </modExtensions>
   </RecipeDef>

@@ -365,6 +365,11 @@ public class CompGrayMechAssemblyBay : ThingComp, IThingHolder
             return false;
         }
 
+        if (!GrayMechDesignUtility.TryResolvePrimaryEquipmentModule(designSnapshot, out _, out reason))
+        {
+            return false;
+        }
+
         if (GrayMechDesignUtility.TryGetFirstMissingResearch(designSnapshot, out ResearchProjectDef missingProject))
         {
             reason = "Missing research: " + missingProject.LabelCap;

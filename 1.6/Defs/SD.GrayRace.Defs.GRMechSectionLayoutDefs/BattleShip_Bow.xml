@@ -172,6 +172,7 @@
       <li>
         <key>EXTRA_LARGE_01</key>
         <slotDef>GR_MechSlot_ExtraLarge</slotDef>
+        <weaponMountMode>PrimaryEquipment</weaponMountMode>
         <hardpointOffset>(0,0,0.34)</hardpointOffset>
         <uiOrder>0</uiOrder>
       </li>

@@ -111,6 +111,12 @@ public class GRMechChassisDef : Def
                 {
                     yield return defName + " required component slot " + slot.key + " uses slotDef without coreRole.";
                 }
+
+                if (slot.weaponMountMode == GRMechWeaponMountMode.PrimaryEquipment
+                    && slot.componentType != GRMechSlotComponentType.Weapon)
+                {
+                    yield return defName + " required component slot " + slot.key + " uses PrimaryEquipment but is not a Weapon slot.";
+                }
             }
         }
 

@@ -33,6 +33,9 @@ public sealed class MechHardpoint
     public int cooldownTicksLeft;
     public int baseWarmupTicks = 1;
     public float curRotation;
+    public float deploymentProgress;
+    public int visualIndex;
+    public Vector3 floatingOffset;
 
     public Verb AttackVerb => gun?.TryGetComp<CompEquippable>()?.PrimaryVerb;
     public Verb CurrentEffectiveVerb => AttackVerb;
@@ -40,6 +43,14 @@ public sealed class MechHardpoint
     public bool IsActivelyEngaging => state == State.WarmingUp || state == State.Firing;
     public bool IsAiming => currentTarget.IsValid && state != State.Idle;
     public bool WarmingUp => state == State.WarmingUp && warmupTicksLeft > 0;
+    public bool IsFullyDeployed => deploymentProgress >= 1f;
+
+    public void TickDeployment(bool deployRequested)
+    {
+        int duration = Mathf.Max(1, module?.weaponDeploymentTicks ?? 1);
+        float target = deployRequested ? 1f : 0f;
+        deploymentProgress = Mathf.MoveTowards(deploymentProgress, target, 1f / duration);
+    }
 
     public void Setup(Thing casterPawn)
     {

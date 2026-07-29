@@ -1,4 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_Cruiser_SternBase" Abstract="True">
+    <sectionSlot>GR_MechSection_Stern</sectionSlot>
+    <shipSize>GR_Chassis_Cruiser</shipSize>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>240</GR_Alloy>
+    </costList>
+    <uiOrder>400</uiOrder>
+    <slots>
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_02</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_SternBase">
+    <defName>GR_Cruiser_Stern_M1</defName>
+    <label>齐射舰艉</label>
+    <description>Copied from Stellaris CRUISER_STERN_M1.</description>
+    <slots>
+      <li>
+        <key>MEDIUM_GUN_01</key>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointOffset>(0.14,0,-0.06)</hardpointOffset>
+        <uiOrder>0</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_SternBase">
+    <defName>GR_Cruiser_Stern_S2</defName>
+    <label>炮艇舰艉</label>
+    <description>Heavy carrier mid section copied from Stellaris CRUISER_STERN_M1.</description>
+    <slots>
+      <li>
+        <key>SMALL_GUN_01</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointOffset>(0.18,0,0.08)</hardpointOffset>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_02</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointOffset>(0.18,0,0.08)</hardpointOffset>
+        <uiOrder>1</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 </Defs>

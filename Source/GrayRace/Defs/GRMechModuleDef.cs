@@ -22,6 +22,7 @@ public class GRMechModuleDef : Def
     public Texture2D uiIcon = BaseContent.BadTex;
     public ThingDef equipmentDef;
     public ThingDef equipmentStuff;
+    public int weaponDeploymentTicks;
     public List<StatModifier> statOffsets = new();
     public List<StatModifier> statFactors = new();
     public BodyPartDef anchorBodyPart;
@@ -212,6 +213,11 @@ public class GRMechModuleDef : Def
         if (equipmentStuff != null && !equipmentStuff.IsStuff)
         {
             yield return defName + " equipmentStuff is not a stuff ThingDef.";
+        }
+
+        if (equipmentDef != null && weaponDeploymentTicks <= 0)
+        {
+            yield return defName + " has equipmentDef but weaponDeploymentTicks is not greater than zero.";
         }
 
         if (!allowedChassis.NullOrEmpty())

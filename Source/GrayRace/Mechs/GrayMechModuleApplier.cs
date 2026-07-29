@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using RimWorld;
 using SD.GrayRace.Defs;
 using Verse;
@@ -15,7 +16,15 @@ public static class GrayMechModuleApplier
 
         if (pawn.equipment != null && snapshot != null && GrayMechDesignUtility.HasAnyEquipmentModules(snapshot))
         {
-            pawn.equipment.DestroyAllEquipment();
+            ThingWithComps primary = pawn.equipment.Primary;
+            List<ThingWithComps> equipment = pawn.equipment.AllEquipmentListForReading;
+            for (int i = equipment.Count - 1; i >= 0; i--)
+            {
+                if (equipment[i] != primary)
+                {
+                    pawn.equipment.DestroyEquipment(equipment[i]);
+                }
+            }
         }
 
         if (snapshot?.modules == null)

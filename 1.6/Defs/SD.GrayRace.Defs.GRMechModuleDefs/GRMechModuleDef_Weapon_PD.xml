@@ -20,6 +20,7 @@
     </costList>
     <power>-5</power>
     <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
     <uiOrder>0</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -43,6 +44,7 @@
     <power>-7</power>
     <!-- 占位 -->
     <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
     <uiOrder>1</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
@@ -63,6 +65,7 @@
     <power>-10</power>
     <!-- 占位 -->
     <equipmentDef>GR_MechWeapon_PDArray</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
     <uiOrder>2</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 

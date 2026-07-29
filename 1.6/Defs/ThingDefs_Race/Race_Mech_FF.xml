@@ -53,7 +53,12 @@
         <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
         <blocksRangedWeapons>false</blocksRangedWeapons>
       </li>
-      <li Class="SD.GrayRace.Comps.CompPropertiesMultiTurretGun" />
+      <li Class="SD.GrayRace.Comps.CompPropertiesMultiTurretGun">
+        <floatingWeaponOffsetScale>2</floatingWeaponOffsetScale>
+        <floatingWeaponMinRadius>0.65</floatingWeaponMinRadius>
+        <floatingWeaponBobAmplitude>0.04</floatingWeaponBobAmplitude>
+        <floatingWeaponBobPeriodTicks>120</floatingWeaponBobPeriodTicks>
+      </li>
     </comps>
   </ThingDef>
 

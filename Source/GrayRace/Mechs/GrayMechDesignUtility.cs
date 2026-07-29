@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
 using RimWorld;
@@ -318,6 +319,77 @@ public static class GrayMechDesignUtility
     public static bool IsWeaponModule(GRMechModuleDef module)
     {
         return module?.equipmentDef != null && module.UsesSlotCategory(GRMechSlotCategory.Weapon);
+    }
+
+    public static bool TryResolvePrimaryEquipmentModule(GrayMechDesignSnapshot snapshot, out GRMechModuleDef primaryModule, out string reason)
+    {
+        primaryModule = null;
+        reason = string.Empty;
+        if (snapshot?.modules == null)
+        {
+            return true;
+        }
+
+        for (int i = 0; i < snapshot.modules.Count; i++)
+        {
+            GrayMechModuleAssignment assignment = snapshot.modules[i];
+            GRMechModuleDef module = assignment?.module;
+            if (module == null
+                || !TryResolveSlot(snapshot, assignment.sectionSlot, assignment.slotKey, out GRMechSlotEntry slot, out _)
+                || slot.weaponMountMode != GRMechWeaponMountMode.PrimaryEquipment)
+            {
+                continue;
+            }
+
+            if (slot.componentType != GRMechSlotComponentType.Weapon || !IsWeaponModule(module))
+            {
+                reason = "Primary equipment slot " + slot.key + " must contain a weapon module.";
+                return false;
+            }
+
+            if (primaryModule != null)
+            {
+                reason = "A design can install at most one primary weapon.";
+                return false;
+            }
+
+            ThingDef equipmentDef = module.equipmentDef;
+            if (equipmentDef.equipmentType != EquipmentType.Primary)
+            {
+                reason = "Primary weapon module " + module.LabelCap + " must use equipmentType Primary.";
+                return false;
+            }
+
+            if (!HasEquippableComp(equipmentDef))
+            {
+                reason = "Primary weapon module " + module.LabelCap + " must provide CompEquippable.";
+                return false;
+            }
+
+            primaryModule = module;
+        }
+
+        return true;
+    }
+
+    private static bool HasEquippableComp(ThingDef equipmentDef)
+    {
+        List<CompProperties> comps = equipmentDef?.comps;
+        if (comps == null)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < comps.Count; i++)
+        {
+            Type compClass = comps[i]?.compClass;
+            if (compClass != null && typeof(CompEquippable).IsAssignableFrom(compClass))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public static bool TryResolveSlot(GrayMechDesignSnapshot snapshot, GRMechSectionSlotDef sectionSlot, string slotKey, out GRMechSlotEntry slot, out GRMechSectionLayoutDef layout)

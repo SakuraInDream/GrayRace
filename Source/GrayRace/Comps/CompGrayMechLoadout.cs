@@ -27,11 +27,9 @@ public class CompGrayMechLoadout : ThingComp
         cachedModuleStatOffsets = null;
         cachedModuleStatFactors = null;
         ClearAffectedStatCaches(designSnapshot);
-        if (Pawn != null && designSnapshot != null)
+        if (Pawn != null)
         {
-            GrayMechModuleApplier.ApplyLoadout(Pawn, designSnapshot);
-            Pawn.TryGetComp<CompGrayMechVanillaShield>()?.Notify_LoadoutChanged();
-            Pawn.TryGetComp<CompMultiTurretGun>()?.Notify_LoadoutChanged();
+            ApplyResolvedLoadout();
         }
     }
 
@@ -45,11 +43,9 @@ public class CompGrayMechLoadout : ThingComp
             return;
         }
 
-        if (Pawn != null && designSnapshot != null)
+        if (Pawn != null)
         {
-            GrayMechModuleApplier.ApplyLoadout(Pawn, designSnapshot);
-            Pawn.TryGetComp<CompGrayMechVanillaShield>()?.Notify_LoadoutChanged();
-            Pawn.TryGetComp<CompMultiTurretGun>()?.Notify_LoadoutChanged();
+            ApplyResolvedLoadout();
         }
     }
 
@@ -134,6 +130,63 @@ public class CompGrayMechLoadout : ThingComp
     private void EnsureStatOffsetCache()
     {
         EnsureStatCaches();
+    }
+
+    private void ApplyResolvedLoadout()
+    {
+        GrayMechModuleApplier.ApplyLoadout(Pawn, designSnapshot);
+        SyncPrimaryEquipment();
+        Pawn.TryGetComp<CompGrayMechVanillaShield>()?.Notify_LoadoutChanged();
+        Pawn.TryGetComp<CompMultiTurretGun>()?.Notify_LoadoutChanged();
+    }
+
+    private void SyncPrimaryEquipment()
+    {
+        Pawn pawn = Pawn;
+        Pawn_EquipmentTracker equipment = pawn?.equipment;
+        if (equipment == null)
+        {
+            return;
+        }
+
+        GRMechModuleDef module = null;
+        if (!GrayMechDesignUtility.TryResolvePrimaryEquipmentModule(designSnapshot, out module, out _))
+        {
+            module = null;
+        }
+
+        ThingDef desiredDef = module?.equipmentDef;
+        ThingDef desiredStuff = null;
+        if (desiredDef?.MadeFromStuff == true)
+        {
+            desiredStuff = module.equipmentStuff ?? GenStuff.DefaultStuffFor(desiredDef);
+        }
+
+        ThingWithComps current = equipment.Primary;
+        if (current != null && current.def == desiredDef && current.Stuff == desiredStuff)
+        {
+            return;
+        }
+
+        if (current != null)
+        {
+            equipment.DestroyEquipment(current);
+        }
+
+        if (desiredDef == null)
+        {
+            return;
+        }
+
+        ThingWithComps primary = ThingMaker.MakeThing(desiredDef, desiredStuff) as ThingWithComps;
+        if (primary == null)
+        {
+            Log.Error("Unable to create primary equipment " + desiredDef.defName + " for " + pawn);
+            return;
+        }
+
+        PawnGenerator.PostProcessGeneratedGear(primary, pawn);
+        equipment.AddEquipment(primary);
     }
 
     private void ClearAffectedStatCaches(GrayMechDesignSnapshot snapshot)

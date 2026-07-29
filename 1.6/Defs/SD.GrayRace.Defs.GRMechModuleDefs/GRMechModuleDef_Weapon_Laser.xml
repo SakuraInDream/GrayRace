@@ -29,6 +29,7 @@
     <power>-5</power>
     <!-- 每个武器模块必须都要有一把对应的武器ThingDef -->
     <equipmentDef>GR_MechWeapon_PulseLaser_Infrared</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
@@ -44,6 +45,7 @@
     </costList>
     <power>-13</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Infrared_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
@@ -59,6 +61,7 @@
     </costList>
     <power>-30</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Infrared_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <!-- 蓝色激光 -->
@@ -89,6 +92,7 @@
     </costList>
     <power>-7</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Blue</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
@@ -104,6 +108,7 @@
     </costList>
     <power>-17</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Blue_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
@@ -119,6 +124,7 @@
     </costList>
     <power>-39</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Blue_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <!-- 紫外激光 -->
@@ -146,6 +152,7 @@
     </costList>
     <power>-10</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_UV</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
@@ -161,6 +168,7 @@
     </costList>
     <power>-23</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_UV_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
@@ -176,6 +184,7 @@
     </costList>
     <power>-51</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_UV_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <!-- X射线激光 -->
@@ -203,6 +212,7 @@
     </costList>
     <power>-13</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
@@ -219,6 +229,7 @@
     </costList>
     <power>-30</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
@@ -235,6 +246,7 @@
     </costList>
     <power>-67</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <!-- 伽马激光 -->
@@ -260,6 +272,7 @@
     </costList>
     <power>-17</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_GammaBase">
@@ -273,6 +286,7 @@
     </costList>
     <power>-39</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_GammaBase">
@@ -286,5 +300,6 @@
     </costList>
     <power>-88</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 </Defs>

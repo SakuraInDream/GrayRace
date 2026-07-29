@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 质量投射器 -->
+  <!-- 物质投射炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver1Base" Abstract="True">
-    <label>质量投射器</label>
+    <label>物质投射炮</label>
     <description>此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_1</iconPath>
     <slotFamily>MassDriver1</slotFamily>
@@ -24,7 +24,8 @@
       <GR_Alloy>10</GR_Alloy>
     </costList>
     <power>-5</power>
-    <equipmentDef></equipmentDef>
+    <equipmentDef>GR_MechWeapon_MassDriver1_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver1Base">
@@ -39,7 +40,8 @@
       <GR_Alloy>25</GR_Alloy>
     </costList>
     <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <equipmentDef>GR_MechWeapon_MassDriver1_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver1Base">
@@ -54,7 +56,8 @@
       <GR_Alloy>25</GR_Alloy>
     </costList>
     <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <equipmentDef>GR_MechWeapon_MassDriver1_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <!-- 线圈炮 -->

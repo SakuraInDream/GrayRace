@@ -3,11 +3,18 @@ using Verse;
 
 namespace SD.GrayRace.Defs;
 
+public enum GRMechWeaponMountMode : byte
+{
+    Hardpoint,
+    PrimaryEquipment
+}
+
 public class GRMechSlotEntry
 {
     public string key;
     public string label;
     public GRMechSlotDef slotDef;
+    public GRMechWeaponMountMode weaponMountMode;
     public BodyPartDef anchorBodyPart;
     public Vector3 hardpointOffset = Vector3.zero;
     public int uiOrder;

@@ -93,6 +93,12 @@ public class GRMechSectionLayoutDef : Def
                 {
                     yield return defName + " slot " + slot.key + " has null slotSize.";
                 }
+
+                if (slot.weaponMountMode == GRMechWeaponMountMode.PrimaryEquipment
+                    && slot.componentType != GRMechSlotComponentType.Weapon)
+                {
+                    yield return defName + " slot " + slot.key + " uses PrimaryEquipment but is not a Weapon slot.";
+                }
             }
         }
 

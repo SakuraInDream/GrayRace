@@ -368,9 +368,13 @@ internal static class GrayMechDrydockTabText
         string power = module != null && module.GetNetPower(chassis) != 0
             ? "\nPower: " + FormatSignedInt(module.GetNetPower(chassis))
             : string.Empty;
+        string mountMode = resolvedSlot.slot.weaponMountMode == GRMechWeaponMountMode.PrimaryEquipment
+            ? "\nMount: 主武器"
+            : string.Empty;
         string body = GetSlotOwnerLabel(resolvedSlot)
                       + "\n"
                       + BuildSlotTypeSummary(resolvedSlot.slot)
+                      + mountMode
                       + "\n"
                       + state
                       + power;
