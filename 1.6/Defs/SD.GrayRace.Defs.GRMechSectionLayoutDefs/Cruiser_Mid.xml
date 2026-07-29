@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
-    <defName>GR_Cruiser_Mid_S2HB</defName>
-    <label>格纳库核心</label>
-    <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_S2HB.</description>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_Cruiser_MidBase" Abstract="True">
     <sectionSlot>GR_MechSection_Mid</sectionSlot>
     <shipSize>GR_Chassis_Cruiser</shipSize>
     <researchPrerequisites>
@@ -12,7 +9,35 @@
     <costList>
       <GR_Alloy>240</GR_Alloy>
     </costList>
-    <uiOrder>400</uiOrder>
+    <slots>
+      <li>
+        <key>MEDIUM_UTILITY_01</key>
+        <slotDef>GR_MechSlot_MediumUtility</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_UTILITY_02</key>
+        <slotDef>GR_MechSlot_MediumUtility</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_UTILITY_03</key>
+        <slotDef>GR_MechSlot_MediumUtility</slotDef>
+        <uiOrder>7</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_UTILITY_04</key>
+        <slotDef>GR_MechSlot_MediumUtility</slotDef>
+        <uiOrder>8</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
+    <defName>GR_Cruiser_Mid_S2HB</defName>
+    <label>格纳库核心</label>
+    <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_S2HB.</description>
+    <uiOrder>0</uiOrder>
     <slots>
       <li>
         <key>PD_01</key>
@@ -31,43 +56,14 @@
         <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
         <uiOrder>3</uiOrder>
       </li>
-
-      <li>
-        <key>MEDIUM_UTILITY_01</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_02</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_03</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_04</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>8</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
     <defName>GR_Cruiser_Mid_L1M1</defName>
     <label>巨炮核心</label>
     <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_L1M1.</description>
-    <sectionSlot>GR_MechSection_Mid</sectionSlot>
-    <shipSize>GR_Chassis_Cruiser</shipSize>
-    <researchPrerequisites>
-      <li>GR_T3MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>240</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>1</uiOrder>
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
@@ -81,43 +77,14 @@
         <hardpointOffset>(0.14,0,-0.06)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
-
-      <li>
-        <key>MEDIUM_UTILITY_01</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_02</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_03</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_04</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>8</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
     <defName>GR_Cruiser_Mid_M3</defName>
     <label>齐射核心</label>
     <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_M3.</description>
-    <sectionSlot>GR_MechSection_Mid</sectionSlot>
-    <shipSize>GR_Chassis_Cruiser</shipSize>
-    <researchPrerequisites>
-      <li>GR_T3MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>240</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>2</uiOrder>
     <slots>
       <li>
         <key>MEDIUM_GUN_01</key>
@@ -137,43 +104,14 @@
         <hardpointOffset>(0.14,0,-0.06)</hardpointOffset>
         <uiOrder>2</uiOrder>
       </li>
-
-      <li>
-        <key>MEDIUM_UTILITY_01</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_02</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_03</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_04</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>8</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
     <defName>GR_Cruiser_Mid_M2S2</defName>
     <label>鱼雷核心</label>
     <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_M2S2.</description>
-    <sectionSlot>GR_MechSection_Mid</sectionSlot>
-    <shipSize>GR_Chassis_Cruiser</shipSize>
-    <researchPrerequisites>
-      <li>GR_T3MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>240</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>3</uiOrder>
     <slots>
       <li>
         <key>TORPEDO_01</key>
@@ -198,27 +136,6 @@
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
         <hardpointOffset>(0.18,0,0.08)</hardpointOffset>
         <uiOrder>3</uiOrder>
-      </li>
-
-      <li>
-        <key>MEDIUM_UTILITY_01</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_02</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_03</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_04</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>8</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
-    <defName>GR_BB_Stern_L1</defName>
-    <label>巨炮舰艉</label>
-    <description>Artillery stern copied from Stellaris BATTLESHIP_STERN_L1.</description>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_BattleShip_SternBase" Abstract="True">
     <sectionSlot>GR_MechSection_Stern</sectionSlot>
     <shipSize>GR_Chassis_Battleship</shipSize>
     <researchPrerequisites>
@@ -12,14 +9,7 @@
     <costList>
       <GR_Alloy>640</GR_Alloy>
     </costList>
-    <uiOrder>100</uiOrder>
     <slots>
-      <li>
-        <key>LARGE_GUN_01</key>
-        <slotDef>GR_MechSlot_LargeTurret</slotDef>
-        <hardpointOffset>(0,0,-0.22)</hardpointOffset>
-        <uiOrder>0</uiOrder>
-      </li>
       <li>
         <key>AUX_UTILITY_01</key>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
@@ -33,19 +23,26 @@
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_SternBase">
+    <defName>GR_BB_Stern_L1</defName>
+    <label>巨炮舰艉</label>
+    <description>Artillery stern copied from Stellaris BATTLESHIP_STERN_L1.</description>
+    <uiOrder>0</uiOrder>
+    <slots>
+      <li>
+        <key>LARGE_GUN_01</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointOffset>(0,0,-0.22)</hardpointOffset>
+        <uiOrder>0</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_SternBase">
     <defName>GR_BB_Stern_M2</defName>
     <label>齐射舰艉</label>
     <description>Line stern copied from Stellaris BATTLESHIP_STERN_M2.</description>
-    <sectionSlot>GR_MechSection_Stern</sectionSlot>
-    <shipSize>GR_Chassis_Battleship</shipSize>
-    <researchPrerequisites>
-      <li>GR_T2MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>640</GR_Alloy>
-    </costList>
-    <uiOrder>200</uiOrder>
+    <uiOrder>1</uiOrder>
     <slots>
       <li>
         <key>MEDIUM_GUN_01</key>
@@ -58,16 +55,6 @@
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
         <hardpointOffset>(0.16,0,-0.18)</hardpointOffset>
         <uiOrder>1</uiOrder>
-      </li>
-      <li>
-        <key>AUX_UTILITY_01</key>
-        <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>AUX_UTILITY_02</key>
-        <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>AUX_UTILITY_03</key>

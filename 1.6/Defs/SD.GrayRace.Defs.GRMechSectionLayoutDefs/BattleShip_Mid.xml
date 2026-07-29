@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
-    <defName>GR_BB_Mid_L2M2</defName>
-    <label>齐射核心</label>
-    <description>Line mid section copied from Stellaris BATTLESHIP_MID_L2M2.</description>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_BattleShip_MidBase" Abstract="True">
     <sectionSlot>GR_MechSection_Mid</sectionSlot>
     <shipSize>GR_Chassis_Battleship</shipSize>
     <researchPrerequisites>
-      <li>GR_T2MechTech</li>
+      <li>GR_T5MechTech</li>
     </researchPrerequisites>
     <costList>
       <GR_Alloy>640</GR_Alloy>
     </costList>
-    <uiOrder>100</uiOrder>
+    <slots>
+      <li>
+        <key>LARGE_UTILITY_01</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_02</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_03</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>7</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_MidBase">
+    <defName>GR_BB_Mid_L2M2</defName>
+    <label>齐射核心</label>
+    <description>Line mid section copied from Stellaris BATTLESHIP_MID_L2M2.</description>
+    <uiOrder>0</uiOrder>
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
@@ -38,37 +58,14 @@
         <hardpointOffset>(0.14,0,-0.06)</hardpointOffset>
         <uiOrder>3</uiOrder>
       </li>
-      <li>
-        <key>LARGE_UTILITY_01</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_02</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_03</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_MidBase">
     <defName>GR_BB_Mid_L3</defName>
     <label>巨炮核心</label>
     <description>Artillery mid section copied from Stellaris BATTLESHIP_MID_L3.</description>
-    <sectionSlot>GR_MechSection_Mid</sectionSlot>
-    <shipSize>GR_Chassis_Battleship</shipSize>
-    <researchPrerequisites>
-      <li>GR_T2MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>640</GR_Alloy>
-    </costList>
-    <uiOrder>200</uiOrder>
+    <uiOrder>1</uiOrder>
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
@@ -88,37 +85,14 @@
         <hardpointOffset>(0.22,0,0.04)</hardpointOffset>
         <uiOrder>2</uiOrder>
       </li>
-      <li>
-        <key>LARGE_UTILITY_01</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_02</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_03</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_MidBase">
     <defName>GR_BB_Mid_M4SHB</defName>
     <label>格纳库核心</label>
     <description>Carrier mid section copied from Stellaris BATTLESHIP_MID_M4SHB.</description>
-    <sectionSlot>GR_MechSection_Mid</sectionSlot>
-    <shipSize>GR_Chassis_Battleship</shipSize>
-    <researchPrerequisites>
-      <li>GR_T2MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>640</GR_Alloy>
-    </costList>
-    <uiOrder>300</uiOrder>
+    <uiOrder>2</uiOrder>
     <slots>
       <li>
         <key>MEDIUM_GUN_01</key>
@@ -149,37 +123,14 @@
         <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
         <uiOrder>4</uiOrder>
       </li>
-      <li>
-        <key>LARGE_UTILITY_01</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_02</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_03</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_MidBase">
     <defName>GR_BB_Mid_S4LHB</defName>
     <label>航母核心</label>
     <description>Heavy carrier mid section copied from Stellaris BATTLESHIP_MID_S4LHB.</description>
-    <sectionSlot>GR_MechSection_Mid</sectionSlot>
-    <shipSize>GR_Chassis_Battleship</shipSize>
-    <researchPrerequisites>
-      <li>GR_T2MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>640</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>3</uiOrder>
     <slots>
       <li>
         <key>SMALL_GUN_01</key>
@@ -214,21 +165,6 @@
         <key>STRIKE_CRAFT_02</key>
         <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
         <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_01</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_02</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_03</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>

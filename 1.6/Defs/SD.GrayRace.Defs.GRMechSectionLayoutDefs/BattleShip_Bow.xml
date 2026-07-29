@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
-    <defName>GR_BB_Bow_L1M1S2</defName>
-    <label>齐射舰艏</label>
-    <description>从Stellaris那复制过来的BATTLESHIP_BOW_L1M1S2。</description>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_BattleShip_BowBase" Abstract="True">
     <sectionSlot>GR_MechSection_Bow</sectionSlot>
     <shipSize>GR_Chassis_Battleship</shipSize>
     <researchPrerequisites>
-      <li>GR_T2MechTech</li>
+      <li>GR_T5MechTech</li>
     </researchPrerequisites>
     <costList>
       <GR_Alloy>640</GR_Alloy>
     </costList>
-    <uiOrder>100</uiOrder>
+    <slots>
+      <li>
+        <key>LARGE_UTILITY_01</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_02</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_03</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>7</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
+    <defName>GR_BB_Bow_L1M1S2</defName>
+    <label>齐射舰艏</label>
+    <description>从Stellaris那复制过来的BATTLESHIP_BOW_L1M1S2。</description>
+    <uiOrder>0</uiOrder>
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
@@ -38,37 +58,14 @@
         <hardpointOffset>(0.22,0,0.08)</hardpointOffset>
         <uiOrder>3</uiOrder>
       </li>
-      <li>
-        <key>LARGE_UTILITY_01</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_02</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_03</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
     <defName>GR_BB_Bow_L2</defName>
     <label>巨炮舰艏</label>
+    <uiOrder>1</uiOrder>
     <description>从Stellaris那复制过来的BATTLESHIP_BOW_L2。</description>
-    <sectionSlot>GR_MechSection_Bow</sectionSlot>
-    <shipSize>GR_Chassis_Battleship</shipSize>
-    <researchPrerequisites>
-      <li>GR_T2MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>640</GR_Alloy>
-    </costList>
-    <uiOrder>200</uiOrder>
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
@@ -82,37 +79,14 @@
         <hardpointOffset>(0.15,0,0.28)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
-      <li>
-        <key>LARGE_UTILITY_01</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_02</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_03</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
     <defName>GR_BB_Bow_M1S2SHB</defName>
     <label>格纳库舰艏</label>
     <description>从Stellaris那复制过来的BATTLESHIP_BOW_M1S2SHB.</description>
-    <sectionSlot>GR_MechSection_Bow</sectionSlot>
-    <shipSize>GR_Chassis_Battleship</shipSize>
-    <researchPrerequisites>
-      <li>GR_T2MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>640</GR_Alloy>
-    </costList>
-    <uiOrder>300</uiOrder>
+    <uiOrder>2</uiOrder>
     <slots>
       <li>
         <key>MEDIUM_GUN_01</key>
@@ -137,37 +111,14 @@
         <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
         <uiOrder>3</uiOrder>
       </li>
-      <li>
-        <key>LARGE_UTILITY_01</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_02</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_03</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
     <defName>GR_BB_Bow_M2S4</defName>
     <label>脊峰舰艏</label>
     <description>从Stellaris那复制过来的BATTLESHIP_BOW_M2S4</description>
-    <sectionSlot>GR_MechSection_Bow</sectionSlot>
-    <shipSize>GR_Chassis_Battleship</shipSize>
-    <researchPrerequisites>
-      <li>GR_T3MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>640</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>3</uiOrder>
     <slots>
       <li>
         <key>EXTRA_LARGE_01</key>
@@ -175,21 +126,6 @@
         <weaponMountMode>PrimaryEquipment</weaponMountMode>
         <hardpointOffset>(0,0,0.34)</hardpointOffset>
         <uiOrder>0</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_01</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_02</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>LARGE_UTILITY_03</key>
-        <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>

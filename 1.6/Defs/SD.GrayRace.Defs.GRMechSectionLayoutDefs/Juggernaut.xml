@@ -56,6 +56,7 @@
         <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
         <uiOrder>7</uiOrder>
       </li>
+
       <li>
         <key>MEDIUM_GUN_01</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
@@ -80,6 +81,12 @@
         <hardpointOffset>(0.18,0,-0.06)</hardpointOffset>
         <uiOrder>11</uiOrder>
       </li>
+      <li>
+        <key>MEDIUM_GUN_05</key>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointOffset>(0.18,0,-0.06)</hardpointOffset>
+        <uiOrder>12</uiOrder>
+      </li>
 
       <li>
         <key>LARGE_UTILITY_01</key>
@@ -89,37 +96,123 @@
       <li>
         <key>LARGE_UTILITY_02</key>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>1</uiOrder>
+        <uiOrder>5</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_03</key>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>2</uiOrder>
+        <uiOrder>6</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_04</key>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>3</uiOrder>
+        <uiOrder>7</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_05</key>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>4</uiOrder>
+        <uiOrder>8</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_06</key>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>5</uiOrder>
+        <uiOrder>9</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_07</key>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>6</uiOrder>
+        <uiOrder>10</uiOrder>
       </li>
       <li>
         <key>LARGE_UTILITY_08</key>
         <slotDef>GR_MechSlot_LargeUtility</slotDef>
-        <uiOrder>7</uiOrder>
+        <uiOrder>11</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_09</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>12</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_10</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>13</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_11</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>14</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_12</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>15</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_13</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>16</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_14</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>17</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_15</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>18</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_16</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>19</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_17</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>20</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_18</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>21</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_19</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>22</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_20</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>23</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_21</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>24</uiOrder>
+      </li>
+
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>1</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_02</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>2</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_03</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>3</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_04</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>4</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>

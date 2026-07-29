@@ -10,7 +10,7 @@
       <li>GR_T5MechTech</li>
     </researchPrerequisites>
     <costList>
-      <GR_Alloy>640</GR_Alloy>
+      <GR_Alloy>1600</GR_Alloy>
     </costList>
     <uiOrder>400</uiOrder>
     <slots>

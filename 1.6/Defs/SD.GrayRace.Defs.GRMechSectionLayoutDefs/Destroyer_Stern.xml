@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
-    <defName>GR_Destroyer_STERN_PD2</defName>
-    <label>哨卫舰艉</label>
-    <description>从Stellaris那复制的DESTROYER_STERN_PD2。</description>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_Destroyer_SternBase" Abstract="True">
     <sectionSlot>GR_MechSection_Stern</sectionSlot>
     <shipSize>GR_Chassis_Destroyer</shipSize>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
     <costList>
-      <GR_Alloy>40</GR_Alloy>
+      <GR_Alloy>120</GR_Alloy>
     </costList>
-    <uiOrder>400</uiOrder>
+    <slots>
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_SternBase">
+    <defName>GR_Destroyer_STERN_PD2</defName>
+    <label>哨卫舰艉</label>
+    <description>从Stellaris那复制的DESTROYER_STERN_PD2。</description>
+    <uiOrder>0</uiOrder>
     <slots>
       <li>
         <key>PD_01</key>
@@ -26,27 +36,14 @@
         <hardpointOffset>(0.14,0,-0.16)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
-      <li>
-        <key>AUX_UTILITY_01</key>
-        <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_SternBase">
     <defName>GR_Destroyer_STERN_S2</defName>
     <label>拦截者舰艉</label>
     <description>从Stellaris那复制的DESTROYER_STERN_S2。</description>
-    <sectionSlot>GR_MechSection_Stern</sectionSlot>
-    <shipSize>GR_Chassis_Destroyer</shipSize>
-    <researchPrerequisites>
-      <li>GR_T1MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>40</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>1</uiOrder>
     <slots>
       <li>
         <key>SMALL_GUN_01</key>
@@ -61,11 +58,6 @@
         <uiOrder>1</uiOrder>
       </li>
       <li>
-        <key>AUX_UTILITY_01</key>
-        <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
         <key>AUX_UTILITY_02</key>
         <slotDef>GR_MechSlot_Auxiliary</slotDef>
         <uiOrder>6</uiOrder>
@@ -73,30 +65,17 @@
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_SternBase">
     <defName>GR_Destroyer_STERN_M1</defName>
     <label>炮艇舰艉</label>
     <description>从Stellaris那复制的DESTROYER_STERN_M1。</description>
-    <sectionSlot>GR_MechSection_Stern</sectionSlot>
-    <shipSize>GR_Chassis_Destroyer</shipSize>
-    <researchPrerequisites>
-      <li>GR_T1MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>40</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>2</uiOrder>
     <slots>
       <li>
         <key>MEDIUM_GUN_01</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
         <hardpointOffset>(0,0,-0.18)</hardpointOffset>
         <uiOrder>0</uiOrder>
-      </li>
-      <li>
-        <key>AUX_UTILITY_01</key>
-        <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>5</uiOrder>
       </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>

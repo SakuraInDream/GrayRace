@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
-    <defName>GR_Corvette_MID_S3</defName>
-    <label>拦截者核心</label>
-    <description>从Stellaris那复制的CORVETTE_MID_S3。</description>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_Corvette_MidBase" Abstract="True">
     <sectionSlot>GR_MechSection_Mid</sectionSlot>
     <shipSize>GR_Chassis_Corvette</shipSize>
     <researchPrerequisites>
@@ -12,7 +9,35 @@
     <costList>
       <GR_Alloy>40</GR_Alloy>
     </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>0</uiOrder>
+    <slots>
+      <li>
+        <key>SMALL_UTILITY_01</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_02</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_03</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>7</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>8</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
+    <defName>GR_Corvette_MID_S3</defName>
+    <label>拦截者核心</label>
+    <description>从Stellaris那复制的CORVETTE_MID_S3。</description>
     <slots>
       <li>
         <key>SMALL_GUN_01</key>
@@ -32,42 +57,13 @@
         <hardpointOffset>(0,0,-0.5)</hardpointOffset>
         <uiOrder>2</uiOrder>
       </li>
-      <li>
-        <key>SMALL_UTILITY_01</key>
-        <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>SMALL_UTILITY_02</key>
-        <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>SMALL_UTILITY_03</key>
-        <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
-      <li>
-        <key>AUX_UTILITY_01</key>
-        <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>8</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
     <defName>GR_Corvette_MID_S2PD1</defName>
     <label>哨卫核心</label>
     <description>从Stellaris那复制的CORVETTE_MID_S2PD1。</description>
-    <sectionSlot>GR_MechSection_Mid</sectionSlot>
-    <shipSize>GR_Chassis_Corvette</shipSize>
-    <researchPrerequisites>
-      <li>GR_T1MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>40</GR_Alloy>
-    </costList>
-    <uiOrder>500</uiOrder>
     <slots>
       <li>
         <key>PD_01</key>
@@ -87,44 +83,19 @@
         <hardpointOffset>(0.14,0,0.08)</hardpointOffset>
         <uiOrder>2</uiOrder>
       </li>
-      <li>
-        <key>SMALL_UTILITY_01</key>
-        <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>SMALL_UTILITY_02</key>
-        <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>SMALL_UTILITY_03</key>
-        <slotDef>GR_MechSlot_SmallUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
-      <li>
-        <key>AUX_UTILITY_01</key>
-        <slotDef>GR_MechSlot_Auxiliary</slotDef>
-        <uiOrder>8</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
   <!-- 雷击舰 -->
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
     <defName>GR_Corvette_MID_M1S1</defName>
     <label>鱼雷核心</label>
     <description>从Stellaris那复制的CORVETTE_MID_M1S1。</description>
-    <sectionSlot>GR_MechSection_Mid</sectionSlot>
     <shipSize>GR_Chassis_Frigate</shipSize>
-    <researchPrerequisites>
-      <li>GR_T1MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>40</GR_Alloy>
+    <costList Inherit="False">
+      <GR_Alloy>60</GR_Alloy>
     </costList>
-    <uiOrder>600</uiOrder>
-    <slots>
+    <slots Inherit="False">
       <li>
         <key>SMALL_GUN_01</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>

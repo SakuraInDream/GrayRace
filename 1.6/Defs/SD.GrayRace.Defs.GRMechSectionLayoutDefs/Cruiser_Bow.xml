@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
-    <defName>GR_Cruiser_Bow_L1</defName>
-    <label>巨炮舰艏</label>
-    <description>从Stellaris那复制过来的CRUISER_BOW_L1</description>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_Cruiser_BowBase" Abstract="True">
     <sectionSlot>GR_MechSection_Bow</sectionSlot>
     <shipSize>GR_Chassis_Cruiser</shipSize>
     <researchPrerequisites>
@@ -12,14 +9,7 @@
     <costList>
       <GR_Alloy>240</GR_Alloy>
     </costList>
-    <uiOrder>400</uiOrder>
     <slots>
-      <li>
-        <key>LARGE_GUN_01</key>
-        <slotDef>GR_MechSlot_LargeTurret</slotDef>
-        <hardpointOffset>(-0.15,0,0.28)</hardpointOffset>
-        <uiOrder>0</uiOrder>
-      </li>
       <li>
         <key>MEDIUM_UTILITY_01</key>
         <slotDef>GR_MechSlot_MediumUtility</slotDef>
@@ -43,19 +33,26 @@
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_BowBase">
+    <defName>GR_Cruiser_Bow_L1</defName>
+    <label>巨炮舰艏</label>
+    <description>从Stellaris那复制过来的CRUISER_BOW_L1</description>
+    <uiOrder>0</uiOrder>
+    <slots>
+      <li>
+        <key>LARGE_GUN_01</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointOffset>(-0.15,0,0.28)</hardpointOffset>
+        <uiOrder>0</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_BowBase">
     <defName>GR_Cruiser_Bow_M1S2</defName>
     <label>鱼雷舰艏</label>
     <description>从Stellaris那复制过来的CRUISER_BOW_M1S2</description>
-    <sectionSlot>GR_MechSection_Bow</sectionSlot>
-    <shipSize>GR_Chassis_Cruiser</shipSize>
-    <researchPrerequisites>
-      <li>GR_T3MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>240</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>1</uiOrder>
     <slots>
       <li>
         <key>TORPEDO_01</key>
@@ -75,42 +72,14 @@
         <hardpointOffset>(0.18,0,0.08)</hardpointOffset>
         <uiOrder>2</uiOrder>
       </li>
-      <li>
-        <key>MEDIUM_UTILITY_01</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_02</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_03</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_04</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>8</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
 
-  <SD.GrayRace.Defs.GRMechSectionLayoutDef>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_BowBase">
     <defName>GR_Cruiser_Bow_M2</defName>
     <label>齐射舰艏</label>
     <description>从Stellaris那复制过来的CRUISER_BOW_M2</description>
-    <sectionSlot>GR_MechSection_Bow</sectionSlot>
-    <shipSize>GR_Chassis_Cruiser</shipSize>
-    <researchPrerequisites>
-      <li>GR_T3MechTech</li>
-    </researchPrerequisites>
-    <costList>
-      <GR_Alloy>240</GR_Alloy>
-    </costList>
-    <uiOrder>400</uiOrder>
+    <uiOrder>2</uiOrder>
     <slots>
       <li>
         <key>MEDIUM_GUN_01</key>
@@ -124,28 +93,6 @@
         <hardpointOffset>(0.14,0,-0.06)</hardpointOffset>
         <uiOrder>1</uiOrder>
       </li>
-
-      <li>
-        <key>MEDIUM_UTILITY_01</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>5</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_02</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>6</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_03</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>7</uiOrder>
-      </li>
-      <li>
-        <key>MEDIUM_UTILITY_04</key>
-        <slotDef>GR_MechSlot_MediumUtility</slotDef>
-        <uiOrder>8</uiOrder>
-      </li>
     </slots>
   </SD.GrayRace.Defs.GRMechSectionLayoutDef>
-
 </Defs>
