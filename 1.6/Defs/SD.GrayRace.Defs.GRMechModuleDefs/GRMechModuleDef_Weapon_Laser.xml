@@ -12,7 +12,7 @@
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
-    <uiOrder>1100</uiOrder>
+    <uiOrder>0</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_InfraredBase">
@@ -73,7 +73,7 @@
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
-    <uiOrder>1100</uiOrder>
+    <uiOrder>1</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_BlueBase">
@@ -136,7 +136,7 @@
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
-    <uiOrder>1100</uiOrder>
+    <uiOrder>2</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_UVBase">
@@ -196,6 +196,7 @@
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
     </researchPrerequisites>
+    <uiOrder>3</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_XrayBase">
@@ -251,7 +252,6 @@
 
   <!-- 伽马激光 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_GammaBase" Abstract="True">
-    <defName>GR_MechModule_PulseLaser_Gamma</defName>
     <label>伽马激光</label>
     <description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</description>
     <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
@@ -259,6 +259,7 @@
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
     </researchPrerequisites>
+    <uiOrder>4</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_PulseLaser_GammaBase">
@@ -301,5 +302,25 @@
     <power>-88</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_L</equipmentDef>
     <weaponDeploymentTicks>60</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_TitanLance</defName>
+    <label>炼狱射线</label>
+    <description>一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。</description>
+    <iconPath>Icon/ShipParts/ship_part_perdition_beam</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Titanic</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>1000</GR_Alloy>
+    </costList>
+    <power>-900</power>
+    <equipmentDef>GR_MechWeapon_TitanLance</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
+    <uiOrder>5</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 </Defs>

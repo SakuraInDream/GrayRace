@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_SwarmerMissile1_M</defName>
+    <label>中型蜂群导弹发射器</label>
+    <description>一次齐射发射多枚小型导弹的中型武器。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMortar_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_SwarmerMissile1_M</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>44.9</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <forcedMissRadius>1.2</forcedMissRadius>
+        <forcedMissEvenDispersal>true</forcedMissEvenDispersal>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_SwarmerMissile1_M</defName>
+    <label>蜂群导弹</label>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <explosionRadius>2.9</explosionRadius>
+      <speed>55</speed>
+      <soundExplode>Explosion_Rocket</soundExplode>
+    </projectile>
+    <thingClass>Projectile_Explosive</thingClass>
+  </ThingDef>
+</Defs>

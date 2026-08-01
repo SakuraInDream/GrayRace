@@ -3,15 +3,11 @@
   <ThingDef Name="GR_MechWeapon_PulseLaserBase" ParentName="LightMechanoidGunRanged" Abstract="True">
     <techLevel>Spacer</techLevel>
     <!-- 当前占位图是按 45 度斜向绘制的，先用原版角度偏移补偿 -->
-    <equippedAngleOffset>45</equippedAngleOffset>
+    <!-- <equippedAngleOffset>45</equippedAngleOffset> -->
     <graphicData>
-      <!-- 占位 -->
-      <texPath>Things/Item/Weapon/Energy/Energy_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <weaponTags>
-      <li>GR_MechWeapon_FF</li>
-    </weaponTags>
+    <weaponTags/>
     <statBases>
       <MarketValue>1200</MarketValue>
       <Mass>1.8</Mass>
@@ -23,10 +19,13 @@
     </statBases>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase" Name="GR_MechWeapon_PulseLaserBase_Infrared">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Infrared</defName>
     <label>小型红色激光</label>
     <description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
     </statBases>
@@ -34,7 +33,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Infrared</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Infrared_S</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>12.9</range>
         <burstShotCount>1</burstShotCount>
@@ -46,9 +45,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase_Infrared">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Infrared_M</defName>
     <label>中型红色激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>2.5</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
@@ -57,7 +59,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Infrared</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Infrared_M</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>19.9</range>
         <burstShotCount>1</burstShotCount>
@@ -69,9 +71,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase_Infrared">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Infrared_L</defName>
     <label>大型红色激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>6</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.9</RangedWeapon_Cooldown>
@@ -80,7 +85,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Infrared</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Infrared_L</defaultProjectile>
         <warmupTime>0.7</warmupTime>
         <range>24.9</range>
         <burstShotCount>1</burstShotCount>
@@ -92,10 +97,13 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase" Name="GR_MechWeapon_PulseLaser_Blue">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Blue</defName>
     <label>小型蓝色激光</label>
     <description>比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
     </statBases>
@@ -103,7 +111,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Blue</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Blue_S</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>15.9</range>
         <burstShotCount>1</burstShotCount>
@@ -115,9 +123,17 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaser_Blue">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Blue_M</defName>
     <label>中型蓝色激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
+    </graphicData>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>2.5</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
@@ -126,7 +142,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Blue</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Blue_M</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>19.9</range>
         <burstShotCount>1</burstShotCount>
@@ -138,9 +154,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaser_Blue">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Blue_L</defName>
     <label>大型蓝色激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>6</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.9</RangedWeapon_Cooldown>
@@ -149,7 +168,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Blue</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Blue_L</defaultProjectile>
         <warmupTime>0.7</warmupTime>
         <range>24.9</range>
         <burstShotCount>1</burstShotCount>
@@ -161,10 +180,13 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase" Name="GR_MechWeapon_PulseLaser_UV">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_UV</defName>
     <label>小型紫外激光</label>
     <description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
     </statBases>
@@ -172,7 +194,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_UV</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_UV_S</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>12.9</range>
         <burstShotCount>1</burstShotCount>
@@ -184,9 +206,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaser_UV">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_UV_M</defName>
     <label>中型紫外激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>2.5</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
@@ -195,7 +220,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_UV</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_UV_M</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>19.9</range>
         <burstShotCount>1</burstShotCount>
@@ -207,9 +232,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaser_UV">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_UV_L</defName>
     <label>大型紫外激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>6</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.9</RangedWeapon_Cooldown>
@@ -218,7 +246,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_UV</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_UV_L</defaultProjectile>
         <warmupTime>0.7</warmupTime>
         <range>24.9</range>
         <burstShotCount>1</burstShotCount>
@@ -230,10 +258,13 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase" Name="GR_MechWeapon_PulseLaser_XRay">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_XRay</defName>
     <label>小型X射线激光</label>
     <description>这种激光的波长较紫外线短一些，但是更具毁灭性。</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
     </statBases>
@@ -241,7 +272,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Xray</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Xray_S</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>12.9</range>
         <burstShotCount>1</burstShotCount>
@@ -253,9 +284,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaser_XRay">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_XRay_M</defName>
     <label>中型X射线激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>2.5</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
@@ -264,7 +298,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Xray</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Xray_M</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>19.9</range>
         <burstShotCount>1</burstShotCount>
@@ -276,9 +310,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaser_XRay">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_XRay_L</defName>
     <label>大型X射线激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>6</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.9</RangedWeapon_Cooldown>
@@ -287,7 +324,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Xray</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Xray_L</defaultProjectile>
         <warmupTime>0.7</warmupTime>
         <range>24.9</range>
         <burstShotCount>1</burstShotCount>
@@ -299,10 +336,13 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase" Name="GR_MechWeapon_PulseLaser_Gamma">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Gamma</defName>
     <label>小型伽马激光</label>
     <description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</description>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
     </statBases>
@@ -310,7 +350,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Gamma</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Gamma_S</defaultProjectile>
         <warmupTime>0.5</warmupTime>
         <range>12.9</range>
         <burstShotCount>1</burstShotCount>
@@ -322,9 +362,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaser_Gamma">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Gamma_M</defName>
     <label>中型伽马激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>2.5</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.3</RangedWeapon_Cooldown>
@@ -333,7 +376,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Gamma</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Gamma_M</defaultProjectile>
         <warmupTime>0.6</warmupTime>
         <range>19.9</range>
         <burstShotCount>1</burstShotCount>
@@ -345,9 +388,12 @@
     </verbs>
   </ThingDef>
 
-  <ThingDef ParentName="GR_MechWeapon_PulseLaser_Gamma">
+  <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Gamma_L</defName>
     <label>大型伽马激光</label>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
+    </graphicData>
     <statBases>
       <RangedWeapon_DamageMultiplier>6</RangedWeapon_DamageMultiplier>
       <RangedWeapon_Cooldown>3.9</RangedWeapon_Cooldown>
@@ -356,7 +402,7 @@
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <defaultProjectile>Bullet_GR_Laser_Gamma</defaultProjectile>
+        <defaultProjectile>Bullet_GR_Laser_Gamma_L</defaultProjectile>
         <warmupTime>0.7</warmupTime>
         <range>24.9</range>
         <burstShotCount>1</burstShotCount>
@@ -370,7 +416,7 @@
 
   <!-- 激光颜色 -->
   <ThingDef Name="Bullet_GR_LaserBase" ParentName="BaseBullet" Abstract="True">
-    <thingClass>Beam</thingClass>
+    <thingClass>SD.GrayRace.Projectiles.Projectile_GrayBeam</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -381,54 +427,206 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="Bullet_GR_LaserBase">
-    <defName>Bullet_GR_Laser_Infrared</defName>
+  <!-- 每种颜色使用独立抽象模板，S/M/L 只配置对应 Mote。 -->
+  <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_Infrared" Abstract="True">
     <label>红色激光</label>
     <projectile>
       <damageAmountBase>6</damageAmountBase>
-      <armorPenetrationBase>0.5</armorPenetrationBase>
-      <beamMoteDef>Mote_GRLaserBeam_Infrared</beamMoteDef>
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="Bullet_GR_LaserBase">
-    <defName>Bullet_GR_Laser_Blue</defName>
+  <ThingDef ParentName="Bullet_GR_Laser_Infrared">
+    <defName>Bullet_GR_Laser_Infrared_S</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Infrared_S</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Infrared">
+    <defName>Bullet_GR_Laser_Infrared_M</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Infrared_M</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Infrared">
+    <defName>Bullet_GR_Laser_Infrared_L</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Infrared_L</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_Blue" Abstract="True">
     <label>蓝色激光</label>
     <projectile>
       <damageAmountBase>8</damageAmountBase>
       <armorPenetrationBase>0.65</armorPenetrationBase>
-      <beamMoteDef>Mote_GRLaserBeam_Blue</beamMoteDef>
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="Bullet_GR_LaserBase">
-    <defName>Bullet_GR_Laser_UV</defName>
+  <ThingDef ParentName="Bullet_GR_Laser_Blue">
+    <defName>Bullet_GR_Laser_Blue_S</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Blue_S</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Blue">
+    <defName>Bullet_GR_Laser_Blue_M</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Blue_M</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Blue">
+    <defName>Bullet_GR_Laser_Blue_L</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Blue_L</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_UV" Abstract="True">
     <label>紫外激光</label>
     <projectile>
       <damageAmountBase>10</damageAmountBase>
       <armorPenetrationBase>0.8</armorPenetrationBase>
-      <beamMoteDef>Mote_GRLaserBeam_UV</beamMoteDef>
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="Bullet_GR_LaserBase">
-    <defName>Bullet_GR_Laser_Xray</defName>
+  <ThingDef ParentName="Bullet_GR_Laser_UV">
+    <defName>Bullet_GR_Laser_UV_S</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_UV_S</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_UV">
+    <defName>Bullet_GR_Laser_UV_M</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_UV_M</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_UV">
+    <defName>Bullet_GR_Laser_UV_L</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_UV_L</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_Xray" Abstract="True">
     <label>X射线激光</label>
     <projectile>
       <damageAmountBase>13</damageAmountBase>
       <armorPenetrationBase>0.8</armorPenetrationBase>
-      <beamMoteDef>Mote_GRLaserBeam_XRay</beamMoteDef>
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="Bullet_GR_LaserBase">
-    <defName>Bullet_GR_Laser_Gamma</defName>
+  <ThingDef ParentName="Bullet_GR_Laser_Xray">
+    <defName>Bullet_GR_Laser_Xray_S</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_XRay_S</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Xray">
+    <defName>Bullet_GR_Laser_Xray_M</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_XRay_M</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Xray">
+    <defName>Bullet_GR_Laser_Xray_L</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_XRay_L</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_Gamma" Abstract="True">
     <label>伽马激光</label>
     <projectile>
       <damageAmountBase>17</damageAmountBase>
       <armorPenetrationBase>0.8</armorPenetrationBase>
-      <beamMoteDef>Mote_GRLaserBeam_Gamma</beamMoteDef>
     </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Gamma">
+    <defName>Bullet_GR_Laser_Gamma_S</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Gamma_S</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Gamma">
+    <defName>Bullet_GR_Laser_Gamma_M</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Gamma_M</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_Laser_Gamma">
+    <defName>Bullet_GR_Laser_Gamma_L</defName>
+    <projectile>
+      <beamMoteDef>Mote_GRLaserBeam_Gamma_L</beamMoteDef>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_TitanLance</defName>
+    <label>炼狱射线</label>
+    <description>一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <weaponTags/>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+      <Mass>20</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>8</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs Inherit="False">
+      <li>
+        <verbClass>SD.GrayRace.Verbs.Verb_GrayTitanLance</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>8</warmupTime>
+        <minRange>15</minRange>
+        <range>70</range>
+        <burstShotCount>24</burstShotCount>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <stopBurstWithoutLos>true</stopBurstWithoutLos>
+        <beamDamageDef>GR_Laser</beamDamageDef>
+        <beamMoteDef>Mote_GR_TitanLance</beamMoteDef>
+        <soundCastBeam>BeamGraser_Shooting</soundCastBeam>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <modExtensions>
+      <li Class="SD.GrayRace.Verbs.TitanLanceExtension">
+        <minPulseDamage>20</minPulseDamage>
+        <maxPulseDamage>2000</maxPulseDamage>
+        <armorPenetration>1</armorPenetration>
+        <damageRampCurve>
+          <points>
+            <li>(0, 0)</li>
+            <li>(1, 1)</li>
+          </points>
+        </damageRampCurve>
+        <distanceDamageFactorCurve>
+          <points>
+            <li>(15, 1)</li>
+            <li>(30, 1)</li>
+            <li>(70, 0.25)</li>
+          </points>
+        </distanceDamageFactorCurve>
+      </li>
+    </modExtensions>
   </ThingDef>
 
 </Defs>

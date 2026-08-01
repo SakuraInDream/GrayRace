@@ -42,19 +42,19 @@
       <li>
         <key>SMALL_GUN_01</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <hardpointOffset>(0,0,0.5)</hardpointOffset>
+        <hardpointAnchor>(0,0.55)</hardpointAnchor>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_02</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <hardpointOffset>(0,0,0)</hardpointOffset>
+        <hardpointAnchor>(-0.6,-0.35)</hardpointAnchor>
         <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_03</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <hardpointOffset>(0,0,-0.5)</hardpointOffset>
+        <hardpointAnchor>(0.6,-0.35)</hardpointAnchor>
         <uiOrder>2</uiOrder>
       </li>
     </slots>
@@ -68,19 +68,19 @@
       <li>
         <key>PD_01</key>
         <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
-        <hardpointOffset>(0,0,0.18)</hardpointOffset>
+        <hardpointAnchor>(0,0.55)</hardpointAnchor>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_01</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <hardpointOffset>(-0.14,0,0.08)</hardpointOffset>
+        <hardpointAnchor>(-0.6,-0.35)</hardpointAnchor>
         <uiOrder>1</uiOrder>
       </li>
       <li>
         <key>SMALL_GUN_02</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <hardpointOffset>(0.14,0,0.08)</hardpointOffset>
+        <hardpointAnchor>(0.6,-0.35)</hardpointAnchor>
         <uiOrder>2</uiOrder>
       </li>
     </slots>
@@ -99,13 +99,13 @@
       <li>
         <key>SMALL_GUN_01</key>
         <slotDef>GR_MechSlot_SmallTurret</slotDef>
-        <hardpointOffset>(0.18,0,0.08)</hardpointOffset>
+        <hardpointAnchor>(-0.8,0)</hardpointAnchor>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>TORPEDO_01</key>
         <slotDef>GR_MechSlot_TorpedoTube</slotDef>
-        <hardpointOffset>(0,0,0.22)</hardpointOffset>
+        <hardpointAnchor>(0.8,0)</hardpointAnchor>
         <uiOrder>1</uiOrder>
       </li>
       <!-- 2 个 A 槽 -->

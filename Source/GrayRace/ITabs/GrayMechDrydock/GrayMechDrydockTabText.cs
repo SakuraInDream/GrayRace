@@ -49,7 +49,6 @@ internal static class GrayMechDrydockTabText
     }
 
     private static readonly Dictionary<TextMeasureKey, float> CachedTextHeights = new();
-    private static readonly Dictionary<GRMechSectionLayoutDef, string> CachedLayoutExpressions = new();
     private static readonly Dictionary<string, string> CachedModuleCostSummaries = new();
 
     internal static float MeasureWrappedTextHeight(string text, float width, GameFont font)
@@ -125,160 +124,6 @@ internal static class GrayMechDrydockTabText
         return buffer.ToString();
     }
 
-    internal static string BuildLayoutSlotExpression(GRMechSectionLayoutDef layout, StringBuilder buffer)
-    {
-        if (layout == null)
-        {
-            return "None";
-        }
-
-        if (CachedLayoutExpressions.TryGetValue(layout, out string cached))
-        {
-            return cached;
-        }
-
-        int corePower = 0;
-        int coreThruster = 0;
-        int coreSensor = 0;
-        int coreComputer = 0;
-
-        foreach (GRMechSlotEntry slot in GRMechLayoutSlotUtility.EnumerateSlots(layout))
-        {
-            switch (slot?.slotCategory ?? GRMechSlotCategory.Undefined)
-            {
-                case GRMechSlotCategory.CoreSystem:
-                    switch (slot.coreRole)
-                    {
-                        case GRMechCoreComponentRole.PowerCore:
-                            corePower++;
-                            break;
-                        case GRMechCoreComponentRole.Thruster:
-                            coreThruster++;
-                            break;
-                        case GRMechCoreComponentRole.Sensor:
-                            coreSensor++;
-                            break;
-                        case GRMechCoreComponentRole.CombatComputer:
-                            coreComputer++;
-                            break;
-                    }
-
-                    break;
-            }
-        }
-
-        buffer.Clear();
-        List<GRMechSlotSizeDef> orderedSlotSizes = new(DefDatabase<GRMechSlotSizeDef>.AllDefsListForReading);
-        orderedSlotSizes.Sort(CompareSlotSizeDefs);
-        AppendSizedSlotExpressionParts(layout, GRMechSlotCategory.Weapon, "W", orderedSlotSizes, buffer);
-        AppendSizedSlotExpressionParts(layout, GRMechSlotCategory.Utility, "U", orderedSlotSizes, buffer);
-        AppendSlotExpressionPart(buffer, "A", CountSlotsByCategory(layout, GRMechSlotCategory.Auxiliary));
-        AppendSlotExpressionPart(buffer, "Core:R", corePower);
-        AppendSlotExpressionPart(buffer, "Core:E", coreThruster);
-        AppendSlotExpressionPart(buffer, "Core:S", coreSensor);
-        AppendSlotExpressionPart(buffer, "Core:C", coreComputer);
-        string expression = buffer.Length == 0 ? "None" : buffer.ToString();
-        CachedLayoutExpressions[layout] = expression;
-        return expression;
-    }
-
-    private static void AppendSizedSlotExpressionParts(GRMechSectionLayoutDef layout, GRMechSlotCategory category, string prefix, List<GRMechSlotSizeDef> orderedSlotSizes, StringBuilder buffer)
-    {
-        for (int i = 0; i < orderedSlotSizes.Count; i++)
-        {
-            GRMechSlotSizeDef slotSize = orderedSlotSizes[i];
-            if (slotSize == null)
-            {
-                continue;
-            }
-
-            int count = CountSlotsByCategoryAndSize(layout, category, slotSize);
-            if (count <= 0)
-            {
-                continue;
-            }
-
-            string glyph = slotSize.glyph;
-            if (glyph.NullOrEmpty())
-            {
-                continue;
-            }
-
-            AppendSlotExpressionPart(buffer, prefix + ":" + glyph, count);
-        }
-    }
-
-    private static int CountSlotsByCategory(GRMechSectionLayoutDef layout, GRMechSlotCategory category)
-    {
-        int count = 0;
-        foreach (GRMechSlotEntry slot in GRMechLayoutSlotUtility.EnumerateSlots(layout))
-        {
-            if (slot?.slotCategory == category)
-            {
-                count++;
-            }
-        }
-
-        return count;
-    }
-
-    private static int CountSlotsByCategoryAndSize(GRMechSectionLayoutDef layout, GRMechSlotCategory category, GRMechSlotSizeDef slotSize)
-    {
-        int count = 0;
-        foreach (GRMechSlotEntry slot in GRMechLayoutSlotUtility.EnumerateSlots(layout))
-        {
-            if (slot?.slotCategory == category && slot.slotSize == slotSize)
-            {
-                count++;
-            }
-        }
-
-        return count;
-    }
-
-    private static int CompareSlotSizeDefs(GRMechSlotSizeDef left, GRMechSlotSizeDef right)
-    {
-        if (ReferenceEquals(left, right))
-        {
-            return 0;
-        }
-
-        if (left == null)
-        {
-            return 1;
-        }
-
-        if (right == null)
-        {
-            return -1;
-        }
-
-        int orderCompare = left.uiOrder.CompareTo(right.uiOrder);
-        if (orderCompare != 0)
-        {
-            return orderCompare;
-        }
-
-        return string.CompareOrdinal(left.defName, right.defName);
-    }
-
-    private static void AppendSlotExpressionPart(StringBuilder buffer, string prefix, int count)
-    {
-        if (count <= 0)
-        {
-            return;
-        }
-
-        if (buffer.Length > 0)
-        {
-            buffer.Append("  ");
-        }
-
-        buffer.Append(prefix);
-        buffer.Append("x");
-        buffer.Append(count);
-    }
-
     internal static string GetSourceLabel(Building_GR_Drydock dock)
     {
         if (dock.IsEditingSavedDesign && dock.EditingDesignRecord != null)
@@ -317,11 +162,12 @@ internal static class GrayMechDrydockTabText
         buffer.Clear();
         buffer.Append("Cost: ");
         bool wroteCost = false;
-        if (module.costList != null)
+        List<ThingDefCountClass> costList = module.costList;
+        if (costList != null)
         {
-            for (int i = 0; i < module.costList.Count; i++)
+            for (int i = 0; i < costList.Count; i++)
             {
-                ThingDefCountClass cost = module.costList[i];
+                ThingDefCountClass cost = costList[i];
                 if (cost?.thingDef == null || cost.count <= 0)
                 {
                     continue;
@@ -363,10 +209,9 @@ internal static class GrayMechDrydockTabText
 
     internal static string BuildSlotTooltip(GRMechChassisDef chassis, GRMechResolvedSlot resolvedSlot, GRMechModuleDef module)
     {
-        string title = GetSlotDisplayName(resolvedSlot.slot);
-        string state = module != null ? "Installed: " + module.LabelCap : "Installed: None";
+        string state = module != null ? "安装: " + module.LabelCap : "";
         string power = module != null && module.GetNetPower(chassis) != 0
-            ? "\nPower: " + FormatSignedInt(module.GetNetPower(chassis))
+            ? "\n耗电: " + FormatSignedInt(module.GetNetPower(chassis))
             : string.Empty;
         string mountMode = resolvedSlot.slot.weaponMountMode == GRMechWeaponMountMode.PrimaryEquipment
             ? "\nMount: 主武器"
@@ -378,7 +223,7 @@ internal static class GrayMechDrydockTabText
                       + "\n"
                       + state
                       + power;
-        return title.NullOrEmpty() ? body : title + "\n" + body;
+        return body;
     }
 
     internal static string BuildSlotTypeSummary(GRMechSlotEntry slot)

@@ -36,6 +36,10 @@ internal sealed class GrayMechLoadoutCanvasHost : IGrayMechSectionCanvasHost
 
     public List<GRMechResolvedSlot> CoreSlots => owner.RequiredSlots;
 
+    public int MaximumBottomSlotCount => owner.MaximumSupportSlotCount;
+
+    public int MaximumTopSlotCount => owner.MaximumWeaponSlotCount;
+
     public List<GRMechResolvedSlot> TopSlots => owner.WeaponSlots;
 
     public string GetSectionHeaderText(GRMechSectionSlotDef sectionSlot)

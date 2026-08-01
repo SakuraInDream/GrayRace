@@ -30,6 +30,10 @@ internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvas
 
     public List<GRMechResolvedSlot> CoreSlots => context.State.RequiredSlotBuffer;
 
+    public int MaximumBottomSlotCount => context.State.CachedMaximumSupportSlotCount;
+
+    public int MaximumTopSlotCount => context.State.CachedMaximumWeaponSlotCount;
+
     public List<GRMechResolvedSlot> TopSlots => context.State.WeaponSlotBuffer;
 
     public string GetSectionHeaderText(GRMechSectionSlotDef sectionSlot)
@@ -61,7 +65,7 @@ internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvas
 
     public void OnSectionHeaderActivated(GRMechSectionSlotDef sectionSlot)
     {
-        context.Controller.SelectSection(sectionSlot);
+        context.Controller.OpenSectionLayoutMenu(context.Dock, sectionSlot);
     }
 
     public void OnSlotActivated(GRMechResolvedSlot resolvedSlot)
@@ -109,7 +113,7 @@ internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvas
         tooltip = GrayMechDrydockTabText.BuildSlotTooltip(context.Draft?.chassis, resolvedSlot, module);
         selected = resolvedSlot?.sectionSlot == null
             ? context.State.SelectedCoreSlotKey == resolvedSlot?.slot?.key
-            : GRMechSectionSlotUtility.Matches(context.State.SelectedSectionSlot, resolvedSlot.sectionSlot) && context.State.SelectedSlotKey == resolvedSlot.slot?.key;
+            : false;
         drawSlotMarker = true;
     }
 

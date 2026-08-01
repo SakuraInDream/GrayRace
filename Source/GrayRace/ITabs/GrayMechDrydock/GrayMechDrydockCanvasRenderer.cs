@@ -7,29 +7,11 @@ namespace SD.GrayRace.ITabs;
 
 internal sealed class GrayMechDrydockCanvasRenderer
 {
-    internal void DrawGrid(Rect rect)
-    {
-        const float cellSize = 34f;
-        int verticalLines = Mathf.FloorToInt(rect.width / cellSize);
-        int horizontalLines = Mathf.FloorToInt(rect.height / cellSize);
-        for (int i = 1; i < verticalLines; i++)
-        {
-            float x = rect.x + i * cellSize;
-            Color color = i % 4 == 0
-                ? new Color(GrayMechDrydockTabStyle.GridLineColor.r, GrayMechDrydockTabStyle.GridLineColor.g, GrayMechDrydockTabStyle.GridLineColor.b, 0.09f)
-                : GrayMechDrydockTabStyle.GridLineColor;
-            Widgets.DrawLine(new Vector2(x, rect.y), new Vector2(x, rect.yMax), color, 1f);
-        }
+    private const string DesignerGridTexturePath = "UI/GrayMechDrydock/DesignerGridTile";
+    private const float DesignerGridTileSize = 136f;
 
-        for (int i = 1; i < horizontalLines; i++)
-        {
-            float y = rect.y + i * cellSize;
-            Color color = i % 4 == 0
-                ? new Color(GrayMechDrydockTabStyle.GridLineColor.r, GrayMechDrydockTabStyle.GridLineColor.g, GrayMechDrydockTabStyle.GridLineColor.b, 0.09f)
-                : GrayMechDrydockTabStyle.GridLineColor;
-            Widgets.DrawLine(new Vector2(rect.x, y), new Vector2(rect.xMax, y), color, 1f);
-        }
-    }
+    private static Texture2D designerGridTexture;
+    private static bool designerGridTextureInitialized;
 
     internal void DrawCanvasFrame(Rect rect)
     {
@@ -61,8 +43,39 @@ internal sealed class GrayMechDrydockCanvasRenderer
 
     internal void DrawSlotBay(Rect rect)
     {
-        Widgets.DrawBoxSolidWithOutline(rect, new Color(GrayMechDrydockTabStyle.CardFill.r, GrayMechDrydockTabStyle.CardFill.g, GrayMechDrydockTabStyle.CardFill.b, 0.84f), GrayMechDrydockTabStyle.HullOutline);
+        Texture2D texture = GetDesignerGridTexture();
+        if (texture != null)
+        {
+            Rect texCoords = new Rect(0f, 0f, rect.width / DesignerGridTileSize, rect.height / DesignerGridTileSize);
+            GUI.DrawTextureWithTexCoords(rect, texture, texCoords);
+        }
+        else
+        {
+            Widgets.DrawBoxSolid(rect, new Color(GrayMechDrydockTabStyle.CardFill.r, GrayMechDrydockTabStyle.CardFill.g, GrayMechDrydockTabStyle.CardFill.b, 0.84f));
+        }
+
         Widgets.DrawBoxSolid(new Rect(rect.x + 1f, rect.y + rect.height * 0.5f - 1f, rect.width - 2f, 2f), new Color(GrayMechDrydockTabStyle.HullAccentColor.r, GrayMechDrydockTabStyle.HullAccentColor.g, GrayMechDrydockTabStyle.HullAccentColor.b, 0.18f));
+    }
+
+    private static Texture2D GetDesignerGridTexture()
+    {
+        if (designerGridTextureInitialized)
+        {
+            return designerGridTexture;
+        }
+
+        designerGridTextureInitialized = true;
+        designerGridTexture = ContentFinder<Texture2D>.Get(DesignerGridTexturePath);
+        if (designerGridTexture == BaseContent.BadTex)
+        {
+            designerGridTexture = null;
+        }
+        else if (designerGridTexture != null)
+        {
+            designerGridTexture.wrapMode = TextureWrapMode.Repeat;
+        }
+
+        return designerGridTexture;
     }
 
     internal void DrawDisabledSlotWidget(Rect rect, Color accent)
@@ -75,7 +88,6 @@ internal sealed class GrayMechDrydockCanvasRenderer
         Color outline = new Color(accent.r, accent.g, accent.b, 0.22f);
         Color fill = new Color(accent.r, accent.g, accent.b, 0.04f);
         Widgets.DrawBoxSolidWithOutline(rect, fill, outline, 1);
-        Widgets.DrawBoxSolid(new Rect(rect.x + 2f, rect.y + 2f, rect.width - 4f, 5f), new Color(accent.r, accent.g, accent.b, 0.08f));
 
         Rect innerRect = rect.ContractedBy(5f);
         Widgets.DrawBoxSolid(innerRect, new Color(GrayMechDrydockTabStyle.SlotInnerColor.r, GrayMechDrydockTabStyle.SlotInnerColor.g, GrayMechDrydockTabStyle.SlotInnerColor.b, 0.92f));
@@ -100,15 +112,9 @@ internal sealed class GrayMechDrydockCanvasRenderer
             : new Color(accent.r, accent.g, accent.b, fillAlpha);
 
         Widgets.DrawBoxSolidWithOutline(rect, fill, outline, selected || hovered ? 2 : 1);
-        Widgets.DrawBoxSolid(new Rect(rect.x + 2f, rect.y + 2f, rect.width - 4f, 5f), accent);
         Rect innerRect = rect.ContractedBy(5f);
         Widgets.DrawBoxSolid(innerRect, GrayMechDrydockTabStyle.SlotInnerColor);
         DrawModuleIconContent(new Rect(innerRect.x + 2f, innerRect.y + 2f, innerRect.width - 4f, innerRect.height - 4f), module);
-
-        if (module != null)
-        {
-            Widgets.DrawBoxSolid(new Rect(rect.x + 4f, rect.yMax - 7f, rect.width - 8f, 3f), GrayMechDrydockTabStyle.SlotInstalledColor);
-        }
 
         if (drawSlotMarker)
         {
@@ -145,11 +151,6 @@ internal sealed class GrayMechDrydockCanvasRenderer
         Rect innerRect = rect.ContractedBy(4f);
         Widgets.DrawBoxSolid(innerRect, GrayMechDrydockTabStyle.SlotInnerColor);
         DrawModuleIconContent(innerRect, module);
-
-        if (selected)
-        {
-            Widgets.DrawBoxSolid(new Rect(rect.x + 4f, rect.yMax - 6f, rect.width - 8f, 2f), GrayMechDrydockTabStyle.SlotInstalledColor);
-        }
 
         if (hovered && !selected)
         {

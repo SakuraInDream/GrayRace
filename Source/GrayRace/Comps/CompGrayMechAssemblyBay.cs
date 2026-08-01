@@ -344,7 +344,7 @@ public class CompGrayMechAssemblyBay : ThingComp, IThingHolder
 
         if (TotalQueuedOrderCount >= MaxQueueCount)
         {
-            reason = "Build queue is full.";
+            reason = "建造队列已满";
             return false;
         }
 
@@ -391,7 +391,7 @@ public class CompGrayMechAssemblyBay : ThingComp, IThingHolder
 
         if (!recipe.AvailableNow || !recipe.AvailableOnNow(parent))
         {
-            reason = "Assembly recipe is not currently available.";
+            reason = "没有对应的组装配方";
             return false;
         }
 
@@ -468,7 +468,7 @@ public class CompGrayMechAssemblyBay : ThingComp, IThingHolder
             return false;
         }
 
-        reason = "No mechanitor has enough available bandwidth.";
+        reason = "没有拥有足够带宽的机械师";
         return false;
     }
 
@@ -564,7 +564,7 @@ public class CompGrayMechAssemblyBay : ThingComp, IThingHolder
             GenPlace.TryPlaceThing(mech, parent.PositionHeld, map, ThingPlaceMode.Near, out resultingThing);
         }
 
-        Messages.Message("Assembly complete: " + (resultingThing ?? mech).LabelCap, parent, MessageTypeDefOf.PositiveEvent);
+        Messages.Message("组装完成: " + (resultingThing ?? mech).LabelCap, parent, MessageTypeDefOf.PositiveEvent);
         TryStartNextQueuedOrder();
     }
 

@@ -11,6 +11,7 @@ public class GRMechChassisDef : Def
     public List<GRMechSlotEntry> requiredComponentSlots = new();
     public int fixedWorkTicks = 60000;
     public List<ResearchProjectDef> researchPrerequisites = new();
+    public GRMechHardpointSwarmSettings hardpointSwarmSettings = new();
     public string designerPreviewPath;
     public int uiOrder;
 
@@ -74,6 +75,19 @@ public class GRMechChassisDef : Def
             yield return defName + " must have fixedWorkTicks > 0.";
         }
 
+        if (hardpointSwarmSettings != null)
+        {
+            if (hardpointSwarmSettings.wanderRadius < 0f)
+            {
+                yield return defName + " hardpointSwarmSettings.wanderRadius must be >= 0.";
+            }
+
+            if (hardpointSwarmSettings.movementLag < 0f || hardpointSwarmSettings.movementLag > 1f)
+            {
+                yield return defName + " hardpointSwarmSettings.movementLag must be in the range 0..1.";
+            }
+        }
+
         if (requiredComponentSlots == null || requiredComponentSlots.Count == 0)
         {
             yield return defName + " has no required component slots.";
@@ -116,6 +130,11 @@ public class GRMechChassisDef : Def
                     && slot.componentType != GRMechSlotComponentType.Weapon)
                 {
                     yield return defName + " required component slot " + slot.key + " uses PrimaryEquipment but is not a Weapon slot.";
+                }
+
+                if (slot.TryGetHardpointAnchorConfigError(defName, out string anchorError))
+                {
+                    yield return anchorError;
                 }
             }
         }

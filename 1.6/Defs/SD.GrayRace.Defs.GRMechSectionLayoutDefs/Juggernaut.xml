@@ -17,13 +17,13 @@
       <li>
         <key>EXTRA_LARGE_01</key>
         <slotDef>GR_MechSlot_ExtraLarge</slotDef>
-        <hardpointOffset>(0,0,0.34)</hardpointOffset>
+        <hardpointAnchor>(-1.5,1.3)</hardpointAnchor>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>EXTRA_LARGE_02</key>
         <slotDef>GR_MechSlot_ExtraLarge</slotDef>
-        <hardpointOffset>(0,0,0.34)</hardpointOffset>
+        <hardpointAnchor>(1.5,1.3)</hardpointAnchor>
         <uiOrder>1</uiOrder>
       </li>
       <li>
@@ -60,31 +60,31 @@
       <li>
         <key>MEDIUM_GUN_01</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <hardpointOffset>(-0.18,0,0.08)</hardpointOffset>
+        <hardpointAnchor>(0,0.4)</hardpointAnchor>
         <uiOrder>8</uiOrder>
       </li>
       <li>
         <key>MEDIUM_GUN_02</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <hardpointOffset>(0.18,0,0.08)</hardpointOffset>
+        <hardpointAnchor>(-1,-0.2)</hardpointAnchor>
         <uiOrder>9</uiOrder>
       </li>
       <li>
         <key>MEDIUM_GUN_03</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <hardpointOffset>(-0.18,0,-0.06)</hardpointOffset>
+        <hardpointAnchor>(1,-0.2)</hardpointAnchor>
         <uiOrder>10</uiOrder>
       </li>
       <li>
         <key>MEDIUM_GUN_04</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <hardpointOffset>(0.18,0,-0.06)</hardpointOffset>
+        <hardpointAnchor>(-0.65,-1.25)</hardpointAnchor>
         <uiOrder>11</uiOrder>
       </li>
       <li>
         <key>MEDIUM_GUN_05</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <hardpointOffset>(0.18,0,-0.06)</hardpointOffset>
+        <hardpointAnchor>(0.65,-1.25)</hardpointAnchor>
         <uiOrder>12</uiOrder>
       </li>
 

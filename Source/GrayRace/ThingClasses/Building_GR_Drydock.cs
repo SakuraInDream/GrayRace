@@ -86,17 +86,17 @@ public class Building_GR_Drydock : Building, IThingHolder
 
         if (designDraft?.chassis != null)
         {
-            sb.AppendInNewLine("Draft: " + designDraft.designLabel);
+            sb.AppendInNewLine("队列: " + designDraft.designLabel);
         }
 
         if (CurrentOrder != null)
         {
-            sb.AppendInNewLine("Current build: " + CurrentOrder.Label);
-            sb.AppendInNewLine("Status: " + CurrentOrderStatus);
-            sb.AppendInNewLine("Progress: " + CurrentOrderProgressPercent.ToStringPercent());
+            sb.AppendInNewLine("当前建造: " + CurrentOrder.Label);
+            sb.AppendInNewLine("状态: " + CurrentOrderStatus);
+            sb.AppendInNewLine("进度: " + CurrentOrderProgressPercent.ToStringPercent());
             if (CurrentOrderTotalTicks > 0)
             {
-                sb.AppendInNewLine("Time left: " + CurrentOrderTicksRemaining.ToStringTicksToPeriod());
+                sb.AppendInNewLine("剩余时间: " + CurrentOrderTicksRemaining.ToStringTicksToPeriod());
             }
 
             AppendMaterialStatus(sb);
@@ -104,7 +104,7 @@ public class Building_GR_Drydock : Building, IThingHolder
 
         if (QueuedOrderCount > 0)
         {
-            sb.AppendInNewLine("Queued builds: " + QueuedOrderCount);
+            sb.AppendInNewLine("建造队列: " + QueuedOrderCount);
         }
 
         return sb.ToString().TrimEndNewlines();
@@ -125,7 +125,7 @@ public class Building_GR_Drydock : Building, IThingHolder
         yield return new Command_Action
         {
             action = CompleteCurrentOrder,
-            defaultLabel = "DEV: Complete build"
+            defaultLabel = "DEV: 立即完成建造"
         };
     }
 
@@ -236,16 +236,24 @@ public class Building_GR_Drydock : Building, IThingHolder
 
     public bool DeleteCurrentDesign()
     {
-        if (!IsEditingSavedDesign || DesignLibrary == null)
+        return IsEditingSavedDesign && DeleteDesign(editingDesignId);
+    }
+
+    public bool DeleteDesign(int designId)
+    {
+        WorldComponent_GrayMechDesignLibrary library = DesignLibrary;
+        if (designId < 0 || library == null || !library.DeleteDesign(designId))
         {
             return false;
         }
 
-        int deletedId = editingDesignId;
-        editingDesignId = -1;
-        bool deleted = DesignLibrary.DeleteDesign(deletedId);
-        TouchDesignDraft();
-        return deleted;
+        if (editingDesignId == designId)
+        {
+            editingDesignId = -1;
+            TouchDesignDraft();
+        }
+
+        return true;
     }
 
     public bool ClearSectionModules()
@@ -290,15 +298,16 @@ public class Building_GR_Drydock : Building, IThingHolder
         designDraft.designLabel = label ?? string.Empty;
     }
 
-    public bool SaveDesignByDraftLabel(out GrayMechDesignRecord record, out bool createdNew, out bool overwroteExisting)
+    public bool SaveDesignByDraftLabel(out GrayMechDesignRecord record, out bool createdNew, out string failureReason)
     {
         record = null;
         createdNew = false;
-        overwroteExisting = false;
+        failureReason = null;
         EnsureDesignDraft();
         WorldComponent_GrayMechDesignLibrary library = DesignLibrary;
         if (designDraft == null || library == null)
         {
+            failureReason = "设计库不可用。";
             return false;
         }
 
@@ -306,26 +315,15 @@ public class Building_GR_Drydock : Building, IThingHolder
         if (targetLabel.NullOrEmpty())
         {
             targetLabel = designDraft.chassis?.LabelCap.ToString() ?? "Gray mech design";
-            designDraft.designLabel = targetLabel;
         }
 
         GrayMechDesignRecord currentRecord = EditingDesignRecord;
-        GrayMechDesignRecord matchingRecord = library.GetDesignByLabel(targetLabel, currentRecord?.id ?? -1);
-        if (matchingRecord != null)
-        {
-            if (!library.OverwriteDesign(matchingRecord.id, designDraft, targetLabel))
-            {
-                return false;
-            }
-
-            editingDesignId = matchingRecord.id;
-            record = library.GetDesign(matchingRecord.id);
-            overwroteExisting = true;
-        }
-        else if (currentRecord != null)
+        if (currentRecord != null
+            && string.Equals(currentRecord.label, targetLabel, System.StringComparison.OrdinalIgnoreCase))
         {
             if (!library.OverwriteDesign(currentRecord.id, designDraft, targetLabel))
             {
+                failureReason = "无法更新当前设计。";
                 return false;
             }
 
@@ -334,6 +332,12 @@ public class Building_GR_Drydock : Building, IThingHolder
         }
         else
         {
+            if (library.ContainsLabel(targetLabel))
+            {
+                failureReason = "已存在同名设计: " + targetLabel;
+                return false;
+            }
+
             record = library.CreateDesignExact(designDraft, targetLabel);
             editingDesignId = record.id;
             createdNew = true;

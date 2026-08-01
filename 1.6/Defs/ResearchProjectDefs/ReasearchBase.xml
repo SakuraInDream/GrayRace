@@ -493,7 +493,7 @@
   <!--T6 Mech Tech T6机械科技-->
   <ResearchProjectDef ParentName="MechtechBase">
     <tab>GR_ResearchTab</tab>
-    <defName>GR_T6Mechtech</defName>
+    <defName>GR_T6MechTech</defName>
     <label>T6 Mech Tech</label>
     <description>The advanced technology needed for your mechanitor to create and control ultra-tier mechanoids, including large mechs and ultra-tier mechanitor gear.\n\nYou can get nano structuring chips by using a mechanitor to summon an apocriton threat.</description>
     <baseCost>20000</baseCost>

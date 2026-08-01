@@ -131,9 +131,9 @@
   <GR_T5MechTech.description>TODO</GR_T5MechTech.description>
 
   <!-- EN: T6 Mech Tech -->
-  <GR_T6Mechtech.label>T6机械科技</GR_T6Mechtech.label>
+  <GR_T6MechTech.label>T6机械科技</GR_T6MechTech.label>
   <!-- EN: The advanced technology needed for your mechanitor to create and control ultra-tier mechanoids, including large mechs and ultra-tier mechanitor gear.\n\nYou can get nano structuring chips by using a mechanitor to summon an apocriton threat. -->
-  <GR_T6Mechtech.description>TODO</GR_T6Mechtech.description>
+  <GR_T6MechTech.description>TODO</GR_T6MechTech.description>
 
   <!-- EN: Zro -->
   <GR_Zro.label>泽珞</GR_Zro.label>

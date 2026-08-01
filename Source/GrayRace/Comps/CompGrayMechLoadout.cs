@@ -142,6 +142,12 @@ public class CompGrayMechLoadout : ThingComp
 
     private void SyncPrimaryEquipment()
     {
+        if (!GrayMechDesignUtility.TryResolvePrimaryEquipmentModule(designSnapshot, out GRMechModuleDef module, out _)
+            || module?.equipmentDef == null)
+        {
+            return;
+        }
+
         Pawn pawn = Pawn;
         Pawn_EquipmentTracker equipment = pawn?.equipment;
         if (equipment == null)
@@ -149,13 +155,7 @@ public class CompGrayMechLoadout : ThingComp
             return;
         }
 
-        GRMechModuleDef module = null;
-        if (!GrayMechDesignUtility.TryResolvePrimaryEquipmentModule(designSnapshot, out module, out _))
-        {
-            module = null;
-        }
-
-        ThingDef desiredDef = module?.equipmentDef;
+        ThingDef desiredDef = module.equipmentDef;
         ThingDef desiredStuff = null;
         if (desiredDef?.MadeFromStuff == true)
         {
@@ -171,11 +171,6 @@ public class CompGrayMechLoadout : ThingComp
         if (current != null)
         {
             equipment.DestroyEquipment(current);
-        }
-
-        if (desiredDef == null)
-        {
-            return;
         }
 
         ThingWithComps primary = ThingMaker.MakeThing(desiredDef, desiredStuff) as ThingWithComps;

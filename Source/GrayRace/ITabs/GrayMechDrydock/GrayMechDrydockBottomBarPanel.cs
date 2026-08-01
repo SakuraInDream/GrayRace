@@ -14,9 +14,7 @@ internal sealed class GrayMechDrydockBottomBarPanel
         Widgets.DrawMenuSection(rect);
         Widgets.DrawBoxSolid(rect.ContractedBy(1f), GrayMechDrydockTabStyle.BgPanelAlt);
         Rect inner = rect.ContractedBy(10f);
-        float contentHeight = GrayMechDrydockTabStyle.LibraryHeaderHeight
-                              + GrayMechDrydockTabStyle.LibraryHeaderGap
-                              + context.State.CachedLibraryMaxCardHeight;
+        float contentHeight = context.State.CachedLibraryMaxCardHeight;
         Rect newDesignRect = new Rect(inner.x, inner.y + 4f, GrayMechDrydockTabStyle.LibraryNewDesignWidth, contentHeight);
         float groupAreaX = newDesignRect.xMax + GrayMechDrydockTabStyle.LibraryNewDesignGap;
         Rect groupScrollRect = new Rect(
@@ -122,11 +120,8 @@ internal sealed class GrayMechDrydockBottomBarPanel
             Widgets.DrawBoxSolid(new Rect(separatorX, rect.y + 4f, 1f, rect.height - 8f), separatorColor);
         }
 
-        Rect headerRect = new Rect(rect.x, rect.y, rect.width, GrayMechDrydockTabStyle.LibraryHeaderHeight);
-        DrawLibraryGroupHeader(headerRect, group.Chassis?.LabelCap.ToString() ?? "Unknown");
-
         float cardX = rect.x;
-        float cardY = headerRect.yMax + GrayMechDrydockTabStyle.LibraryHeaderGap;
+        float cardY = rect.y;
         float cardHeight = context.State.CachedLibraryMaxCardHeight;
         if (group.ShowChassisCard)
         {
@@ -143,18 +138,6 @@ internal sealed class GrayMechDrydockBottomBarPanel
             DrawDesignCard(context, cardRect, design, selected);
             cardX += GrayMechDrydockTabStyle.LibraryCardWidth + GrayMechDrydockTabStyle.LibraryCardGap;
         }
-    }
-
-    private static void DrawLibraryGroupHeader(Rect rect, string label)
-    {
-        DrawLibraryTextLine(rect, label, GameFont.Small, TextAnchor.MiddleLeft, Color.white);
-        Widgets.DrawBoxSolid(
-            new Rect(rect.x, rect.yMax - 2f, rect.width, 2f),
-            new Color(
-                GrayMechDrydockTabStyle.HeaderLineColor.r,
-                GrayMechDrydockTabStyle.HeaderLineColor.g,
-                GrayMechDrydockTabStyle.HeaderLineColor.b,
-                0.55f));
     }
 
     private static void DrawLibraryTextLine(Rect rect, string text, GameFont font, TextAnchor anchor, Color color)
@@ -224,12 +207,14 @@ internal sealed class GrayMechDrydockBottomBarPanel
 
     private void DrawDesignCard(GrayMechDrydockTabContext context, Rect rect, GrayMechDesignRecord design, bool selected)
     {
+        const float deleteButtonSize = 16f;
+        Rect deleteRect = new Rect(rect.xMax - deleteButtonSize - 6f, rect.y + 5f, deleteButtonSize, deleteButtonSize);
         GrayMechDesignSnapshot snapshot = design?.snapshot;
         bool buildableHere = context.Dock.CanBuildChassis(snapshot?.chassis, out string restrictionReason);
         Color accent = buildableHere ? GrayMechDrydockTabStyle.UtilitySlotColor : GrayMechDrydockTabStyle.LockedColor;
         DrawLibraryCardChrome(rect, selected, accent);
 
-        if (Widgets.ButtonInvisible(rect))
+        if (!Mouse.IsOver(deleteRect) && Widgets.ButtonInvisible(rect))
         {
             if (buildableHere)
             {
@@ -246,7 +231,7 @@ internal sealed class GrayMechDrydockBottomBarPanel
         DrawChassisPreview(previewRect, snapshot?.chassis);
         GameFont oldFont = Text.Font;
         Text.Font = GameFont.Tiny;
-        GrayMechDrydockTabText.DrawWrappedLabel(new Rect(rect.x + 6f, rect.y + 4f, rect.width - 12f, headerHeight), "Saved");
+        GrayMechDrydockTabText.DrawWrappedLabel(new Rect(rect.x + 6f, rect.y + 4f, deleteRect.x - rect.x - 10f, headerHeight), "Saved");
         Text.Font = oldFont;
 
         string title = design?.label ?? "Unnamed";
@@ -271,7 +256,15 @@ internal sealed class GrayMechDrydockBottomBarPanel
             tooltip = tooltip.NullOrEmpty() ? restrictionReason : tooltip + "\n\n" + restrictionReason;
         }
 
-        TooltipHandler.TipRegion(rect, tooltip);
+        if (!Mouse.IsOver(deleteRect))
+        {
+            TooltipHandler.TipRegion(rect, tooltip);
+        }
+
+        if (Widgets.ButtonImage(deleteRect, TexButton.Delete, Color.white, GenUI.SubtleMouseoverColor, tooltip: "删除设计"))
+        {
+            context.Controller.DeleteDesign(context.Dock, design);
+        }
     }
 
     private void DrawLibraryCardChrome(Rect rect, bool selected, Color accent)

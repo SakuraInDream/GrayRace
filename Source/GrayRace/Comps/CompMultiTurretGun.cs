@@ -2,34 +2,79 @@ using System;
 using System.Collections.Generic;
 using RimWorld;
 using SD.GrayRace.Defs;
+using SD.GrayRace.Dialogs;
 using SD.GrayRace.Mechs;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace SD.GrayRace.Comps;
 
 [StaticConstructorOnStartup]
 public class CompMultiTurretGun : ThingComp
 {
+    internal readonly struct HardpointDebugData
+    {
+        public readonly string SectionSlotId;
+        public readonly string SlotKey;
+        public readonly string ModuleLabel;
+        public readonly Vector2 BaseAnchor;
+        public readonly Vector2 EffectiveAnchor;
+        public readonly Vector2 LocalPosition;
+        public readonly Vector2 WorldPosition;
+        public readonly float DeploymentProgress;
+        public readonly MechHardpoint.State State;
+        public readonly bool HasAnchorOverride;
+
+        public HardpointDebugData(
+            string sectionSlotId,
+            string slotKey,
+            string moduleLabel,
+            Vector2 baseAnchor,
+            Vector2 effectiveAnchor,
+            Vector2 localPosition,
+            Vector2 worldPosition,
+            float deploymentProgress,
+            MechHardpoint.State state,
+            bool hasAnchorOverride)
+        {
+            SectionSlotId = sectionSlotId;
+            SlotKey = slotKey;
+            ModuleLabel = moduleLabel;
+            BaseAnchor = baseAnchor;
+            EffectiveAnchor = effectiveAnchor;
+            LocalPosition = localPosition;
+            WorldPosition = worldPosition;
+            DeploymentProgress = deploymentProgress;
+            State = state;
+            HasAnchorOverride = hasAnchorOverride;
+        }
+    }
+
     private static readonly CachedTexture ToggleTurretIcon = new("UI/Gizmos/ToggleTurret");
     private static readonly CachedTexture ForceTargetIcon = new("UI/Commands/Attack");
     private static readonly CachedTexture StopForceTargetIcon = new("UI/Commands/Halt");
-    private static readonly Material ForcedTargetLineMat = MaterialPool.MatFrom(GenDraw.LineTexPath, ShaderDatabase.Transparent, new Color(1f, 0.5f, 0.5f));
 
-    private const int TargetSearchInterval = 10;
+    private const int CombatTargetSearchInterval = 10;
+    private const int IdleTargetSearchInterval = 60;
     private const int WeaponGraphicCombatGraceTicks = 300;
     private const float HardpointAltitudeLayer = 92f;
-    private const float ProjectileOriginForwardOffset = 0.12f;
-    private const float StableDirectionStepDegrees = 137.50776f;
 
     private MechHardpoint[] hardpoints = Array.Empty<MechHardpoint>();
+    private LocalTargetInfo[] assignedTargets = Array.Empty<LocalTargetInfo>();
     private int hardpointCount;
+    private int hardpointRevision;
     private IFireControlDirector director;
     private GRMechCombatComputerModuleDef activeCombatComputer;
-    private readonly HashSet<Thing> reservedTargets = new();
+    private GRMechHardpointSwarmSettings swarmSettings;
     private readonly Predicate<TargetInfo> forcedTargetValidator;
     private bool fireAtWill = true;
     private bool pendingRebuild;
+    private bool targetSearchRequested = true;
+    private bool deploymentRequestInitialized;
+    private bool deploymentRequested;
+    private bool deploymentTransitionActive;
+    private bool movementFireSuppressed;
     private LocalTargetInfo forcedTarget = LocalTargetInfo.Invalid;
 
     public CompMultiTurretGun()
@@ -40,9 +85,25 @@ public class CompMultiTurretGun : ThingComp
     private Pawn Pawn => parent as Pawn;
     private ThingWithComps ParentThing => parent;
     private Thing ForcedTargetThing => forcedTarget.HasThing ? forcedTarget.Thing : null;
-    private CompPropertiesMultiTurretGun Props => (CompPropertiesMultiTurretGun)props;
 
     public int HardpointCount => hardpointCount;
+
+    internal bool TryGetForcedTarget(out Thing target)
+    {
+        target = ForcedTargetThing;
+        return forcedTarget.IsValid
+            && IsValidVerbSelectionTarget(target)
+            && HasEngageableHardpoint(forcedTarget);
+    }
+
+    internal int DebugHardpointCount => hardpointCount;
+
+    internal int DebugHardpointRevision => hardpointRevision;
+
+    internal bool DebugTargetValid => Pawn is { Destroyed: false, Dead: false, Spawned: true };
+
+    internal string DebugPawnLabel => Pawn?.LabelShort ?? "Unknown mech";
+
     public GRMechCombatComputerModuleDef ActiveCombatComputer
     {
         get
@@ -60,7 +121,14 @@ public class CompMultiTurretGun : ThingComp
 
     public void Notify_LoadoutChanged()
     {
-        RebuildFromSnapshot(Pawn?.TryGetComp<CompGrayMechLoadout>()?.DesignSnapshot);
+        Pawn pawn = Pawn;
+        if (!IsPawnRuntimeReady(pawn))
+        {
+            pendingRebuild = true;
+            return;
+        }
+
+        RebuildFromSnapshot(pawn.TryGetComp<CompGrayMechLoadout>()?.DesignSnapshot);
     }
 
     public override void PostExposeData()
@@ -91,7 +159,7 @@ public class CompMultiTurretGun : ThingComp
     {
         base.CompTick();
         Pawn p = Pawn;
-        if (p == null)
+        if (!IsPawnRuntimeReady(p))
         {
             return;
         }
@@ -101,32 +169,25 @@ public class CompMultiTurretGun : ThingComp
             TryRebuildFromLoadout();
         }
 
+        UpdateMovementFireSuppression(p);
         RefreshForcedTargetState();
         bool canOperate = CanOperate(p);
         bool deployRequested = canOperate && ShouldRequestDeployment(p);
-        for (int i = 0; i < hardpointCount; i++)
+        UpdateDeployment(deployRequested);
+        if (hardpointCount > 0 && (deployRequested || deploymentTransitionActive))
         {
-            hardpoints[i].TickDeployment(deployRequested);
+            HardpointSwarmSolver.Tick(hardpoints, hardpointCount, p.DrawPos, swarmSettings, Find.TickManager.TicksGame);
         }
 
         if (!canOperate)
         {
+            AbortActiveBursts();
             if (!fireAtWill && !forcedTarget.IsValid)
             {
                 ClearIdleTargets();
             }
 
             return;
-        }
-
-        reservedTargets.Clear();
-        for (int i = 0; i < hardpointCount; i++)
-        {
-            MechHardpoint hp = hardpoints[i];
-            if (hp.currentTarget.HasThing && hp.currentTarget.Thing != ForcedTargetThing)
-            {
-                reservedTargets.Add(hp.currentTarget.Thing);
-            }
         }
 
         Map map = p.Map;
@@ -139,12 +200,15 @@ public class CompMultiTurretGun : ThingComp
                 continue;
             }
 
-            hp.TickVerb();
-
             if (hp.HasInvalidCurrentTarget(map))
             {
+                bool wasFiring = hp.state == MechHardpoint.State.Firing;
                 hp.ResetCurrentTarget();
-                if (hp.state == MechHardpoint.State.WarmingUp)
+                if (wasFiring)
+                {
+                    hp.NotifyCastComplete();
+                }
+                else if (hp.state == MechHardpoint.State.WarmingUp)
                 {
                     hp.state = MechHardpoint.State.Idle;
                 }
@@ -153,16 +217,33 @@ public class CompMultiTurretGun : ThingComp
             switch (hp.state)
             {
                 case MechHardpoint.State.Firing:
-                    hp.state = MechHardpoint.State.Cooling;
-                    break;
-
-                case MechHardpoint.State.WarmingUp:
-                    if (!hp.CanEngageTarget(hp.currentTarget, p, map))
+                    if (!hp.IsBursting)
                     {
-                        hp.ResetToIdle();
+                        hp.NotifyCastComplete();
                         break;
                     }
 
+                    if (!hp.TickBurst())
+                    {
+                        break;
+                    }
+
+                    if (TryStartHardpointCast(hp, p))
+                    {
+                        hp.NotifyBurstShotFired();
+                        if (!hp.IsBursting)
+                        {
+                            hp.NotifyCastComplete();
+                        }
+                    }
+                    else
+                    {
+                        hp.NotifyCastComplete();
+                    }
+
+                    break;
+
+                case MechHardpoint.State.WarmingUp:
                     if (!hp.IsFullyDeployed)
                     {
                         break;
@@ -170,10 +251,15 @@ public class CompMultiTurretGun : ThingComp
 
                     if (--hp.warmupTicksLeft <= 0)
                     {
+                        hp.BeginBurst();
                         if (TryStartHardpointCast(hp, p))
                         {
                             hp.NotifyCastStarted();
-                            hp.NotifyCastComplete();
+                            hp.NotifyBurstShotFired();
+                            if (!hp.IsBursting)
+                            {
+                                hp.NotifyCastComplete();
+                            }
                         }
                         else
                         {
@@ -192,26 +278,38 @@ public class CompMultiTurretGun : ThingComp
                     break;
 
                 case MechHardpoint.State.Idle:
-                    if (!p.IsHashIntervalTick(TargetSearchInterval))
-                    {
-                        break;
-                    }
-
-                    if (director != null && director.TryAssignTarget(hp, p, forcedTarget, fireAtWill, reservedTargets, out LocalTargetInfo newTarget))
-                    {
-                        hp.BeginWarmup(newTarget);
-                        if (newTarget.HasThing && newTarget.Thing != ForcedTargetThing)
-                        {
-                            reservedTargets.Add(newTarget.Thing);
-                        }
-                    }
-
                     break;
             }
 
             if (hp.currentTarget.IsValid)
             {
                 hp.curRotation = (GetTargetDrawPos(hp.currentTarget) - p.DrawPos).AngleFlat();
+            }
+        }
+
+        if (movementFireSuppressed)
+        {
+            return;
+        }
+
+        int searchInterval = HasCombatSearchContext(p)
+            ? CombatTargetSearchInterval
+            : IdleTargetSearchInterval;
+        if (director != null && (targetSearchRequested || p.IsHashIntervalTick(searchInterval)))
+        {
+            director.AssignTargets(hardpoints, hardpointCount, p, forcedTarget, fireAtWill, assignedTargets);
+            targetSearchRequested = false;
+            for (int i = 0; i < hardpointCount; i++)
+            {
+                LocalTargetInfo newTarget = assignedTargets[i];
+                if (!newTarget.IsValid)
+                {
+                    continue;
+                }
+
+                MechHardpoint hp = hardpoints[i];
+                hp.BeginWarmup(newTarget);
+                hp.curRotation = (GetTargetDrawPos(newTarget) - p.DrawPos).AngleFlat();
             }
         }
     }
@@ -237,13 +335,20 @@ public class CompMultiTurretGun : ThingComp
 
     public void RebuildFromSnapshot(GrayMechDesignSnapshot snapshot)
     {
+        Pawn p = Pawn;
+        if (!IsPawnRuntimeReady(p))
+        {
+            pendingRebuild = true;
+            return;
+        }
+
         ClearHardpoints();
         pendingRebuild = false;
         activeCombatComputer = ResolveCombatComputer(snapshot);
         director = CreateDirector(activeCombatComputer);
+        swarmSettings = snapshot?.chassis?.hardpointSwarmSettings;
 
-        Pawn p = Pawn;
-        if (p == null || snapshot?.modules == null)
+        if (snapshot?.modules == null)
         {
             return;
         }
@@ -270,6 +375,16 @@ public class CompMultiTurretGun : ThingComp
             hardpoints = new MechHardpoint[weaponCount];
         }
 
+        if (assignedTargets.Length < weaponCount)
+        {
+            assignedTargets = new LocalTargetInfo[weaponCount];
+        }
+
+        director?.Prepare(weaponCount);
+        targetSearchRequested = true;
+        deploymentRequestInitialized = false;
+        deploymentTransitionActive = false;
+
         hardpointCount = 0;
         for (int i = 0; i < snapshot.modules.Count; i++)
         {
@@ -280,7 +395,7 @@ public class CompMultiTurretGun : ThingComp
                 continue;
             }
 
-            if (!GrayMechDesignUtility.TryResolveSlot(snapshot, assignment.sectionSlot, assignment.slotKey, out GRMechSlotEntry resolvedSlot, out GRMechSectionLayoutDef resolvedLayout)
+            if (!GrayMechDesignUtility.TryResolveSlot(snapshot, assignment.sectionSlot, assignment.slotKey, out GRMechSlotEntry resolvedSlot, out _)
                 || resolvedSlot.weaponMountMode != GRMechWeaponMountMode.Hardpoint)
             {
                 continue;
@@ -294,10 +409,8 @@ public class CompMultiTurretGun : ThingComp
 
             MechHardpoint hp = hardpoints[hardpointCount] ??= new MechHardpoint();
             hp.module = module;
-            hp.sectionSlot = assignment.sectionSlot;
-            hp.slotKey = assignment.slotKey;
             hp.gun = gun;
-            hp.layout = resolvedLayout;
+            hp.CancelBurst();
             hp.slot = resolvedSlot;
             hp.state = MechHardpoint.State.Idle;
             hp.currentTarget = LocalTargetInfo.Invalid;
@@ -307,12 +420,15 @@ public class CompMultiTurretGun : ThingComp
             hp.warmupTicksLeft = 0;
             hp.curRotation = 0f;
             hp.deploymentProgress = 0f;
-            hp.visualIndex = hardpointCount;
-            hp.floatingOffset = ResolveFloatingWeaponOffset(hp);
+            string sectionSlotId = GRMechSectionSlotUtility.GetSlotId(assignment.sectionSlot);
+            hp.SectionSlotId = sectionSlotId;
+            hp.ClearDebugAnchorOverride();
             hp.Setup(ParentThing);
 
             hardpointCount++;
         }
+
+        HardpointSwarmSolver.Initialize(hardpoints, hardpointCount, p.DrawPos);
     }
 
     private void TryRebuildFromLoadout()
@@ -322,7 +438,13 @@ public class CompMultiTurretGun : ThingComp
             return;
         }
 
-        RebuildFromSnapshot(Pawn?.TryGetComp<CompGrayMechLoadout>()?.DesignSnapshot);
+        Pawn pawn = Pawn;
+        if (!IsPawnRuntimeReady(pawn))
+        {
+            return;
+        }
+
+        RebuildFromSnapshot(pawn.TryGetComp<CompGrayMechLoadout>()?.DesignSnapshot);
     }
 
     private void ClearHardpoints()
@@ -330,10 +452,15 @@ public class CompMultiTurretGun : ThingComp
         for (int i = 0; i < hardpointCount; i++)
         {
             hardpoints[i].DestroyGun();
+            assignedTargets[i] = LocalTargetInfo.Invalid;
         }
 
         hardpointCount = 0;
-        reservedTargets.Clear();
+        hardpointRevision++;
+        targetSearchRequested = true;
+        deploymentRequestInitialized = false;
+        deploymentTransitionActive = false;
+        swarmSettings = null;
     }
 
     private static IFireControlDirector CreateDirector(GRMechCombatComputerModuleDef cc)
@@ -356,21 +483,110 @@ public class CompMultiTurretGun : ThingComp
             return;
         }
 
-        forcedTarget = target;
-        for (int i = 0; i < hardpointCount; i++)
+        List<object> selectedObjects = Find.Selector.SelectedObjectsListForReading;
+        for (int i = 0; i < selectedObjects.Count; i++)
         {
-            TryForceHardpointNow(hardpoints[i], forcedTarget);
+            if (TryGetSelectedPlayerMech(selectedObjects[i], out CompMultiTurretGun turret))
+            {
+                if (!turret.TrySetForcedTarget(target, out string failReason) && !failReason.NullOrEmpty())
+                {
+                    Messages.Message(failReason.CapitalizeFirst() + ".", target.Thing, MessageTypeDefOf.RejectInput, historical: false);
+                }
+            }
         }
+    }
+
+    private static bool TryGetSelectedPlayerMech(object selectedObject, out CompMultiTurretGun turret)
+    {
+        turret = null;
+        if (selectedObject is not Pawn pawn
+            || !pawn.Spawned
+            || !pawn.Drafted
+            || !pawn.IsColonyMechPlayerControlled)
+        {
+            return false;
+        }
+
+        turret = pawn.TryGetComp<CompMultiTurretGun>();
+        return turret != null;
+    }
+
+    private bool TrySetForcedTarget(LocalTargetInfo target, out string failReason)
+    {
+        failReason = null;
+        Pawn p = Pawn;
+        if (!target.IsValid || p == null || !p.Spawned || !p.Drafted)
+        {
+            return false;
+        }
+
+        Thing targetThing = target.Thing;
+        if (targetThing == null
+            || targetThing.Destroyed
+            || !targetThing.Spawned
+            || !ParentThing.Spawned
+            || targetThing.Map != ParentThing.MapHeld)
+        {
+            return false;
+        }
+
+        if (targetThing == p)
+        {
+            failReason = "CannotAttackSelf".Translate();
+            return false;
+        }
+
+        if (targetThing is Pawn targetPawn
+            && (p.InSameExtraFaction(targetPawn, ExtraFactionType.HomeFaction)
+                || p.InSameExtraFaction(targetPawn, ExtraFactionType.MiniFaction)))
+        {
+            failReason = "CannotAttackSameFactionMember".Translate();
+            return false;
+        }
+
+        if (!HasEngageableHardpoint(target))
+        {
+            failReason = "CannotFire".Translate();
+            return false;
+        }
+
+        forcedTarget = target;
+        p.mindState.enemyTarget = target.Thing;
+        targetSearchRequested = true;
+        p.jobs?.EndCurrentJob(JobCondition.InterruptForced);
+        return true;
     }
 
     private void ResetForcedTarget()
     {
+        List<object> selectedObjects = Find.Selector.SelectedObjectsListForReading;
+        for (int i = 0; i < selectedObjects.Count; i++)
+        {
+            if (TryGetSelectedPlayerMech(selectedObjects[i], out CompMultiTurretGun turret))
+            {
+                if (turret.ResetForcedTargetLocal())
+                {
+                    turret.InterruptCurrentJob();
+                }
+            }
+        }
+    }
+
+    private bool ResetForcedTargetLocal()
+    {
         LocalTargetInfo oldForcedTarget = forcedTarget;
         forcedTarget = LocalTargetInfo.Invalid;
+        targetSearchRequested = true;
+
+        Pawn p = Pawn;
+        if (oldForcedTarget.HasThing && p?.mindState?.enemyTarget == oldForcedTarget.Thing)
+        {
+            p.mindState.enemyTarget = null;
+        }
 
         if (!oldForcedTarget.IsValid)
         {
-            return;
+            return false;
         }
 
         for (int i = 0; i < hardpointCount; i++)
@@ -386,19 +602,32 @@ public class CompMultiTurretGun : ThingComp
         {
             ClearIdleTargets();
         }
+
+        return true;
+    }
+
+    private void InterruptCurrentJob()
+    {
+        Pawn?.jobs?.EndCurrentJob(JobCondition.InterruptForced);
     }
 
     private void RefreshForcedTargetState()
     {
+        if (forcedTarget.IsValid && Pawn is { Drafted: false })
+        {
+            ResetForcedTargetLocal();
+            return;
+        }
+
         if (!forcedTarget.IsValid || !forcedTarget.HasThing)
         {
             return;
         }
 
         Thing targetThing = forcedTarget.Thing;
-        if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || !ParentThing.Spawned || targetThing.Map != ParentThing.MapHeld)
+        if (!IsValidVerbSelectionTarget(targetThing) || !HasEngageableHardpoint(forcedTarget))
         {
-            ResetForcedTarget();
+            ResetForcedTargetLocal();
         }
     }
 
@@ -412,38 +641,42 @@ public class CompMultiTurretGun : ThingComp
 
     private static void ClearHardpointIfNotBursting(MechHardpoint hp)
     {
-        if (hp.state != MechHardpoint.State.Firing)
+        if (!hp.IsBursting)
         {
             hp.ResetToIdle();
         }
     }
 
-    private void TryForceHardpointNow(MechHardpoint hp, LocalTargetInfo target)
+    private void AbortActiveBursts()
     {
-        if (hp.state == MechHardpoint.State.Firing || hp.state == MechHardpoint.State.Cooling)
+        for (int i = 0; i < hardpointCount; i++)
         {
-            return;
+            MechHardpoint hp = hardpoints[i];
+            if (hp.state == MechHardpoint.State.Firing && hp.IsBursting)
+            {
+                hp.NotifyCastComplete();
+            }
         }
-
-        Verb verb = hp.AttackVerb;
-        if (verb == null || !verb.Available())
-        {
-            return;
-        }
-
-        if (!hp.CanEngageTarget(target, Pawn, ParentThing.MapHeld))
-        {
-            return;
-        }
-
-        hp.BeginWarmup(target);
     }
 
     private bool TryStartHardpointCast(MechHardpoint hp, Pawn pawn)
     {
-        if (!TryGetProjectileOrigin(pawn.DrawPos, pawn, hp, out Vector3 origin))
+        Verb verb = hp.AttackVerb;
+        LocalTargetInfo target = hp.currentTarget;
+        if (verb == null || !verb.Available() || !target.IsValid || !target.HasThing)
         {
-            origin = pawn.DrawPos;
+            return false;
+        }
+
+        Thing targetThing = target.Thing;
+        if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != pawn.Map)
+        {
+            return false;
+        }
+
+        if (!hp.TryFindShootLineTo(target, out ShootLine shootLine))
+        {
+            return false;
         }
 
         ThingDef projectileDef = hp.module?.ProjectileDef;
@@ -452,42 +685,80 @@ public class CompMultiTurretGun : ThingComp
             return false;
         }
 
-        TurretShotReport report = TurretShotReport.HitReportFor(pawn, hp, hp.currentTarget);
-        bool canMiss = hp.module?.forcedMissRadius <= 0f;
+        if (!TryGetProjectileOrigin(pawn.DrawPos, pawn, hp, out Vector3 origin))
+        {
+            return false;
+        }
 
         Projectile projectile = (Projectile)GenSpawn.Spawn(projectileDef, pawn.Position, pawn.Map);
-        ProjectileHitFlags hitFlags;
-        LocalTargetInfo usedTarget;
 
-        if (canMiss && !Rand.Chance(report.AimOnTargetChance))
+        float forcedMissRadius = verb.verbProps.ForcedMissRadius;
+        if (forcedMissRadius > 0.5f)
         {
-            ShootLine line = default;
-            hp.TryFindShootLineTo(hp.currentTarget, out line);
-            line.ChangeDestToMissWild(report.AimOnTargetChance, projectileDef.projectile.flyOverhead, pawn.Map);
-            hitFlags = ProjectileHitFlags.NonTargetWorld;
+            forcedMissRadius *= verb.verbProps.GetForceMissFactorFor(hp.gun, pawn);
+            float adjustedForcedMiss = VerbUtility.CalculateAdjustedForcedMiss(forcedMissRadius, target.Cell - pawn.Position);
+            if (adjustedForcedMiss > 0.5f)
+            {
+                IntVec3 forcedMissTarget;
+                bool hasForcedMissTarget;
+                if (verb.verbProps.forcedMissEvenDispersal)
+                {
+                    hasForcedMissTarget = hp.TryGetEvenDispersalForcedMissTarget(
+                        target.Cell,
+                        adjustedForcedMiss,
+                        pawn.Position,
+                        out forcedMissTarget);
+                }
+                else
+                {
+                    int radialCellCount = GenRadial.NumCellsInRadius(adjustedForcedMiss);
+                    forcedMissTarget = target.Cell + GenRadial.RadialPattern[Rand.Range(0, radialCellCount)];
+                    hasForcedMissTarget = true;
+                }
+
+                if (hasForcedMissTarget && forcedMissTarget != target.Cell)
+                {
+                    ProjectileHitFlags forcedMissHitFlags = Rand.Chance(0.5f)
+                        ? ProjectileHitFlags.All
+                        : ProjectileHitFlags.NonTargetWorld;
+                    projectile.Launch(pawn, origin, forcedMissTarget, target, forcedMissHitFlags, equipment: hp.gun);
+                    return true;
+                }
+            }
+        }
+
+        ShotReport report = ShotReport.HitReportFor(pawn, verb, target);
+        Thing randomCover = report.GetRandomCoverToMissInto();
+        ThingDef targetCoverDef = randomCover?.def;
+
+        if (verb.verbProps.canGoWild && !Rand.Chance(report.AimOnTargetChance_IgnoringPosture))
+        {
+            shootLine.ChangeDestToMissWild(report.AimOnTargetChance_StandardTarget, projectileDef.projectile.flyOverhead, pawn.Map);
+            ProjectileHitFlags wildMissHitFlags = ProjectileHitFlags.NonTargetWorld;
             if (Rand.Chance(0.5f))
             {
-                hitFlags |= ProjectileHitFlags.NonTargetPawns;
+                wildMissHitFlags |= ProjectileHitFlags.NonTargetPawns;
             }
-            usedTarget = line.Dest;
-        }
-        else if (canMiss && hp.currentTarget.Thing is { def.CanBenefitFromCover: true } && !Rand.Chance(report.PassCoverChance))
-        {
-            Thing hitCover = report.GetRandomCoverToMissInto();
-            hitFlags = ProjectileHitFlags.NonTargetWorld | ProjectileHitFlags.NonTargetPawns;
-            usedTarget = hitCover;
-        }
-        else
-        {
-            hitFlags = ProjectileHitFlags.IntendedTarget | ProjectileHitFlags.NonTargetPawns;
-            if (!hp.currentTarget.HasThing || hp.currentTarget.Thing.def.Fillage == FillCategory.Full)
-            {
-                hitFlags |= ProjectileHitFlags.NonTargetWorld;
-            }
-            usedTarget = hp.currentTarget;
+
+            projectile.Launch(pawn, origin, shootLine.Dest, target, wildMissHitFlags, equipment: hp.gun, targetCoverDef: targetCoverDef);
+            return true;
         }
 
-        projectile.Launch(pawn, origin, usedTarget, hp.currentTarget, hitFlags, equipment: hp.gun, targetCoverDef: null);
+        if (target.Thing is { def.CanBenefitFromCover: true } && !Rand.Chance(report.PassCoverChance))
+        {
+            ProjectileHitFlags coverHitFlags = ProjectileHitFlags.NonTargetWorld | ProjectileHitFlags.NonTargetPawns;
+            projectile.Launch(pawn, origin, randomCover, target, coverHitFlags, equipment: hp.gun, targetCoverDef: targetCoverDef);
+            return true;
+        }
+
+        ProjectileHitFlags hitFlags = ProjectileHitFlags.IntendedTarget | ProjectileHitFlags.NonTargetPawns;
+        if (!target.HasThing || target.Thing.def.Fillage == FillCategory.Full)
+        {
+            hitFlags |= ProjectileHitFlags.NonTargetWorld;
+        }
+
+        LocalTargetInfo usedTarget = target.HasThing ? target : shootLine.Dest;
+        projectile.Launch(pawn, origin, usedTarget, target, hitFlags, equipment: hp.gun, targetCoverDef: targetCoverDef);
         return true;
     }
 
@@ -509,53 +780,193 @@ public class CompMultiTurretGun : ThingComp
 
     private bool IsValidVerbSelectionTarget(Thing target)
     {
-        return target != null
-            && !target.Destroyed
-            && target.Spawned
-            && target.Map == ParentThing.MapHeld
-            && ParentThing.HostileTo(target);
+        Pawn pawn = Pawn;
+        if (target == null
+            || pawn == null
+            || target.Destroyed
+            || !target.Spawned
+            || !ParentThing.Spawned
+            || target.Map != ParentThing.MapHeld)
+        {
+            return false;
+        }
+
+        if (ParentThing.HostileTo(target))
+        {
+            return true;
+        }
+
+        if (target != ForcedTargetThing || target == pawn)
+        {
+            return false;
+        }
+
+        if (pawn != null
+            && target is Pawn targetPawn
+            && (pawn.InSameExtraFaction(targetPawn, ExtraFactionType.HomeFaction)
+                || pawn.InSameExtraFaction(targetPawn, ExtraFactionType.MiniFaction)))
+        {
+            return false;
+        }
+
+        return true;
     }
 
     public override IEnumerable<Gizmo> CompGetGizmosExtra()
     {
-        if (Pawn is { IsColonyMechPlayerControlled: true })
+        if (Pawn is { IsColonyMechPlayerControlled: true})
         {
-            Command_Target forceAttackCommand = new();
-            forceAttackCommand.defaultLabel = "CommandSetForceAttackTarget".Translate();
-            forceAttackCommand.defaultDesc = "CommandSetForceAttackTargetDesc".Translate();
-            forceAttackCommand.icon = ForceTargetIcon.Texture;
-            forceAttackCommand.hotKey = KeyBindingDefOf.Misc4;
-            forceAttackCommand.targetingParams = BuildForcedTargetingParameters();
-            forceAttackCommand.action = OrderAttack;
-            forceAttackCommand.onUpdate = DrawTargetingPreview;
-            yield return forceAttackCommand;
+            if (Pawn.Drafted)
+            {
+                Command_Target forceAttackCommand = new()
+                {
+                    defaultLabel = "CommandSetForceAttackTarget".Translate(),
+                    defaultDesc = "CommandSetForceAttackTargetDesc".Translate(),
+                    icon = ForceTargetIcon.Texture,
+                    hotKey = KeyBindingDefOf.Misc4,
+                    targetingParams = BuildForcedTargetingParameters(),
+                    action = OrderAttack,
+                    onUpdate = DrawTargetingPreview
+                };
+
+                yield return forceAttackCommand;
+            }
 
             if (forcedTarget.IsValid)
             {
-                Command_Action stopForceAttackCommand = new();
-                stopForceAttackCommand.defaultLabel = "CommandStopForceAttack".Translate();
-                stopForceAttackCommand.defaultDesc = "CommandStopForceAttackDesc".Translate();
-                stopForceAttackCommand.icon = StopForceTargetIcon.Texture;
-                stopForceAttackCommand.hotKey = KeyBindingDefOf.Misc5;
-                stopForceAttackCommand.action = ResetForcedTarget;
+                Command_Action stopForceAttackCommand = new()
+                {
+                    defaultLabel = "CommandStopForceAttack".Translate(),
+                    defaultDesc = "CommandStopForceAttackDesc".Translate(),
+                    icon = StopForceTargetIcon.Texture,
+                    hotKey = KeyBindingDefOf.Misc5,
+                    action = ResetForcedTarget
+                };
                 yield return stopForceAttackCommand;
             }
 
-            Command_Toggle command = new();
-            command.defaultLabel = "CommandToggleTurret".Translate();
-            command.defaultDesc = "CommandToggleTurretDesc".Translate();
-            command.isActive = () => fireAtWill;
-            command.icon = ToggleTurretIcon.Texture;
-            command.toggleAction = delegate
+            Command_Toggle command = new()
             {
-                fireAtWill = !fireAtWill;
-                if (!fireAtWill && !forcedTarget.IsValid)
+                defaultLabel = "CommandToggleTurret".Translate(),
+                defaultDesc = "CommandToggleTurretDesc".Translate(),
+                isActive = () => fireAtWill,
+                icon = ToggleTurretIcon.Texture,
+                toggleAction = delegate
                 {
-                    ClearIdleTargets();
+                    fireAtWill = !fireAtWill;
+                    targetSearchRequested = fireAtWill;
+                    if (!fireAtWill && !forcedTarget.IsValid)
+                    {
+                        ClearIdleTargets();
+                    }
                 }
             };
             yield return command;
         }
+
+        if (DebugSettings.ShowDevGizmos && hardpointCount > 0)
+        {
+            yield return new Command_Action
+            {
+                defaultLabel = "DEBUG: Hardpoint 锚点调试",
+                defaultDesc = "读取并临时微调该 mech 的运行时 Hardpoint 锚点。不会修改 XML、Def 或存档。",
+                icon = TexButton.ToggleTweak,
+
+                action = OpenHardpointAnchorTuner,
+            };
+        }
+    }
+
+    internal bool TryGetHardpointDebugData(int index, out HardpointDebugData data)
+    {
+        Pawn pawn = Pawn;
+        if (pawn == null || index < 0 || index >= hardpointCount)
+        {
+            data = default;
+            return false;
+        }
+
+        MechHardpoint hp = hardpoints[index];
+        if (hp == null)
+        {
+            data = default;
+            return false;
+        }
+
+        Vector3 pawnDrawPos = pawn.DrawPos;
+        Vector3 worldPosition = hp.swarmPosition;
+        data = new HardpointDebugData(
+            hp.SectionSlotId ?? string.Empty,
+            hp.slot?.key ?? string.Empty,
+            hp.module?.label ?? hp.module?.defName ?? string.Empty,
+            hp.BaseAnchor,
+            hp.EffectiveAnchor,
+            new Vector2(worldPosition.x - pawnDrawPos.x, worldPosition.z - pawnDrawPos.z),
+            new Vector2(worldPosition.x, worldPosition.z),
+            hp.deploymentProgress,
+            hp.state,
+            hp.HasDebugAnchorOverride);
+        return true;
+    }
+
+    internal bool DebugSetHardpointAnchor(int index, Vector2 anchor)
+    {
+        if (index < 0
+            || index >= hardpointCount
+            || float.IsNaN(anchor.x)
+            || float.IsNaN(anchor.y)
+            || float.IsInfinity(anchor.x)
+            || float.IsInfinity(anchor.y))
+        {
+            return false;
+        }
+
+        MechHardpoint hp = hardpoints[index];
+        Vector2 previousAnchor = hp.EffectiveAnchor;
+        hp.SetDebugAnchorOverride(anchor);
+        ShiftHardpointRuntimePosition(hp, anchor - previousAnchor);
+        return true;
+    }
+
+    internal bool DebugResetHardpointAnchor(int index)
+    {
+        if (index < 0 || index >= hardpointCount)
+        {
+            return false;
+        }
+
+        MechHardpoint hp = hardpoints[index];
+        if (!hp.HasDebugAnchorOverride)
+        {
+            return true;
+        }
+
+        Vector2 previousAnchor = hp.EffectiveAnchor;
+        Vector2 baseAnchor = hp.BaseAnchor;
+        hp.ClearDebugAnchorOverride();
+        ShiftHardpointRuntimePosition(hp, baseAnchor - previousAnchor);
+        return true;
+    }
+
+    internal void DebugResetAllHardpointAnchors()
+    {
+        for (int i = 0; i < hardpointCount; i++)
+        {
+            DebugResetHardpointAnchor(i);
+        }
+    }
+
+    private void OpenHardpointAnchorTuner()
+    {
+        Find.WindowStack.WindowOfType<Dialog_HardpointAnchorTuner>()?.Close(false);
+        Find.WindowStack.Add(new Dialog_HardpointAnchorTuner(this));
+    }
+
+    private static void ShiftHardpointRuntimePosition(MechHardpoint hp, Vector2 delta)
+    {
+        Vector3 worldDelta = new(delta.x, 0f, delta.y);
+        hp.anchorPosition += worldDelta;
+        hp.swarmPosition += worldDelta;
     }
 
     private TargetingParameters BuildForcedTargetingParameters()
@@ -574,15 +985,29 @@ public class CompMultiTurretGun : ThingComp
         }
 
         Thing targetThing = target.Thing;
-        if (targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != ParentThing.MapHeld)
+        if (targetThing.Destroyed
+            || !targetThing.Spawned
+            || targetThing.Map != ParentThing.MapHeld)
         {
             return false;
         }
 
-        LocalTargetInfo localTarget = targetThing;
+        return HasEngageableHardpoint(target.Thing);
+    }
+
+    private bool HasEngageableHardpoint(LocalTargetInfo target)
+    {
+        Pawn pawn = Pawn;
+        Map map = ParentThing?.MapHeld;
+        if (pawn == null || map == null || !target.IsValid || !target.HasThing)
+        {
+            return false;
+        }
+
         for (int i = 0; i < hardpointCount; i++)
         {
-            if (hardpoints[i].CanEngageTarget(localTarget, Pawn, ParentThing.MapHeld))
+            MechHardpoint hardpoint = hardpoints[i];
+            if (hardpoint != null && hardpoint.CanEngageTarget(target, pawn, map))
             {
                 return true;
             }
@@ -593,6 +1018,18 @@ public class CompMultiTurretGun : ThingComp
 
     private void DrawTargetingPreview(LocalTargetInfo target)
     {
+        List<object> selectedObjects = Find.Selector.SelectedObjectsListForReading;
+        for (int i = 0; i < selectedObjects.Count; i++)
+        {
+            if (TryGetSelectedPlayerMech(selectedObjects[i], out CompMultiTurretGun turret))
+            {
+                turret.DrawTargetingPreviewLocal(target);
+            }
+        }
+    }
+
+    private void DrawTargetingPreviewLocal(LocalTargetInfo target)
+    {
         if (!ParentThing.Spawned)
         {
             return;
@@ -600,10 +1037,15 @@ public class CompMultiTurretGun : ThingComp
 
         for (int i = 0; i < hardpointCount; i++)
         {
-            Verb attackVerb = hardpoints[i].AttackVerb;
+            MechHardpoint hardpoint = hardpoints[i];
+            Verb attackVerb = hardpoint.AttackVerb;
             if (attackVerb != null)
             {
-                attackVerb.DrawHighlight(target);
+                attackVerb.verbProps.DrawRadiusRing(hardpoint.anchorPosition.ToIntVec3(), attackVerb);
+                if (target.IsValid)
+                {
+                    GenDraw.DrawTargetHighlight(target);
+                }
             }
         }
     }
@@ -611,30 +1053,35 @@ public class CompMultiTurretGun : ThingComp
     public override void PostDrawExtraSelectionOverlays()
     {
         Pawn p = Pawn;
-        if (!ShouldDrawSelectionOverlays(p))
+        if (!ShouldDrawSelectionOverlays(p) || !p.Spawned || hardpointCount == 0)
         {
             return;
         }
 
-        DrawRangeRings(p);
-        DrawActiveTargetHighlights();
+        DrawWarmupAimPies(p);
+    }
 
-        if (!forcedTarget.IsValid || !forcedTarget.HasThing)
+    private void DrawWarmupAimPies(Pawn pawn)
+    {
+        Vector3 baseDrawPos = pawn.DrawPos;
+        for (int i = 0; i < hardpointCount; i++)
         {
-            return;
-        }
+            MechHardpoint hp = hardpoints[i];
+            Verb verb = hp.AttackVerb;
+            if (!hp.WarmingUp
+                || !hp.IsFullyDeployed
+                || !hp.currentTarget.IsValid
+                || verb?.verbProps?.drawAimPie != true
+                || !TryGetTargetDrawPos(pawn.MapHeld, hp.currentTarget, out _)
+                || !TryGetHardpointDrawPos(baseDrawPos, pawn, hp, out Vector3 center))
+            {
+                continue;
+            }
 
-        Thing targetThing = forcedTarget.Thing;
-        if (targetThing == null || targetThing.Destroyed || !targetThing.Spawned || targetThing.Map != ParentThing.MapHeld)
-        {
-            return;
+            float aimAngle = GetDisplayAimAngle(pawn, hp, center);
+            center.y = AltitudeLayer.MetaOverlays.AltitudeFor();
+            GenDraw.DrawAimPieRaw(center, aimAngle, hp.warmupTicksLeft);
         }
-
-        Vector3 a = ParentThing.TrueCenter();
-        Vector3 b = targetThing.TrueCenter();
-        b.y = AltitudeLayer.MetaOverlays.AltitudeFor();
-        a.y = b.y;
-        GenDraw.DrawLineBetween(a, b, ForcedTargetLineMat);
     }
 
     public void DrawAfterPawnRendered(Vector3 baseDrawPos)
@@ -654,30 +1101,7 @@ public class CompMultiTurretGun : ThingComp
             }
 
             float aimAngle = GetDisplayAimAngle(p, hp, drawPos);
-            DrawEquipmentAimingFaded(hp.gun, drawPos, aimAngle, SmoothDeploymentProgress(hp.deploymentProgress));
-        }
-    }
-
-    private void DrawRangeRings(Pawn p)
-    {
-        for (int i = 0; i < hardpointCount; i++)
-        {
-            Verb attackVerb = hardpoints[i].AttackVerb;
-            attackVerb?.verbProps?.DrawRadiusRing(p.Position, attackVerb);
-        }
-    }
-
-    private void DrawActiveTargetHighlights()
-    {
-        for (int i = 0; i < hardpointCount; i++)
-        {
-            MechHardpoint hp = hardpoints[i];
-            if (!hp.currentTarget.IsValid || !hp.IsActivelyEngaging)
-            {
-                continue;
-            }
-
-            GenDraw.DrawTargetHighlight(hp.currentTarget);
+            PawnRenderUtility.DrawEquipmentAiming(hp.gun, drawPos, aimAngle);
         }
     }
 
@@ -690,13 +1114,13 @@ public class CompMultiTurretGun : ThingComp
         }
 
         float deployment = SmoothDeploymentProgress(hp.deploymentProgress);
-        Vector3 floatingOffset = hp.floatingOffset * deployment;
-        int bobPeriod = Mathf.Max(1, Props.floatingWeaponBobPeriodTicks);
-        float phase = hp.visualIndex * 0.61803398875f;
-        float bobCycle = (Find.TickManager.TicksGame % bobPeriod) / (float)bobPeriod + phase;
-        floatingOffset.z += Mathf.Sin(bobCycle * Mathf.PI * 2f) * Props.floatingWeaponBobAmplitude * deployment;
-
-        drawPos = baseDrawPos.WithYOffset(PawnRenderUtility.AltitudeForLayer(HardpointAltitudeLayer)) + floatingOffset;
+        Vector3 renderCorrection = baseDrawPos - pawn.DrawPos;
+        renderCorrection.y = 0f;
+        Vector3 deployedPosition = hp.swarmPosition + renderCorrection;
+        Vector3 retractedPosition = baseDrawPos;
+        retractedPosition.y = 0f;
+        drawPos = Vector3.Lerp(retractedPosition, deployedPosition, deployment);
+        drawPos.y = baseDrawPos.y + PawnRenderUtility.AltitudeForLayer(HardpointAltitudeLayer);
         return true;
     }
 
@@ -708,84 +1132,9 @@ public class CompMultiTurretGun : ThingComp
             return false;
         }
 
-        float aimAngle = GetDisplayAimAngle(pawn, hp, drawPos);
-        Vector3 forward = Vector3Utility.HorizontalVectorFromAngle(aimAngle);
-        origin = drawPos + forward * ProjectileOriginForwardOffset;
+        origin = drawPos;
         origin.y = 0f;
         return true;
-    }
-
-    private static Vector3 ResolveHardpointOffset(MechHardpoint hp)
-    {
-        if (hp?.slot?.HasHardpointOffset ?? false)
-        {
-            return hp.slot.hardpointOffset;
-        }
-
-        float z = 0f;
-        if (GRMechSectionSlotUtility.IsBow(hp?.sectionSlot))
-        {
-            z = 0.24f;
-        }
-        else if (GRMechSectionSlotUtility.IsStern(hp?.sectionSlot))
-        {
-            z = -0.2f;
-        }
-
-        if (hp?.layout?.ResolvedSlots != null && hp.slot != null)
-        {
-            int weaponIndex = -1;
-            int weaponCount = 0;
-            List<GRMechSlotEntry> slots = hp.layout.ResolvedSlots;
-            for (int i = 0; i < slots.Count; i++)
-            {
-                GRMechSlotEntry entry = slots[i];
-                if (entry?.slotCategory != GRMechSlotCategory.Weapon)
-                {
-                    continue;
-                }
-
-                if (entry == hp.slot || entry.key == hp.slotKey)
-                {
-                    weaponIndex = weaponCount;
-                }
-
-                weaponCount++;
-            }
-
-            if (weaponCount > 0)
-            {
-                float midpoint = (weaponCount - 1) * 0.5f;
-                float x = (weaponIndex >= 0 ? weaponIndex - midpoint : 0f) * 0.18f;
-                return new Vector3(x, 0f, z);
-            }
-        }
-
-        return new Vector3(0f, 0f, z);
-    }
-
-    private Vector3 ResolveFloatingWeaponOffset(MechHardpoint hp)
-    {
-        Vector3 offset = ResolveHardpointOffset(hp) * Props.floatingWeaponOffsetScale;
-        float minRadius = Mathf.Max(0f, Props.floatingWeaponMinRadius);
-        float radiusSquared = offset.x * offset.x + offset.z * offset.z;
-        if (radiusSquared >= minRadius * minRadius)
-        {
-            return offset;
-        }
-
-        if (radiusSquared > 0.000001f)
-        {
-            float scale = minRadius / Mathf.Sqrt(radiusSquared);
-            offset.x *= scale;
-            offset.z *= scale;
-            return offset;
-        }
-
-        Vector3 stableDirection = Vector3Utility.HorizontalVectorFromAngle(hp.visualIndex * StableDirectionStepDegrees);
-        offset.x = stableDirection.x * minRadius;
-        offset.z = stableDirection.z * minRadius;
-        return offset;
     }
 
     private float GetDisplayAimAngle(Pawn pawn, MechHardpoint hp, Vector3 weaponDrawPos)
@@ -795,20 +1144,20 @@ public class CompMultiTurretGun : ThingComp
             return 0f;
         }
 
-        float? verbAimAngle = hp.AttackVerb?.AimAngleOverride;
-        if (verbAimAngle.HasValue)
-        {
-            return verbAimAngle.Value;
-        }
-
         // 只要当前目标有效就保持瞄准（Cooling→Idle 的重选目标窗口期里不会回落到待机姿）；
-        // 目标在 HasInvalidCurrentTarget 里会被 ResetCurrentTarget 真正清除，到那时才回 idle 角度。
+        // 目标在 HasInvalidCurrentTarget 里会被 ResetCurrentTarget 真正清除，到那时才统一朝向地图北方。
         if (hp.currentTarget.IsValid && TryGetTargetDrawPos(pawn.MapHeld, hp.currentTarget, out Vector3 currentTargetPos))
         {
+            float? verbAimAngle = hp.AttackVerb?.AimAngleOverride;
+            if (verbAimAngle.HasValue)
+            {
+                return verbAimAngle.Value;
+            }
+
             return (currentTargetPos - weaponDrawPos).AngleFlat();
         }
 
-        return hp.floatingOffset.AngleFlat();
+        return 0f;
     }
 
     private static float SmoothDeploymentProgress(float progress)
@@ -816,46 +1165,15 @@ public class CompMultiTurretGun : ThingComp
         return Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(progress));
     }
 
-    private static void DrawEquipmentAimingFaded(Thing equipment, Vector3 drawLoc, float aimAngle, float alpha)
-    {
-        float angle = aimAngle - 90f;
-        Mesh mesh;
-        if (aimAngle > 20f && aimAngle < 160f)
-        {
-            mesh = MeshPool.plane10;
-            angle += equipment.def.equippedAngleOffset;
-        }
-        else if (aimAngle > 200f && aimAngle < 340f)
-        {
-            mesh = MeshPool.plane10Flip;
-            angle -= 180f;
-            angle -= equipment.def.equippedAngleOffset;
-        }
-        else
-        {
-            mesh = MeshPool.plane10;
-            angle += equipment.def.equippedAngleOffset;
-        }
-
-        angle %= 360f;
-        CompEquippable equippable = equipment.TryGetComp<CompEquippable>();
-        if (equippable != null)
-        {
-            EquipmentUtility.Recoil(equipment.def, EquipmentUtility.GetRecoilVerb(equippable.AllVerbs), out Vector3 drawOffset, out float angleOffset, aimAngle);
-            drawLoc += drawOffset;
-            angle += angleOffset;
-        }
-
-        Material sourceMaterial = equipment.Graphic is Graphic_StackCount stackGraphic
-            ? stackGraphic.SubGraphicForStackCount(1, equipment.def).MatSingleFor(equipment)
-            : equipment.Graphic.MatSingleFor(equipment);
-        Material material = FadedMaterialPool.FadedVersionOf(sourceMaterial, alpha);
-        Vector3 scale = new(equipment.Graphic.drawSize.x, 0f, equipment.Graphic.drawSize.y);
-        Matrix4x4 matrix = Matrix4x4.TRS(drawLoc, Quaternion.AngleAxis(angle, Vector3.up), scale);
-        Graphics.DrawMesh(mesh, matrix, material, 0);
-    }
-
     // ========== Utility ==========
+
+    private static bool IsPawnRuntimeReady(Pawn pawn)
+    {
+        return pawn != null
+            && pawn.Spawned
+            && pawn.MapHeld != null
+            && pawn.pather != null;
+    }
 
     private static bool CanOperate(Pawn pawn)
     {
@@ -930,6 +1248,104 @@ public class CompMultiTurretGun : ThingComp
             && Find.Selector.IsSelected(pawn);
     }
 
+    private void UpdateDeployment(bool requested)
+    {
+        if (!deploymentRequestInitialized || deploymentRequested != requested)
+        {
+            deploymentRequestInitialized = true;
+            deploymentRequested = requested;
+            deploymentTransitionActive = true;
+        }
+
+        if (!deploymentTransitionActive)
+        {
+            return;
+        }
+
+        bool stable = true;
+        for (int i = 0; i < hardpointCount; i++)
+        {
+            MechHardpoint hp = hardpoints[i];
+            hp.TickDeployment(requested);
+            if (requested ? !hp.IsFullyDeployed : hp.deploymentProgress > 0f)
+            {
+                stable = false;
+            }
+        }
+
+        deploymentTransitionActive = !stable;
+        if (stable && !requested && hardpointCount > 0)
+        {
+            HardpointSwarmSolver.Initialize(hardpoints, hardpointCount, Pawn.DrawPos);
+        }
+    }
+
+    private bool HasCombatSearchContext(Pawn pawn)
+    {
+        if (forcedTarget.IsValid)
+        {
+            return true;
+        }
+
+        Thing enemyTarget = pawn.mindState?.enemyTarget;
+        if (enemyTarget != null && !enemyTarget.Destroyed && enemyTarget.Spawned && enemyTarget.Map == pawn.MapHeld)
+        {
+            return true;
+        }
+
+        int currentTick = Find.TickManager.TicksGame;
+        for (int i = 0; i < hardpointCount; i++)
+        {
+            MechHardpoint hp = hardpoints[i];
+            if (hp.currentTarget.IsValid
+                || (hp.lastAttackTargetTick > 0 && currentTick - hp.lastAttackTargetTick <= WeaponGraphicCombatGraceTicks))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void UpdateMovementFireSuppression(Pawn pawn)
+    {
+        bool moving = pawn.pather?.Moving ?? false;
+        if (moving)
+        {
+            if (!movementFireSuppressed)
+            {
+                movementFireSuppressed = true;
+                if (forcedTarget.IsValid)
+                {
+                    ResetForcedTargetLocal();
+                }
+
+                for (int i = 0; i < hardpointCount; i++)
+                {
+                    MechHardpoint hp = hardpoints[i];
+                    hp.ResetCurrentTarget();
+                    if (hp.state == MechHardpoint.State.WarmingUp)
+                    {
+                        hp.state = MechHardpoint.State.Idle;
+                    }
+                    else if (hp.state == MechHardpoint.State.Firing)
+                    {
+                        hp.NotifyCastComplete();
+                    }
+                }
+            }
+
+            targetSearchRequested = false;
+            return;
+        }
+
+        if (movementFireSuppressed)
+        {
+            movementFireSuppressed = false;
+            targetSearchRequested = fireAtWill || forcedTarget.IsValid;
+        }
+    }
+
     private bool ShouldRequestDeployment(Pawn pawn)
     {
         if (pawn.Faction == Faction.OfPlayer && pawn.Drafted)
@@ -959,7 +1375,7 @@ public class CompMultiTurretGun : ThingComp
             }
         }
 
-        return pawn.mindState?.WasRecentlyCombatantTicks(WeaponGraphicCombatGraceTicks) ?? false;
+        return false;
     }
 
     private static GRMechCombatComputerModuleDef ResolveCombatComputer(GrayMechDesignSnapshot snapshot)

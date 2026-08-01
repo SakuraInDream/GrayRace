@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_SwarmerMissile1_M</defName>
+    <label>一级蜂群导弹</label>
+    <description>可安装在中型武器槽中的常规蜂群导弹模块。</description>
+    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef>GR_MechWeapon_SwarmerMissile1_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+</Defs>

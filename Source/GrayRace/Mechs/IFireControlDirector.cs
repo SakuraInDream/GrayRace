@@ -9,15 +9,17 @@ namespace SD.GrayRace.Mechs;
 /// </summary>
 public interface IFireControlDirector
 {
-    /// <summary>为一个空闲的硬点分配攻击目标。</summary>
-    /// <returns>true 表示分配了目标，硬点应进入 WarmingUp 状态。</returns>
-    bool TryAssignTarget(
-        MechHardpoint hardpoint,
+    /// <summary>在配装重建时预分配火控热路径需要的缓冲。</summary>
+    void Prepare(int hardpointCapacity);
+
+    /// <summary>为本轮可接收命令的硬点批量分配攻击目标。</summary>
+    void AssignTargets(
+        MechHardpoint[] hardpoints,
+        int hardpointCount,
         Pawn owner,
         LocalTargetInfo forcedTarget,
         bool fireAtWill,
-        System.Collections.Generic.HashSet<Thing> reservedTargets,
-        out LocalTargetInfo target);
+        LocalTargetInfo[] results);
 
     /// <summary>为 AI 走位决策选择"代表性"武器（决定寻路距离）。</summary>
     Verb SelectTacticalVerb(

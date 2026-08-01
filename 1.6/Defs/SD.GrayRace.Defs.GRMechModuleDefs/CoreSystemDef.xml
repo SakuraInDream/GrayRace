@@ -1,162 +1,549 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!--
-    反应堆现在只负责供能预算。
-    沿用 Stellaris 同样的 power
-    powerByChassis 控制不同的机型提供的power
-  -->
-
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorBase" Abstract="True">
     <compatibleSlots>
       <li>GR_MechSlot_PowerCore</li>
     </compatibleSlots>
     <anchorBodyPart>Reactor</anchorBodyPart>
-    <uiOrder>4010</uiOrder>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
-  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
-    <defName>GR_MechModule_CC_FissionReactor</defName>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_Fission" ParentName="GR_MechModule_ReactorBase" Abstract="True">
     <label>裂变反应堆</label>
     <description>通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_1</iconPath>
-    <upgradesTo>
-      <li>GR_MechModule_CC_FusionReactor</li>
-    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
-    <costList>
-      <GR_Alloy>10</GR_Alloy>
-    </costList>
-    <power>75</power>
-    <powerByChassis>
-      <li>
-        <chassis>GR_Chassis_Destroyer</chassis>
-        <power>250</power>
-      </li>
-      <li>
-        <chassis>GR_Chassis_Battleship</chassis>
-        <power>550</power>
-      </li>
-    </powerByChassis>
+    <researchUnlockGroup>GR_Reactor_Fission</researchUnlockGroup>
     <uiOrder>4010</uiOrder>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
-  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
-    <defName>GR_MechModule_CC_FusionReactor</defName>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_Fusion" ParentName="GR_MechModule_ReactorBase" Abstract="True">
     <label>聚变反应堆</label>
     <description>核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_2</iconPath>
-    <upgradesTo>
-      <li>GR_MechModule_CC_ColdFusionReactor</li>
-    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
-    <costList>
-      <GR_Alloy>15</GR_Alloy>
-    </costList>
-    <power>100</power>
-    <powerByChassis>
-      <li>
-        <chassis>GR_Chassis_Battleship</chassis>
-        <power>720</power>
-      </li>
-    </powerByChassis>
+    <researchUnlockGroup>GR_Reactor_Fusion</researchUnlockGroup>
     <uiOrder>4020</uiOrder>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
-  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
-    <defName>GR_MechModule_CC_ColdFusionReactor</defName>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_ColdFusion" ParentName="GR_MechModule_ReactorBase" Abstract="True">
     <label>冷聚变反应堆</label>
     <description>在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_3</iconPath>
-    <upgradesTo>
-      <li>GR_MechModule_CC_AntimatterReactor</li>
-    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
-    <costList>
-      <GR_Alloy>23</GR_Alloy>
-    </costList>
-    <power>130</power>
-    <powerByChassis>
-      <li>
-        <chassis>GR_Chassis_Battleship</chassis>
-        <power>950</power>
-      </li>
-    </powerByChassis>
+    <researchUnlockGroup>GR_Reactor_ColdFusion</researchUnlockGroup>
     <uiOrder>4030</uiOrder>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
-  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
-    <defName>GR_MechModule_CC_AntimatterReactor</defName>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_Antimatter" ParentName="GR_MechModule_ReactorBase" Abstract="True">
     <label>反物质反应堆</label>
     <description>利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_4</iconPath>
-    <upgradesTo>
-      <li>GR_MechModule_CC_ZeroPointReactor</li>
-    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
     </researchPrerequisites>
-    <costList>
-      <GR_Alloy>34</GR_Alloy>
-    </costList>
-    <power>170</power>
-    <powerByChassis>
-      <li>
-        <chassis>GR_Chassis_Battleship</chassis>
-        <power>1250</power>
-      </li>
-    </powerByChassis>
+    <researchUnlockGroup>GR_Reactor_Antimatter</researchUnlockGroup>
     <uiOrder>4040</uiOrder>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
-  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
-    <defName>GR_MechModule_CC_ZeroPointReactor</defName>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_ZeroPoint" ParentName="GR_MechModule_ReactorBase" Abstract="True">
     <label>零点反应堆</label>
     <description>直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_5</iconPath>
-    <upgradesTo>
-      <li>GR_MechModule_CC_DarkMatterReactor</li>
-    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
     </researchPrerequisites>
-    <costList>
-      <GR_Alloy>51</GR_Alloy>
-    </costList>
-    <power>220</power>
-    <powerByChassis>
-      <li>
-        <chassis>GR_Chassis_Battleship</chassis>
-        <power>1550</power>
-      </li>
-    </powerByChassis>
+    <researchUnlockGroup>GR_Reactor_ZeroPoint</researchUnlockGroup>
     <uiOrder>4050</uiOrder>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
-  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorBase">
-    <defName>GR_MechModule_CC_DarkMatterReactor</defName>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_DarkMatter" ParentName="GR_MechModule_ReactorBase" Abstract="True">
     <label>暗物质反应堆</label>
     <description>这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。</description>
     <iconPath>Icon/ShipParts/ship_part_dark_matter_power_core</iconPath>
     <researchPrerequisites>
-      <li>GR_T6Mechtech</li>
+      <li>GR_T6MechTech</li>
     </researchPrerequisites>
-    <costList>
-      <GR_Alloy>76</GR_Alloy>
-      <!-- 未来补上暗物质类稀有资源后，再按群星补充额外材料消耗。 -->
-    </costList>
-    <power>285</power>
-    <powerByChassis>
-      <li>
-        <chassis>GR_Chassis_Battleship</chassis>
-        <power>2000</power>
-      </li>
-    </powerByChassis>
+    <researchUnlockGroup>GR_Reactor_DarkMatter</researchUnlockGroup>
     <uiOrder>4060</uiOrder>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <!-- Fission -->
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fission">
+    <defName>GR_MechModule_Reactor_Fission_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>75</power>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Fusion_Corvette</li>
+    </upgradesTo>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fission">
+    <defName>GR_MechModule_Reactor_Fission_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>140</power>
+    <costList>
+      <GR_Alloy>20</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Fusion_Destroyer</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fission">
+    <defName>GR_MechModule_Reactor_Fission_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>280</power>
+    <costList>
+      <GR_Alloy>40</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Fusion_Cruiser</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fission">
+    <defName>GR_MechModule_Reactor_Fission_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>550</power>
+    <costList>
+      <GR_Alloy>80</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Fusion_Battleship</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fission">
+    <defName>GR_MechModule_Reactor_Fission_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>1100</power>
+    <costList>
+      <GR_Alloy>160</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Fusion_Titan</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fission">
+    <defName>GR_MechModule_Reactor_Fission_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>3850</power>
+    <costList>
+      <GR_Alloy>480</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Fusion_Juggernaut</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <!-- Fusion -->
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fusion">
+    <defName>GR_MechModule_Reactor_Fusion_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>100</power>
+    <costList>
+      <GR_Alloy>15</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ColdFusion_Corvette</li>
+    </upgradesTo>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fusion">
+    <defName>GR_MechModule_Reactor_Fusion_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>180</power>
+    <costList>
+      <GR_Alloy>26</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ColdFusion_Destroyer</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fusion">
+    <defName>GR_MechModule_Reactor_Fusion_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>360</power>
+    <costList>
+      <GR_Alloy>52</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ColdFusion_Cruiser</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fusion">
+    <defName>GR_MechModule_Reactor_Fusion_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>720</power>
+    <costList>
+      <GR_Alloy>104</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ColdFusion_Battleship</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fusion">
+    <defName>GR_MechModule_Reactor_Fusion_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>1450</power>
+    <costList>
+      <GR_Alloy>208</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ColdFusion_Titan</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Fusion">
+    <defName>GR_MechModule_Reactor_Fusion_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>5000</power>
+    <costList>
+      <GR_Alloy>730</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ColdFusion_Juggernaut</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <!-- Cold fusion -->
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ColdFusion">
+    <defName>GR_MechModule_Reactor_ColdFusion_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>130</power>
+    <costList>
+      <GR_Alloy>23</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Antimatter_Corvette</li>
+    </upgradesTo>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ColdFusion">
+    <defName>GR_MechModule_Reactor_ColdFusion_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>240</power>
+    <costList>
+      <GR_Alloy>34</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Antimatter_Destroyer</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ColdFusion">
+    <defName>GR_MechModule_Reactor_ColdFusion_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>480</power>
+    <costList>
+      <GR_Alloy>68</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Antimatter_Cruiser</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ColdFusion">
+    <defName>GR_MechModule_Reactor_ColdFusion_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>950</power>
+    <costList>
+      <GR_Alloy>136</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Antimatter_Battleship</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ColdFusion">
+    <defName>GR_MechModule_Reactor_ColdFusion_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>1900</power>
+    <costList>
+      <GR_Alloy>272</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Antimatter_Titan</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ColdFusion">
+    <defName>GR_MechModule_Reactor_ColdFusion_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>6500</power>
+    <costList>
+      <GR_Alloy>950</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_Antimatter_Juggernaut</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <!-- Antimatter -->
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Antimatter">
+    <defName>GR_MechModule_Reactor_Antimatter_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>170</power>
+    <costList>
+      <GR_Alloy>22</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ZeroPoint_Corvette</li>
+    </upgradesTo>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Antimatter">
+    <defName>GR_MechModule_Reactor_Antimatter_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>320</power>
+    <costList>
+      <GR_Alloy>44</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ZeroPoint_Destroyer</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Antimatter">
+    <defName>GR_MechModule_Reactor_Antimatter_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>620</power>
+    <costList>
+      <GR_Alloy>88</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ZeroPoint_Cruiser</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Antimatter">
+    <defName>GR_MechModule_Reactor_Antimatter_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>1250</power>
+    <costList>
+      <GR_Alloy>176</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ZeroPoint_Battleship</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Antimatter">
+    <defName>GR_MechModule_Reactor_Antimatter_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>2500</power>
+    <costList>
+      <GR_Alloy>352</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ZeroPoint_Titan</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_Antimatter">
+    <defName>GR_MechModule_Reactor_Antimatter_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>8460</power>
+    <costList>
+      <GR_Alloy>1230</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_ZeroPoint_Juggernaut</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <!-- Zero point -->
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ZeroPoint">
+    <defName>GR_MechModule_Reactor_ZeroPoint_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>220</power>
+    <costList>
+      <GR_Alloy>28</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_DarkMatter_Corvette</li>
+    </upgradesTo>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ZeroPoint">
+    <defName>GR_MechModule_Reactor_ZeroPoint_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>430</power>
+    <costList>
+      <GR_Alloy>56</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_DarkMatter_Destroyer</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ZeroPoint">
+    <defName>GR_MechModule_Reactor_ZeroPoint_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>800</power>
+    <costList>
+      <GR_Alloy>112</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_DarkMatter_Cruiser</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ZeroPoint">
+    <defName>GR_MechModule_Reactor_ZeroPoint_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>1550</power>
+    <costList>
+      <GR_Alloy>224</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_DarkMatter_Battleship</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ZeroPoint">
+    <defName>GR_MechModule_Reactor_ZeroPoint_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>3200</power>
+    <costList>
+      <GR_Alloy>448</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_DarkMatter_Titan</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_ZeroPoint">
+    <defName>GR_MechModule_Reactor_ZeroPoint_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>11000</power>
+    <costList>
+      <GR_Alloy>1600</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Reactor_DarkMatter_Juggernaut</li>
+    </upgradesTo>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+
+  <!-- Dark matter. Add the rare-resource cost here when that resource is introduced. -->
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
+    <defName>GR_MechModule_Reactor_DarkMatter_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>285</power>
+    <costList>
+      <GR_Alloy>37</GR_Alloy>
+    </costList>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
+    <defName>GR_MechModule_Reactor_DarkMatter_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>550</power>
+    <costList>
+      <GR_Alloy>74</GR_Alloy>
+    </costList>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
+    <defName>GR_MechModule_Reactor_DarkMatter_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>1030</power>
+    <costList>
+      <GR_Alloy>148</GR_Alloy>
+    </costList>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
+    <defName>GR_MechModule_Reactor_DarkMatter_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>2000</power>
+    <costList>
+      <GR_Alloy>296</GR_Alloy>
+    </costList>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
+    <defName>GR_MechModule_Reactor_DarkMatter_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>4200</power>
+    <costList>
+      <GR_Alloy>592</GR_Alloy>
+    </costList>
+  </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
+  <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
+    <defName>GR_MechModule_Reactor_DarkMatter_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>14300</power>
+    <costList>
+      <GR_Alloy>2080</GR_Alloy>
+    </costList>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 </Defs>

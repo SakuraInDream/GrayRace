@@ -20,21 +20,32 @@ internal sealed class GrayMechDrydockTabController
 
     internal void DeleteCurrentDesign(Building_GR_Drydock dock)
     {
-        GrayMechDesignRecord record = dock.EditingDesignRecord;
-        if (record == null)
+        DeleteDesign(dock, dock?.EditingDesignRecord);
+    }
+
+    internal void DeleteDesign(Building_GR_Drydock dock, GrayMechDesignRecord record)
+    {
+        if (dock == null || record == null)
         {
             SoundDefOf.ClickReject.PlayOneShotOnCamera();
             return;
         }
 
+        int designId = record.id;
+        string designLabel = record.label ?? "未命名";
         Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation(
-            "移除设计 \"" + record.label + "\"?",
+            "删除设计 \"" + designLabel + "\"?\n\n此操作无法撤销。",
             delegate
             {
-                if (dock.DeleteCurrentDesign())
+                if (dock.DeleteDesign(designId))
                 {
                     SoundDefOf.Tick_Low.PlayOneShotOnCamera();
-                    Messages.Message("设计蓝图已删除.", dock, MessageTypeDefOf.PositiveEvent);
+                    Messages.Message("已删除设计: " + designLabel, dock, MessageTypeDefOf.PositiveEvent);
+                }
+                else
+                {
+                    SoundDefOf.ClickReject.PlayOneShotOnCamera();
+                    Messages.Message("无法删除设计，该记录可能已不存在。", dock, MessageTypeDefOf.RejectInput);
                 }
             },
             destructive: true));
@@ -89,19 +100,15 @@ internal sealed class GrayMechDrydockTabController
             return;
         }
 
-        if (!dock.SaveDesignByDraftLabel(out GrayMechDesignRecord record, out bool createdNew, out bool overwroteExisting))
+        if (!dock.SaveDesignByDraftLabel(out GrayMechDesignRecord record, out bool createdNew, out string failureReason))
         {
             SoundDefOf.ClickReject.PlayOneShotOnCamera();
-            Messages.Message("无法保存当前设计。", dock, MessageTypeDefOf.RejectInput);
+            Messages.Message(failureReason.NullOrEmpty() ? "无法保存当前设计。" : failureReason, dock, MessageTypeDefOf.RejectInput);
             return;
         }
 
         SoundDefOf.Tick_Low.PlayOneShotOnCamera();
-        if (overwroteExisting)
-        {
-            Messages.Message("已覆盖同名设计: " + (record?.label ?? "未命名"), dock, MessageTypeDefOf.PositiveEvent);
-        }
-        else if (createdNew)
+        if (createdNew)
         {
             Messages.Message("已保存新设计: " + (record?.label ?? "未命名"), dock, MessageTypeDefOf.PositiveEvent);
         }
@@ -189,15 +196,26 @@ internal sealed class GrayMechDrydockTabController
         SoundDefOf.Click.PlayOneShotOnCamera();
     }
 
-    internal void SelectSection(GRMechSectionSlotDef sectionSlot)
+    internal void OpenSectionLayoutMenu(Building_GR_Drydock dock, GRMechSectionSlotDef sectionSlot)
     {
-        if (sectionSlot == null)
+        if (dock?.DesignDraft?.chassis == null || sectionSlot == null)
         {
+            SoundDefOf.ClickReject.PlayOneShotOnCamera();
             return;
         }
 
         state.SelectSection(sectionSlot);
+        if (!GRMechSectionLayoutCatalog.TryGetLayouts(dock.DesignDraft.chassis, sectionSlot, out List<GRMechSectionLayoutDef> layouts)
+            || layouts == null
+            || layouts.Count == 0)
+        {
+            SoundDefOf.ClickReject.PlayOneShotOnCamera();
+            Messages.Message("当前区段没有可用布局。", dock, MessageTypeDefOf.RejectInput);
+            return;
+        }
+
         SoundDefOf.Click.PlayOneShotOnCamera();
+        Find.WindowStack.Add(new Dialog_SelectGrayMechSectionLayout(dock, sectionSlot, layouts, SetSectionLayout));
     }
 
     internal void SelectSlot(Building_GR_Drydock dock, GRMechResolvedSlot resolvedSlot)
@@ -218,6 +236,17 @@ internal sealed class GrayMechDrydockTabController
             state.EnsureCompatibleModuleCache(dock);
         }
 
+        SoundDefOf.Click.PlayOneShotOnCamera();
+    }
+
+    internal void ArmModule(GRMechModuleDef module)
+    {
+        if (module == null)
+        {
+            return;
+        }
+
+        state.SetArmedModule(module);
         SoundDefOf.Click.PlayOneShotOnCamera();
     }
 
@@ -242,7 +271,6 @@ internal sealed class GrayMechDrydockTabController
             return true;
         }
 
-        state.SelectSlot(resolvedSlot);
         state.InvalidateDraft();
         state.EnsureCompatibleModuleCache(dock);
         SoundDefOf.Click.PlayOneShotOnCamera();
@@ -360,15 +388,6 @@ internal sealed class GrayMechDrydockTabController
             }
             else
             {
-                if (module != null)
-                {
-                    state.SetArmedModule(module);
-                }
-                else
-                {
-                    state.ClearArmedModule();
-                }
-
                 state.EnsureCompatibleModuleCache(dock);
             }
 

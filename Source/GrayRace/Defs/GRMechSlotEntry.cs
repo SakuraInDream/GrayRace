@@ -16,7 +16,7 @@ public class GRMechSlotEntry
     public GRMechSlotDef slotDef;
     public GRMechWeaponMountMode weaponMountMode;
     public BodyPartDef anchorBodyPart;
-    public Vector3 hardpointOffset = Vector3.zero;
+    public Vector2? hardpointAnchor;
     public int uiOrder;
 
     public GRMechSlotComponentType componentType => slotDef?.componentType ?? GRMechSlotComponentType.Undefined;
@@ -35,5 +35,23 @@ public class GRMechSlotEntry
 
     public Color designerColor => slotDef?.designerColor ?? Color.white;
 
-    public bool HasHardpointOffset => hardpointOffset.sqrMagnitude > 0.0001f;
+    public bool TryGetHardpointAnchorConfigError(string owner, out string error)
+    {
+        bool isHardpointWeapon = componentType == GRMechSlotComponentType.Weapon
+            && weaponMountMode == GRMechWeaponMountMode.Hardpoint;
+        if (isHardpointWeapon && !hardpointAnchor.HasValue)
+        {
+            error = owner + " slot " + key + " is a Hardpoint weapon but has no hardpointAnchor.";
+            return true;
+        }
+
+        if (!isHardpointWeapon && hardpointAnchor.HasValue)
+        {
+            error = owner + " slot " + key + " must not define hardpointAnchor unless it is a Hardpoint weapon.";
+            return true;
+        }
+
+        error = null;
+        return false;
+    }
 }

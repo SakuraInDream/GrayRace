@@ -27,6 +27,12 @@ public class ITab_GrayMechLoadout : ITab
 
     private CompGrayMechLoadout cachedLoadout;
     private int cachedSnapshotSignature = int.MinValue;
+    private int cachedMaximumWeaponSlotCount;
+    private int cachedMaximumSupportSlotCount;
+
+    internal int MaximumWeaponSlotCount => cachedMaximumWeaponSlotCount;
+
+    internal int MaximumSupportSlotCount => cachedMaximumSupportSlotCount;
 
     internal List<GRMechResolvedSlot> WeaponSlots => weaponBuffer;
 
@@ -85,6 +91,8 @@ public class ITab_GrayMechLoadout : ITab
         requiredBuffer.Clear();
         cachedModulesBySlot.Clear();
         cachedTooltipsBySlot.Clear();
+        cachedMaximumWeaponSlotCount = 0;
+        cachedMaximumSupportSlotCount = 0;
 
         if (snapshot?.chassis == null)
         {
@@ -92,6 +100,10 @@ public class ITab_GrayMechLoadout : ITab
         }
 
         GrayMechDesignUtility.FillResolvedSlots(snapshot, resolvedSlotScratch);
+        GrayMechSectionCanvasMetrics.GetMaximumSectionSlotCounts(
+            snapshot,
+            out cachedMaximumWeaponSlotCount,
+            out cachedMaximumSupportSlotCount);
         for (int i = 0; i < resolvedSlotScratch.Count; i++)
         {
             GRMechResolvedSlot resolvedSlot = resolvedSlotScratch[i];

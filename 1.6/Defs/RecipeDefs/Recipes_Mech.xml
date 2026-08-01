@@ -2,7 +2,7 @@
 <Defs>
   <!-- 所有的机械体（舰船）都只需要动态消耗合金。根据区段和实际安装的模块进行计算 -->
   <RecipeDef>
-    <defName>GR_Mech_FF</defName>
+    <defName>GR_Mech_Corvette</defName>
     <label>建造护卫舰</label>
     <description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</description>
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
@@ -16,14 +16,79 @@
   </RecipeDef>
 
   <RecipeDef>
+    <defName>GR_Mech_Frigate</defName>
+    <label>建造雷击舰</label>
+    <description>TODO</description>
+    <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
+
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+        <chassis>GR_Chassis_Frigate</chassis>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GR_Mech_Destroyer</defName>
+    <label>建造驱逐舰</label>
+    <description>TODO</description>
+    <researchPrerequisite>GR_T2MechTech</researchPrerequisite>
+
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+        <chassis>GR_Chassis_Destroyer</chassis>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GR_Mech_Cruiser</defName>
+    <label>建造巡洋舰</label>
+    <description>TODO</description>
+    <researchPrerequisite>GR_T3MechTech</researchPrerequisite>
+
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+        <chassis>GR_Chassis_Cruiser</chassis>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
     <defName>GR_Mech_BB</defName>
     <label>建造战列舰</label>
     <description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</description>
-    <researchPrerequisite>GR_T5MechTech</researchPrerequisite>
+    <researchPrerequisite>GR_T4MechTech</researchPrerequisite>
 
     <modExtensions>
       <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
         <chassis>GR_Chassis_Battleship</chassis>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GR_Mech_Titan</defName>
+    <label>建造泰坦</label>
+    <description>TODO</description>
+    <researchPrerequisite>GR_T5MechTech</researchPrerequisite>
+
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+        <chassis>GR_Chassis_Titan</chassis>
+      </li>
+    </modExtensions>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>GR_Mech_Juggernaut</defName>
+    <label>建造主宰</label>
+    <description>TODO</description>
+    <researchPrerequisite>GR_T6MechTech</researchPrerequisite>
+
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+        <chassis>GR_Chassis_Juggernaut</chassis>
       </li>
     </modExtensions>
   </RecipeDef>

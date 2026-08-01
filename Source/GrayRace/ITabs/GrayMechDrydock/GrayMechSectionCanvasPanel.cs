@@ -9,7 +9,6 @@ namespace SD.GrayRace.ITabs;
 internal sealed class GrayMechSectionCanvasPanel
 {
     private const int AnchoredSectionColumnCount = 3;
-    private const int SectionGridRowCount = 2;
     private const float PreferredSectionBandInset = 32f;
     private const float MinSectionBandInset = 8f;
     private const float TopMargin = 12f;
@@ -17,6 +16,8 @@ internal sealed class GrayMechSectionCanvasPanel
     private const float SectionGap = 14f;
     private const float BandGap = 8f;
     private const float PreviewGap = 18f;
+    private const float MinimumPreviewHeight = 120f;
+    private const float ScrollbarWidth = 16f;
     private const float CorePanelSideMargin = 4f;
     private const float CorePanelTopBottomMargin = 72f;
     private const float MaxCoreSlotSize = 44f;
@@ -30,40 +31,68 @@ internal sealed class GrayMechSectionCanvasPanel
     private const int MaxCorePickerColumns = 6;
 
     private readonly GrayMechDrydockCanvasRenderer canvasRenderer = new();
-    private readonly GRMechResolvedSlot[] slotGridBuffer = new GRMechResolvedSlot[GrayMechDrydockTabStyle.FixedDisplaySlotCount];
+    private readonly GRMechResolvedSlot[] slotGridBuffer;
+    private Vector2 scrollPosition = Vector2.zero;
+
+    internal GrayMechSectionCanvasPanel()
+    {
+        slotGridBuffer = new GRMechResolvedSlot[GrayMechSectionCanvasMetrics.GetMaximumConfiguredCellCount()];
+    }
 
     internal void Draw(Rect canvasRect, IGrayMechSectionCanvasHost host)
     {
-        canvasRenderer.DrawSlotBay(canvasRect);
-        canvasRenderer.DrawCanvasFrame(canvasRect);
-        canvasRenderer.DrawGrid(canvasRect);
-
         if (!host.TryGetSectionSlots(out List<GRMechSectionSlotDef> sectionSlots))
         {
             sectionSlots = null;
         }
 
         int regularSectionCount = CountVisibleSections(sectionSlots);
-        float sectionBandInset = GetSectionBandInset(canvasRect.width, regularSectionCount);
-        float sectionBandWidth = Mathf.Max(0f, canvasRect.width - sectionBandInset * 2f);
-        float headerHeight = GetSectionHeaderHeight(host, sectionSlots, sectionBandWidth);
-        float slotAreaHeight = GetSlotAreaHeight();
+        SectionCanvasLayout layout = CalculateLayout(canvasRect.width, host, sectionSlots, regularSectionCount);
+        if (layout.RequiredHeight <= canvasRect.height)
+        {
+            scrollPosition = Vector2.zero;
+            DrawContent(canvasRect, host, sectionSlots, regularSectionCount, layout);
+        }
+        else
+        {
+            float viewWidth = Mathf.Max(1f, canvasRect.width - ScrollbarWidth);
+            layout = CalculateLayout(viewWidth, host, sectionSlots, regularSectionCount);
+            Rect viewRect = new Rect(0f, 0f, viewWidth, Mathf.Max(canvasRect.height, layout.RequiredHeight));
+            Widgets.BeginScrollView(canvasRect, ref scrollPosition, viewRect);
+            DrawContent(viewRect, host, sectionSlots, regularSectionCount, layout);
+            Widgets.EndScrollView();
+        }
 
-        Rect headerBandRect = new Rect(canvasRect.x + sectionBandInset, canvasRect.y + TopMargin, sectionBandWidth, headerHeight);
-        Rect topSlotBandRect = new Rect(headerBandRect.x, headerBandRect.yMax + BandGap, headerBandRect.width, slotAreaHeight);
-        Rect bottomSlotBandRect = new Rect(headerBandRect.x, canvasRect.yMax - BottomMargin - slotAreaHeight, headerBandRect.width, slotAreaHeight);
+        if (host.AllowSecondarySlotAction && WasSecondaryClick(canvasRect))
+        {
+            host.OnSlotSecondaryActivated(null);
+        }
+    }
+
+    private void DrawContent(
+        Rect canvasRect,
+        IGrayMechSectionCanvasHost host,
+        List<GRMechSectionSlotDef> sectionSlots,
+        int regularSectionCount,
+        SectionCanvasLayout layout)
+    {
+        canvasRenderer.DrawSlotBay(canvasRect);
+        canvasRenderer.DrawCanvasFrame(canvasRect);
+
+        Rect headerBandRect = new Rect(canvasRect.x + layout.SectionBandInset, canvasRect.y + TopMargin, layout.SectionBandWidth, layout.HeaderHeight);
+        Rect topSlotBandRect = new Rect(headerBandRect.x, headerBandRect.yMax + BandGap, headerBandRect.width, layout.TopAreaHeight);
+        Rect bottomSlotBandRect = new Rect(headerBandRect.x, canvasRect.yMax - BottomMargin - layout.BottomAreaHeight, headerBandRect.width, layout.BottomAreaHeight);
 
         float previewY = topSlotBandRect.yMax + PreviewGap;
         float previewBottom = bottomSlotBandRect.y - PreviewGap;
-        float previewHeight = Mathf.Max(120f, previewBottom - previewY);
+        float previewHeight = Mathf.Max(MinimumPreviewHeight, previewBottom - previewY);
         float previewWidth = Mathf.Min(headerBandRect.width * 0.46f, 360f);
         Rect previewRect = new Rect(headerBandRect.center.x - previewWidth * 0.5f, previewY, previewWidth, previewHeight);
         canvasRenderer.DrawShipPreview(previewRect, host.Snapshot);
 
         if (sectionSlots != null && regularSectionCount > 0)
         {
-            float columnWidth = GetSectionColumnWidth(headerBandRect.width, regularSectionCount);
-            float totalColumnsWidth = regularSectionCount * columnWidth + Mathf.Max(0, regularSectionCount - 1) * SectionGap;
+            float totalColumnsWidth = regularSectionCount * layout.ColumnWidth + Mathf.Max(0, regularSectionCount - 1) * SectionGap;
             float bandStartX = headerBandRect.x + (headerBandRect.width - totalColumnsWidth) * 0.5f;
             int visibleIndex = 0;
             for (int i = 0; i < sectionSlots.Count; i++)
@@ -75,11 +104,11 @@ internal sealed class GrayMechSectionCanvasPanel
                 }
 
                 host.PrepareSectionSlots(sectionSlot);
-                float columnX = bandStartX + visibleIndex * (columnWidth + SectionGap);
-                Rect headerRect = new Rect(columnX, headerBandRect.y, columnWidth, headerBandRect.height);
-                Rect topAreaRect = new Rect(columnX, topSlotBandRect.y, columnWidth, topSlotBandRect.height);
-                Rect bottomAreaRect = new Rect(columnX, bottomSlotBandRect.y, columnWidth, bottomSlotBandRect.height);
-                DrawSectionColumn(host, sectionSlot, headerRect, topAreaRect, bottomAreaRect);
+                float columnX = bandStartX + visibleIndex * (layout.ColumnWidth + SectionGap);
+                Rect headerRect = new Rect(columnX, headerBandRect.y, layout.ColumnWidth, headerBandRect.height);
+                Rect topAreaRect = new Rect(columnX, topSlotBandRect.y, layout.ColumnWidth, topSlotBandRect.height);
+                Rect bottomAreaRect = new Rect(columnX, bottomSlotBandRect.y, layout.ColumnWidth, bottomSlotBandRect.height);
+                DrawSectionColumn(host, sectionSlot, headerRect, topAreaRect, bottomAreaRect, layout.SlotButtonSize);
                 visibleIndex++;
             }
         }
@@ -90,19 +119,20 @@ internal sealed class GrayMechSectionCanvasPanel
             Rect corePanelRect = GetCoreSystemsPanelRect(canvasRect, previewRect, host.CoreSlots.Count);
             DrawCoreSystemsColumn(host, canvasRect, corePanelRect);
         }
-
-        if (host.AllowSecondarySlotAction && WasSecondaryClick(canvasRect))
-        {
-            host.OnSlotSecondaryActivated(null);
-        }
     }
 
-    private void DrawSectionColumn(IGrayMechSectionCanvasHost host, GRMechSectionSlotDef sectionSlot, Rect headerRect, Rect topAreaRect, Rect bottomAreaRect)
+    private void DrawSectionColumn(
+        IGrayMechSectionCanvasHost host,
+        GRMechSectionSlotDef sectionSlot,
+        Rect headerRect,
+        Rect topAreaRect,
+        Rect bottomAreaRect,
+        float slotButtonSize)
     {
         Color accent = GrayMechDrydockTabText.GetSectionAccentColor(sectionSlot);
         DrawSectionHeader(host, sectionSlot, headerRect, accent);
-        DrawSlotArea(host, topAreaRect, host.TopSlots, GrayMechDrydockTabStyle.MainWeaponColor);
-        DrawSlotArea(host, bottomAreaRect, host.BottomSlots, GrayMechDrydockTabStyle.AuxiliaryColor);
+        DrawSlotArea(host, topAreaRect, slotButtonSize, host.TopSlots, GrayMechDrydockTabStyle.MainWeaponColor);
+        DrawSlotArea(host, bottomAreaRect, slotButtonSize, host.BottomSlots, GrayMechDrydockTabStyle.AuxiliaryColor);
     }
 
     private void DrawSectionHeader(IGrayMechSectionCanvasHost host, GRMechSectionSlotDef sectionSlot, Rect headerRect, Color accent)
@@ -127,12 +157,14 @@ internal sealed class GrayMechSectionCanvasPanel
             "<b>" + host.GetSectionHeaderText(sectionSlot) + "</b>");
     }
 
-    private void DrawSlotArea(IGrayMechSectionCanvasHost host, Rect areaRect, List<GRMechResolvedSlot> slots, Color accent)
+    private void DrawSlotArea(IGrayMechSectionCanvasHost host, Rect areaRect, float slotButtonSize, List<GRMechResolvedSlot> slots, Color accent)
     {
         Widgets.DrawBoxSolidWithOutline(areaRect, new Color(accent.r, accent.g, accent.b, 0.035f), new Color(accent.r, accent.g, accent.b, 0.28f));
         Widgets.DrawBoxSolid(new Rect(areaRect.x + 2f, areaRect.y + 2f, areaRect.width - 4f, 4f), new Color(accent.r, accent.g, accent.b, 0.75f));
-        Rect gridRect = GetSlotGridRect(areaRect.ContractedBy(8f), out float slotButtonSize);
-        DrawSlotGrid(host, gridRect, slotButtonSize, slots, accent);
+        int displayCellCount = GrayMechSectionCanvasMetrics.GetDisplayCellCount(slots?.Count ?? 0);
+        int rowCount = displayCellCount / GrayMechDrydockTabStyle.SlotGridColumns;
+        Rect gridRect = GetSlotGridRect(areaRect.ContractedBy(8f), slotButtonSize, rowCount);
+        DrawSlotGrid(host, gridRect, slotButtonSize, displayCellCount, slots, accent);
     }
 
     private void DrawCoreSystemsColumn(IGrayMechSectionCanvasHost host, Rect canvasRect, Rect panelRect)
@@ -216,10 +248,16 @@ internal sealed class GrayMechSectionCanvasPanel
         return slotHovered || pickerHovered;
     }
 
-    private void DrawSlotGrid(IGrayMechSectionCanvasHost host, Rect gridRect, float slotButtonSize, List<GRMechResolvedSlot> slots, Color accent)
+    private void DrawSlotGrid(
+        IGrayMechSectionCanvasHost host,
+        Rect gridRect,
+        float slotButtonSize,
+        int displayCellCount,
+        List<GRMechResolvedSlot> slots,
+        Color accent)
     {
-        BuildSlotGridBuffer(slots);
-        for (int i = 0; i < GrayMechDrydockTabStyle.FixedDisplaySlotCount; i++)
+        BuildSlotGridBuffer(slots, displayCellCount);
+        for (int i = 0; i < displayCellCount; i++)
         {
             int row = i / GrayMechDrydockTabStyle.SlotGridColumns;
             int column = i % GrayMechDrydockTabStyle.SlotGridColumns;
@@ -253,9 +291,9 @@ internal sealed class GrayMechSectionCanvasPanel
         }
     }
 
-    private void BuildSlotGridBuffer(List<GRMechResolvedSlot> slots)
+    private void BuildSlotGridBuffer(List<GRMechResolvedSlot> slots, int displayCellCount)
     {
-        for (int i = 0; i < slotGridBuffer.Length; i++)
+        for (int i = 0; i < displayCellCount; i++)
         {
             slotGridBuffer[i] = null;
         }
@@ -274,13 +312,13 @@ internal sealed class GrayMechSectionCanvasPanel
             }
 
             int preferredIndex = GetPreferredGridCellIndex(resolvedSlot.slot.uiOrder);
-            if ((uint)preferredIndex < GrayMechDrydockTabStyle.FixedDisplaySlotCount && slotGridBuffer[preferredIndex] == null)
+            if ((uint)preferredIndex < displayCellCount && slotGridBuffer[preferredIndex] == null)
             {
                 slotGridBuffer[preferredIndex] = resolvedSlot;
                 continue;
             }
 
-            int fallbackIndex = GetFirstEmptyGridCellIndex();
+            int fallbackIndex = GetFirstEmptyGridCellIndex(displayCellCount);
             if (fallbackIndex < 0)
             {
                 break;
@@ -290,9 +328,9 @@ internal sealed class GrayMechSectionCanvasPanel
         }
     }
 
-    private int GetFirstEmptyGridCellIndex()
+    private int GetFirstEmptyGridCellIndex(int displayCellCount)
     {
-        for (int i = 0; i < slotGridBuffer.Length; i++)
+        for (int i = 0; i < displayCellCount; i++)
         {
             if (slotGridBuffer[i] == null)
             {
@@ -311,6 +349,40 @@ internal sealed class GrayMechSectionCanvasPanel
         }
 
         return uiOrder;
+    }
+
+    private static SectionCanvasLayout CalculateLayout(
+        float canvasWidth,
+        IGrayMechSectionCanvasHost host,
+        List<GRMechSectionSlotDef> sectionSlots,
+        int regularSectionCount)
+    {
+        float sectionBandInset = GetSectionBandInset(canvasWidth, regularSectionCount);
+        float sectionBandWidth = Mathf.Max(0f, canvasWidth - sectionBandInset * 2f);
+        float headerHeight = GetSectionHeaderHeight(host, sectionSlots, sectionBandWidth);
+        float columnWidth = GetSectionColumnWidth(sectionBandWidth, regularSectionCount);
+        float slotButtonSize = GetSlotButtonSize(columnWidth);
+        int topRowCount = GrayMechSectionCanvasMetrics.GetDisplayRowCount(host.MaximumTopSlotCount);
+        int bottomRowCount = GrayMechSectionCanvasMetrics.GetDisplayRowCount(host.MaximumBottomSlotCount);
+        float topAreaHeight = GetSlotAreaHeight(topRowCount, slotButtonSize);
+        float bottomAreaHeight = GetSlotAreaHeight(bottomRowCount, slotButtonSize);
+        float requiredHeight = TopMargin
+                               + headerHeight
+                               + BandGap
+                               + topAreaHeight
+                               + PreviewGap * 2f
+                               + MinimumPreviewHeight
+                               + bottomAreaHeight
+                               + BottomMargin;
+        return new SectionCanvasLayout(
+            sectionBandInset,
+            sectionBandWidth,
+            headerHeight,
+            columnWidth,
+            slotButtonSize,
+            topAreaHeight,
+            bottomAreaHeight,
+            requiredHeight);
     }
 
     private static float GetSectionHeaderHeight(IGrayMechSectionCanvasHost host, List<GRMechSectionSlotDef> sectionSlots, float totalWidth)
@@ -433,27 +505,28 @@ internal sealed class GrayMechSectionCanvasPanel
         return -1;
     }
 
-    private static Rect GetSlotGridRect(Rect areaRect, out float slotButtonSize)
+    private static Rect GetSlotGridRect(Rect areaRect, float slotButtonSize, int rowCount)
     {
-        slotButtonSize = GetSlotButtonSize(areaRect);
         float width = GrayMechDrydockTabStyle.SlotGridColumns * slotButtonSize + (GrayMechDrydockTabStyle.SlotGridColumns - 1) * GrayMechDrydockTabStyle.SlotGridGap;
-        float height = SectionGridRowCount * slotButtonSize + (SectionGridRowCount - 1) * GrayMechDrydockTabStyle.SlotGridGap;
+        float height = rowCount * slotButtonSize + Mathf.Max(0, rowCount - 1) * GrayMechDrydockTabStyle.SlotGridGap;
         float x = Mathf.Clamp(areaRect.center.x - width * 0.5f, areaRect.x, areaRect.xMax - width);
         float y = Mathf.Clamp(areaRect.center.y - height * 0.5f, areaRect.y, areaRect.yMax - height);
         return new Rect(x, y, width, height);
     }
 
-    private static float GetSlotButtonSize(Rect areaRect)
+    private static float GetSlotButtonSize(float columnWidth)
     {
-        float widthPerSlot = (areaRect.width - GrayMechDrydockTabStyle.SlotGridGap * (GrayMechDrydockTabStyle.SlotGridColumns - 1)) / GrayMechDrydockTabStyle.SlotGridColumns;
-        float heightPerSlot = (areaRect.height - GrayMechDrydockTabStyle.SlotGridGap * (SectionGridRowCount - 1)) / SectionGridRowCount;
-        float slotButtonSize = Mathf.Min(GrayMechDrydockTabStyle.SlotButtonSize, widthPerSlot, heightPerSlot);
+        float innerWidth = Mathf.Max(1f, columnWidth - 16f);
+        float widthPerSlot = (innerWidth - GrayMechDrydockTabStyle.SlotGridGap * (GrayMechDrydockTabStyle.SlotGridColumns - 1)) / GrayMechDrydockTabStyle.SlotGridColumns;
+        float slotButtonSize = Mathf.Min(GrayMechDrydockTabStyle.SlotButtonSize, widthPerSlot);
         return Mathf.Max(1f, slotButtonSize);
     }
 
-    private static float GetSlotAreaHeight()
+    private static float GetSlotAreaHeight(int rowCount, float slotButtonSize)
     {
-        return GrayMechDrydockTabStyle.SlotButtonSize * 2f + GrayMechDrydockTabStyle.SlotGridGap + 16f;
+        return rowCount * slotButtonSize
+               + Mathf.Max(0, rowCount - 1) * GrayMechDrydockTabStyle.SlotGridGap
+               + 16f;
     }
 
     private static Rect GetCoreSystemsPanelRect(Rect canvasRect, Rect previewRect, int slotCount)
@@ -671,6 +744,38 @@ internal sealed class GrayMechSectionCanvasPanel
         {
             this.startIndex = startIndex;
             this.count = count;
+        }
+    }
+
+    private readonly struct SectionCanvasLayout
+    {
+        internal readonly float SectionBandInset;
+        internal readonly float SectionBandWidth;
+        internal readonly float HeaderHeight;
+        internal readonly float ColumnWidth;
+        internal readonly float SlotButtonSize;
+        internal readonly float TopAreaHeight;
+        internal readonly float BottomAreaHeight;
+        internal readonly float RequiredHeight;
+
+        internal SectionCanvasLayout(
+            float sectionBandInset,
+            float sectionBandWidth,
+            float headerHeight,
+            float columnWidth,
+            float slotButtonSize,
+            float topAreaHeight,
+            float bottomAreaHeight,
+            float requiredHeight)
+        {
+            SectionBandInset = sectionBandInset;
+            SectionBandWidth = sectionBandWidth;
+            HeaderHeight = headerHeight;
+            ColumnWidth = columnWidth;
+            SlotButtonSize = slotButtonSize;
+            TopAreaHeight = topAreaHeight;
+            BottomAreaHeight = bottomAreaHeight;
+            RequiredHeight = requiredHeight;
         }
     }
 

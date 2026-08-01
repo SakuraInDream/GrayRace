@@ -58,30 +58,6 @@ public class WorldComponent_GrayMechDesignLibrary : WorldComponent
         return null;
     }
 
-    public GrayMechDesignRecord GetDesignByLabel(string label, int ignoreId = -1)
-    {
-        if (label.NullOrEmpty())
-        {
-            return null;
-        }
-
-        for (int i = 0; i < designs.Count; i++)
-        {
-            GrayMechDesignRecord design = designs[i];
-            if (design == null || design.id == ignoreId)
-            {
-                continue;
-            }
-
-            if (string.Equals(design.label, label, System.StringComparison.OrdinalIgnoreCase))
-            {
-                return design;
-            }
-        }
-
-        return null;
-    }
-
     public bool ContainsLabel(string label, int ignoreId = -1)
     {
         if (label.NullOrEmpty())

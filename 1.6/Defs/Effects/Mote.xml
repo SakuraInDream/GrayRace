@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-    <ThingDef ParentName="MoteBase">
+  <ThingDef ParentName="MoteBase">
     <defName>Mote_GRHeavyLaser</defName>
     <thingClass>MoteDualAttached</thingClass>
     <altitudeLayer>MoteOverhead</altitudeLayer>
@@ -58,9 +58,9 @@
     <thingClass>MoteDualAttached</thingClass>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <mote>
-      <fadeInTime>0.1</fadeInTime>
-      <fadeOutTime>0.1</fadeOutTime>
-      <solidTime>0.1</solidTime>
+      <fadeInTime>0.2</fadeInTime>
+      <fadeOutTime>0.2</fadeOutTime>
+      <solidTime>0.5</solidTime>
       <rotateTowardsTarget>True</rotateTowardsTarget>
       <scaleToConnectTargets>True</scaleToConnectTargets>
     </mote>
@@ -72,45 +72,175 @@
       <shaderParameters>
         <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
         <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
-        <_ScrollSpeedA>0</_ScrollSpeedA>
-        <_ScrollSpeedB>0</_ScrollSpeedB>
+        <_ScrollSpeedA>-4</_ScrollSpeedA>
+        <_ScrollSpeedB>3</_ScrollSpeedB>
         <_Intensity>2</_Intensity>
       </shaderParameters>
     </graphicData>
   </ThingDef>
 
-  <ThingDef ParentName="Mote_GRLaserBeamBase">
-    <defName>Mote_GRLaserBeam_Infrared</defName>
+  <!-- 每种颜色使用独立抽象模板，S/M/L 只配置宽度。 -->
+  <ThingDef ParentName="Mote_GRLaserBeamBase" Name="Mote_GRLaserBeam_Infrared" Abstract="True">
     <graphicData>
-      <color>(1.0, 0.4, 0.4, 0.15)</color>
+      <color>(1.0, 0.4, 0.4, 2)</color>
     </graphicData>
   </ThingDef>
 
-  <ThingDef ParentName="Mote_GRLaserBeamBase">
-    <defName>Mote_GRLaserBeam_Blue</defName>
+  <ThingDef ParentName="Mote_GRLaserBeam_Infrared">
+    <defName>Mote_GRLaserBeam_Infrared_S</defName>
+    <graphicData>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_Infrared">
+    <defName>Mote_GRLaserBeam_Infrared_M</defName>
+    <graphicData>
+      <drawSize>(1.5, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_Infrared">
+    <defName>Mote_GRLaserBeam_Infrared_L</defName>
+    <graphicData>
+      <drawSize>(2, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase" Name="Mote_GRLaserBeam_Blue" Abstract="True">
     <graphicData>
       <color>(0.15, 0.4, 1.0, 2)</color>
     </graphicData>
   </ThingDef>
 
-  <ThingDef ParentName="Mote_GRLaserBeamBase">
-    <defName>Mote_GRLaserBeam_UV</defName>
+  <ThingDef ParentName="Mote_GRLaserBeam_Blue">
+    <defName>Mote_GRLaserBeam_Blue_S</defName>
     <graphicData>
-      <color>(0.8, 0.3, 1.0, 0.2)</color>
+      <drawSize>(1, 1)</drawSize>
     </graphicData>
   </ThingDef>
 
-  <ThingDef ParentName="Mote_GRLaserBeamBase">
-    <defName>Mote_GRLaserBeam_XRay</defName>
+  <ThingDef ParentName="Mote_GRLaserBeam_Blue">
+    <defName>Mote_GRLaserBeam_Blue_M</defName>
     <graphicData>
-      <color>(0.4, 1.0, 0.4, 0.2)</color>
+      <drawSize>(1.5, 1)</drawSize>
     </graphicData>
   </ThingDef>
 
-  <ThingDef ParentName="Mote_GRLaserBeamBase">
-    <defName>Mote_GRLaserBeam_Gamma</defName>
+  <ThingDef ParentName="Mote_GRLaserBeam_Blue">
+    <defName>Mote_GRLaserBeam_Blue_L</defName>
     <graphicData>
-      <color>(1.0, 0.45, 0.15, 0.2)</color>
+      <drawSize>(2, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase" Name="Mote_GRLaserBeam_UV" Abstract="True">
+    <graphicData>
+      <color>(0.8, 0.3, 1.0, 2)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_UV">
+    <defName>Mote_GRLaserBeam_UV_S</defName>
+    <graphicData>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_UV">
+    <defName>Mote_GRLaserBeam_UV_M</defName>
+    <graphicData>
+      <drawSize>(1.5, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_UV">
+    <defName>Mote_GRLaserBeam_UV_L</defName>
+    <graphicData>
+      <drawSize>(2, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase" Name="Mote_GRLaserBeam_XRay" Abstract="True">
+    <graphicData>
+      <color>(0.4, 1.0, 0.4, 2)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_XRay">
+    <defName>Mote_GRLaserBeam_XRay_S</defName>
+    <graphicData>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_XRay">
+    <defName>Mote_GRLaserBeam_XRay_M</defName>
+    <graphicData>
+      <drawSize>(1.5, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_XRay">
+    <defName>Mote_GRLaserBeam_XRay_L</defName>
+    <graphicData>
+      <drawSize>(2, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeamBase" Name="Mote_GRLaserBeam_Gamma" Abstract="True">
+    <graphicData>
+      <color>(1.0, 0.45, 0.15, 2)</color>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_Gamma">
+    <defName>Mote_GRLaserBeam_Gamma_S</defName>
+    <graphicData>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_Gamma">
+    <defName>Mote_GRLaserBeam_Gamma_M</defName>
+    <graphicData>
+      <drawSize>(1.5, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_Gamma">
+    <defName>Mote_GRLaserBeam_Gamma_L</defName>
+    <graphicData>
+      <drawSize>(2, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_GR_TitanLance</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.2</fadeInTime>
+      <fadeOutTime>0.3</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>true</needsMaintenance>
+      <fadeOutUnmaintained>true</fadeOutUnmaintained>
+      <rotateTowardsTarget>true</rotateTowardsTarget>
+      <scaleToConnectTargets>true</scaleToConnectTargets>
+    </mote>
+    <drawOffscreen>true</drawOffscreen>
+    <graphicData>
+      <texPath>Things/Mote/GraserBeam</texPath>
+      <graphicClass>Graphic_MoteWithAgeSecs</graphicClass>
+      <shaderType>MoteBeam</shaderType>
+      <color>(1.0, 0.65, 0.1, 1.0)</color>
+      <shaderParameters>
+        <_ExtraTexA>/Things/Mote/BeamSecondaryNoise_A</_ExtraTexA>
+        <_ExtraTexB>/Things/Mote/BeamSecondaryNoise_B</_ExtraTexB>
+        <_ScrollSpeedA>0</_ScrollSpeedA>
+        <_ScrollSpeedB>0</_ScrollSpeedB>
+        <_Intensity>30</_Intensity>
+      </shaderParameters>
     </graphicData>
   </ThingDef>
 </Defs>

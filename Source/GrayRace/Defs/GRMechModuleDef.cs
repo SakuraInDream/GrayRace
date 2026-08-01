@@ -15,6 +15,9 @@ public class GRMechModuleDef : Def
     public List<ThingDefCountClass> costList = new();
     public List<ResearchProjectDef> researchPrerequisites = new();
     [NoTranslate]
+    public string researchUnlockGroup;
+    public bool isResearchUnlockRepresentative;
+    [NoTranslate]
     public string iconPath;
     [NoTranslate]
     public string slotFamily;
@@ -27,12 +30,6 @@ public class GRMechModuleDef : Def
     public List<StatModifier> statFactors = new();
     public BodyPartDef anchorBodyPart;
     public int uiOrder;
-
-    public float accuracyTouch = 1f;
-    public float accuracyShort = 1f;
-    public float accuracyMedium = 1f;
-    public float accuracyLong = 1f;
-    public float forcedMissRadius;
 
     public ThingDef ProjectileDef => equipmentDef?.Verbs?.FirstOrDefault()?.defaultProjectile;
 
@@ -236,6 +233,33 @@ public class GRMechModuleDef : Def
                 {
                     yield return defName + " contains duplicate allowed chassis " + chassis.defName + ".";
                 }
+            }
+        }
+
+        if (isResearchUnlockRepresentative && researchUnlockGroup.NullOrEmpty())
+        {
+            yield return defName + " is marked as a research unlock representative without a researchUnlockGroup.";
+        }
+
+        if (!researchUnlockGroup.NullOrEmpty())
+        {
+            int representativeCount = 0;
+            List<GRMechModuleDef> modules = DefDatabase<GRMechModuleDef>.AllDefsListForReading;
+            for (int i = 0; i < modules.Count; i++)
+            {
+                GRMechModuleDef module = modules[i];
+                if (module != null
+                    && module.researchUnlockGroup == researchUnlockGroup
+                    && module.isResearchUnlockRepresentative)
+                {
+                    representativeCount++;
+                }
+            }
+
+            if (representativeCount != 1)
+            {
+                yield return defName + " research unlock group " + researchUnlockGroup
+                    + " must contain exactly one representative, but found " + representativeCount + ".";
             }
         }
 

@@ -32,7 +32,7 @@
       <li>
         <key>LARGE_GUN_01</key>
         <slotDef>GR_MechSlot_LargeTurret</slotDef>
-        <hardpointOffset>(0,0,-0.22)</hardpointOffset>
+        <hardpointAnchor>(0,-1.5)</hardpointAnchor>
         <uiOrder>0</uiOrder>
       </li>
     </slots>
@@ -47,13 +47,13 @@
       <li>
         <key>MEDIUM_GUN_01</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <hardpointOffset>(-0.16,0,-0.18)</hardpointOffset>
+        <hardpointAnchor>(-0.65,-1.3)</hardpointAnchor>
         <uiOrder>0</uiOrder>
       </li>
       <li>
         <key>MEDIUM_GUN_02</key>
         <slotDef>GR_MechSlot_MediumTurret</slotDef>
-        <hardpointOffset>(0.16,0,-0.18)</hardpointOffset>
+        <hardpointAnchor>(0.65,-1.3)</hardpointAnchor>
         <uiOrder>1</uiOrder>
       </li>
       <li>

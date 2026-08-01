@@ -91,6 +91,8 @@ internal sealed class GrayMechDrydockPresenter
     internal string CachedCostSummary = string.Empty;
     internal int CachedFilledSlotCount;
     internal int CachedTotalSlotCount;
+    internal int CachedMaximumWeaponSlotCount;
+    internal int CachedMaximumSupportSlotCount;
     internal int CachedFixedWorkTicks;
     internal int CachedPowerGeneration;
     internal int CachedPowerConsumption;
@@ -324,6 +326,10 @@ internal sealed class GrayMechDrydockPresenter
         GrayMechDesignUtility.BuildCostList(draft, CostCache);
         CachedCostSummary = GrayMechDrydockTabText.BuildCostSummary(CostCache, TextBuilder);
         GrayMechDesignUtility.GetPowerBudget(draft, out CachedPowerGeneration, out CachedPowerConsumption, out CachedPowerNet);
+        GrayMechSectionCanvasMetrics.GetMaximumSectionSlotCounts(
+            draft,
+            out CachedMaximumWeaponSlotCount,
+            out CachedMaximumSupportSlotCount);
 
         CachedTotalSlotCount = SlotCache.Count;
         CachedFilledSlotCount = 0;
@@ -600,9 +606,7 @@ internal sealed class GrayMechDrydockPresenter
 
     internal float GetBottomBarHeight(float width)
     {
-        float contentHeight = GrayMechDrydockTabStyle.LibraryHeaderHeight
-                              + GrayMechDrydockTabStyle.LibraryHeaderGap
-                              + CachedLibraryMaxCardHeight;
+        float contentHeight = CachedLibraryMaxCardHeight;
         const float panelChromeHeight = 24f;
         const float horizontalScrollbarHeight = 16f;
         return Mathf.Max(
@@ -646,7 +650,7 @@ internal sealed class GrayMechDrydockPresenter
     internal float GetLibraryCardHeight(GRMechChassisDef chassis)
     {
         float textWidth = GrayMechDrydockTabStyle.LibraryCardWidth - 12f;
-        string titleText = "<b>" + (chassis?.LabelCap.ToString() ?? "Unnamed") + "</b>";
+        string titleText = "<b>" + (chassis?.LabelCap.ToString() ?? "未命名") + "</b>";
         const string footerText = "开始新设计";
         float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(titleText, textWidth, GameFont.Small);
         float footerHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(footerText, textWidth, GameFont.Tiny);
@@ -658,10 +662,10 @@ internal sealed class GrayMechDrydockPresenter
     internal float GetLibraryCardHeight(GrayMechDesignRecord design)
     {
         float textWidth = GrayMechDrydockTabStyle.LibraryCardWidth - 12f;
-        string kindText = "Saved";
-        string titleText = "<b>" + (design?.label ?? "Unnamed") + "</b>";
+        string kindText = "保存";
+        string titleText = "<b>" + (design?.label ?? "未命名") + "</b>";
         GrayMechDesignSnapshot snapshot = design?.snapshot;
-        string footerText = (snapshot?.chassis?.LabelCap.ToString() ?? "No chassis") + "   Modules " + CountInstalledModules(snapshot);
+        string footerText = (snapshot?.chassis?.LabelCap.ToString() ?? "No chassis") + "  模块 " + CountInstalledModules(snapshot);
         float kindHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(kindText, textWidth, GameFont.Tiny);
         float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(titleText, textWidth, GameFont.Small);
         float footerHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(footerText, textWidth, GameFont.Tiny);
@@ -682,18 +686,6 @@ internal sealed class GrayMechDrydockPresenter
                + Mathf.Max(0, cardCount - 1) * GrayMechDrydockTabStyle.LibraryCardGap;
     }
 
-    internal float GetLayoutOptionHeight(GRMechSectionLayoutDef layout, float width)
-    {
-        float leftWidth = width - 90f;
-        string title = GetLayoutTitleText(layout);
-        string slotsText = GetLayoutSlotsText(layout);
-        return 8f
-               + GrayMechDrydockTabText.MeasureWrappedTextHeight(title, leftWidth, GameFont.Small)
-               + 2f
-               + GrayMechDrydockTabText.MeasureWrappedTextHeight(slotsText, leftWidth, GameFont.Small)
-               + 8f;
-    }
-
     internal float GetModuleOptionHeight(GRMechModuleDef module, float width)
     {
         float leftWidth = width - 100f;
@@ -704,21 +696,6 @@ internal sealed class GrayMechDrydockPresenter
                + 2f
                + GrayMechDrydockTabText.MeasureWrappedTextHeight(cost, leftWidth, GameFont.Small)
                + 8f;
-    }
-
-    internal string GetSectionTitleText(GRMechSectionSlotDef sectionSlot)
-    {
-        return sectionSlot == null ? string.Empty : "<b>" + sectionSlot.LabelCap + "</b>";
-    }
-
-    internal string GetLayoutTitleText(GRMechSectionLayoutDef layout)
-    {
-        return "<b>" + layout.LabelCap + "</b>";
-    }
-
-    internal string GetLayoutSlotsText(GRMechSectionLayoutDef layout)
-    {
-        return "Slots: " + GrayMechDrydockTabText.BuildLayoutSlotExpression(layout, TextBuilder);
     }
 
     internal string GetSlotTitleText(GRMechResolvedSlot resolvedSlot)

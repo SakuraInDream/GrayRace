@@ -24,7 +24,11 @@ internal interface IGrayMechSectionCanvasHost
 
     List<GRMechResolvedSlot> TopSlots { get; }
 
+    int MaximumTopSlotCount { get; }
+
     List<GRMechResolvedSlot> BottomSlots { get; }
+
+    int MaximumBottomSlotCount { get; }
 
     void PrepareCoreSlots();
 

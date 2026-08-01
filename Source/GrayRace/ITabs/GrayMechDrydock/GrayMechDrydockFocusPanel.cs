@@ -108,95 +108,14 @@ internal sealed partial class GrayMechDrydockFocusPanel
         return y + fieldRect.height + 4f;
     }
 
-    private void DrawSectionFocusPanel(GrayMechDrydockTabContext context, Rect rect)
+    private static void DrawSectionFocusPanel(GrayMechDrydockTabContext context, Rect rect)
     {
         Widgets.DrawBoxSolidWithOutline(rect, GrayMechDrydockTabStyle.CardFill, GrayMechDrydockTabStyle.HullOutline);
         Rect inner = rect.ContractedBy(8f);
-
-        GRMechSectionSlotDef sectionSlot = context.State.SelectedSectionSlot;
-        if (sectionSlot == null || !GRMechSectionLayoutCatalog.TryGetLayouts(context.Draft?.chassis, sectionSlot, out List<GRMechSectionLayoutDef> layouts))
-        {
-            Widgets.Label(inner, sectionSlot == null ? "Select a ship section to edit its layout." : "No layouts are available for the selected section.");
-            return;
-        }
-
-        GrayMechDesignUtility.TryGetSelectedLayout(context.Draft, sectionSlot, out GRMechSectionLayoutDef currentLayout);
-        string titleText = context.State.GetSectionTitleText(sectionSlot);
-        float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(titleText, inner.width, GameFont.Small);
-        GrayMechDrydockTabText.DrawWrappedLabel(new Rect(inner.x, inner.y, inner.width, titleHeight), titleText);
-
-        float listY = inner.y + titleHeight + 10f;
-        Rect listRect = new Rect(inner.x, listY, inner.width, inner.yMax - listY);
-        float viewHeight = 0f;
-        for (int i = 0; i < layouts.Count; i++)
-        {
-            GRMechSectionLayoutDef layout = layouts[i];
-            if (layout != null)
-            {
-                viewHeight += context.State.GetLayoutOptionHeight(layout, listRect.width - 16f) + 8f;
-            }
-        }
-
-        GrayMechDrydockPresenter state = context.State;
-        Rect viewRect = new Rect(0f, 0f, listRect.width - 16f, Mathf.Max(listRect.height, viewHeight));
-        Widgets.BeginScrollView(listRect, ref state.FocusScrollPosition, viewRect);
-
-        float y = 0f;
-        Color accent = GrayMechDrydockTabText.GetSectionAccentColor(sectionSlot);
-        float minVisibleY = state.FocusScrollPosition.y - 64f;
-        float maxVisibleY = state.FocusScrollPosition.y + listRect.height + 64f;
-        for (int i = 0; i < layouts.Count; i++)
-        {
-            GRMechSectionLayoutDef layout = layouts[i];
-            if (layout == null)
-            {
-                continue;
-            }
-
-            bool selected = currentLayout == layout;
-            bool available = GrayMechDesignUtility.IsResearchAvailable(layout);
-            float rowHeight = state.GetLayoutOptionHeight(layout, viewRect.width);
-            if (y + rowHeight < minVisibleY || y > maxVisibleY)
-            {
-                y += rowHeight + 8f;
-                continue;
-            }
-
-            Rect rowRect = new Rect(0f, y, viewRect.width, rowHeight);
-            bool hovered = Mouse.IsOver(rowRect);
-
-            Color fill = selected
-                ? new Color(GrayMechDrydockTabStyle.SelectedColor.r, GrayMechDrydockTabStyle.SelectedColor.g, GrayMechDrydockTabStyle.SelectedColor.b, 0.11f)
-                : new Color(accent.r, accent.g, accent.b, hovered ? 0.08f : 0.04f);
-            Color outline = selected ? GrayMechDrydockTabStyle.SelectedColor : (hovered ? Color.white : accent);
-
-            Widgets.DrawBoxSolidWithOutline(rowRect, fill, outline);
-
-            if (available && Widgets.ButtonInvisible(rowRect))
-            {
-                context.Controller.SetSectionLayout(context.Dock, sectionSlot, layout);
-            }
-
-            Rect iconRect = new Rect(rowRect.x + 6f, rowRect.y + 6f, 36f, 36f);
-            GRMechLayoutSlotUtility.TryGetFirstSlot(layout, out GRMechSlotEntry previewSlot);
-            canvasRenderer.DrawModuleIconTile(iconRect, null, previewSlot);
-
-            float leftWidth = rowRect.width - 56f;
-            float leftX = iconRect.xMax + 8f;
-            string layoutTitle = state.GetLayoutTitleText(layout);
-            string slotsText = state.GetLayoutSlotsText(layout);
-            float titleH = GrayMechDrydockTabText.MeasureWrappedTextHeight(layoutTitle, leftWidth, GameFont.Small);
-            float slotsH = GrayMechDrydockTabText.MeasureWrappedTextHeight(slotsText, leftWidth, GameFont.Small);
-            float localY = rowRect.y + 4f;
-            GrayMechDrydockTabText.DrawWrappedLabel(new Rect(leftX, localY, leftWidth, titleH), layoutTitle);
-            localY += titleH + 2f;
-            GUI.color = new Color(0.8f, 0.8f, 0.8f);
-            GrayMechDrydockTabText.DrawWrappedLabel(new Rect(leftX, localY, leftWidth, slotsH), slotsText);
-            GUI.color = Color.white;
-            y += rowHeight + 8f;
-        }
-
-        Widgets.EndScrollView();
+        string prompt = context.Draft?.chassis == null
+            ? "请先选择设计。"
+            : "点击槽位安装或更换模块";
+        GrayMechDrydockTabText.DrawWrappedLabelCentered(inner, prompt);
     }
 
     private void DrawSlotFocusPanel(GrayMechDrydockTabContext context, GRMechResolvedSlot resolvedSlot, Rect rect)
@@ -237,7 +156,7 @@ internal sealed partial class GrayMechDrydockFocusPanel
 
         headerY = toggleRect.yMax + 6f;
         Rect listRect = new Rect(inner.x, headerY, inner.width, inner.yMax - headerY);
-        float viewHeight = context.State.GetModuleOptionHeight(null, listRect.width - 16f) + 8f;
+        float viewHeight = 0f;
         for (int i = 0; i < context.State.CompatibleModules.Count; i++)
         {
             viewHeight += context.State.GetModuleOptionHeight(context.State.CompatibleModules[i], listRect.width - 16f) + 8f;
@@ -246,10 +165,7 @@ internal sealed partial class GrayMechDrydockFocusPanel
         Rect viewRect = new Rect(0f, 0f, listRect.width - 16f, Mathf.Max(listRect.height, viewHeight));
         Widgets.BeginScrollView(listRect, ref state.FocusScrollPosition, viewRect);
 
-        float emptyHeight = state.GetModuleOptionHeight(null, viewRect.width);
-        DrawModuleOptionRow(context, new Rect(0f, 0f, viewRect.width, emptyHeight), resolvedSlot, null, currentModule == null, accent);
-
-        float y = emptyHeight + 8f;
+        float y = 0f;
         float minVisibleY = state.FocusScrollPosition.y - 64f;
         float maxVisibleY = state.FocusScrollPosition.y + listRect.height + 64f;
         for (int i = 0; i < state.CompatibleModules.Count; i++)
@@ -262,7 +178,7 @@ internal sealed partial class GrayMechDrydockFocusPanel
                 continue;
             }
 
-            DrawModuleOptionRow(context, new Rect(0f, y, viewRect.width, rowHeight), resolvedSlot, module, currentModule == module, accent);
+            DrawModuleOptionRow(context, new Rect(0f, y, viewRect.width, rowHeight), resolvedSlot, module, state.ArmedModule == module, accent);
             y += rowHeight + 8f;
         }
 
@@ -282,7 +198,7 @@ internal sealed partial class GrayMechDrydockFocusPanel
 
         if (Widgets.ButtonInvisible(rowRect))
         {
-            context.Controller.SetModule(context.Dock, resolvedSlot.sectionSlot, resolvedSlot.slot.key, module);
+            context.Controller.ArmModule(module);
         }
         float iconSize = rowRect.height - 2f;
         Rect iconRect = new Rect(rowRect.x + 1f, rowRect.y + 1f, iconSize, iconSize);

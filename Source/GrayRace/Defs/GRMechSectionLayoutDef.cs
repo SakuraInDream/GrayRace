@@ -99,6 +99,11 @@ public class GRMechSectionLayoutDef : Def
                 {
                     yield return defName + " slot " + slot.key + " uses PrimaryEquipment but is not a Weapon slot.";
                 }
+
+                if (slot.TryGetHardpointAnchorConfigError(defName, out string anchorError))
+                {
+                    yield return anchorError;
+                }
             }
         }
 

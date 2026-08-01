@@ -17,8 +17,20 @@ public class JobGiver_GrayMechFightEnemies : JobGiver_AIFightEnemies
             return null;
         }
 
-        UpdateEnemyTarget(pawn);
-        Thing enemyTarget = pawn.mindState.enemyTarget;
+        CompMultiTurretGun turret = pawn.TryGetComp<CompMultiTurretGun>();
+        Thing forcedTarget = null;
+        bool hasForcedTarget = turret != null
+            && turret.TryGetForcedTarget(out forcedTarget);
+        if (hasForcedTarget)
+        {
+            pawn.mindState.enemyTarget = forcedTarget;
+        }
+        else
+        {
+            UpdateEnemyTarget(pawn);
+        }
+
+        Thing enemyTarget = hasForcedTarget ? forcedTarget : pawn.mindState.enemyTarget;
         if (enemyTarget == null)
         {
             return null;
@@ -27,6 +39,11 @@ public class JobGiver_GrayMechFightEnemies : JobGiver_AIFightEnemies
         if (enemyTarget is Pawn enemyPawn && enemyPawn.IsPsychologicallyInvisible())
         {
             return null;
+        }
+
+        if (hasForcedTarget)
+        {
+            return MakeCombatWaitJob(pawn, ExpiryInterval_ShooterSucceeded.RandomInRange);
         }
 
         bool allowAbilityVerbs = !pawn.IsColonist && !pawn.IsColonySubhuman && !DisableAbilityVerbs;

@@ -9,7 +9,7 @@
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
-    <uiOrder>0</uiOrder>
+    <uiOrder>5</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver1Base">
@@ -69,7 +69,7 @@
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
-    <uiOrder>0</uiOrder>
+    <uiOrder>6</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver2Base">
@@ -126,7 +126,7 @@
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
-    <uiOrder>0</uiOrder>
+    <uiOrder>7</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver3Base">
@@ -183,7 +183,7 @@
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
     </researchPrerequisites>
-    <uiOrder>0</uiOrder>
+    <uiOrder>8</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver4Base">
@@ -240,7 +240,7 @@
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
     </researchPrerequisites>
-    <uiOrder>0</uiOrder>
+    <uiOrder>9</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver5Base">

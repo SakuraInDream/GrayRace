@@ -25,13 +25,11 @@ internal static class GrayMechDrydockTabStyle
     internal const float SlotButtonSize = 50f;
     internal const float SlotGridGap = 3f;
     internal const int SlotGridColumns = 5;
-    internal const int FixedDisplaySlotCount = 10;
+    internal const int MinimumDisplaySlotCount = 10;
     internal const float LibraryCardWidth = 164f;
     internal const float LibraryCardHeight = 78f;
     internal const float LibraryCardGap = 8f;
     internal const float LibraryGroupGap = 14f;
-    internal const float LibraryHeaderHeight = 20f;
-    internal const float LibraryHeaderGap = 4f;
     internal const float LibraryNewDesignWidth = 94f;
     internal const float LibraryNewDesignGap = 14f;
     internal const float SummaryPanelHeight = 200f;
@@ -55,7 +53,6 @@ internal static class GrayMechDrydockTabStyle
     internal static readonly Color AuxiliaryColor = new(0.3f, 0.86f, 0.79f);
     internal static readonly Color EngineColor = new(0.3f, 0.76f, 1f);
     internal static readonly Color UtilitySlotColor = new(0.46f, 0.86f, 0.79f);
-    internal static readonly Color GridLineColor = new(0.84f, 1f, 0.95f, 0.045f);
     internal static readonly Color HeaderLineColor = new(0.31f, 0.78f, 0.76f, 0.44f);
     internal static readonly Color HullPlateColor = new(0.13f, 0.18f, 0.2f, 0.75f);
     internal static readonly Color HullInnerPanelColor = new(0.08f, 0.12f, 0.13f, 0.88f);
@@ -67,9 +64,6 @@ internal static class GrayMechDrydockTabStyle
     internal static readonly Color NebulaCenterColor = new(0.22f, 0.76f, 0.64f, 0.1f);
     internal static readonly Color NebulaRightColor = new(0.11f, 0.34f, 0.68f, 0.1f);
     internal static readonly Color SlotInnerColor = new(0.05f, 0.08f, 0.09f);
-    internal static readonly Color SlotBadgeColor = new(0.03f, 0.05f, 0.06f);
-    internal static readonly Color SlotInstalledColor = new(0.98f, 0.96f, 0.84f);
-
     internal static Texture2D GetTexture(string texPath)
     {
         if (texPath.NullOrEmpty())

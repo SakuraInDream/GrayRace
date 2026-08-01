@@ -37,7 +37,7 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>100</uiOrder>
+    <uiOrder>0</uiOrder>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
@@ -55,9 +55,9 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>60000</fixedWorkTicks>
-    <uiOrder>140</uiOrder>
+    <uiOrder>4</uiOrder>
     <researchPrerequisites>
-      <li>GR_T5MechTech</li>
+      <li>GR_T4MechTech</li>
     </researchPrerequisites>
     <sectionSlots>
       <!-- 支持哪些区段（GRMechSectionSlotDef） -->
@@ -75,9 +75,9 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>110</uiOrder>
+    <uiOrder>1</uiOrder>
     <researchPrerequisites>
-      <li>GR_T1MechTech</li>
+      <li>GR_T2MechTech</li>
     </researchPrerequisites>
     <sectionSlots>
       <li>GR_MechSection_Mid</li>
@@ -92,7 +92,7 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>120</uiOrder>
+    <uiOrder>2</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -110,9 +110,9 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>130</uiOrder>
+    <uiOrder>3</uiOrder>
     <researchPrerequisites>
-      <li>GR_T2MechTech</li>
+      <li>GR_T3MechTech</li>
     </researchPrerequisites>
     <sectionSlots>
       <li>GR_MechSection_Bow</li>
@@ -129,9 +129,9 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>150</uiOrder>
+    <uiOrder>5</uiOrder>
     <researchPrerequisites>
-      <li>GR_T2MechTech</li>
+      <li>GR_T5MechTech</li>
     </researchPrerequisites>
     <sectionSlots>
       <li>GR_MechSection_Bow</li>
@@ -148,9 +148,9 @@
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
-    <uiOrder>160</uiOrder>
+    <uiOrder>6</uiOrder>
     <researchPrerequisites>
-      <li>GR_T2MechTech</li>
+      <li>GR_T6MechTech</li>
     </researchPrerequisites>
     <sectionSlots>
       <li>GR_MechSection_Mid</li>

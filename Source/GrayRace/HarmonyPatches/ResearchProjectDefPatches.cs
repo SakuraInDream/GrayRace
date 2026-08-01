@@ -26,7 +26,10 @@ public static class ResearchProjectDefPatches
         {
             yield return instruction;
 
-            if (!injected && instruction.opcode == OpCodes.Stfld && instruction.operand is FieldInfo { Name: "cachedUnlockedDefs" })
+            if (!injected
+                && instruction.opcode == OpCodes.Stfld
+                && instruction.operand is FieldInfo fi
+                && fi.Name == "cachedUnlockedDefs")
             {
                 // Log.Message("I'm in 001");
                 // __instance
@@ -78,6 +81,11 @@ public static class ResearchProjectDefPatches
 
         foreach (GRMechModuleDef module in DefDatabase<GRMechModuleDef>.AllDefsListForReading)
         {
+            if (!module.researchUnlockGroup.NullOrEmpty() && !module.isResearchUnlockRepresentative)
+            {
+                continue;
+            }
+
             AddExtraUnlocks(module, module.EnumerateResearchPrerequisites());
         }
     }
