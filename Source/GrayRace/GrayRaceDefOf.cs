@@ -43,7 +43,6 @@ namespace SD.GrayRace
         public static GRMechComponentSetDef GR_MechComponentSet_PowerCore;
         public static GRMechComponentSetDef GR_MechComponentSet_Thruster;
         public static GRMechComponentSetDef GR_MechComponentSet_Sensor;
-        public static GRMechComponentSetDef GR_MechComponentSet_CombatComputer;
 
         // Gray mech slot sizes
         public static GRMechSlotSizeDef GR_MechSlotSize_Small;

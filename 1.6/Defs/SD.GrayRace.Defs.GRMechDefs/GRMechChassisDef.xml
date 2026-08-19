@@ -18,13 +18,6 @@
         <anchorBodyPart>MechanicalFoot</anchorBodyPart>
         <uiOrder>20</uiOrder>
       </li>
-      <li>
-        <key>COMBAT_COMPUTER_01</key>
-        <label>舰船作战电脑</label>
-        <slotDef>GR_MechSlot_CombatComputer</slotDef>
-        <anchorBodyPart>ArtificialBrain</anchorBodyPart>
-        <uiOrder>40</uiOrder>
-      </li>
     </requiredComponentSlots>
   </SD.GrayRace.Defs.GRMechChassisDef>
 

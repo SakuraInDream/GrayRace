@@ -16,8 +16,6 @@ public sealed class RangeBasedFireControl : IFireControlDirector
     private const int InitialCandidateCapacity = 128;
     private const int RecentTargetTicks = 300;
 
-    public bool preferShortest;
-
     private bool[] automaticHardpoints = Array.Empty<bool>();
     private Thing[] selectedTargets = Array.Empty<Thing>();
     private float[] candidateScores = Array.Empty<float>();
@@ -195,8 +193,8 @@ public sealed class RangeBasedFireControl : IFireControlDirector
         }
 
         int bestIdx = -1;
-        float bestRange = preferShortest ? float.MaxValue : float.MinValue;
-        float bestMinRange = preferShortest ? float.MaxValue : float.MinValue;
+        float bestRange = float.MinValue;
+        float bestMinRange = float.MinValue;
 
         for (int i = 0; i < count; i++)
         {
@@ -223,16 +221,7 @@ public sealed class RangeBasedFireControl : IFireControlDirector
                 continue;
             }
 
-            if (preferShortest)
-            {
-                if (candidateRange < bestRange || (Mathf.Approximately(candidateRange, bestRange) && candidateMinRange < bestMinRange))
-                {
-                    bestIdx = i;
-                    bestRange = candidateRange;
-                    bestMinRange = candidateMinRange;
-                }
-            }
-            else if (candidateRange > bestRange || (Mathf.Approximately(candidateRange, bestRange) && candidateMinRange > bestMinRange))
+            if (candidateRange > bestRange || (Mathf.Approximately(candidateRange, bestRange) && candidateMinRange > bestMinRange))
             {
                 bestIdx = i;
                 bestRange = candidateRange;

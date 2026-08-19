@@ -64,8 +64,7 @@ public class CompMultiTurretGun : ThingComp
     private LocalTargetInfo[] assignedTargets = Array.Empty<LocalTargetInfo>();
     private int hardpointCount;
     private int hardpointRevision;
-    private IFireControlDirector director;
-    private GRMechCombatComputerModuleDef activeCombatComputer;
+    private IFireControlDirector director = new RangeBasedFireControl();
     private GRMechHardpointSwarmSettings swarmSettings;
     private readonly Predicate<TargetInfo> forcedTargetValidator;
     private bool fireAtWill = true;
@@ -83,10 +82,7 @@ public class CompMultiTurretGun : ThingComp
     }
 
     private Pawn Pawn => parent as Pawn;
-    private ThingWithComps ParentThing => parent;
     private Thing ForcedTargetThing => forcedTarget.HasThing ? forcedTarget.Thing : null;
-
-    public int HardpointCount => hardpointCount;
 
     internal bool TryGetForcedTarget(out Thing target)
     {
@@ -102,22 +98,7 @@ public class CompMultiTurretGun : ThingComp
 
     internal bool DebugTargetValid => Pawn is { Destroyed: false, Dead: false, Spawned: true };
 
-    internal string DebugPawnLabel => Pawn?.LabelShort ?? "Unknown mech";
-
-    public GRMechCombatComputerModuleDef ActiveCombatComputer
-    {
-        get
-        {
-            if (pendingRebuild)
-            {
-                TryRebuildFromLoadout();
-            }
-
-            return activeCombatComputer;
-        }
-    }
-
-    public GRMechCombatComputerBehavior CombatComputerBehavior => ActiveCombatComputer?.behavior ?? GRMechCombatComputerBehavior.Undefined;
+    internal string DebugPawnLabel => Pawn?.LabelShort;
 
     public void Notify_LoadoutChanged()
     {
@@ -344,8 +325,6 @@ public class CompMultiTurretGun : ThingComp
 
         ClearHardpoints();
         pendingRebuild = false;
-        activeCombatComputer = ResolveCombatComputer(snapshot);
-        director = CreateDirector(activeCombatComputer);
         swarmSettings = snapshot?.chassis?.hardpointSwarmSettings;
 
         if (snapshot?.modules == null)
@@ -423,7 +402,7 @@ public class CompMultiTurretGun : ThingComp
             string sectionSlotId = GRMechSectionSlotUtility.GetSlotId(assignment.sectionSlot);
             hp.SectionSlotId = sectionSlotId;
             hp.ClearDebugAnchorOverride();
-            hp.Setup(ParentThing);
+            hp.Setup(p);
 
             hardpointCount++;
         }
@@ -461,18 +440,6 @@ public class CompMultiTurretGun : ThingComp
         deploymentRequestInitialized = false;
         deploymentTransitionActive = false;
         swarmSettings = null;
-    }
-
-    private static IFireControlDirector CreateDirector(GRMechCombatComputerModuleDef cc)
-    {
-        if (cc?.fireControlClass != null)
-        {
-            return (IFireControlDirector)Activator.CreateInstance(cc.fireControlClass);
-        }
-
-        RangeBasedFireControl rfc = new();
-        rfc.preferShortest = cc?.weaponSelection == GRMechCombatComputerWeaponSelectionMode.ShortestRange;
-        return rfc;
     }
 
     private void OrderAttack(LocalTargetInfo target)
@@ -524,8 +491,8 @@ public class CompMultiTurretGun : ThingComp
         if (targetThing == null
             || targetThing.Destroyed
             || !targetThing.Spawned
-            || !ParentThing.Spawned
-            || targetThing.Map != ParentThing.MapHeld)
+            || !p.Spawned
+            || targetThing.Map != p.MapHeld)
         {
             return false;
         }
@@ -566,7 +533,7 @@ public class CompMultiTurretGun : ThingComp
             {
                 if (turret.ResetForcedTargetLocal())
                 {
-                    turret.InterruptCurrentJob();
+                    turret.Pawn?.jobs?.EndCurrentJob(JobCondition.InterruptForced);
                 }
             }
         }
@@ -604,11 +571,6 @@ public class CompMultiTurretGun : ThingComp
         }
 
         return true;
-    }
-
-    private void InterruptCurrentJob()
-    {
-        Pawn?.jobs?.EndCurrentJob(JobCondition.InterruptForced);
     }
 
     private void RefreshForcedTargetState()
@@ -685,10 +647,12 @@ public class CompMultiTurretGun : ThingComp
             return false;
         }
 
-        if (!TryGetProjectileOrigin(pawn.DrawPos, pawn, hp, out Vector3 origin))
+        if (!TryGetHardpointDrawPos(pawn.DrawPos, pawn, hp, out Vector3 origin))
         {
             return false;
         }
+
+        origin.y = 0f;
 
         Projectile projectile = (Projectile)GenSpawn.Spawn(projectileDef, pawn.Position, pawn.Map);
 
@@ -785,13 +749,13 @@ public class CompMultiTurretGun : ThingComp
             || pawn == null
             || target.Destroyed
             || !target.Spawned
-            || !ParentThing.Spawned
-            || target.Map != ParentThing.MapHeld)
+            || !pawn.Spawned
+            || target.Map != pawn.MapHeld)
         {
             return false;
         }
 
-        if (ParentThing.HostileTo(target))
+        if (pawn.HostileTo(target))
         {
             return true;
         }
@@ -979,7 +943,8 @@ public class CompMultiTurretGun : ThingComp
 
     private bool CanForceAttack(TargetInfo target)
     {
-        if (!target.IsValid || target.Thing == null || !ParentThing.Spawned)
+        Pawn pawn = Pawn;
+        if (!target.IsValid || target.Thing == null || pawn == null || !pawn.Spawned)
         {
             return false;
         }
@@ -987,7 +952,7 @@ public class CompMultiTurretGun : ThingComp
         Thing targetThing = target.Thing;
         if (targetThing.Destroyed
             || !targetThing.Spawned
-            || targetThing.Map != ParentThing.MapHeld)
+            || targetThing.Map != pawn.MapHeld)
         {
             return false;
         }
@@ -998,7 +963,7 @@ public class CompMultiTurretGun : ThingComp
     private bool HasEngageableHardpoint(LocalTargetInfo target)
     {
         Pawn pawn = Pawn;
-        Map map = ParentThing?.MapHeld;
+        Map map = pawn?.MapHeld;
         if (pawn == null || map == null || !target.IsValid || !target.HasThing)
         {
             return false;
@@ -1030,7 +995,8 @@ public class CompMultiTurretGun : ThingComp
 
     private void DrawTargetingPreviewLocal(LocalTargetInfo target)
     {
-        if (!ParentThing.Spawned)
+        Pawn pawn = Pawn;
+        if (pawn == null || !pawn.Spawned)
         {
             return;
         }
@@ -1113,7 +1079,7 @@ public class CompMultiTurretGun : ThingComp
             return false;
         }
 
-        float deployment = SmoothDeploymentProgress(hp.deploymentProgress);
+        float deployment = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(hp.deploymentProgress));
         Vector3 renderCorrection = baseDrawPos - pawn.DrawPos;
         renderCorrection.y = 0f;
         Vector3 deployedPosition = hp.swarmPosition + renderCorrection;
@@ -1121,19 +1087,6 @@ public class CompMultiTurretGun : ThingComp
         retractedPosition.y = 0f;
         drawPos = Vector3.Lerp(retractedPosition, deployedPosition, deployment);
         drawPos.y = baseDrawPos.y + PawnRenderUtility.AltitudeForLayer(HardpointAltitudeLayer);
-        return true;
-    }
-
-    private bool TryGetProjectileOrigin(Vector3 baseDrawPos, Pawn pawn, MechHardpoint hp, out Vector3 origin)
-    {
-        if (!TryGetHardpointDrawPos(baseDrawPos, pawn, hp, out Vector3 drawPos))
-        {
-            origin = default;
-            return false;
-        }
-
-        origin = drawPos;
-        origin.y = 0f;
         return true;
     }
 
@@ -1158,11 +1111,6 @@ public class CompMultiTurretGun : ThingComp
         }
 
         return 0f;
-    }
-
-    private static float SmoothDeploymentProgress(float progress)
-    {
-        return Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(progress));
     }
 
     // ========== Utility ==========
@@ -1287,8 +1235,7 @@ public class CompMultiTurretGun : ThingComp
             return true;
         }
 
-        Thing enemyTarget = pawn.mindState?.enemyTarget;
-        if (enemyTarget != null && !enemyTarget.Destroyed && enemyTarget.Spawned && enemyTarget.Map == pawn.MapHeld)
+        if (HasValidEnemyTarget(pawn))
         {
             return true;
         }
@@ -1305,6 +1252,15 @@ public class CompMultiTurretGun : ThingComp
         }
 
         return false;
+    }
+
+    private static bool HasValidEnemyTarget(Pawn pawn)
+    {
+        Thing enemyTarget = pawn?.mindState?.enemyTarget;
+        return enemyTarget != null
+            && !enemyTarget.Destroyed
+            && enemyTarget.Spawned
+            && enemyTarget.Map == pawn.MapHeld;
     }
 
     private void UpdateMovementFireSuppression(Pawn pawn)
@@ -1358,8 +1314,7 @@ public class CompMultiTurretGun : ThingComp
             return true;
         }
 
-        Thing enemyTarget = pawn.mindState?.enemyTarget;
-        if (enemyTarget != null && !enemyTarget.Destroyed && enemyTarget.Spawned && enemyTarget.Map == pawn.MapHeld)
+        if (HasValidEnemyTarget(pawn))
         {
             return true;
         }
@@ -1378,21 +1333,4 @@ public class CompMultiTurretGun : ThingComp
         return false;
     }
 
-    private static GRMechCombatComputerModuleDef ResolveCombatComputer(GrayMechDesignSnapshot snapshot)
-    {
-        if (snapshot?.modules == null)
-        {
-            return null;
-        }
-
-        for (int i = 0; i < snapshot.modules.Count; i++)
-        {
-            if (snapshot.modules[i]?.module is GRMechCombatComputerModuleDef module)
-            {
-                return module;
-            }
-        }
-
-        return null;
-    }
 }

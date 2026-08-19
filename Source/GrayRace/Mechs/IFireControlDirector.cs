@@ -3,13 +3,12 @@ using Verse;
 namespace SD.GrayRace.Mechs;
 
 /// <summary>
-/// 火控策略接口。由 GRMechCombatComputerModuleDef.fireControlClass 驱动。
-/// 不同战斗计算机模块可以实现不同的火控逻辑（齐射/轮射/集火/分散），
-/// 通过 XML 配置即可切换，无需新增 C# 代码。
+/// 多炮塔的目标分配接口。
+/// 实现负责集中处理硬点目标分配和 AI 代表性武器选择。
 /// </summary>
 public interface IFireControlDirector
 {
-    /// <summary>在配装重建时预分配火控热路径需要的缓冲。</summary>
+    /// <summary>在配装重建时预分配目标分配热路径需要的缓冲。</summary>
     void Prepare(int hardpointCapacity);
 
     /// <summary>为本轮可接收命令的硬点批量分配攻击目标。</summary>

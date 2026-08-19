@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System;
 using RimWorld;
 using Verse;
 
@@ -56,51 +55,4 @@ public class GRMechThrusterModuleDef : GRMechModuleDef
 
 public class GRMechSensorModuleDef : GRMechModuleDef
 {
-}
-
-public class GRMechCombatComputerModuleDef : GRMechModuleDef
-{
-    public GRMechCombatComputerBehavior behavior;
-    public GRMechCombatComputerWeaponSelectionMode weaponSelection;
-    public GRMechCombatComputerPositioningMode positioning;
-    public GRMechCombatComputerCoverPreference coverPreference;
-    public float preferredRangeFactor;
-    public int powerDraw;
-
-    /// <summary>
-    /// 火控策略类。继承自 IFireControlDirector。
-    /// 默认 null 时退化为使用 RangeBasedFireControl。
-    /// </summary>
-    public Type fireControlClass;
-
-    public override int GetNetPower(GRMechChassisDef chassis)
-    {
-        return base.GetNetPower(chassis) - powerDraw;
-    }
-
-    public override IEnumerable<string> ConfigErrors()
-    {
-        foreach (string error in base.ConfigErrors())
-        {
-            yield return error;
-        }
-
-        if (powerDraw < 0)
-        {
-            yield return defName + " has negative powerDraw.";
-        }
-
-        if (behavior == GRMechCombatComputerBehavior.Undefined
-            || weaponSelection == GRMechCombatComputerWeaponSelectionMode.Undefined
-            || positioning == GRMechCombatComputerPositioningMode.Undefined
-            || coverPreference == GRMechCombatComputerCoverPreference.Undefined)
-        {
-            yield return defName + " has incomplete combat computer settings.";
-        }
-
-        if (positioning != GRMechCombatComputerPositioningMode.Vanilla && preferredRangeFactor <= 0f)
-        {
-            yield return defName + " uses non-vanilla positioning but has invalid preferredRangeFactor.";
-        }
-    }
 }

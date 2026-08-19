@@ -24,14 +24,6 @@
     <designerColor>(0.3, 0.86, 0.79)</designerColor>
   </SD.GrayRace.Defs.GRMechSlotDef> -->
 
-  <SD.GrayRace.Defs.GRMechSlotDef>
-    <defName>GR_MechSlot_CombatComputer</defName>
-    <label>舰船作战电脑</label>
-    <description>TODO</description>
-    <requiredComponentSet>GR_MechComponentSet_CombatComputer</requiredComponentSet>
-    <designerColor>(0.96, 0.73, 0.29)</designerColor>
-  </SD.GrayRace.Defs.GRMechSlotDef>
-
   <!-- S 武器槽 -->
   <SD.GrayRace.Defs.GRMechSlotDef>
     <defName>GR_MechSlot_SmallTurret</defName>

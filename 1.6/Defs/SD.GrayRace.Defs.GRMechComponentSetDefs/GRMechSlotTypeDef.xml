@@ -27,12 +27,4 @@
     <uiOrder>300</uiOrder>
   </SD.GrayRace.Defs.GRMechComponentSetDef>
 
-  <SD.GrayRace.Defs.GRMechComponentSetDef>
-    <defName>GR_MechComponentSet_CombatComputer</defName>
-    <label>combat computer</label>
-    <description>TODO</description>
-    <coreRole>CombatComputer</coreRole>
-    <glyph>C</glyph>
-    <uiOrder>400</uiOrder>
-  </SD.GrayRace.Defs.GRMechComponentSetDef>
 </Defs>

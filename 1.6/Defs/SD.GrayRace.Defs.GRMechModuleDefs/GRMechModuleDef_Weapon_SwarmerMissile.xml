@@ -2,7 +2,7 @@
 <Defs>
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_SwarmerMissile1_M</defName>
-    <label>一级蜂群导弹</label>
+    <label>蜂群导弹</label>
     <description>可安装在中型武器槽中的常规蜂群导弹模块。</description>
     <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
     <compatibleSlots>

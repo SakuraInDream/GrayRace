@@ -127,8 +127,6 @@ internal static class GrayMechDrydockTabStyle
                     return EngineColor;
                 case GRMechCoreComponentRole.Sensor:
                     return AuxiliaryColor;
-                case GRMechCoreComponentRole.CombatComputer:
-                    return SelectedColor;
             }
         }
 
@@ -152,8 +150,6 @@ internal static class GrayMechDrydockTabStyle
                         return EngineColor;
                     case GRMechCoreComponentRole.Sensor:
                         return AuxiliaryColor;
-                    case GRMechCoreComponentRole.CombatComputer:
-                        return SelectedColor;
                 }
 
                 return AuxiliaryColor;

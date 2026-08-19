@@ -4,7 +4,7 @@ using Verse;
 
 namespace SD.GrayRace.Projectiles;
 
-// 噶人焖谁懂啊，实现个激光从武器发射还要单独写一个 Bullet
+// 噶人焖谁懂啊，实现个激光从浮游炮发射还要单独写一个 Bullet
 public class Projectile_GrayBeam : Bullet
 {
     public override Vector3 ExactPosition => destination + Vector3.up * def.Altitude;

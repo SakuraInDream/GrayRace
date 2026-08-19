@@ -697,42 +697,12 @@ internal sealed class GrayMechSectionCanvasPanel
 
         pickerSortBuffer.Sort(CompareModulesForPicker);
 
-        int currentGroup = GetModulePickerGroupKey(pickerSortBuffer[0]);
-        int groupStart = 0;
-
-        for (int i = 1; i < pickerSortBuffer.Count; i++)
-        {
-            int group = GetModulePickerGroupKey(pickerSortBuffer[i]);
-            if (group != currentGroup)
-            {
-                pickerGroupBuffer.Add(new PickerGroupSpan(groupStart, i - groupStart));
-                currentGroup = group;
-                groupStart = i;
-            }
-        }
-
-        pickerGroupBuffer.Add(new PickerGroupSpan(groupStart, pickerSortBuffer.Count - groupStart));
+        pickerGroupBuffer.Add(new PickerGroupSpan(0, pickerSortBuffer.Count));
     }
 
     private static int CompareModulesForPicker(GRMechModuleDef a, GRMechModuleDef b)
     {
-        int groupCompare = GetModulePickerGroupKey(a).CompareTo(GetModulePickerGroupKey(b));
-        if (groupCompare != 0)
-        {
-            return groupCompare;
-        }
-
         return (a?.uiOrder ?? 0).CompareTo(b?.uiOrder ?? 0);
-    }
-
-    private static int GetModulePickerGroupKey(GRMechModuleDef module)
-    {
-        if (module is GRMechCombatComputerModuleDef combatComputer)
-        {
-            return (int)combatComputer.behavior;
-        }
-
-        return 0;
     }
 
     private readonly struct PickerGroupSpan

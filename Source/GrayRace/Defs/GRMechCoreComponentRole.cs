@@ -5,6 +5,5 @@ public enum GRMechCoreComponentRole
     Undefined,
     PowerCore,
     Thruster,
-    Sensor,
-    CombatComputer
+    Sensor
 }
