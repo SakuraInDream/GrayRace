@@ -31,13 +31,12 @@ public class ITab_GrayRaceUpgrade : ITab
 
     protected override void FillTab()
     {
-        Pawn selPawn = SelPawn;
-        if (selPawn != _cachedPawn)
+        if (SelPawn != _cachedPawn)
         {
-            _cachedPawn = selPawn;
+            _cachedPawn = SelPawn;
             foreach (var page in _pages)
             {
-                page.Initialize(selPawn);
+                page.Initialize(SelPawn);
             }
         }
 
@@ -59,7 +58,7 @@ public class ITab_GrayRaceUpgrade : ITab
         _pages[_currentPageIndex].DrawDetailPanel(rightRect);
     }
 
-    public override bool IsVisible => base.IsVisible && SelPawn.IsGrayRace() && !SelPawn.Dead;
+    public override bool IsVisible => base.IsVisible && SelPawn.IsGrayRace() && !SelPawn.Dead && SelPawn.IsPlayerControlled;
 
     private void DrawModeSwitcher(Rect rect)
     {
