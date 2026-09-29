@@ -85,6 +85,9 @@
           <li>
             <defName Degree="-2">Industriousness</defName>
           </li>
+          <li>
+            <defName>Tough</defName>
+          </li>
         </disallowedTraits>
         <forcedRaceTraitEntries>          <!--种族必备特性-->
           <li>
@@ -412,10 +415,10 @@
       <MoveSpeed>7</MoveSpeed>      <!--移动速度-->
       <Flammability>-10</Flammability>      <!--可燃率-->
       <ToxicResistance>10</ToxicResistance>      <!--毒素抗性-->
-      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>     <!--真空抗性-->
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1</VacuumResistance>      <!--真空抗性-->
       <ComfyTemperatureMin>-273</ComfyTemperatureMin>      <!--最低舒适温度-->
       <ComfyTemperatureMax>1453</ComfyTemperatureMax>      <!--最高舒适温度-->
-      <Mass>10</Mass>      <!--质量-->
+      <Mass>50</Mass>      <!--质量-->
       <MeatAmount>50</MeatAmount>      <!--肉量-->
       <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -423,13 +426,14 @@
       <CarryingCapacity>500</CarryingCapacity>      <!--携带能力-->
       <MentalBreakThreshold>0.35</MentalBreakThreshold>      <!--崩溃阈值-->
       <PainShockThreshold>0.6</PainShockThreshold>      <!--疼痛休克阈值-->
-      <PsychicSensitivity>0.01</PsychicSensitivity>      <!--心灵敏感度-->
+      <PsychicSensitivity>0</PsychicSensitivity>      <!--心灵敏感度-->
       <FilthRate>0</FilthRate>      <!--污物规模-->
       <!--战斗-->
       <MeleeDodgeChance>2</MeleeDodgeChance>      <!--近战闪避几率-->
       <MeleeHitChance>2</MeleeHitChance>      <!--近战命中率-->
       <AimingDelayFactor>0.8</AimingDelayFactor>      <!--瞄准时间-->
       <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>      <!--射击精准度-->
+      <IncomingDamageFactor>2</IncomingDamageFactor>      <!--承伤系数-->
       <!--社交-->
       <NegotiationAbility>0.8</NegotiationAbility>      <!--谈判能力-->
       <SellPriceFactor>2</SellPriceFactor>      <!--出售价格-->
@@ -437,18 +441,19 @@
       <!--生产-->
       <ButcheryMechanoidEfficiency>1.5</ButcheryMechanoidEfficiency>      <!--机械体拆解效率-->
       <ButcheryMechanoidSpeed>1.5</ButcheryMechanoidSpeed>      <!--机械体拆解速度-->
-      <SmeltingSpeed>1.5</SmeltingSpeed>      <!--熔炼速度-->
-      <GeneralLaborSpeed>1.5</GeneralLaborSpeed>      <!--普通工作速度-->
-      <WorkSpeedGlobal>1.5</WorkSpeedGlobal>      <!--全局工作速度-->
+      <SmeltingSpeed>1.2</SmeltingSpeed>      <!--熔炼速度-->
+      <GeneralLaborSpeed>1.2</GeneralLaborSpeed>      <!--普通工作速度-->
+      <WorkSpeedGlobal>1.2</WorkSpeedGlobal>      <!--全局工作速度-->
       <!--烹饪-->
       <FoodPoisonChance>500</FoodPoisonChance>      <!--食物中毒几率-->
       <!--医学/研究-->
-      <ResearchSpeed>2</ResearchSpeed>      <!--研究速度-->
-      <MedicalTendQuality>1.5</MedicalTendQuality>      <!--医疗质量-->
-      <MedicalSurgerySuccessChance>2</MedicalSurgerySuccessChance>      <!--手术成功率-->
-      <GlobalLearningFactor>2.0</GlobalLearningFactor>      <!--全局学习系数-->
+      <ResearchSpeed>1.5</ResearchSpeed>      <!--研究速度-->
+      <MedicalTendQuality>1.2</MedicalTendQuality>      <!--医疗质量-->
+      <MedicalSurgerySuccessChance>0.1</MedicalSurgerySuccessChance>      <!--手术成功率-->
+      <GlobalLearningFactor>1.5</GlobalLearningFactor>      <!--全局学习系数-->
       <!--劳作-->
-      <MiningSpeed>2</MiningSpeed>      <!--采矿速度-->
+      <MiningSpeed>1.5</MiningSpeed>      <!--采矿速度-->
+      <DeepDrillingSpeed>1.5</DeepDrillingSpeed>
       <ConstructionSpeed>1.5</ConstructionSpeed>      <!--建造速度-->
       <ConstructSuccessChance>10</ConstructSuccessChance>      <!--建造成功率-->
       <FixBrokenDownBuildingSuccessChance>10</FixBrokenDownBuildingSuccessChance>      <!--修理成功率-->
@@ -463,7 +468,7 @@
     <comps>
       <li Class="CompProperties_Spawner">
         <thingToSpawn>GR_Nanites</thingToSpawn>
-        <spawnCount>100</spawnCount>
+        <spawnCount>50</spawnCount>
         <spawnIntervalRange>60000</spawnIntervalRange>
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
         <showMessageIfOwned>true</showMessageIfOwned>
@@ -521,7 +526,6 @@
         <multiplier>0</multiplier>
       </li>
     </damageMultipliers>
-    <!--=====================================================================================================================-->
     <tools>      <!--空手攻击的设置-->
       <li>
         <label>left fist</label>
@@ -542,28 +546,35 @@
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
       </li>
     </tools>
-    <!--=============================================================================================================================-->
     <race>
       <thinkTreeMain>Humanlike</thinkTreeMain>
       <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-      <intelligence>Humanlike</intelligence>      <!--智力:人-->
-      <makesFootprints>true</makesFootprints>      <!--留下脚印:是-->
-      <lifeExpectancy>5000</lifeExpectancy>      <!--平均寿命-->
-      <nameCategory>HumanStandard</nameCategory>      <!--名称限定-->
-      <hasGenders>true</hasGenders>      <!--有性别-->
-      <body>Gray</body>      <!-- body -->
+      <intelligence>Humanlike</intelligence>
       <renderTree>Humanlike</renderTree>
-      <bloodDef>Filth_MachineBits</bloodDef>
-      <bloodSmearDef>Filth_BloodSmear</bloodSmearDef>
-      <specificMeatDef>GR_GrayFlesh</specificMeatDef>
-      <baseBodySize>1</baseBodySize>      <!--体型大小-->
-      <baseHealthScale>3</baseHealthScale>
-      <foodType>None</foodType>      <!--不吃，杂食（人类默认）为OmnivoreHuman-->
-      <gestationPeriodDays>5000</gestationPeriodDays>      <!--妊娠期天数 -->
+      <body>Gray</body>
+      <lifeExpectancy>5000</lifeExpectancy>
+      <gestationPeriodDays>5000</gestationPeriodDays>
       <soundCallIntervalRange>2000~5000</soundCallIntervalRange>
-      <canBecomeShambler>true</canBecomeShambler>
-      <knowledgeCategory MayRequire="Ludeon.RimWorld.Anomaly">Basic</knowledgeCategory>
-      <anomalyKnowledge>1</anomalyKnowledge>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>3</baseHealthScale>
+      <nameCategory>HumanStandard</nameCategory>
+      <hasGenders>true</hasGenders>
+      <!--从这里往下是正常种族也会定义，但灰裔有点不太一样的部分-->
+      <foodType>None</foodType>
+      <makesFootprints>false</makesFootprints>
+      <bloodDef>Filth_MachineBits</bloodDef>
+      <bloodSmearDef>Filth_MachineBits</bloodSmearDef>
+      <bleedRateFactor>0</bleedRateFactor>
+      <specificMeatDef>GR_GrayFlesh</specificMeatDef>
+      <!--从这里往下是大部分种族通常不会定义的部分-->
+      <isImmuneToInfections>true</isImmuneToInfections>
+      <canBePredatorPrey>false</canBePredatorPrey>
+      <hasUnnaturalCorpse>false</hasUnnaturalCorpse>
+      <canBeVacuumBurnt>false</canBeVacuumBurnt>
+      <canFlyInVacuum>true</canFlyInVacuum>
+      <disableIgniteVerb>false</disableIgniteVerb>
+      <hasCorpse>false</hasCorpse>
+      <canBecomeShambler>false</canBecomeShambler>
       <litterSizeCurve>        <!-- 初生婴儿年龄 -->
         <points>
           <li>(0.5, 0)</li>
@@ -665,33 +676,10 @@
           <li>(80,0)</li>
         </points>
       </ageGenerationCurve>
-      <hediffGiverSets>        <!--该种族能获得的健康状态效果,和手术有点关联-->
-        <li>OrganicStandard</li>
-        <li>Human</li>
-      </hediffGiverSets>
+      <hediffGiverSets />
     </race>
-    <!--=============================================================================================================================-->
-    <recipes>      <!--能够接受的手术配方-->
-      <li>ExciseCarcinoma</li>
-      <li>AdministerMechSerumHealer</li>
+    <recipes Inherit="False">      <!--能够接受的手术配方-->
       <li>RemoveBodyPart</li>
-      <li>Euthanize</li>
-      <li>Anesthetize</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">Vasectomy</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ReverseVasectomy</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">TubalLigation</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ExtractOvum</li>
-      <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
-      <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ExtractHemogenPack</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">BloodTransfusion</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ImplantXenogerm</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">ImplantIUD</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">RemoveIUD</li>
-      <li MayRequire="Ludeon.RimWorld.Biotech">TerminatePregnancy</li>
-      <li MayRequire="Ludeon.RimWorld.Anomaly">SurgicalInspection</li>
-      <li MayRequire="Ludeon.RimWorld.Anomaly">BlissLobotomy</li>
-      <li MayRequire="Ludeon.RimWorld.Anomaly">GhoulInfusion</li>
     </recipes>
   </AlienRace.ThingDef_AlienRace>
 

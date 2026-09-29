@@ -47,19 +47,6 @@
                     <li>Eyes</li>
                     <li>FullHead</li>
                   </groups>
-                  <parts>
-                    <li>
-                      <def>Brain</def>
-                      <customLabel>AI Persona Core</customLabel>
-                      <coverage>0</coverage>
-                      <depth>Inside</depth>
-                      <groups>
-                        <li>UpperHead</li>
-                        <li>Eyes</li>
-                        <li>FullHead</li>
-                      </groups>
-                    </li>
-                  </parts>
                 </li>
                 <li>
                   <def>SightSensor</def>

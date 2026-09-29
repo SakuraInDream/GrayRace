@@ -4,8 +4,8 @@
   <!-- 大脑插件示例 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_CombatChip</defName>
-    <label>战斗芯片插件</label>
-    <description>植入大脑的高级战斗芯片，提升战斗效率和反应速度。</description>
+    <label>战斗芯片</label>
+    <description>植入人格核心的高级战斗芯片，提升战斗效率和反应速度。</description>
 
     <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
@@ -38,8 +38,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_AnalysisChip</defName>
-    <label>分析芯片插件</label>
-    <description>植入大脑的超级分析芯片，提升研究速度和学习能力。</description>
+    <label>分析芯片</label>
+    <description>植入人格核心的超级分析芯片，提升研究速度和学习能力。</description>
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_AnalysisChip</hediffToApply>
     <researchPrerequisites>
@@ -56,12 +56,30 @@
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_Mechlink</defName>
+    <label>机控中枢</label>
+    <description>将机控中枢与人格核心连接，允许操控机械族。</description>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
+    <hediffToApply>MechlinkImplant</hediffToApply>
+    <researchPrerequisites>
+      <!-- T1 机械科技 -->
+      <li>Electricity</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <Mechlink>1</Mechlink>
+    </requiredMaterials>
+    <workAmount>60</workAmount>
+    <requiredSkill>Intellectual</requiredSkill>
+    <minSkillLevel>8</minSkillLevel>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
   <!-- 心脏插件 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Heart_EfficiencyBooster</defName>
     <label>效率增强器插件</label>
     <description>安装在灰潮核心的效率增强器，提升纳米机械恢复速度。</description>
-
     <targetBodyPart>Nano_Heart</targetBodyPart>
     <hediffToApply>GR_Hediff_EfficiencyBooster</hediffToApply>
     <researchPrerequisites>
@@ -83,9 +101,7 @@
     <defName>GR_Plugin_Hand_PrecisionChip</defName>
     <label>精密芯片插件</label>
     <description>植入手部的精密操作芯片，提升制作精度和质量。</description>
-
     <targetBodyPart>MechanicalHand</targetBodyPart>
-
     <hediffToApply>GR_Hediff_PrecisionChip</hediffToApply>
     <researchPrerequisites>
       <li>ComplexClothing</li>
@@ -105,7 +121,6 @@
     <defName>GR_Plugin_Eye_TargetingSystem</defName>
     <label>瞄准系统插件</label>
     <description>植入眼部的先进瞄准系统，大幅提升射击精度。</description>
-
     <targetBodyPartTags>
       <li>SightSource</li>
     </targetBodyPartTags>
@@ -128,27 +143,23 @@
     <label>Primary overclocking chip</label>
     <description>小幅增加超频上限。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
-    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipPrimary</hediffToApply>
-
     <researchPrerequisites>
       <li>GR_DailyPlugin</li>
     </researchPrerequisites>
-
     <requiredMaterials>
       <ComponentIndustrial>1</ComponentIndustrial>
     </requiredMaterials>
-
     <workAmount>120</workAmount>
-
   </SD.GrayRace.Defs.GRUpgradeDef>
-  
+
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_OverclockingChipIntermediate</defName>
     <label>Intermediate overclocking chip</label>
     <description>增加超频上限。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
-    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipIntermediate</hediffToApply>
 
     <researchPrerequisites>
@@ -168,38 +179,30 @@
     <label>Advanced overclocking chip</label>
     <description>大幅增加超频上限。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
-    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipAdvanced</hediffToApply>
-
     <researchPrerequisites>
-      <li>GR_DailyPlugin</li>
+      <li>GR_CombatPlugin</li>
     </researchPrerequisites>
-
     <requiredMaterials>
       <ComponentIndustrial>1</ComponentIndustrial>
     </requiredMaterials>
-
     <workAmount>120</workAmount>
-
   </SD.GrayRace.Defs.GRUpgradeDef>
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_OverclockingChipUltimate</defName>
     <label>Ultimate overclocking chip</label>
-    <description>大幅增加超频上限。</description>
+    <description>极大幅增加超频上限。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
-    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipUltimate</hediffToApply>
-
     <researchPrerequisites>
-      <li>GR_DailyPlugin</li>
+      <li>GR_CombatPlugin</li>
     </researchPrerequisites>
-
     <requiredMaterials>
       <ComponentIndustrial>3</ComponentIndustrial>
     </requiredMaterials>
-
     <workAmount>120</workAmount>
-
   </SD.GrayRace.Defs.GRUpgradeDef>
 </Defs>

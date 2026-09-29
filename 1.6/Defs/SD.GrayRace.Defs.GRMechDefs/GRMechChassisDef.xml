@@ -82,8 +82,8 @@
     <label>驱逐舰</label>
     <description>采用双区段设计的驱逐舰可以提供多种多样的战略性武装。</description>
     <!-- TODO -->
-    <pawnKindDef>GR_Mech_FF</pawnKindDef>
-    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <pawnKindDef>GR_Mech_DD</pawnKindDef>
+    <designerPreviewPath>Race/Mech/DD_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
     <uiOrder>2</uiOrder>
     <researchPrerequisites>
@@ -100,8 +100,8 @@
     <label>巡洋舰</label>
     <description>巡洋舰采用三段式设计，在愿意加钱的情况下可自由进行各种追加模组改装。</description>
     <!-- TODO -->
-    <pawnKindDef>GR_Mech_FF</pawnKindDef>
-    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
+    <pawnKindDef>GR_Mech_CA</pawnKindDef>
+    <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
     <fixedWorkTicks>6000</fixedWorkTicks>
     <uiOrder>3</uiOrder>
     <researchPrerequisites>

@@ -59,10 +59,11 @@ namespace SD.GrayRace.JobGivers
             var energy = pawn?.needs?.TryGetNeed<Need_GrayRaceEnergy>();
             if(energy == null) return 0f;
 
-            if (energy.CurLevel < 0.2f)
+            // 改成百分比的自动补充阈值
+            if (energy.CurLevelPercentage < 0.2f)
                 return 9.6f;
 
-            if (energy.CurLevel > 0.8f)
+            if (energy.CurLevelPercentage > 0.8f)
                 return 0f;
 
             return 8f;

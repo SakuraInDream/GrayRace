@@ -95,7 +95,7 @@
     </graphicData>
     <projectile>
       <damageDef>GR_NanoBullet</damageDef>
-      <damageAmountBase>10</damageAmountBase>
+      <damageAmountBase>6</damageAmountBase>
       <armorPenetrationBase>0.3</armorPenetrationBase>
       <extraDamages>
         <li>
@@ -202,7 +202,7 @@
     </graphicData>
     <projectile>
       <damageDef>GR_NanoBullet</damageDef>
-      <damageAmountBase>30</damageAmountBase>
+      <damageAmountBase>18</damageAmountBase>
       <armorPenetrationBase>0.5</armorPenetrationBase>
       <stoppingPower>3</stoppingPower>
       <speed>80</speed>
@@ -300,7 +300,7 @@
     </graphicData>
     <projectile>
       <damageDef>GR_NanoBullet</damageDef>
-      <damageAmountBase>12</damageAmountBase>
+      <damageAmountBase>11</damageAmountBase>
       <armorPenetrationBase>0.5</armorPenetrationBase>
       <extraDamages>
         <li>
@@ -400,7 +400,7 @@
     </graphicData>
     <projectile>
       <damageDef>GR_NanoBullet</damageDef>
-      <damageAmountBase>15</damageAmountBase>
+      <damageAmountBase>10</damageAmountBase>
       <armorPenetrationBase>0.75</armorPenetrationBase>
       <speed>150</speed>
     </projectile>
@@ -500,12 +500,12 @@
     </graphicData>
     <projectile>
       <damageDef>GR_NanoBullet</damageDef>
-      <damageAmountBase>30</damageAmountBase>
+      <damageAmountBase>25</damageAmountBase>
       <armorPenetrationBase>1.5</armorPenetrationBase>
       <extraDamages>
         <li>
           <def>EMP</def>
-          <amount>30</amount>
+          <amount>25</amount>
         </li>
       </extraDamages>
       <stoppingPower>2</stoppingPower>

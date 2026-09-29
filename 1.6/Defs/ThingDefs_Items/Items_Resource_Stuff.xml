@@ -14,13 +14,13 @@
     <statBases>
       <MarketValue>0.1</MarketValue>
       <Mass>0.1</Mass>
-      <StuffPower_Armor_Sharp>0.5</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>2.0</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Sharp>1.2</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.2</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.2</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>3</StuffPower_Insulation_Heat>
-      <SharpDamageMultiplier>1.2</SharpDamageMultiplier>
-      <BluntDamageMultiplier>0.5</BluntDamageMultiplier>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.1</BluntDamageMultiplier>
       <Flammability>0</Flammability>
     </statBases>
     <useHitPoints>false</useHitPoints>
@@ -75,17 +75,19 @@
     <statBases>
       <MarketValue>20</MarketValue>
       <Mass>0.25</Mass>
-      <StuffPower_Armor_Sharp>2.0</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>3.0</StuffPower_Armor_Blunt>
-      <StuffPower_Armor_Heat>3.0</StuffPower_Armor_Heat>
-      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
-      <StuffPower_Insulation_Heat>30</StuffPower_Insulation_Heat>
-      <SharpDamageMultiplier>2</SharpDamageMultiplier>
+      <StuffPower_Armor_Sharp>1.5</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.5</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>2.0</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>60</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>60</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.8</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
       <Flammability>0</Flammability>
     </statBases>
     <useHitPoints>false</useHitPoints>
     <healthAffectsPrice>false</healthAffectsPrice>
+    <techLevel>Ultra</techLevel>
+    <stackLimit>750</stackLimit>
     <thingCategories>
       <li>ResourcesRaw</li>
     </thingCategories>
@@ -107,12 +109,12 @@
       <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
       <statFactors>
         <Flammability>0</Flammability>
-        <MaxHitPoints>40</MaxHitPoints>
+        <MaxHitPoints>20</MaxHitPoints>
         <Beauty>2</Beauty>
         <WorkToMake>0.7</WorkToMake>
         <WorkToBuild>0.7</WorkToBuild>
         <Mass>0.7</Mass>
-        <MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
+        <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
       </statFactors>
       <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
     </stuffProps>
@@ -191,11 +193,11 @@
     <statBases>
       <MarketValue>30</MarketValue>
       <Mass>0.05</Mass>
-      <StuffPower_Armor_Sharp>0.2</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Sharp>0.1</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>0.1</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.1</StuffPower_Armor_Heat>
       <SharpDamageMultiplier>1.3</SharpDamageMultiplier>
-      <BluntDamageMultiplier>0.3</BluntDamageMultiplier>
+      <BluntDamageMultiplier>0.1</BluntDamageMultiplier>
       <Flammability>0</Flammability>
     </statBases>
     <useHitPoints>false</useHitPoints>

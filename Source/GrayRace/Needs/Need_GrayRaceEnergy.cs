@@ -18,6 +18,9 @@ namespace SD.GrayRace.Needs
         {
         }
 
+        // 调一下能量上限，避免后期超频太高天天吃饭不停下
+        public override float MaxLevel => 25f;
+
         public override void NeedInterval()
         {
             if (!IsFrozen)

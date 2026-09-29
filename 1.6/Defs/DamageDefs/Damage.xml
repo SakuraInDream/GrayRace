@@ -64,8 +64,8 @@
         <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
       </li>
     </additionalHediffs>
-    <buildingDamageFactorPassable>30</buildingDamageFactorPassable>
-    <buildingDamageFactorImpassable>60</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
+    <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
     <externalViolence>false</externalViolence>
     <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
     <impactSoundType>Toxic</impactSoundType>

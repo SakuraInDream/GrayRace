@@ -43,7 +43,6 @@
           <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
           <MeleeHitChance>0.2</MeleeHitChance>
           <MeleeDodgeChance>0.15</MeleeDodgeChance>
-          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
         </statOffsets>
       </li>
     </stages>
@@ -101,7 +100,6 @@
       <li>
         <statOffsets>
           <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
         </statOffsets>
       </li>
     </stages>
@@ -121,7 +119,6 @@
         <statOffsets>
           <ShootingAccuracyPawn>0.35</ShootingAccuracyPawn>
           <AimingDelayFactor>-0.2</AimingDelayFactor>
-          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
         </statOffsets>
       </li>
     </stages>
@@ -142,7 +139,7 @@
       </li>
     </stages>
   </HediffDef>
-  
+
   <HediffDef>
     <defName>GR_Hediff_OverclockingChipIntermediate</defName>
     <label>中级超频芯片</label>
@@ -175,7 +172,7 @@
       </li>
     </stages>
   </HediffDef>
-  
+
   <HediffDef>
     <defName>GR_Hediff_OverclockingChipUltimate</defName>
     <label>终级超频芯片</label>

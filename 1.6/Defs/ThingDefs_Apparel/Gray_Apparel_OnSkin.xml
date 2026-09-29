@@ -266,13 +266,19 @@
       <PawnBeauty>2</PawnBeauty>
     </equippedStatOffsets>
     <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+      </bodyPartGroups>
       <wornGraphicPath>Apparel/NileGauze/Gray_NileGauze</wornGraphicPath>
-      <layers Inherit="False">
+      <layers>
         <li>OnSkin</li>
       </layers>
-      <tags Inherit="False">
-        <li>GR_Decorative</li>
-      </tags>
     </apparel>
   </ThingDef>
 
@@ -287,11 +293,15 @@
       <drawSize>1.0</drawSize>
     </graphicData>
     <equippedStatOffsets>
+      <MedicalSurgerySuccessChance>0.8</MedicalSurgerySuccessChance>
       <PawnBeauty>2</PawnBeauty>
     </equippedStatOffsets>
     <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
       <wornGraphicPath>Apparel/StrangeNurse/Gray_StrangeNurse</wornGraphicPath>
-      <layers Inherit="False">
+      <layers>
         <li>OnSkin</li>
       </layers>
       <tags Inherit="False">

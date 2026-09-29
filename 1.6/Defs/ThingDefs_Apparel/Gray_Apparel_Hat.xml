@@ -477,6 +477,20 @@
         <defaultData>
           <layer>60</layer>
         </defaultData>
+        <dataNorth>
+          <layer>-65</layer>
+          <offset>(0, 0, -0.25)</offset>
+        </dataNorth>
+        <dataSouth>
+          <layer>55</layer>
+          <offset>(0, 0, -0.4)</offset>
+        </dataSouth>
+        <dataEast>
+          <offset>(0, 0, -0.25)</offset>
+        </dataEast>
+        <dataWest>
+          <offset>(0, 0, -0.25)</offset>
+        </dataWest>
       </drawData>
     </apparel>
   </ThingDef>

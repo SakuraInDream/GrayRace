@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- 护卫舰 -->
+  <!-- 巡洋舰 -->
   <ThingDef ParentName="LightMechanoid">
-    <defName>GR_Mech_FF</defName>
-    <label>巡空精魅</label>
-    <description>巡空级是一种专注于大量制造和灵活支援战场的轻型机械体。作为灰裔对抗敌人的先遣部队，被大量的投入战场，发生紧急状况时也可快速支援。她具备「护卫」舰应有的速度与量产性，与她身上有些简约的护甲与火力，形成绝妙的平衡。正因为是量产型，纤细的躯体与手脚似乎还有待发育，可谓是相当稚嫩……虽说如此，从本就不多的护甲遮掩下，也已然能窥见女性的曲线了。</description>
+    <defName>GR_Mech_CA</defName>
+    <label>驱动妖精</label>
+    <description>驱动级是擅长中距离作战的中型机械体。外表处于还未舍弃少女的青涩，身体却又大幅成长的阶段，流露出一种生人勿进的纯洁感。也正如同其外表，不但火力比起之前上升了不少，速度也没有下降很多，想必接近她是件困难的事。就开火频率来说，如果不是战争机器的话，应该会是一位受欢迎的勤勉之人吧。</description>
     <statBases>
-      <MoveSpeed>12.7</MoveSpeed>
-      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
-      <BandwidthCost>1</BandwidthCost>
+      <MoveSpeed>7</MoveSpeed>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+      <BandwidthCost>4</BandwidthCost>
       <WastepacksPerRecharge>0</WastepacksPerRecharge>
-      <MechEnergyLossPerHP>0.1</MechEnergyLossPerHP>
+      <MechEnergyLossPerHP>0</MechEnergyLossPerHP>
       <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
     </statBases>
     <race>
       <body>GR_MechBody</body>
-      <baseBodySize>1</baseBodySize>
-      <baseHealthScale>1.5</baseHealthScale>
+      <baseBodySize>4</baseBodySize>
+      <baseHealthScale>6</baseHealthScale>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>GR_Mechanoid</thinkTreeMain>
-      <mechWeightClass>Light</mechWeightClass>
+      <mechWeightClass>Medium</mechWeightClass>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -41,8 +41,8 @@
       </lifeStageAges>
     </race>
     <butcherProducts>
-      <GR_Nanites>100</GR_Nanites>
-      <GR_Alloy>20</GR_Alloy>
+      <GR_Nanites>400</GR_Nanites>
+      <GR_Alloy>80</GR_Alloy>
     </butcherProducts>
     <inspectorTabs>
       <li>SD.GrayRace.ITabs.ITab_GrayMechLoadout</li>
@@ -59,16 +59,16 @@
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>GR_Mech_FF</defName>
-    <label>巡空精魅</label>
-    <race>GR_Mech_FF</race>
-    <combatPower>100</combatPower>
-    <maxPerGroup>20</maxPerGroup>
+    <defName>GR_Mech_CA</defName>
+    <label>驱动妖精</label>
+    <race>GR_Mech_CA</race>
+    <combatPower>400</combatPower>
+    <maxPerGroup>10</maxPerGroup>
     <allowInMechClusters>true</allowInMechClusters>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Race/Mech/FF</texPath>
+          <texPath>Race/Mech/CA</texPath>
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
@@ -81,7 +81,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Race/Mech/FF</texPath>
+          <texPath>Race/Mech/CA</texPath>
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>

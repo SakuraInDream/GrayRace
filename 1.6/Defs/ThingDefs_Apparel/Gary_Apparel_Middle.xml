@@ -99,6 +99,10 @@
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
+    <costList>
+      <GR_Nanites>50</GR_Nanites>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>18000</WorkToMake>
@@ -172,6 +176,11 @@
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
+    <costList>
+      <GR_Nanites>50</GR_Nanites>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>18000</WorkToMake>
@@ -245,6 +254,10 @@
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
+    <costList>
+      <GR_Nanites>50</GR_Nanites>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>18000</WorkToMake>
@@ -323,6 +336,11 @@
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
+    <costList>
+      <GR_Nanites>50</GR_Nanites>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>18000</WorkToMake>
@@ -333,9 +351,9 @@
       <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <ButcheryMechanoidEfficiency>0.2</ButcheryMechanoidEfficiency>
+      <ButcheryMechanoidEfficiency>0.3</ButcheryMechanoidEfficiency>
       <ButcheryMechanoidSpeed>1</ButcheryMechanoidSpeed>
-      <GeneralLaborSpeed>1</GeneralLaborSpeed>
+      <GeneralLaborSpeed>0.5</GeneralLaborSpeed>
       <ConstructionSpeed>1</ConstructionSpeed>
       <SmeltingSpeed>1</SmeltingSpeed>
     </equippedStatOffsets>
@@ -396,6 +414,11 @@
     <stuffCategories>
       <li>Fabric</li>
     </stuffCategories>
+    <costList>
+      <GR_Nanites>50</GR_Nanites>
+      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
       <WorkToMake>18000</WorkToMake>
@@ -407,14 +430,14 @@
     </statBases>
     <equippedStatOffsets>
       <DrugSynthesisSpeed>1</DrugSynthesisSpeed>
-      <MedicalSurgerySuccessChance>0.5</MedicalSurgerySuccessChance>
+      <MedicalSurgerySuccessChance>1.5</MedicalSurgerySuccessChance>
       <MedicalOperationSpeed>1</MedicalOperationSpeed>
       <MedicalTendQuality>0.5</MedicalTendQuality>
       <MedicalTendSpeed>1</MedicalTendSpeed>
       <DrugHarvestYield>0.2</DrugHarvestYield>
       <HackingSpeed>1.5</HackingSpeed>
-      <HackingStealth>15</HackingStealth>
-      <ResearchSpeed>1.5</ResearchSpeed>
+      <HackingStealth>100</HackingStealth>
+      <ResearchSpeed>0.3</ResearchSpeed>
     </equippedStatOffsets>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>false</smeltable>
