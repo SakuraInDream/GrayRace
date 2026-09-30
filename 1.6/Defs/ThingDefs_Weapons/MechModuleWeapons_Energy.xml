@@ -608,7 +608,7 @@
       </li>
     </verbs>
     <modExtensions>
-      <li Class="SD.GrayRace.Verbs.TitanLanceExtension">
+      <li Class="SD.GrayRace.DefModExtensions.TitanLanceExtension">
         <minPulseDamage>400</minPulseDamage>
         <maxPulseDamage>2000</maxPulseDamage>
         <armorPenetration>1</armorPenetration>

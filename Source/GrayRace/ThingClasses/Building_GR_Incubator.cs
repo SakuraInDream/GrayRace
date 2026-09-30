@@ -109,7 +109,7 @@ namespace SD.GrayRace.ThingClasses
         public CompPowerTrader PowerTraderComp => _power ??= this.TryGetComp<CompPowerTrader>();
         public bool PoweredOn => PowerTraderComp.PowerOn;
 
-        public List<RecipeDef> modExtensionRecipes = DefDatabase<RecipeDef>.AllDefsListForReading.Where(t=> t.HasModExtension<DefModExtension_RecipeNewBorn>()).ToList();
+        public List<RecipeDef> modExtensionRecipes = DefDatabase<RecipeDef>.AllDefsListForReading.Where(t=> t.HasModExtension<RecipeNewBorn>()).ToList();
 
         public override AcceptanceReport CanAcceptPawn(Pawn p)
         {
@@ -452,7 +452,7 @@ namespace SD.GrayRace.ThingClasses
             _baby = PawnGenerator.GeneratePawn(pReq);
 
             // 是否设置了固定 trait
-            var ext = foundationRecipe?.GetModExtension<DefModExtension_RecipeNewBorn>();
+            var ext = foundationRecipe?.GetModExtension<RecipeNewBorn>();
             if (ext?.newBornBackstory != null)
             {
                 _baby.story.Childhood = ext.newBornBackstory;

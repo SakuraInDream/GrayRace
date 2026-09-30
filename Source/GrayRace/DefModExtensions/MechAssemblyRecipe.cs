@@ -3,7 +3,7 @@ using Verse;
 
 namespace SD.GrayRace.DefModExtensions;
 
-public class DefModExtension_MechAssemblyRecipe : DefModExtension
+public class MechAssemblyRecipe : DefModExtension
 {
     public GRMechChassisDef chassis;
 }

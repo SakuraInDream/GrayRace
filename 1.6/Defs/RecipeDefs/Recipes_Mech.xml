@@ -8,7 +8,7 @@
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
 
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+      <li Class="SD.GrayRace.DefModExtensions.MechAssemblyRecipe">
         <!-- 需要指定一个基础机体布局，这里指定护卫舰布局 -->
         <chassis>GR_Chassis_Corvette</chassis>
       </li>
@@ -22,7 +22,7 @@
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
 
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+      <li Class="SD.GrayRace.DefModExtensions.MechAssemblyRecipe">
         <chassis>GR_Chassis_Frigate</chassis>
       </li>
     </modExtensions>
@@ -35,7 +35,7 @@
     <researchPrerequisite>GR_T2MechTech</researchPrerequisite>
 
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+      <li Class="SD.GrayRace.DefModExtensions.MechAssemblyRecipe">
         <chassis>GR_Chassis_Destroyer</chassis>
       </li>
     </modExtensions>
@@ -48,7 +48,7 @@
     <researchPrerequisite>GR_T3MechTech</researchPrerequisite>
 
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+      <li Class="SD.GrayRace.DefModExtensions.MechAssemblyRecipe">
         <chassis>GR_Chassis_Cruiser</chassis>
       </li>
     </modExtensions>
@@ -61,7 +61,7 @@
     <researchPrerequisite>GR_T4MechTech</researchPrerequisite>
 
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+      <li Class="SD.GrayRace.DefModExtensions.MechAssemblyRecipe">
         <chassis>GR_Chassis_Battleship</chassis>
       </li>
     </modExtensions>
@@ -74,7 +74,7 @@
     <researchPrerequisite>GR_T5MechTech</researchPrerequisite>
 
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+      <li Class="SD.GrayRace.DefModExtensions.MechAssemblyRecipe">
         <chassis>GR_Chassis_Titan</chassis>
       </li>
     </modExtensions>
@@ -87,7 +87,7 @@
     <researchPrerequisite>GR_T6MechTech</researchPrerequisite>
 
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_MechAssemblyRecipe">
+      <li Class="SD.GrayRace.DefModExtensions.MechAssemblyRecipe">
         <chassis>GR_Chassis_Juggernaut</chassis>
       </li>
     </modExtensions>

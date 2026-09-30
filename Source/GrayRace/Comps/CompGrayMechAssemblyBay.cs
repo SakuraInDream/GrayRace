@@ -678,7 +678,7 @@ public class CompGrayMechAssemblyBay : ThingComp, IThingHolder
                 continue;
             }
 
-            DefModExtension_MechAssemblyRecipe extension = recipe.GetModExtension<DefModExtension_MechAssemblyRecipe>();
+            MechAssemblyRecipe extension = recipe.GetModExtension<MechAssemblyRecipe>();
             if (extension?.chassis == designSnapshot?.chassis)
             {
                 tmpMatchingRecipes.Add(recipe);

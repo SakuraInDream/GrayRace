@@ -51,7 +51,7 @@
     </ingredients>
     <modExtensions>
       <!-- 具体的人格基底需要加入这个ModExtensions -->
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <!-- 填 BackstoryDef 的 defName -->
         <!-- 自动绑定到幼年背景 -->
         <newBornBackstory>GR_PM_Soldier</newBornBackstory>
@@ -74,7 +74,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Artist</newBornBackstory>
       </li>
     </modExtensions>
@@ -95,7 +95,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Aide</newBornBackstory>
       </li>
     </modExtensions>
@@ -116,7 +116,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Medical</newBornBackstory>
       </li>
     </modExtensions>
@@ -137,7 +137,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Technician</newBornBackstory>
       </li>
     </modExtensions>
@@ -158,7 +158,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Constable</newBornBackstory>
       </li>
     </modExtensions>
@@ -179,7 +179,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Adjutant</newBornBackstory>
       </li>
     </modExtensions>
@@ -200,7 +200,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Technical</newBornBackstory>
       </li>
     </modExtensions>
@@ -221,7 +221,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Research</newBornBackstory>
       </li>
     </modExtensions>
@@ -242,7 +242,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Guard</newBornBackstory>
       </li>
     </modExtensions>
@@ -263,7 +263,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Maid</newBornBackstory>
       </li>
     </modExtensions>
@@ -284,7 +284,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Miner</newBornBackstory>
       </li>
     </modExtensions>
@@ -305,7 +305,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Architect</newBornBackstory>
       </li>
     </modExtensions>
@@ -326,7 +326,7 @@
       </li>
     </ingredients>
     <modExtensions>
-      <li Class="SD.GrayRace.DefModExtensions.DefModExtension_RecipeNewBorn">
+      <li Class="SD.GrayRace.DefModExtensions.RecipeNewBorn">
         <newBornBackstory>GR_PM_Farmer</newBornBackstory>
       </li>
     </modExtensions>
