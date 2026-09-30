@@ -145,6 +145,9 @@
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipPrimary</hediffToApply>
+    <exclusionTags>
+      <li>OverclockChip</li>
+    </exclusionTags>
     <researchPrerequisites>
       <li>GR_DailyPlugin</li>
     </researchPrerequisites>
@@ -161,7 +164,9 @@
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipIntermediate</hediffToApply>
-
+    <exclusionTags>
+      <li>OverclockChip</li>
+    </exclusionTags>
     <researchPrerequisites>
       <li>GR_DailyPlugin</li>
     </researchPrerequisites>
@@ -181,6 +186,9 @@
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipAdvanced</hediffToApply>
+    <exclusionTags>
+      <li>OverclockChip</li>
+    </exclusionTags>
     <researchPrerequisites>
       <li>GR_CombatPlugin</li>
     </researchPrerequisites>
@@ -197,6 +205,9 @@
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipUltimate</hediffToApply>
+    <exclusionTags>
+      <li>OverclockChip</li>
+    </exclusionTags>
     <researchPrerequisites>
       <li>GR_CombatPlugin</li>
     </researchPrerequisites>

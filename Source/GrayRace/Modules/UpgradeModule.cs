@@ -22,7 +22,22 @@ public class UpgradeModule : GrayModuleBase
     private string _pendingPluginUpgradeDefName;
     private int _pendingPluginPartIndex = -1;
 
+    private static Dictionary<HediffDef, GRUpgradeDef> _hediffToUpgrade;
+
     public bool HasPendingPluginInstall => !_pendingPluginUpgradeDefName.NullOrEmpty() && _pendingPluginPartIndex >= 0;
+
+    private static void EnsureCache()
+    {
+        if (_hediffToUpgrade?.Count > 0) return;
+
+        _hediffToUpgrade = new Dictionary<HediffDef, GRUpgradeDef>();
+
+        foreach (GRUpgradeDef def in DefDatabase<GRUpgradeDef>.AllDefsListForReading)
+        {
+            if (def?.hediffToApply == null || _hediffToUpgrade.ContainsKey(def.hediffToApply)) continue;
+            _hediffToUpgrade.Add(def.hediffToApply, def);
+        }
+    }
 
     public override void PostExposeData()
     {
@@ -325,6 +340,33 @@ public class UpgradeModule : GrayModuleBase
         return segments.Count > 0 ? $"需求: {string.Join(" | ", segments)}" : "需求: 无";
     }
 
+    public string GetReplacementHint(GRUpgradeDef def, BodyPartRecord part)
+    {
+        if (def == null || part == null || def.exclusionTags == null || def.exclusionTags.Count == 0) return string.Empty;
+
+        if (pawn?.health?.hediffSet?.hediffs == null) return string.Empty;
+
+        EnsureCache();
+
+        List<Hediff> hediffs = pawn.health.hediffSet.hediffs;
+        for (int i = 0; i < hediffs.Count; i++)
+        {
+            Hediff h = hediffs[i];
+
+            if (h?.def == null || h.Part == null) continue;
+
+            if (!IsPartInSubtree(part, h.Part) && !IsPartInSubtree(h.Part, part)) continue;
+
+            if (!_hediffToUpgrade.TryGetValue(h.def, out GRUpgradeDef owner)) continue;
+
+            if (owner == null || owner == def || !def.ConflictsWith(owner)) continue;
+
+            return $"替换 {owner.LabelCap}";
+        }
+
+        return string.Empty;
+    }
+
     private bool TryStartPluginInstallJob(GRUpgradeDef def, BodyPartRecord part, out string reason)
     {
         reason = string.Empty;
@@ -465,7 +507,8 @@ public class UpgradeModule : GrayModuleBase
     private static bool UpgradesCanCoexist(GRUpgradeDef left, GRUpgradeDef right)
     {
         if (left == null || right == null || left == right) return true;
-        return left.IsPlugin != right.IsPlugin;
+        if (!left.IsPlugin && !right.IsPlugin) return false;
+        return !left.ConflictsWith(right);
     }
 
     private bool CheckSkillRequirement(GRUpgradeDef def, out string reason)

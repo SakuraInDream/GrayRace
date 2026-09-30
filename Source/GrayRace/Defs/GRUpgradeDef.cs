@@ -5,6 +5,7 @@ using Verse;
 
 namespace SD.GrayRace.Defs;
 
+[StaticConstructorOnStartup]
 public class GRUpgradeDef : Def
 {
     /// <summary>
@@ -84,9 +85,34 @@ public class GRUpgradeDef : Def
     /// </summary>
     public int uiOrder = 0;
 
+    /// <summary>
+    /// 互斥列表，仿原版 GeneDef 实现，当两个升级插件/变形存在
+    /// </summary>
+    public List<string> exclusionTags = new List<string>();
+
     public bool IsPlugin => requiredMaterials != null && requiredMaterials.Count > 0;
 
     public bool IsTransformation => !IsPlugin;
+
+    public bool ConflictsWith(GRUpgradeDef other)
+    {
+        if (this == other) return true;
+
+        if (exclusionTags == null || other.exclusionTags == null)
+        {
+            return false;
+        }
+
+        for (int i = 0; i < exclusionTags.Count; i++)
+        {
+            if (other.exclusionTags.Contains(exclusionTags[i]))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 
     public override void PostLoad()
     {

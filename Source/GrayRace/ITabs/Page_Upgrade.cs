@@ -163,8 +163,21 @@ public class Page_Upgrade : BasePageITab
 
         string typeLabel = def.IsTransformation ? "[变形]" : "[插件]";
         Color typeColor = def.IsTransformation ? Color.cyan : Color.magenta;
+        Color warningColor = new Color(1f, 0.72f, 0.2f);
         string labelName = def.LabelCap.ToString();
-        string labelText = typeLabel + " " + labelName;
+
+        string titleSuffix = string.Empty;
+        if (!isActive && UpgradeComp != null)
+        {
+            string replaceHint = UpgradeComp.GetReplacementHint(def, _selectedPart);
+            if (!replaceHint.NullOrEmpty())
+            {
+                titleSuffix = " " + replaceHint;
+            }
+        }
+
+        string labelText = typeLabel + " " + labelName + titleSuffix;
+        string titleSuffixColored = titleSuffix.NullOrEmpty() ? string.Empty : titleSuffix.Colorize(warningColor);
         string descText = def.description ?? string.Empty;
 
         List<ResearchProjectDef> researchProjects = def.EnumerateResearchPrerequisites().ToList();
@@ -243,7 +256,7 @@ public class Page_Upgrade : BasePageITab
         GUI.color = Color.white;
         Text.Font = GameFont.Small;
         Text.Anchor = TextAnchor.UpperLeft;
-        Widgets.Label(labelRect, $"{typeLabel.Colorize(typeColor)} {labelName}");
+        Widgets.Label(labelRect, $"{typeLabel.Colorize(typeColor)} {labelName}{titleSuffixColored}");
 
         Text.Font = GameFont.Tiny;
         GUI.color = Color.gray;
