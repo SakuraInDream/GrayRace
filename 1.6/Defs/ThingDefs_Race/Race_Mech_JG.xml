@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- 驱逐舰 -->
+  <!-- 主宰 -->
   <ThingDef ParentName="GR_Mech">
-    <defName>GR_Mech_DD</defName>
-    <label>强袭精灵</label>
-    <description>强袭级是以擅长作为前锋突进作战为傲的中型机械体，以抵近射击为作战方针。虽相比于护卫舰，外观上没有太大差异，但其火力、装甲以及本质都获得了成长。像是进入青春期般，身上那些未熟的性征开始逐渐发育，表现出未来的可能性。作为战争机器——那正趋于成熟的美丽，与这份美丽截然相反的作战方式，让敌人和伙伴在面对她时，比起对美丽的惊艳，更多的是一份畏惧。</description>
+    <defName>GR_Mech_JG</defName>
+    <label>永恒神域</label>
+    <description>永恒神域是一类特殊的超重型机械体，不仅火力凶猛盾甲厚重，还内置了一个小型制舰单元，可以在战斗中维修友方机械体和制造小型机械体，且能够搭载效果优秀的光环。</description>
     <statBases>
-      <Mass>60</Mass>
-      <MoveSpeed>9</MoveSpeed>
-      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-      <BandwidthCost>2</BandwidthCost>
+      <Mass>303.75</Mass>
+      <MoveSpeed>4</MoveSpeed>
+      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+      <BandwidthCost>32</BandwidthCost>
     </statBases>
     <race>
-      <baseBodySize>2</baseBodySize>
-      <baseHealthScale>3</baseHealthScale>
-      <mechWeightClass>Medium</mechWeightClass>
+      <baseBodySize>32</baseBodySize>
+      <baseHealthScale>48</baseHealthScale>
+      <mechWeightClass>UltraHeavy</mechWeightClass>
     </race>
     <butcherProducts>
-      <GR_Nanites>200</GR_Nanites>
-      <GR_Alloy>40</GR_Alloy>
+      <GR_Nanites>3200</GR_Nanites>
+      <GR_Alloy>640</GR_Alloy>
     </butcherProducts>
     <comps>
       <li Class="CompProperties_Shield">
         <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
         <blocksRangedWeapons>false</blocksRangedWeapons>
-        <minDrawSize>2</minDrawSize>
-        <maxDrawSize>2</maxDrawSize>
+        <minDrawSize>7.5</minDrawSize>
+        <maxDrawSize>7.5</maxDrawSize>
         <energyLossPerDamage>0.01</energyLossPerDamage>
       </li>
     </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>GR_Mech_DD</defName>
-    <label>强袭精灵</label>
-    <race>GR_Mech_DD</race>
-    <combatPower>200</combatPower>
-    <maxPerGroup>20</maxPerGroup>
+    <defName>GR_Mech_JG</defName>
+    <label>永恒神域</label>
+    <race>GR_Mech_JG</race>
+    <combatPower>3200</combatPower>
+    <maxPerGroup>1</maxPerGroup>
     <allowInMechClusters>true</allowInMechClusters>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Race/Mech/DD</texPath>
+          <texPath>Race/Mech/CA</texPath>
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.7</drawSize>
+          <drawSize>6</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -56,11 +56,11 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Race/Mech/DD</texPath>
+          <texPath>Race/Mech/CA</texPath>
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.7</drawSize>
+          <drawSize>6</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.25)</offset>

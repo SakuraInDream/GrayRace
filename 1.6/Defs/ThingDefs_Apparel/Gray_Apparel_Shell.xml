@@ -149,7 +149,7 @@
     <equippedStatOffsets>
       <AimingDelayFactor>-0.15</AimingDelayFactor>
       <RangedCooldownFactor>-0.15</RangedCooldownFactor>
-      <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
+      <ShootingAccuracyPawn>8</ShootingAccuracyPawn>
       <IncomingDamageFactor>-0.1</IncomingDamageFactor>
       <MeleeDodgeChance>12</MeleeDodgeChance>
     </equippedStatOffsets>

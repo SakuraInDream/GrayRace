@@ -2,58 +2,33 @@
 <Defs>
 
   <!-- 巡洋舰 -->
-  <ThingDef ParentName="LightMechanoid">
+  <ThingDef ParentName="GR_Mech">
     <defName>GR_Mech_CA</defName>
     <label>驱动妖精</label>
     <description>驱动级是擅长中距离作战的中型机械体。外表处于还未舍弃少女的青涩，身体却又大幅成长的阶段，流露出一种生人勿进的纯洁感。也正如同其外表，不但火力比起之前上升了不少，速度也没有下降很多，想必接近她是件困难的事。就开火频率来说，如果不是战争机器的话，应该会是一位受欢迎的勤勉之人吧。</description>
     <statBases>
+      <Mass>90</Mass>
       <MoveSpeed>7</MoveSpeed>
       <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
       <BandwidthCost>4</BandwidthCost>
-      <WastepacksPerRecharge>0</WastepacksPerRecharge>
-      <MechEnergyLossPerHP>0</MechEnergyLossPerHP>
-      <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
-      <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
     </statBases>
     <race>
-      <body>GR_MechBody</body>
       <baseBodySize>4</baseBodySize>
       <baseHealthScale>6</baseHealthScale>
-      <intelligence>ToolUser</intelligence>
-      <thinkTreeMain>GR_Mechanoid</thinkTreeMain>
       <mechWeightClass>Medium</mechWeightClass>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
-          <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
-          <soundCall>Pawn_Mech_Militor_Call</soundCall>
-        </li>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>100</minAge>
-          <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
-          <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
-          <soundCall>Pawn_Mech_Militor_Call</soundCall>
-        </li>
-      </lifeStageAges>
     </race>
     <butcherProducts>
       <GR_Nanites>400</GR_Nanites>
       <GR_Alloy>80</GR_Alloy>
     </butcherProducts>
-    <inspectorTabs>
-      <li>SD.GrayRace.ITabs.ITab_GrayMechLoadout</li>
-    </inspectorTabs>
     <comps>
-      <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechLoadout" />
       <li Class="CompProperties_Shield">
         <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
         <blocksRangedWeapons>false</blocksRangedWeapons>
-      </li>
-      <li Class="SD.GrayRace.Comps.CompPropertiesMultiTurretGun">
+        <minDrawSize>3.5</minDrawSize>
+        <maxDrawSize>3.5</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
       </li>
     </comps>
   </ThingDef>
@@ -72,7 +47,7 @@
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1</drawSize>
+          <drawSize>2.5</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -85,7 +60,7 @@
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1</drawSize>
+          <drawSize>2.5</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.25)</offset>

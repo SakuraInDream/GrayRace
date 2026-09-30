@@ -1,4 +1,597 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterBase" Abstract="True">
+    <compatibleSlots>
+      <li>GR_MechSlot_Thruster</li>
+    </compatibleSlots>
+    <anchorBodyPart>MechanicalFoot</anchorBodyPart>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Chemical" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
+    <label>化学推进器</label>
+    <description>简单而有效的化学助推器依靠可燃物推动机械体。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_1</iconPath>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <researchUnlockGroup>GR_Thruster_Chemical</researchUnlockGroup>
+    <uiOrder>4010</uiOrder>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Ion" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
+    <label>离子推进器</label>
+    <description>此种电推进器的推力来源于离子束，而非传统工质。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_2</iconPath>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <researchUnlockGroup>GR_Thruster_Ion</researchUnlockGroup>
+    <uiOrder>4020</uiOrder>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Plasma" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
+    <label>等离子推进器</label>
+    <description>等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_3</iconPath>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <researchUnlockGroup>GR_Thruster_Plasma</researchUnlockGroup>
+    <uiOrder>4030</uiOrder>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Impulse" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
+    <label>脉冲推进器</label>
+    <description>在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_4</iconPath>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <researchUnlockGroup>GR_Thruster_Impulse</researchUnlockGroup>
+    <uiOrder>4040</uiOrder>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_DarkMatter" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
+    <label>暗物质推进器</label>
+    <description>这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_5</iconPath>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <researchUnlockGroup>GR_Thruster_DarkMatter</researchUnlockGroup>
+    <uiOrder>4050</uiOrder>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <!-- Chemical -->
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Chemical">
+    <defName>GR_MechModule_Thruster_Chemical_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>-10</power>
+    <costList>
+      <GR_Alloy>3</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Ion_Corvette</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MeleeDodgeChance>1.5</MeleeDodgeChance>
+    </statFactors>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Chemical">
+    <defName>GR_MechModule_Thruster_Chemical_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>-20</power>
+    <costList>
+      <GR_Alloy>6</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Ion_Destroyer</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MeleeDodgeChance>1.4</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Chemical">
+    <defName>GR_MechModule_Thruster_Chemical_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>-40</power>
+    <costList>
+      <GR_Alloy>12</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Ion_Cruiser</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MeleeDodgeChance>1.3</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Chemical">
+    <defName>GR_MechModule_Thruster_Chemical_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>-80</power>
+    <costList>
+      <GR_Alloy>24</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Ion_Battleship</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MeleeDodgeChance>1.2</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Chemical">
+    <defName>GR_MechModule_Thruster_Chemical_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>-160</power>
+    <costList>
+      <GR_Alloy>48</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Ion_Titan</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MeleeDodgeChance>1.1</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Chemical">
+    <defName>GR_MechModule_Thruster_Chemical_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>-200</power>
+    <costList>
+      <GR_Alloy>60</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Ion_Juggernaut</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <!-- Ion -->
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Ion">
+    <defName>GR_MechModule_Thruster_Ion_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>-15</power>
+    <costList>
+      <GR_Alloy>6</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Plasma_Corvette</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.5</MoveSpeed>
+      <MeleeDodgeChance>2.0</MeleeDodgeChance>
+    </statFactors>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Ion">
+    <defName>GR_MechModule_Thruster_Ion_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>-30</power>
+    <costList>
+      <GR_Alloy>12</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Plasma_Destroyer</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.5</MoveSpeed>
+      <MeleeDodgeChance>1.8</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Ion">
+    <defName>GR_MechModule_Thruster_Ion_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>-60</power>
+    <costList>
+      <GR_Alloy>24</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Plasma_Cruiser</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.5</MoveSpeed>
+      <MeleeDodgeChance>1.6</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Ion">
+    <defName>GR_MechModule_Thruster_Ion_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>-120</power>
+    <costList>
+      <GR_Alloy>48</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Plasma_Battleship</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.5</MoveSpeed>
+      <MeleeDodgeChance>1.4</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Ion">
+    <defName>GR_MechModule_Thruster_Ion_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>-240</power>
+    <costList>
+      <GR_Alloy>96</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Plasma_Titan</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.5</MoveSpeed>
+      <MeleeDodgeChance>1.2</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Ion">
+    <defName>GR_MechModule_Thruster_Ion_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>-300</power>
+    <costList>
+      <GR_Alloy>120</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Plasma_Juggernaut</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.5</MoveSpeed>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <!-- Plasma -->
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Plasma">
+    <defName>GR_MechModule_Thruster_Plasma_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>-20</power>
+    <costList>
+      <GR_Alloy>9</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Impulse_Corvette</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.75</MoveSpeed>
+      <MeleeDodgeChance>2.5</MeleeDodgeChance>
+    </statFactors>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Plasma">
+    <defName>GR_MechModule_Thruster_Plasma_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>-40</power>
+    <costList>
+      <GR_Alloy>18</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Impulse_Destroyer</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.75</MoveSpeed>
+      <MeleeDodgeChance>2.2</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Plasma">
+    <defName>GR_MechModule_Thruster_Plasma_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>-80</power>
+    <costList>
+      <GR_Alloy>36</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Impulse_Cruiser</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.75</MoveSpeed>
+      <MeleeDodgeChance>1.9</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Plasma">
+    <defName>GR_MechModule_Thruster_Plasma_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>-160</power>
+    <costList>
+      <GR_Alloy>72</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Impulse_Battleship</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.75</MoveSpeed>
+      <MeleeDodgeChance>1.6</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Plasma">
+    <defName>GR_MechModule_Thruster_Plasma_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>-320</power>
+    <costList>
+      <GR_Alloy>144</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Impulse_Titan</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.75</MoveSpeed>
+      <MeleeDodgeChance>1.3</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Plasma">
+    <defName>GR_MechModule_Thruster_Plasma_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>-400</power>
+    <costList>
+      <GR_Alloy>180</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_Impulse_Juggernaut</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>1.75</MoveSpeed>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <!-- Impulse -->
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Impulse">
+    <defName>GR_MechModule_Thruster_Impulse_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>-25</power>
+    <costList>
+      <GR_Alloy>12</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_DarkMatter_Corvette</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>2.25</MoveSpeed>
+      <MeleeDodgeChance>3.0</MeleeDodgeChance>
+    </statFactors>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Impulse">
+    <defName>GR_MechModule_Thruster_Impulse_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>-50</power>
+    <costList>
+      <GR_Alloy>24</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_DarkMatter_Destroyer</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>2.25</MoveSpeed>
+      <MeleeDodgeChance>2.6</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Impulse">
+    <defName>GR_MechModule_Thruster_Impulse_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>-100</power>
+    <costList>
+      <GR_Alloy>48</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_DarkMatter_Cruiser</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>2.25</MoveSpeed>
+      <MeleeDodgeChance>2.2</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Impulse">
+    <defName>GR_MechModule_Thruster_Impulse_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>-200</power>
+    <costList>
+      <GR_Alloy>96</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_DarkMatter_Battleship</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>2.25</MoveSpeed>
+      <MeleeDodgeChance>1.8</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Impulse">
+    <defName>GR_MechModule_Thruster_Impulse_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>-400</power>
+    <costList>
+      <GR_Alloy>192</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_DarkMatter_Titan</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>2.25</MoveSpeed>
+      <MeleeDodgeChance>1.4</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_Impulse">
+    <defName>GR_MechModule_Thruster_Impulse_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>-500</power>
+    <costList>
+      <GR_Alloy>240</GR_Alloy>
+    </costList>
+    <upgradesTo>
+      <li>GR_MechModule_Thruster_DarkMatter_Juggernaut</li>
+    </upgradesTo>
+    <statFactors>
+      <MoveSpeed>2.25</MoveSpeed>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <!-- Dark matter -->
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_DarkMatter">
+    <defName>GR_MechModule_Thruster_DarkMatter_Corvette</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Corvette</li>
+    </allowedChassis>
+    <power>-30</power>
+    <costList>
+      <GR_Alloy>15</GR_Alloy>
+    </costList>
+    <statFactors>
+      <MoveSpeed>3.0</MoveSpeed>
+      <MeleeDodgeChance>3.5</MeleeDodgeChance>
+    </statFactors>
+    <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_DarkMatter">
+    <defName>GR_MechModule_Thruster_DarkMatter_Destroyer</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Frigate</li>
+      <li>GR_Chassis_Destroyer</li>
+    </allowedChassis>
+    <power>-60</power>
+    <costList>
+      <GR_Alloy>30</GR_Alloy>
+    </costList>
+    <statFactors>
+      <MoveSpeed>3.0</MoveSpeed>
+      <MeleeDodgeChance>3.0</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_DarkMatter">
+    <defName>GR_MechModule_Thruster_DarkMatter_Cruiser</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Cruiser</li>
+    </allowedChassis>
+    <power>-120</power>
+    <costList>
+      <GR_Alloy>60</GR_Alloy>
+    </costList>
+    <statFactors>
+      <MoveSpeed>3.0</MoveSpeed>
+      <MeleeDodgeChance>2.5</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_DarkMatter">
+    <defName>GR_MechModule_Thruster_DarkMatter_Battleship</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Battleship</li>
+    </allowedChassis>
+    <power>-240</power>
+    <costList>
+      <GR_Alloy>120</GR_Alloy>
+    </costList>
+    <statFactors>
+      <MoveSpeed>3.0</MoveSpeed>
+      <MeleeDodgeChance>2.0</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_DarkMatter">
+    <defName>GR_MechModule_Thruster_DarkMatter_Titan</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Titan</li>
+    </allowedChassis>
+    <power>-480</power>
+    <costList>
+      <GR_Alloy>240</GR_Alloy>
+    </costList>
+    <statFactors>
+      <MoveSpeed>3.0</MoveSpeed>
+      <MeleeDodgeChance>1.5</MeleeDodgeChance>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
+
+  <SD.GrayRace.Defs.GRMechThrusterModuleDef ParentName="GR_MechModule_ThrusterTier_DarkMatter">
+    <defName>GR_MechModule_Thruster_DarkMatter_Juggernaut</defName>
+    <allowedChassis>
+      <li>GR_Chassis_Juggernaut</li>
+    </allowedChassis>
+    <power>-600</power>
+    <costList>
+      <GR_Alloy>300</GR_Alloy>
+    </costList>
+    <statFactors>
+      <MoveSpeed>3.0</MoveSpeed>
+    </statFactors>
+  </SD.GrayRace.Defs.GRMechThrusterModuleDef>
 
 </Defs>

@@ -432,6 +432,7 @@
       <MeleeDodgeChance>2</MeleeDodgeChance>      <!--近战闪避几率-->
       <MeleeHitChance>2</MeleeHitChance>      <!--近战命中率-->
       <AimingDelayFactor>0.8</AimingDelayFactor>      <!--瞄准时间-->
+      <RangedCooldownFactor>0.8</RangedCooldownFactor>      <!--射击冷却时间-->
       <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>      <!--射击精准度-->
       <IncomingDamageFactor>2</IncomingDamageFactor>      <!--承伤系数-->
       <!--社交-->

@@ -29,7 +29,7 @@
     <description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</description>
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
-    <fixedWorkTicks>6000</fixedWorkTicks>
+    <fixedWorkTicks>20000</fixedWorkTicks>
     <uiOrder>0</uiOrder>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
@@ -41,33 +41,13 @@
   </SD.GrayRace.Defs.GRMechChassisDef>
 
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
-    <defName>GR_Chassis_Battleship</defName>
-    <label>战列舰</label>
-    <description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</description>
-    <!-- 这两个绑定对应的机械体 -->
-    <pawnKindDef>GR_Mech_FF</pawnKindDef>
-    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
-    <fixedWorkTicks>60000</fixedWorkTicks>
-    <uiOrder>4</uiOrder>
-    <researchPrerequisites>
-      <li>GR_T4MechTech</li>
-    </researchPrerequisites>
-    <sectionSlots>
-      <!-- 支持哪些区段（GRMechSectionSlotDef） -->
-      <li>GR_MechSection_Bow</li>
-      <li>GR_MechSection_Mid</li>
-      <li>GR_MechSection_Stern</li>
-    </sectionSlots>
-  </SD.GrayRace.Defs.GRMechChassisDef>
-
-  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Frigate</defName>
     <label>雷击舰</label>
     <description>雷击舰是护卫舰的一种先进衍生型号，专职发射鱼雷。他们更慢更脆弱，但可以对大型目标造成毁灭性的打击。</description>
     <!-- TODO -->
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
-    <fixedWorkTicks>6000</fixedWorkTicks>
+    <fixedWorkTicks>30000</fixedWorkTicks>
     <uiOrder>1</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -84,7 +64,7 @@
     <!-- TODO -->
     <pawnKindDef>GR_Mech_DD</pawnKindDef>
     <designerPreviewPath>Race/Mech/DD_south</designerPreviewPath>
-    <fixedWorkTicks>6000</fixedWorkTicks>
+    <fixedWorkTicks>40000</fixedWorkTicks>
     <uiOrder>2</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -102,7 +82,7 @@
     <!-- TODO -->
     <pawnKindDef>GR_Mech_CA</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
-    <fixedWorkTicks>6000</fixedWorkTicks>
+    <fixedWorkTicks>80000</fixedWorkTicks>
     <uiOrder>3</uiOrder>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
@@ -115,13 +95,33 @@
   </SD.GrayRace.Defs.GRMechChassisDef>
 
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
+    <defName>GR_Chassis_Battleship</defName>
+    <label>战列舰</label>
+    <description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</description>
+    <!-- 这两个绑定对应的机械体 -->
+    <pawnKindDef>GR_Mech_BB</pawnKindDef>
+    <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
+    <fixedWorkTicks>160000</fixedWorkTicks>
+    <uiOrder>4</uiOrder>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <sectionSlots>
+      <!-- 支持哪些区段（GRMechSectionSlotDef） -->
+      <li>GR_MechSection_Bow</li>
+      <li>GR_MechSection_Mid</li>
+      <li>GR_MechSection_Stern</li>
+    </sectionSlots>
+  </SD.GrayRace.Defs.GRMechChassisDef>
+
+  <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Titan</defName>
     <label>泰坦</label>
     <description>这些巨型战舰是整个舰队的骄傲，泰坦上携带有多种武器，一般作为旗舰使用。</description>
     <!-- TODO -->
-    <pawnKindDef>GR_Mech_FF</pawnKindDef>
-    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
-    <fixedWorkTicks>6000</fixedWorkTicks>
+    <pawnKindDef>GR_Mech_TT</pawnKindDef>
+    <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
+    <fixedWorkTicks>320000</fixedWorkTicks>
     <uiOrder>5</uiOrder>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
@@ -138,9 +138,9 @@
     <label>主宰</label>
     <description>这些巨型构造物既是舰船也是空间站。主宰是一种庞大的可移动空间站，可以维修和建造舰船，也就是说，它可以作为进攻性战役中行动时的前进基地使用。</description>
     <!-- TODO -->
-    <pawnKindDef>GR_Mech_FF</pawnKindDef>
-    <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
-    <fixedWorkTicks>6000</fixedWorkTicks>
+    <pawnKindDef>GR_Mech_JG</pawnKindDef>
+    <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
+    <fixedWorkTicks>640000</fixedWorkTicks>
     <uiOrder>6</uiOrder>
     <researchPrerequisites>
       <li>GR_T6MechTech</li>

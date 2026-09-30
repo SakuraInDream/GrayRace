@@ -596,7 +596,7 @@
         <verbClass>SD.GrayRace.Verbs.Verb_GrayTitanLance</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <warmupTime>8</warmupTime>
-        <minRange>15</minRange>
+        <minRange>5</minRange>
         <range>70</range>
         <burstShotCount>24</burstShotCount>
         <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
@@ -609,7 +609,7 @@
     </verbs>
     <modExtensions>
       <li Class="SD.GrayRace.Verbs.TitanLanceExtension">
-        <minPulseDamage>20</minPulseDamage>
+        <minPulseDamage>400</minPulseDamage>
         <maxPulseDamage>2000</maxPulseDamage>
         <armorPenetration>1</armorPenetration>
         <damageRampCurve>
@@ -620,7 +620,7 @@
         </damageRampCurve>
         <distanceDamageFactorCurve>
           <points>
-            <li>(15, 1)</li>
+            <li>(5, 1)</li>
             <li>(30, 1)</li>
             <li>(70, 0.25)</li>
           </points>

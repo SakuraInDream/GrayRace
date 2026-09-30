@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- 护盾电容 -->
-  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Base">
+  <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_ShieldBooster</defName>
     <label>护盾电容</label>
     <description>储能电容器可用于增强舰船护盾。</description>
@@ -10,11 +10,82 @@
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>
     <researchPrerequisites>
-      <li>GR_T1MechTech</li>
+      <li>GR_T2MechTech</li>
     </researchPrerequisites>
+     <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <power>-20</power>
     <statFactors>
       <EnergyShieldEnergyMax>1.1</EnergyShieldEnergyMax>
     </statFactors>
     <uiOrder>0</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 先进护盾电容 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_ShieldBooster_Advanced</defName>
+    <label>先进护盾电容</label>
+    <description>先进储能电容器可用于大幅增强舰船护盾。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>25</GR_Alloy>
+    </costList>
+    <power>-50</power>
+    <statFactors>
+      <EnergyShieldEnergyMax>1.25</EnergyShieldEnergyMax>
+    </statFactors>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 护盾硬化器 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_ShieldHardener</defName>
+    <label>护盾硬化器</label>
+    <description>护盾硬化器可用于增强舰船护盾的防护能力。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+    </costList>
+    <power>-15</power>
+    <statFactors>
+      <EnergyShieldRechargeRate>1.15</EnergyShieldRechargeRate>
+    </statFactors>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 先进护盾硬化器 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_ShieldHardener_Advanced</defName>
+    <label>先进护盾硬化器</label>
+    <description>先进护盾硬化器可用于增强舰船护盾的防护能力。</description>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>30</GR_Alloy>
+    </costList>
+    <power>-25</power>
+    <statFactors>
+      <EnergyShieldRechargeRate>1.25</EnergyShieldRechargeRate>
+    </statFactors>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
 </Defs>

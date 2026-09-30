@@ -17,7 +17,7 @@
 
   <BodyPartDef>
     <defName>GR_ArmoredBelt</defName>
-    <label>thorax</label>
+    <label>Armored Belt</label>
     <hitPoints>40</hitPoints>
     <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
     <skinCovered>false</skinCovered>
@@ -28,7 +28,7 @@
 
   <BodyPartDef>
     <defName>GR_AntiTorpedoBulge</defName>
-    <label>thorax</label>
+    <label>Anti-torpedo Bulge</label>
     <hitPoints>40</hitPoints>
     <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
     <skinCovered>false</skinCovered>

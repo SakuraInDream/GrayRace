@@ -316,7 +316,7 @@
       <li>GR_T5MechTech</li>
     </researchPrerequisites>
     <costList>
-      <GR_Alloy>1000</GR_Alloy>
+      <GR_Alloy>2000</GR_Alloy>
     </costList>
     <power>-900</power>
     <equipmentDef>GR_MechWeapon_TitanLance</equipmentDef>

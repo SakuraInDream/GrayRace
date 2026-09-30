@@ -71,7 +71,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <GR_Nanites>125</GR_Nanites>
+      <GR_Nanites>200</GR_Nanites>
     </products>
     <workSkill>Crafting</workSkill>
     <displayPriority>2</displayPriority>
@@ -336,12 +336,21 @@
         </filter>
         <count>50</count>
       </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>50</count>
+      </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>Plasteel</li>
         <li>Steel</li>
         <li>Uranium</li>
+        <li>GR_Nanites</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -366,7 +375,7 @@
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <researchPrerequisite>GR_AlloyProcessOptimization</researchPrerequisite>
     <recipeUsers>
-      <li>GR_NaniteReconfigurator</li>
+      <li>FabricationBench</li>
     </recipeUsers>
     <ingredients>
       <li>
@@ -393,12 +402,21 @@
         </filter>
         <count>125</count>
       </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>125</count>
+      </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>Plasteel</li>
         <li>Steel</li>
         <li>Uranium</li>
+        <li>GR_Nanites</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -423,7 +441,7 @@
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <researchPrerequisite>GR_NaniteTransmuter</researchPrerequisite>
     <recipeUsers>
-      <li>GR_NaniteTransmuter</li>
+      <li>GR_NaniteReconfigurator</li>
     </recipeUsers>
     <ingredients>
       <li>
@@ -450,12 +468,21 @@
         </filter>
         <count>250</count>
       </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>250</count>
+      </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>Plasteel</li>
         <li>Steel</li>
         <li>Uranium</li>
+        <li>GR_Nanites</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>

@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- 驱逐舰 -->
+  <!-- 泰坦 -->
   <ThingDef ParentName="GR_Mech">
-    <defName>GR_Mech_DD</defName>
-    <label>强袭精灵</label>
-    <description>强袭级是以擅长作为前锋突进作战为傲的中型机械体，以抵近射击为作战方针。虽相比于护卫舰，外观上没有太大差异，但其火力、装甲以及本质都获得了成长。像是进入青春期般，身上那些未熟的性征开始逐渐发育，表现出未来的可能性。作为战争机器——那正趋于成熟的美丽，与这份美丽截然相反的作战方式，让敌人和伙伴在面对她时，比起对美丽的惊艳，更多的是一份畏惧。</description>
+    <defName>GR_Mech_TT</defName>
+    <label>神域御侍</label>
+    <description>神域御侍是一类擅长超远距离作战的超重型机械体，拥有极其厚重的装甲与坚不可摧的护盾，也因此牺牲了大量航速。火力方面则换来了无可比拟的提升，T级主炮拥有极大的威力与极远的射程，更多更大的副炮也使其能够有效保护自己免受近距离的威胁。还可以搭载战术光环以增强友方或压制敌方。</description>
     <statBases>
-      <Mass>60</Mass>
-      <MoveSpeed>9</MoveSpeed>
-      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-      <BandwidthCost>2</BandwidthCost>
+      <Mass>202.5</Mass>
+      <MoveSpeed>5</MoveSpeed>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <BandwidthCost>16</BandwidthCost>
     </statBases>
     <race>
-      <baseBodySize>2</baseBodySize>
-      <baseHealthScale>3</baseHealthScale>
-      <mechWeightClass>Medium</mechWeightClass>
+      <baseBodySize>16</baseBodySize>
+      <baseHealthScale>24</baseHealthScale>
+      <mechWeightClass>UltraHeavy</mechWeightClass>
     </race>
     <butcherProducts>
-      <GR_Nanites>200</GR_Nanites>
-      <GR_Alloy>40</GR_Alloy>
+      <GR_Nanites>1600</GR_Nanites>
+      <GR_Alloy>320</GR_Alloy>
     </butcherProducts>
     <comps>
       <li Class="CompProperties_Shield">
         <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
         <blocksRangedWeapons>false</blocksRangedWeapons>
-        <minDrawSize>2</minDrawSize>
-        <maxDrawSize>2</maxDrawSize>
+        <minDrawSize>8</minDrawSize>
+        <maxDrawSize>8</maxDrawSize>
         <energyLossPerDamage>0.01</energyLossPerDamage>
       </li>
     </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>GR_Mech_DD</defName>
-    <label>强袭精灵</label>
-    <race>GR_Mech_DD</race>
-    <combatPower>200</combatPower>
-    <maxPerGroup>20</maxPerGroup>
+    <defName>GR_Mech_TT</defName>
+    <label>神域御侍</label>
+    <race>GR_Mech_TT</race>
+    <combatPower>1600</combatPower>
+    <maxPerGroup>2</maxPerGroup>
     <allowInMechClusters>true</allowInMechClusters>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Race/Mech/DD</texPath>
+          <texPath>Race/Mech/CA</texPath>
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.7</drawSize>
+          <drawSize>4.5</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -56,11 +56,11 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Race/Mech/DD</texPath>
+          <texPath>Race/Mech/CA</texPath>
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.7</drawSize>
+          <drawSize>4.5</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.25)</offset>

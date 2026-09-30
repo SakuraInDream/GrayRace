@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- 驱逐舰 -->
+  <!-- 战列舰 -->
   <ThingDef ParentName="GR_Mech">
-    <defName>GR_Mech_DD</defName>
-    <label>强袭精灵</label>
-    <description>强袭级是以擅长作为前锋突进作战为傲的中型机械体，以抵近射击为作战方针。虽相比于护卫舰，外观上没有太大差异，但其火力、装甲以及本质都获得了成长。像是进入青春期般，身上那些未熟的性征开始逐渐发育，表现出未来的可能性。作为战争机器——那正趋于成熟的美丽，与这份美丽截然相反的作战方式，让敌人和伙伴在面对她时，比起对美丽的惊艳，更多的是一份畏惧。</description>
+    <defName>GR_Mech_BB</defName>
+    <label>裁决栖姬</label>
+    <description>裁决型是擅长远距离作战的重型机械体。……光看外表的话，就能确认这个机体已经充分成长了。青涩的特征已遍觅难寻，完全蜕变成了褪却青涩的身形。火力、装甲以及护盾已经完全成熟的水平，配装的可能性也被一口气打开。只要数量堆积上去的话，什么问题都会迎难而解吧。</description>
     <statBases>
-      <Mass>60</Mass>
-      <MoveSpeed>9</MoveSpeed>
-      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-      <BandwidthCost>2</BandwidthCost>
+      <Mass>135</Mass>
+      <MoveSpeed>6</MoveSpeed>
+      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+      <BandwidthCost>8</BandwidthCost>
     </statBases>
     <race>
-      <baseBodySize>2</baseBodySize>
-      <baseHealthScale>3</baseHealthScale>
-      <mechWeightClass>Medium</mechWeightClass>
+      <baseBodySize>8</baseBodySize>
+      <baseHealthScale>12</baseHealthScale>
+      <mechWeightClass>Heavy</mechWeightClass>
     </race>
     <butcherProducts>
-      <GR_Nanites>200</GR_Nanites>
-      <GR_Alloy>40</GR_Alloy>
+      <GR_Nanites>800</GR_Nanites>
+      <GR_Alloy>160</GR_Alloy>
     </butcherProducts>
     <comps>
       <li Class="CompProperties_Shield">
         <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
         <blocksRangedWeapons>false</blocksRangedWeapons>
-        <minDrawSize>2</minDrawSize>
-        <maxDrawSize>2</maxDrawSize>
+        <minDrawSize>4</minDrawSize>
+        <maxDrawSize>4</maxDrawSize>
         <energyLossPerDamage>0.01</energyLossPerDamage>
       </li>
     </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="LightMechanoidKind">
-    <defName>GR_Mech_DD</defName>
-    <label>强袭精灵</label>
-    <race>GR_Mech_DD</race>
-    <combatPower>200</combatPower>
-    <maxPerGroup>20</maxPerGroup>
+    <defName>GR_Mech_BB</defName>
+    <label>裁决栖姬</label>
+    <race>GR_Mech_BB</race>
+    <combatPower>800</combatPower>
+    <maxPerGroup>5</maxPerGroup>
     <allowInMechClusters>true</allowInMechClusters>
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Race/Mech/DD</texPath>
+          <texPath>Race/Mech/CA</texPath>
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.7</drawSize>
+          <drawSize>3</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.25)</offset>
@@ -56,11 +56,11 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Race/Mech/DD</texPath>
+          <texPath>Race/Mech/CA</texPath>
           <maskPath>blank</maskPath>
           <shaderType>CutoutWithOverlay</shaderType>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.7</drawSize>
+          <drawSize>3</drawSize>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.25)</offset>
