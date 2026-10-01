@@ -49,9 +49,6 @@
         </makeImmuneTo>
         <naturalHealingFactor>0</naturalHealingFactor>
         <minSeverity>0</minSeverity>
-        <disablesNeeds>
-          <li>Food</li>
-        </disablesNeeds>
       </li>
     </stages>
   </HediffDef>

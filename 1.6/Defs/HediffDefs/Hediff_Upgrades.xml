@@ -62,7 +62,6 @@
         <statOffsets>
           <ResearchSpeed>0.5</ResearchSpeed>
           <GlobalLearningFactor>0.3</GlobalLearningFactor>
-          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
         </statOffsets>
       </li>
     </stages>

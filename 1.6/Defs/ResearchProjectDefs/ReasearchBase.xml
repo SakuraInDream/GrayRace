@@ -110,7 +110,6 @@
     <label>Gray Basic Clothing</label>
     <description>Unlock Gray's basic clothing</description>
     <baseCost>500</baseCost>
-    <requiredResearchBuilding>SimpleResearchBench</requiredResearchBuilding>
     <prerequisites>
       <li>ComplexClothing</li>
     </prerequisites>
@@ -256,7 +255,6 @@
     <label>Decorative Clothing</label>
     <description>Unlock decorative clothing, which can enhance the appearance of characters.</description>
     <baseCost>1000</baseCost>
-    <requiredResearchBuilding>SimpleResearchBench</requiredResearchBuilding>
     <prerequisites>
       <li>ComplexClothing</li>
     </prerequisites>

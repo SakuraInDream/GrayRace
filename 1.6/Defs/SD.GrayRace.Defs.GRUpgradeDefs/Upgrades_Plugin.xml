@@ -6,33 +6,23 @@
     <defName>GR_Plugin_Brain_CombatChip</defName>
     <label>战斗芯片</label>
     <description>植入人格核心的高级战斗芯片，提升战斗效率和反应速度。</description>
-
     <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
-
-    <!-- 施加的身体部位 -->
-    <targetBodyPart>Nano_Brain</targetBodyPart>
-
-    <!-- 要上的 Hediff-->
-    <hediffToApply>GR_Hediff_CombatChip</hediffToApply>
-
-    <!-- 科技前置 -->
-    <researchPrerequisites>
+    <targetBodyPart>Nano_Brain</targetBodyPart>     <!-- 施加的身体部位 -->
+    <hediffToApply>GR_Hediff_CombatChip</hediffToApply>     <!-- 对应的的 Hediff-->
+    <exclusionTags>
+      <li>WorkChip</li>
+    </exclusionTags>
+    <researchPrerequisites>     <!-- 科技前置 -->
       <li>MicroelectronicsBasics</li>
     </researchPrerequisites>
-
-    <!-- 需要材料则为插件类型 -->
-    <requiredMaterials>
+    <requiredMaterials>         <!-- 需要材料 -->
       <ComponentIndustrial>5</ComponentIndustrial>
       <Plasteel>20</Plasteel>
     </requiredMaterials>
-
     <workAmount>2000</workAmount>
-    <!-- 需要技能 -->
-    <requiredSkill>Crafting</requiredSkill>
-    <!-- 需要技能等级 -->
-    <minSkillLevel>8</minSkillLevel>
-
+    <requiredSkill>Crafting</requiredSkill>       <!-- 需要技能 -->
+    <minSkillLevel>8</minSkillLevel>        <!-- 需要技能等级 -->
     <uiOrder>10</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
@@ -42,9 +32,11 @@
     <description>植入人格核心的超级分析芯片，提升研究速度和学习能力。</description>
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_AnalysisChip</hediffToApply>
+    <exclusionTags>
+      <li>WorkChip</li>
+    </exclusionTags>
     <researchPrerequisites>
-      <!-- T1 机械科技 -->
-      <li>GR_T1MechTech</li>
+      <li>MicroelectronicsBasics</li>
     </researchPrerequisites>
     <requiredMaterials>
       <ComponentIndustrial>8</ComponentIndustrial>
@@ -63,7 +55,6 @@
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>MechlinkImplant</hediffToApply>
     <researchPrerequisites>
-      <!-- T1 机械科技 -->
       <li>Electricity</li>
     </researchPrerequisites>
     <requiredMaterials>

@@ -16,8 +16,8 @@
       <li>ShortShots</li>
       <li>RangedHeavy</li>
     </weaponClasses>
-    <recipeMaker Inherit="False">
-      <recipeUsers>
+    <recipeMaker>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <researchPrerequisites>
@@ -122,12 +122,12 @@
     <weaponClasses>
       <li>ShortShots</li>
     </weaponClasses>
-    <recipeMaker Inherit="False">
+    <recipeMaker>
       <researchPrerequisites>
         <li>GR_Railgun</li>
         <li>GR_T1WeaponTech</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -220,7 +220,7 @@
     </graphicData>
     <equippedAngleOffset>45</equippedAngleOffset>
     <soundInteract>Interact_Rifle</soundInteract>
-    <recipeMaker Inherit="False">
+    <recipeMaker>
       <researchPrerequisites>
         <li>GR_Railgun</li>
         <li>GR_T1WeaponTech</li>
@@ -228,7 +228,7 @@
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
     </recipeMaker>
@@ -346,7 +346,7 @@
       <GR_Alloy>160</GR_Alloy>
       <GR_Nanites>100</GR_Nanites>
     </costList>
-    <recipeMaker Inherit="False">
+    <recipeMaker>
       <researchPrerequisites>
         <li>GR_Railgun</li>
         <li>GR_T2WeaponTech</li>
@@ -354,7 +354,7 @@
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
     </recipeMaker>
@@ -422,7 +422,7 @@
       <li>LongShots</li>
       <li>RangedHeavy</li>
     </weaponClasses>
-    <recipeMaker Inherit="False">
+    <recipeMaker>
       <researchPrerequisites>
         <li>GR_Railgun</li>
         <li>GR_T2WeaponTech</li>
@@ -430,7 +430,7 @@
       <skillRequirements>
         <Crafting>12</Crafting>
       </skillRequirements>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
     </recipeMaker>
@@ -548,7 +548,7 @@
       <GR_Alloy>240</GR_Alloy>
       <GR_Nanites>200</GR_Nanites>
     </costList>
-    <recipeMaker Inherit="False">
+    <recipeMaker>
       <researchPrerequisites>
         <li>GR_Railgun</li>
         <li>GR_T3WeaponTech</li>
@@ -556,7 +556,7 @@
       <skillRequirements>
         <Crafting>14</Crafting>
       </skillRequirements>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
     </recipeMaker>

@@ -15,7 +15,6 @@
     <initialResistanceRange>10~30</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
-        <GR_Xeno_Worker MayRequire="Ludeon.RimWorld.Biotech">1</GR_Xeno_Worker>
         <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0</Baseliner>
         <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
         <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
@@ -40,6 +39,28 @@
         <severity>1</severity>
       </li>
     </startingHediffs>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.PawnKindPassionExtension">
+        <skills>
+          <li>
+            <skill>Mining</skill>
+            <passion>Major</passion>
+          </li>
+          <li>
+            <skill>Construction</skill>
+            <passion>Major</passion>
+          </li>
+          <li>
+            <skill>Crafting</skill>
+            <passion>Minor</passion>
+          </li>
+          <li>
+            <skill>Intellectual</skill>
+            <passion>Minor</passion>
+          </li>
+        </skills>
+      </li>
+    </modExtensions>
   </PawnKindDef>
 
 </Defs>

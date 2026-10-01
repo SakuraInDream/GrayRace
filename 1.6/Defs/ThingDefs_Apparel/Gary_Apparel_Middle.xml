@@ -590,6 +590,7 @@
       <wornGraphicPath>Apparel/OL/Gray_OL</wornGraphicPath>
       <layers>
         <li>Middle</li>
+        <li>Shell</li>
       </layers>
       <tags>
         <li>GR_Daily</li>
@@ -735,6 +736,70 @@
     </apparel>
   </ThingDef>
 
+  <!--毛衣-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Gray_Apparel_Sweater</defName>
+    <description>.</description>
+    <label>Gray Sweater</label>
+    <graphicData>
+      <texPath>Apparel/Sweater/Gray_Sweater</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <thingCategories>
+      <li>GR_Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_BasicClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>1</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Feet</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Sweater/Gray_Sweater</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>GR_Daily</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+  </ThingDef>
+
   <!--婚纱-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_WeddingDress</defName>
@@ -794,9 +859,6 @@
       <layers>
         <li>Middle</li>
       </layers>
-      <tags>
-        <li>GR_Daily</li>
-      </tags>
       <defaultOutfitTags>
         <li>Worker</li>
       </defaultOutfitTags>

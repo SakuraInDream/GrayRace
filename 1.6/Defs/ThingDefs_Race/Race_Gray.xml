@@ -18,6 +18,13 @@
       <!-- 超频/升级面板 -->
       <li>SD.GrayRace.ITabs.ITab_GrayRaceUpgrade</li>
     </inspectorTabs>
+    <modExtensions>
+      <li Class="SD.GrayRace.HarmonyPatches.DisableNeeds">
+        <disabledNeeds>
+          <li>Food</li>
+        </disabledNeeds>
+      </li>
+    </modExtensions>
   </ThingDef>
 
   <AlienRace.ThingDef_AlienRace ParentName="Gray_PawnBase">
@@ -367,6 +374,7 @@
       <raceRestriction>
         <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>        <!-- 只使用种族限制服装 -->
         <apparelList>
+          <!-- 护甲 -->
           <li>Gray_Apparel_MechanitorHelmet</li>
           <li>Gray_Apparel_MechanitorArmor</li>
           <li>Gray_Apparel_MechanitorISA</li>
@@ -379,13 +387,50 @@
           <li>Gray_Apparel_HeavyHelmet</li>
           <li>Gray_Apparel_HeavyArmor</li>
           <li>Gray_Apparel_UniversalISA</li>
+          <!-- 常服 -->
           <li>Gray_Apparel_CrewUniformA</li>
           <li>Gray_Apparel_CrewUniformB</li>
           <li>Gray_Apparel_CrewUniformC</li>
-          <li>Gray_Apparel_NileGauze</li>
-          <li>Gray_Apparel_StrangeNurse</li>
-          <li>Gray_Apparel_BanquetDress</li>
+          <li>Gray_Apparel_Raincoat</li>
+          <li>Gray_Apparel_Qipao</li>
+          <li>Gray_Apparel_Duster</li>
+          <li>Gray_Apparel_OL</li>
+          <li>Gray_Apparel_SailorSuit</li>
+          <li>Gray_Apparel_WeddingDress</li>
+          <li>Gray_Apparel_Sweater</li>
+          <!-- 专业服装 -->
+          <li>Gray_Apparel_Envoy</li>
+          <li>Gray_Apparel_TerraMessenger</li>
+          <li>Gray_Apparel_Maid</li>
+          <li>Gray_Apparel_Workwear</li>
+          <li>Gray_Apparel_Researcher</li>
+          <!-- 时装 -->
           <li>Gray_Apparel_MikoOutfit</li>
+          <li>Gray_Apparel_BanquetDress</li>
+          <li>Gray_Apparel_StrangeNurse</li>
+          <li>Gray_Apparel_NileGauze</li>
+          <li>Gray_Apparel_Himation</li>
+          <li>Gray_Apparel_Nun</li>
+          <li>Gray_Apparel_TaoistRobe</li>
+          <li>Gray_Apparel_SensualWeddingDress</li>
+          <li>Gray_Apparel_BunnyGirl</li>
+          <li>Gray_Apparel_BunnyGirl_Reverse</li>
+          <li>Gray_Apparel_BunnyGirl_Reverse_Alter</li>
+          <li>Gray_Apparel_Swimsuit</li>
+          <li>Gray_Apparel_Bikini</li>
+          <li>Gray_Apparel_Bondage</li>
+          <li>Gray_Apparel_SekebeUnit</li>
+          <!-- 头饰 -->
+          <li>Gray_Apparel_NileGauzeVeil</li>
+          <li>Gray_Apparel_MaidBand</li>
+          <li>Gray_Apparel_BunnyGirlHeadbandA</li>
+          <li>Gray_Apparel_BunnyGirlHeadbandB</li>
+          <li>Gray_Apparel_BunnyGirlHeadbandC</li>
+          <li>Gray_Apparel_BunnyGirlHeadbandD</li>
+          <li>Gray_Apparel_Laurel</li>
+          <li>Gray_Apparel_BambooHat</li>
+          <li>Gray_Apparel_SensualBrideVeil</li>
+          <li>Gray_Apparel_BrideVeil</li>
         </apparelList>
         <whiteApparelList>
           <li>Gray_Apparel_MechanitorBelt</li>
