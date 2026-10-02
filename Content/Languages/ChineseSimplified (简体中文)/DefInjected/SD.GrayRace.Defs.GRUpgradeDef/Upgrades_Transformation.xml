@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
+  <!-- EN: 挖掘臂形态 -->
+  <GR_Transform_Hand_DrillArm.label>TODO</GR_Transform_Hand_DrillArm.label>
+  <!-- EN: 将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。 -->
+  <GR_Transform_Hand_DrillArm.description>TODO</GR_Transform_Hand_DrillArm.description>
+  
+  <!-- EN: 务农手形态 -->
+  <GR_Transform_Hand_FieldHand.label>TODO</GR_Transform_Hand_FieldHand.label>
+  <!-- EN: 将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。 -->
+  <GR_Transform_Hand_FieldHand.description>TODO</GR_Transform_Hand_FieldHand.description>
+  
+  <!-- EN: 动力爪形态 -->
+  <GR_Transform_Hand_PowerClaw.label>TODO</GR_Transform_Hand_PowerClaw.label>
+  <!-- EN: 将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。 -->
+  <GR_Transform_Hand_PowerClaw.description>TODO</GR_Transform_Hand_PowerClaw.description>
+  
   <!-- EN: 仿生臂形态 -->
   <GR_Transform_Vanilla_BionicArm.label>TODO</GR_Transform_Vanilla_BionicArm.label>
   <!-- EN: 将手臂重构为原版仿生臂。 -->
@@ -18,7 +33,7 @@
   
   <!-- EN: 仿生心脏形态 -->
   <GR_Transform_Vanilla_BionicHeart.label>TODO</GR_Transform_Vanilla_BionicHeart.label>
-  <!-- EN: 将循环核心重构为原版仿生心脏。 -->
+  <!-- EN: 将灰潮核心重构为原版仿生心脏。 -->
   <GR_Transform_Vanilla_BionicHeart.description>TODO</GR_Transform_Vanilla_BionicHeart.description>
   
   <!-- EN: 仿生下颌形态 -->
@@ -30,16 +45,6 @@
   <GR_Transform_Vanilla_BionicLeg.label>TODO</GR_Transform_Vanilla_BionicLeg.label>
   <!-- EN: 将腿部重构为原版仿生腿。 -->
   <GR_Transform_Vanilla_BionicLeg.description>TODO</GR_Transform_Vanilla_BionicLeg.description>
-  
-  <!-- EN: 仿生脊椎形态 -->
-  <GR_Transform_Vanilla_BionicSpine.label>TODO</GR_Transform_Vanilla_BionicSpine.label>
-  <!-- EN: 将脊椎重构为原版仿生脊椎。 -->
-  <GR_Transform_Vanilla_BionicSpine.description>TODO</GR_Transform_Vanilla_BionicSpine.description>
-  
-  <!-- EN: 仿生胃形态 -->
-  <GR_Transform_Vanilla_BionicStomach.label>TODO</GR_Transform_Vanilla_BionicStomach.label>
-  <!-- EN: 将代谢器官重构为原版仿生胃。 -->
-  <GR_Transform_Vanilla_BionicStomach.description>TODO</GR_Transform_Vanilla_BionicStomach.description>
   
   <!-- EN: 仿生舌形态 -->
   <GR_Transform_Vanilla_BionicTongue.label>TODO</GR_Transform_Vanilla_BionicTongue.label>

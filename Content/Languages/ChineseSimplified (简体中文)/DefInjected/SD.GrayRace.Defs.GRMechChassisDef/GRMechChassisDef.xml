@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 战列舰 -->
+  <GR_Chassis_Battleship.label>TODO</GR_Chassis_Battleship.label>
+  <!-- EN: 战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。 -->
+  <GR_Chassis_Battleship.description>TODO</GR_Chassis_Battleship.description>
+  
+  <!-- EN: 护卫舰 -->
+  <GR_Chassis_Corvette.label>TODO</GR_Chassis_Corvette.label>
+  <!-- EN: 护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。 -->
+  <GR_Chassis_Corvette.description>TODO</GR_Chassis_Corvette.description>
+  
+  <!-- EN: 巡洋舰 -->
+  <GR_Chassis_Cruiser.label>TODO</GR_Chassis_Cruiser.label>
+  <!-- EN: 巡洋舰采用三段式设计，在愿意加钱的情况下可自由进行各种追加模组改装。 -->
+  <GR_Chassis_Cruiser.description>TODO</GR_Chassis_Cruiser.description>
+  
+  <!-- EN: 驱逐舰 -->
+  <GR_Chassis_Destroyer.label>TODO</GR_Chassis_Destroyer.label>
+  <!-- EN: 采用双区段设计的驱逐舰可以提供多种多样的战略性武装。 -->
+  <GR_Chassis_Destroyer.description>TODO</GR_Chassis_Destroyer.description>
+  
+  <!-- EN: 雷击舰 -->
+  <GR_Chassis_Frigate.label>TODO</GR_Chassis_Frigate.label>
+  <!-- EN: 雷击舰是护卫舰的一种先进衍生型号，专职发射鱼雷。他们更慢更脆弱，但可以对大型目标造成毁灭性的打击。 -->
+  <GR_Chassis_Frigate.description>TODO</GR_Chassis_Frigate.description>
+  
+  <!-- EN: 主宰 -->
+  <GR_Chassis_Juggernaut.label>TODO</GR_Chassis_Juggernaut.label>
+  <!-- EN: 这些巨型构造物既是舰船也是空间站。主宰是一种庞大的可移动空间站，可以维修和建造舰船，也就是说，它可以作为进攻性战役中行动时的前进基地使用。 -->
+  <GR_Chassis_Juggernaut.description>TODO</GR_Chassis_Juggernaut.description>
+  
+  <!-- EN: 泰坦 -->
+  <GR_Chassis_Titan.label>TODO</GR_Chassis_Titan.label>
+  <!-- EN: 这些巨型战舰是整个舰队的骄傲，泰坦上携带有多种武器，一般作为旗舰使用。 -->
+  <GR_Chassis_Titan.description>TODO</GR_Chassis_Titan.description>
+  
+</LanguageData>

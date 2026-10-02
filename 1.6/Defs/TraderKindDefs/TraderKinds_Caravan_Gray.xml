@@ -39,9 +39,9 @@
         <thingDef>Chocolate</thingDef>
         <totalPriceRange>40~100</totalPriceRange>
       </li>
-      <li Class="StockGenerator_SingleDef">
+      <li MayRequire="Ludeon.RimWorld.Odyssey" Class="StockGenerator_SingleDef">
         <thingDef>GravlitePanel</thingDef>
-        <totalPriceRange>100~200</totalPriceRange>
+        <totalPriceRange>200~400</totalPriceRange>
       </li>
       <li Class="StockGenerator_Category">
         <categoryDef>ResourcesRaw</categoryDef>
@@ -138,18 +138,14 @@
         <countRange>10~20</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
-        <thingDef>GR_Zro</thingDef>
-        <countRange>100~400</countRange>
-      </li>
-      <li Class="StockGenerator_SingleDef">
         <thingDef>GR_GrayCore</thingDef>
         <countRange>-1~1</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Gravcore</thingDef>
-        <countRange>-3~1</countRange>
+        <countRange>-2~2</countRange>
       </li>
-      <li Class="StockGenerator_SingleDef">
+      <li MayRequire="Ludeon.RimWorld.Odyssey" Class="StockGenerator_SingleDef">
         <thingDef>ShuttleEngine</thingDef>
         <countRange>-3~1</countRange>
       </li>

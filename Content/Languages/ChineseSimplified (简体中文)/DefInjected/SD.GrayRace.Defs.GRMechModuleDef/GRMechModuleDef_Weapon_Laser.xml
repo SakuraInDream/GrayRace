@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 蓝色激光 -->
+  <GR_MechModule_PulseLaser_Blue.label>TODO</GR_MechModule_PulseLaser_Blue.label>
+  <!-- EN: 比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。 -->
+  <GR_MechModule_PulseLaser_Blue.description>TODO</GR_MechModule_PulseLaser_Blue.description>
+  
+  <!-- EN: 蓝色激光 -->
+  <GR_MechModule_PulseLaser_Blue_L.label>TODO</GR_MechModule_PulseLaser_Blue_L.label>
+  <!-- EN: 比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。 -->
+  <GR_MechModule_PulseLaser_Blue_L.description>TODO</GR_MechModule_PulseLaser_Blue_L.description>
+  
+  <!-- EN: 蓝色激光 -->
+  <GR_MechModule_PulseLaser_Blue_M.label>TODO</GR_MechModule_PulseLaser_Blue_M.label>
+  <!-- EN: 比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。 -->
+  <GR_MechModule_PulseLaser_Blue_M.description>TODO</GR_MechModule_PulseLaser_Blue_M.description>
+  
+  <!-- EN: 伽马激光 -->
+  <GR_MechModule_PulseLaser_Gamma.label>TODO</GR_MechModule_PulseLaser_Gamma.label>
+  <!-- EN: 伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。 -->
+  <GR_MechModule_PulseLaser_Gamma.description>TODO</GR_MechModule_PulseLaser_Gamma.description>
+  
+  <!-- EN: 伽马激光 -->
+  <GR_MechModule_PulseLaser_Gamma_L.label>TODO</GR_MechModule_PulseLaser_Gamma_L.label>
+  <!-- EN: 伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。 -->
+  <GR_MechModule_PulseLaser_Gamma_L.description>TODO</GR_MechModule_PulseLaser_Gamma_L.description>
+  
+  <!-- EN: 伽马激光 -->
+  <GR_MechModule_PulseLaser_Gamma_M.label>TODO</GR_MechModule_PulseLaser_Gamma_M.label>
+  <!-- EN: 伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。 -->
+  <GR_MechModule_PulseLaser_Gamma_M.description>TODO</GR_MechModule_PulseLaser_Gamma_M.description>
+  
+  <!-- EN: 红色激光 -->
+  <GR_MechModule_PulseLaser_Infrared.label>TODO</GR_MechModule_PulseLaser_Infrared.label>
+  <!-- EN: 激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。 -->
+  <GR_MechModule_PulseLaser_Infrared.description>TODO</GR_MechModule_PulseLaser_Infrared.description>
+  
+  <!-- EN: 红色激光 -->
+  <GR_MechModule_PulseLaser_Infrared_L.label>TODO</GR_MechModule_PulseLaser_Infrared_L.label>
+  <!-- EN: 激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。 -->
+  <GR_MechModule_PulseLaser_Infrared_L.description>TODO</GR_MechModule_PulseLaser_Infrared_L.description>
+  
+  <!-- EN: 红色激光 -->
+  <GR_MechModule_PulseLaser_Infrared_M.label>TODO</GR_MechModule_PulseLaser_Infrared_M.label>
+  <!-- EN: 激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。 -->
+  <GR_MechModule_PulseLaser_Infrared_M.description>TODO</GR_MechModule_PulseLaser_Infrared_M.description>
+  
+  <!-- EN: 紫外激光 -->
+  <GR_MechModule_PulseLaser_UV.label>TODO</GR_MechModule_PulseLaser_UV.label>
+  <!-- EN: 紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。 -->
+  <GR_MechModule_PulseLaser_UV.description>TODO</GR_MechModule_PulseLaser_UV.description>
+  
+  <!-- EN: 紫外激光 -->
+  <GR_MechModule_PulseLaser_UV_L.label>TODO</GR_MechModule_PulseLaser_UV_L.label>
+  <!-- EN: 紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。 -->
+  <GR_MechModule_PulseLaser_UV_L.description>TODO</GR_MechModule_PulseLaser_UV_L.description>
+  
+  <!-- EN: 紫外激光 -->
+  <GR_MechModule_PulseLaser_UV_M.label>TODO</GR_MechModule_PulseLaser_UV_M.label>
+  <!-- EN: 紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。 -->
+  <GR_MechModule_PulseLaser_UV_M.description>TODO</GR_MechModule_PulseLaser_UV_M.description>
+  
+  <!-- EN: X射线激光 -->
+  <GR_MechModule_PulseLaser_Xray.label>TODO</GR_MechModule_PulseLaser_Xray.label>
+  <!-- EN: 这种激光的波长较紫外线短一些，但是更具毁灭性。 -->
+  <GR_MechModule_PulseLaser_Xray.description>TODO</GR_MechModule_PulseLaser_Xray.description>
+  
+  <!-- EN: X射线激光 -->
+  <GR_MechModule_PulseLaser_Xray_L.label>TODO</GR_MechModule_PulseLaser_Xray_L.label>
+  <!-- EN: 这种激光的波长较紫外线短一些，但是更具毁灭性。 -->
+  <GR_MechModule_PulseLaser_Xray_L.description>TODO</GR_MechModule_PulseLaser_Xray_L.description>
+  
+  <!-- EN: X射线激光 -->
+  <GR_MechModule_PulseLaser_Xray_M.label>TODO</GR_MechModule_PulseLaser_Xray_M.label>
+  <!-- EN: 这种激光的波长较紫外线短一些，但是更具毁灭性。 -->
+  <GR_MechModule_PulseLaser_Xray_M.description>TODO</GR_MechModule_PulseLaser_Xray_M.description>
+  
+  <!-- EN: 炼狱射线 -->
+  <GR_MechModule_TitanLance.label>TODO</GR_MechModule_TitanLance.label>
+  <!-- EN: 一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。 -->
+  <GR_MechModule_TitanLance.description>TODO</GR_MechModule_TitanLance.description>
+  
+</LanguageData>

@@ -13,14 +13,13 @@
     <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
     <stages>
       <li>
-        <totalBleedFactor>0</totalBleedFactor>
         <minSeverity>0</minSeverity>
       </li>
     </stages>
     <comps>
       <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NanitesRegeneration">
         <naniteCostPerSeconds>10</naniteCostPerSeconds>
-        <healAmountPerSeconds>5</healAmountPerSeconds>
+        <healAmountPerSeconds>2</healAmountPerSeconds>
       </li>
     </comps>
   </HediffDef>

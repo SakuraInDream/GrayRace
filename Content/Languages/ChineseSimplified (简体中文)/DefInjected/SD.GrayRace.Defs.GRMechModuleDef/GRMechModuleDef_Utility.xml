@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 护盾电容 -->
+  <GR_MechModule_ShieldBooster.label>TODO</GR_MechModule_ShieldBooster.label>
+  <!-- EN: 储能电容器可用于增强舰船护盾。 -->
+  <GR_MechModule_ShieldBooster.description>TODO</GR_MechModule_ShieldBooster.description>
+  
+  <!-- EN: 先进护盾电容 -->
+  <GR_MechModule_ShieldBooster_Advanced.label>TODO</GR_MechModule_ShieldBooster_Advanced.label>
+  <!-- EN: 先进储能电容器可用于大幅增强舰船护盾。 -->
+  <GR_MechModule_ShieldBooster_Advanced.description>TODO</GR_MechModule_ShieldBooster_Advanced.description>
+  
+  <!-- EN: 护盾硬化器 -->
+  <GR_MechModule_ShieldHardener.label>TODO</GR_MechModule_ShieldHardener.label>
+  <!-- EN: 护盾硬化器可用于增强舰船护盾的防护能力。 -->
+  <GR_MechModule_ShieldHardener.description>TODO</GR_MechModule_ShieldHardener.description>
+  
+  <!-- EN: 先进护盾硬化器 -->
+  <GR_MechModule_ShieldHardener_Advanced.label>TODO</GR_MechModule_ShieldHardener_Advanced.label>
+  <!-- EN: 先进护盾硬化器可用于增强舰船护盾的防护能力。 -->
+  <GR_MechModule_ShieldHardener_Advanced.description>TODO</GR_MechModule_ShieldHardener_Advanced.description>
+  
+</LanguageData>

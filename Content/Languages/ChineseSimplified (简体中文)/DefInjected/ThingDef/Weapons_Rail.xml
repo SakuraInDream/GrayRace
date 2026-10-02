@@ -21,7 +21,7 @@
   
   <!-- EN: Gray Railgun Rifle -->
   <GR_RailAssaultRifle.label>灰裔磁轨步枪</GR_RailAssaultRifle.label>
-  <!-- EN: Ironcleave.Utilizing a compact mid-pressure rail and a specialized capacitor that applies a powerful EMP coating to its slugs, this rifle offers respectable armor penetration while effectively neutralizing mechanical lifeforms. As it is essentially an elongated modification of a submachine gun platform, its raw stopping power is somewhat limited, but this trade-off maximizes its weight and size advantages. -->
+  <!-- EN: Meteor.Utilizing a compact mid-pressure rail and a specialized capacitor that applies a powerful EMP coating to its slugs, this rifle offers respectable armor penetration while effectively neutralizing mechanical lifeforms. As it is essentially an elongated modification of a submachine gun platform, its raw stopping power is somewhat limited, but this trade-off maximizes its weight and size advantages. -->
   <GR_RailAssaultRifle.description>TODO</GR_RailAssaultRifle.description>
   <!-- EN: stock -->
   <GR_RailAssaultRifle.tools.stock.label>TODO</GR_RailAssaultRifle.tools.stock.label>
@@ -30,18 +30,18 @@
   <!-- EN: Gray Railgun Rifle -->
   <GR_RailAssaultRifle.verbs.Verb_Shoot.label>TODO</GR_RailAssaultRifle.verbs.Verb_Shoot.label>
   
-  <!-- EN: MASS -->
+  <!-- EN: Neutron star -->
   <GR_RailCannon.label>质量</GR_RailCannon.label>
   <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
   <GR_RailCannon.description>TODO</GR_RailCannon.description>
   <!-- EN: barrels -->
   <GR_RailCannon.tools.barrels.label>TODO</GR_RailCannon.tools.barrels.label>
-  <!-- EN: MASS -->
+  <!-- EN: Neutron star -->
   <GR_RailCannon.verbs.Verb_Shoot.label>TODO</GR_RailCannon.verbs.Verb_Shoot.label>
   
   <!-- EN: Gray Railgun Light MachineGun -->
   <GR_RailMachinegun.label>灰裔磁轨轻机枪</GR_RailMachinegun.label>
-  <!-- EN: Storm.Featuring a compact high-pressure rail and a high-capacity capacitor, this weapon unleashes a continuous, devastating stream of heavy depleted uranium armor-piercing rounds at a cyclic rate of fire. It creates a suppressive impact zone akin to a storm of steel and lead, establishing absolute dominance in base assaults and fire suppression roles. -->
+  <!-- EN: Star.Featuring a compact high-pressure rail and a high-capacity capacitor, this weapon unleashes a continuous, devastating stream of heavy depleted uranium armor-piercing rounds at a cyclic rate of fire. It creates a suppressive impact zone akin to a storm of steel and lead, establishing absolute dominance in base assaults and fire suppression roles. -->
   <GR_RailMachinegun.description>TODO</GR_RailMachinegun.description>
   <!-- EN: barrels -->
   <GR_RailMachinegun.tools.barrels.label>TODO</GR_RailMachinegun.tools.barrels.label>
@@ -50,7 +50,7 @@
   
   <!-- EN: Gray Railgun PDW -->
   <GR_RailPDW.label>灰裔磁轨冲锋枪</GR_RailPDW.label>
-  <!-- EN: Pulse.Its low-pressure rail and compact capacitor provide only modest projectile velocity and a thin EMP coating, but in return grant a blistering rate of fire, exceptional stability, and nearly inaudible operation. This extreme lightweight design design enables lightning-fast target acquisition, making it the perfect partner for infiltration missions and the personal defense weapon of choice for most Grays. -->
+  <!-- EN: Satellite.Its low-pressure rail and compact capacitor provide only modest projectile velocity and a thin EMP coating, but in return grant a blistering rate of fire, exceptional stability, and nearly inaudible operation. This extreme lightweight design design enables lightning-fast target acquisition, making it the perfect partner for infiltration missions and the personal defense weapon of choice for most Grays. -->
   <GR_RailPDW.description>TODO</GR_RailPDW.description>
   <!-- EN: grip -->
   <GR_RailPDW.tools.grip.label>TODO</GR_RailPDW.tools.grip.label>
@@ -61,7 +61,7 @@
   
   <!-- EN: Gray Railgun Shotgun -->
   <GR_RailShotgun.label>灰裔磁轨霰弹枪</GR_RailShotgun.label>
-  <!-- EN: Starbreaker.Its unique array of mid-pressure magnetic rails simultaneously accelerates multiple projectiles, which are then compressed into a dense cluster by a muzzle suppressor. Upon impact, this cluster erupts into a devastating storm of shrapnel. While effective range is limited, its close-quarters and confined-space suppression capability is nothing short of terrifying. -->
+  <!-- EN: White dwarf.Its unique array of mid-pressure magnetic rails simultaneously accelerates multiple projectiles, which are then compressed into a dense cluster by a muzzle suppressor. Upon impact, this cluster erupts into a devastating storm of shrapnel. While effective range is limited, its close-quarters and confined-space suppression capability is nothing short of terrifying. -->
   <GR_RailShotgun.description>TODO</GR_RailShotgun.description>
   <!-- EN: stock -->
   <GR_RailShotgun.tools.stock.label>TODO</GR_RailShotgun.tools.stock.label>
@@ -72,7 +72,7 @@
   
   <!-- EN: Gray Railgun Sniper Rifle -->
   <GR_RailSniperRifle.label>灰裔磁轨狙击枪</GR_RailSniperRifle.label>
-  <!-- EN: Meteor.A custom-built over-pressure magnetic rail accelerates projectiles to twenty Mach and imbues them with a potent EMP charge, granting phenomenal penetration and lethal force. The kinetic energy released upon impact can pierce weaker armor plates on corvettes. Due to its considerable size and poor portability, Grays typically deploy this weapon only from fixed firing positions. -->
+  <!-- EN: Comet.A custom-built over-pressure magnetic rail accelerates projectiles to twenty Mach and imbues them with a potent EMP charge, granting phenomenal penetration and lethal force. The kinetic energy released upon impact can pierce weaker armor plates on corvettes. Due to its considerable size and poor portability, Grays typically deploy this weapon only from fixed firing positions. -->
   <GR_RailSniperRifle.description>TODO</GR_RailSniperRifle.description>
   <!-- EN: stock -->
   <GR_RailSniperRifle.tools.stock.label>TODO</GR_RailSniperRifle.tools.stock.label>

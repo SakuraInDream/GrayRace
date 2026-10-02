@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 纳米装甲 -->
+  <GR_MechModule_Armor1_L.label>TODO</GR_MechModule_Armor1_L.label>
+  <!-- EN: 加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。 -->
+  <GR_MechModule_Armor1_L.description>TODO</GR_MechModule_Armor1_L.description>
+  
+  <!-- EN: 纳米装甲 -->
+  <GR_MechModule_Armor1_M.label>TODO</GR_MechModule_Armor1_M.label>
+  <!-- EN: 加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。 -->
+  <GR_MechModule_Armor1_M.description>TODO</GR_MechModule_Armor1_M.description>
+  
+  <!-- EN: 纳米装甲 -->
+  <GR_MechModule_Armor1_S.label>TODO</GR_MechModule_Armor1_S.label>
+  <!-- EN: 加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。 -->
+  <GR_MechModule_Armor1_S.description>TODO</GR_MechModule_Armor1_S.description>
+  
+  <!-- EN: 瓷金装甲 -->
+  <GR_MechModule_Armor2_L.label>TODO</GR_MechModule_Armor2_L.label>
+  <!-- EN: 不同金属和陶瓷的结合物，坚硬而又不失柔韧性。 -->
+  <GR_MechModule_Armor2_L.description>TODO</GR_MechModule_Armor2_L.description>
+  
+  <!-- EN: 瓷金装甲 -->
+  <GR_MechModule_Armor2_M.label>TODO</GR_MechModule_Armor2_M.label>
+  <!-- EN: 不同金属和陶瓷的结合物，坚硬而又不失柔韧性。 -->
+  <GR_MechModule_Armor2_M.description>TODO</GR_MechModule_Armor2_M.description>
+  
+  <!-- EN: 瓷金装甲 -->
+  <GR_MechModule_Armor2_S.label>TODO</GR_MechModule_Armor2_S.label>
+  <!-- EN: 不同金属和陶瓷的结合物，坚硬而又不失柔韧性。 -->
+  <GR_MechModule_Armor2_S.description>TODO</GR_MechModule_Armor2_S.description>
+  
+  <!-- EN: 塑钢装甲 -->
+  <GR_MechModule_Armor3_L.label>TODO</GR_MechModule_Armor3_L.label>
+  <!-- EN: 塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。 -->
+  <GR_MechModule_Armor3_L.description>TODO</GR_MechModule_Armor3_L.description>
+  
+  <!-- EN: 塑钢装甲 -->
+  <GR_MechModule_Armor3_M.label>TODO</GR_MechModule_Armor3_M.label>
+  <!-- EN: 塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。 -->
+  <GR_MechModule_Armor3_M.description>TODO</GR_MechModule_Armor3_M.description>
+  
+  <!-- EN: 塑钢装甲 -->
+  <GR_MechModule_Armor3_S.label>TODO</GR_MechModule_Armor3_S.label>
+  <!-- EN: 塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。 -->
+  <GR_MechModule_Armor3_S.description>TODO</GR_MechModule_Armor3_S.description>
+  
+  <!-- EN: 耐钢装甲 -->
+  <GR_MechModule_Armor4_L.label>TODO</GR_MechModule_Armor4_L.label>
+  <!-- EN: 此种材料质地强韧、耐冲击，是合适的舰体材料。 -->
+  <GR_MechModule_Armor4_L.description>TODO</GR_MechModule_Armor4_L.description>
+  
+  <!-- EN: 耐钢装甲 -->
+  <GR_MechModule_Armor4_M.label>TODO</GR_MechModule_Armor4_M.label>
+  <!-- EN: 此种材料质地强韧、耐冲击，是合适的舰体材料。 -->
+  <GR_MechModule_Armor4_M.description>TODO</GR_MechModule_Armor4_M.description>
+  
+  <!-- EN: 耐钢装甲 -->
+  <GR_MechModule_Armor4_S.label>TODO</GR_MechModule_Armor4_S.label>
+  <!-- EN: 此种材料质地强韧、耐冲击，是合适的舰体材料。 -->
+  <GR_MechModule_Armor4_S.description>TODO</GR_MechModule_Armor4_S.description>
+  
+  <!-- EN: 零素装甲 -->
+  <GR_MechModule_Armor5_L.label>TODO</GR_MechModule_Armor5_L.label>
+  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
+  <GR_MechModule_Armor5_L.description>TODO</GR_MechModule_Armor5_L.description>
+  
+  <!-- EN: 零素装甲 -->
+  <GR_MechModule_Armor5_M.label>TODO</GR_MechModule_Armor5_M.label>
+  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
+  <GR_MechModule_Armor5_M.description>TODO</GR_MechModule_Armor5_M.description>
+  
+  <!-- EN: 零素装甲 -->
+  <GR_MechModule_Armor5_S.label>TODO</GR_MechModule_Armor5_S.label>
+  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
+  <GR_MechModule_Armor5_S.description>TODO</GR_MechModule_Armor5_S.description>
+  
+  <!-- EN: 偏射盾 -->
+  <GR_MechModule_Shield1_L.label>TODO</GR_MechModule_Shield1_L.label>
+  <!-- EN: 能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。 -->
+  <GR_MechModule_Shield1_L.description>TODO</GR_MechModule_Shield1_L.description>
+  
+  <!-- EN: 偏射盾 -->
+  <GR_MechModule_Shield1_M.label>TODO</GR_MechModule_Shield1_M.label>
+  <!-- EN: 能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。 -->
+  <GR_MechModule_Shield1_M.description>TODO</GR_MechModule_Shield1_M.description>
+  
+  <!-- EN: 偏射盾 -->
+  <GR_MechModule_Shield1_S.label>TODO</GR_MechModule_Shield1_S.label>
+  <!-- EN: 能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。 -->
+  <GR_MechModule_Shield1_S.description>TODO</GR_MechModule_Shield1_S.description>
+  
+  <!-- EN: 改良偏射盾 -->
+  <GR_MechModule_Shield2_L.label>TODO</GR_MechModule_Shield2_L.label>
+  <!-- EN: 升级能量偏射屏障，在过载前化解更多火力。 -->
+  <GR_MechModule_Shield2_L.description>TODO</GR_MechModule_Shield2_L.description>
+  
+  <!-- EN: 改良偏射盾 -->
+  <GR_MechModule_Shield2_M.label>TODO</GR_MechModule_Shield2_M.label>
+  <!-- EN: 升级能量偏射屏障，在过载前化解更多火力。 -->
+  <GR_MechModule_Shield2_M.description>TODO</GR_MechModule_Shield2_M.description>
+  
+  <!-- EN: 改良偏射盾 -->
+  <GR_MechModule_Shield2_S.label>TODO</GR_MechModule_Shield2_S.label>
+  <!-- EN: 升级能量偏射屏障，在过载前化解更多火力。 -->
+  <GR_MechModule_Shield2_S.description>TODO</GR_MechModule_Shield2_S.description>
+  
+  <!-- EN: 护盾 -->
+  <GR_MechModule_Shield3_L.label>TODO</GR_MechModule_Shield3_L.label>
+  <!-- EN: 新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。 -->
+  <GR_MechModule_Shield3_L.description>TODO</GR_MechModule_Shield3_L.description>
+  
+  <!-- EN: 护盾 -->
+  <GR_MechModule_Shield3_M.label>TODO</GR_MechModule_Shield3_M.label>
+  <!-- EN: 新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。 -->
+  <GR_MechModule_Shield3_M.description>TODO</GR_MechModule_Shield3_M.description>
+  
+  <!-- EN: 护盾 -->
+  <GR_MechModule_Shield3_S.label>TODO</GR_MechModule_Shield3_S.label>
+  <!-- EN: 新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。 -->
+  <GR_MechModule_Shield3_S.description>TODO</GR_MechModule_Shield3_S.description>
+  
+  <!-- EN: 先进护盾 -->
+  <GR_MechModule_Shield4_L.label>TODO</GR_MechModule_Shield4_L.label>
+  <!-- EN: 升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。 -->
+  <GR_MechModule_Shield4_L.description>TODO</GR_MechModule_Shield4_L.description>
+  
+  <!-- EN: 先进护盾 -->
+  <GR_MechModule_Shield4_M.label>TODO</GR_MechModule_Shield4_M.label>
+  <!-- EN: 升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。 -->
+  <GR_MechModule_Shield4_M.description>TODO</GR_MechModule_Shield4_M.description>
+  
+  <!-- EN: 先进护盾 -->
+  <GR_MechModule_Shield4_S.label>TODO</GR_MechModule_Shield4_S.label>
+  <!-- EN: 升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。 -->
+  <GR_MechModule_Shield4_S.description>TODO</GR_MechModule_Shield4_S.description>
+  
+  <!-- EN: 超级护盾 -->
+  <GR_MechModule_Shield5_L.label>TODO</GR_MechModule_Shield5_L.label>
+  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
+  <GR_MechModule_Shield5_L.description>TODO</GR_MechModule_Shield5_L.description>
+  
+  <!-- EN: 超级护盾 -->
+  <GR_MechModule_Shield5_M.label>TODO</GR_MechModule_Shield5_M.label>
+  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
+  <GR_MechModule_Shield5_M.description>TODO</GR_MechModule_Shield5_M.description>
+  
+  <!-- EN: 超级护盾 -->
+  <GR_MechModule_Shield5_S.label>TODO</GR_MechModule_Shield5_S.label>
+  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
+  <GR_MechModule_Shield5_S.description>TODO</GR_MechModule_Shield5_S.description>
+  
+</LanguageData>

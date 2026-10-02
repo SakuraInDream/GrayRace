@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 蜂群导弹 -->
+  <Bullet_GR_SwarmerMissile1_M.label>TODO</Bullet_GR_SwarmerMissile1_M.label>
+  
+  <!-- EN: 蜂群导弹发射器 -->
+  <GR_MechWeapon_SwarmerMissile1_M.label>TODO</GR_MechWeapon_SwarmerMissile1_M.label>
+  <!-- EN: 一次齐射发射多枚小型导弹的中型武器。 -->
+  <GR_MechWeapon_SwarmerMissile1_M.description>TODO</GR_MechWeapon_SwarmerMissile1_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_SwarmerMissile1_M.tools.barrel.label>TODO</GR_MechWeapon_SwarmerMissile1_M.tools.barrel.label>
+  <!-- EN: 蜂群导弹发射器 -->
+  <GR_MechWeapon_SwarmerMissile1_M.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_SwarmerMissile1_M.verbs.Verb_Shoot.label>
+  
+</LanguageData>

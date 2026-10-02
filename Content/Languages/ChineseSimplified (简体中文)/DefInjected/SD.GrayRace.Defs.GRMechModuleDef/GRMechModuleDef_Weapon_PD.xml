@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 哨兵点防御 -->
+  <GR_MechModule_PDArray1.label>TODO</GR_MechModule_PDArray1.label>
+  <!-- EN: 对于那些又大又笨重的军用舰船来说，在船体上安装反导弹和反攻击机的装置是很有必要的。 -->
+  <GR_MechModule_PDArray1.description>TODO</GR_MechModule_PDArray1.description>
+  
+  <!-- EN: 屏障点防御 -->
+  <GR_MechModule_PDArray2.label>TODO</GR_MechModule_PDArray2.label>
+  <!-- EN: 升级后的弹道预测算法可以提升追踪和点防御的效能。 -->
+  <GR_MechModule_PDArray2.description>TODO</GR_MechModule_PDArray2.description>
+  
+  <!-- EN: 守护者点防御 -->
+  <GR_MechModule_PDArray3.label>TODO</GR_MechModule_PDArray3.label>
+  <!-- EN: 种类丰富的弹药能够显著提升拦截威胁的能力。 -->
+  <GR_MechModule_PDArray3.description>TODO</GR_MechModule_PDArray3.description>
+  
+</LanguageData>

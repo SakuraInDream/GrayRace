@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 永恒神域 -->
+  <GR_Mech_JG.label>TODO</GR_Mech_JG.label>
+  <!-- EN: 永恒神域是一类特殊的超重型机械体，不仅火力凶猛盾甲厚重，还内置了一个小型制舰单元，可以在战斗中维修友方机械体和制造小型机械体，且能够搭载效果优秀的光环。 -->
+  <GR_Mech_JG.description>TODO</GR_Mech_JG.description>
+  <!-- EN: head -->
+  <GR_Mech_JG.tools.head.label>TODO</GR_Mech_JG.tools.head.label>
+  <!-- EN: fist -->
+  <GR_Mech_JG.tools.fist.label>TODO</GR_Mech_JG.tools.fist.label>
+  
+</LanguageData>

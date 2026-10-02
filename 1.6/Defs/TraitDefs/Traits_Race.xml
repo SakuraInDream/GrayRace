@@ -13,7 +13,7 @@
         <label>Learning Algorithms</label>
         <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
         <statFactors>
-          <GlobalLearningFactor>1.5</GlobalLearningFactor>
+          <GlobalLearningFactor>1.2</GlobalLearningFactor>
         </statFactors>
         <possessions>
           <TextBook />
@@ -31,8 +31,8 @@
         <label>Natural Engineers</label>
         <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
         <statFactors>
-          <GeneralLaborSpeed>1.5</GeneralLaborSpeed>
-          <ConstructionSpeed>1.5</ConstructionSpeed>
+          <GeneralLaborSpeed>1.2</GeneralLaborSpeed>
+          <ConstructionSpeed>1.2</ConstructionSpeed>
         </statFactors>
       </li>
     </degreeDatas>
@@ -47,7 +47,7 @@
         <label>Natural Physicists</label>
         <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
         <statFactors>
-          <ResearchSpeed>1.5</ResearchSpeed>
+          <ResearchSpeed>1.2</ResearchSpeed>
         </statFactors>
       </li>
     </degreeDatas>

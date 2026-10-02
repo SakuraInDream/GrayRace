@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 巨炮舰艉 -->
+  <GR_BB_Stern_L1.label>TODO</GR_BB_Stern_L1.label>
+  <!-- EN: Artillery stern copied from Stellaris BATTLESHIP_STERN_L1. -->
+  <GR_BB_Stern_L1.description>TODO</GR_BB_Stern_L1.description>
+  
+  <!-- EN: 齐射舰艉 -->
+  <GR_BB_Stern_M2.label>TODO</GR_BB_Stern_M2.label>
+  <!-- EN: Line stern copied from Stellaris BATTLESHIP_STERN_M2. -->
+  <GR_BB_Stern_M2.description>TODO</GR_BB_Stern_M2.description>
+  
+</LanguageData>

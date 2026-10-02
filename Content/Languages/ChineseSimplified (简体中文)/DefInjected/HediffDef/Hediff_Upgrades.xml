@@ -16,6 +16,26 @@
   <!-- EN: 安装在灰潮核心的增强器。增加备用灰潮机械回复速度 -->
   <GR_Hediff_EfficiencyBooster.description>TODO</GR_Hediff_EfficiencyBooster.description>
   
+  <!-- EN: 高级超频芯片 -->
+  <GR_Hediff_OverclockingChipAdvanced.label>TODO</GR_Hediff_OverclockingChipAdvanced.label>
+  <!-- EN: 增加150%超频上限。 -->
+  <GR_Hediff_OverclockingChipAdvanced.description>TODO</GR_Hediff_OverclockingChipAdvanced.description>
+  
+  <!-- EN: 中级超频芯片 -->
+  <GR_Hediff_OverclockingChipIntermediate.label>TODO</GR_Hediff_OverclockingChipIntermediate.label>
+  <!-- EN: 增加75%超频上限。 -->
+  <GR_Hediff_OverclockingChipIntermediate.description>TODO</GR_Hediff_OverclockingChipIntermediate.description>
+  
+  <!-- EN: 初级超频芯片 -->
+  <GR_Hediff_OverclockingChipPrimary.label>TODO</GR_Hediff_OverclockingChipPrimary.label>
+  <!-- EN: 增加25%超频上限。 -->
+  <GR_Hediff_OverclockingChipPrimary.description>TODO</GR_Hediff_OverclockingChipPrimary.description>
+  
+  <!-- EN: 终级超频芯片 -->
+  <GR_Hediff_OverclockingChipUltimate.label>TODO</GR_Hediff_OverclockingChipUltimate.label>
+  <!-- EN: 增加250%超频上限。 -->
+  <GR_Hediff_OverclockingChipUltimate.description>TODO</GR_Hediff_OverclockingChipUltimate.description>
+  
   <!-- EN: 精密芯片 -->
   <GR_Hediff_PrecisionChip.label>TODO</GR_Hediff_PrecisionChip.label>
   <!-- EN: 植入手部的精密操作芯片。 -->

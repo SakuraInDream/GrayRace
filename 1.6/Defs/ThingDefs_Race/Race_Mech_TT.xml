@@ -22,6 +22,16 @@
       <GR_Nanites>1600</GR_Nanites>
       <GR_Alloy>320</GR_Alloy>
     </butcherProducts>
+    <tools>
+      <li>
+        <label>fist</label>
+        <capacities>
+          <li>GR_NanoScratch</li>
+        </capacities>
+        <power>160</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
     <comps>
       <li Class="CompProperties_Shield">
         <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>

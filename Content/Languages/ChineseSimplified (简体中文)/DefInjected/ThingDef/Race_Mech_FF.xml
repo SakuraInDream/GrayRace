@@ -3,9 +3,11 @@
   
   <!-- EN: 巡空精魅 -->
   <GR_Mech_FF.label>TODO</GR_Mech_FF.label>
-  <!-- EN: 巡空精魅是一类擅长侦查作战的轻型机械体，装甲与护盾均较为薄弱，火力也严重不足，但其较高的航速与较低的制造成本能够以数量弥补单体的劣势。 -->
+  <!-- EN: 巡空级是一种专注于大量制造和灵活支援战场的轻型机械体。作为灰裔对抗敌人的先遣部队，被大量的投入战场，发生紧急状况时也可快速支援。她具备「护卫」舰应有的速度与量产性，与她身上有些简约的护甲与火力，形成绝妙的平衡。正因为是量产型，纤细的躯体与手脚似乎还有待发育，可谓是相当稚嫩……虽说如此，从本就不多的护甲遮掩下，也已然能窥见女性的曲线了。 -->
   <GR_Mech_FF.description>TODO</GR_Mech_FF.description>
   <!-- EN: head -->
   <GR_Mech_FF.tools.head.label>TODO</GR_Mech_FF.tools.head.label>
+  <!-- EN: fist -->
+  <GR_Mech_FF.tools.fist.label>TODO</GR_Mech_FF.tools.fist.label>
   
 </LanguageData>

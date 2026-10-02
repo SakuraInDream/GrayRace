@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 物质投射炮 -->
+  <GR_MechModule_MassDriver1_L.label>TODO</GR_MechModule_MassDriver1_L.label>
+  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <GR_MechModule_MassDriver1_L.description>TODO</GR_MechModule_MassDriver1_L.description>
+  
+  <!-- EN: 物质投射炮 -->
+  <GR_MechModule_MassDriver1_M.label>TODO</GR_MechModule_MassDriver1_M.label>
+  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <GR_MechModule_MassDriver1_M.description>TODO</GR_MechModule_MassDriver1_M.description>
+  
+  <!-- EN: 物质投射炮 -->
+  <GR_MechModule_MassDriver1_S.label>TODO</GR_MechModule_MassDriver1_S.label>
+  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <GR_MechModule_MassDriver1_S.description>TODO</GR_MechModule_MassDriver1_S.description>
+  
+  <!-- EN: 线圈炮 -->
+  <GR_MechModule_MassDriver2_L.label>TODO</GR_MechModule_MassDriver2_L.label>
+  <!-- EN: 线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。 -->
+  <GR_MechModule_MassDriver2_L.description>TODO</GR_MechModule_MassDriver2_L.description>
+  
+  <!-- EN: 线圈炮 -->
+  <GR_MechModule_MassDriver2_M.label>TODO</GR_MechModule_MassDriver2_M.label>
+  <!-- EN: 线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。 -->
+  <GR_MechModule_MassDriver2_M.description>TODO</GR_MechModule_MassDriver2_M.description>
+  
+  <!-- EN: 线圈炮 -->
+  <GR_MechModule_MassDriver2_S.label>TODO</GR_MechModule_MassDriver2_S.label>
+  <!-- EN: 线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。 -->
+  <GR_MechModule_MassDriver2_S.description>TODO</GR_MechModule_MassDriver2_S.description>
+  
+  <!-- EN: 轨道炮 -->
+  <GR_MechModule_MassDriver3_L.label>TODO</GR_MechModule_MassDriver3_L.label>
+  <!-- EN: 轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。 -->
+  <GR_MechModule_MassDriver3_L.description>TODO</GR_MechModule_MassDriver3_L.description>
+  
+  <!-- EN: 轨道炮 -->
+  <GR_MechModule_MassDriver3_M.label>TODO</GR_MechModule_MassDriver3_M.label>
+  <!-- EN: 轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。 -->
+  <GR_MechModule_MassDriver3_M.description>TODO</GR_MechModule_MassDriver3_M.description>
+  
+  <!-- EN: 轨道炮 -->
+  <GR_MechModule_MassDriver3_S.label>TODO</GR_MechModule_MassDriver3_S.label>
+  <!-- EN: 轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。 -->
+  <GR_MechModule_MassDriver3_S.description>TODO</GR_MechModule_MassDriver3_S.description>
+  
+  <!-- EN: 先进轨道炮 -->
+  <GR_MechModule_MassDriver4_L.label>TODO</GR_MechModule_MassDriver4_L.label>
+  <!-- EN: 经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。 -->
+  <GR_MechModule_MassDriver4_L.description>TODO</GR_MechModule_MassDriver4_L.description>
+  
+  <!-- EN: 先进轨道炮 -->
+  <GR_MechModule_MassDriver4_M.label>TODO</GR_MechModule_MassDriver4_M.label>
+  <!-- EN: 经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。 -->
+  <GR_MechModule_MassDriver4_M.description>TODO</GR_MechModule_MassDriver4_M.description>
+  
+  <!-- EN: 先进轨道炮 -->
+  <GR_MechModule_MassDriver4_S.label>TODO</GR_MechModule_MassDriver4_S.label>
+  <!-- EN: 经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。 -->
+  <GR_MechModule_MassDriver4_S.description>TODO</GR_MechModule_MassDriver4_S.description>
+  
+  <!-- EN: 高斯炮 -->
+  <GR_MechModule_MassDriver5_L.label>TODO</GR_MechModule_MassDriver5_L.label>
+  <!-- EN: 在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。 -->
+  <GR_MechModule_MassDriver5_L.description>TODO</GR_MechModule_MassDriver5_L.description>
+  
+  <!-- EN: 高斯炮 -->
+  <GR_MechModule_MassDriver5_M.label>TODO</GR_MechModule_MassDriver5_M.label>
+  <!-- EN: 在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。 -->
+  <GR_MechModule_MassDriver5_M.description>TODO</GR_MechModule_MassDriver5_M.description>
+  
+  <!-- EN: 高斯炮 -->
+  <GR_MechModule_MassDriver5_S.label>TODO</GR_MechModule_MassDriver5_S.label>
+  <!-- EN: 在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。 -->
+  <GR_MechModule_MassDriver5_S.description>TODO</GR_MechModule_MassDriver5_S.description>
+  
+</LanguageData>

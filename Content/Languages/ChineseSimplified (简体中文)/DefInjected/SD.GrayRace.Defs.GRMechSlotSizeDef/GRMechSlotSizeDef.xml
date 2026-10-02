@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: auxiliary -->
+  <GR_MechSlotSize_Auxiliary.label>TODO</GR_MechSlotSize_Auxiliary.label>
+  
+  <!-- EN: extra-large -->
+  <GR_MechSlotSize_ExtraLarge.label>TODO</GR_MechSlotSize_ExtraLarge.label>
+  
+  <!-- EN: 机库 -->
+  <GR_MechSlotSize_Hangar.label>TODO</GR_MechSlotSize_Hangar.label>
+  
+  <!-- EN: large -->
+  <GR_MechSlotSize_Large.label>TODO</GR_MechSlotSize_Large.label>
+  
+  <!-- EN: medium -->
+  <GR_MechSlotSize_Medium.label>TODO</GR_MechSlotSize_Medium.label>
+  
+  <!-- EN: 点防御 -->
+  <GR_MechSlotSize_PointDefense.label>TODO</GR_MechSlotSize_PointDefense.label>
+  
+  <!-- EN: small -->
+  <GR_MechSlotSize_Small.label>TODO</GR_MechSlotSize_Small.label>
+  
+  <!-- EN: 泰坦 -->
+  <GR_MechSlotSize_Titanic.label>TODO</GR_MechSlotSize_Titanic.label>
+  
+  <!-- EN: 鱼雷 -->
+  <GR_MechSlotSize_Torpedo.label>TODO</GR_MechSlotSize_Torpedo.label>
+  
+</LanguageData>

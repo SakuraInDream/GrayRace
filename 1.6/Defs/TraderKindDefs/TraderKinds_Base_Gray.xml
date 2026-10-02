@@ -66,6 +66,10 @@
         <thingDef>MedicineUltratech</thingDef>
         <countRange>50~150</countRange>
       </li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey" Class="StockGenerator_SingleDef">
+        <thingDef>ShuttleEngine</thingDef>
+        <countRange>1~2</countRange>
+      </li>
       <li Class="StockGenerator_ReinforcedBarrels">
         <countRange>5~20</countRange>
       </li>

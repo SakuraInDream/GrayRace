@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 炮艇舰艉 -->
+  <GR_Destroyer_STERN_M1.label>TODO</GR_Destroyer_STERN_M1.label>
+  <!-- EN: 从Stellaris那复制的DESTROYER_STERN_M1。 -->
+  <GR_Destroyer_STERN_M1.description>TODO</GR_Destroyer_STERN_M1.description>
+  
+  <!-- EN: 哨卫舰艉 -->
+  <GR_Destroyer_STERN_PD2.label>TODO</GR_Destroyer_STERN_PD2.label>
+  <!-- EN: 从Stellaris那复制的DESTROYER_STERN_PD2。 -->
+  <GR_Destroyer_STERN_PD2.description>TODO</GR_Destroyer_STERN_PD2.description>
+  
+  <!-- EN: 拦截者舰艉 -->
+  <GR_Destroyer_STERN_S2.label>TODO</GR_Destroyer_STERN_S2.label>
+  <!-- EN: 从Stellaris那复制的DESTROYER_STERN_S2。 -->
+  <GR_Destroyer_STERN_S2.description>TODO</GR_Destroyer_STERN_S2.description>
+  
+</LanguageData>

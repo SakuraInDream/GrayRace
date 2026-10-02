@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: auxiliary slot -->
+  <GR_MechSlot_Auxiliary.label>TODO</GR_MechSlot_Auxiliary.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_Auxiliary.description>TODO</GR_MechSlot_Auxiliary.description>
+  
+  <!-- EN: extra-large spinal slot -->
+  <GR_MechSlot_ExtraLarge.label>TODO</GR_MechSlot_ExtraLarge.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_ExtraLarge.description>TODO</GR_MechSlot_ExtraLarge.description>
+  
+  <!-- EN: large turret slot -->
+  <GR_MechSlot_LargeTurret.label>TODO</GR_MechSlot_LargeTurret.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_LargeTurret.description>TODO</GR_MechSlot_LargeTurret.description>
+  
+  <!-- EN: large utility slot -->
+  <GR_MechSlot_LargeUtility.label>TODO</GR_MechSlot_LargeUtility.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_LargeUtility.description>TODO</GR_MechSlot_LargeUtility.description>
+  
+  <!-- EN: medium turret slot -->
+  <GR_MechSlot_MediumTurret.label>TODO</GR_MechSlot_MediumTurret.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_MediumTurret.description>TODO</GR_MechSlot_MediumTurret.description>
+  
+  <!-- EN: medium utility slot -->
+  <GR_MechSlot_MediumUtility.label>TODO</GR_MechSlot_MediumUtility.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_MediumUtility.description>TODO</GR_MechSlot_MediumUtility.description>
+  
+  <!-- EN: point-defence slot -->
+  <GR_MechSlot_PointDefenseTurret.label>TODO</GR_MechSlot_PointDefenseTurret.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_PointDefenseTurret.description>TODO</GR_MechSlot_PointDefenseTurret.description>
+  
+  <!-- EN: 反应堆 -->
+  <GR_MechSlot_PowerCore.label>TODO</GR_MechSlot_PowerCore.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_PowerCore.description>TODO</GR_MechSlot_PowerCore.description>
+  
+  <!-- EN: small turret slot -->
+  <GR_MechSlot_SmallTurret.label>TODO</GR_MechSlot_SmallTurret.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_SmallTurret.description>TODO</GR_MechSlot_SmallTurret.description>
+  
+  <!-- EN: small utility slot -->
+  <GR_MechSlot_SmallUtility.label>TODO</GR_MechSlot_SmallUtility.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_SmallUtility.description>TODO</GR_MechSlot_SmallUtility.description>
+  
+  <!-- EN: strike craft slot -->
+  <GR_MechSlot_StrikeCraftBay.label>TODO</GR_MechSlot_StrikeCraftBay.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_StrikeCraftBay.description>TODO</GR_MechSlot_StrikeCraftBay.description>
+  
+  <!-- EN: 推进器 -->
+  <GR_MechSlot_Thruster.label>TODO</GR_MechSlot_Thruster.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_Thruster.description>TODO</GR_MechSlot_Thruster.description>
+  
+  <!-- EN: Titan Laser -->
+  <GR_MechSlot_Titanic.label>TODO</GR_MechSlot_Titanic.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_Titanic.description>TODO</GR_MechSlot_Titanic.description>
+  
+  <!-- EN: torpedo slot -->
+  <GR_MechSlot_TorpedoTube.label>TODO</GR_MechSlot_TorpedoTube.label>
+  <!-- EN: TODO -->
+  <GR_MechSlot_TorpedoTube.description>TODO</GR_MechSlot_TorpedoTube.description>
+  
+</LanguageData>

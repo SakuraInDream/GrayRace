@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 强袭精灵 -->
+  <GR_Mech_DD.label>TODO</GR_Mech_DD.label>
+  <!-- EN: 强袭级是以擅长作为前锋突进作战为傲的中型机械体，以抵近射击为作战方针。虽相比于护卫舰，外观上没有太大差异，但其火力、装甲以及本质都获得了成长。像是进入青春期般，身上那些未熟的性征开始逐渐发育，表现出未来的可能性。作为战争机器——那正趋于成熟的美丽，与这份美丽截然相反的作战方式，让敌人和伙伴在面对她时，比起对美丽的惊艳，更多的是一份畏惧。 -->
+  <GR_Mech_DD.description>TODO</GR_Mech_DD.description>
+  <!-- EN: head -->
+  <GR_Mech_DD.tools.head.label>TODO</GR_Mech_DD.tools.head.label>
+  <!-- EN: fist -->
+  <GR_Mech_DD.tools.fist.label>TODO</GR_Mech_DD.tools.fist.label>
+  
+</LanguageData>

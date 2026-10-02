@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 驱动妖精 -->
+  <GR_Mech_CA.label>TODO</GR_Mech_CA.label>
+  <!-- EN: 驱动级是擅长中距离作战的中型机械体。外表处于还未舍弃少女的青涩，身体却又大幅成长的阶段，流露出一种生人勿进的纯洁感。也正如同其外表，不但火力比起之前上升了不少，速度也没有下降很多，想必接近她是件困难的事。就开火频率来说，如果不是战争机器的话，应该会是一位受欢迎的勤勉之人吧。 -->
+  <GR_Mech_CA.description>TODO</GR_Mech_CA.description>
+  <!-- EN: head -->
+  <GR_Mech_CA.tools.head.label>TODO</GR_Mech_CA.tools.head.label>
+  <!-- EN: fist -->
+  <GR_Mech_CA.tools.fist.label>TODO</GR_Mech_CA.tools.fist.label>
+  
+</LanguageData>

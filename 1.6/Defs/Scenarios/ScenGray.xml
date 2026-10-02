@@ -112,6 +112,10 @@
           <def>StartingResearch</def>
           <project>Fabrication</project>
         </li>
+        <li Class="ScenPart_StartingResearch">
+          <def>StartingResearch</def>
+          <project>GrowthVats</project>
+        </li>
 
         <!-- 游戏开始文本 -->
         <li Class="ScenPart_GameStartDialog">

@@ -3,13 +3,6 @@
 
   <!-- ======== 护卫舰 ======== -->
 
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/statBases/MoveSpeed</xpath>
-    <value>
-      <MoveSpeed>14.5</MoveSpeed>
-    </value>
-  </Operation>
-
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName="GR_Mech_FF"]</xpath>
     <value>
@@ -33,18 +26,6 @@
     </value>
   </Operation>
 
-  <Operation Class="PatchOperationAddModExtension">
-    <xpath>Defs/PawnKindDef[defName="GR_Mech_FF"]</xpath>
-    <value>
-      <li Class="CombatExtended.LoadoutPropertiesExtension">
-        <primaryMagazineCount>
-          <min>4</min>
-          <max>8</max>
-        </primaryMagazineCount>
-      </li>
-    </value>
-  </Operation>
-
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/statBases/ArmorRating_Sharp</xpath>
     <value>
@@ -55,7 +36,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/statBases/ArmorRating_Blunt</xpath>
     <value>
-      <ArmorRating_Blunt>20</ArmorRating_Blunt>
+      <ArmorRating_Blunt>16</ArmorRating_Blunt>
     </value>
   </Operation>
 
@@ -64,8 +45,28 @@
     <value>
       <NightVisionEfficiency>0.80</NightVisionEfficiency>
       <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+      <AimingAccuracy>1.5</AimingAccuracy>
+      <MeleeCritChance>5</MeleeCritChance>
       <CarryWeight>300</CarryWeight>
       <CarryBulk>300</CarryBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>fist</label>
+          <capacities>
+            <li>GR_NanoScratch</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>2</cooldownTime>
+          <armorPenetrationSharp>4</armorPenetrationSharp>
+          <armorPenetrationBlunt>8</armorPenetrationBlunt>
+        </li>
+      </tools>
     </value>
   </Operation>
 

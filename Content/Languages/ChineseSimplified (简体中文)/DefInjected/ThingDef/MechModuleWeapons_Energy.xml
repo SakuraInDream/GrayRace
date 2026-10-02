@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 蓝色激光 -->
+  <Bullet_GR_Laser_Blue_L.label>TODO</Bullet_GR_Laser_Blue_L.label>
+  
+  <!-- EN: 蓝色激光 -->
+  <Bullet_GR_Laser_Blue_M.label>TODO</Bullet_GR_Laser_Blue_M.label>
+  
+  <!-- EN: 蓝色激光 -->
+  <Bullet_GR_Laser_Blue_S.label>TODO</Bullet_GR_Laser_Blue_S.label>
+  
+  <!-- EN: 伽马激光 -->
+  <Bullet_GR_Laser_Gamma_L.label>TODO</Bullet_GR_Laser_Gamma_L.label>
+  
+  <!-- EN: 伽马激光 -->
+  <Bullet_GR_Laser_Gamma_M.label>TODO</Bullet_GR_Laser_Gamma_M.label>
+  
+  <!-- EN: 伽马激光 -->
+  <Bullet_GR_Laser_Gamma_S.label>TODO</Bullet_GR_Laser_Gamma_S.label>
+  
+  <!-- EN: 红色激光 -->
+  <Bullet_GR_Laser_Infrared_L.label>TODO</Bullet_GR_Laser_Infrared_L.label>
+  
+  <!-- EN: 红色激光 -->
+  <Bullet_GR_Laser_Infrared_M.label>TODO</Bullet_GR_Laser_Infrared_M.label>
+  
+  <!-- EN: 红色激光 -->
+  <Bullet_GR_Laser_Infrared_S.label>TODO</Bullet_GR_Laser_Infrared_S.label>
+  
+  <!-- EN: 紫外激光 -->
+  <Bullet_GR_Laser_UV_L.label>TODO</Bullet_GR_Laser_UV_L.label>
+  
+  <!-- EN: 紫外激光 -->
+  <Bullet_GR_Laser_UV_M.label>TODO</Bullet_GR_Laser_UV_M.label>
+  
+  <!-- EN: 紫外激光 -->
+  <Bullet_GR_Laser_UV_S.label>TODO</Bullet_GR_Laser_UV_S.label>
+  
+  <!-- EN: X射线激光 -->
+  <Bullet_GR_Laser_Xray_L.label>TODO</Bullet_GR_Laser_Xray_L.label>
+  
+  <!-- EN: X射线激光 -->
+  <Bullet_GR_Laser_Xray_M.label>TODO</Bullet_GR_Laser_Xray_M.label>
+  
+  <!-- EN: X射线激光 -->
+  <Bullet_GR_Laser_Xray_S.label>TODO</Bullet_GR_Laser_Xray_S.label>
+  
+  <!-- EN: 小型蓝色激光 -->
+  <GR_MechWeapon_PulseLaser_Blue.label>TODO</GR_MechWeapon_PulseLaser_Blue.label>
+  <!-- EN: 比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。 -->
+  <GR_MechWeapon_PulseLaser_Blue.description>TODO</GR_MechWeapon_PulseLaser_Blue.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Blue.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Blue.tools.barrel.label>
+  <!-- EN: 小型蓝色激光 -->
+  <GR_MechWeapon_PulseLaser_Blue.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Blue.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 大型蓝色激光 -->
+  <GR_MechWeapon_PulseLaser_Blue_L.label>TODO</GR_MechWeapon_PulseLaser_Blue_L.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Blue_L.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Blue_L.tools.barrel.label>
+  <!-- EN: 大型蓝色激光 -->
+  <GR_MechWeapon_PulseLaser_Blue_L.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Blue_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型蓝色激光 -->
+  <GR_MechWeapon_PulseLaser_Blue_M.label>TODO</GR_MechWeapon_PulseLaser_Blue_M.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Blue_M.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Blue_M.tools.barrel.label>
+  <!-- EN: 中型蓝色激光 -->
+  <GR_MechWeapon_PulseLaser_Blue_M.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Blue_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 小型伽马激光 -->
+  <GR_MechWeapon_PulseLaser_Gamma.label>TODO</GR_MechWeapon_PulseLaser_Gamma.label>
+  <!-- EN: 伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。 -->
+  <GR_MechWeapon_PulseLaser_Gamma.description>TODO</GR_MechWeapon_PulseLaser_Gamma.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Gamma.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Gamma.tools.barrel.label>
+  <!-- EN: 小型伽马激光 -->
+  <GR_MechWeapon_PulseLaser_Gamma.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Gamma.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 大型伽马激光 -->
+  <GR_MechWeapon_PulseLaser_Gamma_L.label>TODO</GR_MechWeapon_PulseLaser_Gamma_L.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Gamma_L.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Gamma_L.tools.barrel.label>
+  <!-- EN: 大型伽马激光 -->
+  <GR_MechWeapon_PulseLaser_Gamma_L.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Gamma_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型伽马激光 -->
+  <GR_MechWeapon_PulseLaser_Gamma_M.label>TODO</GR_MechWeapon_PulseLaser_Gamma_M.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Gamma_M.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Gamma_M.tools.barrel.label>
+  <!-- EN: 中型伽马激光 -->
+  <GR_MechWeapon_PulseLaser_Gamma_M.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Gamma_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 小型红色激光 -->
+  <GR_MechWeapon_PulseLaser_Infrared.label>TODO</GR_MechWeapon_PulseLaser_Infrared.label>
+  <!-- EN: 激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。 -->
+  <GR_MechWeapon_PulseLaser_Infrared.description>TODO</GR_MechWeapon_PulseLaser_Infrared.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Infrared.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Infrared.tools.barrel.label>
+  <!-- EN: 小型红色激光 -->
+  <GR_MechWeapon_PulseLaser_Infrared.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Infrared.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 大型红色激光 -->
+  <GR_MechWeapon_PulseLaser_Infrared_L.label>TODO</GR_MechWeapon_PulseLaser_Infrared_L.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Infrared_L.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Infrared_L.tools.barrel.label>
+  <!-- EN: 大型红色激光 -->
+  <GR_MechWeapon_PulseLaser_Infrared_L.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Infrared_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型红色激光 -->
+  <GR_MechWeapon_PulseLaser_Infrared_M.label>TODO</GR_MechWeapon_PulseLaser_Infrared_M.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_Infrared_M.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_Infrared_M.tools.barrel.label>
+  <!-- EN: 中型红色激光 -->
+  <GR_MechWeapon_PulseLaser_Infrared_M.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_Infrared_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 小型紫外激光 -->
+  <GR_MechWeapon_PulseLaser_UV.label>TODO</GR_MechWeapon_PulseLaser_UV.label>
+  <!-- EN: 紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。 -->
+  <GR_MechWeapon_PulseLaser_UV.description>TODO</GR_MechWeapon_PulseLaser_UV.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_UV.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_UV.tools.barrel.label>
+  <!-- EN: 小型紫外激光 -->
+  <GR_MechWeapon_PulseLaser_UV.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_UV.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 大型紫外激光 -->
+  <GR_MechWeapon_PulseLaser_UV_L.label>TODO</GR_MechWeapon_PulseLaser_UV_L.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_UV_L.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_UV_L.tools.barrel.label>
+  <!-- EN: 大型紫外激光 -->
+  <GR_MechWeapon_PulseLaser_UV_L.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_UV_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型紫外激光 -->
+  <GR_MechWeapon_PulseLaser_UV_M.label>TODO</GR_MechWeapon_PulseLaser_UV_M.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_UV_M.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_UV_M.tools.barrel.label>
+  <!-- EN: 中型紫外激光 -->
+  <GR_MechWeapon_PulseLaser_UV_M.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_UV_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 小型X射线激光 -->
+  <GR_MechWeapon_PulseLaser_XRay.label>TODO</GR_MechWeapon_PulseLaser_XRay.label>
+  <!-- EN: 这种激光的波长较紫外线短一些，但是更具毁灭性。 -->
+  <GR_MechWeapon_PulseLaser_XRay.description>TODO</GR_MechWeapon_PulseLaser_XRay.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_XRay.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_XRay.tools.barrel.label>
+  <!-- EN: 小型X射线激光 -->
+  <GR_MechWeapon_PulseLaser_XRay.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_XRay.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 大型X射线激光 -->
+  <GR_MechWeapon_PulseLaser_XRay_L.label>TODO</GR_MechWeapon_PulseLaser_XRay_L.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_XRay_L.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_XRay_L.tools.barrel.label>
+  <!-- EN: 大型X射线激光 -->
+  <GR_MechWeapon_PulseLaser_XRay_L.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_XRay_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型X射线激光 -->
+  <GR_MechWeapon_PulseLaser_XRay_M.label>TODO</GR_MechWeapon_PulseLaser_XRay_M.label>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PulseLaser_XRay_M.tools.barrel.label>TODO</GR_MechWeapon_PulseLaser_XRay_M.tools.barrel.label>
+  <!-- EN: 中型X射线激光 -->
+  <GR_MechWeapon_PulseLaser_XRay_M.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PulseLaser_XRay_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 炼狱射线 -->
+  <GR_MechWeapon_TitanLance.label>TODO</GR_MechWeapon_TitanLance.label>
+  <!-- EN: 一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。 -->
+  <GR_MechWeapon_TitanLance.description>TODO</GR_MechWeapon_TitanLance.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_TitanLance.tools.barrel.label>TODO</GR_MechWeapon_TitanLance.tools.barrel.label>
+  <!-- EN: 炼狱射线 -->
+  <GR_MechWeapon_TitanLance.verbs.Verb_GrayTitanLance.label>TODO</GR_MechWeapon_TitanLance.verbs.Verb_GrayTitanLance.label>
+  
+</LanguageData>

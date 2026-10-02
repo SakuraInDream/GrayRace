@@ -5,6 +5,9 @@
   <GR_ConsumeMetal.reportString>TODO</GR_ConsumeMetal.reportString>
   
   <!-- EN: hauling TargetA to TargetB. -->
+  <GR_HaulToDrydock.reportString>TODO</GR_HaulToDrydock.reportString>
+  
+  <!-- EN: hauling TargetA to TargetB. -->
   <GR_HaulToIncubator.reportString>TODO</GR_HaulToIncubator.reportString>
   
   <!-- EN: installing plugin upgrade. -->

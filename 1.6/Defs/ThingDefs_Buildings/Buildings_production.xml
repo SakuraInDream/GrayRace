@@ -34,7 +34,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>1000</basePowerConsumption>
-        <shortCircuitInRain>true</shortCircuitInRain>
+        <shortCircuitInRain>false</shortCircuitInRain>
       </li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
@@ -114,7 +114,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>10000</basePowerConsumption>
-        <shortCircuitInRain>true</shortCircuitInRain>
+        <shortCircuitInRain>false</shortCircuitInRain>
       </li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>
@@ -205,6 +205,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerPlant</compClass>
         <basePowerConsumption>-90000</basePowerConsumption>
+        <shortCircuitInRain>false</shortCircuitInRain>
         <transmitsPower>true</transmitsPower>
         <soundAmbientProducingPower>ChemfuelFiredGenerator_Ambience</soundAmbientProducingPower>
       </li>
@@ -349,6 +350,7 @@
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
         <basePowerConsumption>600</basePowerConsumption>
         <idlePowerDraw>10</idlePowerDraw>
       </li>
@@ -398,7 +400,7 @@
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>8000</basePowerConsumption>
-        <shortCircuitInRain>true</shortCircuitInRain>
+        <shortCircuitInRain>false</shortCircuitInRain>
       </li>
       <li Class="CompProperties_Flickable"/>
       <li Class="CompProperties_Breakdownable"/>

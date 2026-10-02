@@ -62,8 +62,6 @@
     </disallowedPrecepts>
     <xenotypeSet>
       <xenotypeChances>
-        <GR_Xeno_Worker MayRequire="Ludeon.RimWorld.Biotech">0.5</GR_Xeno_Worker>
-        <GR_Xeno_Soldier MayRequire="Ludeon.RimWorld.Biotech">0.5</GR_Xeno_Soldier>
       </xenotypeChances>
     </xenotypeSet>
     <backstoryCategories>

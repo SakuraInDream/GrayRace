@@ -1,11 +1,53 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: gestate frigate -->
-  <GR_Mech_FF.label>TODO</GR_Mech_FF.label>
-  <!-- EN: Gestate a frigate mechanoid. -->
-  <GR_Mech_FF.description>TODO</GR_Mech_FF.description>
-  <!-- EN: Gestating mech. -->
-  <GR_Mech_FF.jobString>TODO</GR_Mech_FF.jobString>
+  <!-- EN: 建造战列舰 -->
+  <GR_Mech_BB.label>TODO</GR_Mech_BB.label>
+  <!-- EN: 战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。 -->
+  <GR_Mech_BB.description>TODO</GR_Mech_BB.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GR_Mech_BB.jobString>TODO</GR_Mech_BB.jobString>
+  
+  <!-- EN: 建造护卫舰 -->
+  <GR_Mech_Corvette.label>TODO</GR_Mech_Corvette.label>
+  <!-- EN: 护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。 -->
+  <GR_Mech_Corvette.description>TODO</GR_Mech_Corvette.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GR_Mech_Corvette.jobString>TODO</GR_Mech_Corvette.jobString>
+  
+  <!-- EN: 建造巡洋舰 -->
+  <GR_Mech_Cruiser.label>TODO</GR_Mech_Cruiser.label>
+  <!-- EN: TODO -->
+  <GR_Mech_Cruiser.description>TODO</GR_Mech_Cruiser.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GR_Mech_Cruiser.jobString>TODO</GR_Mech_Cruiser.jobString>
+  
+  <!-- EN: 建造驱逐舰 -->
+  <GR_Mech_Destroyer.label>TODO</GR_Mech_Destroyer.label>
+  <!-- EN: TODO -->
+  <GR_Mech_Destroyer.description>TODO</GR_Mech_Destroyer.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GR_Mech_Destroyer.jobString>TODO</GR_Mech_Destroyer.jobString>
+  
+  <!-- EN: 建造雷击舰 -->
+  <GR_Mech_Frigate.label>TODO</GR_Mech_Frigate.label>
+  <!-- EN: TODO -->
+  <GR_Mech_Frigate.description>TODO</GR_Mech_Frigate.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GR_Mech_Frigate.jobString>TODO</GR_Mech_Frigate.jobString>
+  
+  <!-- EN: 建造主宰 -->
+  <GR_Mech_Juggernaut.label>TODO</GR_Mech_Juggernaut.label>
+  <!-- EN: TODO -->
+  <GR_Mech_Juggernaut.description>TODO</GR_Mech_Juggernaut.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GR_Mech_Juggernaut.jobString>TODO</GR_Mech_Juggernaut.jobString>
+  
+  <!-- EN: 建造泰坦 -->
+  <GR_Mech_Titan.label>TODO</GR_Mech_Titan.label>
+  <!-- EN: TODO -->
+  <GR_Mech_Titan.description>TODO</GR_Mech_Titan.description>
+  <!-- EN: Doing an unknown recipe. -->
+  <GR_Mech_Titan.jobString>TODO</GR_Mech_Titan.jobString>
   
 </LanguageData>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Advance team -->
   <GR_Crashlanded.label>灰裔先遣队</GR_Crashlanded.label>
   <!-- EN: Scenario description TODO -->
@@ -13,5 +13,5 @@
   <GR_Crashlanded.scenario.parts.GameStartDialog.text>踩上结实泥土的那一刻，总会让长期漂泊在太空中的人产生一种无从解释的欣喜。\n“通讯畅通，这里是先遣队主舰。”\n脱离舰队、如流星般坠落在这颗星球上的二人，各自怀着不同的念头。\n“嗯，已经收到星球的初步探测样本了，做的不错，调遣的人手已经在路上了，在那之前，你们得靠自己了。”\n联络官琐碎的嘱托在耳边回荡，伴随着信号的杂音，却显得有些遥远。\n“另外，监测到敌对派系的宣称，数据已同步过去了，请务必小心。”\n往日的故事已成序章，新的篇章将从第一座简陋的木墙开始。\n“祝开拓成功。”\n愿这场故事，有个美好的结局。</GR_Crashlanded.scenario.parts.GameStartDialog.text>
   <!-- EN: Scenario summary TODO -->
   <GR_Crashlanded.scenario.summary>三名灰裔殖民者在边缘世界建立殖民地的故事。</GR_Crashlanded.scenario.summary>
-
+  
 </LanguageData>

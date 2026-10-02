@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- ======== 护卫舰 ======== -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Mech_DD"]</xpath>
+    <value>
+      <comps>
+        <li Class="CombatExtended.CompProperties_ArmorDurability">
+          <Durability>2400</Durability>
+          <Regenerates>true</Regenerates>
+          <RegenInterval>120</RegenInterval>
+          <RegenValue>24</RegenValue>
+          <Repairable>true</Repairable>
+          <RepairIngredients>
+            <GR_Alloy>20</GR_Alloy>
+          </RepairIngredients>
+          <RepairTime>60</RepairTime>
+          <RepairValue>1200</RepairValue>
+          <CanOverHeal>true</CanOverHeal>
+          <MaxOverHeal>1600</MaxOverHeal>
+          <MinArmorPct>0.50</MinArmorPct>
+        </li>
+      </comps>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Mech_DD"]/statBases/ArmorRating_Sharp</xpath>
+    <value>
+      <ArmorRating_Sharp>16</ArmorRating_Sharp>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Mech_DD"]/statBases/ArmorRating_Blunt</xpath>
+    <value>
+      <ArmorRating_Blunt>64</ArmorRating_Blunt>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="GR_Mech_DD"]/statBases</xpath>
+    <value>
+      <NightVisionEfficiency>0.80</NightVisionEfficiency>
+      <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+      <AimingAccuracy>1.5</AimingAccuracy>
+      <MeleeCritChance>5</MeleeCritChance>
+      <CarryWeight>400</CarryWeight>
+      <CarryBulk>400</CarryBulk>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="GR_Mech_DD"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>fist</label>
+          <capacities>
+            <li>GR_NanoScratch</li>
+          </capacities>
+          <power>20</power>
+          <cooldownTime>2</cooldownTime>
+          <armorPenetrationSharp>8</armorPenetrationSharp>
+          <armorPenetrationBlunt>16</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="GR_Mech_DD"]</xpath>
+    <value>
+      <li Class="CombatExtended.PartialArmorExt">
+        <stats>
+          <li>
+            <ArmorRating_Sharp>10</ArmorRating_Sharp>
+            <parts>
+              <li>GR_ArmoredBelt</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>20</ArmorRating_Blunt>
+            <parts>
+              <li>GR_ArmoredBelt</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Sharp>6</ArmorRating_Sharp>
+            <parts>
+              <li>GR_AntiTorpedoBulge</li>
+            </parts>
+          </li>
+          <li>
+            <ArmorRating_Blunt>12</ArmorRating_Blunt>
+            <parts>
+              <li>GR_AntiTorpedoBulge</li>
+            </parts>
+          </li>
+        </stats>
+      </li>
+    </value>
+  </Operation>
+</Patch>

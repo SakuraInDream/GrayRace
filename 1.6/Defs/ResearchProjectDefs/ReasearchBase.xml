@@ -8,7 +8,6 @@
     <label>Alloy Casting</label>
     <description>Unlocks the production of alloy. This space-age, high-quality metal offers near-perfect toughness, strength, and hardness, while also exhibiting exceptional malleability under specific conditions.</description>
     <baseCost>1000</baseCost>
-    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <prerequisites>
       <li>Electricity</li>
     </prerequisites>
@@ -26,7 +25,7 @@
     <defName>GR_ScienceNexus</defName>
     <label>Science Nexus</label>
     <description>Unlock more efficient alloy casting formulas.</description>
-    <baseCost>6000</baseCost>
+    <baseCost>10000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -45,7 +44,7 @@
     <defName>GR_Cosmogenesis</defName>
     <label>Cosmogenesis</label>
     <description>Unlock more efficient alloy casting formulas.</description>
-    <baseCost>20000</baseCost>
+    <baseCost>50000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
@@ -64,7 +63,7 @@
     <defName>GR_AlloyProcessOptimization</defName>
     <label>Alloy process optimization</label>
     <description>Unlock more efficient alloy casting formulas.</description>
-    <baseCost>3000</baseCost>
+    <baseCost>5000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -84,9 +83,9 @@
     <defName>GR_NaniteTransmuter</defName>
     <label>Nanite Transmuter</label>
     <description>Unlock more efficient alloy casting formulas.</description>
-    <baseCost>10000</baseCost>
+    <baseCost>15000</baseCost>
     <techprintCount>1</techprintCount>
-    <techprintCommonality>0</techprintCommonality>
+    <techprintCommonality>1</techprintCommonality>
     <heldByFactionCategoryTags>
       <li>Gray_Faction</li>
     </heldByFactionCategoryTags>
@@ -109,7 +108,7 @@
     <defName>GR_BasicClothing</defName>
     <label>Gray Basic Clothing</label>
     <description>Unlock Gray's basic clothing</description>
-    <baseCost>500</baseCost>
+    <baseCost>1000</baseCost>
     <prerequisites>
       <li>ComplexClothing</li>
     </prerequisites>
@@ -124,7 +123,7 @@
     <defName>GR_ProfessionalClothing</defName>
     <label>Gray Professional Clothing</label>
     <description>Unlock Gray's Professional clothing</description>
-    <baseCost>1000</baseCost>
+    <baseCost>3000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <prerequisites>
       <li>GR_BasicClothing</li>
@@ -140,7 +139,7 @@
     <defName>GR_CombatClothing</defName>
     <label>Gray Combat Clothing</label>
     <description>Unlock Gray's combat clothing</description>
-    <baseCost>3000</baseCost>
+    <baseCost>5000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -161,7 +160,7 @@
     <defName>GR_AdvancedCombatClothing</defName>
     <label>Gray Advanced Combat Clothing</label>
     <description>Unlock Gray's advanced combat clothing</description>
-    <baseCost>6000</baseCost>
+    <baseCost>8000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>MultiAnalyzer</li>
@@ -217,9 +216,9 @@
     <defName>GR_FusionReactor</defName>
     <label>Fusion Reactor</label>
     <description>Unlock more efficient alloy casting formulas.</description>
-    <baseCost>8000</baseCost>
+    <baseCost>10000</baseCost>
     <techprintCount>1</techprintCount>
-    <techprintCommonality>0</techprintCommonality>
+    <techprintCommonality>1</techprintCommonality>
     <heldByFactionCategoryTags>
       <li>Gray_Faction</li>
     </heldByFactionCategoryTags>
@@ -241,7 +240,7 @@
     <defName>GR_Zro</defName>
     <label>Zro</label>
     <description>Unlock zro,this is a substance that can greatly enhance spiritual abilities.</description>
-    <baseCost>2000</baseCost>
+    <baseCost>3000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <techLevel>Spacer</techLevel>
     <researchViewX>4</researchViewX>
@@ -281,7 +280,7 @@
     <defName>GR_CombatMimicry</defName>
     <label>Combat Mimicry</label>
     <description>Unlock Mimicry,this is a substance that can greatly enhance spiritual abilities.</description>
-    <baseCost>2000</baseCost>
+    <baseCost>3000</baseCost>
     <prerequisites>
       <li>GR_DailyMimicry</li>
     </prerequisites>
@@ -296,7 +295,7 @@
     <defName>GR_DailyPlugin</defName>
     <label>Daily Plugin</label>
     <description>Unlock plugin,this is a substance that can greatly enhance spiritual abilities.</description>
-    <baseCost>3000</baseCost>
+    <baseCost>5000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
@@ -316,7 +315,7 @@
     <defName>GR_CombatPlugin</defName>
     <label>Combat Plugin</label>
     <description>Unlock plugin,this is a substance that can greatly enhance spiritual abilities.</description>
-    <baseCost>4000</baseCost>
+    <baseCost>8000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
@@ -335,7 +334,7 @@
     <defName>GR_T1WeaponTech</defName>
     <label>T1 Weapon Tech</label>
     <description>Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns.</description>
-    <baseCost>1500</baseCost>
+    <baseCost>3000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <prerequisites>
       <li>GR_AlloyCasting</li>
@@ -352,7 +351,7 @@
     <defName>GR_T2WeaponTech</defName>
     <label>T2 Weapon Tech</label>
     <description>Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns.</description>
-    <baseCost>3000</baseCost>
+    <baseCost>5000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
@@ -371,9 +370,9 @@
     <defName>GR_T3WeaponTech</defName>
     <label>T3 Weapon Tech</label>
     <description>Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance.</description>
-    <baseCost>5000</baseCost>
+    <baseCost>8000</baseCost>
     <techprintCount>1</techprintCount>
-    <techprintCommonality>0</techprintCommonality>
+    <techprintCommonality>1</techprintCommonality>
     <heldByFactionCategoryTags>
       <li>Gray_Faction</li>
     </heldByFactionCategoryTags>
@@ -396,7 +395,7 @@
     <defName>GR_T1MechTech</defName>
     <label>T1 Mech Tech</label>
     <description>Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns.</description>
-    <baseCost>1000</baseCost>
+    <baseCost>2000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <prerequisites>
       <li>GR_AlloyCasting</li>
@@ -413,7 +412,7 @@
     <defName>GR_T2MechTech</defName>
     <label>T2 Mech Tech</label>
     <description>Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns.</description>
-    <baseCost>2500</baseCost>
+    <baseCost>5000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
@@ -432,7 +431,7 @@
     <defName>GR_T3MechTech</defName>
     <label>T3 Mech Tech</label>
     <description>Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance.</description>
-    <baseCost>6000</baseCost>
+    <baseCost>8000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
@@ -452,7 +451,7 @@
     <defName>GR_T4MechTech</defName>
     <label>T4 Mech Tech</label>
     <description>Unlocks Tier 4 weaponry. These weapons are generally classified as heavy ordnance.</description>
-    <baseCost>10000</baseCost>
+    <baseCost>15000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
@@ -471,7 +470,7 @@
     <defName>GR_T5MechTech</defName>
     <label>T5 Mech Tech</label>
     <description>The technology needed for your mechanitor to create and control high-tier mechanoids.\n\nYou can get powerfocus chips by using a mechanitor to summon a war queen threat.</description>
-    <baseCost>15000</baseCost>
+    <baseCost>20000</baseCost>
     <techprintMarketValue>4000</techprintMarketValue>
     <prerequisites>
       <li>GR_T4MechTech</li>
@@ -494,7 +493,7 @@
     <defName>GR_T6MechTech</defName>
     <label>T6 Mech Tech</label>
     <description>The advanced technology needed for your mechanitor to create and control ultra-tier mechanoids, including large mechs and ultra-tier mechanitor gear.\n\nYou can get nano structuring chips by using a mechanitor to summon an apocriton threat.</description>
-    <baseCost>20000</baseCost>
+    <baseCost>30000</baseCost>
     <techprintMarketValue>6000</techprintMarketValue>
     <prerequisites>
       <li>GR_T5MechTech</li>

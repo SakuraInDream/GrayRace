@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 反物质反应堆 -->
+  <GR_MechModule_Reactor_Antimatter_Battleship.label>TODO</GR_MechModule_Reactor_Antimatter_Battleship.label>
+  <!-- EN: 利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。 -->
+  <GR_MechModule_Reactor_Antimatter_Battleship.description>TODO</GR_MechModule_Reactor_Antimatter_Battleship.description>
+  
+  <!-- EN: 反物质反应堆 -->
+  <GR_MechModule_Reactor_Antimatter_Corvette.label>TODO</GR_MechModule_Reactor_Antimatter_Corvette.label>
+  <!-- EN: 利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。 -->
+  <GR_MechModule_Reactor_Antimatter_Corvette.description>TODO</GR_MechModule_Reactor_Antimatter_Corvette.description>
+  
+  <!-- EN: 反物质反应堆 -->
+  <GR_MechModule_Reactor_Antimatter_Cruiser.label>TODO</GR_MechModule_Reactor_Antimatter_Cruiser.label>
+  <!-- EN: 利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。 -->
+  <GR_MechModule_Reactor_Antimatter_Cruiser.description>TODO</GR_MechModule_Reactor_Antimatter_Cruiser.description>
+  
+  <!-- EN: 反物质反应堆 -->
+  <GR_MechModule_Reactor_Antimatter_Destroyer.label>TODO</GR_MechModule_Reactor_Antimatter_Destroyer.label>
+  <!-- EN: 利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。 -->
+  <GR_MechModule_Reactor_Antimatter_Destroyer.description>TODO</GR_MechModule_Reactor_Antimatter_Destroyer.description>
+  
+  <!-- EN: 反物质反应堆 -->
+  <GR_MechModule_Reactor_Antimatter_Juggernaut.label>TODO</GR_MechModule_Reactor_Antimatter_Juggernaut.label>
+  <!-- EN: 利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。 -->
+  <GR_MechModule_Reactor_Antimatter_Juggernaut.description>TODO</GR_MechModule_Reactor_Antimatter_Juggernaut.description>
+  
+  <!-- EN: 反物质反应堆 -->
+  <GR_MechModule_Reactor_Antimatter_Titan.label>TODO</GR_MechModule_Reactor_Antimatter_Titan.label>
+  <!-- EN: 利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。 -->
+  <GR_MechModule_Reactor_Antimatter_Titan.description>TODO</GR_MechModule_Reactor_Antimatter_Titan.description>
+  
+  <!-- EN: 冷聚变反应堆 -->
+  <GR_MechModule_Reactor_ColdFusion_Battleship.label>TODO</GR_MechModule_Reactor_ColdFusion_Battleship.label>
+  <!-- EN: 在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。 -->
+  <GR_MechModule_Reactor_ColdFusion_Battleship.description>TODO</GR_MechModule_Reactor_ColdFusion_Battleship.description>
+  
+  <!-- EN: 冷聚变反应堆 -->
+  <GR_MechModule_Reactor_ColdFusion_Corvette.label>TODO</GR_MechModule_Reactor_ColdFusion_Corvette.label>
+  <!-- EN: 在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。 -->
+  <GR_MechModule_Reactor_ColdFusion_Corvette.description>TODO</GR_MechModule_Reactor_ColdFusion_Corvette.description>
+  
+  <!-- EN: 冷聚变反应堆 -->
+  <GR_MechModule_Reactor_ColdFusion_Cruiser.label>TODO</GR_MechModule_Reactor_ColdFusion_Cruiser.label>
+  <!-- EN: 在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。 -->
+  <GR_MechModule_Reactor_ColdFusion_Cruiser.description>TODO</GR_MechModule_Reactor_ColdFusion_Cruiser.description>
+  
+  <!-- EN: 冷聚变反应堆 -->
+  <GR_MechModule_Reactor_ColdFusion_Destroyer.label>TODO</GR_MechModule_Reactor_ColdFusion_Destroyer.label>
+  <!-- EN: 在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。 -->
+  <GR_MechModule_Reactor_ColdFusion_Destroyer.description>TODO</GR_MechModule_Reactor_ColdFusion_Destroyer.description>
+  
+  <!-- EN: 冷聚变反应堆 -->
+  <GR_MechModule_Reactor_ColdFusion_Juggernaut.label>TODO</GR_MechModule_Reactor_ColdFusion_Juggernaut.label>
+  <!-- EN: 在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。 -->
+  <GR_MechModule_Reactor_ColdFusion_Juggernaut.description>TODO</GR_MechModule_Reactor_ColdFusion_Juggernaut.description>
+  
+  <!-- EN: 冷聚变反应堆 -->
+  <GR_MechModule_Reactor_ColdFusion_Titan.label>TODO</GR_MechModule_Reactor_ColdFusion_Titan.label>
+  <!-- EN: 在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。 -->
+  <GR_MechModule_Reactor_ColdFusion_Titan.description>TODO</GR_MechModule_Reactor_ColdFusion_Titan.description>
+  
+  <!-- EN: 暗物质反应堆 -->
+  <GR_MechModule_Reactor_DarkMatter_Battleship.label>TODO</GR_MechModule_Reactor_DarkMatter_Battleship.label>
+  <!-- EN: 这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。 -->
+  <GR_MechModule_Reactor_DarkMatter_Battleship.description>TODO</GR_MechModule_Reactor_DarkMatter_Battleship.description>
+  
+  <!-- EN: 暗物质反应堆 -->
+  <GR_MechModule_Reactor_DarkMatter_Corvette.label>TODO</GR_MechModule_Reactor_DarkMatter_Corvette.label>
+  <!-- EN: 这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。 -->
+  <GR_MechModule_Reactor_DarkMatter_Corvette.description>TODO</GR_MechModule_Reactor_DarkMatter_Corvette.description>
+  
+  <!-- EN: 暗物质反应堆 -->
+  <GR_MechModule_Reactor_DarkMatter_Cruiser.label>TODO</GR_MechModule_Reactor_DarkMatter_Cruiser.label>
+  <!-- EN: 这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。 -->
+  <GR_MechModule_Reactor_DarkMatter_Cruiser.description>TODO</GR_MechModule_Reactor_DarkMatter_Cruiser.description>
+  
+  <!-- EN: 暗物质反应堆 -->
+  <GR_MechModule_Reactor_DarkMatter_Destroyer.label>TODO</GR_MechModule_Reactor_DarkMatter_Destroyer.label>
+  <!-- EN: 这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。 -->
+  <GR_MechModule_Reactor_DarkMatter_Destroyer.description>TODO</GR_MechModule_Reactor_DarkMatter_Destroyer.description>
+  
+  <!-- EN: 暗物质反应堆 -->
+  <GR_MechModule_Reactor_DarkMatter_Juggernaut.label>TODO</GR_MechModule_Reactor_DarkMatter_Juggernaut.label>
+  <!-- EN: 这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。 -->
+  <GR_MechModule_Reactor_DarkMatter_Juggernaut.description>TODO</GR_MechModule_Reactor_DarkMatter_Juggernaut.description>
+  
+  <!-- EN: 暗物质反应堆 -->
+  <GR_MechModule_Reactor_DarkMatter_Titan.label>TODO</GR_MechModule_Reactor_DarkMatter_Titan.label>
+  <!-- EN: 这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。 -->
+  <GR_MechModule_Reactor_DarkMatter_Titan.description>TODO</GR_MechModule_Reactor_DarkMatter_Titan.description>
+  
+  <!-- EN: 裂变反应堆 -->
+  <GR_MechModule_Reactor_Fission_Battleship.label>TODO</GR_MechModule_Reactor_Fission_Battleship.label>
+  <!-- EN: 通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。 -->
+  <GR_MechModule_Reactor_Fission_Battleship.description>TODO</GR_MechModule_Reactor_Fission_Battleship.description>
+  
+  <!-- EN: 裂变反应堆 -->
+  <GR_MechModule_Reactor_Fission_Corvette.label>TODO</GR_MechModule_Reactor_Fission_Corvette.label>
+  <!-- EN: 通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。 -->
+  <GR_MechModule_Reactor_Fission_Corvette.description>TODO</GR_MechModule_Reactor_Fission_Corvette.description>
+  
+  <!-- EN: 裂变反应堆 -->
+  <GR_MechModule_Reactor_Fission_Cruiser.label>TODO</GR_MechModule_Reactor_Fission_Cruiser.label>
+  <!-- EN: 通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。 -->
+  <GR_MechModule_Reactor_Fission_Cruiser.description>TODO</GR_MechModule_Reactor_Fission_Cruiser.description>
+  
+  <!-- EN: 裂变反应堆 -->
+  <GR_MechModule_Reactor_Fission_Destroyer.label>TODO</GR_MechModule_Reactor_Fission_Destroyer.label>
+  <!-- EN: 通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。 -->
+  <GR_MechModule_Reactor_Fission_Destroyer.description>TODO</GR_MechModule_Reactor_Fission_Destroyer.description>
+  
+  <!-- EN: 裂变反应堆 -->
+  <GR_MechModule_Reactor_Fission_Juggernaut.label>TODO</GR_MechModule_Reactor_Fission_Juggernaut.label>
+  <!-- EN: 通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。 -->
+  <GR_MechModule_Reactor_Fission_Juggernaut.description>TODO</GR_MechModule_Reactor_Fission_Juggernaut.description>
+  
+  <!-- EN: 裂变反应堆 -->
+  <GR_MechModule_Reactor_Fission_Titan.label>TODO</GR_MechModule_Reactor_Fission_Titan.label>
+  <!-- EN: 通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。 -->
+  <GR_MechModule_Reactor_Fission_Titan.description>TODO</GR_MechModule_Reactor_Fission_Titan.description>
+  
+  <!-- EN: 聚变反应堆 -->
+  <GR_MechModule_Reactor_Fusion_Battleship.label>TODO</GR_MechModule_Reactor_Fusion_Battleship.label>
+  <!-- EN: 核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。 -->
+  <GR_MechModule_Reactor_Fusion_Battleship.description>TODO</GR_MechModule_Reactor_Fusion_Battleship.description>
+  
+  <!-- EN: 聚变反应堆 -->
+  <GR_MechModule_Reactor_Fusion_Corvette.label>TODO</GR_MechModule_Reactor_Fusion_Corvette.label>
+  <!-- EN: 核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。 -->
+  <GR_MechModule_Reactor_Fusion_Corvette.description>TODO</GR_MechModule_Reactor_Fusion_Corvette.description>
+  
+  <!-- EN: 聚变反应堆 -->
+  <GR_MechModule_Reactor_Fusion_Cruiser.label>TODO</GR_MechModule_Reactor_Fusion_Cruiser.label>
+  <!-- EN: 核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。 -->
+  <GR_MechModule_Reactor_Fusion_Cruiser.description>TODO</GR_MechModule_Reactor_Fusion_Cruiser.description>
+  
+  <!-- EN: 聚变反应堆 -->
+  <GR_MechModule_Reactor_Fusion_Destroyer.label>TODO</GR_MechModule_Reactor_Fusion_Destroyer.label>
+  <!-- EN: 核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。 -->
+  <GR_MechModule_Reactor_Fusion_Destroyer.description>TODO</GR_MechModule_Reactor_Fusion_Destroyer.description>
+  
+  <!-- EN: 聚变反应堆 -->
+  <GR_MechModule_Reactor_Fusion_Juggernaut.label>TODO</GR_MechModule_Reactor_Fusion_Juggernaut.label>
+  <!-- EN: 核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。 -->
+  <GR_MechModule_Reactor_Fusion_Juggernaut.description>TODO</GR_MechModule_Reactor_Fusion_Juggernaut.description>
+  
+  <!-- EN: 聚变反应堆 -->
+  <GR_MechModule_Reactor_Fusion_Titan.label>TODO</GR_MechModule_Reactor_Fusion_Titan.label>
+  <!-- EN: 核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。 -->
+  <GR_MechModule_Reactor_Fusion_Titan.description>TODO</GR_MechModule_Reactor_Fusion_Titan.description>
+  
+  <!-- EN: 零点反应堆 -->
+  <GR_MechModule_Reactor_ZeroPoint_Battleship.label>TODO</GR_MechModule_Reactor_ZeroPoint_Battleship.label>
+  <!-- EN: 直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。 -->
+  <GR_MechModule_Reactor_ZeroPoint_Battleship.description>TODO</GR_MechModule_Reactor_ZeroPoint_Battleship.description>
+  
+  <!-- EN: 零点反应堆 -->
+  <GR_MechModule_Reactor_ZeroPoint_Corvette.label>TODO</GR_MechModule_Reactor_ZeroPoint_Corvette.label>
+  <!-- EN: 直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。 -->
+  <GR_MechModule_Reactor_ZeroPoint_Corvette.description>TODO</GR_MechModule_Reactor_ZeroPoint_Corvette.description>
+  
+  <!-- EN: 零点反应堆 -->
+  <GR_MechModule_Reactor_ZeroPoint_Cruiser.label>TODO</GR_MechModule_Reactor_ZeroPoint_Cruiser.label>
+  <!-- EN: 直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。 -->
+  <GR_MechModule_Reactor_ZeroPoint_Cruiser.description>TODO</GR_MechModule_Reactor_ZeroPoint_Cruiser.description>
+  
+  <!-- EN: 零点反应堆 -->
+  <GR_MechModule_Reactor_ZeroPoint_Destroyer.label>TODO</GR_MechModule_Reactor_ZeroPoint_Destroyer.label>
+  <!-- EN: 直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。 -->
+  <GR_MechModule_Reactor_ZeroPoint_Destroyer.description>TODO</GR_MechModule_Reactor_ZeroPoint_Destroyer.description>
+  
+  <!-- EN: 零点反应堆 -->
+  <GR_MechModule_Reactor_ZeroPoint_Juggernaut.label>TODO</GR_MechModule_Reactor_ZeroPoint_Juggernaut.label>
+  <!-- EN: 直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。 -->
+  <GR_MechModule_Reactor_ZeroPoint_Juggernaut.description>TODO</GR_MechModule_Reactor_ZeroPoint_Juggernaut.description>
+  
+  <!-- EN: 零点反应堆 -->
+  <GR_MechModule_Reactor_ZeroPoint_Titan.label>TODO</GR_MechModule_Reactor_ZeroPoint_Titan.label>
+  <!-- EN: 直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。 -->
+  <GR_MechModule_Reactor_ZeroPoint_Titan.description>TODO</GR_MechModule_Reactor_ZeroPoint_Titan.description>
+  
+</LanguageData>

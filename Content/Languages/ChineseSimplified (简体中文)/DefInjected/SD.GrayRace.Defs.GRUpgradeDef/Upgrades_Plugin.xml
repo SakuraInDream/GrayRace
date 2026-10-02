@@ -1,15 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 分析芯片插件 -->
+  <!-- EN: 分析芯片 -->
   <GR_Plugin_Brain_AnalysisChip.label>TODO</GR_Plugin_Brain_AnalysisChip.label>
-  <!-- EN: 植入大脑的超级分析芯片，提升研究速度和学习能力。 -->
+  <!-- EN: 植入人格核心的超级分析芯片，提升研究速度和学习能力。 -->
   <GR_Plugin_Brain_AnalysisChip.description>TODO</GR_Plugin_Brain_AnalysisChip.description>
   
-  <!-- EN: 战斗芯片插件 -->
+  <!-- EN: 战斗芯片 -->
   <GR_Plugin_Brain_CombatChip.label>TODO</GR_Plugin_Brain_CombatChip.label>
-  <!-- EN: 植入大脑的高级战斗芯片，提升战斗效率和反应速度。 -->
+  <!-- EN: 植入人格核心的高级战斗芯片，提升战斗效率和反应速度。 -->
   <GR_Plugin_Brain_CombatChip.description>TODO</GR_Plugin_Brain_CombatChip.description>
+  
+  <!-- EN: 机控中枢 -->
+  <GR_Plugin_Brain_Mechlink.label>TODO</GR_Plugin_Brain_Mechlink.label>
+  <!-- EN: 将机控中枢与人格核心连接，允许操控机械族。 -->
+  <GR_Plugin_Brain_Mechlink.description>TODO</GR_Plugin_Brain_Mechlink.description>
   
   <!-- EN: 瞄准系统插件 -->
   <GR_Plugin_Eye_TargetingSystem.label>TODO</GR_Plugin_Eye_TargetingSystem.label>
@@ -18,12 +23,32 @@
   
   <!-- EN: 精密芯片插件 -->
   <GR_Plugin_Hand_PrecisionChip.label>TODO</GR_Plugin_Hand_PrecisionChip.label>
-  <!-- EN: 植入手部的精密操作芯片，提升制作精度和质量。 -->
+  <!-- EN: 植入手臂的精密操作芯片，提升制作精度和质量。 -->
   <GR_Plugin_Hand_PrecisionChip.description>TODO</GR_Plugin_Hand_PrecisionChip.description>
   
   <!-- EN: 效率增强器插件 -->
   <GR_Plugin_Heart_EfficiencyBooster.label>TODO</GR_Plugin_Heart_EfficiencyBooster.label>
   <!-- EN: 安装在灰潮核心的效率增强器，提升纳米机械恢复速度。 -->
   <GR_Plugin_Heart_EfficiencyBooster.description>TODO</GR_Plugin_Heart_EfficiencyBooster.description>
+  
+  <!-- EN: Advanced overclocking chip -->
+  <GR_Plugin_OverclockingChipAdvanced.label>TODO</GR_Plugin_OverclockingChipAdvanced.label>
+  <!-- EN: 大幅增加超频上限。 -->
+  <GR_Plugin_OverclockingChipAdvanced.description>TODO</GR_Plugin_OverclockingChipAdvanced.description>
+  
+  <!-- EN: Intermediate overclocking chip -->
+  <GR_Plugin_OverclockingChipIntermediate.label>TODO</GR_Plugin_OverclockingChipIntermediate.label>
+  <!-- EN: 增加超频上限。 -->
+  <GR_Plugin_OverclockingChipIntermediate.description>TODO</GR_Plugin_OverclockingChipIntermediate.description>
+  
+  <!-- EN: Primary overclocking chip -->
+  <GR_Plugin_OverclockingChipPrimary.label>TODO</GR_Plugin_OverclockingChipPrimary.label>
+  <!-- EN: 小幅增加超频上限。 -->
+  <GR_Plugin_OverclockingChipPrimary.description>TODO</GR_Plugin_OverclockingChipPrimary.description>
+  
+  <!-- EN: Ultimate overclocking chip -->
+  <GR_Plugin_OverclockingChipUltimate.label>TODO</GR_Plugin_OverclockingChipUltimate.label>
+  <!-- EN: 极大幅增加超频上限。 -->
+  <GR_Plugin_OverclockingChipUltimate.description>TODO</GR_Plugin_OverclockingChipUltimate.description>
   
 </LanguageData>

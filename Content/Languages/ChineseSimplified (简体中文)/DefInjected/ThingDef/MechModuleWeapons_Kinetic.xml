@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 大型物质加速炮弹丸 -->
+  <Bullet_GR_MechMassDriver1_L.label>TODO</Bullet_GR_MechMassDriver1_L.label>
+  
+  <!-- EN: 中型物质加速炮弹丸 -->
+  <Bullet_GR_MechMassDriver1_M.label>TODO</Bullet_GR_MechMassDriver1_M.label>
+  
+  <!-- EN: 小型物质加速炮弹丸 -->
+  <Bullet_GR_MechMassDriver1_S.label>TODO</Bullet_GR_MechMassDriver1_S.label>
+  
+  <!-- EN: interceptor shard -->
+  <Bullet_PDArray.label>TODO</Bullet_PDArray.label>
+  
+  <!-- EN: 大型物质加速炮 -->
+  <GR_MechWeapon_MassDriver1_L.label>TODO</GR_MechWeapon_MassDriver1_L.label>
+  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <GR_MechWeapon_MassDriver1_L.description>TODO</GR_MechWeapon_MassDriver1_L.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_MassDriver1_L.tools.barrel.label>TODO</GR_MechWeapon_MassDriver1_L.tools.barrel.label>
+  <!-- EN: 大型物质加速炮 -->
+  <GR_MechWeapon_MassDriver1_L.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_MassDriver1_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型物质加速炮 -->
+  <GR_MechWeapon_MassDriver1_M.label>TODO</GR_MechWeapon_MassDriver1_M.label>
+  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <GR_MechWeapon_MassDriver1_M.description>TODO</GR_MechWeapon_MassDriver1_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_MassDriver1_M.tools.barrel.label>TODO</GR_MechWeapon_MassDriver1_M.tools.barrel.label>
+  <!-- EN: 中型物质加速炮 -->
+  <GR_MechWeapon_MassDriver1_M.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_MassDriver1_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 小型物质加速炮 -->
+  <GR_MechWeapon_MassDriver1_S.label>TODO</GR_MechWeapon_MassDriver1_S.label>
+  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <GR_MechWeapon_MassDriver1_S.description>TODO</GR_MechWeapon_MassDriver1_S.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_MassDriver1_S.tools.barrel.label>TODO</GR_MechWeapon_MassDriver1_S.tools.barrel.label>
+  <!-- EN: 小型物质加速炮 -->
+  <GR_MechWeapon_MassDriver1_S.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_MassDriver1_S.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 点防御 -->
+  <GR_MechWeapon_PDArray.label>TODO</GR_MechWeapon_PDArray.label>
+  <!-- EN: A rapid interception array used to swat down incoming threats and screen light hulls. -->
+  <GR_MechWeapon_PDArray.description>TODO</GR_MechWeapon_PDArray.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_PDArray.tools.barrel.label>TODO</GR_MechWeapon_PDArray.tools.barrel.label>
+  <!-- EN: 点防御 -->
+  <GR_MechWeapon_PDArray.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_PDArray.verbs.Verb_Shoot.label>
+  
+</LanguageData>

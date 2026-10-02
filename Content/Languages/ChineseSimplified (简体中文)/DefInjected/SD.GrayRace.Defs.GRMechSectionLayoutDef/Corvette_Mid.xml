@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 鱼雷核心 -->
+  <GR_Corvette_MID_M1S1.label>TODO</GR_Corvette_MID_M1S1.label>
+  <!-- EN: 从Stellaris那复制的CORVETTE_MID_M1S1。 -->
+  <GR_Corvette_MID_M1S1.description>TODO</GR_Corvette_MID_M1S1.description>
+  
+  <!-- EN: 哨卫核心 -->
+  <GR_Corvette_MID_S2PD1.label>TODO</GR_Corvette_MID_S2PD1.label>
+  <!-- EN: 从Stellaris那复制的CORVETTE_MID_S2PD1。 -->
+  <GR_Corvette_MID_S2PD1.description>TODO</GR_Corvette_MID_S2PD1.description>
+  
+  <!-- EN: 拦截者核心 -->
+  <GR_Corvette_MID_S3.label>TODO</GR_Corvette_MID_S3.label>
+  <!-- EN: 从Stellaris那复制的CORVETTE_MID_S3。 -->
+  <GR_Corvette_MID_S3.description>TODO</GR_Corvette_MID_S3.description>
+  
+</LanguageData>

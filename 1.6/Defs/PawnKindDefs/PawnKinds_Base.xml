@@ -15,7 +15,7 @@
     <initialResistanceRange>10~30</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
-        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0</Baseliner>
+        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
         <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
         <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
         <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>

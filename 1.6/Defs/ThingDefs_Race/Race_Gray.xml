@@ -514,8 +514,8 @@
     <comps>
       <li Class="CompProperties_Spawner">
         <thingToSpawn>GR_Nanites</thingToSpawn>
-        <spawnCount>50</spawnCount>
-        <spawnIntervalRange>60000</spawnIntervalRange>
+        <spawnCount>100</spawnCount>
+        <spawnIntervalRange>240000</spawnIntervalRange>
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
         <showMessageIfOwned>true</showMessageIfOwned>
       </li>

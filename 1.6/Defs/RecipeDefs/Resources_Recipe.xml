@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+  <RecipeDef ParentName="CookMealBase">
+    <defName>GR_Make_GrayFlesh</defName>
+    <label>production Gray Flesh</label>
+    <description>Uses organic matter to production Gray Flesh.</description>
+    <jobString>Production Gray Flesh</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <workAmount>300</workAmount>
+    <recipeUsers>
+      <li>ElectricStove</li>
+      <li>FueledStove</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <GR_GrayFlesh>1</GR_GrayFlesh>
+    </products>
+    <workSkill>Cooking</workSkill>
+    <displayPriority>100</displayPriority>
+  </RecipeDef>
+
   <!--灰色血肉提取灰潮源质-->
   <RecipeDef>
     <defName>GR_Extract</defName>
@@ -53,7 +86,7 @@
     <workAmount>6000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <recipeUsers>
-      <li>FabricationBench</li>
+      <li>ElectricSmelter</li>
     </recipeUsers>
     <ingredients>
       <li>

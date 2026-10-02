@@ -29,6 +29,13 @@
   <!-- EN: Extract Nanites -->
   <GR_Extract.jobString>正在提取灰潮源质</GR_Extract.jobString>
   
+  <!-- EN: production Gray Flesh -->
+  <GR_Make_GrayFlesh.label>TODO</GR_Make_GrayFlesh.label>
+  <!-- EN: Uses organic matter to production Gray Flesh. -->
+  <GR_Make_GrayFlesh.description>TODO</GR_Make_GrayFlesh.description>
+  <!-- EN: Production Gray Flesh -->
+  <GR_Make_GrayFlesh.jobString>TODO</GR_Make_GrayFlesh.jobString>
+  
   <!-- EN: make Nanites x2500 -->
   <GR_Plasteel_Make_Nanites.label>制作灰潮源质 x2500</GR_Plasteel_Make_Nanites.label>
   <!-- EN: Make Nanites. -->
@@ -49,6 +56,13 @@
   <GR_Steel_Make_Nanites.description>使用钢铁制造灰潮源质。</GR_Steel_Make_Nanites.description>
   <!-- EN: Making Nanites. -->
   <GR_Steel_Make_Nanites.jobString>正在将钢铁转化成灰潮源质</GR_Steel_Make_Nanites.jobString>
+  
+  <!-- EN: make Nanites x125 -->
+  <GR_Steel_Make_Nanites_LowEfficiency.label>TODO</GR_Steel_Make_Nanites_LowEfficiency.label>
+  <!-- EN: Make Nanites. -->
+  <GR_Steel_Make_Nanites_LowEfficiency.description>TODO</GR_Steel_Make_Nanites_LowEfficiency.description>
+  <!-- EN: Making Nanites. -->
+  <GR_Steel_Make_Nanites_LowEfficiency.jobString>TODO</GR_Steel_Make_Nanites_LowEfficiency.jobString>
   
   <!-- EN: make Nanites x5000 -->
   <GR_Steel_Make_Nanites_More.label>制作灰潮源质 x5000</GR_Steel_Make_Nanites_More.label>

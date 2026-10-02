@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 12mm Railgun -->
+  <Bullet_12mmAA.label>TODO</Bullet_12mmAA.label>
+  
+  <!-- EN: 12mm Anti-Aircraft Gun -->
+  <GR_MechWeapon_12mmAA.label>TODO</GR_MechWeapon_12mmAA.label>
+  <!-- EN: A compact, short-range shotgun designed to be mounted on a light combat mechanoid. -->
+  <GR_MechWeapon_12mmAA.description>TODO</GR_MechWeapon_12mmAA.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_12mmAA.tools.barrel.label>TODO</GR_MechWeapon_12mmAA.tools.barrel.label>
+  <!-- EN: 12mm Anti-Aircraft Gun -->
+  <GR_MechWeapon_12mmAA.verbs.Verb_Shoot.label>TODO</GR_MechWeapon_12mmAA.verbs.Verb_Shoot.label>
+  
+</LanguageData>

@@ -20,7 +20,7 @@
     <apparelDisallowTags>
       <li>GR_MechanitorArmor</li>
     </apparelDisallowTags>
-    <weaponMoney>2000~4000</weaponMoney>
+    <weaponMoney>99999~99999</weaponMoney>
     <weaponTags>
       <li>GR_BasicWeapon</li>
       <li>GR_T1Weapon</li>
@@ -54,7 +54,7 @@
     <apparelDisallowTags>
       <li>GR_MechanitorArmor</li>
     </apparelDisallowTags>
-    <weaponMoney>3500~7000</weaponMoney>
+    <weaponMoney>99999~99999</weaponMoney>
     <weaponTags>
       <li>GR_Mechgun</li>
     </weaponTags>
@@ -87,7 +87,7 @@
     <apparelDisallowTags>
       <li>GR_MechanitorArmor</li>
     </apparelDisallowTags>
-    <weaponMoney>3500~7000</weaponMoney>
+    <weaponMoney>99999~99999</weaponMoney>
     <weaponTags>
       <li>GR_HeavyWeapon</li>
     </weaponTags>
@@ -120,7 +120,7 @@
     <apparelDisallowTags>
       <li>GR_MechanitorArmor</li>
     </apparelDisallowTags>
-    <weaponMoney>3000~6000</weaponMoney>
+    <weaponMoney>99999~99999</weaponMoney>
     <weaponTags>
       <li>GR_T1Weapon</li>
       <li>GR_T2Weapon</li>
@@ -157,7 +157,7 @@
     <apparelDisallowTags>
       <li>GR_MechanitorArmor</li>
     </apparelDisallowTags>
-    <weaponMoney>3500~7000</weaponMoney>
+    <weaponMoney>99999~99999</weaponMoney>
     <weaponTags>
       <li>GR_Mechgun</li>
     </weaponTags>
@@ -193,7 +193,7 @@
     <apparelDisallowTags>
       <li>GR_MechanitorArmor</li>
     </apparelDisallowTags>
-    <weaponMoney>3500~7000</weaponMoney>
+    <weaponMoney>99999~99999</weaponMoney>
     <weaponTags>
       <li>GR_HeavyWeapon</li>
     </weaponTags>

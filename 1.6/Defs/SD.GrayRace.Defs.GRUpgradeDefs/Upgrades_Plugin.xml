@@ -10,7 +10,7 @@
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>     <!-- 施加的身体部位 -->
     <hediffToApply>GR_Hediff_CombatChip</hediffToApply>     <!-- 对应的的 Hediff-->
-    <exclusionTags>
+    <exclusionTags>     <!-- 排除标签 -->
       <li>WorkChip</li>
     </exclusionTags>
     <researchPrerequisites>     <!-- 科技前置 -->
@@ -87,12 +87,12 @@
     <uiOrder>30</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <!-- 手部插件 -->
+  <!-- 手臂插件 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Hand_PrecisionChip</defName>
     <label>精密芯片插件</label>
-    <description>植入手部的精密操作芯片，提升制作精度和质量。</description>
-    <targetBodyPart>MechanicalHand</targetBodyPart>
+    <description>植入手臂的精密操作芯片，提升制作精度和质量。</description>
+    <targetBodyPart>MechanicalArm</targetBodyPart>
     <hediffToApply>GR_Hediff_PrecisionChip</hediffToApply>
     <researchPrerequisites>
       <li>ComplexClothing</li>
@@ -161,13 +161,10 @@
     <researchPrerequisites>
       <li>GR_DailyPlugin</li>
     </researchPrerequisites>
-
     <requiredMaterials>
       <ComponentIndustrial>2</ComponentIndustrial>
     </requiredMaterials>
-
     <workAmount>120</workAmount>
-
   </SD.GrayRace.Defs.GRUpgradeDef>
 
   <SD.GrayRace.Defs.GRUpgradeDef>

@@ -103,7 +103,7 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <GR_Alloy>100</GR_Alloy>
+      <GR_Alloy>200</GR_Alloy>
       <GR_Nanites>100</GR_Nanites>
     </costList>
     <equippedAngleOffset>0</equippedAngleOffset>
@@ -167,8 +167,9 @@
       <li>Metallic</li>
     </stuffCategories>
     <costList>
-      <GR_Alloy>30</GR_Alloy>
+      <GR_Alloy>40</GR_Alloy>
       <GR_Nanites>40</GR_Nanites>
+      <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <equippedAngleOffset>0</equippedAngleOffset>
     <tools>
@@ -177,7 +178,7 @@
         <capacities>
           <li>Stab</li>
         </capacities>
-        <power>20</power>
+        <power>10</power>
         <extraMeleeDamages>
           <li>
             <def>EMP</def>
@@ -195,7 +196,7 @@
         <capacities>
           <li>Cut</li>
         </capacities>
-        <power>40</power>
+        <power>25</power>
         <extraMeleeDamages>
           <li>
             <def>EMP</def>
@@ -338,7 +339,7 @@
     <costList>
       <GR_Alloy>160</GR_Alloy>
       <GR_Nanites>120</GR_Nanites>
-      <ComponentSpacer>6</ComponentSpacer>
+      <ComponentSpacer>20</ComponentSpacer>
     </costList>
     <equippedAngleOffset>0</equippedAngleOffset>
     <tools>
@@ -399,7 +400,7 @@
     </equippedStatOffsets>
     <costList>
       <GR_Alloy>333</GR_Alloy>
-      <GR_Nanites>33.3</GR_Nanites>
+      <GR_Nanites>333</GR_Nanites>
       <ComponentSpacer>20</ComponentSpacer>
       <GR_FundamentalCube>1</GR_FundamentalCube>
     </costList>

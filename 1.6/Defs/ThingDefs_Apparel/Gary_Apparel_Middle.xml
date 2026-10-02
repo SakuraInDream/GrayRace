@@ -815,7 +815,7 @@
     </thingCategories>
     <recipeMaker>
       <researchPrerequisites>
-        <li>GR_BasicClothing</li>
+        <li>GR_DecorativeClothing</li>
       </researchPrerequisites>
       <recipeUsers>
         <li>ElectricTailoringBench</li>

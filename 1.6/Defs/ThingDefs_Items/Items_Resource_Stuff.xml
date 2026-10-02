@@ -208,9 +208,6 @@
     </thingCategories>
     <stackLimit>250</stackLimit>
     <smallVolume>true</smallVolume>
-    <deepCommonality>0.1</deepCommonality>
-    <deepCountPerPortion>8</deepCountPerPortion>
-    <deepLumpSizeRange>1~4</deepLumpSizeRange>
     <burnableByRecipe>false</burnableByRecipe>
     <smeltable>true</smeltable>
     <stuffProps>
@@ -227,7 +224,6 @@
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
       <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
       <statOffsets>
-        <Beauty>6</Beauty>
         <PsychicSensitivity>0.5</PsychicSensitivity>
       </statOffsets>
       <statFactors>
@@ -249,7 +245,7 @@
       </statFactorsQuality>
     </stuffProps>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <allowedArchonexusCount>80</allowedArchonexusCount>
+    <allowedArchonexusCount>250</allowedArchonexusCount>
   </ThingDef>
 
 </Defs>

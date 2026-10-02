@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 齐射舰艉 -->
+  <GR_Cruiser_Stern_M1.label>TODO</GR_Cruiser_Stern_M1.label>
+  <!-- EN: Copied from Stellaris CRUISER_STERN_M1. -->
+  <GR_Cruiser_Stern_M1.description>TODO</GR_Cruiser_Stern_M1.description>
+  
+  <!-- EN: 炮艇舰艉 -->
+  <GR_Cruiser_Stern_S2.label>TODO</GR_Cruiser_Stern_S2.label>
+  <!-- EN: Heavy carrier mid section copied from Stellaris CRUISER_STERN_M1. -->
+  <GR_Cruiser_Stern_S2.description>TODO</GR_Cruiser_Stern_S2.description>
+  
+</LanguageData>

@@ -1,89 +1,94 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray Evening Banquet Dress -->
   <Gray_Apparel_BanquetDress.label>灰裔夜宴晚礼服</Gray_Apparel_BanquetDress.label>
   <!-- EN: . -->
   <Gray_Apparel_BanquetDress.description>TODO</Gray_Apparel_BanquetDress.description>
-  
+
   <!-- EN: Gray Duster -->
   <Gray_Apparel_Duster.label>灰裔风衣</Gray_Apparel_Duster.label>
   <!-- EN: . -->
   <Gray_Apparel_Duster.description>TODO</Gray_Apparel_Duster.description>
-  
+
   <!-- EN: Gray Envoy Dress -->
   <Gray_Apparel_Envoy.label>灰裔外交礼服</Gray_Apparel_Envoy.label>
   <!-- EN: . -->
   <Gray_Apparel_Envoy.description>TODO</Gray_Apparel_Envoy.description>
-  
+
   <!-- EN: Gray Himation -->
   <Gray_Apparel_Himation.label>灰裔希玛纯</Gray_Apparel_Himation.label>
   <!-- EN: . -->
   <Gray_Apparel_Himation.description>TODO</Gray_Apparel_Himation.description>
-  
+
   <!-- EN: Gray Maid -->
   <Gray_Apparel_Maid.label>灰裔女仆装</Gray_Apparel_Maid.label>
   <!-- EN: . -->
   <Gray_Apparel_Maid.description>TODO</Gray_Apparel_Maid.description>
-  
+
   <!-- EN: Gray miko outfit -->
   <Gray_Apparel_MikoOutfit.label>灰裔神道巫女服</Gray_Apparel_MikoOutfit.label>
   <!-- EN: . -->
   <Gray_Apparel_MikoOutfit.description>TODO</Gray_Apparel_MikoOutfit.description>
-  
+
   <!-- EN: Gray Nun -->
   <Gray_Apparel_Nun.label>灰裔修女服</Gray_Apparel_Nun.label>
   <!-- EN: . -->
   <Gray_Apparel_Nun.description>TODO</Gray_Apparel_Nun.description>
-  
+
   <!-- EN: Gray Office Lady Outfit -->
   <Gray_Apparel_OL.label>灰裔OL装</Gray_Apparel_OL.label>
   <!-- EN: . -->
   <Gray_Apparel_OL.description>TODO</Gray_Apparel_OL.description>
-  
+
   <!-- EN: Gray Qipao -->
   <Gray_Apparel_Qipao.label>“灰风”</Gray_Apparel_Qipao.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
   <Gray_Apparel_Qipao.description>她是灰风，是战无不胜的指挥官、舌战群儒的外交官、兴业安邦的行政官、星耀寰宇的科学官。也是灰裔族群的先驱者，民族的信仰——而现在，她来找你了，统治者。</Gray_Apparel_Qipao.description>
-  
+
   <!-- EN: Gray Raincoat -->
   <Gray_Apparel_Raincoat.label>灰裔雨衣</Gray_Apparel_Raincoat.label>
   <!-- EN: . -->
   <Gray_Apparel_Raincoat.description>TODO</Gray_Apparel_Raincoat.description>
-  
+
   <!-- EN: Gray Lab Coat -->
   <Gray_Apparel_Researcher.label>灰裔实验服</Gray_Apparel_Researcher.label>
   <!-- EN: . -->
   <Gray_Apparel_Researcher.description>TODO</Gray_Apparel_Researcher.description>
-  
+
   <!-- EN: Gray Sailor Suit -->
   <Gray_Apparel_SailorSuit.label>灰裔水手服</Gray_Apparel_SailorSuit.label>
   <!-- EN: . -->
   <Gray_Apparel_SailorSuit.description>TODO</Gray_Apparel_SailorSuit.description>
-  
+
   <!-- EN: Gray Sensual Wedding Dress -->
   <Gray_Apparel_SensualWeddingDress.label>灰裔性感新娘</Gray_Apparel_SensualWeddingDress.label>
   <!-- EN: . -->
   <Gray_Apparel_SensualWeddingDress.description>TODO</Gray_Apparel_SensualWeddingDress.description>
-  
+
+  <!-- EN: Gray Sweater -->
+  <Gray_Apparel_Sweater.label>灰裔毛衣</Gray_Apparel_Sweater.label>
+  <!-- EN: . -->
+  <Gray_Apparel_Sweater.description>TODO</Gray_Apparel_Sweater.description>
+
   <!-- EN: Gray Taoist Robe -->
   <Gray_Apparel_TaoistRobe.label>灰裔道袍</Gray_Apparel_TaoistRobe.label>
   <!-- EN: . -->
   <Gray_Apparel_TaoistRobe.description>TODO</Gray_Apparel_TaoistRobe.description>
-  
+
   <!-- EN: Gray Terra Messenger -->
-  <Gray_Apparel_TerraMessenger.label>TODO</Gray_Apparel_TerraMessenger.label>
+  <Gray_Apparel_TerraMessenger.label>灰裔大地使者</Gray_Apparel_TerraMessenger.label>
   <!-- EN: . -->
   <Gray_Apparel_TerraMessenger.description>TODO</Gray_Apparel_TerraMessenger.description>
-  
+
   <!-- EN: Gray Wedding Dress -->
-  <Gray_Apparel_WeddingDress.label>TODO</Gray_Apparel_WeddingDress.label>
+  <Gray_Apparel_WeddingDress.label>灰裔婚礼礼服</Gray_Apparel_WeddingDress.label>
   <!-- EN: . -->
   <Gray_Apparel_WeddingDress.description>TODO</Gray_Apparel_WeddingDress.description>
-  
+
   <!-- EN: Gray Workwear -->
   <Gray_Apparel_Workwear.label>灰裔工作服</Gray_Apparel_Workwear.label>
   <!-- EN: . -->
   <Gray_Apparel_Workwear.description>TODO</Gray_Apparel_Workwear.description>
-  
+
 </LanguageData>

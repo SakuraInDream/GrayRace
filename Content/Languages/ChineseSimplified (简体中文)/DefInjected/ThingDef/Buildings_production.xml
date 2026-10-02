@@ -1,24 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
+  <!-- EN: Gray Drydock -->
+  <GR_Drydock.label>灰裔干船坞</GR_Drydock.label>
+  <!-- EN: A modular drydock used to assemble Gray warship-bodied mechanoids from predefined fitting packages. -->
+  <GR_Drydock.description>TODO</GR_Drydock.description>
+
   <!-- EN: Heavy Element Fusion Reactor -->
   <GR_FusionReactor.label>重核聚变反应堆</GR_FusionReactor.label>
   <!-- EN: Produces power by consuming chemfuel. Must be periodically refueled by hand. -->
   <GR_FusionReactor.description>TODO</GR_FusionReactor.description>
-  
+
   <!-- EN: Incubator -->
   <GR_Incubator.label>培育仓</GR_Incubator.label>
   <!-- EN: A vat of fluid which can gestate an embryo or accelerate a child's growth.\n\nWhile growing or gestating, the vat must be fed with a constant supply of nutrition to provide the feedstock for growth. Gestating an embryo takes twice the nutrition of accelerating a child's growth.\n\nEmbryos are gestated for 9 days before a baby is formed. There is a risk of health complications.\n\nChild growth can only be accelerated up to age 18, but not beyond. While growing, a child's skills will slowly increase. Children raised in growth vats will have lower skills and gain fewer passions than normal.\n\nThe device uses chemical injections, electrical stimulation, and simple mechanite treatments to push the body to grow. Growth vats are often used to quickly manufacture engineered workers or warriors. -->
   <GR_Incubator.description>TODO</GR_Incubator.description>
-  
+
   <!-- EN: Nanite Reconfigurator -->
   <GR_NaniteReconfigurator.label>纳米重塑台</GR_NaniteReconfigurator.label>
   <!-- EN: A workbench equipped with advanced tools for producing technological marvels from simpler materials. -->
   <GR_NaniteReconfigurator.description>TODO</GR_NaniteReconfigurator.description>
-  
+
   <!-- EN: Nanite Transmuter -->
   <GR_NaniteTransmuter.label>纳米变形器</GR_NaniteTransmuter.label>
   <!-- EN: A workbench equipped with advanced tools for producing technological marvels from simpler materials. -->
   <GR_NaniteTransmuter.description>TODO</GR_NaniteTransmuter.description>
-  
+
 </LanguageData>

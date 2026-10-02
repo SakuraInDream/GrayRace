@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 巨炮舰艏 -->
+  <GR_Destroyer_BOW_L1.label>TODO</GR_Destroyer_BOW_L1.label>
+  <!-- EN: 从Stellaris那复制的DESTROYER_BOW_L1。 -->
+  <GR_Destroyer_BOW_L1.description>TODO</GR_Destroyer_BOW_L1.description>
+  
+  <!-- EN: 炮艇舰艏 -->
+  <GR_Destroyer_BOW_M1S2.label>TODO</GR_Destroyer_BOW_M1S2.label>
+  <!-- EN: 从Stellaris那复制的DESTROYER_BOW_M1S2。 -->
+  <GR_Destroyer_BOW_M1S2.description>TODO</GR_Destroyer_BOW_M1S2.description>
+  
+  <!-- EN: 哨卫舰艏 -->
+  <GR_Destroyer_BOW_S3.label>TODO</GR_Destroyer_BOW_S3.label>
+  <!-- EN: 从Stellaris那复制的DESTROYER_BOW_S3。 -->
+  <GR_Destroyer_BOW_S3.description>TODO</GR_Destroyer_BOW_S3.description>
+  
+</LanguageData>

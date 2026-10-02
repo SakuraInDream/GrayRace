@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- 1级装甲 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor1_S"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>2</ArmorRating_Sharp>
+        <ArmorRating_Blunt>4</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor1_M"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>4</ArmorRating_Sharp>
+        <ArmorRating_Blunt>8</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor1_L"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <!-- 2级装甲 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor2_S"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>4</ArmorRating_Sharp>
+        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor2_M"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+        <ArmorRating_Blunt>32</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor2_L"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>16</ArmorRating_Sharp>
+        <ArmorRating_Blunt>64</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <!-- 3级装甲 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor3_S"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+        <ArmorRating_Blunt>64</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor3_M"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>16</ArmorRating_Sharp>
+        <ArmorRating_Blunt>128</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor3_L"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>32</ArmorRating_Sharp>
+        <ArmorRating_Blunt>256</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <!-- 4级装甲 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor4_S"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>16</ArmorRating_Sharp>
+        <ArmorRating_Blunt>256</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor4_M"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>32</ArmorRating_Sharp>
+        <ArmorRating_Blunt>512</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor4_L"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>64</ArmorRating_Sharp>
+        <ArmorRating_Blunt>1024</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <!-- 5级装甲 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor5_S"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>32</ArmorRating_Sharp>
+        <ArmorRating_Blunt>1024</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor5_M"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>64</ArmorRating_Sharp>
+        <ArmorRating_Blunt>2048</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor5_L"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <ArmorRating_Sharp>128</ArmorRating_Sharp>
+        <ArmorRating_Blunt>4096</ArmorRating_Blunt>
+      </statOffsets>
+    </value>
+  </Operation>
+</Patch>

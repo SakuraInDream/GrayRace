@@ -15,6 +15,13 @@
   <!-- EN: transmuting things at -->
   <GR_DoBillsNaniteTransmuter.verb>TODO</GR_DoBillsNaniteTransmuter.verb>
   
+  <!-- EN: filling drydock materials -->
+  <GR_FillDrydockMaterials.label>TODO</GR_FillDrydockMaterials.label>
+  <!-- EN: filling -->
+  <GR_FillDrydockMaterials.gerund>TODO</GR_FillDrydockMaterials.gerund>
+  <!-- EN: fill -->
+  <GR_FillDrydockMaterials.verb>TODO</GR_FillDrydockMaterials.verb>
+  
   <!-- EN: Filling Incubator. -->
   <GR_FillIncubatorNanites.label>TODO</GR_FillIncubatorNanites.label>
   <!-- EN: filling -->

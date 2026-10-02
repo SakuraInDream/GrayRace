@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 化学推进器 -->
+  <GR_MechModule_Thruster_Chemical_Battleship.label>TODO</GR_MechModule_Thruster_Chemical_Battleship.label>
+  <!-- EN: 简单而有效的化学助推器依靠可燃物推动机械体。 -->
+  <GR_MechModule_Thruster_Chemical_Battleship.description>TODO</GR_MechModule_Thruster_Chemical_Battleship.description>
+  
+  <!-- EN: 化学推进器 -->
+  <GR_MechModule_Thruster_Chemical_Corvette.label>TODO</GR_MechModule_Thruster_Chemical_Corvette.label>
+  <!-- EN: 简单而有效的化学助推器依靠可燃物推动机械体。 -->
+  <GR_MechModule_Thruster_Chemical_Corvette.description>TODO</GR_MechModule_Thruster_Chemical_Corvette.description>
+  
+  <!-- EN: 化学推进器 -->
+  <GR_MechModule_Thruster_Chemical_Cruiser.label>TODO</GR_MechModule_Thruster_Chemical_Cruiser.label>
+  <!-- EN: 简单而有效的化学助推器依靠可燃物推动机械体。 -->
+  <GR_MechModule_Thruster_Chemical_Cruiser.description>TODO</GR_MechModule_Thruster_Chemical_Cruiser.description>
+  
+  <!-- EN: 化学推进器 -->
+  <GR_MechModule_Thruster_Chemical_Destroyer.label>TODO</GR_MechModule_Thruster_Chemical_Destroyer.label>
+  <!-- EN: 简单而有效的化学助推器依靠可燃物推动机械体。 -->
+  <GR_MechModule_Thruster_Chemical_Destroyer.description>TODO</GR_MechModule_Thruster_Chemical_Destroyer.description>
+  
+  <!-- EN: 化学推进器 -->
+  <GR_MechModule_Thruster_Chemical_Juggernaut.label>TODO</GR_MechModule_Thruster_Chemical_Juggernaut.label>
+  <!-- EN: 简单而有效的化学助推器依靠可燃物推动机械体。 -->
+  <GR_MechModule_Thruster_Chemical_Juggernaut.description>TODO</GR_MechModule_Thruster_Chemical_Juggernaut.description>
+  
+  <!-- EN: 化学推进器 -->
+  <GR_MechModule_Thruster_Chemical_Titan.label>TODO</GR_MechModule_Thruster_Chemical_Titan.label>
+  <!-- EN: 简单而有效的化学助推器依靠可燃物推动机械体。 -->
+  <GR_MechModule_Thruster_Chemical_Titan.description>TODO</GR_MechModule_Thruster_Chemical_Titan.description>
+  
+  <!-- EN: 暗物质推进器 -->
+  <GR_MechModule_Thruster_DarkMatter_Battleship.label>TODO</GR_MechModule_Thruster_DarkMatter_Battleship.label>
+  <!-- EN: 这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。 -->
+  <GR_MechModule_Thruster_DarkMatter_Battleship.description>TODO</GR_MechModule_Thruster_DarkMatter_Battleship.description>
+  
+  <!-- EN: 暗物质推进器 -->
+  <GR_MechModule_Thruster_DarkMatter_Corvette.label>TODO</GR_MechModule_Thruster_DarkMatter_Corvette.label>
+  <!-- EN: 这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。 -->
+  <GR_MechModule_Thruster_DarkMatter_Corvette.description>TODO</GR_MechModule_Thruster_DarkMatter_Corvette.description>
+  
+  <!-- EN: 暗物质推进器 -->
+  <GR_MechModule_Thruster_DarkMatter_Cruiser.label>TODO</GR_MechModule_Thruster_DarkMatter_Cruiser.label>
+  <!-- EN: 这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。 -->
+  <GR_MechModule_Thruster_DarkMatter_Cruiser.description>TODO</GR_MechModule_Thruster_DarkMatter_Cruiser.description>
+  
+  <!-- EN: 暗物质推进器 -->
+  <GR_MechModule_Thruster_DarkMatter_Destroyer.label>TODO</GR_MechModule_Thruster_DarkMatter_Destroyer.label>
+  <!-- EN: 这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。 -->
+  <GR_MechModule_Thruster_DarkMatter_Destroyer.description>TODO</GR_MechModule_Thruster_DarkMatter_Destroyer.description>
+  
+  <!-- EN: 暗物质推进器 -->
+  <GR_MechModule_Thruster_DarkMatter_Juggernaut.label>TODO</GR_MechModule_Thruster_DarkMatter_Juggernaut.label>
+  <!-- EN: 这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。 -->
+  <GR_MechModule_Thruster_DarkMatter_Juggernaut.description>TODO</GR_MechModule_Thruster_DarkMatter_Juggernaut.description>
+  
+  <!-- EN: 暗物质推进器 -->
+  <GR_MechModule_Thruster_DarkMatter_Titan.label>TODO</GR_MechModule_Thruster_DarkMatter_Titan.label>
+  <!-- EN: 这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。 -->
+  <GR_MechModule_Thruster_DarkMatter_Titan.description>TODO</GR_MechModule_Thruster_DarkMatter_Titan.description>
+  
+  <!-- EN: 脉冲推进器 -->
+  <GR_MechModule_Thruster_Impulse_Battleship.label>TODO</GR_MechModule_Thruster_Impulse_Battleship.label>
+  <!-- EN: 在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。 -->
+  <GR_MechModule_Thruster_Impulse_Battleship.description>TODO</GR_MechModule_Thruster_Impulse_Battleship.description>
+  
+  <!-- EN: 脉冲推进器 -->
+  <GR_MechModule_Thruster_Impulse_Corvette.label>TODO</GR_MechModule_Thruster_Impulse_Corvette.label>
+  <!-- EN: 在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。 -->
+  <GR_MechModule_Thruster_Impulse_Corvette.description>TODO</GR_MechModule_Thruster_Impulse_Corvette.description>
+  
+  <!-- EN: 脉冲推进器 -->
+  <GR_MechModule_Thruster_Impulse_Cruiser.label>TODO</GR_MechModule_Thruster_Impulse_Cruiser.label>
+  <!-- EN: 在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。 -->
+  <GR_MechModule_Thruster_Impulse_Cruiser.description>TODO</GR_MechModule_Thruster_Impulse_Cruiser.description>
+  
+  <!-- EN: 脉冲推进器 -->
+  <GR_MechModule_Thruster_Impulse_Destroyer.label>TODO</GR_MechModule_Thruster_Impulse_Destroyer.label>
+  <!-- EN: 在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。 -->
+  <GR_MechModule_Thruster_Impulse_Destroyer.description>TODO</GR_MechModule_Thruster_Impulse_Destroyer.description>
+  
+  <!-- EN: 脉冲推进器 -->
+  <GR_MechModule_Thruster_Impulse_Juggernaut.label>TODO</GR_MechModule_Thruster_Impulse_Juggernaut.label>
+  <!-- EN: 在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。 -->
+  <GR_MechModule_Thruster_Impulse_Juggernaut.description>TODO</GR_MechModule_Thruster_Impulse_Juggernaut.description>
+  
+  <!-- EN: 脉冲推进器 -->
+  <GR_MechModule_Thruster_Impulse_Titan.label>TODO</GR_MechModule_Thruster_Impulse_Titan.label>
+  <!-- EN: 在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。 -->
+  <GR_MechModule_Thruster_Impulse_Titan.description>TODO</GR_MechModule_Thruster_Impulse_Titan.description>
+  
+  <!-- EN: 离子推进器 -->
+  <GR_MechModule_Thruster_Ion_Battleship.label>TODO</GR_MechModule_Thruster_Ion_Battleship.label>
+  <!-- EN: 此种电推进器的推力来源于离子束，而非传统工质。 -->
+  <GR_MechModule_Thruster_Ion_Battleship.description>TODO</GR_MechModule_Thruster_Ion_Battleship.description>
+  
+  <!-- EN: 离子推进器 -->
+  <GR_MechModule_Thruster_Ion_Corvette.label>TODO</GR_MechModule_Thruster_Ion_Corvette.label>
+  <!-- EN: 此种电推进器的推力来源于离子束，而非传统工质。 -->
+  <GR_MechModule_Thruster_Ion_Corvette.description>TODO</GR_MechModule_Thruster_Ion_Corvette.description>
+  
+  <!-- EN: 离子推进器 -->
+  <GR_MechModule_Thruster_Ion_Cruiser.label>TODO</GR_MechModule_Thruster_Ion_Cruiser.label>
+  <!-- EN: 此种电推进器的推力来源于离子束，而非传统工质。 -->
+  <GR_MechModule_Thruster_Ion_Cruiser.description>TODO</GR_MechModule_Thruster_Ion_Cruiser.description>
+  
+  <!-- EN: 离子推进器 -->
+  <GR_MechModule_Thruster_Ion_Destroyer.label>TODO</GR_MechModule_Thruster_Ion_Destroyer.label>
+  <!-- EN: 此种电推进器的推力来源于离子束，而非传统工质。 -->
+  <GR_MechModule_Thruster_Ion_Destroyer.description>TODO</GR_MechModule_Thruster_Ion_Destroyer.description>
+  
+  <!-- EN: 离子推进器 -->
+  <GR_MechModule_Thruster_Ion_Juggernaut.label>TODO</GR_MechModule_Thruster_Ion_Juggernaut.label>
+  <!-- EN: 此种电推进器的推力来源于离子束，而非传统工质。 -->
+  <GR_MechModule_Thruster_Ion_Juggernaut.description>TODO</GR_MechModule_Thruster_Ion_Juggernaut.description>
+  
+  <!-- EN: 离子推进器 -->
+  <GR_MechModule_Thruster_Ion_Titan.label>TODO</GR_MechModule_Thruster_Ion_Titan.label>
+  <!-- EN: 此种电推进器的推力来源于离子束，而非传统工质。 -->
+  <GR_MechModule_Thruster_Ion_Titan.description>TODO</GR_MechModule_Thruster_Ion_Titan.description>
+  
+  <!-- EN: 等离子推进器 -->
+  <GR_MechModule_Thruster_Plasma_Battleship.label>TODO</GR_MechModule_Thruster_Plasma_Battleship.label>
+  <!-- EN: 等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。 -->
+  <GR_MechModule_Thruster_Plasma_Battleship.description>TODO</GR_MechModule_Thruster_Plasma_Battleship.description>
+  
+  <!-- EN: 等离子推进器 -->
+  <GR_MechModule_Thruster_Plasma_Corvette.label>TODO</GR_MechModule_Thruster_Plasma_Corvette.label>
+  <!-- EN: 等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。 -->
+  <GR_MechModule_Thruster_Plasma_Corvette.description>TODO</GR_MechModule_Thruster_Plasma_Corvette.description>
+  
+  <!-- EN: 等离子推进器 -->
+  <GR_MechModule_Thruster_Plasma_Cruiser.label>TODO</GR_MechModule_Thruster_Plasma_Cruiser.label>
+  <!-- EN: 等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。 -->
+  <GR_MechModule_Thruster_Plasma_Cruiser.description>TODO</GR_MechModule_Thruster_Plasma_Cruiser.description>
+  
+  <!-- EN: 等离子推进器 -->
+  <GR_MechModule_Thruster_Plasma_Destroyer.label>TODO</GR_MechModule_Thruster_Plasma_Destroyer.label>
+  <!-- EN: 等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。 -->
+  <GR_MechModule_Thruster_Plasma_Destroyer.description>TODO</GR_MechModule_Thruster_Plasma_Destroyer.description>
+  
+  <!-- EN: 等离子推进器 -->
+  <GR_MechModule_Thruster_Plasma_Juggernaut.label>TODO</GR_MechModule_Thruster_Plasma_Juggernaut.label>
+  <!-- EN: 等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。 -->
+  <GR_MechModule_Thruster_Plasma_Juggernaut.description>TODO</GR_MechModule_Thruster_Plasma_Juggernaut.description>
+  
+  <!-- EN: 等离子推进器 -->
+  <GR_MechModule_Thruster_Plasma_Titan.label>TODO</GR_MechModule_Thruster_Plasma_Titan.label>
+  <!-- EN: 等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。 -->
+  <GR_MechModule_Thruster_Plasma_Titan.description>TODO</GR_MechModule_Thruster_Plasma_Titan.description>
+  
+</LanguageData>
