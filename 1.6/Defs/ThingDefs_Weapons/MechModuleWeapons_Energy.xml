@@ -595,7 +595,7 @@
       <li>
         <verbClass>SD.GrayRace.Verbs.Verb_GrayTitanLance</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <warmupTime>8</warmupTime>
+        <warmupTime>4</warmupTime>
         <minRange>5</minRange>
         <range>70</range>
         <burstShotCount>24</burstShotCount>

@@ -19,30 +19,47 @@
     <stages>
       <li>
         <statOffsets>
-          <!-- <NightVisionEfficiency MayRequire="CETeam.CombatExtended">2.0</NightVisionEfficiency> -->
           <NightVisionEfficiency>2.0</NightVisionEfficiency>
         </statOffsets>
       </li>
     </stages>
   </HediffDef>
 
-  <!-- 插件 Hediff 示例 -->
+  <!-- ================================== 大脑插件 ================================== -->
 
   <!-- 战斗芯片 -->
   <HediffDef>
     <defName>GR_Hediff_CombatChip</defName>
-    <label>战斗芯片</label>
+    <label>Combat Chip</label>
+    <description>植入大脑的战斗芯片，提升远程射击能力。</description>
+    <defaultLabelColor>(0.23, 0.51, 0.96)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-    <description>植入大脑的战斗芯片，提升战斗能力。</description>
-    <defaultLabelColor>(0.8, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
     <stages>
       <li>
         <statOffsets>
-          <ShootingAccuracyPawn>0.25</ShootingAccuracyPawn>
-          <MeleeHitChance>0.2</MeleeHitChance>
-          <MeleeDodgeChance>0.15</MeleeDodgeChance>
+          <RangedCooldownFactor>-0.2</RangedCooldownFactor>
+          <AimingDelayFactor>-0.2</AimingDelayFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 反应芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_ReactionChip</defName>
+    <label>Reaction Chip</label>
+    <description>存储着百般武艺的精炼数据芯片。应对、预测、使用——只要陷入近身战，定能派上用场。</description>
+    <defaultLabelColor>(0.90, 0.22, 0.27)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>2</MeleeHitChance>
+          <MeleeDodgeChance>2</MeleeDodgeChance>
         </statOffsets>
       </li>
     </stages>
@@ -51,11 +68,11 @@
   <!-- 分析芯片 -->
   <HediffDef>
     <defName>GR_Hediff_AnalysisChip</defName>
-    <label>分析芯片</label>
+    <label>Analysis Chip</label>
+    <description>协助主人格核心学习的拓展芯片。专门用于多次迭代数据，推测不同选择的后果。……只要失败了足够多次的话，便能推测出正确的路线吧。</description>
+    <defaultLabelColor>(0.49, 0.30, 1.00)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-    <description>植入大脑的分析芯片，提升学习能力。</description>
-    <defaultLabelColor>(0.3, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
     <stages>
       <li>
@@ -67,66 +84,47 @@
     </stages>
   </HediffDef>
 
-  <!-- 效率增强器 -->
+  <!-- 集中芯片 -->
   <HediffDef>
-    <defName>GR_Hediff_EfficiencyBooster</defName>
-    <label>效率增强器</label>
+    <defName>GR_Hediff_ConcentrateChip</defName>
+    <label>Concentrate Chip</label>
+    <description>植入大脑的集中芯片，提升工作能力。</description>
+    <defaultLabelColor>(0.42, 0.64, 0.41)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-    <description>安装在灰潮核心的增强器。增加备用灰潮机械回复速度</description>
-    <defaultLabelColor>(0.2, 0.8, 0.2)</defaultLabelColor>
     <isBad>false</isBad>
     <stages>
       <li>
         <statOffsets>
-          <GRStat_NaniteRegenRate>1</GRStat_NaniteRegenRate>
-          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+          <GeneralLaborSpeed>0.5</GeneralLaborSpeed>
+          <ConstructionSpeed>1</ConstructionSpeed>
         </statOffsets>
       </li>
     </stages>
   </HediffDef>
 
-  <!-- 精密芯片 -->
+  <!-- 技工本地数据库 -->
+
   <HediffDef>
-    <defName>GR_Hediff_PrecisionChip</defName>
-    <label>精密芯片</label>
+    <defName>GR_Hediff_TechnicianDatabase</defName>
+    <label>Technician local database</label>
+    <description>存储着大量蓝图的数据库。甚至收录了宇宙中存在过和已经消失的螺丝规格，以及对应的工具。</description>
+    <defaultLabelColor>(0.42, 0.64, 0.41)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-    <description>植入手部的精密操作芯片。</description>
-    <defaultLabelColor>(0.6, 0.3, 0.8)</defaultLabelColor>
     <isBad>false</isBad>
-    <stages>
-      <li>
-        <statOffsets>
-          <WorkSpeedGlobal>0.2</WorkSpeedGlobal>
-        </statOffsets>
-      </li>
-    </stages>
+    <aptitudes>
+      <Construction>8</Construction>
+      <Crafting>8</Crafting>
+    </aptitudes>
   </HediffDef>
 
-  <!-- 瞄准系统 -->
-  <HediffDef>
-    <defName>GR_Hediff_TargetingSystem</defName>
-    <label>瞄准系统</label>
-    <hediffClass>HediffWithComps</hediffClass>
-    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
-    <description>植入眼部的先进瞄准系统。</description>
-    <defaultLabelColor>(0.8, 0.6, 0.2)</defaultLabelColor>
-    <isBad>false</isBad>
-    <stages>
-      <li>
-        <statOffsets>
-          <ShootingAccuracyPawn>0.35</ShootingAccuracyPawn>
-          <AimingDelayFactor>-0.2</AimingDelayFactor>
-        </statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
-
+  <!--超频芯片-->
   <HediffDef>
     <defName>GR_Hediff_OverclockingChipPrimary</defName>
-    <label>初级超频芯片</label>
-    <description>增加25%超频上限。</description>
+    <label>Primary overclocking chip</label>
+    <description>简单的超频支持插件。仅仅用于控制核心能量的再分配与优化。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <isBad>false</isBad>
@@ -141,8 +139,9 @@
 
   <HediffDef>
     <defName>GR_Hediff_OverclockingChipIntermediate</defName>
-    <label>中级超频芯片</label>
-    <description>增加75%超频上限。</description>
+    <label>Intermediate overclocking chip</label>
+    <description>精心构建的超频支持插件。在安全超频的前提下做到了极限。对于许多灰裔来说，这是一道分水岭。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <isBad>false</isBad>
@@ -157,8 +156,9 @@
 
   <HediffDef>
     <defName>GR_Hediff_OverclockingChipAdvanced</defName>
-    <label>高级超频芯片</label>
-    <description>增加150%超频上限。</description>
+    <label>Advanced overclocking chip</label>
+    <description>无视安全超频协议的产物。需要牺牲一部分源质容量。失去赖以为生的源质，足以让任何灰裔理解这款芯片的危险性。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <isBad>false</isBad>
@@ -174,8 +174,9 @@
 
   <HediffDef>
     <defName>GR_Hediff_OverclockingChipUltimate</defName>
-    <label>终级超频芯片</label>
-    <description>增加250%超频上限。</description>
+    <label>Ultimate overclocking chip</label>
+    <description>骇入人格核心，将能量供应推至满载。几乎刚需外置源质储罐。……即便能理解降低源质储量意味着什么，超频到极限所带来的全能感仍在狂欢。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
     <hediffClass>HediffWithComps</hediffClass>
     <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
     <isBad>false</isBad>
@@ -189,4 +190,137 @@
     </stages>
   </HediffDef>
 
+  <!-- ================================== 心脏插件 ================================== -->
+
+  <!-- 效率增强器 -->
+  <HediffDef>
+    <defName>GR_Hediff_EfficiencyBooster</defName>
+    <label>Efficiency Booster</label>
+    <description>安装在灰潮核心的增强器。增加备用灰潮机械回复速度。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteRegenRate>1</GRStat_NaniteRegenRate>
+          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 手臂插件 ================================== -->
+
+  <!-- 精密芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_PrecisionChip</defName>
+    <label>Precision Chip</label>
+    <description>植入手臂的精密操作芯片。</description>
+    <defaultLabelColor>(0.42, 0.64, 0.41)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GeneralLaborSpeed>0.2</GeneralLaborSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 眼部插件 ================================== -->
+
+  <!-- 瞄准系统 -->
+  <HediffDef>
+    <defName>GR_Hediff_TargetingSystem</defName>
+    <label>Targeting System</label>
+    <description>兼容各式装备的目标分析与识别元件。能有效避免友军误伤，同时提供可靠的向量预测功能。经常有骑士灰裔以礼物的方式赠送给搭档。</description>
+    <defaultLabelColor>(0.23, 0.51, 0.96)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 躯干插件 ================================== -->
+
+  <!--灰潮源质存储器-->
+  <HediffDef>
+    <defName>GR_Hediff_NanitesMemoryPrimary</defName>
+    <label>Primary nanite memory</label>
+    <description>正如其名称，用于存储源质的存储器。可提升灰裔体内的灰潮源质存储单位上限。专门设计成了几乎不会对行动造成阻碍的小型款式。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteMax>250</GRStat_NaniteMax>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_NanitesMemoryIntermediate</defName>
+    <label>Intermediate nanite memory</label>
+    <description>正如其名称，用于存储源质的存储器。因为更大的体积和制造成本，得以采用更高效的压缩方式。不但大幅提升了存储上限，应其控制良好的体积和分布方式，并不会对行动造成影响。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteMax>750</GRStat_NaniteMax>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_NanitesMemoryAdvanced</defName>
+    <label>Advanced nanite memory</label>
+    <description>正如其名称，用于存储源质的存储器。这种款式一般只会用于运输目的。会一定程度上影响灰裔的行动能力的同时，还需抽调少量核心的算力用于压缩灰潮源质。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteMax>1500</GRStat_NaniteMax>
+          <GRStat_OverclockMaxLevel>-0.25</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_NanitesMemoryUltimate</defName>
+    <label>Ultimate nanite memory</label>
+    <description>正如其名称，用于存储源质的存储器。基本上只会在涉及到大规模建设的运输作业中见到。这种级别的插件，会对核心算力和行动能力产生严重影响，足让有些灰裔将其视为责罚。</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteMax>2500</GRStat_NaniteMax>
+          <GRStat_OverclockMaxLevel>-0.75</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
 </Defs>

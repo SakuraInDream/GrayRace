@@ -25,7 +25,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
+      <WorkToMake>300000</WorkToMake>
       <Mass>4</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -89,7 +89,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>6000</WorkToMake>
+      <WorkToMake>60000</WorkToMake>
       <Mass>150</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -154,7 +154,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>9000</WorkToMake>
+      <WorkToMake>45000</WorkToMake>
       <Mass>3</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -241,7 +241,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>18000</WorkToMake>
+      <WorkToMake>90000</WorkToMake>
       <Mass>5</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -328,7 +328,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>48000</WorkToMake>
+      <WorkToMake>180000</WorkToMake>
       <Mass>0.5</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -389,7 +389,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>6000</WorkToMake>
+      <WorkToMake>1200000</WorkToMake>
       <Mass>3.33</Mass>
       <Flammability>0</Flammability>
     </statBases>
@@ -450,7 +450,7 @@
       <li>GR_WeaponsMelee</li>
     </thingCategories>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
+      <WorkToMake>1200000</WorkToMake>
       <Mass>0</Mass>
       <Flammability>0</Flammability>
     </statBases>

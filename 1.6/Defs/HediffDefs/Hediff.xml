@@ -19,7 +19,7 @@
     <comps>
       <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NanitesRegeneration">
         <naniteCostPerSeconds>10</naniteCostPerSeconds>
-        <healAmountPerSeconds>2</healAmountPerSeconds>
+        <healAmountPerSeconds>5</healAmountPerSeconds>
       </li>
     </comps>
   </HediffDef>
@@ -34,19 +34,10 @@
     <preventsDeath>false</preventsDeath>
     <stages>
       <li>
+        <statFactors>
+          <PsychicSensitivity>0</PsychicSensitivity>
+        </statFactors>
         <becomeVisible>false</becomeVisible>
-        <makeImmuneTo>
-          <li>Flu</li>
-          <li>GutWorms</li>
-          <li>FibrousMechanites</li>
-          <li>Malaria</li>
-          <li>MuscleParasites</li>
-          <li>Plague</li>
-          <li>SensoryMechanites</li>
-          <li>SleepingSickness</li>
-          <li>WoundInfection</li>
-        </makeImmuneTo>
-        <naturalHealingFactor>0</naturalHealingFactor>
         <minSeverity>0</minSeverity>
       </li>
     </stages>

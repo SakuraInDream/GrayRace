@@ -34,13 +34,13 @@
     </thingCategories>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
-      <WorkToBuild>6000</WorkToBuild>
+      <WorkToBuild>48000</WorkToBuild>
       <Mass>60</Mass>
       <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>200</GR_Alloy>
-      <GR_Nanites>40</GR_Nanites>
+      <GR_Nanites>400</GR_Nanites>
       <ComponentSpacer>10</ComponentSpacer>
     </costList>
     <building>
@@ -100,14 +100,14 @@
     <uiOrder>600</uiOrder>
     <statBases>
       <MaxHitPoints>450</MaxHitPoints>
-      <WorkToBuild>12000</WorkToBuild>
+      <WorkToBuild>90000</WorkToBuild>
       <Mass>25</Mass>
       <Flammability>0</Flammability>
     </statBases>
     <size>(2,2)</size>
     <costList>
-      <GR_Alloy>300</GR_Alloy>
-      <GR_Nanites>100</GR_Nanites>
+      <GR_Alloy>400</GR_Alloy>
+      <GR_Nanites>800</GR_Nanites>
       <ComponentSpacer>10</ComponentSpacer>
     </costList>
     <researchPrerequisites>
@@ -153,14 +153,14 @@
     </researchPrerequisites>
     <statBases>
       <MaxHitPoints>1000</MaxHitPoints>
-      <WorkToBuild>600</WorkToBuild>
+      <WorkToBuild>900</WorkToBuild>
       <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>2</GR_Alloy>
       <GR_Nanites>3</GR_Nanites>
     </costList>
-    <costStuffCount>10</costStuffCount>
+    <costStuffCount>3</costStuffCount>
     <designationCategory>Gray_Building</designationCategory>
     <uiOrder>10</uiOrder>
     <stuffCategories Inherit="false">

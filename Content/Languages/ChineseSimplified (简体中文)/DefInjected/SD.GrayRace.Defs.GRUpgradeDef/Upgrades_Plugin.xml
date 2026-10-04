@@ -1,54 +1,89 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 分析芯片 -->
+  <!-- EN: PrecisionChip -->
+  <GR_Plugin_Arm_PrecisionChip.label>TODO</GR_Plugin_Arm_PrecisionChip.label>
+  <!-- EN: 植入手臂的精密操作芯片，提升制作精度和质量。 -->
+  <GR_Plugin_Arm_PrecisionChip.description>TODO</GR_Plugin_Arm_PrecisionChip.description>
+  
+  <!-- EN: Analysis Chip -->
   <GR_Plugin_Brain_AnalysisChip.label>TODO</GR_Plugin_Brain_AnalysisChip.label>
-  <!-- EN: 植入人格核心的超级分析芯片，提升研究速度和学习能力。 -->
+  <!-- EN: 协助主人格核心学习的拓展芯片。专门用于多次迭代数据，推测不同选择的后果。……只要失败了足够多次的话，便能推测出正确的路线吧。 -->
   <GR_Plugin_Brain_AnalysisChip.description>TODO</GR_Plugin_Brain_AnalysisChip.description>
   
-  <!-- EN: 战斗芯片 -->
+  <!-- EN: CombatChip -->
   <GR_Plugin_Brain_CombatChip.label>TODO</GR_Plugin_Brain_CombatChip.label>
-  <!-- EN: 植入人格核心的高级战斗芯片，提升战斗效率和反应速度。 -->
+  <!-- EN: 植入人格核心的高级战斗芯片，提升远程射击能力。 -->
   <GR_Plugin_Brain_CombatChip.description>TODO</GR_Plugin_Brain_CombatChip.description>
+  
+  <!-- EN: Concentrate Chip -->
+  <GR_Plugin_Brain_ConcentrateChip.label>TODO</GR_Plugin_Brain_ConcentrateChip.label>
+  <!-- EN: 植入人格核心的集中芯片，提升工作能力。 -->
+  <GR_Plugin_Brain_ConcentrateChip.description>TODO</GR_Plugin_Brain_ConcentrateChip.description>
   
   <!-- EN: 机控中枢 -->
   <GR_Plugin_Brain_Mechlink.label>TODO</GR_Plugin_Brain_Mechlink.label>
   <!-- EN: 将机控中枢与人格核心连接，允许操控机械族。 -->
   <GR_Plugin_Brain_Mechlink.description>TODO</GR_Plugin_Brain_Mechlink.description>
   
-  <!-- EN: 瞄准系统插件 -->
+  <!-- EN: Reaction Chip -->
+  <GR_Plugin_Brain_ReactionChip.label>TODO</GR_Plugin_Brain_ReactionChip.label>
+  <!-- EN: 存储着百般武艺的精炼数据芯片。应对、预测、使用——只要陷入近身战，定能派上用场。 -->
+  <GR_Plugin_Brain_ReactionChip.description>TODO</GR_Plugin_Brain_ReactionChip.description>
+  
+  <!-- EN: Technician local database -->
+  <GR_Plugin_Brain_TechnicianDatabase.label>TODO</GR_Plugin_Brain_TechnicianDatabase.label>
+  <!-- EN: 存储着大量蓝图的数据库。甚至收录了宇宙中存在过和已经消失的螺丝规格，以及对应的工具。 -->
+  <GR_Plugin_Brain_TechnicianDatabase.description>TODO</GR_Plugin_Brain_TechnicianDatabase.description>
+  
+  <!-- EN: TargetingSystem -->
   <GR_Plugin_Eye_TargetingSystem.label>TODO</GR_Plugin_Eye_TargetingSystem.label>
-  <!-- EN: 植入眼部的先进瞄准系统，大幅提升射击精度。 -->
+  <!-- EN: 兼容各式装备的目标分析与识别元件。能有效避免友军误伤，同时提供可靠的向量预测功能。经常有骑士灰裔以礼物的方式赠送给搭档。 -->
   <GR_Plugin_Eye_TargetingSystem.description>TODO</GR_Plugin_Eye_TargetingSystem.description>
   
-  <!-- EN: 精密芯片插件 -->
-  <GR_Plugin_Hand_PrecisionChip.label>TODO</GR_Plugin_Hand_PrecisionChip.label>
-  <!-- EN: 植入手臂的精密操作芯片，提升制作精度和质量。 -->
-  <GR_Plugin_Hand_PrecisionChip.description>TODO</GR_Plugin_Hand_PrecisionChip.description>
-  
-  <!-- EN: 效率增强器插件 -->
+  <!-- EN: EfficiencyBooster -->
   <GR_Plugin_Heart_EfficiencyBooster.label>TODO</GR_Plugin_Heart_EfficiencyBooster.label>
   <!-- EN: 安装在灰潮核心的效率增强器，提升纳米机械恢复速度。 -->
   <GR_Plugin_Heart_EfficiencyBooster.description>TODO</GR_Plugin_Heart_EfficiencyBooster.description>
   
+  <!-- EN: Advanced nanites memory -->
+  <GR_Plugin_NanitesMemoryAdvanced.label>TODO</GR_Plugin_NanitesMemoryAdvanced.label>
+  <!-- EN: 正如其名称，用于存储源质的存储器。这种款式一般只会用于运输目的。会一定程度上影响灰裔的行动能力的同时，还需抽调少量核心的算力用于压缩灰潮源质。 -->
+  <GR_Plugin_NanitesMemoryAdvanced.description>TODO</GR_Plugin_NanitesMemoryAdvanced.description>
+  
+  <!-- EN: Intermediate nanites memory -->
+  <GR_Plugin_NanitesMemoryIntermediate.label>TODO</GR_Plugin_NanitesMemoryIntermediate.label>
+  <!-- EN: 正如其名称，用于存储源质的存储器。因为更大的体积和制造成本，得以采用更高效的压缩方式。不但大幅提升了存储上限，应其控制良好的体积和分布方式，并不会对行动造成影响。 -->
+  <GR_Plugin_NanitesMemoryIntermediate.description>TODO</GR_Plugin_NanitesMemoryIntermediate.description>
+  
+  <!-- EN: Primary nanites memory -->
+  <GR_Plugin_NanitesMemoryPrimary.label>TODO</GR_Plugin_NanitesMemoryPrimary.label>
+  <!-- EN: 正如其名称，用于存储源质的存储器。可提升灰裔体内的灰潮源质存储单位上限。专门设计成了几乎不会对行动造成阻碍的小型款式。 -->
+  <GR_Plugin_NanitesMemoryPrimary.description>TODO</GR_Plugin_NanitesMemoryPrimary.description>
+  
+  <!-- EN: Ultimate nanites memory -->
+  <GR_Plugin_NanitesMemoryUltimate.label>TODO</GR_Plugin_NanitesMemoryUltimate.label>
+  <!-- EN: 正如其名称，用于存储源质的存储器。基本上只会在涉及到大规模建设的运输作业中见到。这种级别的插件，会对核心算力和行动能力产生严重影响，足让有些灰裔将其视为责罚。 -->
+  <GR_Plugin_NanitesMemoryUltimate.description>TODO</GR_Plugin_NanitesMemoryUltimate.description>
+  
   <!-- EN: Advanced overclocking chip -->
   <GR_Plugin_OverclockingChipAdvanced.label>TODO</GR_Plugin_OverclockingChipAdvanced.label>
-  <!-- EN: 大幅增加超频上限。 -->
+  <!-- EN: 无视安全超频协议的产物。需要牺牲一部分源质容量。失去赖以为生的源质，足以让任何灰裔理解这款芯片的危险性。 -->
   <GR_Plugin_OverclockingChipAdvanced.description>TODO</GR_Plugin_OverclockingChipAdvanced.description>
   
   <!-- EN: Intermediate overclocking chip -->
   <GR_Plugin_OverclockingChipIntermediate.label>TODO</GR_Plugin_OverclockingChipIntermediate.label>
-  <!-- EN: 增加超频上限。 -->
+  <!-- EN: 精心构建的超频支持插件。在安全超频的前提下做到了极限。对于许多灰裔来说，这是一道分水岭。 -->
   <GR_Plugin_OverclockingChipIntermediate.description>TODO</GR_Plugin_OverclockingChipIntermediate.description>
   
   <!-- EN: Primary overclocking chip -->
   <GR_Plugin_OverclockingChipPrimary.label>TODO</GR_Plugin_OverclockingChipPrimary.label>
-  <!-- EN: 小幅增加超频上限。 -->
+  <!-- EN: 简单的超频支持插件。仅仅用于控制核心能量的再分配与优化。 -->
   <GR_Plugin_OverclockingChipPrimary.description>TODO</GR_Plugin_OverclockingChipPrimary.description>
   
   <!-- EN: Ultimate overclocking chip -->
   <GR_Plugin_OverclockingChipUltimate.label>TODO</GR_Plugin_OverclockingChipUltimate.label>
-  <!-- EN: 极大幅增加超频上限。 -->
+  <!-- EN: 黑入人格核心，将能量供应推至满载。几乎刚需外置源质储罐。……即便能理解降低源质储量意味着什么，超频到极限所带来的全能感仍在狂欢。 -->
   <GR_Plugin_OverclockingChipUltimate.description>TODO</GR_Plugin_OverclockingChipUltimate.description>
   
 </LanguageData>

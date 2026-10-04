@@ -3,17 +3,17 @@
 
   <!-- EN: SCC Signal Relay Terminal -->
   <GR_SCC_BandNode.label>战略指挥中心信号转发终端</GR_SCC_BandNode.label>
-  <!-- EN: A terminal that receives signals from the Strategic Coordination Center. It must be tuned to a specific Mechanitor. This will add 10 bandwidth to that mechanitor's total bandwidth, allowing them to control more mechanoids. The terminal can be quickly tuned to a Mechanitor immediately after construction. However, retuning it to a different Mechanitor takes considerably longer. -->
-  <GR_SCC_BandNode.description>TODO</GR_SCC_BandNode.description>
+  <!-- EN: A terminal that receives signals from the Strategic Coordination Center. It must be tuned to a specific Mechanitor. This will add 50 bandwidth to that mechanitor's total bandwidth, allowing them to control more mechanoids. The terminal can be quickly tuned to a Mechanitor immediately after construction. However, retuning it to a different Mechanitor takes considerably longer. -->
+  <GR_SCC_BandNode.description>一台接收来自战略指挥中心信号的终端，必须被调谐至特定的机械师。这将会为被调谐的机械师增加50带宽上限，使其控制更多的机械族。\n\n信号转发终端在完成建造之后可以快速调谐至一位机械师。但是，将终端重新调谐至一位不同的机械师需要长的多的时间。</GR_SCC_BandNode.description>
 
   <!-- EN: Science Nexus DownLink -->
   <GR_ScienceNexus.label>科研枢纽下行链路</GR_ScienceNexus.label>
   <!-- EN: Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one multi-analyzer. -->
-  <GR_ScienceNexus.description>TODO</GR_ScienceNexus.description>
+  <GR_ScienceNexus.description>一台接收来自科研枢纽信号的终端，能够显著提升研究速度并解锁新的研究项目。每个研究台只能链接两个科研枢纽下行链路。</GR_ScienceNexus.description>
 
   <!-- EN: Nano-alloy reinforced wall -->
   <GR_Wall.label>纳米合金强化墙</GR_Wall.label>
   <!-- EN: Made by combining nanites with alloys, it has excellent damage resistance. -->
-  <GR_Wall.description>TODO</GR_Wall.description>
+  <GR_Wall.description>通过将灰潮源质与合金结合制成，具有出色的伤害抵抗能力。</GR_Wall.description>
 
 </LanguageData>

@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Fundamental Cube -->
   <GR_FundamentalCube.label>基本立方</GR_FundamentalCube.label>
   <!-- EN: The Fundamental Cube is a perfect metallic cube forged through absolute mastery of the four fundamental forces. Its flawless surface reflects no light and emits no heat, existing in a state of perfect equilibrium. Within its form, gravity is tuned to a standstill, electromagnetic forces are locked in seamless coherence, and the strong and weak nuclear forces are suspended in ultrastable harmony. It serves as both a testament and a tool—allowing interaction with matter at the most fundamental level, manipulating density, inertia, and even atomic stability through thought alone. To observe the Fundamental Cube is to witness the laws of physics rewritten into tangible form. -->
-  <GR_FundamentalCube.description>TODO</GR_FundamentalCube.description>
-  
+  <GR_FundamentalCube.description>基本立方是一个通过对四大基本力绝对掌控而锻造出的完美金属立方体。其毫无瑕疵的表面既不反射光线，也不散发热量，仿佛不存在于这个世界之上。在其内部，引力被调节至静止，电磁力无缝锁定保持一致，强核力与弱核力相互制约平衡。允许使用者在最基础的层面上与物质互动。</GR_FundamentalCube.description>
+
   <!-- EN: Nanite Core -->
   <GR_GrayCore.label>灰潮核心</GR_GrayCore.label>
   <!-- EN: One of the central components constituting the Gray's body. It coordinates the operation of all nanites throughout the body and breaks down any absorbed matter into additional nanites to replenish those expended during normal physiological activities. -->
-  <GR_GrayCore.description>TODO</GR_GrayCore.description>
-  
+  <GR_GrayCore.description>组成灰裔身体的核心组件。它负责协调构成各部的灰潮源质正常运转，并将任何吸收的物质分解成额外的灰潮源质，以补充正常生理活动中消耗的部分。</GR_GrayCore.description>
+
   <!-- EN: Imitation Nanite Core -->
   <GR_GrayCorePoor.label>仿制灰潮核心</GR_GrayCorePoor.label>
   <!-- EN: A counterfeit device modeled after the true Nanite Core. It can only maintain basic nanite circulation within a Gray's body but lacks the ability to break down matter into new nanites. Despite its limited functionality, it remains a valuable commodity capable of fetching a high price on the market. -->
-  <GR_GrayCorePoor.description>TODO</GR_GrayCorePoor.description>
-  
+  <GR_GrayCorePoor.description>模仿灰潮核心制成的相对低成本产物，它只能在灰裔体内维持灰潮源质的基本循环。尽管如此，它仍然有着大量技术潜力，功能性强且应用面较广，因此可以卖出较高的价格。</GR_GrayCorePoor.description>
+
   <!-- EN: gray flesh -->
   <GR_GrayFlesh.label>灰色血肉</GR_GrayFlesh.label>
   <!-- EN: A large piece of tissue that constitutes the body of the Gray, whose shape reminds your colonists of some unpleasant memories. Perhaps Nanites can be extracted from it? -->
-  <GR_GrayFlesh.description>TODO</GR_GrayFlesh.description>
-  
+  <GR_GrayFlesh.description>一块构成灰裔身体的大块组织，其造型让你的殖民者想起了一些不好的回忆，也许可以从中提取出灰潮源质？</GR_GrayFlesh.description>
+
 </LanguageData>

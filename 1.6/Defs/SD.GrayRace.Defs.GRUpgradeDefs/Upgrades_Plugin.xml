@@ -1,46 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <!-- 下列插件均为临时示例用，随时会删 -->
-  <!-- 大脑插件示例 -->
+
+  <!-- ================================== 大脑插件 ================================== -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_CombatChip</defName>
-    <label>战斗芯片</label>
-    <description>植入人格核心的高级战斗芯片，提升战斗效率和反应速度。</description>
-    <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
+    <label>CombatChip</label>
+    <description>植入人格核心的高级战斗芯片，提升远程射击能力。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
-    <targetBodyPart>Nano_Brain</targetBodyPart>     <!-- 施加的身体部位 -->
-    <hediffToApply>GR_Hediff_CombatChip</hediffToApply>     <!-- 对应的的 Hediff-->
-    <exclusionTags>     <!-- 排除标签 -->
-      <li>WorkChip</li>
+    <targetBodyPart>Nano_Brain</targetBodyPart>    <!-- 目标身体部位 -->
+    <hediffToApply>GR_Hediff_CombatChip</hediffToApply>    <!-- 对应的Hediff-->
+    <exclusionTags>      <!-- 排除标签 -->
+      <li>PrimaryChip</li>
     </exclusionTags>
-    <researchPrerequisites>     <!-- 科技前置 -->
-      <li>MicroelectronicsBasics</li>
+    <researchPrerequisites>      <!-- 科技前置 -->
+      <li>GR_T2Upgrades</li>
     </researchPrerequisites>
-    <requiredMaterials>         <!-- 需要材料 -->
-      <ComponentIndustrial>5</ComponentIndustrial>
-      <Plasteel>20</Plasteel>
+    <requiredMaterials>      <!-- 需要材料 -->
+      <GR_Nanites>100</GR_Nanites>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Gold>50</Gold>
     </requiredMaterials>
-    <workAmount>2000</workAmount>
-    <requiredSkill>Crafting</requiredSkill>       <!-- 需要技能 -->
-    <minSkillLevel>8</minSkillLevel>        <!-- 需要技能等级 -->
+    <workAmount>2500</workAmount>
+    <requiredSkill>Shooting</requiredSkill>    <!-- 需要技能 -->
+    <minSkillLevel>4</minSkillLevel>    <!-- 需要技能等级 -->
     <uiOrder>10</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
   <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_ReactionChip</defName>
+    <label>Reaction Chip</label>
+    <description>存储着百般武艺的精炼数据芯片。应对、预测、使用——只要陷入近身战，定能派上用场。</description>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
+    <hediffToApply>GR_Hediff_ReactionChip</hediffToApply>
+    <exclusionTags>
+      <li>PrimaryChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T2Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>100</GR_Nanites>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Gold>50</Gold>
+    </requiredMaterials>
+    <workAmount>2500</workAmount>
+    <requiredSkill>Melee</requiredSkill>
+    <minSkillLevel>4</minSkillLevel>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_AnalysisChip</defName>
-    <label>分析芯片</label>
-    <description>植入人格核心的超级分析芯片，提升研究速度和学习能力。</description>
+    <label>Analysis Chip</label>
+    <description>协助主人格核心学习的拓展芯片。专门用于多次迭代数据，推测不同选择的后果。……只要失败了足够多次的话，便能推测出正确的路线吧。</description>
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_AnalysisChip</hediffToApply>
     <exclusionTags>
-      <li>WorkChip</li>
+      <li>PrimaryChip</li>
     </exclusionTags>
     <researchPrerequisites>
-      <li>MicroelectronicsBasics</li>
+      <li>GR_T2Upgrades</li>
     </researchPrerequisites>
     <requiredMaterials>
-      <ComponentIndustrial>8</ComponentIndustrial>
-      <Gold>10</Gold>
+      <GR_Nanites>100</GR_Nanites>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Gold>50</Gold>
+    </requiredMaterials>
+    <workAmount>2500</workAmount>
+    <requiredSkill>Intellectual</requiredSkill>
+    <minSkillLevel>4</minSkillLevel>
+    <uiOrder>30</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_ConcentrateChip</defName>
+    <label>Concentrate Chip</label>
+    <description>植入人格核心的集中芯片，提升工作能力。</description>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
+    <hediffToApply>GR_Hediff_ConcentrateChip</hediffToApply>
+    <exclusionTags>
+      <li>PrimaryChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T2Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>100</GR_Nanites>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Gold>50</Gold>
+    </requiredMaterials>
+    <workAmount>2500</workAmount>
+    <requiredSkill>Crafting</requiredSkill>
+    <minSkillLevel>4</minSkillLevel>
+    <uiOrder>40</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 技工本地数据库 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_TechnicianDatabase</defName>
+    <label>Technician local database</label>
+    <description>存储着大量蓝图的数据库。甚至收录了宇宙中存在过和已经消失的螺丝规格，以及对应的工具。</description>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
+    <hediffToApply>GR_Hediff_TechnicianDatabase</hediffToApply>
+    <exclusionTags>
+      <li>SecondaryChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>100</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
     </requiredMaterials>
     <workAmount>2500</workAmount>
     <requiredSkill>Intellectual</requiredSkill>
@@ -48,91 +118,27 @@
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
+  <!-- 机控中枢 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_Mechlink</defName>
     <label>机控中枢</label>
     <description>将机控中枢与人格核心连接，允许操控机械族。</description>
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>MechlinkImplant</hediffToApply>
-    <researchPrerequisites>
-      <li>Electricity</li>
-    </researchPrerequisites>
     <requiredMaterials>
       <Mechlink>1</Mechlink>
     </requiredMaterials>
     <workAmount>60</workAmount>
     <requiredSkill>Intellectual</requiredSkill>
-    <minSkillLevel>8</minSkillLevel>
+    <minSkillLevel>4</minSkillLevel>
     <uiOrder>0</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <!-- 心脏插件 -->
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Plugin_Heart_EfficiencyBooster</defName>
-    <label>效率增强器插件</label>
-    <description>安装在灰潮核心的效率增强器，提升纳米机械恢复速度。</description>
-    <targetBodyPart>Nano_Heart</targetBodyPart>
-    <hediffToApply>GR_Hediff_EfficiencyBooster</hediffToApply>
-    <researchPrerequisites>
-      <li>MedicineProduction</li>
-    </researchPrerequisites>
-    <requiredMaterials>
-      <ComponentIndustrial>3</ComponentIndustrial>
-      <Steel>30</Steel>
-      <MedicineHerbal>5</MedicineHerbal>
-    </requiredMaterials>
-    <workAmount>1500</workAmount>
-    <requiredSkill>Crafting</requiredSkill>
-    <minSkillLevel>6</minSkillLevel>
-    <uiOrder>30</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <!-- 手臂插件 -->
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Plugin_Hand_PrecisionChip</defName>
-    <label>精密芯片插件</label>
-    <description>植入手臂的精密操作芯片，提升制作精度和质量。</description>
-    <targetBodyPart>MechanicalArm</targetBodyPart>
-    <hediffToApply>GR_Hediff_PrecisionChip</hediffToApply>
-    <researchPrerequisites>
-      <li>ComplexClothing</li>
-    </researchPrerequisites>
-    <requiredMaterials>
-      <ComponentIndustrial>2</ComponentIndustrial>
-      <Steel>15</Steel>
-    </requiredMaterials>
-    <workAmount>1200</workAmount>
-    <requiredSkill>Crafting</requiredSkill>
-    <minSkillLevel>5</minSkillLevel>
-    <uiOrder>40</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <!-- 眼部插件 -->
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Plugin_Eye_TargetingSystem</defName>
-    <label>瞄准系统插件</label>
-    <description>植入眼部的先进瞄准系统，大幅提升射击精度。</description>
-    <targetBodyPartTags>
-      <li>SightSource</li>
-    </targetBodyPartTags>
-    <hediffToApply>GR_Hediff_TargetingSystem</hediffToApply>
-    <researchPrerequisites>
-      <li>Gunsmithing</li>
-    </researchPrerequisites>
-    <requiredMaterials>
-      <ComponentIndustrial>3</ComponentIndustrial>
-      <Steel>10</Steel>
-    </requiredMaterials>
-    <workAmount>1800</workAmount>
-    <requiredSkill>Shooting</requiredSkill>
-    <minSkillLevel>7</minSkillLevel>
-    <uiOrder>50</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
+  <!-- 超频芯片 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_OverclockingChipPrimary</defName>
     <label>Primary overclocking chip</label>
-    <description>小幅增加超频上限。</description>
+    <description>简单的超频支持插件。仅仅用于控制核心能量的再分配与优化。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipPrimary</hediffToApply>
@@ -140,18 +146,20 @@
       <li>OverclockChip</li>
     </exclusionTags>
     <researchPrerequisites>
-      <li>GR_DailyPlugin</li>
+      <li>GR_T1Upgrades</li>
     </researchPrerequisites>
     <requiredMaterials>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <GR_Nanites>50</GR_Nanites>
+      <ComponentSpacer>1</ComponentSpacer>
     </requiredMaterials>
     <workAmount>120</workAmount>
+    <uiOrder>100</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_OverclockingChipIntermediate</defName>
     <label>Intermediate overclocking chip</label>
-    <description>增加超频上限。</description>
+    <description>精心构建的超频支持插件。在安全超频的前提下做到了极限。对于许多灰裔来说，这是一道分水岭。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipIntermediate</hediffToApply>
@@ -159,18 +167,20 @@
       <li>OverclockChip</li>
     </exclusionTags>
     <researchPrerequisites>
-      <li>GR_DailyPlugin</li>
+      <li>GR_T2Upgrades</li>
     </researchPrerequisites>
     <requiredMaterials>
-      <ComponentIndustrial>2</ComponentIndustrial>
+      <GR_Nanites>150</GR_Nanites>
+      <ComponentSpacer>4</ComponentSpacer>
     </requiredMaterials>
     <workAmount>120</workAmount>
+    <uiOrder>110</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_OverclockingChipAdvanced</defName>
     <label>Advanced overclocking chip</label>
-    <description>大幅增加超频上限。</description>
+    <description>无视安全超频协议的产物。需要牺牲一部分源质容量。失去赖以为生的源质，足以让任何灰裔理解这款芯片的危险性。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipAdvanced</hediffToApply>
@@ -178,18 +188,20 @@
       <li>OverclockChip</li>
     </exclusionTags>
     <researchPrerequisites>
-      <li>GR_CombatPlugin</li>
+      <li>GR_T3Upgrades</li>
     </researchPrerequisites>
     <requiredMaterials>
-      <ComponentIndustrial>1</ComponentIndustrial>
+      <GR_Nanites>300</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
     </requiredMaterials>
     <workAmount>120</workAmount>
+    <uiOrder>120</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_OverclockingChipUltimate</defName>
     <label>Ultimate overclocking chip</label>
-    <description>极大幅增加超频上限。</description>
+    <description>黑入人格核心，将能量供应推至满载。几乎刚需外置源质储罐。……即便能理解降低源质储量意味着什么，超频到极限所带来的全能感仍在狂欢。</description>
     <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
     <targetBodyPart>Nano_Brain</targetBodyPart>
     <hediffToApply>GR_Hediff_OverclockingChipUltimate</hediffToApply>
@@ -197,11 +209,171 @@
       <li>OverclockChip</li>
     </exclusionTags>
     <researchPrerequisites>
-      <li>GR_CombatPlugin</li>
+      <li>GR_T4Upgrades</li>
     </researchPrerequisites>
     <requiredMaterials>
-      <ComponentIndustrial>3</ComponentIndustrial>
+      <GR_Nanites>500</GR_Nanites>
+      <ComponentSpacer>25</ComponentSpacer>
+      <GR_FundamentalCube>1</GR_FundamentalCube>
     </requiredMaterials>
     <workAmount>120</workAmount>
+    <uiOrder>130</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- ================================== 心脏插件 ================================== -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Heart_EfficiencyBooster</defName>
+    <label>EfficiencyBooster</label>
+    <description>安装在灰潮核心的效率增强器，提升纳米机械恢复速度。</description>
+    <targetBodyPart>Nano_Heart</targetBodyPart>
+    <hediffToApply>GR_Hediff_EfficiencyBooster</hediffToApply>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>200</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+      <Gold>100</Gold>
+      <Luciferium>10</Luciferium>
+    </requiredMaterials>
+    <workAmount>1500</workAmount>
+    <requiredSkill>Crafting</requiredSkill>
+    <minSkillLevel>6</minSkillLevel>
+    <uiOrder>30</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- ================================== 眼部插件 ================================== -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Eye_TargetingSystem</defName>
+    <label>TargetingSystem</label>
+    <description>兼容各式装备的目标分析与识别元件。能有效避免友军误伤，同时提供可靠的向量预测功能。经常有骑士灰裔以礼物的方式赠送给搭档。</description>
+    <targetBodyPartTags>
+      <li>SightSource</li>
+    </targetBodyPartTags>
+    <hediffToApply>GR_Hediff_TargetingSystem</hediffToApply>
+    <researchPrerequisites>
+      <li>GR_T2Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <ComponentSpacer>1</ComponentSpacer>
+      <GR_Nanites>20</GR_Nanites>
+      <Silver>100</Silver>
+    </requiredMaterials>
+    <workAmount>1800</workAmount>
+    <requiredSkill>Shooting</requiredSkill>
+    <minSkillLevel>7</minSkillLevel>
+    <uiOrder>50</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- ================================== 手臂插件 ================================== -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Arm_PrecisionChip</defName>
+    <label>PrecisionChip</label>
+    <description>植入手臂的精密操作芯片，提升制作精度和质量。</description>
+    <targetBodyPart>MechanicalArm</targetBodyPart>
+    <hediffToApply>GR_Hediff_PrecisionChip</hediffToApply>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>100</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+      <Silver>100</Silver>
+    </requiredMaterials>
+    <workAmount>1200</workAmount>
+    <requiredSkill>Crafting</requiredSkill>
+    <minSkillLevel>5</minSkillLevel>
+    <uiOrder>40</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- ================================== 躯干插件 ================================== -->
+  <!-- 灰潮源质存储器 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_NanitesMemoryPrimary</defName>
+    <label>Primary nanites memory</label>
+    <description>正如其名称，用于存储源质的存储器。可提升灰裔体内的灰潮源质存储单位上限。专门设计成了几乎不会对行动造成阻碍的小型款式。</description>
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+    <targetBodyPart>Nano_Torso</targetBodyPart>
+    <hediffToApply>GR_Hediff_NanitesMemoryPrimary</hediffToApply>
+    <exclusionTags>
+      <li>OverclockChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T1Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>20</GR_Nanites>
+      <GR_Alloy>20</GR_Alloy>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </requiredMaterials>
+    <workAmount>120</workAmount>
+    <uiOrder>100</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_NanitesMemoryIntermediate</defName>
+    <label>Intermediate nanites memory</label>
+    <description>正如其名称，用于存储源质的存储器。因为更大的体积和制造成本，得以采用更高效的压缩方式。不但大幅提升了存储上限，应其控制良好的体积和分布方式，并不会对行动造成影响。</description>
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+    <targetBodyPart>Nano_Torso</targetBodyPart>
+    <hediffToApply>GR_Hediff_NanitesMemoryIntermediate</hediffToApply>
+    <exclusionTags>
+      <li>OverclockChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T2Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>50</GR_Nanites>
+      <GR_Alloy>50</GR_Alloy>
+      <ComponentSpacer>2</ComponentSpacer>
+    </requiredMaterials>
+    <workAmount>120</workAmount>
+    <uiOrder>110</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_NanitesMemoryAdvanced</defName>
+    <label>Advanced nanites memory</label>
+    <description>正如其名称，用于存储源质的存储器。这种款式一般只会用于运输目的。会一定程度上影响灰裔的行动能力的同时，还需抽调少量核心的算力用于压缩灰潮源质。</description>
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+    <targetBodyPart>Nano_Torso</targetBodyPart>
+    <hediffToApply>GR_Hediff_NanitesMemoryAdvanced</hediffToApply>
+    <exclusionTags>
+      <li>OverclockChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>100</GR_Nanites>
+      <GR_Alloy>100</GR_Alloy>
+      <ComponentSpacer>5</ComponentSpacer>
+    </requiredMaterials>
+    <workAmount>120</workAmount>
+    <uiOrder>120</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_NanitesMemoryUltimate</defName>
+    <label>Ultimate nanites memory</label>
+    <description>正如其名称，用于存储源质的存储器。基本上只会在涉及到大规模建设的运输作业中见到。这种级别的插件，会对核心算力和行动能力产生严重影响，足让有些灰裔将其视为责罚。</description>
+    <!-- <iconPath>UI/Upgrades/CombatChip</iconPath> -->
+    <targetBodyPart>Nano_Torso</targetBodyPart>
+    <hediffToApply>GR_Hediff_NanitesMemoryUltimate</hediffToApply>
+    <exclusionTags>
+      <li>OverclockChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T4Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>200</GR_Nanites>
+      <GR_Alloy>200</GR_Alloy>
+      <ComponentSpacer>10</ComponentSpacer>
+    </requiredMaterials>
+    <workAmount>120</workAmount>
+    <uiOrder>130</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
 </Defs>

@@ -8,7 +8,8 @@
     <combatPower>90</combatPower>
     <itemQuality>Normal</itemQuality>
     <isFighter>true</isFighter>
-    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <maxGenerationAge>2000</maxGenerationAge>
+    <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
       <min>99999</min>
       <max>99999</max>
@@ -42,7 +43,7 @@
     <combatPower>120</combatPower>
     <itemQuality>Normal</itemQuality>
     <isFighter>true</isFighter>
-    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
       <min>99999</min>
       <max>99999</max>
@@ -75,7 +76,7 @@
     <combatPower>150</combatPower>
     <itemQuality>Normal</itemQuality>
     <isFighter>true</isFighter>
-    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
       <min>99999</min>
       <max>99999</max>
@@ -108,7 +109,7 @@
     <combatPower>120</combatPower>
     <itemQuality>Masterwork</itemQuality>
     <isFighter>true</isFighter>
-    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
       <min>99999</min>
       <max>99999</max>
@@ -145,7 +146,7 @@
     <combatPower>150</combatPower>
     <itemQuality>Masterwork</itemQuality>
     <isFighter>true</isFighter>
-    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
       <min>99999</min>
       <max>99999</max>
@@ -181,7 +182,7 @@
     <combatPower>180</combatPower>
     <itemQuality>Masterwork</itemQuality>
     <isFighter>true</isFighter>
-    <minGenerationAge Inherit="False">15</minGenerationAge>
+    <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
       <min>99999</min>
       <max>99999</max>

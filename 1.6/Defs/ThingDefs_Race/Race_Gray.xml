@@ -10,7 +10,6 @@
     <hasTooltip>true</hasTooltip>    <!--有工具提示-->
     <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
     <butcherProducts>      <!--屠宰产物-->
-      <GR_Nanites>500</GR_Nanites>
     </butcherProducts>
     <statBases>
     </statBases>
@@ -35,7 +34,7 @@
       <generalSettings>
         <maleGenderProbability>0</maleGenderProbability>        <!--男性比例-->
         <immuneToAge>true</immuneToAge>        <!-- 不受年龄影响（老年病） -->
-        <humanRecipeImport>true</humanRecipeImport>        <!--可使用人类手术配方-->
+        <humanRecipeImport>false</humanRecipeImport>        <!--可使用人类手术配方-->
         <canLayDown>true</canLayDown>        <!-- 是否可以躺下睡觉（什么神经病功能，给半人马准备的是吧？） -->
         <maxDamageForSocialfight>5</maxDamageForSocialfight>        <!--最大打架伤害-->
         <immuneToXenophobia>true</immuneToXenophobia>        <!--禁用仇外主义-->
@@ -118,6 +117,51 @@
             <chance>10</chance>
           </li>
         </forcedRaceTraitEntries>
+        <chemicalSettings>
+          <li>
+            <chemical>Luciferium</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>GoJuice</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>Alcohol</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>Ambrosia</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>Psychite</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>Smokeleaf</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>WakeUp</chemical>
+            <ingestible>false</ingestible>
+          </li>
+          <li>
+            <chemical>Psilocap</chemical>
+            <ingestible>false</ingestible>
+          </li>
+        </chemicalSettings>
+        <factionRelations>
+          <li>
+            <factions>
+              <li>Gray_Faction</li>
+            </factions>
+            <goodwill>
+              <min>75</min>
+              <max>100</max>
+            </goodwill>
+          </li>
+        </factionRelations>
         <!--=============================================外观相关==============================================-->
         <alienPartGenerator>
           <headTypes>            <!--头部的种类，动态表情貌似就是引用的这玩意做的脸？但是貌似空路径都没事，只要别空着，这玩意干嘛的，不会是什么泰南的神秘历史遗留吧-->
@@ -330,7 +374,7 @@
           </value>
         </li>
       </styleSettings>
-
+      <!-- ==================================== 社交相关 ======================================= -->
       <relationSettings>        <!--碰到以下关系的概率(设置0避免莫名其妙多个出父母亲戚)-->
         <relationChanceModifierChild>0</relationChanceModifierChild>
         <relationChanceModifierExLover>0</relationChanceModifierExLover>
@@ -368,6 +412,7 @@
           <li>Pretty</li>
           <li>RotStink</li>
           <li>ToxicFallout</li>
+          <li>EnvironmentDark</li>
         </cannotReceiveThoughts>
       </thoughtSettings>
       <!-- ================================================= 种族限定设置 ================================================= -->
@@ -440,18 +485,19 @@
           <li>GR_HFMurasama</li>
           <li>GR_ShipSlayer</li>
         </weaponList>
-        <blackGeneTags>          <!-- 禁用基因标签 -->
-          <li>HairStyle</li>
-          <li>Fur</li>
-          <li>BeardStyle</li>
-          <li>SkinColor</li>
-        </blackGeneTags>
-        <blackEndoCategories>          <!-- 黑名单基因类别 -->
-          <li>HairColor</li>
-          <li>Jaw</li>
-          <li>Head</li>
-          <li>BodyType</li>
-        </blackEndoCategories>
+        <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
+        <whiteGeneList>
+        </whiteGeneList>
+        <blackRecipeList>
+        </blackRecipeList>
+        <traitList>
+          <li>GR_LearningAlgorithms</li>
+          <li>GR_Engineers</li>
+          <li>GR_Physicists</li>
+          <li>GR_Sociologists</li>
+          <li>GR_Maid</li>
+        </traitList>
+        <canReproduce>false</canReproduce>        <!-- 禁止生育 -->
       </raceRestriction>
     </alienRace>
     <!-- ================================================= 下面的就不是外星人特色功能了 ================================================= -->
@@ -493,13 +539,13 @@
       <!--烹饪-->
       <FoodPoisonChance>500</FoodPoisonChance>      <!--食物中毒几率-->
       <!--医学/研究-->
-      <ResearchSpeed>1.5</ResearchSpeed>      <!--研究速度-->
+      <ResearchSpeed>1.2</ResearchSpeed>      <!--研究速度-->
       <MedicalTendQuality>1.2</MedicalTendQuality>      <!--医疗质量-->
       <MedicalSurgerySuccessChance>0.1</MedicalSurgerySuccessChance>      <!--手术成功率-->
-      <GlobalLearningFactor>1.5</GlobalLearningFactor>      <!--全局学习系数-->
+      <GlobalLearningFactor>1.2</GlobalLearningFactor>      <!--全局学习系数-->
       <!--劳作-->
       <MiningSpeed>1.5</MiningSpeed>      <!--采矿速度-->
-      <DeepDrillingSpeed>1.5</DeepDrillingSpeed>
+      <DeepDrillingSpeed>1.2</DeepDrillingSpeed>      <!--深钻速度-->
       <ConstructionSpeed>1.5</ConstructionSpeed>      <!--建造速度-->
       <ConstructSuccessChance>10</ConstructSuccessChance>      <!--建造成功率-->
       <FixBrokenDownBuildingSuccessChance>10</FixBrokenDownBuildingSuccessChance>      <!--修理成功率-->
@@ -621,6 +667,18 @@
       <disableIgniteVerb>false</disableIgniteVerb>
       <hasCorpse>false</hasCorpse>
       <canBecomeShambler>false</canBecomeShambler>
+      <detritusLeavings>
+        <li>
+          <def>GR_Nanites</def>
+          <texOverrideIndex>100</texOverrideIndex>
+          <spawnChance>1</spawnChance>
+        </li>
+        <li>
+          <def>GR_GrayCore</def>
+          <texOverrideIndex>1</texOverrideIndex>
+          <spawnChance>0.1</spawnChance>
+        </li>
+      </detritusLeavings>
       <litterSizeCurve>        <!-- 初生婴儿年龄 -->
         <points>
           <li>(0.5, 0)</li>

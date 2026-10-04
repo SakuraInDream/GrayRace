@@ -119,7 +119,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>6000</workAmount>
+    <workAmount>12000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <recipeUsers>
       <li>GR_NaniteReconfigurator</li>
@@ -155,7 +155,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>6000</workAmount>
+    <workAmount>12000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <recipeUsers>
       <li>GR_NaniteReconfigurator</li>
@@ -192,7 +192,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>6000</workAmount>
+    <workAmount>24000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <recipeUsers>
       <li>GR_NaniteReconfigurator</li>
@@ -228,7 +228,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>6000</workAmount>
+    <workAmount>24000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <recipeUsers>
       <li>GR_NaniteReconfigurator</li>
@@ -338,7 +338,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>6000</workAmount>
+    <workAmount>36000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <researchPrerequisite>GR_AlloyCasting</researchPrerequisite>
     <recipeUsers>
@@ -404,7 +404,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>15000</workAmount>
+    <workAmount>72000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <researchPrerequisite>GR_AlloyProcessOptimization</researchPrerequisite>
     <recipeUsers>
@@ -470,7 +470,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>38400</workAmount>
+    <workAmount>144000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <researchPrerequisite>GR_NaniteTransmuter</researchPrerequisite>
     <recipeUsers>

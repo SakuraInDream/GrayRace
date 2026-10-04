@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Gray -->
   <Gray.label>灰裔</Gray.label>
   <!-- EN: left eye -->
@@ -71,8 +71,8 @@
   <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>右二趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_second_toe.customLabel>
   <!-- EN: right big toe -->
   <Gray.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>右大拇趾</Gray.corePart.parts.right_leg.parts.right_foot.parts.right_big_toe.customLabel>
-
+  
   <!-- UNUSED -->
   <Gray.corePart.parts.MechanicalNeck.parts.Head.parts.Nano_Brain.parts.AI_Persona_Core.customLabel>人格核心</Gray.corePart.parts.MechanicalNeck.parts.Head.parts.Nano_Brain.parts.AI_Persona_Core.customLabel>
-
+  
 </LanguageData>

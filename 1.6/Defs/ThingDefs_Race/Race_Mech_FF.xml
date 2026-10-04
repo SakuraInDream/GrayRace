@@ -8,6 +8,7 @@
       <MechEnergyLossPerHP>0</MechEnergyLossPerHP>
       <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
+      <StaggerDurationFactor>0</StaggerDurationFactor>
     </statBases>
     <modExtensions>
       <li Class="SD.GrayRace.HarmonyPatches.DisableNeeds">
@@ -20,6 +21,7 @@
       <body>GR_MechBody</body>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>GR_Mechanoid</thinkTreeMain>
+      <bulletStaggerDelayTicks>0</bulletStaggerDelayTicks>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -60,6 +62,7 @@
       <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
       <BandwidthCost>1</BandwidthCost>
+      <CaravanBonusSpeedFactor>16</CaravanBonusSpeedFactor>
     </statBases>
     <race>
       <baseBodySize>1</baseBodySize>

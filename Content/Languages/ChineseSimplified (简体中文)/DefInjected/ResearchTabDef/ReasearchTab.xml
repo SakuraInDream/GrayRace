@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray Race -->
   <GR_ResearchTab.label>灰裔科技</GR_ResearchTab.label>
   <!-- EN: A technology replicated by the Gray from the Galactic Empire, which has been adapted to better align with their biological strengths and operational requirements. -->
-  <GR_ResearchTab.generalDescription>TODO</GR_ResearchTab.generalDescription>
+  <GR_ResearchTab.generalDescription>灰裔从星海帝国复制过来的科技，进行了一定程度的改造以更契合种族优势以及任务需求。</GR_ResearchTab.generalDescription>
   <!-- EN: Galactic Empire Technology -->
-  <GR_ResearchTab.generalTitle>TODO</GR_ResearchTab.generalTitle>
-  
+  <GR_ResearchTab.generalTitle>灰裔科技</GR_ResearchTab.generalTitle>
+
 </LanguageData>

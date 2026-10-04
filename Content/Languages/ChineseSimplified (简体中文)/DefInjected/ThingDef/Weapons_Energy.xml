@@ -1,53 +1,53 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Energy battle rifle bullet -->
   <Bullet_GR_EnergyBattleRifle.label>TODO</Bullet_GR_EnergyBattleRifle.label>
-  
+
   <!-- EN: Energy heavy Launcher bullet -->
   <Bullet_GR_EnergyHL.label>TODO</Bullet_GR_EnergyHL.label>
-  
+
   <!-- EN: Energy minigun bullet -->
   <Bullet_GR_EnergyMinigun.label>TODO</Bullet_GR_EnergyMinigun.label>
-  
+
   <!-- EN: Energy shotgun blast -->
   <Bullet_GR_EnergyShotgun.label>TODO</Bullet_GR_EnergyShotgun.label>
-  
+
   <!-- EN: Energy SMG bullet -->
   <Bullet_GR_EnergySMG.label>TODO</Bullet_GR_EnergySMG.label>
-  
+
   <!-- EN: Energy Sniper Rifle bullet -->
   <Bullet_GR_EnergySniperRifle.label>TODO</Bullet_GR_EnergySniperRifle.label>
-  
+
   <!-- EN: Gray Energy Rifle -->
   <GR_EnergyBattleRifle.label>灰裔能量步枪</GR_EnergyBattleRifle.label>
   <!-- EN: Aetherglow.Utilizing a high-pressure energy cell coupled with a stabilizer, it delivers substantial firepower without compromising on weight or size. As a weapon that excels in range, accuracy, power, compactness, and weight, it is the preferred choice for the majority of Grays. -->
-  <GR_EnergyBattleRifle.description>TODO</GR_EnergyBattleRifle.description>
+  <GR_EnergyBattleRifle.description>灰裔制式能量战斗步枪，又名飞光。使用特高压能量电池搭配能量稳定器，能在保证射弹威力的同时不影响武器的重量和体积。作为一把同时兼备了射程、精度、威力、体积、重量等多个方面优势的武器，是绝大多数灰裔的首选武器。即使没有射击经验也能快速上手。</GR_EnergyBattleRifle.description>
   <!-- EN: stock -->
   <GR_EnergyBattleRifle.tools.stock.label>TODO</GR_EnergyBattleRifle.tools.stock.label>
   <!-- EN: barrel -->
   <GR_EnergyBattleRifle.tools.barrel.label>TODO</GR_EnergyBattleRifle.tools.barrel.label>
   <!-- EN: Gray Energy Rifle -->
   <GR_EnergyBattleRifle.verbs.Verb_Shoot.label>TODO</GR_EnergyBattleRifle.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Energy Heavy Launcher -->
   <GR_EnergyHL.label>灰裔能量发射器</GR_EnergyHL.label>
   <!-- EN: Supernova.This platform serves dual roles in anti-armor and anti-fortification warfare. The entire cannon is essentially a gigantic particle accelerator, retaining only the most basic stabilizer to prevent catastrophic failure. Each shot consumes an entire high-pressure energy cell, firing an unstable orb of energy that detonates upon impact with a terrifying blast, obliterating everything within its radius. -->
-  <GR_EnergyHL.description>TODO</GR_EnergyHL.description>
+  <GR_EnergyHL.description>灰裔制式重型能量发射器，又名星光，能同时承担反装甲与反工事的任务。整个炮体可以说就是一个巨大的粒子加速器，只保留了最基本的能量稳定器以确保不会炸膛。每次射击都会消耗一整枚高压能量电池，发射出的不稳定能量团在命中目标后会发生惊人的内爆，将覆盖范围内的一切全部抹消。</GR_EnergyHL.description>
   <!-- EN: barrels -->
   <GR_EnergyHL.tools.barrels.label>TODO</GR_EnergyHL.tools.barrels.label>
   <!-- EN: Gray Energy Heavy Launcher -->
   <GR_EnergyHL.verbs.Verb_Shoot.label>TODO</GR_EnergyHL.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Energy MachineGun -->
   <GR_EnergyHMG.label>灰裔能量机枪</GR_EnergyHMG.label>
   <!-- EN: Lumenward.Its massive size and staggering weight mean even a Gray can only wield it by hand. This bulk, however, allows it to house a particle accelerator, energy stabilizer, and rapid heat sink simultaneously. Powered by multiple large high-pressure energy cells at the rear, it unleashes a relentless, devastating hail of high-energy projectiles, turning any engagement zone into a bloody wilderness. Due to its bulk and overkill nature, Grays deploy it only for outpost defense, rarely carrying it on routine patrols—even in teams. -->
-  <GR_EnergyHMG.description>TODO</GR_EnergyHMG.description>
+  <GR_EnergyHMG.description>灰裔制式能量重机枪，又名趋光。以体积与重量而著称，重如铁块和巨大到人类无法徒手操作的体积，除去灰裔外仅会被架设使用。其内部同时搭载粒子加速器、能量稳定器和快速散热器，配合尾端的多枚大型高压能量电池，能将高能射弹以令人绝望的射速不间断发射，让目光所及之处变成血肉的荒野。但由于体积和重量的问题，以及过剩的威力，灰裔们只会在保卫前哨站时偶尔使用，糟糕的便携性总让灰裔们在外勤任务时将之排除在选项之外。</GR_EnergyHMG.description>
   <!-- EN: barrels -->
   <GR_EnergyHMG.tools.barrels.label>TODO</GR_EnergyHMG.tools.barrels.label>
   <!-- EN: Gray Energy MachineGun -->
   <GR_EnergyHMG.verbs.Verb_Shoot.label>TODO</GR_EnergyHMG.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Energy Launcher -->
   <GR_EnergyLauncher.label>极光</GR_EnergyLauncher.label>
   <!-- EN: . -->
@@ -58,38 +58,38 @@
   <GR_EnergyLauncher.tools.barrel.label>TODO</GR_EnergyLauncher.tools.barrel.label>
   <!-- EN: Gray Energy Launcher -->
   <GR_EnergyLauncher.verbs.Verb_ShootBeam.label>TODO</GR_EnergyLauncher.verbs.Verb_ShootBeam.label>
-  
+
   <!-- EN: Gray Energy PDW -->
   <GR_EnergyPDW.label>灰裔能量冲锋枪</GR_EnergyPDW.label>
   <!-- EN: Flowglow.Its compact frame is almost entirely dedicated to the particle accelerator, enabling true instant-fire capability. However, its low stopping power makes it effective only against humans and smaller foes, rendering it unpopular among Grays who frequently encounter bizarre alien lifeforms. -->
-  <GR_EnergyPDW.description>TODO</GR_EnergyPDW.description>
+  <GR_EnergyPDW.description>灰裔制式能量个人防卫武器，又名流光。紧凑的枪身内大部分位置都留给了粒子加速器，真正做到了无预热发射。但由于威力不足只能用来对付人类以及更小的的敌人，因此在时常遇到外星奇异生命的灰裔之中并不多么受欢迎。一般配备给非专业战斗人员。</GR_EnergyPDW.description>
   <!-- EN: grip -->
   <GR_EnergyPDW.tools.grip.label>TODO</GR_EnergyPDW.tools.grip.label>
   <!-- EN: barrel -->
   <GR_EnergyPDW.tools.barrel.label>TODO</GR_EnergyPDW.tools.barrel.label>
   <!-- EN: Gray Energy PDW -->
   <GR_EnergyPDW.verbs.Verb_Shoot.label>TODO</GR_EnergyPDW.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Energy Shotgun -->
   <GR_EnergyShotgun.label>灰裔能量霰弹枪</GR_EnergyShotgun.label>
   <!-- EN: Lucifer.An energy compressor forces a high-yield charge into a single point, maximizing penetration and burst damage. However, due to a lack of containment, the projectile is highly unstable and dissipates shortly after leaving the barrel. This inherent limitation led to its design and deployment as a shotgun. -->
-  <GR_EnergyShotgun.description>TODO</GR_EnergyShotgun.description>
+  <GR_EnergyShotgun.description>灰裔制式能量霰弹枪，又名逐光。利用能量压缩器，将高额能量压缩为一点，使穿透力与爆发力提升到极致。但由于缺乏约束力因此射弹稳定性极差，在离开枪管后飞行寥寥距离便会消散，因此其定位较为类似于传统的霰弹枪。无论如何你都不会想出现在枪口前的90°以内的。</GR_EnergyShotgun.description>
   <!-- EN: stock -->
   <GR_EnergyShotgun.tools.stock.label>TODO</GR_EnergyShotgun.tools.stock.label>
   <!-- EN: barrel -->
   <GR_EnergyShotgun.tools.barrel.label>TODO</GR_EnergyShotgun.tools.barrel.label>
   <!-- EN: Gray Energy Shotgun -->
   <GR_EnergyShotgun.verbs.Verb_Shoot.label>TODO</GR_EnergyShotgun.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Energy Sniper Rifle -->
   <GR_EnergySniperRifle.label>灰裔能量狙击枪</GR_EnergySniperRifle.label>
   <!-- EN: Radiant.A high-energy particle focuser channels the raw power of a Diabolus main cannon into a single, devastating beam. The shot's brilliance remains visible even from dozens of kilometers away, and its armor-piercing capability is absolute. This is no assassin's tool—it is a weapon of pure, lethal, and efficient annihilation. -->
-  <GR_EnergySniperRifle.description>TODO</GR_EnergySniperRifle.description>
+  <GR_EnergySniperRifle.description>灰裔制式能量狙击枪，又名耀光。高能粒子聚束器将炼狱魔王主炮级的澎湃能量聚合为一束，能量束飞行时发出的耀眼光芒即使相隔数十千米也清晰可见，其迸发的高能粒子射流可以直接击穿绝大多数形式的护甲与护盾。这不是一把暗杀武器，而是彻头彻尾的毁灭者，致命且高效。</GR_EnergySniperRifle.description>
   <!-- EN: stock -->
   <GR_EnergySniperRifle.tools.stock.label>TODO</GR_EnergySniperRifle.tools.stock.label>
   <!-- EN: barrel -->
   <GR_EnergySniperRifle.tools.barrel.label>TODO</GR_EnergySniperRifle.tools.barrel.label>
   <!-- EN: Gray Energy Sniper Rifle -->
   <GR_EnergySniperRifle.verbs.Verb_Shoot.label>TODO</GR_EnergySniperRifle.verbs.Verb_Shoot.label>
-  
+
 </LanguageData>

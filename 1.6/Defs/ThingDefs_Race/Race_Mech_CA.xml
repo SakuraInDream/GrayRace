@@ -12,6 +12,7 @@
       <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
       <BandwidthCost>4</BandwidthCost>
+      <CaravanBonusSpeedFactor>12</CaravanBonusSpeedFactor>
     </statBases>
     <race>
       <baseBodySize>4</baseBodySize>

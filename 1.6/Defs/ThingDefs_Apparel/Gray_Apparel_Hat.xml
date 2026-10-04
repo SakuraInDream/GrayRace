@@ -39,7 +39,7 @@
     </costList>
     <statBases>
       <MaxHitPoints>600</MaxHitPoints>
-      <WorkToMake>48000</WorkToMake>
+      <WorkToMake>144000</WorkToMake>
       <Mass>2</Mass>
       <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
@@ -121,7 +121,7 @@
     </costList>
     <statBases>
       <MaxHitPoints>400</MaxHitPoints>
-      <WorkToMake>36000</WorkToMake>
+      <WorkToMake>108000</WorkToMake>
       <Mass>2</Mass>
       <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
@@ -202,7 +202,7 @@
     </costList>
     <statBases>
       <MaxHitPoints>800</MaxHitPoints>
-      <WorkToMake>72000</WorkToMake>
+      <WorkToMake>216000</WorkToMake>
       <Mass>2</Mass>
       <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
@@ -285,8 +285,8 @@
       <ComponentSpacer>2</ComponentSpacer>
     </costList>
     <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>60000</WorkToMake>
       <Mass>2</Mass>
       <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
@@ -362,8 +362,8 @@
       <ComponentSpacer>4</ComponentSpacer>
     </costList>
     <statBases>
-      <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToMake>90000</WorkToMake>
       <Mass>2</Mass>
       <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
       <ArmorRating_Sharp>0.7</ArmorRating_Sharp>

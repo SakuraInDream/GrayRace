@@ -34,7 +34,7 @@
   <!-- EN: Gray Heavy Helmet -->
   <Gray_Apparel_HeavyHelmet.label>灰裔重型头盔</Gray_Apparel_HeavyHelmet.label>
   <!-- EN: . -->
-  <Gray_Apparel_HeavyHelmet.description>TODO</Gray_Apparel_HeavyHelmet.description>
+  <Gray_Apparel_HeavyHelmet.description>灰裔制式头盔，重型。专为冲锋陷阵的重装步兵设计的重型头盔。秉承了与全身装甲一致的多层防护理念，并特别增设缓冲内衬，以最大限度降低冲击对佩戴者人格核心的损害——尽管灰裔并不具备生物意义上的大脑，但其人格核心在面对某些攻击时比生物器官更容易受损，绝大部分灰裔都会主动装备更优良的护甲确保其在激战中的安全。</Gray_Apparel_HeavyHelmet.description>
 
   <!-- EN: Gray Laurel -->
   <Gray_Apparel_Laurel.label>灰裔月桂冠</Gray_Apparel_Laurel.label>
@@ -44,7 +44,7 @@
   <!-- EN: Gray Light Helmet -->
   <Gray_Apparel_LightHelmet.label>灰裔轻型头盔</Gray_Apparel_LightHelmet.label>
   <!-- EN: . -->
-  <Gray_Apparel_LightHelmet.description>TODO</Gray_Apparel_LightHelmet.description>
+  <Gray_Apparel_LightHelmet.description>专为侦察与支援任务设计的轻型制式头盔。在基础防护结构上增设专用软质缓冲层，显著提升对冲击与流弹的抵御能力，能有效应对战场中难以预判的冷枪与破片——那些往往致命且精准的威胁。</Gray_Apparel_LightHelmet.description>
 
   <!-- EN: Gray Maid Band -->
   <Gray_Apparel_MaidBand.label>灰裔女仆头饰</Gray_Apparel_MaidBand.label>
@@ -54,17 +54,17 @@
   <!-- EN: Gray Marksman Helmet -->
   <Gray_Apparel_MarksmanHelmet.label>灰裔“相交线”目标追踪头盔</Gray_Apparel_MarksmanHelmet.label>
   <!-- EN: . -->
-  <Gray_Apparel_MarksmanHelmet.description>TODO</Gray_Apparel_MarksmanHelmet.description>
+  <Gray_Apparel_MarksmanHelmet.description>头盔的防护层被极致压缩，以容纳内部的智能火控系统。能够有效的帮助射手计算风速、预测弹道、分析行踪，将目标的命运线勾勒于射手的眼前——然而，无论怎样去计算如何“相交”，终究无法替代射手扣下扳机的那一瞬。</Gray_Apparel_MarksmanHelmet.description>
 
   <!-- EN: Gray Mechanitor Helmet -->
   <Gray_Apparel_MechanitorHelmet.label>灰裔“交感折射镜”思维分析护目镜</Gray_Apparel_MechanitorHelmet.label>
   <!-- EN: . -->
-  <Gray_Apparel_MechanitorHelmet.description>TODO</Gray_Apparel_MechanitorHelmet.description>
+  <Gray_Apparel_MechanitorHelmet.description>作为灰裔机械师的标准视觉终端，其镜面由多层纳米折射阵列构成，能够在微秒级内解析并重组视觉信息。通过与佩戴者人格核心的神经共感端口，折射镜可直接读取所见与思考，进而运算并投射出适合装备者的最优的逻辑路径与战术预判。\n 在部分灰裔机械师集体控诉——“直连人格核心是侵犯隐私权的行为”后，新一代交感折射镜增加了新的使用协议。</Gray_Apparel_MechanitorHelmet.description>
 
   <!-- EN: Gray Warrior Helmet -->
   <Gray_Apparel_MeleeHelmet.label>灰裔“骑士精神”面甲</Gray_Apparel_MeleeHelmet.label>
   <!-- EN: . -->
-  <Gray_Apparel_MeleeHelmet.description>TODO</Gray_Apparel_MeleeHelmet.description>
+  <Gray_Apparel_MeleeHelmet.description>由星海帝国人类工匠为灰裔所打造的装备，意图填充灰裔不存在那部分。\n 一件灰裔专用的重型面部护甲，加装了分析行为与预测动作的智能系统和感知屏蔽装置。上面刻着一行祷文——“骑士的剑为守护而挥，而非为私欲出鞘。”</Gray_Apparel_MeleeHelmet.description>
 
   <!-- EN: Gray Nile Gauze Veil -->
   <Gray_Apparel_NileGauzeVeil.label>灰裔尼罗面纱</Gray_Apparel_NileGauzeVeil.label>

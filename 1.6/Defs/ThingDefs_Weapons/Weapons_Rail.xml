@@ -35,7 +35,7 @@
     </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
-      <WorkToMake>24000</WorkToMake>
+      <WorkToMake>60000</WorkToMake>
       <Mass>2</Mass>
       <AccuracyTouch>1</AccuracyTouch>
       <AccuracyShort>0.95</AccuracyShort>
@@ -142,7 +142,7 @@
     </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
-      <WorkToMake>31000</WorkToMake>
+      <WorkToMake>90000</WorkToMake>
       <Mass>4.5</Mass>
       <AccuracyTouch>1</AccuracyTouch>
       <AccuracyShort>0.8</AccuracyShort>
@@ -240,7 +240,7 @@
     </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
-      <WorkToMake>40000</WorkToMake>
+      <WorkToMake>180000</WorkToMake>
       <Mass>3.5</Mass>
       <AccuracyTouch>0.9</AccuracyTouch>
       <AccuracyShort>1</AccuracyShort>
@@ -333,7 +333,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
+      <WorkToMake>240000</WorkToMake>
       <Mass>10</Mass>
       <AccuracyTouch>0.3</AccuracyTouch>
       <AccuracyShort>0.45</AccuracyShort>
@@ -443,7 +443,7 @@
     </thingCategories>
     <techLevel>Spacer</techLevel>
     <statBases>
-      <WorkToMake>45000</WorkToMake>
+      <WorkToMake>210000</WorkToMake>
       <Mass>8</Mass>
       <AccuracyTouch>0.6</AccuracyTouch>
       <AccuracyShort>0.9</AccuracyShort>
@@ -537,7 +537,7 @@
       <li>RangedHeavy</li>
     </weaponClasses>
     <statBases>
-      <WorkToMake>60000</WorkToMake>
+      <WorkToMake>300000</WorkToMake>
       <Mass>150</Mass>
       <AccuracyTouch>0.5</AccuracyTouch>
       <AccuracyShort>0.7</AccuracyShort>

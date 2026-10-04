@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Alloy -->
   <GR_Alloy.label>合金</GR_Alloy.label>
   <!-- EN: This iconic material of the space age is synthesized from a nanoscale metallic matrix and rare interstellar minerals, combining exceptional strength with remarkable lightness. Its unique crystalline structure allows it to adapt to extreme temperatures, while its surface properties can be modulated via energy fields, making it suitable for a wide range of applications—from starship armor to colonial infrastructure. -->
-  <GR_Alloy.description>TODO</GR_Alloy.description>
+  <GR_Alloy.description>这是一种太空时代的优质金属，由纳米材料与稀有矿物合成，将卓越的强度与非凡的轻盈结合，硬度、韧性、重量都堪称完美。其独特的晶体结构使其能够适应极端温度，而其表面特性可以通过能量场进行调节，广泛运用在星际飞船装甲到殖民地基础设施的建设当中。</GR_Alloy.description>
   <!-- EN: alloy -->
   <GR_Alloy.stuffProps.stuffAdjective>合金</GR_Alloy.stuffProps.stuffAdjective>
-  
+
   <!-- EN: Nanites -->
   <GR_Nanites.label>灰潮源质</GR_Nanites.label>
   <!-- EN: A simple and efficient nano-actuator capable of performing complex operations and experiments at the nanoscale. -->
-  <GR_Nanites.description>TODO</GR_Nanites.description>
-  
+  <GR_Nanites.description>构成灰裔身体的主要物质，在离体且失去控制的情况下会自行休眠，防止无限复制的情况出现。即使在塑造定型的状态下，仍然可以激发其内在的能力。易于塑型的特性非常适合被用于制造或辅助制造各种各样的高精度部件。</GR_Nanites.description>
+
   <!-- EN: Zro -->
   <GR_Zro.label>泽珞</GR_Zro.label>
   <!-- EN: An extremely rare aerosol of exotic particles. It has been deposited on a number of worlds through meteor impacts, but its true origin is a mystery. If ingested by psionically-gifted individuals, zro acts as a very potent (and addictive) drug that enhances PSI abilities. -->
-  <GR_Zro.description>TODO</GR_Zro.description>
-  
+  <GR_Zro.description>一种起源于外星的奇异粒子，只能在外太空和遗迹里发现，不过其真正的来源依然是个未解之谜。摄入泽珞将会极大的提高灵能力量（并且导致成瘾），其强大的灵媒效果甚至可以让毫无灵能天赋的人建立起与虚境的共鸣。</GR_Zro.description>
+
 </LanguageData>

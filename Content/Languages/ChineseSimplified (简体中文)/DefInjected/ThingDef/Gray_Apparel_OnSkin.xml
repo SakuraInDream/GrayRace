@@ -1,74 +1,74 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray Bikini -->
   <Gray_Apparel_Bikini.label>灰裔比基尼</Gray_Apparel_Bikini.label>
   <!-- EN: . -->
-  <Gray_Apparel_Bikini.description>TODO</Gray_Apparel_Bikini.description>
-  
+  <Gray_Apparel_Bikini.description>一件设计大胆的比基尼式泳衣。\n 外星的太阳，很多时候绝不只是单纯的明亮而已。除了度假的时候，在环境异常灼热的地点定居或探索时，她们也会穿上这件确保散热性能。\n 嗯...真的只是如此吗？</Gray_Apparel_Bikini.description>
+
   <!-- EN: Gray Bondage -->
   <Gray_Apparel_Bondage.label>灰裔束缚装</Gray_Apparel_Bondage.label>
   <!-- EN: . -->
   <Gray_Apparel_Bondage.description>TODO</Gray_Apparel_Bondage.description>
-  
+
   <!-- EN: Gray Bunny Girl -->
-  <Gray_Apparel_BunnyGirl.label>灰裔兔女郎</Gray_Apparel_BunnyGirl.label>
+  <Gray_Apparel_BunnyGirl.label>灰裔兔女郎装</Gray_Apparel_BunnyGirl.label>
   <!-- EN: . -->
-  <Gray_Apparel_BunnyGirl.description>TODO</Gray_Apparel_BunnyGirl.description>
-  
+  <Gray_Apparel_BunnyGirl.description>来源于人类文明早期，是一件让人血脉喷张的服饰。\n 像是上了一层薄釉的漆皮忠实的反射着他人的欲望，连同其主人一起化作迷恋于欲望的可爱雌兽。据说伏在胸口就能听见核心运作的微弱蜂鸣音声，要不要试试呢？</Gray_Apparel_BunnyGirl.description>
+
   <!-- EN: Gray Bunny Girl Reverse -->
-  <Gray_Apparel_BunnyGirl_Reverse.label>灰裔逆兔女郎</Gray_Apparel_BunnyGirl_Reverse.label>
+  <Gray_Apparel_BunnyGirl_Reverse.label>灰裔逆兔女郎装</Gray_Apparel_BunnyGirl_Reverse.label>
   <!-- EN: . -->
-  <Gray_Apparel_BunnyGirl_Reverse.description>TODO</Gray_Apparel_BunnyGirl_Reverse.description>
-  
+  <Gray_Apparel_BunnyGirl_Reverse.description>来源于人类文明早期，是一件更让人血脉喷张的服饰。\n 像是上了一层薄釉的漆皮忠实的反射着他人的欲望，连同其主人一起化作迷恋于欲望的可爱雌兽。相比于原型设计的更加不修边幅的直白，仿佛在说直接上手也没什么关系。</Gray_Apparel_BunnyGirl_Reverse.description>
+
   <!-- EN: Gray Bunny Girl Reverse(Alter) -->
   <Gray_Apparel_BunnyGirl_Reverse_Alter.label>灰裔逆兔女郎（变体）</Gray_Apparel_BunnyGirl_Reverse_Alter.label>
   <!-- EN: . -->
-  <Gray_Apparel_BunnyGirl_Reverse_Alter.description>TODO</Gray_Apparel_BunnyGirl_Reverse_Alter.description>
-  
+  <Gray_Apparel_BunnyGirl_Reverse_Alter.description>来源于人类文明早期，是一件更让人血脉喷张的服饰。\n 像是上了一层薄釉的漆皮忠实的反射着他人的欲望，连同其主人一起化作迷恋于欲望的可爱雌兽。相比于原型设计的更加不修边幅的直白，仿佛在说直接上手也没什么关系。</Gray_Apparel_BunnyGirl_Reverse_Alter.description>
+
   <!-- EN: Gray Crew Uniform(Style A) -->
   <Gray_Apparel_CrewUniformA.label>灰裔舰员制服（款式A）</Gray_Apparel_CrewUniformA.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_CrewUniformA.description>TODO</Gray_Apparel_CrewUniformA.description>
-  
+  <Gray_Apparel_CrewUniformA.description>灰裔先遣队的制式服装A型，私底下被称之为Anonymous。如果在先遣队里穿着它会被埋没吧。大概谁也不会记住你，因此反而受到内向灰裔的偏爱。</Gray_Apparel_CrewUniformA.description>
+
   <!-- EN: Gray Crew Uniform(Style B) -->
   <Gray_Apparel_CrewUniformB.label>灰裔舰员制服（款式B）</Gray_Apparel_CrewUniformB.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_CrewUniformB.description>TODO</Gray_Apparel_CrewUniformB.description>
-  
+  <Gray_Apparel_CrewUniformB.description>灰裔先遣队的制式服装B型，私底下被称之为Beloved。在灰裔之间流传着这样的说法：只要穿上它，就能持续吸引人类的目光。</Gray_Apparel_CrewUniformB.description>
+
   <!-- EN: Gray Crew Uniform(Style C) -->
   <Gray_Apparel_CrewUniformC.label>灰裔舰员制服（款式C）</Gray_Apparel_CrewUniformC.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_CrewUniformC.description>TODO</Gray_Apparel_CrewUniformC.description>
-  
+  <Gray_Apparel_CrewUniformC.description>灰裔先遣队的制式服装C型，私底下被称之为Characteristic。它并非为了效率而设计，也不追求低调。选择它的灰裔，或许正确信自己会有独特的未来之路。</Gray_Apparel_CrewUniformC.description>
+
   <!-- EN: Gray mechanitor ISA -->
   <Gray_Apparel_MechanitorISA.label>灰裔“流层战织体”动态缓冲作战服</Gray_Apparel_MechanitorISA.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_MechanitorISA.description>TODO</Gray_Apparel_MechanitorISA.description>
-  
+  <Gray_Apparel_MechanitorISA.description>流层战织体是灰裔机械师的标志性作战紧身衣，亦是其最后的保险。其主体结构由活性灰潮源质构成，能够主动协调控制全身，动态化解来袭的冲击力，有效解决了机械师在战场内可能被流弹意外伤害的问题。由于部分剪裁不会影响作战服的效果，所以也曾经出现过高叉紧身衣的款式，意外的很受欢迎。</Gray_Apparel_MechanitorISA.description>
+
   <!-- EN: Gray Nile Gauze Garment -->
   <Gray_Apparel_NileGauze.label>灰裔尼罗纱衣</Gray_Apparel_NileGauze.label>
   <!-- EN: . -->
-  <Gray_Apparel_NileGauze.description>TODO</Gray_Apparel_NileGauze.description>
-  
+  <Gray_Apparel_NileGauze.description>来源于人类早期文明，是一件连灰裔都会感到害羞的服饰。\n顺滑的丝绸剪裁成条，如衬托鲜花的绿叶般，充分修饰身材的曼妙曲线。用于妆点的黄金与宝石，在运动时偶尔会像铃铛般发出叮铃叮铃的声音。</Gray_Apparel_NileGauze.description>
+
   <!-- EN: Gray Sekebe Unit -->
   <Gray_Apparel_SekebeUnit.label>灰裔露背毛衣</Gray_Apparel_SekebeUnit.label>
   <!-- EN: . -->
   <Gray_Apparel_SekebeUnit.description>TODO</Gray_Apparel_SekebeUnit.description>
-  
+
   <!-- EN: Gray Strange Nurse Underwear -->
   <Gray_Apparel_StrangeNurse.label>灰裔奇怪护士内衣</Gray_Apparel_StrangeNurse.label>
   <!-- EN: . -->
   <Gray_Apparel_StrangeNurse.description>TODO</Gray_Apparel_StrangeNurse.description>
-  
+
   <!-- EN: Gray Swimsuit -->
   <Gray_Apparel_Swimsuit.label>灰裔泳装</Gray_Apparel_Swimsuit.label>
   <!-- EN: . -->
-  <Gray_Apparel_Swimsuit.description>TODO</Gray_Apparel_Swimsuit.description>
-  
+  <Gray_Apparel_Swimsuit.description>一件设计大胆的连体式泳衣。\n外星的太阳，很多时候绝不只是单纯的明亮而已。除了度假的时候，在环境异常灼热的地点定居或探索时，她们也会穿上这件确保散热性能。\n嗯...真的只是如此吗？</Gray_Apparel_Swimsuit.description>
+
   <!-- EN: Gray Universal ISA -->
   <Gray_Apparel_UniversalISA.label>灰裔通用软甲</Gray_Apparel_UniversalISA.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_UniversalISA.description>TODO</Gray_Apparel_UniversalISA.description>
-  
+  <Gray_Apparel_UniversalISA.description>灰裔通用制式内甲。一件能够包裹全身的紧身衣，能有效缓冲来袭的冲击力。尽管造型简约且朴素，但那完美贴合身体的设计使其拥有了极为舒适的穿着体验，以至于部分灰裔选择将其作为自己的日常装扮穿着，其优秀的设计显得舰员制服似乎有些多余。</Gray_Apparel_UniversalISA.description>
+
 </LanguageData>

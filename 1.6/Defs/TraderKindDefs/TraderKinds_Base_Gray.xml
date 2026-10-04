@@ -20,7 +20,11 @@
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>GR_Nanites</thingDef>
-        <countRange>2500~5000</countRange>
+        <countRange>10000~20000</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>GR_Alloy</thingDef>
+        <countRange>2000~4000</countRange>
       </li>
       <li Class="StockGenerator_SingleDef">
         <thingDef>Steel</thingDef>

@@ -1,84 +1,84 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Rail assault rifle bullet -->
   <Bullet_GR_RailAssaultRifle.label>TODO</Bullet_GR_RailAssaultRifle.label>
-  
+
   <!-- EN: Rail heavy cannon bullet -->
   <Bullet_GR_RailCannon.label>TODO</Bullet_GR_RailCannon.label>
-  
+
   <!-- EN: Rail minigun bullet -->
   <Bullet_GR_RailMechgun.label>TODO</Bullet_GR_RailMechgun.label>
-  
+
   <!-- EN: Rail shotgun blast -->
   <Bullet_GR_RailShotgun.label>TODO</Bullet_GR_RailShotgun.label>
-  
+
   <!-- EN: Rail SMG bullet -->
   <Bullet_GR_RailSMG.label>TODO</Bullet_GR_RailSMG.label>
-  
+
   <!-- EN: Rail Sniper Rifle bullet -->
   <Bullet_GR_RailSniperRifle.label>TODO</Bullet_GR_RailSniperRifle.label>
-  
+
   <!-- EN: Gray Railgun Rifle -->
   <GR_RailAssaultRifle.label>灰裔磁轨步枪</GR_RailAssaultRifle.label>
   <!-- EN: Meteor.Utilizing a compact mid-pressure rail and a specialized capacitor that applies a powerful EMP coating to its slugs, this rifle offers respectable armor penetration while effectively neutralizing mechanical lifeforms. As it is essentially an elongated modification of a submachine gun platform, its raw stopping power is somewhat limited, but this trade-off maximizes its weight and size advantages. -->
-  <GR_RailAssaultRifle.description>TODO</GR_RailAssaultRifle.description>
+  <GR_RailAssaultRifle.description>灰裔制式磁轨步枪，又名流星。使用紧凑型中压磁轨，特殊的电容器为弹丸附加了极强的EMP覆层，在有不错的穿透力的同时还能有效抑制机械生命的行动。由于本质上是冲锋枪的加长改型，因此破坏力略有不足，但在最大程度上平衡了功能性与便携性。</GR_RailAssaultRifle.description>
   <!-- EN: stock -->
   <GR_RailAssaultRifle.tools.stock.label>TODO</GR_RailAssaultRifle.tools.stock.label>
   <!-- EN: barrel -->
   <GR_RailAssaultRifle.tools.barrel.label>TODO</GR_RailAssaultRifle.tools.barrel.label>
   <!-- EN: Gray Railgun Rifle -->
   <GR_RailAssaultRifle.verbs.Verb_Shoot.label>TODO</GR_RailAssaultRifle.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Neutron star -->
-  <GR_RailCannon.label>质量</GR_RailCannon.label>
+  <GR_RailCannon.label>中子星</GR_RailCannon.label>
   <!-- EN: Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal. -->
-  <GR_RailCannon.description>TODO</GR_RailCannon.description>
+  <GR_RailCannon.description>灰裔尚未诞生的年代，由一群狂热的重火力拥护者使用退役的护卫舰副炮改造而出的重型武器。惊人的后坐力即使是装备了外骨骼的强化士兵也难以驾驭，因此被交付给灰裔以应对殖民开拓中遇到的巨型生物。使用加长高压磁轨与重型电容器发射质量惊人的穿甲高爆弹，其巨大的威力足以抹平一座小型建筑，或是将22世纪的主战坦克化为一块废铁。</GR_RailCannon.description>
   <!-- EN: barrels -->
   <GR_RailCannon.tools.barrels.label>TODO</GR_RailCannon.tools.barrels.label>
   <!-- EN: Neutron star -->
   <GR_RailCannon.verbs.Verb_Shoot.label>TODO</GR_RailCannon.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Railgun Light MachineGun -->
   <GR_RailMachinegun.label>灰裔磁轨轻机枪</GR_RailMachinegun.label>
   <!-- EN: Star.Featuring a compact high-pressure rail and a high-capacity capacitor, this weapon unleashes a continuous, devastating stream of heavy depleted uranium armor-piercing rounds at a cyclic rate of fire. It creates a suppressive impact zone akin to a storm of steel and lead, establishing absolute dominance in base assaults and fire suppression roles. -->
-  <GR_RailMachinegun.description>TODO</GR_RailMachinegun.description>
+  <GR_RailMachinegun.description>灰裔制式磁轨轻机枪，又名恒星。使用紧凑型高压磁轨和大容量电容器，能将沉重的贫铀穿甲弹以毁灭性的射速持续泼洒。其制造的火力覆盖区如同狂风暴雨，是基地攻坚与火力压制的绝对主宰。</GR_RailMachinegun.description>
   <!-- EN: barrels -->
   <GR_RailMachinegun.tools.barrels.label>TODO</GR_RailMachinegun.tools.barrels.label>
   <!-- EN: Gray Railgun Light MachineGun -->
   <GR_RailMachinegun.verbs.Verb_Shoot.label>TODO</GR_RailMachinegun.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Railgun PDW -->
   <GR_RailPDW.label>灰裔磁轨冲锋枪</GR_RailPDW.label>
   <!-- EN: Satellite.Its low-pressure rail and compact capacitor provide only modest projectile velocity and a thin EMP coating, but in return grant a blistering rate of fire, exceptional stability, and nearly inaudible operation. This extreme lightweight design design enables lightning-fast target acquisition, making it the perfect partner for infiltration missions and the personal defense weapon of choice for most Grays. -->
-  <GR_RailPDW.description>TODO</GR_RailPDW.description>
+  <GR_RailPDW.description>灰裔制式磁轨冲锋枪，又名卫星。低压磁轨和小型电容器只能为弹丸提供较低的初速和EMP覆层，但同样换来了极高的射速和稳定性和微不可闻的枪声。极致轻量化的设计换来的是极快的出手速度，是潜入作战的最佳搭档，同时也是绝大多数灰裔的近身防卫首选。</GR_RailPDW.description>
   <!-- EN: grip -->
   <GR_RailPDW.tools.grip.label>TODO</GR_RailPDW.tools.grip.label>
   <!-- EN: barrel -->
   <GR_RailPDW.tools.barrel.label>TODO</GR_RailPDW.tools.barrel.label>
   <!-- EN: Gray Railgun PDW -->
   <GR_RailPDW.verbs.Verb_Shoot.label>TODO</GR_RailPDW.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Railgun Shotgun -->
   <GR_RailShotgun.label>灰裔磁轨霰弹枪</GR_RailShotgun.label>
   <!-- EN: White dwarf.Its unique array of mid-pressure magnetic rails simultaneously accelerates multiple projectiles, which are then compressed into a dense cluster by a muzzle suppressor. Upon impact, this cluster erupts into a devastating storm of shrapnel. While effective range is limited, its close-quarters and confined-space suppression capability is nothing short of terrifying. -->
-  <GR_RailShotgun.description>TODO</GR_RailShotgun.description>
+  <GR_RailShotgun.description>灰裔制式磁轨霰弹枪，又名白矮星。独特的中压磁轨阵列能同时加速多枚弹丸，在枪口处经由抑制器压缩为一团，在命中目标后爆散出致命的金属风暴。尽管后劲不足，但在近距离与封闭空间内仍然有极其恐怖的压制力。</GR_RailShotgun.description>
   <!-- EN: stock -->
   <GR_RailShotgun.tools.stock.label>TODO</GR_RailShotgun.tools.stock.label>
   <!-- EN: barrel -->
   <GR_RailShotgun.tools.barrel.label>TODO</GR_RailShotgun.tools.barrel.label>
   <!-- EN: Gray Railgun Shotgun -->
   <GR_RailShotgun.verbs.Verb_Shoot.label>TODO</GR_RailShotgun.verbs.Verb_Shoot.label>
-  
+
   <!-- EN: Gray Railgun Sniper Rifle -->
   <GR_RailSniperRifle.label>灰裔磁轨狙击枪</GR_RailSniperRifle.label>
   <!-- EN: Comet.A custom-built over-pressure magnetic rail accelerates projectiles to twenty Mach and imbues them with a potent EMP charge, granting phenomenal penetration and lethal force. The kinetic energy released upon impact can pierce weaker armor plates on corvettes. Due to its considerable size and poor portability, Grays typically deploy this weapon only from fixed firing positions. -->
-  <GR_RailSniperRifle.description>TODO</GR_RailSniperRifle.description>
+  <GR_RailSniperRifle.description>灰裔制式磁轨狙击枪，又名彗星。特制超压磁轨与高压电容器为弹丸附加EMP效果的同时可以将其加速至二十马赫，赋予其惊人的穿透力与杀伤力，命中瞬间释放的动能甚至可以击穿护卫舰上较薄弱的装甲。由于体积较大，完全展开时会阻碍行动，因此灰裔一般只会在固定点位狙击时使用这把武器。</GR_RailSniperRifle.description>
   <!-- EN: stock -->
   <GR_RailSniperRifle.tools.stock.label>TODO</GR_RailSniperRifle.tools.stock.label>
   <!-- EN: barrel -->
   <GR_RailSniperRifle.tools.barrel.label>TODO</GR_RailSniperRifle.tools.barrel.label>
   <!-- EN: Gray Railgun Sniper Rifle -->
   <GR_RailSniperRifle.verbs.Verb_Shoot.label>TODO</GR_RailSniperRifle.verbs.Verb_Shoot.label>
-  
+
 </LanguageData>

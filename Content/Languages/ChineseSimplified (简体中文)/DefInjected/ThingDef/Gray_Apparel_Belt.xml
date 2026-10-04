@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray auxiliary robotic arm -->
   <Gray_Apparel_MechanitorBelt.label>灰裔“四向辅臂”四核协助机械臂</Gray_Apparel_MechanitorBelt.label>
   <!-- EN: A backpack containing bandwidth-expansion computer and antenna. It can increase a mechanitor's maximum total bandwidth. -->
-  <Gray_Apparel_MechanitorBelt.description>TODO</Gray_Apparel_MechanitorBelt.description>
-  
+  <Gray_Apparel_MechanitorBelt.description>四向辅臂是灰裔机械师常用的多功能扩展装置。只要将自身的一部分注入其中，四组独立的辅助核心便可根据任务需求切换为操控、搬运、修复或防御模式，所有辅臂动作由人格核心的副逻辑单元即时调度，几乎无操作延迟。在战后，偶尔能见到因损坏脱离主体却还在动弹的辅臂，被那些垃圾佬戏称为“灰裔余烬”。</Gray_Apparel_MechanitorBelt.description>
+
 </LanguageData>

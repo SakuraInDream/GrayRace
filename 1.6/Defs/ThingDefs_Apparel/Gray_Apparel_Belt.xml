@@ -33,7 +33,7 @@
     </graphicData>
     <tickerType>Normal</tickerType>
     <statBases>
-      <WorkToMake>12000</WorkToMake>
+      <WorkToMake>60000</WorkToMake>
       <MaxHitPoints>200</MaxHitPoints>
       <Mass>3</Mass>
       <Flammability>0</Flammability>

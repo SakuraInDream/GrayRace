@@ -1,49 +1,84 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <!-- EN: 分析芯片 -->
-  <GR_Hediff_AnalysisChip.label>TODO</GR_Hediff_AnalysisChip.label>
-  <!-- EN: 植入大脑的分析芯片，提升学习能力。 -->
+
+  <!-- EN: Analysis Chip -->
+  <GR_Hediff_AnalysisChip.label>分析芯片</GR_Hediff_AnalysisChip.label>
+  <!-- EN: 协助主人格核心学习的拓展芯片。专门用于多次迭代数据，推测不同选择的后果。……只要失败了足够多次的话，便能推测出正确的路线吧。 -->
   <GR_Hediff_AnalysisChip.description>TODO</GR_Hediff_AnalysisChip.description>
-  
-  <!-- EN: 战斗芯片 -->
-  <GR_Hediff_CombatChip.label>TODO</GR_Hediff_CombatChip.label>
-  <!-- EN: 植入大脑的战斗芯片，提升战斗能力。 -->
+
+  <!-- EN: Combat Chip -->
+  <GR_Hediff_CombatChip.label>战斗芯片</GR_Hediff_CombatChip.label>
+  <!-- EN: 植入大脑的战斗芯片，提升远程射击能力。 -->
   <GR_Hediff_CombatChip.description>TODO</GR_Hediff_CombatChip.description>
-  
+
+  <!-- EN: Concentrate Chip -->
+  <GR_Hediff_ConcentrateChip.label>集中芯片</GR_Hediff_ConcentrateChip.label>
+  <!-- EN: 植入大脑的集中芯片，提升工作能力。 -->
+  <GR_Hediff_ConcentrateChip.description>TODO</GR_Hediff_ConcentrateChip.description>
+
   <!-- EN: 效率增强器 -->
-  <GR_Hediff_EfficiencyBooster.label>TODO</GR_Hediff_EfficiencyBooster.label>
-  <!-- EN: 安装在灰潮核心的增强器。增加备用灰潮机械回复速度 -->
+  <GR_Hediff_EfficiencyBooster.label>效率增强器</GR_Hediff_EfficiencyBooster.label>
+  <!-- EN: 安装在灰潮核心的增强器。增加备用灰潮机械回复速度。 -->
   <GR_Hediff_EfficiencyBooster.description>TODO</GR_Hediff_EfficiencyBooster.description>
-  
-  <!-- EN: 高级超频芯片 -->
-  <GR_Hediff_OverclockingChipAdvanced.label>TODO</GR_Hediff_OverclockingChipAdvanced.label>
-  <!-- EN: 增加150%超频上限。 -->
+
+  <!-- EN: Advanced nanite memory -->
+  <GR_Hediff_NanitesMemoryAdvanced.label>高级灰潮源质存储器</GR_Hediff_NanitesMemoryAdvanced.label>
+  <!-- EN: 正如其名称，用于存储源质的存储器。这种款式一般只会用于运输目的。会一定程度上影响灰裔的行动能力的同时，还需抽调少量核心的算力用于压缩灰潮源质。 -->
+  <GR_Hediff_NanitesMemoryAdvanced.description>TODO</GR_Hediff_NanitesMemoryAdvanced.description>
+
+  <!-- EN: Intermediate nanite memory -->
+  <GR_Hediff_NanitesMemoryIntermediate.label>中级灰潮源质存储器</GR_Hediff_NanitesMemoryIntermediate.label>
+  <!-- EN: 正如其名称，用于存储源质的存储器。因为更大的体积和制造成本，得以采用更高效的压缩方式。不但大幅提升了存储上限，应其控制良好的体积和分布方式，并不会对行动造成影响。 -->
+  <GR_Hediff_NanitesMemoryIntermediate.description>TODO</GR_Hediff_NanitesMemoryIntermediate.description>
+
+  <!-- EN: Primary nanite memory -->
+  <GR_Hediff_NanitesMemoryPrimary.label>初级灰潮源质存储器</GR_Hediff_NanitesMemoryPrimary.label>
+  <!-- EN: 正如其名称，用于存储源质的存储器。可提升灰裔体内的灰潮源质存储单位上限。专门设计成了几乎不会对行动造成阻碍的小型款式。 -->
+  <GR_Hediff_NanitesMemoryPrimary.description>TODO</GR_Hediff_NanitesMemoryPrimary.description>
+
+  <!-- EN: Ultimate nanite memory -->
+  <GR_Hediff_NanitesMemoryUltimate.label>终极灰潮源质存储器</GR_Hediff_NanitesMemoryUltimate.label>
+  <!-- EN: 正如其名称，用于存储源质的存储器。基本上只会在涉及到大规模建设的运输作业中见到。这种级别的插件，会对核心算力和行动能力产生严重影响，足让有些灰裔将其视为责罚。 -->
+  <GR_Hediff_NanitesMemoryUltimate.description>TODO</GR_Hediff_NanitesMemoryUltimate.description>
+
+  <!-- EN: Advanced overclocking chip -->
+  <GR_Hediff_OverclockingChipAdvanced.label>高级超频芯片</GR_Hediff_OverclockingChipAdvanced.label>
+  <!-- EN: 无视安全超频协议的产物。需要牺牲一部分源质容量。失去赖以为生的源质，足以让任何灰裔理解这款芯片的危险性。 -->
   <GR_Hediff_OverclockingChipAdvanced.description>TODO</GR_Hediff_OverclockingChipAdvanced.description>
-  
-  <!-- EN: 中级超频芯片 -->
-  <GR_Hediff_OverclockingChipIntermediate.label>TODO</GR_Hediff_OverclockingChipIntermediate.label>
-  <!-- EN: 增加75%超频上限。 -->
+
+  <!-- EN: Intermediate overclocking chip -->
+  <GR_Hediff_OverclockingChipIntermediate.label>中级超频芯片</GR_Hediff_OverclockingChipIntermediate.label>
+  <!-- EN: 精心构建的超频支持插件。在安全超频的前提下做到了极限。对于许多灰裔来说，这是一道分水岭。 -->
   <GR_Hediff_OverclockingChipIntermediate.description>TODO</GR_Hediff_OverclockingChipIntermediate.description>
-  
-  <!-- EN: 初级超频芯片 -->
-  <GR_Hediff_OverclockingChipPrimary.label>TODO</GR_Hediff_OverclockingChipPrimary.label>
-  <!-- EN: 增加25%超频上限。 -->
+
+  <!-- EN: Primary overclocking chip -->
+  <GR_Hediff_OverclockingChipPrimary.label>初级超频芯片</GR_Hediff_OverclockingChipPrimary.label>
+  <!-- EN: 简单的超频支持插件。仅仅用于控制核心能量的再分配与优化。 -->
   <GR_Hediff_OverclockingChipPrimary.description>TODO</GR_Hediff_OverclockingChipPrimary.description>
-  
-  <!-- EN: 终级超频芯片 -->
-  <GR_Hediff_OverclockingChipUltimate.label>TODO</GR_Hediff_OverclockingChipUltimate.label>
-  <!-- EN: 增加250%超频上限。 -->
+
+  <!-- EN: Ultimate overclocking chip -->
+  <GR_Hediff_OverclockingChipUltimate.label>终极超频芯片</GR_Hediff_OverclockingChipUltimate.label>
+  <!-- EN: 骇入人格核心，将能量供应推至满载。几乎刚需外置源质储罐。……即便能理解降低源质储量意味着什么，超频到极限所带来的全能感仍在狂欢。 -->
   <GR_Hediff_OverclockingChipUltimate.description>TODO</GR_Hediff_OverclockingChipUltimate.description>
-  
+
   <!-- EN: 精密芯片 -->
-  <GR_Hediff_PrecisionChip.label>TODO</GR_Hediff_PrecisionChip.label>
-  <!-- EN: 植入手部的精密操作芯片。 -->
+  <GR_Hediff_PrecisionChip.label>精密芯片</GR_Hediff_PrecisionChip.label>
+  <!-- EN: 植入手臂的精密操作芯片。 -->
   <GR_Hediff_PrecisionChip.description>TODO</GR_Hediff_PrecisionChip.description>
-  
+
+  <!-- EN: Reaction Chip -->
+  <GR_Hediff_ReactionChip.label>反应芯片</GR_Hediff_ReactionChip.label>
+  <!-- EN: 存储着百般武艺的精炼数据芯片。应对、预测、使用——只要陷入近身战，定能派上用场。 -->
+  <GR_Hediff_ReactionChip.description>TODO</GR_Hediff_ReactionChip.description>
+
   <!-- EN: 瞄准系统 -->
-  <GR_Hediff_TargetingSystem.label>TODO</GR_Hediff_TargetingSystem.label>
-  <!-- EN: 植入眼部的先进瞄准系统。 -->
+  <GR_Hediff_TargetingSystem.label>瞄准系统</GR_Hediff_TargetingSystem.label>
+  <!-- EN: 兼容各式装备的目标分析与识别元件。能有效避免友军误伤，同时提供可靠的向量预测功能。经常有骑士灰裔以礼物的方式赠送给搭档。 -->
   <GR_Hediff_TargetingSystem.description>TODO</GR_Hediff_TargetingSystem.description>
-  
+
+  <!-- EN: Technician local database -->
+  <GR_Hediff_TechnicianDatabase.label>技工本地数据库</GR_Hediff_TechnicianDatabase.label>
+  <!-- EN: 存储着大量蓝图的数据库。甚至收录了宇宙中存在过和已经消失的螺丝规格，以及对应的工具。 -->
+  <GR_Hediff_TechnicianDatabase.description>TODO</GR_Hediff_TechnicianDatabase.description>
+
 </LanguageData>

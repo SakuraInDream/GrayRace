@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray Heavy Armor -->
   <Gray_Apparel_HeavyArmor.label>灰裔重型装甲</Gray_Apparel_HeavyArmor.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_HeavyArmor.description>TODO</Gray_Apparel_HeavyArmor.description>
-  
+  <Gray_Apparel_HeavyArmor.description>灰裔制式装甲，重型。专为冲锋陷阵的重装步兵打造的重型装甲。通过叠加多层复合装甲板，这套装备用机动性换来了绝佳的防御效能。即使置身枪林弹雨的激烈战场，亦能确保穿戴者从容应对，巍然不动。</Gray_Apparel_HeavyArmor.description>
+
   <!-- EN: Gray Light Armor -->
   <Gray_Apparel_LightArmor.label>灰裔轻型装甲</Gray_Apparel_LightArmor.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_LightArmor.description>TODO</Gray_Apparel_LightArmor.description>
-  
+  <Gray_Apparel_LightArmor.description>专为侦察与支援任务设计的轻型制式装甲。以牺牲防护为代价，大幅减轻了重量与体积以避免影响穿戴者的行动。而省下来的体积则可以加装更多的动力系统，用数量弥补工艺的不足。</Gray_Apparel_LightArmor.description>
+
   <!-- EN: Gray Marksman Armor -->
   <Gray_Apparel_MarksmanArmor.label>灰裔“平行线”折射稳定装甲</Gray_Apparel_MarksmanArmor.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_MarksmanArmor.description>TODO</Gray_Apparel_MarksmanArmor.description>
-  
+  <Gray_Apparel_MarksmanArmor.description>特殊的轻型机动护具，提供给需求高机动作战的部队使用，确保高性能机动的同时特殊的护盾设计确保了防护性能。\n防护主要依赖遍布全身的小型悬浮装置与护盾发生器。这种悬浮装置和护盾发生器都具备快速自充能的能力，能让射手始终与致命的火力线保持“平行”——但请谨记，一次错误的判断足以让你与安全永不相交。</Gray_Apparel_MarksmanArmor.description>
+
   <!-- EN: Gray Mechanitor Armor -->
   <Gray_Apparel_MechanitorArmor.label>灰裔“司阵骨架”临场指挥外骨骼</Gray_Apparel_MechanitorArmor.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_MechanitorArmor.description>TODO</Gray_Apparel_MechanitorArmor.description>
-  
+  <Gray_Apparel_MechanitorArmor.description>司阵骨架是灰裔机械师用于前线指挥与防御的战斗外骨骼。其特殊的护盾阵列可实时解析受力分布，将防御精度集中至冲击核心点：子弹来袭时，能量壁层收束于一点抵消穿透；爆炸冲击则在瞬间扩散至全身，以分散冲击波能量。\n护盾阵列设计为专注抵御单次攻击，能在数秒内完成自我重构，对于在后场作战的灰裔机械师来说，这种短时间循环充能的防御模式应对流弹与可能的偏差炮击时比一般护盾效用更好。</Gray_Apparel_MechanitorArmor.description>
+
   <!-- EN: Gray Warrior Armor -->
   <Gray_Apparel_MeleeArmor.label>灰裔“崇高意志”机装</Gray_Apparel_MeleeArmor.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
-  <Gray_Apparel_MeleeArmor.description>TODO</Gray_Apparel_MeleeArmor.description>
-  
+  <Gray_Apparel_MeleeArmor.description>由星海帝国人类工匠为灰裔所打造的装备，意图填充灰裔不存在那部分。\n一套灰裔专用的重型全身盔甲，装有大量推进装置以对抗自身的重量的同时，叠加了多个微型护盾阵列。上面刻着一行祷文——“我们唯一的悲哀是苟且地活着，而不是壮烈地死去。”</Gray_Apparel_MeleeArmor.description>
+
 </LanguageData>

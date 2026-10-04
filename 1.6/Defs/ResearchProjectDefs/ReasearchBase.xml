@@ -262,68 +262,68 @@
     <researchViewY>4</researchViewY>
   </ResearchProjectDef>
 
-  <!--Daily Mimicry 生活变形-->
+  <!--T1 Upgrades T1升级-->
   <ResearchProjectDef>
     <tab>GR_ResearchTab</tab>
-    <defName>GR_DailyMimicry</defName>
-    <label>Daily Mimicry</label>
-    <description>Unlock Mimicry,this is a substance that can greatly enhance spiritual abilities.</description>
+    <defName>GR_T1Upgrades</defName>
+    <label>T1 Upgrades</label>
+    <description>Unlock T1 upgrades, which provide basic enhancements to your gray race.</description>
     <baseCost>1000</baseCost>
     <techLevel>Spacer</techLevel>
     <researchViewX>1</researchViewX>
     <researchViewY>6</researchViewY>
   </ResearchProjectDef>
 
-  <!--Combat Mimicry 战斗变形-->
+  <!--T2 Upgrades T2升级-->
   <ResearchProjectDef>
     <tab>GR_ResearchTab</tab>
-    <defName>GR_CombatMimicry</defName>
-    <label>Combat Mimicry</label>
-    <description>Unlock Mimicry,this is a substance that can greatly enhance spiritual abilities.</description>
+    <defName>GR_T2Upgrades</defName>
+    <label>T2 Upgrades</label>
+    <description>Unlock T2 upgrades, which provide normal enhancements to your gray race.</description>
     <baseCost>3000</baseCost>
     <prerequisites>
-      <li>GR_DailyMimicry</li>
+      <li>GR_T1Upgrades</li>
     </prerequisites>
     <techLevel>Spacer</techLevel>
     <researchViewX>2</researchViewX>
     <researchViewY>6</researchViewY>
   </ResearchProjectDef>
 
-  <!--Daily plugin 生活插件-->
+  <!--T3 Upgrades T3升级-->
   <ResearchProjectDef>
     <tab>GR_ResearchTab</tab>
-    <defName>GR_DailyPlugin</defName>
-    <label>Daily Plugin</label>
-    <description>Unlock plugin,this is a substance that can greatly enhance spiritual abilities.</description>
+    <defName>GR_T3Upgrades</defName>
+    <label>T3 Upgrades</label>
+    <description>Unlock T3 upgrades, which provide advanced enhancements to your gray race.</description>
     <baseCost>5000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
     </requiredResearchFacilities>
     <prerequisites>
-      <li>GR_CombatMimicry</li>
+      <li>GR_T2Upgrades</li>
       <li>GR_ScienceNexus</li>
     </prerequisites>
-    <techLevel>Spacer</techLevel>
+    <techLevel>Ultra</techLevel>
     <researchViewX>3</researchViewX>
     <researchViewY>6</researchViewY>
   </ResearchProjectDef>
 
-  <!--Combat plugin 战斗插件-->
+  <!--T4 Upgrades T4升级-->
   <ResearchProjectDef>
     <tab>GR_ResearchTab</tab>
-    <defName>GR_CombatPlugin</defName>
-    <label>Combat Plugin</label>
-    <description>Unlock plugin,this is a substance that can greatly enhance spiritual abilities.</description>
+    <defName>GR_T4Upgrades</defName>
+    <label>T4 Upgrades</label>
+    <description>Unlock T4 upgrades, which provide ultimate enhancements to your gray race.</description>
     <baseCost>8000</baseCost>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
     <requiredResearchFacilities>
       <li>GR_ScienceNexus</li>
     </requiredResearchFacilities>
     <prerequisites>
-      <li>GR_DailyPlugin</li>
+      <li>GR_T3Upgrades</li>
     </prerequisites>
-    <techLevel>Spacer</techLevel>
+    <techLevel>Ultra</techLevel>
     <researchViewX>4</researchViewX>
     <researchViewY>6</researchViewY>
   </ResearchProjectDef>

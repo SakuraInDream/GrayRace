@@ -29,7 +29,7 @@
       </li>
       <li Class="CompProperties_UseEffectInstallImplant">
         <hediffDef>GR_SCC_DownLink_Hediff</hediffDef>
-        <bodyPart>Brain</bodyPart>
+        <bodyPart>Nano_Brain</bodyPart>
         <canUpgrade>true</canUpgrade>
         <maxSeverity>3</maxSeverity>
       </li>

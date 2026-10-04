@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Cold Claw -->
   <GR_ColdClaw.label>冰爪</GR_ColdClaw.label>
-
+  
   <!-- EN: Crowbar Damage -->
   <GR_CrowbarDamage.label>撬棍伤害</GR_CrowbarDamage.label>
-
+  
   <!-- EN: Heat Claw -->
   <GR_HeatClaw.label>热爪</GR_HeatClaw.label>
-
+  
   <!-- EN: Nanite Scratch -->
   <GR_NanoScratch.label>纳米抓挠</GR_NanoScratch.label>
-
+  
 </LanguageData>

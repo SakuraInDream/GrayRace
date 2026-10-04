@@ -105,7 +105,7 @@
     </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <WorkToMake>60000</WorkToMake>
       <Mass>1</Mass>
       <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
@@ -183,7 +183,7 @@
     </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <WorkToMake>60000</WorkToMake>
       <Mass>1</Mass>
       <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
@@ -191,10 +191,10 @@
       <EquipDelay>1</EquipDelay>
     </statBases>
     <equippedStatOffsets>
-      <MiningSpeed>1</MiningSpeed>
+      <MiningSpeed>0.5</MiningSpeed>
       <MiningYield>0.2</MiningYield>
-      <SmoothingSpeed>1</SmoothingSpeed>
-      <DeepDrillingSpeed>1</DeepDrillingSpeed>
+      <SmoothingSpeed>2</SmoothingSpeed>
+      <DeepDrillingSpeed>0.5</DeepDrillingSpeed>
       <HuntingStealth>0.5</HuntingStealth>
     </equippedStatOffsets>
     <burnableByRecipe>false</burnableByRecipe>
@@ -260,7 +260,7 @@
     </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <WorkToMake>60000</WorkToMake>
       <Mass>1</Mass>
       <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
@@ -343,7 +343,7 @@
     </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <WorkToMake>60000</WorkToMake>
       <Mass>1</Mass>
       <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
@@ -353,7 +353,7 @@
     <equippedStatOffsets>
       <ButcheryMechanoidEfficiency>0.3</ButcheryMechanoidEfficiency>
       <ButcheryMechanoidSpeed>1</ButcheryMechanoidSpeed>
-      <GeneralLaborSpeed>0.5</GeneralLaborSpeed>
+      <GeneralLaborSpeed>0.3</GeneralLaborSpeed>
       <ConstructionSpeed>1</ConstructionSpeed>
       <SmeltingSpeed>1</SmeltingSpeed>
     </equippedStatOffsets>
@@ -421,7 +421,7 @@
     </costList>
     <statBases>
       <MaxHitPoints>200</MaxHitPoints>
-      <WorkToMake>18000</WorkToMake>
+      <WorkToMake>60000</WorkToMake>
       <Mass>1</Mass>
       <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>

@@ -13,7 +13,7 @@
     <pathCost>50</pathCost>
     <statBases>
       <MaxHitPoints>600</MaxHitPoints>
-      <WorkToBuild>6000</WorkToBuild>
+      <WorkToBuild>18000</WorkToBuild>
       <Flammability>0</Flammability>
       <WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
     </statBases>
@@ -93,7 +93,7 @@
     <pathCost>50</pathCost>
     <statBases>
       <MaxHitPoints>1500</MaxHitPoints>
-      <WorkToBuild>12000</WorkToBuild>
+      <WorkToBuild>600000</WorkToBuild>
       <Flammability>0</Flammability>
       <WorkTableWorkSpeedFactor>2.0</WorkTableWorkSpeedFactor>
     </statBases>
@@ -102,7 +102,7 @@
     <size>(5,5)</size>
     <costList>
       <GR_Alloy>600</GR_Alloy>
-      <GR_Nanites>1000</GR_Nanites>
+      <GR_Nanites>10000</GR_Nanites>
       <ComponentSpacer>15</ComponentSpacer>
     </costList>
     <comps>
@@ -186,7 +186,7 @@
     <blockWind>true</blockWind>
     <statBases>
       <MaxHitPoints>1500</MaxHitPoints>
-      <WorkToBuild>60000</WorkToBuild>
+      <WorkToBuild>600000</WorkToBuild>
       <Flammability>0</Flammability>
       <Beauty>20</Beauty>
     </statBases>
@@ -197,9 +197,9 @@
       <destroySound>BuildingDestroyed_Metal_Medium</destroySound>
     </building>
     <costList>
-      <GR_Alloy>500</GR_Alloy>
-      <GR_Nanites>1000</GR_Nanites>
-      <ComponentSpacer>20</ComponentSpacer>
+      <GR_Alloy>1000</GR_Alloy>
+      <GR_Nanites>10000</GR_Nanites>
+      <ComponentSpacer>50</ComponentSpacer>
     </costList>
     <comps>
       <li Class="CompProperties_Power">
@@ -281,13 +281,13 @@
     <!-- 这里不用原版 bill 系统，避免被归入 PotentialBillGiver -->
     <statBases>
       <MaxHitPoints>500</MaxHitPoints>
-      <WorkToBuild>8000</WorkToBuild>
+      <WorkToBuild>12000</WorkToBuild>
       <Mass>30</Mass>
       <Flammability>0.5</Flammability>
     </statBases>
     <costList>
-      <GR_Alloy>150</GR_Alloy>
-      <ComponentSpacer>4</ComponentSpacer>
+      <GR_Alloy>100</GR_Alloy>
+      <ComponentSpacer>1</ComponentSpacer>
     </costList>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -381,13 +381,13 @@
     </graphicData>
     <statBases>
       <MaxHitPoints>1800</MaxHitPoints>
-      <WorkToBuild>16000</WorkToBuild>
+      <WorkToBuild>120000</WorkToBuild>
       <Flammability>0</Flammability>
       <WorkTableWorkSpeedFactor>1.25</WorkTableWorkSpeedFactor>
     </statBases>
     <costList>
       <GR_Alloy>400</GR_Alloy>
-      <GR_Nanites>200</GR_Nanites>
+      <GR_Nanites>2000</GR_Nanites>
       <ComponentSpacer>10</ComponentSpacer>
     </costList>
     <comps>
@@ -399,7 +399,7 @@
       <li Class="SD.GrayRace.Comps.CompPropertiesGrayMechAssemblyBay" />
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>8000</basePowerConsumption>
+        <basePowerConsumption>1500</basePowerConsumption>
         <shortCircuitInRain>false</shortCircuitInRain>
       </li>
       <li Class="CompProperties_Flickable"/>
