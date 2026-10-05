@@ -12,7 +12,7 @@ using Verse.Sound;
 
 namespace SD.GrayRace.Dialogs;
 
-internal sealed class Dialog_SelectGrayMechSectionLayout : Window
+public class Dialog_SelectGrayMechSectionLayout : Window
 {
     private const int ColumnCount = 3;
     private const float TitleHeight = 34f;
@@ -372,7 +372,7 @@ internal sealed class Dialog_SelectGrayMechSectionLayout : Window
         GUI.color = color;
     }
 
-    private sealed class LayoutOption
+    private class LayoutOption
     {
         internal GRMechSectionLayoutDef Layout;
         internal string Label;

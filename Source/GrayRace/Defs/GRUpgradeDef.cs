@@ -86,7 +86,7 @@ public class GRUpgradeDef : Def
     public int uiOrder = 0;
 
     /// <summary>
-    /// 互斥列表，仿原版 GeneDef 实现，当两个升级插件/变形存在
+    /// 互斥列表，仿原版 GeneDef 实现，当存在交集时判断为互斥
     /// </summary>
     public List<string> exclusionTags = new List<string>();
 

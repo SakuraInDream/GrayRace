@@ -8,7 +8,7 @@ using Verse;
 
 namespace SD.GrayRace.Dialogs;
 
-internal sealed class Dialog_HardpointAnchorTuner : Window
+public class Dialog_HardpointAnchorTuner : Window
 {
     private const float TitleHeight = 34f;
     private const float PaneGap = 12f;

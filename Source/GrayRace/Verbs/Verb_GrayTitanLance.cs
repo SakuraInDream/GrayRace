@@ -8,7 +8,7 @@ using Verse.Sound;
 
 namespace SD.GrayRace.Verbs;
 
-public sealed class Verb_GrayTitanLance : Verb
+public class Verb_GrayTitanLance : Verb
 {
     private MoteDualAttached beamMote;
     private Sustainer beamSustainer;

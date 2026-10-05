@@ -23,7 +23,7 @@ public class Dialog_RenameGrayMechDesign : Dialog_Rename<GrayMechDesignRecord>
 
         if (library != null && library.ContainsLabel(name, renaming?.id ?? -1))
         {
-            return "A mech design with that name already exists.";
+            return"同名设计已存在。"; //"A mech design with that name already exists.";
         }
 
         return true;

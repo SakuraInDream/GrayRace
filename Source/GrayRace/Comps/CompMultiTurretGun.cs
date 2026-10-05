@@ -10,6 +10,7 @@ using Verse.AI;
 
 namespace SD.GrayRace.Comps;
 
+// 暂时单独成 comp，深度测试后再看情况合并
 [StaticConstructorOnStartup]
 public class CompMultiTurretGun : ThingComp
 {

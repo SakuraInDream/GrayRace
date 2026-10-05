@@ -3,6 +3,7 @@ using System.Text;
 using RimWorld;
 using SD.GrayRace.Comps;
 using SD.GrayRace.Defs;
+using SD.GrayRace.ITabs;
 using SD.GrayRace.Mechs;
 using Verse;
 
@@ -115,6 +116,16 @@ public class Building_GR_Drydock : Building, IThingHolder
         foreach (Gizmo gizmo in base.GetGizmos())
         {
             yield return gizmo;
+        }
+
+        if (Faction == Faction.OfPlayer)
+        {
+            yield return new Command_GrayMechDesigner
+            {
+                defaultLabel = "设计配装",
+                defaultDesc = "打开舰船配装设计器，配置区段布局与各槽位组件。\n\n右键：重置窗口尺寸与位置",
+                action = OpenDesignerWindow
+            };
         }
 
         if (!DebugSettings.ShowDevGizmos || CurrentOrder == null)
@@ -461,6 +472,11 @@ public class Building_GR_Drydock : Building, IThingHolder
     private void CompleteCurrentOrder()
     {
         AssemblyBayComp?.DevCompleteCurrentOrder();
+    }
+
+    private void OpenDesignerWindow()
+    {
+        Window_GrayMechDrydockDesigner.OpenFor(this);
     }
 
     private void TouchDesignDraft()

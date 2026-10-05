@@ -7,7 +7,7 @@ using Verse;
 
 namespace SD.GrayRace.Mechs;
 
-public sealed class MechHardpoint
+public class MechHardpoint
 {
     public enum State : byte
     {

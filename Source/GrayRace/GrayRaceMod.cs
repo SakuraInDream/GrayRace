@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using SD.GrayRace.HarmonyPatches;
@@ -12,11 +12,16 @@ namespace SD.GrayRace
     {
         public static Harmony HarmonyInstance;
 
+        /// <summary>本 Mod 的持久化设置。UI 窗口几何之类不随存档走的状态放这里。</summary>
+        public static GrayRaceModSettings Settings;
+
         public GrayRaceMod(ModContentPack content) : base(content)
         {
 #if DEBUG
             Harmony.DEBUG = true;
 #endif
+            Settings = GetSettings<GrayRaceModSettings>();
+
             HarmonyInstance = new Harmony("sd.grayrace.mod");
             MethodInfo originalMethod = AccessTools.PropertyGetter(typeof(ResearchProjectDef), nameof(ResearchProjectDef.UnlockedDefs));
             HarmonyMethod transpiler = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsTranspiler));

@@ -3,7 +3,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed class GrayMechDrydockDesignerPanel
+public class GrayMechDrydockDesignerPanel
 {
     private readonly GrayMechSectionCanvasPanel sectionCanvasPanel = new();
     private readonly GrayMechDrydockDesignerCanvasHost canvasHost = new();

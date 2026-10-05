@@ -10,7 +10,7 @@
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Chemical" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
     <label>化学推进器</label>
     <description>简单而有效的化学助推器依靠可燃物推动机械体。</description>
-    <iconPath>Icon/ShipParts/ship_part_reactor_1</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_thruster_1</iconPath>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
     </researchPrerequisites>
@@ -21,7 +21,7 @@
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Ion" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
     <label>离子推进器</label>
     <description>此种电推进器的推力来源于离子束，而非传统工质。</description>
-    <iconPath>Icon/ShipParts/ship_part_reactor_2</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_thruster_2</iconPath>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -32,7 +32,7 @@
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Plasma" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
     <label>等离子推进器</label>
     <description>等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。</description>
-    <iconPath>Icon/ShipParts/ship_part_reactor_3</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_thruster_3</iconPath>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
@@ -43,7 +43,7 @@
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Impulse" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
     <label>脉冲推进器</label>
     <description>在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。</description>
-    <iconPath>Icon/ShipParts/ship_part_reactor_4</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_thruster_4</iconPath>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
     </researchPrerequisites>
@@ -54,7 +54,7 @@
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_DarkMatter" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
     <label>暗物质推进器</label>
     <description>这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。</description>
-    <iconPath>Icon/ShipParts/ship_part_reactor_5</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_thruster_5</iconPath>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
     </researchPrerequisites>

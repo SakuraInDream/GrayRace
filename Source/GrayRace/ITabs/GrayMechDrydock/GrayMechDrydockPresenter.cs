@@ -11,7 +11,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed class GrayMechLibraryGroup
+public class GrayMechLibraryGroup
 {
     internal GRMechChassisDef Chassis;
     internal readonly List<GrayMechDesignRecord> Designs = new();
@@ -21,7 +21,7 @@ internal sealed class GrayMechLibraryGroup
     internal int VisibleCardCount => ShowChassisCard ? 1 : Designs.Count;
 }
 
-internal sealed class GrayMechDrydockPresenter
+public class GrayMechDrydockPresenter
 {
     private Building_GR_Drydock cachedDock;
     private int cachedLibraryVersion = -1;
@@ -590,20 +590,6 @@ internal sealed class GrayMechDrydockPresenter
         cachedCompatibleShowObsolete = value;
     }
 
-    internal float GetTopBarHeight(Building_GR_Drydock dock, float width)
-    {
-        GrayMechDesignSnapshot draft = dock.DesignDraft;
-        string draftName = draft?.designLabel ?? "No design";
-        string chassisName = draft?.chassis?.LabelCap.ToString() ?? "No chassis";
-        string titleText = "<b>Ship Designer</b>    " + draftName;
-        string subText = "Chassis: " + chassisName + "    Source: " + GrayMechDrydockTabText.GetSourceLabel(dock);
-        float textWidth = Mathf.Max(220f, width - 560f);
-        float subWidth = Mathf.Max(120f, textWidth);
-        float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(titleText, textWidth, GameFont.Small);
-        float subHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(subText, subWidth, GameFont.Small);
-        return Mathf.Max(GrayMechDrydockTabStyle.MinTopBarHeight, 8f + titleHeight + 4f + subHeight + 8f);
-    }
-
     internal float GetBottomBarHeight(float width)
     {
         float contentHeight = CachedLibraryMaxCardHeight;
@@ -651,7 +637,7 @@ internal sealed class GrayMechDrydockPresenter
     {
         float textWidth = GrayMechDrydockTabStyle.LibraryCardWidth - 12f;
         string titleText = "<b>" + (chassis?.LabelCap.ToString() ?? "未命名") + "</b>";
-        const string footerText = "开始新设计";
+        const string footerText = "新设计";
         float titleHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(titleText, textWidth, GameFont.Small);
         float footerHeight = GrayMechDrydockTabText.MeasureWrappedTextHeight(footerText, textWidth, GameFont.Tiny);
         return Mathf.Max(

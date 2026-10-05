@@ -11,7 +11,7 @@ namespace SD.GrayRace.Mechs;
 /// <summary>
 /// 默认火控：一次读取地图敌对候选，并为全部空闲硬点批量评分和分配目标。
 /// </summary>
-public sealed class RangeBasedFireControl : IFireControlDirector
+public class RangeBasedFireControl : IFireControlDirector
 {
     private const int InitialCandidateCapacity = 128;
     private const int RecentTargetTicks = 300;

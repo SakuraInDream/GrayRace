@@ -5,7 +5,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed class GrayMechDrydockViewState
+public class GrayMechDrydockViewState
 {
     internal GRMechSectionSlotDef SelectedSectionSlot;
     internal string SelectedSlotKey;
@@ -81,7 +81,12 @@ internal sealed class GrayMechDrydockViewState
             return;
         }
 
+        // 必须与 SelectSlot 对称。这两个「正在编辑的目标」是互斥的：
+        // SelectSlot 会清 SelectedCoreSlotKey，这里就必须清 SelectedSlotKey。
+        // 漏掉的话左侧栏会继续显示旧区段槽位的模块列表——托盘开着（核心槽）
+        // 的同时还能从左栏拿起笔刷，两个编辑目标并存，属于非法状态。
         SelectedCoreSlotKey = resolvedSlot.slot.key;
+        SelectedSlotKey = null;
     }
 
     internal void ClearCoreSelection()

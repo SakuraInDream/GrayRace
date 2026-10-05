@@ -16,7 +16,6 @@ internal static class GrayMechDrydockTabStyle
     internal const float Margin = 10f;
     internal const float CloseButtonReserveTop = 4f;
     internal const float CloseButtonReserveRight = 22f;
-    internal const float MinTopBarHeight = 68f;
     internal const float MinBottomBarHeight = 96f;
     internal const float LeftPanelWidth = 360f;
     internal const float RightPanelWidth = 360f;

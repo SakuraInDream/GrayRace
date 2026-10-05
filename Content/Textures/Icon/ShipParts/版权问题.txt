@@ -1,3 +1,7 @@
 https://legal.paradoxplaza.com/eula?locale=en
 
 https://store.steampowered.com/eula/294100_eula_1
+
+总之一句话：仅允许在 P 社游戏内使用
+
+图标来源：Stellaris\gfx\interface\icons\ship_parts

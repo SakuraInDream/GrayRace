@@ -12,7 +12,7 @@ namespace SD.GrayRace.Modules;
 
 public class UpgradeModule : GrayModuleBase
 {
-    public sealed class MaterialPickupTask
+    public class MaterialPickupTask
     {
         public Thing thing;
         public ThingDef thingDef;

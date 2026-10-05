@@ -4,7 +4,7 @@ using Verse;
 
 namespace SD.GrayRace.Mechs;
 
-public sealed class GrayMechAssemblyOrder : IExposable
+public class GrayMechAssemblyOrder : IExposable
 {
     public GrayMechDesignSnapshot designSnapshot;
     public RecipeDef recipe;

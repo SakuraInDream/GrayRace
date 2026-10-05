@@ -6,7 +6,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed class GrayMechSectionCanvasPanel
+public class GrayMechSectionCanvasPanel
 {
     private const int AnchoredSectionColumnCount = 3;
     private const float PreferredSectionBandInset = 32f;
@@ -244,7 +244,7 @@ internal sealed class GrayMechSectionCanvasPanel
             }
         }
 
-        bool pickerHovered = pickerSlot?.slot != null && DrawCoreSlotPicker(host, canvasRect, pickerAnchorRect, pickerSlot, pickerModules, pickerCurrentModule);
+        bool pickerHovered = pickerSlot?.slot != null && DrawCoreSlotPicker(host, canvasRect, listRect, pickerAnchorRect, pickerSlot, pickerModules, pickerCurrentModule);
         return slotHovered || pickerHovered;
     }
 
@@ -584,6 +584,7 @@ internal sealed class GrayMechSectionCanvasPanel
     private bool DrawCoreSlotPicker(
         IGrayMechSectionCanvasHost host,
         Rect canvasRect,
+        Rect columnRect,
         Rect anchorRect,
         GRMechResolvedSlot resolvedSlot,
         List<GRMechModuleDef> compatibleModules,
@@ -673,6 +674,26 @@ internal sealed class GrayMechSectionCanvasPanel
             {
                 currentY += groupGap;
             }
+        }
+
+        // 左键点在托盘与核心槽列之外的任何地方就收起来。托盘会一直挡着区段画布，
+        // 而原来只有右键画布或选中别的槽位才会关。
+        //
+        // 这里自己按矩形判断，不依赖「事件是否已被消费」：本项目的 Unity 版本里
+        // UnityEngine.Event 没有 used 成员，原版源码里 Event.current.used /
+        // EventType.Used / GUIUtility.hotControl 也全是零使用，没有可用的先例。
+        //
+        // 排除 columnRect（核心槽列）是必须的：点在另一个核心槽上时，本轮循环里的
+        // selected 还是点击之前算的（托盘锚点仍是旧槽位），不排除的话会先把刚刚
+        // 新选中的槽位清掉，表现为「点第二个槽没反应」。
+        if (host.AllowSecondarySlotAction
+            && Event.current.type == EventType.MouseDown
+            && Event.current.button == 0
+            && !trayRect.Contains(Event.current.mousePosition)
+            && !columnRect.Contains(Event.current.mousePosition))
+        {
+            host.OnSlotSecondaryActivated(null);
+            return false;
         }
 
         return pickerHovered;

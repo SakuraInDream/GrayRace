@@ -9,7 +9,7 @@ using Verse.Sound;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed class GrayMechDrydockTabController
+public class GrayMechDrydockTabController
 {
     private readonly GrayMechDrydockPresenter state;
 

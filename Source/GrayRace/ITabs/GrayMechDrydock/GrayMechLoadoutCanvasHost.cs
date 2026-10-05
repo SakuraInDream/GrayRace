@@ -5,7 +5,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed class GrayMechLoadoutCanvasHost : IGrayMechSectionCanvasHost
+public class GrayMechLoadoutCanvasHost : IGrayMechSectionCanvasHost
 {
     private readonly ITab_GrayMechLoadout owner;
     private GrayMechDesignSnapshot snapshot;

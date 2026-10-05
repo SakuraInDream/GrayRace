@@ -8,7 +8,7 @@ using Verse.Sound;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed partial class GrayMechDrydockFocusPanel
+internal partial class GrayMechDrydockFocusPanel
 {
     private void DrawSummaryPanel(GrayMechDrydockTabContext context, Rect rect)
     {

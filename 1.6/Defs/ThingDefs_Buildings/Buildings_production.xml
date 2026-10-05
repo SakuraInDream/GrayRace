@@ -406,7 +406,6 @@
       <li Class="CompProperties_Breakdownable"/>
     </comps>
     <inspectorTabs>
-      <li>SD.GrayRace.ITabs.ITab_GrayMechDrydock</li>
       <li>SD.GrayRace.ITabs.ITab_GrayMechDrydockQueue</li>
     </inspectorTabs>
     <building>

@@ -5,7 +5,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed class GrayMechDrydockCanvasRenderer
+public class GrayMechDrydockCanvasRenderer
 {
     private const string DesignerGridTexturePath = "UI/GrayMechDrydock/DesignerGridTile";
     private const float DesignerGridTileSize = 136f;

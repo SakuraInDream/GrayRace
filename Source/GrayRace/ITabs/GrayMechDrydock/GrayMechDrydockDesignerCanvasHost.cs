@@ -5,7 +5,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
-internal sealed class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvasHost
+public class GrayMechDrydockDesignerCanvasHost : IGrayMechSectionCanvasHost
 {
     private GrayMechDrydockTabContext context;
 
