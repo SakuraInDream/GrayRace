@@ -12,17 +12,16 @@ public class DisableNeeds : DefModExtension
 }
 
 [HarmonyPatch(typeof(Pawn_NeedsTracker))]
-internal static class Patch_Pawn_NeedsTracker
+public static class Patch_Pawn_NeedsTracker
 {
-    private static FieldInfo fi_pawn = AccessTools.Field(typeof(Pawn_NeedsTracker), "pawn");
-
     [HarmonyPatch("ShouldHaveNeed")]
     [HarmonyPostfix]
-    public static void Postfix(Pawn_NeedsTracker __instance, NeedDef nd, ref bool __result)
+    public static void Postfix(Pawn_NeedsTracker __instance, Pawn ___pawn, NeedDef nd, ref bool __result)
     {
         if (!__result) return;
-        Pawn pawn = (Pawn)fi_pawn.GetValue(__instance);
-        var extension = pawn.def.GetModExtension<DisableNeeds>();
+
+        DisableNeeds extension = ___pawn.def.GetModExtension<DisableNeeds>();
+
         if (extension != null && extension.disabledNeeds.Contains(nd))
         {
             __result = false;
