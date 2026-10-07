@@ -7,10 +7,12 @@
 1.**Git** (更新方便)
 
 - 电脑上安装 Git -> https://git-scm.com/install/windows 已有则跳过
-- 在游戏根目录的 Mods 文件夹处，打开 Git 控制台(可以在资源管理器空白处右键选择 Open Git Bash here)，然后输入 `git clone https://github.com/SakuraInDream/GrayRace.git`
+- 在游戏根目录的 Mods 文件夹处，打开 Git 控制台(可以在资源管理器空白处右键选择 Open Git Bash here)，然后输入 `git clone --depth 1 https://github.com/SakuraInDream/GrayRace.git`
 - 再输入 `git switch 具体分支名` 切换到要测试的分支 (Branch)，当前最新测试分支是 `refactor/vf-turret-pipeline`，测试分支名可能会随后续开发而改变，以仓库存在的具体分支名为准，可输入 `git branch` 查看仓库的所有分支。
 - 等待完成即可在 Mods 路径下找到 GrayRace
 - 日后要更新，直接进入 GrayRace 文件夹然后打开控制台，输入 `git pull` 即可自动同步更新
+
+> --depth 1 只拉取最后一次提交
 
 2.**使用 GitHub Desktop** (界面友好)
 
