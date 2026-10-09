@@ -434,8 +434,14 @@ namespace SD.GrayRace.ThingClasses
         {
             if(State != IncubatorState.Incubating) return;
 
-            PawnKindDef babyKind = GrayRaceDefOf.GR_colonist; // 后面再改成在 Def 里找
-            // PawnKindDef babyKind = PawnKindDefOf.Colonist;
+            PawnKindDef babyKind = GrayRaceDefOf.GR_colonist;
+
+            BackstoryDef specifiedBackstory = foundationRecipe?.GetModExtension<RecipeNewBorn>()?.newBornBackstory;
+            if(specifiedBackstory != null)
+            {
+                babyKind.fixedChildBackstories.Add(specifiedBackstory);
+            }
+
             var pReq = new PawnGenerationRequest(
                 kind: babyKind,
                 faction: Faction.OfPlayer,
@@ -447,15 +453,14 @@ namespace SD.GrayRace.ThingClasses
                 allowAddictions: false,
                 developmentalStages: DevelopmentalStage.Child,
                 forceNoGear: true,
-                fixedBiologicalAge: 13f
+                fixedBiologicalAge: 13f,
+                onlyUseForcedBackstories: specifiedBackstory != null
             );
             _baby = PawnGenerator.GeneratePawn(pReq);
 
-            // 是否设置了固定 trait
-            var ext = foundationRecipe?.GetModExtension<RecipeNewBorn>();
-            if (ext?.newBornBackstory != null)
+            if(specifiedBackstory != null)
             {
-                _baby.story.Childhood = ext.newBornBackstory;
+                babyKind.fixedChildBackstories.Remove(specifiedBackstory);
             }
 
             State = IncubatorState.Finished;
