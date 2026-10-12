@@ -52,12 +52,6 @@
     <RimWorldManagedPath>$(RimWorldPath)/RimWorldLinux_Data/Managed</RimWorldManagedPath>
   </PropertyGroup>
 
-  <!-- MacOS -->
-  <PropertyGroup Condition="'$(IsOSX)' == 'true'">
-    <RimWorldPath Condition="'$(RimWorldPath)' == ''">$(HOME)/Library/Application Support/Steam/steamapps/common/RimWorld</RimWorldPath>
-    <RimWorldManagedPath>$(RimWorldPath)/Contents/Resources/Data/Managed</RimWorldManagedPath>
-  </PropertyGroup>
-
   <!-- 我简直是太 TM 天才了，知道利用 Version.txt + 正则匹配游戏版本 -->
   <!-- 只希望其他平台也有这个文件 -->
   <PropertyGroup>
