@@ -51,39 +51,26 @@ public class GrayMechDrydockCanvasRenderer
 
     internal void DrawSlotBay(Rect rect)
     {
-        Texture2D texture = GetDesignerGridTexture();
-        if (texture != null)
-        {
-            Rect texCoords = new Rect(0f, 0f, rect.width / DesignerGridTileSize, rect.height / DesignerGridTileSize);
-            GUI.DrawTextureWithTexCoords(rect, texture, texCoords);
-        }
-        else
-        {
-            Widgets.DrawBoxSolid(rect, new Color(GrayMechDrydockTabStyle.CardFill.r, GrayMechDrydockTabStyle.CardFill.g, GrayMechDrydockTabStyle.CardFill.b, 0.84f));
-        }
+        Texture2D texture = designerGridTexture;
 
-        Widgets.DrawBoxSolid(new Rect(rect.x + 1f, rect.y + rect.height * 0.5f - 1f, rect.width - 2f, 2f), new Color(GrayMechDrydockTabStyle.HullAccentColor.r, GrayMechDrydockTabStyle.HullAccentColor.g, GrayMechDrydockTabStyle.HullAccentColor.b, 0.18f));
-    }
+        float tileWidth = texture.width;
+        float tileHeight = texture.height;
 
-    private static Texture2D GetDesignerGridTexture()
-    {
-        if (designerGridTextureInitialized)
+        for (float y = rect.y; y < rect.yMax; y += tileHeight)
         {
-            return designerGridTexture;
-        }
+            for (float x = rect.x; x < rect.xMax; x += tileWidth)
+            {
+                float width = Mathf.Min(tileWidth, rect.xMax - x);
+                float height = Mathf.Min(tileHeight, rect.yMax - y);
+                if (width <= 0f || height <= 0f)
+                {
+                    continue;
+                }
 
-        designerGridTextureInitialized = true;
-        designerGridTexture = ContentFinder<Texture2D>.Get(DesignerGridTexturePath);
-        if (designerGridTexture == BaseContent.BadTex)
-        {
-            designerGridTexture = null;
+                GUI.DrawTextureWithTexCoords(new Rect(x, y, width, height), texture,
+                    new Rect(0f, 0f, width / tileWidth, height / tileHeight));
+            }
         }
-        else if (designerGridTexture != null)
-        {
-            designerGridTexture.wrapMode = TextureWrapMode.Repeat;
-        }
-
-        return designerGridTexture;
     }
 
     internal void DrawDisabledSlotWidget(Rect rect, Color accent)
