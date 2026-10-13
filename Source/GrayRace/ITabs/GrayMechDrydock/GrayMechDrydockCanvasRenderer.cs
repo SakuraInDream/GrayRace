@@ -8,21 +8,29 @@ namespace SD.GrayRace.ITabs;
 public class GrayMechDrydockCanvasRenderer
 {
     private const string DesignerGridTexturePath = "UI/GrayMechDrydock/DesignerGridTile";
-    private const float DesignerGridTileSize = 136f;
 
-    private static Texture2D designerGridTexture;
-    private static bool designerGridTextureInitialized;
+    private static Texture2D designerGridTexture = ContentFinder<Texture2D>.Get(DesignerGridTexturePath);
+
+    // private static void DrawCornerBracket(float x, float y, float size, bool left, bool top)
+    // {
+    //     float x2 = left ? x + size : x - size;
+    //     float y2 = top ? y + size : y - size;
+    //     Widgets.DrawLine(new Vector2(x, y), new Vector2(x2, y), GrayMechDrydockTabStyle.HeaderLineColor, 2f);
+    //     Widgets.DrawLine(new Vector2(x, y), new Vector2(x, y2), GrayMechDrydockTabStyle.HeaderLineColor, 2f);
+    // }
 
     internal void DrawCanvasFrame(Rect rect)
     {
         Widgets.DrawBoxSolidWithOutline(rect, new Color(0f, 0f, 0f, 0f), GrayMechDrydockTabStyle.HullOutline, 2);
-        Widgets.DrawBoxSolid(new Rect(rect.x + 1f, rect.y + 1f, rect.width - 2f, 5f), GrayMechDrydockTabStyle.HeaderLineColor);
-        Widgets.DrawBoxSolid(new Rect(rect.x + 1f, rect.yMax - 6f, rect.width - 2f, 3f), new Color(GrayMechDrydockTabStyle.HeaderLineColor.r, GrayMechDrydockTabStyle.HeaderLineColor.g, GrayMechDrydockTabStyle.HeaderLineColor.b, 0.3f));
 
-        DrawCornerBracket(rect.x + 9f, rect.y + 9f, 20f, true, true);
-        DrawCornerBracket(rect.xMax - 9f, rect.y + 9f, 20f, false, true);
-        DrawCornerBracket(rect.x + 9f, rect.yMax - 9f, 20f, true, false);
-        DrawCornerBracket(rect.xMax - 9f, rect.yMax - 9f, 20f, false, false);
+        // 花里胡哨的没啥用
+        // Widgets.DrawBoxSolid(new Rect(rect.x + 1f, rect.y + 1f, rect.width - 2f, 5f), GrayMechDrydockTabStyle.HeaderLineColor);
+        // Widgets.DrawBoxSolid(new Rect(rect.x + 1f, rect.yMax - 6f, rect.width - 2f, 3f), new Color(GrayMechDrydockTabStyle.HeaderLineColor.r, GrayMechDrydockTabStyle.HeaderLineColor.g, GrayMechDrydockTabStyle.HeaderLineColor.b, 0.3f));
+
+        // DrawCornerBracket(rect.x + 9f, rect.y + 9f, 20f, true, true);
+        // DrawCornerBracket(rect.xMax - 9f, rect.y + 9f, 20f, false, true);
+        // DrawCornerBracket(rect.x + 9f, rect.yMax - 9f, 20f, true, false);
+        // DrawCornerBracket(rect.xMax - 9f, rect.yMax - 9f, 20f, false, false);
     }
 
     internal void DrawShipPreview(Rect rect, GrayMechDesignSnapshot draft)
@@ -218,11 +226,4 @@ public class GrayMechDrydockCanvasRenderer
         Widgets.DrawLine(new Vector2(rect.center.x, rect.y + rect.height * 0.16f), new Vector2(rect.center.x, rect.y + rect.height * 0.84f), new Color(GrayMechDrydockTabStyle.HullAccentColor.r, GrayMechDrydockTabStyle.HullAccentColor.g, GrayMechDrydockTabStyle.HullAccentColor.b, 0.12f), 1.5f);
     }
 
-    private static void DrawCornerBracket(float x, float y, float size, bool left, bool top)
-    {
-        float x2 = left ? x + size : x - size;
-        float y2 = top ? y + size : y - size;
-        Widgets.DrawLine(new Vector2(x, y), new Vector2(x2, y), GrayMechDrydockTabStyle.HeaderLineColor, 2f);
-        Widgets.DrawLine(new Vector2(x, y), new Vector2(x, y2), GrayMechDrydockTabStyle.HeaderLineColor, 2f);
-    }
 }
