@@ -9,11 +9,14 @@ using Verse;
 
 namespace SD.GrayRace.HarmonyPatches;
 
+[HarmonyPatch(typeof(ResearchProjectDef))]
 public static class ResearchProjectDefPatches
 {
     // 缓存
     private static Dictionary<ResearchProjectDef, List<Def>> extraByProject;
 
+    [HarmonyPatch(nameof(ResearchProjectDef.UnlockedDefs), MethodType.Getter)]
+    [HarmonyTranspiler]
     public static IEnumerable<CodeInstruction> UnlockedDefsTranspiler(IEnumerable<CodeInstruction> instructions)
     {
         FieldInfo cachedUnlockedDefsField = AccessTools.Field(typeof(ResearchProjectDef), "cachedUnlockedDefs");
