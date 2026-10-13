@@ -7,6 +7,11 @@ namespace SD.GrayRace.ITabs;
 
 public class ITab_GrayMechDrydockQueue : ITab
 {
+    /// <summary>
+    /// 页签尺寸。宽度对齐原版建筑 ITab（ITab_Bills.WinSize.x = 420，反编译实证），高度沿用原设计值 620。
+    /// </summary>
+    private static readonly Vector2 TabSize = new(420f, 620f);
+
     private readonly GrayMechDrydockViewState viewState = new();
     private readonly GrayMechDrydockPresenter state = new();
     private readonly GrayMechDrydockTabController controller;
@@ -15,7 +20,7 @@ public class ITab_GrayMechDrydockQueue : ITab
     public ITab_GrayMechDrydockQueue()
     {
         controller = new GrayMechDrydockTabController(state);
-        size = GrayMechDrydockTabStyle.QueueWindowSize;
+        size = TabSize;
         labelKey = "建造队列";
     }
 

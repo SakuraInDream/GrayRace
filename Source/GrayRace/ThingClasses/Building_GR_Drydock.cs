@@ -16,6 +16,14 @@ public class Building_GR_Drydock : Building, IThingHolder
     private int designRevision;
     private bool autoUpgradeEnabled = true;
 
+    public const float DefaultDesignerWindowWidth = 1600f;
+    public const float DefaultDesignerWindowHeight = 800f;
+
+    private float designerWindowX;
+    private float designerWindowY;
+    private float designerWindowWidth = DefaultDesignerWindowWidth;
+    private float designerWindowHeight = DefaultDesignerWindowHeight;
+
     [Unsaved(false)]
     private CompGrayMechAssemblyBay cachedAssemblyBayComp;
 
@@ -40,6 +48,32 @@ public class Building_GR_Drydock : Building, IThingHolder
     {
         get => autoUpgradeEnabled;
         set => autoUpgradeEnabled = value;
+    }
+
+    public bool HasDesignerWindowPosition => designerWindowX > 0f || designerWindowY > 0f;
+
+    public float DesignerWindowX => designerWindowX;
+
+    public float DesignerWindowY => designerWindowY;
+
+    public float DesignerWindowWidth => designerWindowWidth;
+
+    public float DesignerWindowHeight => designerWindowHeight;
+
+    public void RememberDesignerWindowGeometry(float x, float y, float width, float height)
+    {
+        designerWindowX = x;
+        designerWindowY = y;
+        designerWindowWidth = width;
+        designerWindowHeight = height;
+    }
+
+    public void ResetDesignerWindowGeometry()
+    {
+        designerWindowX = 0f;
+        designerWindowY = 0f;
+        designerWindowWidth = DefaultDesignerWindowWidth;
+        designerWindowHeight = DefaultDesignerWindowHeight;
     }
 
     public bool IsEditingSavedDesign => editingDesignId >= 0;
@@ -74,6 +108,10 @@ public class Building_GR_Drydock : Building, IThingHolder
         Scribe_Deep.Look(ref designDraft, "designDraft");
         Scribe_Values.Look(ref editingDesignId, "editingDesignId", -1);
         Scribe_Values.Look(ref autoUpgradeEnabled, "autoUpgradeEnabled", true);
+        Scribe_Values.Look(ref designerWindowX, "designerWindowX", 0f);
+        Scribe_Values.Look(ref designerWindowY, "designerWindowY", 0f);
+        Scribe_Values.Look(ref designerWindowWidth, "designerWindowWidth", DefaultDesignerWindowWidth);
+        Scribe_Values.Look(ref designerWindowHeight, "designerWindowHeight", DefaultDesignerWindowHeight);
 
         if (Scribe.mode == LoadSaveMode.PostLoadInit)
         {
@@ -123,8 +161,9 @@ public class Building_GR_Drydock : Building, IThingHolder
             yield return new Command_GrayMechDesigner
             {
                 defaultLabel = "设计配装",
-                defaultDesc = "打开舰船配装设计器，配置区段布局与各槽位组件。\n\n右键：重置窗口尺寸与位置",
-                action = OpenDesignerWindow
+                defaultDesc = "打开舰船配装设计器，配置区段布局与各槽位组件。重复点击可关闭窗口。\n\n右键：重置窗口尺寸与位置",
+                action = ToggleDesignerWindow,
+                Dock = this
             };
         }
 
@@ -474,9 +513,9 @@ public class Building_GR_Drydock : Building, IThingHolder
         AssemblyBayComp?.DevCompleteCurrentOrder();
     }
 
-    private void OpenDesignerWindow()
+    private void ToggleDesignerWindow()
     {
-        Window_GrayMechDrydockDesigner.OpenFor(this);
+        Window_GrayMechDrydockDesigner.ToggleFor(this);
     }
 
     private void TouchDesignDraft()

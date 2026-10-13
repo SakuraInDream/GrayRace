@@ -10,9 +10,6 @@ internal static class GrayMechDrydockTabStyle
 {
     private static readonly Dictionary<string, Texture2D> CachedTextures = new(StringComparer.Ordinal);
 
-    internal static readonly Vector2 WindowSize = new(1780f, 820f);
-    internal static readonly Vector2 QueueWindowSize = new(560f, 620f);
-
     internal const float Margin = 10f;
     internal const float CloseButtonReserveTop = 4f;
     internal const float CloseButtonReserveRight = 22f;

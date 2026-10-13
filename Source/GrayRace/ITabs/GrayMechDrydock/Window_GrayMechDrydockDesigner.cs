@@ -9,17 +9,13 @@ namespace SD.GrayRace.ITabs;
 public class Window_GrayMechDrydockDesigner : Window
 {
     /// <summary>
-    /// 原始设计尺寸。三栏比例就是按这个尺寸推出来的；画布本身会跟随窗口伸缩。
+    /// 原始设计尺寸（设计器画布尺寸的单一出处，曾住在 GrayMechDrydockTabStyle，按“尺寸归窗口自己”搬回）。
+    /// 三栏比例就是按这个尺寸推出来的；画布本身会跟随窗口伸缩。
     /// </summary>
-    private static readonly Vector2 DesignCanvasSize = GrayMechDrydockTabStyle.WindowSize;
+    private static readonly Vector2 DesignCanvasSize = new(1780f, 820f);
 
     /// <summary>
     /// 画布最多能缩到设计尺寸的多少倍。
-    /// 低于这个下限就不再压缩了，改为保持该尺寸并平移——因为再小下去
-    /// 各面板 <c>ContractedBy(8f)</c> 会把矩形挤成负尺寸，内层
-    /// <c>Widgets.BeginScrollView</c> 会抛异常，而 Window.InnerWindowOnGUI
-    /// 是 catch 住后每帧打 Log.Error 的，会刷日志。
-    /// 0.5 时画布为 890x410：左右栏各 168、中栏 464，各面板仍为正尺寸且可用。
     /// </summary>
     private const float MinCanvasScale = 0.5f;
 
@@ -81,15 +77,12 @@ public class Window_GrayMechDrydockDesigner : Window
     {
         get
         {
-            Vector2 desired = DesignCanvasSize + new Vector2(Margin * 2f, Margin * 2f);
-            GrayRaceModSettings settings = GrayRaceMod.Settings;
-            if (settings != null)
-            {
-                desired = new Vector2(settings.designerWindowWidth, settings.designerWindowHeight);
-            }
+            float width = dock?.DesignerWindowWidth ?? Building_GR_Drydock.DefaultDesignerWindowWidth;
+            float height = dock?.DesignerWindowHeight ?? Building_GR_Drydock.DefaultDesignerWindowHeight;
+            Vector2 desired = new(width, height);
 
-            desired.x = Mathf.Min(Mathf.Max(desired.x, MinResizeSize.x), UI.screenWidth);
-            desired.y = Mathf.Min(Mathf.Max(desired.y, MinResizeSize.y), UI.screenHeight - BottomBarReserve);
+            desired.x = Mathf.Clamp(desired.x, MinResizeSize.x, UI.screenWidth);
+            desired.y = Mathf.Clamp(desired.y, MinResizeSize.y, UI.screenHeight - BottomBarReserve);
             return desired;
         }
     }
@@ -98,18 +91,19 @@ public class Window_GrayMechDrydockDesigner : Window
 
     protected override void SetInitialSizeAndPosition()
     {
-        GrayRaceModSettings settings = GrayRaceMod.Settings;
-        if (settings == null)
+        if (dock != null && dock.HasDesignerWindowPosition)
         {
+            Vector2 size = InitialSize;
+            float x = Mathf.Clamp(dock.DesignerWindowX, 0f, Mathf.Max(0f, UI.screenWidth - size.x));
+            float y = Mathf.Clamp(dock.DesignerWindowY, 0f, Mathf.Max(0f, (float)UI.screenHeight - size.y));
+            windowRect = new Rect(x, y, size.x, size.y).Rounded();
+        }
+        else
+        {
+            // 首次打开（或重置过位置）：走原版基类逻辑——InitialSize + 屏幕居中。
             base.SetInitialSizeAndPosition();
-            rememberedRect = windowRect;
-            return;
         }
 
-        Vector2 size = InitialSize;
-        float x = Mathf.Clamp(settings.designerWindowX, 0f, Mathf.Max(0f, UI.screenWidth - size.x));
-        float y = Mathf.Clamp(settings.designerWindowY, 0f, Mathf.Max(0f, (float)UI.screenHeight - size.y));
-        windowRect = new Rect(x, y, size.x, size.y).Rounded();
         rememberedRect = windowRect;
     }
 
@@ -150,31 +144,25 @@ public class Window_GrayMechDrydockDesigner : Window
             return;
         }
 
-        GrayRaceModSettings settings = GrayRaceMod.Settings;
-        if (settings == null)
+        if (dock == null)
         {
             return;
         }
 
         rememberedRect = windowRect;
-        settings.SetDesignerWindowGeometry(windowRect.x, windowRect.y, windowRect.width, windowRect.height);
-
-        settings.Write();
+        // 几何随建筑保存在存档内：换存档不串，也无需 ModSettings.Write()。
+        dock.RememberDesignerWindowGeometry(windowRect.x, windowRect.y, windowRect.width, windowRect.height);
     }
 
-    internal static void ResetGeometry()
+    /// <summary>重置指定干船坞的设计器窗口几何（右键菜单用）。</summary>
+    internal static void ResetGeometry(Building_GR_Drydock dock)
     {
-        GrayRaceModSettings settings = GrayRaceMod.Settings;
-        if (settings != null)
-        {
-            settings.ClearDesignerWindowGeometry();
-            settings.Write();
-        }
+        dock?.ResetDesignerWindowGeometry();
 
         IList<Window> openWindows = Find.WindowStack.Windows;
         for (int i = 0; i < openWindows.Count; i++)
         {
-            if (openWindows[i] is Window_GrayMechDrydockDesigner designer)
+            if (openWindows[i] is Window_GrayMechDrydockDesigner designer && designer.dock == dock)
             {
                 // SetInitialSizeAndPosition 末尾会同步 rememberedRect，所以不会又被写回去。
                 designer.SetInitialSizeAndPosition();
@@ -182,7 +170,7 @@ public class Window_GrayMechDrydockDesigner : Window
         }
     }
 
-    /// <summary>设计器入口。同一个船坞已经开着时不重复打开。</summary>
+    /// <summary>设计器打开入口。同一个船坞已经开着时不重复打开。</summary>
     internal static void OpenFor(Building_GR_Drydock dock)
     {
         if (dock == null)
@@ -203,6 +191,27 @@ public class Window_GrayMechDrydockDesigner : Window
         Find.WindowStack.Add(new Window_GrayMechDrydockDesigner(dock));
     }
 
+    internal static void ToggleFor(Building_GR_Drydock dock)
+    {
+        if (dock == null)
+        {
+            return;
+        }
+
+        IList<Window> openWindows = Find.WindowStack.Windows;
+        for (int i = 0; i < openWindows.Count; i++)
+        {
+            if (openWindows[i] is Window_GrayMechDrydockDesigner existing && existing.dock == dock)
+            {
+                // Close 就是 WindowStack.TryRemove，gizmo action 里调用是安全的。
+                existing.Close(true);
+                return;
+            }
+        }
+
+        OpenFor(dock);
+    }
+
     public override void DoWindowContents(Rect inRect)
     {
         if (dock == null || dock.Destroyed || !dock.Spawned)
@@ -220,13 +229,6 @@ public class Window_GrayMechDrydockDesigner : Window
         canvasPan.x = panX ? Mathf.Clamp(canvasPan.x, 0f, maxPanX) : 0f;
         canvasPan.y = panY ? Mathf.Clamp(canvasPan.y, 0f, maxPanY) : 0f;
 
-        // 画布整体平移：用裁剪组 + 平移绘制，而不是外层再套一个 GUI.BeginScrollView。
-        // Unity IMGUI 的嵌套滚动视图会互相抢滚轮事件（内层会失效），而画布内部
-        // 本来就已经有 4 个滚动视图（区段画布 / 模块列表 / 右侧汇总 / 底部设计库）。
-        // 这里所有矩形都按 viewport 局部坐标算，Mouse.IsOver 才能对得上。
-        //
-        // 画布默认就等于视口——窗口放大、缩小都跟着走，三栏按比例重分。
-        // 只有视口缩到 MinCanvasSize 以下才停下并平移（见 MinCanvasScale 的说明）。
         Vector2 canvasSize = new(
             panX ? MinCanvasSize.x : viewport.width,
             panY ? MinCanvasSize.y : viewport.height);
@@ -260,20 +262,8 @@ public class Window_GrayMechDrydockDesigner : Window
                 MinCanvasSize.y);
         }
 
-        // 光标图标画在裁剪组之外：跟随鼠标即可，不受画布平移影响。
         DrawArmedModuleCursor(viewport);
     }
-
-    /// <summary>
-    /// 由 <paramref name="inRect"/> 算出真正用来绘制画布的视口，以及两个方向是否需要滚动条。
-    /// 这里比较的是 <see cref="MinCanvasSize"/>（下限）而不是设计尺寸——视口比下限大时
-    /// 画布直接等于视口，两个方向都不会有滚动条。
-    ///
-    /// 迭代两轮：滚动条自身要占掉对向 16px，所以第一轮的结论会改变第二轮的可判空间。
-    /// 只判一轮的话会出现「画布比 inRect 窄、但比扣掉滚动条后的视口宽」——右边被裁掉
-    /// 一条却没有任何横向滚动条可以拉。两轮即可收敛：对向滚动条只可能从无到有，
-    /// 不会从有到无，所以第二轮的结果就是最终结果。
-    /// </summary>
     private static void ResolveViewport(Rect inRect, out Rect viewport, out bool panX, out bool panY)
     {
         float availWidth = inRect.width;
@@ -291,16 +281,6 @@ public class Window_GrayMechDrydockDesigner : Window
         viewport = new Rect(inRect.x, inRect.y, Mathf.Max(1f, availWidth), Mathf.Max(1f, availHeight));
     }
 
-    /// <summary>
-    /// 画布排版。原来是从 ITab_GrayMechDrydock.FillTab 原样搬过来的，现在三栏
-    /// （左选择栏 / 中区段画布 / 右汇总栏）按固定比例分配宽度，所以窗口放大或缩小后
-    /// 三栏的占比都不变。栏间距与页边距仍然固定（不参与比例，缩放时保持视觉一致），
-    /// 因此在非设计尺寸下三栏占整窗的比例会有零点几个百分点的偏差，这是有意的。
-    ///
-    /// 传入设计尺寸（1780）时，算出的各矩形与原实现完全一致：
-    /// 左 360 / 中 994 / 右 360 / 主体 1366。
-    /// 画布宽度有 <see cref="MinCanvasSize"/> 兜底，缩到底时中栏仍有 464。
-    /// </summary>
     private void DrawCanvas(GrayMechDrydockTabContext context, Rect canvas)
     {
         Rect root = new(
