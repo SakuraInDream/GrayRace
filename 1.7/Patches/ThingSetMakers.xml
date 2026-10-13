@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingSetMakerDef[defName="MapGen_HighValueCrate"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>0.5</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter>
+              <thingDefs>
+                <li>GR_Zro</li>
+              </thingDefs>
+            </filter>
+            <countRange>50~100</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+
+      <li>
+        <weight>0.5</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter>
+              <thingDefs>
+                <li>GR_ZroCompound</li>
+              </thingDefs>
+            </filter>
+            <countRange>5~10</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

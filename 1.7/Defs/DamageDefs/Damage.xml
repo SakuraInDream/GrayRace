@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--裂解-->
+  <DamageDef>
+    <defName>GR_Disintegration</defName>
+    <label>Disintegration</label>
+    <additionalHediffs>
+      <li>
+        <hediff>GR_Disintegration_Corrosion</hediff>
+        <severityPerDamageDealt>0.0067</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been melted.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <isRanged>true</isRanged>
+    <isExplosive>true</isExplosive>
+    <ignoreShields>true</ignoreShields>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
+    <plantDamageFactor>15</plantDamageFactor>
+    <explosionHeatEnergyPerCell>20</explosionHeatEnergyPerCell>
+    <explosionCellFleck>Fleck_Vaporize</explosionCellFleck>
+    <soundExplosion>Explosion_Vaporize</soundExplosion>
+    <combatLogRules>Damage_Flame</combatLogRules>
+  </DamageDef>
+
+  <!--电弧-->
+  <DamageDef>
+    <defName>GR_Arc</defName>
+    <label>Arc</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} was shattered by an arc.</deathMessage>
+    <hediff>ElectricalBurn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Electric</impactSoundType>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <isRanged>true</isRanged>
+    <ignoreShields>true</ignoreShields>
+    <makesAnimalsFlee>true</makesAnimalsFlee>
+    <buildingDamageFactor>0</buildingDamageFactor>
+    <plantDamageFactor>0</plantDamageFactor>
+    <combatLogRules>Damage_Flame</combatLogRules>
+  </DamageDef>
+
+  <!--纳米爪击-->
+  <DamageDef ParentName="Scratch">
+    <defName>GR_NanoScratch</defName>
+    <label>Nanite scratch</label>
+    <additionalHediffs>
+      <li>
+        <hediff>GR_Nanite_Corrosion</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
+    <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
+    <externalViolence>false</externalViolence>
+    <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+  </DamageDef>
+
+  <!--纳米弹-->
+  <DamageDef ParentName="Bullet">
+    <defName>GR_NanoBullet</defName>
+    <label>Nano Bullet</label>
+    <externalViolence>false</externalViolence>
+    <additionalHediffs>
+      <li>
+        <hediff>GR_Nanite_Corrosion</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
+    <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
+  </DamageDef>
+
+  <!--激光-->
+  <DamageDef ParentName="Beam">
+    <defName>GR_Laser</defName>
+    <label>Laser</label>
+    <isExplosive>true</isExplosive>
+    <defaultDamage>25</defaultDamage>
+    <defaultArmorPenetration>1</defaultArmorPenetration>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
+
+  <!--撬棍用破墙锐伤-->
+  <DamageDef ParentName="CutBase">
+    <defName>GR_CrowbarDamage</defName>
+    <label>Crowbar Damage</label>
+    <buildingDamageFactorImpassable>60</buildingDamageFactorImpassable>
+    <buildingDamageFactorPassable>30</buildingDamageFactorPassable>
+  </DamageDef>
+
+  <!--冷爪-->
+  <DamageDef>
+    <defName>GR_ColdClaw</defName>
+    <label>Cold Claw</label>
+    <defaultDamage>15</defaultDamage>
+    <workerClass>DamageWorker_Frostbite</workerClass>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has succumbed to frostbite.</deathMessage>
+    <hediff>Frostbite</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    <additionalHediffs>
+      <li>
+        <hediff>Hypothermia</hediff>
+        <severityPerDamageDealt>0.0067</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+
+  <!--热爪-->
+  <DamageDef ParentName="Flame">
+    <defName>GR_HeatClaw</defName>
+    <label>Heat Claw</label>
+    <defaultDamage>15</defaultDamage>
+    <externalViolence>false</externalViolence>
+    <armorCategory Inherit="False"></armorCategory>
+    <additionalHediffs>
+      <li>
+        <hediff>Heatstroke</hediff>
+        <severityPerDamageDealt>0.0067</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
+
+</Defs>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--悬浮装置-->
+  <HediffDef>
+    <defName>GR_Suspensiondevice</defName>
+    <label>Suspension device</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>.</description>
+    <isBad>false</isBad>
+    <preventsDeath>false</preventsDeath>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <statOffsets>
+          <MoveSpeed>3</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+      <li Class="HediffCompProperties_GiveAbility">
+        <abilityDefs>
+          <li>GR_Longjump</li>
+        </abilityDefs>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

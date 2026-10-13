@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef>
+    <defName>GR_GlaiveBomb</defName>
+    <label>Throwing Glaive</label>
+    <description>.</description>
+    <iconPath>Things/Item/Weapon/Honor/Honor_Glaive</iconPath>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>29.9</range>
+      <warmupTime>3</warmupTime>
+      <soundCast></soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_GR_Glaive</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>GR_CorinthBomb</defName>
+    <label>airburst shell</label>
+    <description>.</description>
+    <iconPath>Things/Item/Weapon/Honor/Honor_Corinth</iconPath>
+    <displayOrder>200</displayOrder>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>49.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>InfernoCannon_Fire</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_DoomsdayRocket</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

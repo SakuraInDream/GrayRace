@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 变形 -->
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>GR_Transform_Hand_PowerClaw</defName>
+    <label>动力爪形态</label>
+    <description>将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。</description>
+
+    <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
+    <iconPath>Things/projectile/Rail_Shotgun</iconPath>
+
+    <!-- 施加的身体部位 填 BodyPartDef -->
+    <targetBodyPart>MechanicalHand</targetBodyPart>
+
+    <!-- 如果不确定是什么身体部位可用 targetBodyPartGroups 填 BodyPartGroupDef -->
+    <!-- <targetBodyPartGroups>
+      <li></li>
+    </targetBodyPartGroups> -->
+
+    <!-- 要施加的 Hediff(要变形的 Hediff) -->
+    <!-- 示例为原版的 动力爪 -->
+    <hediffToApply>PowerClaw</hediffToApply>
+
+    <!-- 身体变形不需要材料删掉 -->
+    <!-- <requiredMaterials> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+      <!-- <Plasteel>20</Plasteel> -->
+    <!-- </requiredMaterials> -->
+
+    <!-- 科技解锁需求 -->
+    <!-- 示例为 Royalty DLC 的 专业肢体 -->
+    <researchPrerequisites>
+      <li>SpecializedLimbs</li>
+    </researchPrerequisites>
+    <!-- 显示顺序 -->
+    <uiOrder>10</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>GR_Transform_Hand_DrillArm</defName>
+    <label>挖掘臂形态</label>
+    <description>将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
+
+    <targetBodyPart>MechanicalArm</targetBodyPart>
+
+    <hediffToApply>DrillArm</hediffToApply>
+    <researchPrerequisites>
+      <li>SpecializedLimbs</li>
+    </researchPrerequisites>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
+    <defName>GR_Transform_Hand_FieldHand</defName>
+    <label>务农手形态</label>
+    <description>将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
+
+    <targetBodyPart>MechanicalHand</targetBodyPart>
+    <excludedBodyPartTags>
+      <li>ManipulationLimbDigit</li>
+    </excludedBodyPartTags>
+    <hediffToApply>FieldHand</hediffToApply>
+    <researchPrerequisites>
+      <li>SpecializedLimbs</li>
+    </researchPrerequisites>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="CETeam.CombatExtended">
+    <defName>GR_Transform_Eye_NightVision</defName>
+    <label>夜视形态</label>
+    <description>将眼部变形为夜视系统，在黑暗中也能清晰视物。</description>
+
+    <targetBodyPart>SightSensor</targetBodyPart>
+
+    <hediffToApply>GR_Hediff_NightVisionEye</hediffToApply>
+    <researchPrerequisites>
+      <li>SpecializedLimbs</li>
+    </researchPrerequisites>
+    <uiOrder>50</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 变形仿生体 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Vanilla_BionicArm</defName>
+    <label>仿生臂形态</label>
+    <description>将手臂重构为原版仿生臂。</description>
+
+    <targetBodyPart>MechanicalArm</targetBodyPart>
+    <hediffToApply>BionicArm</hediffToApply>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
+    <uiOrder>60</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Vanilla_BionicLeg</defName>
+    <label>仿生腿形态</label>
+    <description>将腿部重构为原版仿生腿。</description>
+
+    <targetBodyPart>MechanicalLeg</targetBodyPart>
+    <hediffToApply>BionicLeg</hediffToApply>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
+    <uiOrder>70</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Vanilla_BionicEye</defName>
+    <label>仿生眼形态</label>
+    <description>将视觉器官重构为原版仿生眼。</description>
+
+    <targetBodyPart>SightSensor</targetBodyPart>
+
+    <hediffToApply>BionicEye</hediffToApply>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
+    <uiOrder>80</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Vanilla_BionicEar</defName>
+    <label>仿生耳形态</label>
+    <description>将听觉器官重构为原版仿生耳。</description>
+
+    <targetBodyPart>HearingSensor</targetBodyPart>
+
+    <hediffToApply>BionicEar</hediffToApply>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
+    <uiOrder>90</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Vanilla_BionicHeart</defName>
+    <label>仿生心脏形态</label>
+    <description>将灰潮核心重构为原版仿生心脏。</description>
+
+    <targetBodyPart>Nano_Heart</targetBodyPart>
+
+    <hediffToApply>BionicHeart</hediffToApply>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
+    <uiOrder>100</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Vanilla_BionicJaw</defName>
+    <label>仿生下颌形态</label>
+    <description>将下颌重构为原版仿生下颌。</description>
+
+    <targetBodyPart>Jaw</targetBodyPart>
+    <hediffToApply>BionicJaw</hediffToApply>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
+    <uiOrder>120</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Vanilla_BionicTongue</defName>
+    <label>仿生舌形态</label>
+    <description>将舌部重构为原版仿生舌。</description>
+
+    <targetBodyPartTags>
+      <li>Tongue</li>
+    </targetBodyPartTags>
+    <hediffToApply>BionicTongue</hediffToApply>
+    <researchPrerequisites>
+      <li>Bionics</li>
+    </researchPrerequisites>
+    <uiOrder>130</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+</Defs>

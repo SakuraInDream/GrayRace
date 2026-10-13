@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--灰潮再生-->
+  <HediffDef>
+    <defName>NanitesRegeneration</defName>
+    <label>灰潮再生</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <!-- <hediffClass>Hediff_RapidRegeneration</hediffClass> -->
+    <description>运用体内的备用灰潮源质能够快速修复身上的伤口。</description>
+    <isBad>false</isBad>
+    <preventsDeath>false</preventsDeath>
+    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+    <comps>
+      <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NanitesRegeneration">
+        <naniteCostPerSeconds>10</naniteCostPerSeconds>
+        <healAmountPerSeconds>5</healAmountPerSeconds>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!--灰潮生命-->
+  <HediffDef>
+    <defName>NanitesLife</defName>
+    <label>灰潮生命</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>你不应该看到这个。</description>
+    <isBad>false</isBad>
+    <preventsDeath>false</preventsDeath>
+    <stages>
+      <li>
+        <statFactors>
+          <PsychicSensitivity>0</PsychicSensitivity>
+        </statFactors>
+        <becomeVisible>false</becomeVisible>
+        <minSeverity>0</minSeverity>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

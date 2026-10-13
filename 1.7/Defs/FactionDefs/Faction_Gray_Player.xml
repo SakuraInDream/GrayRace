@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Name="Gray_PlayerFaction" ParentName="PlayerFactionBase">
+    <defName>Gray_PlayerFaction</defName>
+    <label>Gray colonial outpost</label>
+    <description>A colony of recently-arrived Grays.</description>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <categoryTag>Gray_PlayerFaction</categoryTag>
+    <colorSpectrum>
+      <li>(0, 255, 155)</li>
+    </colorSpectrum>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>GR_colonist</basicMemberKind>
+    <pawnSingular>gray colonist</pawnSingular>
+    <pawnsPlural>kiiro colonists</pawnsPlural>
+    <techLevel>Ultra</techLevel>
+    <melaninRange>0</melaninRange>
+    <allowedCultures>
+      <li>Astropolitan</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Guilty</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+    </disallowedMemes>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>GR_Adult</li>
+          <li>GR_Child</li>
+        </categories>
+        <commonality>1</commonality>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>Icon/Faction/Player_Gray</factionIconPath>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <!-- <settlementNameMaker>Kiiro_NamerFaction_KiiroSettlement</settlementNameMaker> -->
+    <!-- <geneticVariance>1</geneticVariance> -->
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <stuffCategoriesToAllow>
+        <li>Metallic</li>
+        <li>Fabric</li>
+      </stuffCategoriesToAllow>
+      <disallowedThingDefs>
+        <li>Silver</li>
+        <li>Gold</li>
+        <li>Uranium</li>
+      </disallowedThingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+</Defs>

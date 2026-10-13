@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationInsert">
+				<xpath>*/ThinkTreeDef[defName = "MainColonistBehaviorCore"]/thinkRoot[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="ThinkNode_PrioritySorter"]/subNodes//li[2]</xpath>
+				<value>
+					<li Class="SD.GrayRace.JobGivers.JobGiver_GetMetal"/>
+				</value>
+			</li>
+			<li Class="PatchOperationInsert">
+				<xpath>*/ThinkTreeDef[defName = "SatisfyBasicNeeds"]/thinkRoot[@Class="ThinkNode_Tagger"]/subNodes/li[@Class="ThinkNode_PrioritySorter"]/subNodes//li[2]</xpath>
+				<value>
+					<li Class="SD.GrayRace.JobGivers.JobGiver_GetMetal"/>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

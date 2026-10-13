@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_Corvette_MidBase" Abstract="True">
+    <sectionSlot>GR_MechSection_Mid</sectionSlot>
+    <shipSize>GR_Chassis_Corvette</shipSize>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>40</GR_Alloy>
+    </costList>
+    <uiOrder>0</uiOrder>
+    <slots>
+      <li>
+        <key>SMALL_UTILITY_01</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_02</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_03</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>7</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>8</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
+    <defName>GR_Corvette_MID_S3</defName>
+    <label>拦截者核心</label>
+    <description>从Stellaris那复制的CORVETTE_MID_S3。</description>
+    <slots>
+      <li>
+        <key>SMALL_GUN_01</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(0,0.55)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_02</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(-0.6,-0.35)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_03</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(0.6,-0.35)</hardpointAnchor>
+        <uiOrder>2</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
+    <defName>GR_Corvette_MID_S2PD1</defName>
+    <label>哨卫核心</label>
+    <description>从Stellaris那复制的CORVETTE_MID_S2PD1。</description>
+    <slots>
+      <li>
+        <key>PD_01</key>
+        <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointAnchor>(0,0.55)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_01</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(-0.6,-0.35)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_02</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(0.6,-0.35)</hardpointAnchor>
+        <uiOrder>2</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <!-- 雷击舰 -->
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
+    <defName>GR_Corvette_MID_M1S1</defName>
+    <label>鱼雷核心</label>
+    <description>从Stellaris那复制的CORVETTE_MID_M1S1。</description>
+    <shipSize>GR_Chassis_Frigate</shipSize>
+    <costList Inherit="False">
+      <GR_Alloy>60</GR_Alloy>
+    </costList>
+    <slots Inherit="False">
+      <li>
+        <key>SMALL_GUN_01</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(-0.8,0)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>TORPEDO_01</key>
+        <slotDef>GR_MechSlot_TorpedoTube</slotDef>
+        <hardpointAnchor>(0.8,0)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+      <!-- 2 个 A 槽 -->
+      <li>
+        <key>AUX_UTILITY_01</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>AUX_UTILITY_02</key>
+        <slotDef>GR_MechSlot_Auxiliary</slotDef>
+        <uiOrder>1</uiOrder>
+      </li>
+      <!-- 5 个 S 槽 -->
+      <li>
+        <key>SMALL_UTILITY_01</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_02</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_03</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>7</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_04</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>8</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_UTILITY_05</key>
+        <slotDef>GR_MechSlot_SmallUtility</slotDef>
+        <uiOrder>9</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+</Defs>

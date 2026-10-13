@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_Cruiser_MidBase" Abstract="True">
+    <sectionSlot>GR_MechSection_Mid</sectionSlot>
+    <shipSize>GR_Chassis_Cruiser</shipSize>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>240</GR_Alloy>
+    </costList>
+    <slots>
+      <li>
+        <key>MEDIUM_UTILITY_01</key>
+        <slotDef>GR_MechSlot_MediumUtility</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_UTILITY_02</key>
+        <slotDef>GR_MechSlot_MediumUtility</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_UTILITY_03</key>
+        <slotDef>GR_MechSlot_MediumUtility</slotDef>
+        <uiOrder>7</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_UTILITY_04</key>
+        <slotDef>GR_MechSlot_MediumUtility</slotDef>
+        <uiOrder>8</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
+    <defName>GR_Cruiser_Mid_S2HB</defName>
+    <label>格纳库核心</label>
+    <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_S2HB.</description>
+    <uiOrder>0</uiOrder>
+    <slots>
+      <li>
+        <key>PD_01</key>
+        <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointAnchor>(-0.6,0)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>PD_02</key>
+        <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointAnchor>(0.6,0)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+      <li>
+        <key>STRIKE_CRAFT_01</key>
+        <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
+        <uiOrder>3</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
+    <defName>GR_Cruiser_Mid_L1M1</defName>
+    <label>巨炮核心</label>
+    <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_L1M1.</description>
+    <uiOrder>1</uiOrder>
+    <slots>
+      <li>
+        <key>LARGE_GUN_01</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointAnchor>(-0.8,0)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_GUN_01</key>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointAnchor>(0.8,0)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
+    <defName>GR_Cruiser_Mid_M3</defName>
+    <label>齐射核心</label>
+    <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_M3.</description>
+    <uiOrder>2</uiOrder>
+    <slots>
+      <li>
+        <key>MEDIUM_GUN_01</key>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointAnchor>(0,0.7)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_GUN_02</key>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointAnchor>(-0.85,-0.45)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_GUN_03</key>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointAnchor>(0.85,-0.45)</hardpointAnchor>
+        <uiOrder>2</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
+    <defName>GR_Cruiser_Mid_M2S2</defName>
+    <label>鱼雷核心</label>
+    <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_M2S2.</description>
+    <uiOrder>3</uiOrder>
+    <slots>
+      <li>
+        <key>TORPEDO_01</key>
+        <slotDef>GR_MechSlot_TorpedoTube</slotDef>
+        <hardpointAnchor>(-0.75,0.6)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>TORPEDO_02</key>
+        <slotDef>GR_MechSlot_TorpedoTube</slotDef>
+        <hardpointAnchor>(0.75,0.6)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_01</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(-0.65,-0.55)</hardpointAnchor>
+        <uiOrder>2</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_02</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(0.65,-0.55)</hardpointAnchor>
+        <uiOrder>3</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+</Defs>

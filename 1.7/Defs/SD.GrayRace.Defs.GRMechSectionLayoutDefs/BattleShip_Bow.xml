@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef Name="GR_BattleShip_BowBase" Abstract="True">
+    <sectionSlot>GR_MechSection_Bow</sectionSlot>
+    <shipSize>GR_Chassis_Battleship</shipSize>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>640</GR_Alloy>
+    </costList>
+    <slots>
+      <li>
+        <key>LARGE_UTILITY_01</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>5</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_02</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>6</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_UTILITY_03</key>
+        <slotDef>GR_MechSlot_LargeUtility</slotDef>
+        <uiOrder>7</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
+    <defName>GR_BB_Bow_L1M1S2</defName>
+    <label>齐射舰艏</label>
+    <description>从Stellaris那复制过来的BATTLESHIP_BOW_L1M1S2。</description>
+    <uiOrder>0</uiOrder>
+    <slots>
+      <li>
+        <key>LARGE_GUN_01</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointAnchor>(0,2.4)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>MEDIUM_GUN_01</key>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointAnchor>(0,1.2)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_01</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(-1.05,1.8)</hardpointAnchor>
+        <uiOrder>2</uiOrder>
+      </li>
+      <li>
+        <key>SMALL_GUN_02</key>
+        <slotDef>GR_MechSlot_SmallTurret</slotDef>
+        <hardpointAnchor>(1.05,1.8)</hardpointAnchor>
+        <uiOrder>3</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
+    <defName>GR_BB_Bow_L2</defName>
+    <label>巨炮舰艏</label>
+    <uiOrder>1</uiOrder>
+    <description>从Stellaris那复制过来的BATTLESHIP_BOW_L2。</description>
+    <slots>
+      <li>
+        <key>LARGE_GUN_01</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointAnchor>(-0.75,2.5)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>LARGE_GUN_02</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointAnchor>(0.75,2.5)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
+    <defName>GR_BB_Bow_M1S2SHB</defName>
+    <label>格纳库舰艏</label>
+    <description>从Stellaris那复制过来的BATTLESHIP_BOW_M1S2SHB.</description>
+    <uiOrder>2</uiOrder>
+    <slots>
+      <li>
+        <key>MEDIUM_GUN_01</key>
+        <slotDef>GR_MechSlot_MediumTurret</slotDef>
+        <hardpointAnchor>(0,2.05)</hardpointAnchor>
+        <uiOrder>0</uiOrder>
+      </li>
+      <li>
+        <key>PD_01</key>
+        <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointAnchor>(-0.75,1.25)</hardpointAnchor>
+        <uiOrder>1</uiOrder>
+      </li>
+      <li>
+        <key>PD_02</key>
+        <slotDef>GR_MechSlot_PointDefenseTurret</slotDef>
+        <hardpointAnchor>(0.75,1.25)</hardpointAnchor>
+        <uiOrder>2</uiOrder>
+      </li>
+      <li>
+        <key>STRIKE_CRAFT_01</key>
+        <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
+        <uiOrder>3</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+
+  <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
+    <defName>GR_BB_Bow_M2S4</defName>
+    <label>脊峰舰艏</label>
+    <description>从Stellaris那复制过来的BATTLESHIP_BOW_M2S4</description>
+    <uiOrder>3</uiOrder>
+    <slots>
+      <li>
+        <key>EXTRA_LARGE_01</key>
+        <slotDef>GR_MechSlot_ExtraLarge</slotDef>
+        <weaponMountMode>PrimaryEquipment</weaponMountMode>
+        <uiOrder>0</uiOrder>
+      </li>
+    </slots>
+  </SD.GrayRace.Defs.GRMechSectionLayoutDef>
+</Defs>

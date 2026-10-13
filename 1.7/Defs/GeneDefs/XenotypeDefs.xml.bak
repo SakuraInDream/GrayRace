@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <XenotypeDef>
+    <defName>GR_Xeno_Worker</defName>
+    <label>Protocol:Worker</label>
+    <description>为工作而特化的协议类型，包含了灰裔所擅长的所有工作类型的数据。</description>
+    <descriptionShort>为工作而特化的协议类型，包含了灰裔所擅长的所有工作类型的数据。</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>AptitudeRemarkable_Mining</li>
+      <li>AptitudeRemarkable_Crafting</li>
+      <li>AptitudeRemarkable_Construction</li>
+      <li>AptitudeRemarkable_Intellectual</li>
+    </genes>
+  </XenotypeDef>
+
+  <XenotypeDef>
+    <defName>GR_Xeno_Soldier</defName>
+    <label>Protocol:Soldier</label>
+    <description>为战斗而特化的协议类型，包含了灰裔所擅长的所有战斗技能的数据。</description>
+    <descriptionShort>为战斗而特化的协议类型，包含了灰裔所擅长的所有战斗技能的数据。</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>AptitudeRemarkable_Shooting</li>
+      <li>AptitudeRemarkable_Melee</li>
+    </genes>
+  </XenotypeDef>
+
+</Defs>

@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--机械师头盔-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_MechanitorHelmet</defName>
+    <label>Gray Mechanitor Helmet</label>
+    <description>.</description>
+    <techLevel>Ultra</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Mechanitor/Gray_MechanitorHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_AdvancedCombatClothing</li>
+        <li>GR_T2MechTech</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>60</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>80</GR_Alloy>
+      <GR_Nanites>60</GR_Nanites>
+      <ComponentSpacer>15</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToMake>144000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MechBandwidth>50</MechBandwidth>
+      <MechControlGroups>2</MechControlGroups>
+      <MechFormingSpeed>5</MechFormingSpeed>
+      <MechRemoteRepairDistance>20</MechRemoteRepairDistance>
+      <SubcoreEncodingSpeed>2</SubcoreEncodingSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Mechanitor/Gray_MechanitorHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_MechanitorArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--射手头盔-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_MarksmanHelmet</defName>
+    <label>Gray Marksman Helmet</label>
+    <description>.</description>
+    <techLevel>Ultra</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Ranged/Gray_RangedHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_AdvancedCombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>80</GR_Alloy>
+      <GR_Nanites>60</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToMake>108000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.6</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <AimingDelayFactor>-0.3</AimingDelayFactor>
+      <RangedCooldownFactor>-0.3</RangedCooldownFactor>
+      <ShootingAccuracyPawn>12</ShootingAccuracyPawn>
+      <MeleeDodgeChance>24</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Ranged/Gray_RangedHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_RangedArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--战士头盔-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_MeleeHelmet</defName>
+    <label>Gray Warrior Helmet</label>
+    <description>.</description>
+    <techLevel>Ultra</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Melee/Gray_MeleeHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_AdvancedCombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>160</GR_Alloy>
+      <GR_Nanites>60</GR_Nanites>
+      <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+      <WorkToMake>216000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.8</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+      <MeleeCooldownFactor>-0.35</MeleeCooldownFactor>
+      <MeleeDamageFactor>0.8</MeleeDamageFactor>
+      <MeleeDodgeChance>8</MeleeDodgeChance>
+      <MeleeHitChance>12</MeleeHitChance>
+      <StaggerDurationFactor>-1</StaggerDurationFactor>
+      <IncomingDamageFactor>-0.15</IncomingDamageFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Melee/Gray_MeleeHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_MeleeArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--轻型头盔-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_LightHelmet</defName>
+    <label>Gray Light Helmet</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/LightPower/Gray_LightPowerHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_CombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>40</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>60</GR_Alloy>
+      <GR_Nanites>60</GR_Nanites>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/LightPower/Gray_LightPowerHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_RangedArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--重型头盔-->
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>Gray_Apparel_HeavyHelmet</defName>
+    <label>Gray Heavy Helmet</label>
+    <description>.</description>
+    <techLevel>Spacer</techLevel>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/HeavyPower/Gray_HeavyPowerHelmet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingCategories>
+      <li>GR_ApparelArmor</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_CombatClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <GR_Alloy>80</GR_Alloy>
+      <GR_Nanites>60</GR_Nanites>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToMake>90000</WorkToMake>
+      <Mass>2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/HeavyPower/Gray_HeavyPowerHelmet</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_AdvancedArmor</li>
+        <li>GR_MeleeArmor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_White" />
+    <tradeTags>
+      <li>BasicClothing</li>
+    </tradeTags>
+  </ThingDef>
+
+  <!--装饰性头饰父级-->
+  <ThingDef ParentName="HatMakeableBase" Name="GR_HatDecorative" Abstract="true">
+    <thingCategories>
+      <li>GR_ApparelSpecial</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>GR_DecorativeClothing</li>
+      </researchPrerequisites>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
+      <skillRequirements>
+      </skillRequirements>
+      <displayPriority>215</displayPriority>
+    </recipeMaker>
+    <costStuffCount>30</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <EquipDelay>1</EquipDelay>
+    </statBases>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>false</smeltable>
+    <apparel>
+      <tags>
+        <li>GR_Decorative</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <drawData>
+        <dataNorth>
+          <layer>200</layer>
+        </dataNorth>
+        <dataSouth>
+          <layer>70</layer>
+        </dataSouth>
+      </drawData>
+    </apparel>
+  </ThingDef>
+
+  <!--面纱-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_NileGauzeVeil</defName>
+    <label>Gray Nile Gauze Veil</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/NileGauze/Gray_NileGauzeVeil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/NileGauze/Gray_NileGauzeVeil</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <drawData>
+        <defaultData>
+          <layer>60</layer>
+        </defaultData>
+        <dataNorth>
+          <layer>-65</layer>
+          <offset>(0, 0, -0.25)</offset>
+        </dataNorth>
+        <dataSouth>
+          <layer>55</layer>
+          <offset>(0, 0, -0.4)</offset>
+        </dataSouth>
+        <dataEast>
+          <offset>(0, 0, -0.25)</offset>
+        </dataEast>
+        <dataWest>
+          <offset>(0, 0, -0.25)</offset>
+        </dataWest>
+      </drawData>
+    </apparel>
+  </ThingDef>
+
+  <!--女仆发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_MaidBand</defName>
+    <label>Gray Maid Band</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Maid/Gray_MaidBand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Maid/Gray_MaidBand</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <tags>
+        <li>GR_Maid</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  <!--兔女郎发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BunnyGirlHeadbandA</defName>
+    <label>Gray Bunny Girl Headband A</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandA</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--兔女郎发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BunnyGirlHeadbandB</defName>
+    <label>Gray Bunny Girl Headband B</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandB</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandB</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--兔女郎发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BunnyGirlHeadbandC</defName>
+    <label>Gray Bunny Girl Headband C</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandC</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--兔女郎发带-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BunnyGirlHeadbandD</defName>
+    <label>Gray Bunny Girl Headband D</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandD</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BunnyGirl/Gray_BunnyGirlHeadbandD</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--桂冠-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_Laurel</defName>
+    <label>Gray Laurel</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Himation/Gray_Laurel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Himation/Gray_Laurel</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <!--斗笠-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BambooHat</defName>
+    <label>Gray Bamboo Hat</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/TaoistRobe/Gray_BambooHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/TaoistRobe/Gray_BambooHat</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <drawData>
+        <dataNorth>
+          <layer>40000</layer>
+        </dataNorth>
+        <dataSouth>
+          <layer>100</layer>
+        </dataSouth>
+      </drawData>
+    </apparel>
+  </ThingDef>
+
+  <!--头纱-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_SensualBrideVeil</defName>
+    <label>Gray Sensual Bride Veil</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Wedding/Gray_SensualBrideVeil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Wedding/Gray_SensualBrideVeil</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <drawData>
+        <dataNorth>
+          <layer>40000</layer>
+          <offset>(0, 0, -0.35)</offset>
+        </dataNorth>
+        <dataSouth>
+          <layer>-10</layer>
+          <offset>(0, 0, -0.35)</offset>
+        </dataSouth>
+        <dataEast>
+          <offset>(0, 0, -0.35)</offset>
+        </dataEast>
+        <dataWest>
+          <offset>(0, 0, -0.35)</offset>
+        </dataWest>
+      </drawData>
+    </apparel>
+  </ThingDef>
+
+  <!--头纱-->
+  <ThingDef ParentName="GR_HatDecorative">
+    <defName>Gray_Apparel_BrideVeil</defName>
+    <label>Gray Bride Veil</label>
+    <description>.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Apparel/Wedding/Gray_BrideVeil</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedStatOffsets>
+    </equippedStatOffsets>
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Wedding/Gray_BrideVeil</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicData>
+        <renderUtilityAsPack>true</renderUtilityAsPack>
+      </wornGraphicData>
+      <drawData>
+        <dataNorth>
+          <layer>40000</layer>
+          <offset>(0, 0, -0.35)</offset>
+        </dataNorth>
+        <dataSouth>
+          <layer>-10</layer>
+          <offset>(0, 0, -0.35)</offset>
+        </dataSouth>
+        <dataEast>
+          <offset>(0, 0, -0.35)</offset>
+        </dataEast>
+        <dataWest>
+          <offset>(0, 0, -0.35)</offset>
+        </dataWest>
+      </drawData>
+    </apparel>
+  </ThingDef>
+
+</Defs>

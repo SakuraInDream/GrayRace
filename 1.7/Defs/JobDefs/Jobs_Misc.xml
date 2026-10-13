@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>GR_ConsumeMetal</defName>
+    <driverClass>SD.GrayRace.JobDrivers.JobDriver_ConsumeMetal</driverClass>
+    <reportString>Consume TargetA.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>GR_HaulToIncubator</defName>
+    <driverClass>SD.GrayRace.JobDrivers.JobDriver_HaulToIncubator</driverClass>
+    <reportString>hauling TargetA to TargetB.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>GR_HaulToDrydock</defName>
+    <driverClass>SD.GrayRace.JobDrivers.JobDriver_HaulToDrydock</driverClass>
+    <reportString>hauling TargetA to TargetB.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>GR_InstallPluginUpgrade</defName>
+    <driverClass>SD.GrayRace.JobDrivers.JobDriver_InstallPluginUpgrade</driverClass>
+    <reportString>installing plugin upgrade.</reportString>
+    <suspendable>true</suspendable>
+  </JobDef>
+</Defs>

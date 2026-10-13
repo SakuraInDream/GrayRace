@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Weapons -->
+
+  <ThingCategoryDef>
+    <defName>GR_Weapons</defName>
+    <label>gray weapons</label>
+    <parent>Weapons</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>GR_WeaponsMelee</defName>
+    <label>gray melee weapons</label>
+    <parent>GR_Weapons</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>GR_WeaponsRanged</defName>
+    <label>gray ranged weapons</label>
+    <parent>GR_Weapons</parent>
+  </ThingCategoryDef>
+
+  <!-- Apparel -->
+
+  <ThingCategoryDef>
+    <defName>GR_Apparel</defName>
+    <label>gray apparel</label>
+    <parent>Apparel</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>GR_ApparelSpecial</defName>
+    <label>gray Special apparel</label>
+    <parent>GR_Apparel</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>GR_ApparelArmor</defName>
+    <label>gray armor</label>
+    <parent>GR_Apparel</parent>
+  </ThingCategoryDef>
+
+  <ThingCategoryDef>
+    <defName>GR_ApparelMisc</defName>
+    <label>misc</label>
+    <parent>GR_Apparel</parent>
+  </ThingCategoryDef>
+
+</Defs>

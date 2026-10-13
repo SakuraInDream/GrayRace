@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 泰坦 -->
+  <ThingDef ParentName="GR_Mech">
+    <defName>GR_Mech_TT</defName>
+    <label>神域御侍</label>
+    <description>神域御侍是一类擅长超远距离作战的超重型机械体，拥有极其厚重的装甲与坚不可摧的护盾，也因此牺牲了大量航速。火力方面则换来了无可比拟的提升，T级主炮拥有极大的威力与极远的射程，更多更大的副炮也使其能够有效保护自己免受近距离的威胁。还可以搭载战术光环以增强友方或压制敌方。</description>
+    <statBases>
+      <Mass>202.5</Mass>
+      <MoveSpeed>5</MoveSpeed>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <BandwidthCost>16</BandwidthCost>
+      <CaravanBonusSpeedFactor>8</CaravanBonusSpeedFactor>
+    </statBases>
+    <race>
+      <baseBodySize>16</baseBodySize>
+      <baseHealthScale>24</baseHealthScale>
+      <mechWeightClass>UltraHeavy</mechWeightClass>
+    </race>
+    <butcherProducts>
+      <GR_Nanites>1600</GR_Nanites>
+      <GR_Alloy>320</GR_Alloy>
+    </butcherProducts>
+    <tools>
+      <li>
+        <label>fist</label>
+        <capacities>
+          <li>GR_NanoScratch</li>
+        </capacities>
+        <power>160</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+        <minDrawSize>8</minDrawSize>
+        <maxDrawSize>8</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>GR_Mech_TT</defName>
+    <label>神域御侍</label>
+    <race>GR_Mech_TT</race>
+    <combatPower>1600</combatPower>
+    <maxPerGroup>2</maxPerGroup>
+    <allowInMechClusters>true</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Race/Mech/CA</texPath>
+          <maskPath>blank</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4.5</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Race/Mech/CA</texPath>
+          <maskPath>blank</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4.5</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>1200~1200</weaponMoney>
+    <weaponTags Inherit="False" />
+  </PawnKindDef>
+
+</Defs>

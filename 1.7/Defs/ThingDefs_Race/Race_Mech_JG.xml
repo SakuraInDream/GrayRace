@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 主宰 -->
+  <ThingDef ParentName="GR_Mech">
+    <defName>GR_Mech_JG</defName>
+    <label>永恒神域</label>
+    <description>永恒神域是一类特殊的超重型机械体，不仅火力凶猛盾甲厚重，还内置了一个小型制舰单元，可以在战斗中维修友方机械体和制造小型机械体，且能够搭载效果优秀的光环。</description>
+    <statBases>
+      <Mass>303.75</Mass>
+      <MoveSpeed>4</MoveSpeed>
+      <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+      <BandwidthCost>32</BandwidthCost>
+      <CaravanBonusSpeedFactor>6</CaravanBonusSpeedFactor>
+    </statBases>
+    <race>
+      <baseBodySize>32</baseBodySize>
+      <baseHealthScale>48</baseHealthScale>
+      <mechWeightClass>UltraHeavy</mechWeightClass>
+    </race>
+    <butcherProducts>
+      <GR_Nanites>3200</GR_Nanites>
+      <GR_Alloy>640</GR_Alloy>
+    </butcherProducts>
+    <tools>
+      <li>
+        <label>fist</label>
+        <capacities>
+          <li>GR_NanoScratch</li>
+        </capacities>
+        <power>320</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompProperties_Shield">
+        <compClass>SD.GrayRace.Comps.CompGrayMechVanillaShield</compClass>
+        <blocksRangedWeapons>false</blocksRangedWeapons>
+        <minDrawSize>7.5</minDrawSize>
+        <maxDrawSize>7.5</maxDrawSize>
+        <energyLossPerDamage>0.01</energyLossPerDamage>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="LightMechanoidKind">
+    <defName>GR_Mech_JG</defName>
+    <label>永恒神域</label>
+    <race>GR_Mech_JG</race>
+    <combatPower>3200</combatPower>
+    <maxPerGroup>1</maxPerGroup>
+    <allowInMechClusters>true</allowInMechClusters>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Race/Mech/CA</texPath>
+          <maskPath>blank</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>6</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Race/Mech/CA</texPath>
+          <maskPath>blank</maskPath>
+          <shaderType>CutoutWithOverlay</shaderType>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>6</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.4, 0.3)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>1200~1200</weaponMoney>
+    <weaponTags Inherit="False" />
+  </PawnKindDef>
+
+</Defs>

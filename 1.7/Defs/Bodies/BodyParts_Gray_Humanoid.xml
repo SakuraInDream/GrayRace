@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartDef>
+    <defName>Nano_Torso</defName>
+    <label>Nanite torso</label>
+    <hitPoints>40</hitPoints>
+    <skinCovered>true</skinCovered>
+    <canScarify>false</canScarify>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <executionPartPriority>400</executionPartPriority>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Nano_Heart</defName>
+    <label>Nanite Core</label>
+    <hitPoints>15</hitPoints>
+    <skinCovered>false</skinCovered>
+    <canScarify>false</canScarify>
+    <tags>
+      <li>BloodPumpingSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <spawnThingOnRemoved>GR_GrayCore</spawnThingOnRemoved>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Nano_Brain</defName>
+    <label>AI Persona Core</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <canScarify>false</canScarify>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+    <spawnThingOnRemoved>AIPersonaCore</spawnThingOnRemoved>
+  </BodyPartDef>
+
+</Defs>
