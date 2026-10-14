@@ -107,6 +107,13 @@
     </graphicData>
   </ThingDef>
 
+  <ThingDef ParentName="Mote_GRLaserBeam_Infrared">
+    <defName>Mote_GRLaserBeam_Lance</defName>
+    <graphicData>
+      <drawSize>(4, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
   <ThingDef ParentName="Mote_GRLaserBeamBase" Name="Mote_GRLaserBeam_Blue" Abstract="True">
     <graphicData>
       <color>(0.15, 0.4, 1.0, 2)</color>
@@ -134,6 +141,20 @@
     </graphicData>
   </ThingDef>
 
+   <ThingDef ParentName="Mote_GRLaserBeam_Blue">
+    <defName>Mote_GRLaserBeam_LancePlus</defName>
+    <graphicData>
+      <drawSize>(4, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_Blue">
+    <defName>Mote_GRLaserBeam_ArcEmitters</defName>
+    <graphicData>
+      <drawSize>(6, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
   <ThingDef ParentName="Mote_GRLaserBeamBase" Name="Mote_GRLaserBeam_UV" Abstract="True">
     <graphicData>
       <color>(0.8, 0.3, 1.0, 2)</color>
@@ -158,6 +179,13 @@
     <defName>Mote_GRLaserBeam_UV_L</defName>
     <graphicData>
       <drawSize>(2, 1)</drawSize>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="Mote_GRLaserBeam_UV">
+    <defName>Mote_GRLaserBeam_ArcEmittersPlus</defName>
+    <graphicData>
+      <drawSize>(6, 1)</drawSize>
     </graphicData>
   </ThingDef>
 

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 机关炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Autocannon1Base" Abstract="True">
+    <label>机关炮</label>
+    <description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_1</iconPath>
+    <slotFamily>Autocannon</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T1MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>5</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon1Base">
+    <defName>GR_MechModule_Autocannon1_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon2_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>17</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef>GR_MechWeapon_Autocannon1_S</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon1Base">
+    <defName>GR_MechModule_Autocannon1_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon2_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>34</GR_Alloy>
+    </costList>
+    <power>-30</power>
+    <equipmentDef>GR_MechWeapon_Autocannon1_M</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon1Base">
+    <defName>GR_MechModule_Autocannon1_L</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon2_L</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>68</GR_Alloy>
+    </costList>
+    <power>-67</power>
+    <equipmentDef>GR_MechWeapon_Autocannon1_L</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 撕裂者机关炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Autocannon2Base" Abstract="True">
+    <label>撕裂者机关炮</label>
+    <description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_2</iconPath>
+    <slotFamily>RipperCannons</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>6</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon2Base">
+    <defName>GR_MechModule_Autocannon2_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon3_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>17</GR_Alloy>
+      <Chemfuel>5</Chemfuel>
+    </costList>
+    <power>-17</power>
+    <equipmentDef>GR_MechWeapon_Autocannon2_S</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon2Base">
+    <defName>GR_MechModule_Autocannon2_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon3_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>34</GR_Alloy>
+      <Chemfuel>10</Chemfuel>
+    </costList>
+    <power>-39</power>
+    <equipmentDef>GR_MechWeapon_Autocannon2_M</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon2Base">
+    <defName>GR_MechModule_Autocannon2_L</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon3_L</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>68</GR_Alloy>
+      <Chemfuel>20</Chemfuel>
+    </costList>
+    <power>-88</power>
+    <equipmentDef>GR_MechWeapon_Autocannon2_L</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 火风暴机关炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Autocannon3Base" Abstract="True">
+    <label>火风暴机关炮</label>
+    <description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_3</iconPath>
+    <slotFamily>StormfireCannons</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>7</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon3Base">
+    <defName>GR_MechModule_Autocannon3_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon4_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>22</GR_Alloy>
+      <Chemfuel>8</Chemfuel>
+    </costList>
+    <power>-23</power>
+    <equipmentDef>GR_MechWeapon_Autocannon3_S</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon3Base">
+    <defName>GR_MechModule_Autocannon3_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon4_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>44</GR_Alloy>
+      <Chemfuel>16</Chemfuel>
+    </costList>
+    <power>-51</power>
+    <equipmentDef>GR_MechWeapon_Autocannon3_M</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon3Base">
+    <defName>GR_MechModule_Autocannon3_L</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Autocannon4_L</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>88</GR_Alloy>
+      <Chemfuel>32</Chemfuel>
+    </costList>
+    <power>-115</power>
+    <equipmentDef>GR_MechWeapon_Autocannon3_L</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 纳米机关炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Autocannon4Base" Abstract="True">
+    <label>纳米机关炮</label>
+    <description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</description>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_4</iconPath>
+    <slotFamily>NaniteAutocannon</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>8</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon4Base">
+    <defName>GR_MechModule_Autocannon4_S</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>29</GR_Alloy>
+      <GR_Nanites>43</GR_Nanites>
+    </costList>
+    <power>-30</power>
+    <equipmentDef>GR_MechWeapon_Autocannon4_S</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon4Base">
+    <defName>GR_MechModule_Autocannon4_M</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>57</GR_Alloy>
+      <GR_Nanites>85</GR_Nanites>
+    </costList>
+    <power>-67</power>
+    <equipmentDef>GR_MechWeapon_Autocannon4_M</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Autocannon4Base">
+    <defName>GR_MechModule_Autocannon4_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>114</GR_Alloy>
+      <GR_Nanites>169</GR_Nanites>
+    </costList>
+    <power>-150</power>
+    <equipmentDef>GR_MechWeapon_Autocannon4_L</equipmentDef>
+    <weaponDeploymentTicks>1</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+</Defs>

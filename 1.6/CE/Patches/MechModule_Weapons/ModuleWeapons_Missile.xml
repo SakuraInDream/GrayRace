@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--蜂群导弹发射器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_SwarmerMissile1_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_SwarmerMissile1_M_CE</defaultProjectile>
+      <warmupTime>3</warmupTime>
+      <range>89.9</range>
+      <burstShotCount>6</burstShotCount>
+      <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+      <forcedMissRadius>1.2</forcedMissRadius>
+      <forcedMissEvenDispersal>true</forcedMissEvenDispersal>
+      <soundCast>Shot_IncendiaryLauncher</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+</Patch>

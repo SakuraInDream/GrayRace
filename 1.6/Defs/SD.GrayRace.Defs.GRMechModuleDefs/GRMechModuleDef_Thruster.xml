@@ -511,6 +511,7 @@
     <power>-30</power>
     <costList>
       <GR_Alloy>15</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">1</Milira_DarkMatter>
     </costList>
     <statFactors>
       <MoveSpeed>3.0</MoveSpeed>
@@ -528,6 +529,7 @@
     <power>-60</power>
     <costList>
       <GR_Alloy>30</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">2</Milira_DarkMatter>
     </costList>
     <statFactors>
       <MoveSpeed>3.0</MoveSpeed>
@@ -543,6 +545,7 @@
     <power>-120</power>
     <costList>
       <GR_Alloy>60</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">4</Milira_DarkMatter>
     </costList>
     <statFactors>
       <MoveSpeed>3.0</MoveSpeed>
@@ -558,6 +561,7 @@
     <power>-240</power>
     <costList>
       <GR_Alloy>120</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">8</Milira_DarkMatter>
     </costList>
     <statFactors>
       <MoveSpeed>3.0</MoveSpeed>
@@ -573,6 +577,7 @@
     <power>-480</power>
     <costList>
       <GR_Alloy>240</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">16</Milira_DarkMatter>
     </costList>
     <statFactors>
       <MoveSpeed>3.0</MoveSpeed>
@@ -588,6 +593,7 @@
     <power>-600</power>
     <costList>
       <GR_Alloy>300</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">32</Milira_DarkMatter>
     </costList>
     <statFactors>
       <MoveSpeed>3.0</MoveSpeed>

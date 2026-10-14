@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_MechDisruptor1_S_CE</defName>
+    <label>disruptor bolt (S)</label>
+    <graphicData>
+			<color>(255,114,38)</color>
+		</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Disintegration</damageDef>
+      <damageFalloff>false</damageFalloff>
+      <damageAmountBase>6</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_MechDisruptor1_M_CE</defName>
+    <label>disruptor bolt (M)</label>
+    <graphicData>
+			<color>(255,114,38)</color>
+		</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Disintegration</damageDef>
+      <damageFalloff>false</damageFalloff>
+      <damageAmountBase>14</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>140</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_MechDisruptor2_S_CE</defName>
+    <label>ion disruptor bolt (S)</label>
+    <graphicData>
+			<color>(38,102,255)</color>
+		</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Disintegration</damageDef>
+      <damageFalloff>false</damageFalloff>
+      <damageAmountBase>8</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_MechDisruptor2_M_CE</defName>
+    <label>ion disruptor bolt (M)</label>
+   <graphicData>
+			<color>(38,102,255)</color>
+		</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Disintegration</damageDef>
+      <damageFalloff>false</damageFalloff>
+      <damageAmountBase>19</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_MechDisruptor3_S_CE</defName>
+    <label>phase disruptor bolt (S)</label>
+    <graphicData>
+			<color>(102,255,102)</color>
+		</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Disintegration</damageDef>
+      <damageFalloff>false</damageFalloff>
+      <damageAmountBase>10</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_MechDisruptor3_M_CE</defName>
+    <label>phase disruptor bolt (M)</label>
+    <graphicData>
+			<color>(102,255,102)</color>
+		</graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Disintegration</damageDef>
+      <damageFalloff>false</damageFalloff>
+      <damageAmountBase>25</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

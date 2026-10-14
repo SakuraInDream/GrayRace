@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_SwarmerMissile1_M_CE</defName>
+    <label>swarmer missile</label>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+      <explosionRadius>2.9</explosionRadius>
+      <speed>55</speed>
+      <soundExplode>Explosion_Rocket</soundExplode>
+    </projectile>
+  </ThingDef>
+
+</Defs>

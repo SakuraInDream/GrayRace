@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>GR_WD40</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>GR_WD40</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li>Ascetic</li>
+      <li>Kind</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>Wow, it's WD40!</label>
+        <description>I feel extremely comfortable!</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

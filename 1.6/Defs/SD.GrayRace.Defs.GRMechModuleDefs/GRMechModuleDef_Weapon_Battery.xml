@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 动能火炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_KineticBatteryBase" Abstract="True">
+    <label>动能火炮</label>
+    <description>射程极远的火炮，火力猛烈，而且准确性极高。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <slotFamily>KineticBattery</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_KineticBatteryBase">
+    <defName>GR_MechModule_KineticBattery</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>88</GR_Alloy>
+      <Chemfuel>26</Chemfuel>
+    </costList>
+    <power>-70</power>
+    <equipmentDef>GR_MechWeapon_KineticBattery</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_KineticBatteryBase">
+    <defName>GR_MechModule_KineticBatteryPlus</defName>
+    <label>先进动能火炮</label>
+    <description>更为强劲的远程舰载火力系统，装备有升级版的发射装置和火控系统。</description>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>114</GR_Alloy>
+      <Chemfuel>34</Chemfuel>
+    </costList>
+    <power>-91</power>
+    <equipmentDef>GR_MechWeapon_KineticBatteryPlus</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+</Defs>

@@ -209,7 +209,7 @@
     </compatibleSlots>
     <costList>
       <GR_Alloy>23</GR_Alloy>
-      <!-- stellaris 还需要一个稀有水晶 -->
+      <Jade>5</Jade>
     </costList>
     <power>-13</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay</equipmentDef>
@@ -226,7 +226,7 @@
     </compatibleSlots>
     <costList>
       <GR_Alloy>58</GR_Alloy>
-      <!-- stellaris 还需要一个稀有水晶 -->
+      <Jade>10</Jade>
     </costList>
     <power>-30</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay_M</equipmentDef>
@@ -243,7 +243,7 @@
     </compatibleSlots>
     <costList>
       <GR_Alloy>145</GR_Alloy>
-      <!-- stellaris 还需要一个稀有水晶 -->
+      <Jade>20</Jade>
     </costList>
     <power>-67</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_XRay_L</equipmentDef>
@@ -269,7 +269,7 @@
     </compatibleSlots>
     <costList>
       <GR_Alloy>35</GR_Alloy>
-      <!-- stellaris 还需要一个稀有水晶 -->
+      <Jade>7</Jade>
     </costList>
     <power>-17</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma</equipmentDef>
@@ -282,8 +282,8 @@
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>35</GR_Alloy>
-      <!-- stellaris 还需要一个稀有水晶 -->
+      <GR_Alloy>88</GR_Alloy>
+      <Jade>15</Jade>
     </costList>
     <power>-39</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_M</equipmentDef>
@@ -296,14 +296,99 @@
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>35</GR_Alloy>
-      <!-- stellaris 还需要一个稀有水晶 -->
+      <GR_Alloy>220</GR_Alloy>
+      <Jade>30</Jade>
     </costList>
     <power>-88</power>
     <equipmentDef>GR_MechWeapon_PulseLaser_Gamma_L</equipmentDef>
     <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
+  <!-- 光矛 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_LancesBase" Abstract="True">
+    <label>粒子光矛</label>
+    <description>这些重型能量武器能够发射聚焦的粒子射线并造成巨幅伤害。发射阵列的规模限制了它们只能运用在战列舰和泰坦上。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <slotFamily>Lances</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>4</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_LancesBase">
+    <defName>GR_MechModule_Lances</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_ExtraLarge</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>176</GR_Alloy>
+      <Jade>52</Jade>
+    </costList>
+    <power>-200</power>
+    <equipmentDef>GR_MechWeapon_Lances</equipmentDef>
+    <weaponDeploymentTicks>120</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_LancesBase">
+    <defName>GR_MechModule_Lances_Plus</defName>
+    <label>快子光矛</label>
+    <description>粒子光矛更为强力的版本，该武器发射携带有巨大能量的快子光束。和它的之前版本一样，只能运用在战列舰和泰坦上。</description>
+    <compatibleSlots>
+      <li>GR_MechSlot_ExtraLarge</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>229</GR_Alloy>
+      <Jade>67</Jade>
+    </costList>
+    <power>-260</power>
+    <equipmentDef>GR_MechWeapon_Lances_Plus</equipmentDef>
+    <weaponDeploymentTicks>180</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+<!-- 电弧发射器 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_ArcEmittersBase" Abstract="True">
+    <label>电弧发射器</label>
+    <description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <slotFamily>ArcEmitters</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>4</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_ArcEmittersBase">
+    <defName>GR_MechModule_ArcEmitters</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_ExtraLarge</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>176</GR_Alloy>
+      <Jade>52</Jade>
+    </costList>
+    <power>-200</power>
+    <equipmentDef>GR_MechWeapon_ArcEmitters</equipmentDef>
+    <weaponDeploymentTicks>120</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_ArcEmittersBase">
+    <defName>GR_MechModule_ArcEmittersPlus</defName>
+    <label>聚能电弧发射器</label>
+    <description>这些升级后的发射器装备了更优秀的聚焦透镜，这使得它们可以发射出更加强大的能量。</description>
+    <compatibleSlots>
+      <li>GR_MechSlot_ExtraLarge</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>88</GR_Alloy>
+      <Jade>67</Jade>
+    </costList>
+    <power>-260</power>
+    <equipmentDef>GR_MechWeapon_ArcEmittersPlus</equipmentDef>
+    <weaponDeploymentTicks>180</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 炼狱射线 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_TitanLance</defName>
     <label>炼狱射线</label>
@@ -316,11 +401,35 @@
       <li>GR_T5MechTech</li>
     </researchPrerequisites>
     <costList>
-      <GR_Alloy>2000</GR_Alloy>
+      <GR_Alloy>456</GR_Alloy>
+      <Jade>135</Jade>
     </costList>
     <power>-900</power>
     <equipmentDef>GR_MechWeapon_TitanLance</equipmentDef>
-    <weaponDeploymentTicks>60</weaponDeploymentTicks>
+    <weaponDeploymentTicks>240</weaponDeploymentTicks>
     <uiOrder>5</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 远古湮灭眩光 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_AncientTitanLance</defName>
+    <label>远古湮灭眩光</label>
+    <description>一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。</description>
+    <iconPath>Icon/ShipParts/ship_part_perdition_beam</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Titanic</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T5MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>456</GR_Alloy>
+      <GravlitePanel>450</GravlitePanel>
+    </costList>
+    <power>-900</power>
+    <equipmentDef>GR_MechWeapon_AncientTitanLance</equipmentDef>
+    <weaponDeploymentTicks>240</weaponDeploymentTicks>
+    <uiOrder>5</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
 </Defs>

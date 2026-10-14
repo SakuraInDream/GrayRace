@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 裂解炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor1Base" Abstract="True">
+    <label>裂解炮</label>
+    <description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <slotFamily>Disruptors</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Disruptor1Base">
+    <defName>GR_MechModule_Disruptor1_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Disruptor2_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>17</GR_Alloy>
+    </costList>
+    <power>-10</power>
+    <equipmentDef>GR_MechWeapon_Disruptor1_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Disruptor1Base">
+    <defName>GR_MechModule_Disruptor1_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Disruptor2_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>34</GR_Alloy>
+    </costList>
+    <power>-23</power>
+    <equipmentDef>GR_MechWeapon_Disruptor1_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 离子裂解炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor2Base" Abstract="True">
+    <label>离子裂解炮</label>
+    <description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
+    <slotFamily>IonDisruptors</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>1</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Disruptor2Base">
+    <defName>GR_MechModule_Disruptor2_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Disruptor3_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>17</GR_Alloy>
+      <Jade>5</Jade>
+    </costList>
+    <power>-13</power>
+    <equipmentDef>GR_MechWeapon_Disruptor2_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Disruptor2Base">
+    <defName>GR_MechModule_Disruptor2_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Disruptor3_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>34</GR_Alloy>
+      <Jade>10</Jade>
+    </costList>
+    <power>-30</power>
+    <equipmentDef>GR_MechWeapon_Disruptor2_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 相位裂解炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor3Base" Abstract="True">
+    <label>相位裂解炮</label>
+    <description>这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
+    <slotFamily>PhaseDisruptors</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>2</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Disruptor3Base">
+    <defName>GR_MechModule_Disruptor3_S</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>22</GR_Alloy>
+      <Jade>7</Jade>
+    </costList>
+    <power>-17</power>
+    <equipmentDef>GR_MechWeapon_Disruptor3_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Disruptor3Base">
+    <defName>GR_MechModule_Disruptor3_M</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>44</GR_Alloy>
+      <Jade>13</Jade>
+    </costList>
+    <power>-39</power>
+    <equipmentDef>GR_MechWeapon_Disruptor3_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+</Defs>

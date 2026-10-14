@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--点防御-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_PDArray</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_PDArray_CE</defaultProjectile>
+      <warmupTime>0.3</warmupTime>
+      <range>59.9</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Shotgun</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>4</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--物质加速炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver1_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver1_S_CE</defaultProjectile>
+      <warmupTime>0.73</warmupTime>
+      <defaultCooldownTime>2.17</defaultCooldownTime>
+      <range>49.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver1_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver1_M_CE</defaultProjectile>
+      <warmupTime>0.9</warmupTime>
+      <defaultCooldownTime>2.7</defaultCooldownTime>
+      <range>73.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver1_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver1_L_CE</defaultProjectile>
+      <warmupTime>1.07</warmupTime>
+      <defaultCooldownTime>3.18</defaultCooldownTime>
+      <minRange>21.9</minRange>
+      <range>99.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--线圈炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver2_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver2_S_CE</defaultProjectile>
+      <warmupTime>0.73</warmupTime>
+      <defaultCooldownTime>2.17</defaultCooldownTime>
+      <range>49.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver2_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver2_M_CE</defaultProjectile>
+      <warmupTime>0.9</warmupTime>
+      <defaultCooldownTime>2.7</defaultCooldownTime>
+      <range>73.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver2_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver2_L_CE</defaultProjectile>
+      <warmupTime>1.07</warmupTime>
+      <defaultCooldownTime>3.18</defaultCooldownTime>
+      <minRange>21.9</minRange>
+      <range>99.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--磁轨炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver3_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver3_S_CE</defaultProjectile>
+      <warmupTime>0.73</warmupTime>
+      <defaultCooldownTime>2.17</defaultCooldownTime>
+      <range>49.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver3_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver3_M_CE</defaultProjectile>
+      <warmupTime>0.9</warmupTime>
+      <defaultCooldownTime>2.7</defaultCooldownTime>
+      <range>73.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver3_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver3_L_CE</defaultProjectile>
+      <warmupTime>1.07</warmupTime>
+      <defaultCooldownTime>3.18</defaultCooldownTime>
+      <minRange>21.9</minRange>
+      <range>99.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--先进磁轨炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver4_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver4_S_CE</defaultProjectile>
+      <warmupTime>0.73</warmupTime>
+      <defaultCooldownTime>2.17</defaultCooldownTime>
+      <range>49.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver4_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver4_M_CE</defaultProjectile>
+      <warmupTime>0.9</warmupTime>
+      <defaultCooldownTime>2.7</defaultCooldownTime>
+      <range>73.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver4_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver4_L_CE</defaultProjectile>
+      <warmupTime>1.07</warmupTime>
+      <defaultCooldownTime>3.18</defaultCooldownTime>
+      <minRange>21.9</minRange>
+      <range>99.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--高斯炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver5_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver5_S_CE</defaultProjectile>
+      <warmupTime>0.73</warmupTime>
+      <defaultCooldownTime>2.17</defaultCooldownTime>
+      <range>49.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver5_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver5_M_CE</defaultProjectile>
+      <warmupTime>0.9</warmupTime>
+      <defaultCooldownTime>2.7</defaultCooldownTime>
+      <range>73.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MassDriver5_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMassDriver5_L_CE</defaultProjectile>
+      <warmupTime>1.07</warmupTime>
+      <defaultCooldownTime>3.18</defaultCooldownTime>
+      <minRange>21.9</minRange>
+      <range>99.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--兆级加农炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MegaCannon</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMegaCannon_CE</defaultProjectile>
+      <warmupTime>2.85</warmupTime>
+      <defaultCooldownTime>8.55</defaultCooldownTime>
+      <minRange>21.9</minRange>
+      <range>149.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--千兆级加农炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_MegaCannonPlus</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechMegaCannonPlus_CE</defaultProjectile>
+      <warmupTime>2.85</warmupTime>
+      <defaultCooldownTime>8.55</defaultCooldownTime>
+      <minRange>21.9</minRange>
+      <range>149.9</range>
+      <burstShotCount>1</burstShotCount>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+</Patch>

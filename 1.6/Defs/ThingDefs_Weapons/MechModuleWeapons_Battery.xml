@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ================ 动能火炮 ================ -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_KineticBattery</defName>
+    <label>动能火炮</label>
+    <description>射程极远的火炮，火力猛烈，而且准确性极高。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.2</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechKineticBattery</defaultProjectile>
+        <warmupTime>1.79</warmupTime>
+        <defaultCooldownTime>5.36</defaultCooldownTime>
+        <minRange>22.5</minRange>
+        <range>59.9</range>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechKineticBattery</defName>
+    <label>动能火炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>300</damageAmountBase>
+      <stoppingPower>5</stoppingPower>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_KineticBatteryPlus</defName>
+    <label>先进动能火炮</label>
+    <description>更为强劲的远程舰载火力系统，装备有升级版的发射装置和火控系统。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.2</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechKineticBatteryPlus</defaultProjectile>
+        <warmupTime>1.79</warmupTime>
+        <defaultCooldownTime>5.36</defaultCooldownTime>
+        <minRange>22.5</minRange>
+        <range>59.9</range>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechKineticBatteryPlus</defName>
+    <label>先进动能火炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>390</damageAmountBase>
+      <stoppingPower>5</stoppingPower>
+      <speed>140</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

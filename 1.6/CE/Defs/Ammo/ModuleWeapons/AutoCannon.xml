@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon1_S_CE</defName>
+    <label>autocannon shell (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationSharp>7</armorPenetrationSharp>
+      <armorPenetrationBlunt>70</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon1_M_CE</defName>
+    <label>autocannon shell (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <armorPenetrationSharp>21</armorPenetrationSharp>
+      <armorPenetrationBlunt>220</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon1_L_CE</defName>
+    <label>autocannon shell (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>67</damageAmountBase>
+      <armorPenetrationSharp>70</armorPenetrationSharp>
+      <armorPenetrationBlunt>4000</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon2_S_CE</defName>
+    <label>shredder autocannon shell (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationSharp>8</armorPenetrationSharp>
+      <armorPenetrationBlunt>100</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon2_M_CE</defName>
+    <label>shredder autocannon shell (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>39</damageAmountBase>
+      <armorPenetrationSharp>28</armorPenetrationSharp>
+      <armorPenetrationBlunt>260</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon2_L_CE</defName>
+    <label>shredder autocannon shell (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>93</damageAmountBase>
+      <armorPenetrationSharp>140</armorPenetrationSharp>
+      <armorPenetrationBlunt>15645</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon3_S_CE</defName>
+    <label>firestorm autocannon shell (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <armorPenetrationSharp>13</armorPenetrationSharp>
+      <armorPenetrationBlunt>160</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon3_M_CE</defName>
+    <label>firestorm autocannon shell (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <armorPenetrationSharp>36</armorPenetrationSharp>
+      <armorPenetrationBlunt>330</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon3_L_CE</defName>
+    <label>firestorm autocannon shell (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>120</damageAmountBase>
+      <armorPenetrationSharp>220</armorPenetrationSharp>
+      <armorPenetrationBlunt>33000</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon4_S_CE</defName>
+    <label>nano autocannon shell (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>26</damageAmountBase>
+      <armorPenetrationSharp>16</armorPenetrationSharp>
+      <armorPenetrationBlunt>200</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon4_M_CE</defName>
+    <label>nano autocannon shell (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>65</damageAmountBase>
+      <armorPenetrationSharp>50</armorPenetrationSharp>
+      <armorPenetrationBlunt>800</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechAutocannon4_L_CE</defName>
+    <label>nano autocannon shell (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>156</damageAmountBase>
+      <armorPenetrationSharp>330</armorPenetrationSharp>
+      <armorPenetrationBlunt>55000</armorPenetrationBlunt>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

@@ -479,11 +479,6 @@
       <bodyPartGroups>
         <li>Torso</li>
         <li>Neck</li>
-        <li>Shoulders</li>
-        <li>Arms</li>
-        <li>Legs</li>
-        <li>Hands</li>
-        <li>Feet</li>
       </bodyPartGroups>
       <wornGraphicPath>Apparel/Bondage/Gray_Bondage</wornGraphicPath>
       <layers>

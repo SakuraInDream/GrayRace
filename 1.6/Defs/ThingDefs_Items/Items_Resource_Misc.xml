@@ -28,9 +28,6 @@
     <tradeTags>
       <li>ExoticMisc</li>
     </tradeTags>
-    <thingSetMakerTags>
-      <li>RewardStandardCore</li>
-    </thingSetMakerTags>
     <allowedArchonexusCount>50</allowedArchonexusCount>
   </ThingDef>
 
@@ -119,6 +116,37 @@
       <li>Manufactured</li>
     </thingCategories>
     <techLevel>Archotech</techLevel>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>GR_Zro</defName>
+    <label>Zro</label>
+    <description>An extremely rare aerosol of exotic particles. It has been deposited on a number of worlds through meteor impacts, but its true origin is a mystery. If ingested by psionically-gifted individuals, zro acts as a very potent (and addictive) drug that enhances PSI abilities.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Zro</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <stackLimit>50</stackLimit>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>10</MaxHitPoints>
+      <MarketValue>50</MarketValue>
+      <Mass>0.01</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <thingSetMakerTags>
+      <li>RewardStandardCore</li>
+    </thingSetMakerTags>
+    <allowedArchonexusCount>50</allowedArchonexusCount>
   </ThingDef>
 
 </Defs>

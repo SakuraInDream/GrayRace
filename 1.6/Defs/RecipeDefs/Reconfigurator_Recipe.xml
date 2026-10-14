@@ -118,7 +118,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>120000</workAmount>
+    <workAmount>30000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <recipeUsers>
       <li>GR_NaniteReconfigurator</li>
@@ -177,7 +177,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>60000</workAmount>
+    <workAmount>12000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <recipeUsers>
       <li>GR_NaniteReconfigurator</li>
@@ -236,7 +236,7 @@
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>120000</workAmount>
+    <workAmount>30000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
     <recipeUsers>
       <li>GR_NaniteReconfigurator</li>
@@ -248,7 +248,7 @@
             <li>GR_Nanites</li>
           </thingDefs>
         </filter>
-        <count>200</count>
+        <count>100</count>
       </li>
       <li>
         <filter>
@@ -256,7 +256,7 @@
             <li>GR_Alloy</li>
           </thingDefs>
         </filter>
-        <count>200</count>
+        <count>100</count>
       </li>
       <li>
         <filter>
@@ -264,7 +264,7 @@
             <li>ComponentSpacer</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>10</count>
       </li>
       <li>
         <filter>
