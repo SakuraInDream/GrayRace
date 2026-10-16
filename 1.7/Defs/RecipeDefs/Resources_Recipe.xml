@@ -259,7 +259,7 @@
   <!--玻璃钢-->
   <RecipeDef>
     <defName>GR_Plasteel_Make_Nanites</defName>
-    <label>make Nanites x2500</label>
+    <label>make Nanites x250</label>
     <description>Make Nanites.</description>
     <jobString>Making Nanites.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
@@ -287,7 +287,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <GR_Nanites>2500</GR_Nanites>
+      <GR_Nanites>250</GR_Nanites>
     </products>
     <workSkill>Crafting</workSkill>
     <displayPriority>6</displayPriority>

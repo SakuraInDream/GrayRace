@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_PDArray_CE</defName>
+    <label>interceptor shard</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationSharp>21</armorPenetrationSharp>
+      <armorPenetrationBlunt>90</armorPenetrationBlunt>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--小型质量投射器-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver1_S_CE</defName>
+    <label>mass driver slug (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationSharp>25</armorPenetrationSharp>
+      <armorPenetrationBlunt>62.5</armorPenetrationBlunt>
+      <stoppingPower>1</stoppingPower>
+      <speed>175</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--中型质量投射器-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver1_M_CE</defName>
+    <label>mass driver slug (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>26</damageAmountBase>
+      <armorPenetrationSharp>156</armorPenetrationSharp>
+      <armorPenetrationBlunt>936</armorPenetrationBlunt>
+      <stoppingPower>3</stoppingPower>
+      <speed>175</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--大型质量投射器-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver1_L_CE</defName>
+    <label>mass driver slug (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>63</damageAmountBase>
+      <armorPenetrationSharp>945</armorPenetrationSharp>
+      <armorPenetrationBlunt>14175</armorPenetrationBlunt>
+      <stoppingPower>5</stoppingPower>
+      <speed>175</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--小型线圈炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver2_S_CE</defName>
+    <label>coilgun slug (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetrationSharp>35</armorPenetrationSharp>
+      <armorPenetrationBlunt>87.5</armorPenetrationBlunt>
+      <stoppingPower>1</stoppingPower>
+      <speed>200</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--中型线圈炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver2_M_CE</defName>
+    <label>coilgun slug (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <armorPenetrationSharp>210</armorPenetrationSharp>
+      <armorPenetrationBlunt>1260</armorPenetrationBlunt>
+      <stoppingPower>3</stoppingPower>
+      <speed>200</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--大型线圈炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver2_L_CE</defName>
+    <label>coilgun slug (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>84</damageAmountBase>
+      <armorPenetrationSharp>1260</armorPenetrationSharp>
+      <armorPenetrationBlunt>18900</armorPenetrationBlunt>
+      <stoppingPower>5</stoppingPower>
+      <speed>200</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--小型轨道炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver3_S_CE</defName>
+    <label>railgun slug (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <armorPenetrationSharp>45</armorPenetrationSharp>
+      <armorPenetrationBlunt>112.5</armorPenetrationBlunt>
+      <stoppingPower>1</stoppingPower>
+      <speed>225</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--中型轨道炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver3_M_CE</defName>
+    <label>railgun slug (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>45</damageAmountBase>
+      <armorPenetrationSharp>270</armorPenetrationSharp>
+      <armorPenetrationBlunt>1620</armorPenetrationBlunt>
+      <stoppingPower>3</stoppingPower>
+      <speed>225</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--大型轨道炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver3_L_CE</defName>
+    <label>railgun slug (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>108</damageAmountBase>
+      <armorPenetrationSharp>1620</armorPenetrationSharp>
+      <armorPenetrationBlunt>24300</armorPenetrationBlunt>
+      <stoppingPower>5</stoppingPower>
+      <speed>225</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--小型先进轨道炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver4_S_CE</defName>
+    <label>advanced railgun slug (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>23</damageAmountBase>
+      <armorPenetrationSharp>57.5</armorPenetrationSharp>
+      <armorPenetrationBlunt>143.75</armorPenetrationBlunt>
+      <stoppingPower>1</stoppingPower>
+      <speed>250</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--中型先进轨道炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver4_M_CE</defName>
+    <label>advanced railgun slug (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>59</damageAmountBase>
+      <armorPenetrationSharp>354</armorPenetrationSharp>
+      <armorPenetrationBlunt>2124</armorPenetrationBlunt>
+      <stoppingPower>3</stoppingPower>
+      <speed>250</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--大型先进轨道炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver4_L_CE</defName>
+    <label>advanced railgun slug (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>141</damageAmountBase>
+      <armorPenetrationSharp>2115</armorPenetrationSharp>
+      <armorPenetrationBlunt>31725</armorPenetrationBlunt>
+      <stoppingPower>5</stoppingPower>
+      <speed>250</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--小型高斯炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver5_S_CE</defName>
+    <label>gauss slug (S)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>31</damageAmountBase>
+      <armorPenetrationSharp>77.5</armorPenetrationSharp>
+      <armorPenetrationBlunt>193.75</armorPenetrationBlunt>
+      <stoppingPower>1</stoppingPower>
+      <speed>275</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--中型高斯炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver5_M_CE</defName>
+    <label>gauss slug (M)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>77</damageAmountBase>
+      <armorPenetrationSharp>462</armorPenetrationSharp>
+      <armorPenetrationBlunt>2772</armorPenetrationBlunt>
+      <stoppingPower>3</stoppingPower>
+      <speed>275</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--大型高斯炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMassDriver5_L_CE</defName>
+    <label>gauss slug (L)</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>186</damageAmountBase>
+      <armorPenetrationSharp>2790</armorPenetrationSharp>
+      <armorPenetrationBlunt>41850</armorPenetrationBlunt>
+      <stoppingPower>5</stoppingPower>
+      <speed>275</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--兆级加农炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMegaCannon_CE</defName>
+    <label>megacannon shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>1350</damageAmountBase>
+      <armorPenetrationSharp>20250</armorPenetrationSharp>
+      <armorPenetrationBlunt>810000</armorPenetrationBlunt>
+      <stoppingPower>10</stoppingPower>
+      <speed>300</speed>
+    </projectile>
+  </ThingDef>
+
+  <!--千兆级加农炮-->
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechMegaCannonPlus_CE</defName>
+    <label>gigacannon shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>1755</damageAmountBase>
+      <armorPenetrationSharp>26325</armorPenetrationSharp>
+      <armorPenetrationBlunt>1053000</armorPenetrationBlunt>
+      <stoppingPower>15</stoppingPower>
+      <speed>325</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

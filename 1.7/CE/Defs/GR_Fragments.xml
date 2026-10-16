@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="BaseFragment">
+		<defName>GR_Fragment_AP</defName>
+		<label>AP fragments</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fragments/Fragment_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>GR_NanoBullet</damageDef>
+			<damageAmountBase>75</damageAmountBase>
+			<speed>60</speed>
+			<armorPenetrationSharp>75</armorPenetrationSharp>
+			<armorPenetrationBlunt>3600</armorPenetrationBlunt>
+			<gravityFactor>5</gravityFactor>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseFragment">
+		<defName>GR_Fragment_Sabot</defName>
+		<label>AP fragments</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fragments/Fragment_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>GR_NanoBullet</damageDef>
+			<damageAmountBase>300</damageAmountBase>
+			<speed>60</speed>
+			<armorPenetrationSharp>300</armorPenetrationSharp>
+			<armorPenetrationBlunt>22500</armorPenetrationBlunt>
+			<gravityFactor>5</gravityFactor>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseFragment">
+		<defName>GR_Fragment_Sabot_Large</defName>
+		<label>AP fragments</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fragments/Fragment_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>GR_NanoBullet</damageDef>
+			<damageAmountBase>600</damageAmountBase>
+			<speed>60</speed>
+			<armorPenetrationSharp>750</armorPenetrationSharp>
+			<armorPenetrationBlunt>135750</armorPenetrationBlunt>
+			<gravityFactor>5</gravityFactor>
+		</projectile>
+	</ThingDef>
+
+</Defs>

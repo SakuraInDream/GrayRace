@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ================ 裂解炮 ================ -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Disruptor1_S</defName>
+    <label>小型裂解炮</label>
+    <description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechDisruptor1_S</defaultProjectile>
+        <warmupTime>0.58</warmupTime>
+        <defaultCooldownTime>1.72</defaultCooldownTime>
+        <range>14.9</range>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase">
+    <defName>Bullet_GR_MechDisruptor1_S</defName>
+    <label>小型裂解炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>6</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <beamMoteDef>Mote_GRLaserBeam_Gamma_M</beamMoteDef>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Disruptor1_M</defName>
+    <label>中型裂解炮</label>
+    <description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechDisruptor1_M</defaultProjectile>
+        <warmupTime>0.85</warmupTime>
+        <defaultCooldownTime>2.55</defaultCooldownTime>
+        <range>19.9</range>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase">
+    <defName>Bullet_GR_MechDisruptor1_M</defName>
+    <label>中型裂解炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <beamMoteDef>Mote_GRLaserBeam_Gamma_L</beamMoteDef>
+      <speed>140</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- ================ 离子裂解炮 ================ -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Disruptor2_S</defName>
+    <label>小型离子裂解炮</label>
+    <description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechDisruptor2_S</defaultProjectile>
+        <warmupTime>0.58</warmupTime>
+        <defaultCooldownTime>1.72</defaultCooldownTime>
+        <range>14.9</range>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase">
+    <defName>Bullet_GR_MechDisruptor2_S</defName>
+    <label>小型离子裂解炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <beamMoteDef>Mote_GRLaserBeam_Blue_M</beamMoteDef>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Disruptor2_M</defName>
+    <label>中型离子裂解炮</label>
+    <description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechDisruptor2_M</defaultProjectile>
+        <warmupTime>0.85</warmupTime>
+        <defaultCooldownTime>2.55</defaultCooldownTime>
+        <range>19.9</range>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase">
+    <defName>Bullet_GR_MechDisruptor2_M</defName>
+    <label>中型离子裂解炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>19</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <beamMoteDef>Mote_GRLaserBeam_Blue_L</beamMoteDef>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- ================ 相位裂解炮 ================ -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Disruptor3_S</defName>
+    <label>小型相位裂解炮</label>
+    <description>这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechDisruptor3_S</defaultProjectile>
+        <warmupTime>0.58</warmupTime>
+        <defaultCooldownTime>1.72</defaultCooldownTime>
+        <range>14.9</range>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase">
+    <defName>Bullet_GR_MechDisruptor3_S</defName>
+    <label>小型相位裂解炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <beamMoteDef>Mote_GRLaserBeam_XRay_M</beamMoteDef>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Disruptor3_M</defName>
+    <label>中型相位裂解炮</label>
+    <description>最先进的相位裂解武器，这种火炮是之前的升级版相位裂解器完全军事化的成果。它们的相位抛射体更加致命。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechDisruptor3_M</defaultProjectile>
+        <warmupTime>0.85</warmupTime>
+        <defaultCooldownTime>2.55</defaultCooldownTime>
+        <range>19.9</range>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="Bullet_GR_LaserBase">
+    <defName>Bullet_GR_MechDisruptor3_M</defName>
+    <label>中型相位裂解炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Disintegration</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <beamMoteDef>Mote_GRLaserBeam_XRay_L</beamMoteDef>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

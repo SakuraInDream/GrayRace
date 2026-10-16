@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Gray Race</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_MechKeel"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_MechKeel"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/parts/li[def="MechanicalHead"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/parts/li[def="MechanicalHead"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/parts/li[def="MechanicalHead"]/parts/li[def="ArtificialBrain"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/parts/li[def="MechanicalHead"]/parts/li[def="ArtificialBrain"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/parts/li[def="MechanicalHead"]/parts/li[def="SightSensor"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/parts/li[def="MechanicalHead"]/parts/li[def="SightSensor"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/parts/li[def="MechanicalHead"]/parts/li[def="HearingSensor"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/parts/li[def="MechanicalHead"]/parts/li[def="HearingSensor"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]/parts/li[def="MechanicalArm"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]/parts/li[def="MechanicalArm"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]/parts/li[def="MechanicalArm"]/parts/li[def="MechanicalHand"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]/parts/li[def="MechanicalArm"]/parts/li[def="MechanicalHand"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/parts/li[def="MechanicalThorax"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/parts/li[def="MechanicalThorax"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/parts/li[def="MechanicalThorax"]/parts/li[def="MechanicalLeg"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/parts/li[def="MechanicalThorax"]/parts/li[def="MechanicalLeg"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/parts/li[def="MechanicalThorax"]/parts/li[def="MechanicalLeg"]/parts/li[def="MechanicalFoot"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/parts/li[def="MechanicalThorax"]/parts/li[def="MechanicalLeg"]/parts/li[def="MechanicalFoot"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_ArmoredBelt"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_ArmoredBelt"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_ArmoredBelt"]/parts/li[def="Reactor"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_ArmoredBelt"]/parts/li[def="Reactor"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="FluidReprocessor"]/groups</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="FluidReprocessor"]</xpath>
+            <value>
+              <groups />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalNeck"]/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]/parts/li[def="MechanicalArm"]/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="MechanicalShoulder"]/parts/li[def="MechanicalArm"]/parts/li[def="MechanicalHand"]/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/parts/li[def="MechanicalThorax"]/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_AntiTorpedoBulge"]/parts/li[def="MechanicalThorax"]/parts/li[def="MechanicalLeg"]/parts/li[def="MechanicalFoot"]/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/BodyDef[defName="GR_MechBody"]/corePart/parts/li[def="GR_ArmoredBelt"]/groups</xpath>
+          <value>
+            <li>CoveredByNaturalArmor</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

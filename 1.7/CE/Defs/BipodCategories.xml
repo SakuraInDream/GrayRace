@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <CombatExtended.BipodCategoryDef>
+    <defName>Bipod_GR_SR</defName>
+    <label>GR_SR</label>
+    <bipod_id>Bipod_GR_SR</bipod_id>
+    <ad_Range>20</ad_Range>
+    <setuptime>180</setuptime>
+    <recoil_mult_setup>0.5</recoil_mult_setup>
+    <recoil_mult_NOT_setup>1</recoil_mult_NOT_setup>
+    <warmup_mult_setup>0.5</warmup_mult_setup>
+    <warmup_mult_NOT_setup>1</warmup_mult_NOT_setup>
+    <swayMult>0.5</swayMult>
+    <swayPenalty>1</swayPenalty>
+    <autosetMode>AimedShot</autosetMode>
+    <useAutoSetMode>true</useAutoSetMode>
+  </CombatExtended.BipodCategoryDef>
+
+  <CombatExtended.BipodCategoryDef>
+    <defName>Bipod_GR_LMG</defName>
+    <label>GR_LMG</label>
+    <bipod_id>Bipod_GR_LMG</bipod_id>
+    <ad_Range>10</ad_Range>
+    <setuptime>180</setuptime>
+    <recoil_mult_setup>0.5</recoil_mult_setup>
+    <recoil_mult_NOT_setup>1.2</recoil_mult_NOT_setup>
+    <warmup_mult_setup>0.5</warmup_mult_setup>
+    <warmup_mult_NOT_setup>1.2</warmup_mult_NOT_setup>
+    <swayMult>0.5</swayMult>
+    <swayPenalty>1.2</swayPenalty>
+    <autosetMode>Snapshot</autosetMode>
+    <useAutoSetMode>true</useAutoSetMode>
+  </CombatExtended.BipodCategoryDef>
+
+  <CombatExtended.BipodCategoryDef>
+    <defName>Bipod_GR_HMG</defName>
+    <label>GR_HMG</label>
+    <bipod_id>Bipod_GR_HMG</bipod_id>
+    <ad_Range>20</ad_Range>
+    <setuptime>180</setuptime>
+    <recoil_mult_setup>0.25</recoil_mult_setup>
+    <recoil_mult_NOT_setup>1.5</recoil_mult_NOT_setup>
+    <warmup_mult_setup>0.25</warmup_mult_setup>
+    <warmup_mult_NOT_setup>1.5</warmup_mult_NOT_setup>
+    <swayMult>0.25</swayMult>
+    <swayPenalty>1.5</swayPenalty>
+    <autosetMode>Snapshot</autosetMode>
+    <useAutoSetMode>true</useAutoSetMode>
+  </CombatExtended.BipodCategoryDef>
+</Defs>

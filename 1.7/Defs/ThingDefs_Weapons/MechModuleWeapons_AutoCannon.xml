@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ================ 机关炮 ================ -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon1_S</defName>
+    <label>机关炮</label>
+    <description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon1_S</defaultProjectile>
+        <warmupTime>0.21</warmupTime>
+        <defaultCooldownTime>0.64</defaultCooldownTime>
+        <range>14.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon1_S</defName>
+    <label>小型机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon1_M</defName>
+    <label>中型机关炮</label>
+    <description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon1_M</defaultProjectile>
+        <warmupTime>0.32</warmupTime>
+        <defaultCooldownTime>0.98</defaultCooldownTime>
+        <range>16.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon1_M</defName>
+    <label>中型机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon1_L</defName>
+    <label>大型机关炮</label>
+    <description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon1_L</defaultProjectile>
+        <warmupTime>0.43</warmupTime>
+        <defaultCooldownTime>1.27</defaultCooldownTime>
+        <range>19.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon1_L</defName>
+    <label>大型机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>67</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- ================ 撕裂者机关炮 ================ -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon2_S</defName>
+    <label>撕裂者机关炮</label>
+    <description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon2_S</defaultProjectile>
+        <warmupTime>0.21</warmupTime>
+        <defaultCooldownTime>0.64</defaultCooldownTime>
+        <range>14.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon2_S</defName>
+    <label>小型撕裂者机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon2_M</defName>
+    <label>中型撕裂者机关炮</label>
+    <description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon2_M</defaultProjectile>
+        <warmupTime>0.32</warmupTime>
+        <defaultCooldownTime>0.98</defaultCooldownTime>
+        <range>16.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon2_M</defName>
+    <label>中型撕裂者机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>39</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon2_L</defName>
+    <label>大型撕裂者机关炮</label>
+    <description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon2_L</defaultProjectile>
+        <warmupTime>0.43</warmupTime>
+        <defaultCooldownTime>1.27</defaultCooldownTime>
+        <range>19.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon2_L</defName>
+    <label>大型撕裂者机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>93</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- ================ 火风暴机关炮 ================ -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon3_S</defName>
+    <label>火风暴机关炮</label>
+    <description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon3_S</defaultProjectile>
+        <warmupTime>0.21</warmupTime>
+        <defaultCooldownTime>0.64</defaultCooldownTime>
+        <range>14.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon3_S</defName>
+    <label>小型火风暴机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon3_M</defName>
+    <label>中型火风暴机关炮</label>
+    <description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon3_M</defaultProjectile>
+        <warmupTime>0.32</warmupTime>
+        <defaultCooldownTime>0.98</defaultCooldownTime>
+        <range>16.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon3_M</defName>
+    <label>中型火风暴机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon3_L</defName>
+    <label>大型火风暴机关炮</label>
+    <description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon3_L</defaultProjectile>
+        <warmupTime>0.43</warmupTime>
+        <defaultCooldownTime>1.27</defaultCooldownTime>
+        <range>19.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon3_L</defName>
+    <label>大型火风暴机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>120</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- ================ 纳米机关炮 ================ -->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon4_S</defName>
+    <label>纳米机关炮</label>
+    <description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon4_S</defaultProjectile>
+        <warmupTime>0.21</warmupTime>
+        <defaultCooldownTime>0.64</defaultCooldownTime>
+        <range>14.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon4_S</defName>
+    <label>小型纳米机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>26</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon4_M</defName>
+    <label>中型纳米机关炮</label>
+    <description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon4_M</defaultProjectile>
+        <warmupTime>0.32</warmupTime>
+        <defaultCooldownTime>0.98</defaultCooldownTime>
+        <range>16.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon4_M</defName>
+    <label>中型纳米机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>65</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Autocannon4_L</defName>
+    <label>大型纳米机关炮</label>
+    <description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.3</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_MechAutocannon4_L</defaultProjectile>
+        <warmupTime>0.43</warmupTime>
+        <defaultCooldownTime>1.27</defaultCooldownTime>
+        <range>19.9</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_Slugthrower</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_MechAutocannon4_L</defName>
+    <label>大型纳米机关炮弹丸</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>156</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

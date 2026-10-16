@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon1_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon1_S_CE</defaultProjectile>
+      <warmupTime>0.21</warmupTime>
+      <defaultCooldownTime>0.64</defaultCooldownTime>
+      <range>29.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Shotgun</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--中型机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon1_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon1_M_CE</defaultProjectile>
+      <warmupTime>0.32</warmupTime>
+      <defaultCooldownTime>0.98</defaultCooldownTime>
+      <range>33.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--大型机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon1_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon1_L_CE</defaultProjectile>
+      <warmupTime>0.43</warmupTime>
+      <defaultCooldownTime>1.27</defaultCooldownTime>
+      <range>39.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--小型撕裂者机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon2_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon2_S_CE</defaultProjectile>
+      <warmupTime>0.21</warmupTime>
+      <defaultCooldownTime>0.64</defaultCooldownTime>
+      <range>29.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--中型撕裂者机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon2_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon2_M_CE</defaultProjectile>
+      <warmupTime>0.32</warmupTime>
+      <defaultCooldownTime>0.98</defaultCooldownTime>
+      <range>33.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--大型撕裂者机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon2_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon2_L_CE</defaultProjectile>
+      <warmupTime>0.43</warmupTime>
+      <defaultCooldownTime>1.27</defaultCooldownTime>
+      <range>39.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--小型火风暴机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon3_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon3_S_CE</defaultProjectile>
+      <warmupTime>0.21</warmupTime>
+      <defaultCooldownTime>0.64</defaultCooldownTime>
+      <range>29.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--中型火风暴机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon3_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon3_M_CE</defaultProjectile>
+      <warmupTime>0.32</warmupTime>
+      <defaultCooldownTime>0.98</defaultCooldownTime>
+      <range>33.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--大型火风暴机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon3_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon3_L_CE</defaultProjectile>
+      <warmupTime>0.43</warmupTime>
+      <defaultCooldownTime>1.27</defaultCooldownTime>
+      <range>39.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--小型纳米机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon4_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon4_S_CE</defaultProjectile>
+      <warmupTime>0.21</warmupTime>
+      <defaultCooldownTime>0.64</defaultCooldownTime>
+      <range>29.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--中型纳米机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon4_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon4_M_CE</defaultProjectile>
+      <warmupTime>0.32</warmupTime>
+      <defaultCooldownTime>0.98</defaultCooldownTime>
+      <range>33.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--大型纳米机关炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Autocannon4_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechAutocannon4_L_CE</defaultProjectile>
+      <warmupTime>0.43</warmupTime>
+      <defaultCooldownTime>1.27</defaultCooldownTime>
+      <range>39.9</range>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+</Patch>

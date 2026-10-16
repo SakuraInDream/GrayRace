@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--等离子发射器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma1_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma1_S_CE</defaultProjectile>
+      <warmupTime>1.25</warmupTime>
+      <defaultCooldownTime>3.75</defaultCooldownTime>
+      <range>39.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--中型等离子发射器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma1_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma1_M_CE</defaultProjectile>
+      <warmupTime>1.43</warmupTime>
+      <defaultCooldownTime>4.27</defaultCooldownTime>
+      <range>59.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--大型等离子发射器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma1_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma1_L_CE</defaultProjectile>
+      <warmupTime>1.6</warmupTime>
+      <defaultCooldownTime>4.8</defaultCooldownTime>
+      <minRange>21.9</minRange>
+      <range>79.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--等离子加速器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma2_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma2_S_CE</defaultProjectile>
+      <warmupTime>1.25</warmupTime>
+      <defaultCooldownTime>3.75</defaultCooldownTime>
+      <range>39.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--中型等离子加速器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma2_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma2_M_CE</defaultProjectile>
+      <warmupTime>1.43</warmupTime>
+      <defaultCooldownTime>4.27</defaultCooldownTime>
+      <range>59.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--大型等离子加速器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma2_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma2_L_CE</defaultProjectile>
+      <warmupTime>1.6</warmupTime>
+      <defaultCooldownTime>4.8</defaultCooldownTime>
+      <minRange>22.9</minRange>
+      <range>79.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--等离子加农炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma3_S</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma3_S_CE</defaultProjectile>
+      <warmupTime>1.25</warmupTime>
+      <defaultCooldownTime>3.75</defaultCooldownTime>
+      <range>39.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--中型等离子加农炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma3_M</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma3_M_CE</defaultProjectile>
+      <warmupTime>1.43</warmupTime>
+      <defaultCooldownTime>4.27</defaultCooldownTime>
+      <range>59.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--大型等离子加农炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Plasma3_L</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechPlasma3_L_CE</defaultProjectile>
+      <warmupTime>1.6</warmupTime>
+      <defaultCooldownTime>4.8</defaultCooldownTime>
+      <minRange>22.9</minRange>
+      <range>79.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>10</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+</Patch>

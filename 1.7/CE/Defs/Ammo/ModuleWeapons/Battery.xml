@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechKineticBattery_CE</defName>
+    <label>kinetic battery shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>300</damageAmountBase>
+      <armorPenetrationSharp>750</armorPenetrationSharp>
+      <armorPenetrationBlunt>120000</armorPenetrationBlunt>
+      <stoppingPower>5</stoppingPower>
+      <speed>180</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBulletCE">
+    <defName>Bullet_GR_MechKineticBatteryPlus_CE</defName>
+    <label>advanced kinetic battery shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_NanoBullet</damageDef>
+      <damageAmountBase>390</damageAmountBase>
+      <armorPenetrationSharp>900</armorPenetrationSharp>
+      <armorPenetrationBlunt>150000</armorPenetrationBlunt>
+      <stoppingPower>5</stoppingPower>
+      <speed>220</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

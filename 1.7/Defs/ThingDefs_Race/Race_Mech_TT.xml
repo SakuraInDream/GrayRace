@@ -11,6 +11,7 @@
       <MoveSpeed>5</MoveSpeed>
       <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <MeleeHitChance>64</MeleeHitChance>
       <BandwidthCost>16</BandwidthCost>
       <CaravanBonusSpeedFactor>8</CaravanBonusSpeedFactor>
     </statBases>

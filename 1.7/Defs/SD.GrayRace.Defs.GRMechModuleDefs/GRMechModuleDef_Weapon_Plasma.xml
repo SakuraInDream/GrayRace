@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 等离子发射器 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma1Base" Abstract="True">
+    <label>等离子发射器</label>
+    <description>可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <slotFamily>PlasmaThrower</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma1Base">
+    <defName>GR_MechModule_Plasma1_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Plasma2_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>23</GR_Alloy>
+    </costList>
+    <power>-13</power>
+    <equipmentDef>GR_MechWeapon_Plasma1_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma1Base">
+    <defName>GR_MechModule_Plasma1_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Plasma2_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>58</GR_Alloy>
+    </costList>
+    <power>-27</power>
+    <equipmentDef>GR_MechWeapon_Plasma1_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma1Base">
+    <defName>GR_MechModule_Plasma1_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Plasma2_L</li>
+    </upgradesTo>
+    <costList>
+      <GR_Alloy>145</GR_Alloy>
+    </costList>
+    <power>-63</power>
+    <equipmentDef>GR_MechWeapon_Plasma1_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 等离子加速器 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma2Base" Abstract="True">
+    <label>等离子加速器</label>
+    <description>这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
+    <slotFamily>PlasmaAccelerators</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>1</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma2Base">
+    <defName>GR_MechModule_Plasma2_S</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Plasma3_S</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>23</GR_Alloy>
+      <PsychoidLeaves>5</PsychoidLeaves>
+    </costList>
+    <power>-17</power>
+    <equipmentDef>GR_MechWeapon_Plasma2_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma2Base">
+    <defName>GR_MechModule_Plasma2_M</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Plasma3_M</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>58</GR_Alloy>
+      <PsychoidLeaves>10</PsychoidLeaves>
+    </costList>
+    <power>-36</power>
+    <equipmentDef>GR_MechWeapon_Plasma2_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma2Base">
+    <defName>GR_MechModule_Plasma2_L</defName>
+    <upgradesTo>
+      <li>GR_MechModule_Plasma3_L</li>
+    </upgradesTo>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>145</GR_Alloy>
+      <PsychoidLeaves>20</PsychoidLeaves>
+    </costList>
+    <power>-82</power>
+    <equipmentDef>GR_MechWeapon_Plasma2_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 等离子加农炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma3Base" Abstract="True">
+    <label>等离子加农炮</label>
+    <description>最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
+    <slotFamily>PlasmaCannons</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>2</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma3Base">
+    <defName>GR_MechModule_Plasma3_S</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_SmallTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>35</GR_Alloy>
+      <PsychoidLeaves>7</PsychoidLeaves>
+    </costList>
+    <power>-23</power>
+    <equipmentDef>GR_MechWeapon_Plasma3_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma3Base">
+    <defName>GR_MechModule_Plasma3_M</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_MediumTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>88</GR_Alloy>
+      <PsychoidLeaves>13</PsychoidLeaves>
+    </costList>
+    <power>-47</power>
+    <equipmentDef>GR_MechWeapon_Plasma3_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_Plasma3Base">
+    <defName>GR_MechModule_Plasma3_L</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_LargeTurret</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>220</GR_Alloy>
+      <PsychoidLeaves>26</PsychoidLeaves>
+    </costList>
+    <power>-107</power>
+    <equipmentDef>GR_MechWeapon_Plasma3_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+</Defs>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--动能火炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_KineticBattery</defName>
+    <statBases>
+      <SightsEfficiency>4.5</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechKineticBattery_CE</defaultProjectile>
+      <warmupTime>1.79</warmupTime>
+      <defaultCooldownTime>5.36</defaultCooldownTime>
+      <minRange>22.5</minRange>
+      <range>119.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--先进动能火炮-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_KineticBatteryPlus</defName>
+    <statBases>
+      <SightsEfficiency>5.5</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_MechKineticBatteryPlus_CE</defaultProjectile>
+      <warmupTime>1.79</warmupTime>
+      <defaultCooldownTime>5.36</defaultCooldownTime>
+      <minRange>22.5</minRange>
+      <range>119.9</range>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>8</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+</Patch>

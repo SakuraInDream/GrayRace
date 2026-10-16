@@ -178,7 +178,7 @@
     </allowedChassis>
     <power>180</power>
     <costList>
-      <GR_Alloy>26</GR_Alloy>
+      <GR_Alloy>30</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ColdFusion_Destroyer</li>
@@ -191,7 +191,7 @@
     </allowedChassis>
     <power>360</power>
     <costList>
-      <GR_Alloy>52</GR_Alloy>
+      <GR_Alloy>60</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ColdFusion_Cruiser</li>
@@ -204,7 +204,7 @@
     </allowedChassis>
     <power>720</power>
     <costList>
-      <GR_Alloy>104</GR_Alloy>
+      <GR_Alloy>120</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ColdFusion_Battleship</li>
@@ -217,7 +217,7 @@
     </allowedChassis>
     <power>1450</power>
     <costList>
-      <GR_Alloy>208</GR_Alloy>
+      <GR_Alloy>240</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ColdFusion_Titan</li>
@@ -230,7 +230,7 @@
     </allowedChassis>
     <power>5000</power>
     <costList>
-      <GR_Alloy>730</GR_Alloy>
+      <GR_Alloy>720</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ColdFusion_Juggernaut</li>
@@ -260,7 +260,7 @@
     </allowedChassis>
     <power>240</power>
     <costList>
-      <GR_Alloy>34</GR_Alloy>
+      <GR_Alloy>45</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_Antimatter_Destroyer</li>
@@ -273,7 +273,7 @@
     </allowedChassis>
     <power>480</power>
     <costList>
-      <GR_Alloy>68</GR_Alloy>
+      <GR_Alloy>90</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_Antimatter_Cruiser</li>
@@ -286,7 +286,7 @@
     </allowedChassis>
     <power>950</power>
     <costList>
-      <GR_Alloy>136</GR_Alloy>
+      <GR_Alloy>180</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_Antimatter_Battleship</li>
@@ -299,7 +299,7 @@
     </allowedChassis>
     <power>1900</power>
     <costList>
-      <GR_Alloy>272</GR_Alloy>
+      <GR_Alloy>360</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_Antimatter_Titan</li>
@@ -312,7 +312,7 @@
     </allowedChassis>
     <power>6500</power>
     <costList>
-      <GR_Alloy>950</GR_Alloy>
+      <GR_Alloy>1080</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_Antimatter_Juggernaut</li>
@@ -327,7 +327,7 @@
     </allowedChassis>
     <power>170</power>
     <costList>
-      <GR_Alloy>22</GR_Alloy>
+      <GR_Alloy>34</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ZeroPoint_Corvette</li>
@@ -342,7 +342,7 @@
     </allowedChassis>
     <power>320</power>
     <costList>
-      <GR_Alloy>44</GR_Alloy>
+      <GR_Alloy>68</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ZeroPoint_Destroyer</li>
@@ -355,7 +355,7 @@
     </allowedChassis>
     <power>620</power>
     <costList>
-      <GR_Alloy>88</GR_Alloy>
+      <GR_Alloy>135</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ZeroPoint_Cruiser</li>
@@ -368,7 +368,7 @@
     </allowedChassis>
     <power>1250</power>
     <costList>
-      <GR_Alloy>176</GR_Alloy>
+      <GR_Alloy>270</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ZeroPoint_Battleship</li>
@@ -381,7 +381,7 @@
     </allowedChassis>
     <power>2500</power>
     <costList>
-      <GR_Alloy>352</GR_Alloy>
+      <GR_Alloy>540</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ZeroPoint_Titan</li>
@@ -394,7 +394,7 @@
     </allowedChassis>
     <power>8460</power>
     <costList>
-      <GR_Alloy>1230</GR_Alloy>
+      <GR_Alloy>1620</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_ZeroPoint_Juggernaut</li>
@@ -409,7 +409,7 @@
     </allowedChassis>
     <power>220</power>
     <costList>
-      <GR_Alloy>28</GR_Alloy>
+      <GR_Alloy>51</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_DarkMatter_Corvette</li>
@@ -424,7 +424,7 @@
     </allowedChassis>
     <power>430</power>
     <costList>
-      <GR_Alloy>56</GR_Alloy>
+      <GR_Alloy>102</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_DarkMatter_Destroyer</li>
@@ -437,7 +437,7 @@
     </allowedChassis>
     <power>800</power>
     <costList>
-      <GR_Alloy>112</GR_Alloy>
+      <GR_Alloy>203</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_DarkMatter_Cruiser</li>
@@ -450,7 +450,7 @@
     </allowedChassis>
     <power>1550</power>
     <costList>
-      <GR_Alloy>224</GR_Alloy>
+      <GR_Alloy>405</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_DarkMatter_Battleship</li>
@@ -463,7 +463,7 @@
     </allowedChassis>
     <power>3200</power>
     <costList>
-      <GR_Alloy>448</GR_Alloy>
+      <GR_Alloy>810</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_DarkMatter_Titan</li>
@@ -476,7 +476,7 @@
     </allowedChassis>
     <power>11000</power>
     <costList>
-      <GR_Alloy>1600</GR_Alloy>
+      <GR_Alloy>2430</GR_Alloy>
     </costList>
     <upgradesTo>
       <li>GR_MechModule_Reactor_DarkMatter_Juggernaut</li>
@@ -491,7 +491,8 @@
     </allowedChassis>
     <power>285</power>
     <costList>
-      <GR_Alloy>37</GR_Alloy>
+      <GR_Alloy>76</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">1</Milira_DarkMatter>
     </costList>
     <isResearchUnlockRepresentative>true</isResearchUnlockRepresentative>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
@@ -503,7 +504,8 @@
     </allowedChassis>
     <power>550</power>
     <costList>
-      <GR_Alloy>74</GR_Alloy>
+      <GR_Alloy>152</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">2</Milira_DarkMatter>
     </costList>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
@@ -513,7 +515,8 @@
     </allowedChassis>
     <power>1030</power>
     <costList>
-      <GR_Alloy>148</GR_Alloy>
+      <GR_Alloy>304</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">4</Milira_DarkMatter>
     </costList>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
@@ -523,7 +526,8 @@
     </allowedChassis>
     <power>2000</power>
     <costList>
-      <GR_Alloy>296</GR_Alloy>
+      <GR_Alloy>608</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">8</Milira_DarkMatter>
     </costList>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
@@ -533,7 +537,8 @@
     </allowedChassis>
     <power>4200</power>
     <costList>
-      <GR_Alloy>592</GR_Alloy>
+      <GR_Alloy>1215</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">16</Milira_DarkMatter>
     </costList>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef ParentName="GR_MechModule_ReactorTier_DarkMatter">
@@ -543,7 +548,8 @@
     </allowedChassis>
     <power>14300</power>
     <costList>
-      <GR_Alloy>2080</GR_Alloy>
+      <GR_Alloy>3645</GR_Alloy>
+      <Milira_DarkMatter MayRequire="Ariandel.MiliraImperium">32</Milira_DarkMatter>
     </costList>
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 </Defs>

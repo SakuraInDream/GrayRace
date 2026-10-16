@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Infrared_S_CE</defName>
+    <label>red laser beam (S)</label>
+    <graphicData>
+      <color>(255,102,102)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Infrared_M_CE</defName>
+    <label>red laser beam (M)</label>
+    <graphicData>
+      <color>(255,102,102)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>27</damageAmountBase>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Infrared_L_CE</defName>
+    <label>red laser beam (L)</label>
+    <graphicData>
+      <color>(255,102,102)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>66</damageAmountBase>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Blue_S_CE</defName>
+    <label>blue laser beam (S)</label>
+    <graphicData>
+      <color>(38,102,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>14</damageAmountBase>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Blue_M_CE</defName>
+    <label>blue laser beam (M)</label>
+    <graphicData>
+      <color>(38,102,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Blue_L_CE</defName>
+    <label>blue laser beam (L)</label>
+    <graphicData>
+      <color>(38,102,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>84</damageAmountBase>
+      <armorPenetrationBase>0.8</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_UV_S_CE</defName>
+    <label>UV laser beam (S)</label>
+    <graphicData>
+      <color>(204,76,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_UV_M_CE</defName>
+    <label>UV laser beam (M)</label>
+    <graphicData>
+      <color>(204,76,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>45</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_UV_L_CE</defName>
+    <label>UV laser beam (L)</label>
+    <graphicData>
+      <color>(204,76,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>108</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Xray_S_CE</defName>
+    <label>x-ray laser beam (S)</label>
+    <graphicData>
+      <color>(102,255,102)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <armorPenetrationBase>1.2</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Xray_M_CE</defName>
+    <label>x-ray laser beam (M)</label>
+    <graphicData>
+      <color>(102,255,102)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <armorPenetrationBase>1.2</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Xray_L_CE</defName>
+    <label>x-ray laser beam (L)</label>
+    <graphicData>
+      <color>(102,255,102)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>144</damageAmountBase>
+      <armorPenetrationBase>1.2</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Gamma_S_CE</defName>
+    <label>gamma laser beam (S)</label>
+    <graphicData>
+      <color>(255,114,38)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>31</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Gamma_M_CE</defName>
+    <label>gamma laser beam (M)</label>
+    <graphicData>
+      <color>(255,114,38)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>77</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Gamma_L_CE</defName>
+    <label>gamma laser beam (L)</label>
+    <graphicData>
+      <color>(255,114,38)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>186</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_Lances_CE</defName>
+    <label>particle lance beam</label>
+    <graphicData>
+      <color>(255,102,102)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>1050</damageAmountBase>
+      <armorPenetrationBase>15.75</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_LancesPlus_CE</defName>
+    <label>tachyon lance beam</label>
+    <graphicData>
+      <color>(38,102,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Laser</damageDef>
+      <damageAmountBase>1350</damageAmountBase>
+      <armorPenetrationBase>20.25</armorPenetrationBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_ArcEmitters_CE</defName>
+    <label>arc beam</label>
+    <graphicData>
+      <color>(38,102,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Arc</damageDef>
+      <damageAmountBase>650</damageAmountBase>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseLaserBulletTextured">
+    <defName>Bullet_GR_Laser_ArcEmittersPlus_CE</defName>
+    <label>focused arc beam</label>
+    <graphicData>
+      <color>(204,76,255)</color>
+    </graphicData>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageDef>GR_Arc</damageDef>
+      <damageAmountBase>846</damageAmountBase>
+    </projectile>
+  </ThingDef>
+
+</Defs>

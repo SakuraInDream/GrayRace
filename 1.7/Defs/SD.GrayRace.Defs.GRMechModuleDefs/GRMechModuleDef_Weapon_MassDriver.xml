@@ -53,9 +53,9 @@
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>63</GR_Alloy>
     </costList>
-    <power>-13</power>
+    <power>-30</power>
     <equipmentDef>GR_MechWeapon_MassDriver1_L</equipmentDef>
     <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
@@ -81,10 +81,11 @@
       <li>GR_MechSlot_SmallTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>15</GR_Alloy>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-7</power>
+    <equipmentDef>GR_MechWeapon_MassDriver2_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver2Base">
@@ -96,10 +97,11 @@
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>38</GR_Alloy>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-17</power>
+    <equipmentDef>GR_MechWeapon_MassDriver2_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver2Base">
@@ -111,10 +113,11 @@
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>95</GR_Alloy>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-39</power>
+    <equipmentDef>GR_MechWeapon_MassDriver2_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <!-- 轨道炮 -->
@@ -138,10 +141,11 @@
       <li>GR_MechSlot_SmallTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>23</GR_Alloy>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-10</power>
+    <equipmentDef>GR_MechWeapon_MassDriver3_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver3Base">
@@ -153,10 +157,11 @@
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>58</GR_Alloy>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-23</power>
+    <equipmentDef>GR_MechWeapon_MassDriver3_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver3Base">
@@ -168,10 +173,11 @@
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>145</GR_Alloy>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-51</power>
+    <equipmentDef>GR_MechWeapon_MassDriver3_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <!-- 先进轨道炮 -->
@@ -195,10 +201,12 @@
       <li>GR_MechSlot_SmallTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>23</GR_Alloy>
+      <Chemfuel>5</Chemfuel>
     </costList>
     <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <equipmentDef>GR_MechWeapon_MassDriver4_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver4Base">
@@ -210,10 +218,12 @@
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>58</GR_Alloy>
+      <Chemfuel>10</Chemfuel>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-30</power>
+    <equipmentDef>GR_MechWeapon_MassDriver4_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver4Base">
@@ -225,17 +235,19 @@
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>145</GR_Alloy>
+      <Chemfuel>20</Chemfuel>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-67</power>
+    <equipmentDef>GR_MechWeapon_MassDriver4_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <!-- 高斯炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver5Base" Abstract="True">
     <label>高斯炮</label>
     <description>在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。</description>
-    <iconPath>Icon/ShipParts/ship_part_mass_driver_4</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_mass_driver_5</iconPath>
     <slotFamily>MassDriver5</slotFamily>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
@@ -249,10 +261,12 @@
       <li>GR_MechSlot_SmallTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>35</GR_Alloy>
+      <Chemfuel>7</Chemfuel>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-17</power>
+    <equipmentDef>GR_MechWeapon_MassDriver5_S</equipmentDef>
+    <weaponDeploymentTicks>30</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver5Base">
@@ -261,10 +275,12 @@
       <li>GR_MechSlot_MediumTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>88</GR_Alloy>
+      <Chemfuel>15</Chemfuel>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-39</power>
+    <equipmentDef>GR_MechWeapon_MassDriver5_M</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MassDriver5Base">
@@ -273,9 +289,54 @@
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>25</GR_Alloy>
+      <GR_Alloy>220</GR_Alloy>
+      <Chemfuel>30</Chemfuel>
     </costList>
-    <power>-13</power>
-    <equipmentDef></equipmentDef>
+    <power>-88</power>
+    <equipmentDef>GR_MechWeapon_MassDriver5_L</equipmentDef>
+    <weaponDeploymentTicks>60</weaponDeploymentTicks>
   </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 兆级加农炮 -->
+  <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MegaCannonBase" Abstract="True">
+    <label>兆级加农炮</label>
+    <description>一款无比庞大的质量加速炮，只能安装在轴基武器台上。能够在极远距离射出威力惊人的炮弹。</description>
+    <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <slotFamily>MegaCannon</slotFamily>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <uiOrder>4</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MegaCannonBase">
+    <defName>GR_MechModule_MegaCannon</defName>
+    <compatibleSlots>
+      <li>GR_MechSlot_ExtraLarge</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>176</GR_Alloy>
+      <Chemfuel>52</Chemfuel>
+    </costList>
+    <power>-200</power>
+    <equipmentDef>GR_MechWeapon_MegaCannon</equipmentDef>
+    <weaponDeploymentTicks>120</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MegaCannonBase">
+    <defName>GR_MechModule_MegaCannonPlus</defName>
+    <label>千兆级加农炮</label>
+    <description>更加强大的质量加速炮，能够轻易撕毁最坚固的护盾。</description>
+    <compatibleSlots>
+      <li>GR_MechSlot_ExtraLarge</li>
+    </compatibleSlots>
+    <costList>
+      <GR_Alloy>88</GR_Alloy>
+      <Chemfuel>67</Chemfuel>
+    </costList>
+    <power>-260</power>
+    <equipmentDef>GR_MechWeapon_MegaCannonPlus</equipmentDef>
+    <weaponDeploymentTicks>180</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
 </Defs>
