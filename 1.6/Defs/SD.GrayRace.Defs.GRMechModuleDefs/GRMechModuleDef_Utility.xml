@@ -3,8 +3,8 @@
   <!-- 护盾电容 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_ShieldBooster</defName>
-    <label>护盾电容</label>
-    <description>储能电容器可用于增强舰船护盾。</description>
+    <label>Shield Capacitor</label>
+    <description>A storage capacitor that can strengthen a ship's shields.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
@@ -25,8 +25,8 @@
   <!-- 先进护盾电容 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_ShieldBooster_Advanced</defName>
-    <label>先进护盾电容</label>
-    <description>先进储能电容器可用于大幅增强舰船护盾。</description>
+    <label>Advanced Shield Capacitor</label>
+    <description>An advanced storage capacitor that can greatly strengthen a ship's shields.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
@@ -47,8 +47,8 @@
   <!-- 护盾硬化器 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_ShieldHardener</defName>
-    <label>护盾硬化器</label>
-    <description>护盾硬化器可用于增强舰船护盾的防护能力。</description>
+    <label>Shield Hardener</label>
+    <description>A shield hardener that strengthens a ship's shield protection.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
@@ -69,8 +69,8 @@
   <!-- 先进护盾硬化器 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_ShieldHardener_Advanced</defName>
-    <label>先进护盾硬化器</label>
-    <description>先进护盾硬化器可用于增强舰船护盾的防护能力。</description>
+    <label>Advanced Shield Hardener</label>
+    <description>An advanced shield hardener that strengthens a ship's shield protection.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>

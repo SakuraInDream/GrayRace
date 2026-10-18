@@ -2,8 +2,8 @@
 <Defs>
   <!-- 等离子发射器 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma1Base" Abstract="True">
-    <label>等离子发射器</label>
-    <description>可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。</description>
+    <label>Plasma Thrower</label>
+    <description>A weapon that fires devastating high-energy plasma spheres. These plasma projectiles are especially effective against the armor of large ships.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
     <slotFamily>PlasmaThrower</slotFamily>
     <researchPrerequisites>
@@ -62,8 +62,8 @@
 
   <!-- 等离子加速器 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma2Base" Abstract="True">
-    <label>等离子加速器</label>
-    <description>这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。</description>
+    <label>Plasma Accelerator</label>
+    <description>This new accelerator cannon fires high-energy plasma held by more advanced confinement fields. The technology reduces the energy lost as the plasma travels toward its target.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
     <slotFamily>PlasmaAccelerators</slotFamily>
     <researchPrerequisites>
@@ -128,8 +128,8 @@
 
   <!-- 等离子加农炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma3Base" Abstract="True">
-    <label>等离子加农炮</label>
-    <description>最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。</description>
+    <label>Plasma Cannon</label>
+    <description>The most advanced plasma weapon, this cannon is the fully militarized result of the previous plasma accelerator. Its plasma projectiles are even deadlier.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
     <slotFamily>PlasmaCannons</slotFamily>
     <researchPrerequisites>

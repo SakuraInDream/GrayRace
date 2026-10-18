@@ -1,109 +1,109 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Persona Matrix - Adjutant -->
-  <GRRecipe_Adjutant.label>TODO</GRRecipe_Adjutant.label>
+  <GRRecipe_Adjutant.label>人格矩阵 - 副官</GRRecipe_Adjutant.label>
   <!-- EN: Designed to provide tactical advice and decision-making guidance. Contains leadership protocols and basic firearms knowledge. -->
-  <GRRecipe_Adjutant.description>TODO</GRRecipe_Adjutant.description>
+  <GRRecipe_Adjutant.description>旨在提供战术建议和决策指导。包含领导协议和基础枪械知识。</GRRecipe_Adjutant.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Adjutant.jobString>TODO</GRRecipe_Adjutant.jobString>
+  <GRRecipe_Adjutant.jobString>正在执行未知配方。</GRRecipe_Adjutant.jobString>
   
   <!-- EN: Persona Matrix - Aide -->
-  <GRRecipe_Aide.label>TODO</GRRecipe_Aide.label>
+  <GRRecipe_Aide.label>人格矩阵 - 助理</GRRecipe_Aide.label>
   <!-- EN: Built primarily to assist others, this matrix's knowledge base spans nearly all known fields—pushing the storage capacity of a persona matrix to its absolute limit. -->
-  <GRRecipe_Aide.description>TODO</GRRecipe_Aide.description>
+  <GRRecipe_Aide.description>主要设计用于协助他人，其知识库几乎涵盖所有已知领域——将人格矩阵的存储容量推到了绝对极限。</GRRecipe_Aide.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Aide.jobString>TODO</GRRecipe_Aide.jobString>
+  <GRRecipe_Aide.jobString>正在执行未知配方。</GRRecipe_Aide.jobString>
   
   <!-- EN: Persona Matrix - Architect -->
-  <GRRecipe_Architect.label>TODO</GRRecipe_Architect.label>
+  <GRRecipe_Architect.label>人格矩阵 - 建筑师</GRRecipe_Architect.label>
   <!-- EN: Capable of simultaneous architectural planning and construction. Includes fundamental material science knowledge, enabling adaptation to resource-poor or exotic material environments. -->
-  <GRRecipe_Architect.description>TODO</GRRecipe_Architect.description>
+  <GRRecipe_Architect.description>能够同时进行建筑规划与施工。包含基础材料科学知识，可适应资源匮乏或特殊材料环境。</GRRecipe_Architect.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Architect.jobString>TODO</GRRecipe_Architect.jobString>
+  <GRRecipe_Architect.jobString>正在执行未知配方。</GRRecipe_Architect.jobString>
   
   <!-- EN: Persona Matrix - Artist -->
-  <GRRecipe_Artist.label>TODO</GRRecipe_Artist.label>
+  <GRRecipe_Artist.label>人格矩阵 - 艺术家</GRRecipe_Artist.label>
   <!-- EN: Designed for the mass production of artworks. Imprinted with human-defined aesthetic standards and comprehensive fabrication knowledge. -->
-  <GRRecipe_Artist.description>TODO</GRRecipe_Artist.description>
+  <GRRecipe_Artist.description>为艺术品的批量生产而设计。铭刻了人类定义的审美标准和全面的制造知识。</GRRecipe_Artist.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Artist.jobString>TODO</GRRecipe_Artist.jobString>
+  <GRRecipe_Artist.jobString>正在执行未知配方。</GRRecipe_Artist.jobString>
   
   <!-- EN: Persona Matrix - Constable -->
-  <GRRecipe_Constable.label>TODO</GRRecipe_Constable.label>
+  <GRRecipe_Constable.label>人格矩阵 - 治安官</GRRecipe_Constable.label>
   <!-- EN: Created for conflict mediation between individuals, with contingency protocols for violent scenarios. Includes friendly social interaction modules and proficiency with most melee weapons. -->
-  <GRRecipe_Constable.description>TODO</GRRecipe_Constable.description>
+  <GRRecipe_Constable.description>为调解个体间冲突而创造，并包含暴力场景的应急协议。内置友好的社交互动模块，并熟练使用大多数近战武器。</GRRecipe_Constable.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Constable.jobString>TODO</GRRecipe_Constable.jobString>
+  <GRRecipe_Constable.jobString>正在执行未知配方。</GRRecipe_Constable.jobString>
   
   <!-- EN: Persona Matrix - Farmer -->
-  <GRRecipe_Farmer.label>TODO</GRRecipe_Farmer.label>
+  <GRRecipe_Farmer.label>人格矩阵 - 农民</GRRecipe_Farmer.label>
   <!-- EN: Designed for crop cultivation and livestock management on an industrial scale. Contains comprehensive biological knowledge and environmental assessment protocols. -->
-  <GRRecipe_Farmer.description>TODO</GRRecipe_Farmer.description>
+  <GRRecipe_Farmer.description>为工业化规模的作物种植和牲畜管理而设计。包含全面的生物学知识和环境评估协议。</GRRecipe_Farmer.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Farmer.jobString>TODO</GRRecipe_Farmer.jobString>
+  <GRRecipe_Farmer.jobString>正在执行未知配方。</GRRecipe_Farmer.jobString>
   
   <!-- EN: 基础型灰裔 -->
-  <GRRecipe_GrayRace.label>TODO</GRRecipe_GrayRace.label>
+  <GRRecipe_GrayRace.label>基础型灰裔</GRRecipe_GrayRace.label>
   <!-- EN: 培育一名基础型灰裔。 -->
-  <GRRecipe_GrayRace.description>TODO</GRRecipe_GrayRace.description>
+  <GRRecipe_GrayRace.description>培育一名基础型灰裔。</GRRecipe_GrayRace.description>
   <!-- EN: 开始制造灰裔。 -->
-  <GRRecipe_GrayRace.jobString>TODO</GRRecipe_GrayRace.jobString>
+  <GRRecipe_GrayRace.jobString>开始制造灰裔。</GRRecipe_GrayRace.jobString>
   
   <!-- EN: Persona Matrix - Guard -->
-  <GRRecipe_Guard.label>TODO</GRRecipe_Guard.label>
+  <GRRecipe_Guard.label>人格矩阵 - 侍卫</GRRecipe_Guard.label>
   <!-- EN: Created for general protective duties. Excels in close-quarters combat and situational awareness, serving equally well as a social escort in formal settings. -->
-  <GRRecipe_Guard.description>TODO</GRRecipe_Guard.description>
+  <GRRecipe_Guard.description>为一般保护职责而创造。擅长近距离战斗和态势感知，在正式场合也能胜任社交护卫。</GRRecipe_Guard.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Guard.jobString>TODO</GRRecipe_Guard.jobString>
+  <GRRecipe_Guard.jobString>正在执行未知配方。</GRRecipe_Guard.jobString>
   
   <!-- EN: Persona Matrix - Maid -->
-  <GRRecipe_Maid.label>TODO</GRRecipe_Maid.label>
+  <GRRecipe_Maid.label>人格矩阵 - 女仆</GRRecipe_Maid.label>
   <!-- EN: Designed for personal attendant duties. Includes standard cleaning and culinary knowledge, along with intimate care protocols—and certain unspoken specialties. The predefined personality attributes also occupy significant matrix capacity. -->
-  <GRRecipe_Maid.description>TODO</GRRecipe_Maid.description>
+  <GRRecipe_Maid.description>为私人侍从职责而设计。包含标准清洁与烹饪知识，以及亲密护理协议——还有一些不可言说的专长。预定义的人格属性也占用了相当多的矩阵容量。</GRRecipe_Maid.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Maid.jobString>TODO</GRRecipe_Maid.jobString>
+  <GRRecipe_Maid.jobString>正在执行未知配方。</GRRecipe_Maid.jobString>
   
   <!-- EN: Persona Matrix - Medical Assistant -->
-  <GRRecipe_Medical.label>TODO</GRRecipe_Medical.label>
+  <GRRecipe_Medical.label>人格矩阵 - 医疗助手</GRRecipe_Medical.label>
   <!-- EN: Contains extensive physiological data calibrated for humans, enabling it to provide basic medical aid and emergency care. -->
-  <GRRecipe_Medical.description>TODO</GRRecipe_Medical.description>
+  <GRRecipe_Medical.description>包含针对人类校准的大量生理数据，可提供基础医疗救助和紧急护理。</GRRecipe_Medical.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Medical.jobString>TODO</GRRecipe_Medical.jobString>
+  <GRRecipe_Medical.jobString>正在执行未知配方。</GRRecipe_Medical.jobString>
   
   <!-- EN: Persona Matrix - Miner -->
-  <GRRecipe_Miner.label>TODO</GRRecipe_Miner.label>
+  <GRRecipe_Miner.label>人格矩阵 - 矿工</GRRecipe_Miner.label>
   <!-- EN: Built for large-scale mining operations. Contains both equipment operation knowledge and autonomous mining protocols for resource-scarce environments. -->
-  <GRRecipe_Miner.description>TODO</GRRecipe_Miner.description>
+  <GRRecipe_Miner.description>专为大规模采矿作业而建。包含设备操作知识和在资源匮乏环境中的自主采矿协议。</GRRecipe_Miner.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Miner.jobString>TODO</GRRecipe_Miner.jobString>
+  <GRRecipe_Miner.jobString>正在执行未知配方。</GRRecipe_Miner.jobString>
   
   <!-- EN: Persona Matrix - Research Assistant -->
-  <GRRecipe_Research.label>TODO</GRRecipe_Research.label>
+  <GRRecipe_Research.label>人格矩阵 - 科研助理</GRRecipe_Research.label>
   <!-- EN: Designed to support scientific research. Combines multidisciplinary knowledge with enhanced computational and logical reasoning capabilities. -->
-  <GRRecipe_Research.description>TODO</GRRecipe_Research.description>
+  <GRRecipe_Research.description>旨在支持科学研究。结合了多学科知识与增强的计算和逻辑推理能力。</GRRecipe_Research.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Research.jobString>TODO</GRRecipe_Research.jobString>
+  <GRRecipe_Research.jobString>正在执行未知配方。</GRRecipe_Research.jobString>
   
   <!-- EN: Persona Matrix - Soldier -->
-  <GRRecipe_Solider.label>TODO</GRRecipe_Solider.label>
+  <GRRecipe_Solider.label>人格矩阵 - 士兵</GRRecipe_Solider.label>
   <!-- EN: A persona matrix designed for rapid combat deployment. Comes pre-loaded with foundational melee skills, firearms proficiency, and weapon maintenance protocols. -->
-  <GRRecipe_Solider.description>TODO</GRRecipe_Solider.description>
+  <GRRecipe_Solider.description>专为快速战斗部署设计的人格矩阵。预载了基础近战技能、枪械操作熟练度和武器维护协议。</GRRecipe_Solider.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Solider.jobString>TODO</GRRecipe_Solider.jobString>
+  <GRRecipe_Solider.jobString>正在执行未知配方。</GRRecipe_Solider.jobString>
   
   <!-- EN: Persona Matrix - Technical Officer -->
-  <GRRecipe_Technical.label>TODO</GRRecipe_Technical.label>
+  <GRRecipe_Technical.label>人格矩阵 - 技术官</GRRecipe_Technical.label>
   <!-- EN: Optimized for coordinating production workflows. Loaded with rich theoretical knowledge and practical records, capable of independently analyzing and adjusting production strategies. -->
-  <GRRecipe_Technical.description>TODO</GRRecipe_Technical.description>
+  <GRRecipe_Technical.description>为协调生产流程而优化。载有丰富的理论知识和实践记录，能够独立分析和调整生产策略。</GRRecipe_Technical.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Technical.jobString>TODO</GRRecipe_Technical.jobString>
+  <GRRecipe_Technical.jobString>正在执行未知配方。</GRRecipe_Technical.jobString>
   
   <!-- EN: Persona Matrix - Technician -->
-  <GRRecipe_Technician.label>TODO</GRRecipe_Technician.label>
+  <GRRecipe_Technician.label>人格矩阵 - 技工</GRRecipe_Technician.label>
   <!-- EN: Designed for manual tasks in diverse environments. Loaded with multi-disciplinary mechanical operation knowledge, capable of independently completing fabrication tasks without mechanical support. -->
-  <GRRecipe_Technician.description>TODO</GRRecipe_Technician.description>
+  <GRRecipe_Technician.description>为各种环境中的体力工作而设计。载有多学科机械操作知识，无需机械辅助即可独立完成制造任务。</GRRecipe_Technician.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GRRecipe_Technician.jobString>TODO</GRRecipe_Technician.jobString>
+  <GRRecipe_Technician.jobString>正在执行未知配方。</GRRecipe_Technician.jobString>
   
 </LanguageData>

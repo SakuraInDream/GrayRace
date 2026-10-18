@@ -1,44 +1,44 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
   <!-- EN: Gray Advanced Combat Clothing -->
   <GR_AdvancedCombatClothing.label>灰裔高级战斗服装</GR_AdvancedCombatClothing.label>
   <!-- EN: Unlock Gray's advanced combat clothing -->
-  <GR_AdvancedCombatClothing.description>TODO</GR_AdvancedCombatClothing.description>
+  <GR_AdvancedCombatClothing.description>解锁灰裔高级战斗服装</GR_AdvancedCombatClothing.description>
 
   <!-- EN: Alloy Casting -->
   <GR_AlloyCasting.label>合金铸造</GR_AlloyCasting.label>
   <!-- EN: Unlocks the production of alloy. This space-age, high-quality metal offers near-perfect toughness, strength, and hardness, while also exhibiting exceptional malleability under specific conditions. -->
-  <GR_AlloyCasting.description>TODO</GR_AlloyCasting.description>
+  <GR_AlloyCasting.description>解锁合金生产。这种太空时代的高品质金属具有近乎完美的韧性、强度和硬度，同时在特定条件下也表现出极佳的延展性。</GR_AlloyCasting.description>
   <!-- EN: 先空着，傻逼泰南的科技联动显示太抽象了，后面写个说明 -->
   <GR_AlloyCasting.discoveredLetterText>合金的铸造配方在三个不同的科技研究完成时，会分别解锁三个不同的配方。</GR_AlloyCasting.discoveredLetterText>
   <!-- EN: About: Alloy production formula -->
-  <GR_AlloyCasting.discoveredLetterTitle>TODO</GR_AlloyCasting.discoveredLetterTitle>
+  <GR_AlloyCasting.discoveredLetterTitle>关于：合金生产配方</GR_AlloyCasting.discoveredLetterTitle>
 
   <!-- EN: Alloy process optimization -->
   <GR_AlloyProcessOptimization.label>合金工艺优化</GR_AlloyProcessOptimization.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_AlloyProcessOptimization.description>TODO</GR_AlloyProcessOptimization.description>
+  <GR_AlloyProcessOptimization.description>解锁更高效的合金铸造配方。</GR_AlloyProcessOptimization.description>
 
   <!-- EN: Gray Basic Clothing -->
   <GR_BasicClothing.label>灰裔基础服装</GR_BasicClothing.label>
   <!-- EN: Unlock Gray's basic clothing -->
-  <GR_BasicClothing.description>TODO</GR_BasicClothing.description>
+  <GR_BasicClothing.description>解锁灰裔基础服装</GR_BasicClothing.description>
 
   <!-- EN: Gray Combat Clothing -->
   <GR_CombatClothing.label>灰裔战斗服装</GR_CombatClothing.label>
   <!-- EN: Unlock Gray's combat clothing -->
-  <GR_CombatClothing.description>TODO</GR_CombatClothing.description>
+  <GR_CombatClothing.description>解锁灰裔战斗服装</GR_CombatClothing.description>
 
   <!-- EN: Cosmogenesis -->
   <GR_Cosmogenesis.label>宇宙创生</GR_Cosmogenesis.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_Cosmogenesis.description>TODO</GR_Cosmogenesis.description>
+  <GR_Cosmogenesis.description>解锁更高效的合金铸造配方。</GR_Cosmogenesis.description>
 
   <!-- EN: Decorative Clothing -->
   <GR_DecorativeClothing.label>灰裔装饰服装</GR_DecorativeClothing.label>
   <!-- EN: Unlock decorative clothing, which can enhance the appearance of characters. -->
-  <GR_DecorativeClothing.description>TODO</GR_DecorativeClothing.description>
+  <GR_DecorativeClothing.description>解锁装饰性服装，可提升角色外观。</GR_DecorativeClothing.description>
 
   <!-- EN: Energy Weapon -->
   <GR_EnergyWeapon.label>能量武器</GR_EnergyWeapon.label>
@@ -48,17 +48,17 @@
   <!-- EN: Fusion Reactor -->
   <GR_FusionReactor.label>聚变反应堆</GR_FusionReactor.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_FusionReactor.description>TODO</GR_FusionReactor.description>
+  <GR_FusionReactor.description>解锁更高效的合金铸造配方。</GR_FusionReactor.description>
 
   <!-- EN: Nanite Transmuter -->
   <GR_NaniteTransmuter.label>纳米变形器</GR_NaniteTransmuter.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_NaniteTransmuter.description>TODO</GR_NaniteTransmuter.description>
+  <GR_NaniteTransmuter.description>解锁更高效的合金铸造配方。</GR_NaniteTransmuter.description>
 
   <!-- EN: Gray Professional Clothing -->
   <GR_ProfessionalClothing.label>灰裔特殊服装</GR_ProfessionalClothing.label>
   <!-- EN: Unlock Gray's Professional clothing -->
-  <GR_ProfessionalClothing.description>TODO</GR_ProfessionalClothing.description>
+  <GR_ProfessionalClothing.description>解锁灰裔专业服装</GR_ProfessionalClothing.description>
 
   <!-- EN: Railgun -->
   <GR_Railgun.label>磁轨武器</GR_Railgun.label>
@@ -68,76 +68,76 @@
   <!-- EN: Science Nexus -->
   <GR_ScienceNexus.label>科研枢纽</GR_ScienceNexus.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_ScienceNexus.description>TODO</GR_ScienceNexus.description>
+  <GR_ScienceNexus.description>解锁更高效的合金铸造配方。</GR_ScienceNexus.description>
 
   <!-- EN: T1 Mech Tech -->
   <GR_T1MechTech.label>T1机械科技</GR_T1MechTech.label>
   <!-- EN: Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns. -->
-  <GR_T1MechTech.description>TODO</GR_T1MechTech.description>
+  <GR_T1MechTech.description>解锁一级武器，通常包括步枪和霰弹枪。</GR_T1MechTech.description>
 
   <!-- EN: T1 Upgrades -->
   <GR_T1Upgrades.label>T1升级</GR_T1Upgrades.label>
   <!-- EN: Unlock T1 upgrades, which provide basic enhancements to your gray race. -->
-  <GR_T1Upgrades.description>TODO</GR_T1Upgrades.description>
+  <GR_T1Upgrades.description>解锁 T1 升级，为你的灰裔提供基础强化。</GR_T1Upgrades.description>
 
   <!-- EN: T1 Weapon Tech -->
   <GR_T1WeaponTech.label>T1武器科技</GR_T1WeaponTech.label>
   <!-- EN: Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns. -->
-  <GR_T1WeaponTech.description>TODO</GR_T1WeaponTech.description>
+  <GR_T1WeaponTech.description>解锁一级武器，通常包括步枪和霰弹枪。</GR_T1WeaponTech.description>
 
   <!-- EN: T2 Mech Tech -->
   <GR_T2MechTech.label>T2机械科技</GR_T2MechTech.label>
   <!-- EN: Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns. -->
-  <GR_T2MechTech.description>TODO</GR_T2MechTech.description>
+  <GR_T2MechTech.description>解锁二级武器，通常包括狙击步枪和机枪。</GR_T2MechTech.description>
 
   <!-- EN: T2 Upgrades -->
   <GR_T2Upgrades.label>T2升级</GR_T2Upgrades.label>
   <!-- EN: Unlock T2 upgrades, which provide normal enhancements to your gray race. -->
-  <GR_T2Upgrades.description>TODO</GR_T2Upgrades.description>
+  <GR_T2Upgrades.description>解锁 T2 升级，为你的灰裔提供常规强化。</GR_T2Upgrades.description>
 
   <!-- EN: T2 Weapon Tech -->
   <GR_T2WeaponTech.label>T2武器科技</GR_T2WeaponTech.label>
   <!-- EN: Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns. -->
-  <GR_T2WeaponTech.description>TODO</GR_T2WeaponTech.description>
+  <GR_T2WeaponTech.description>解锁二级武器，通常包括狙击步枪和机枪。</GR_T2WeaponTech.description>
 
   <!-- EN: T3 Mech Tech -->
   <GR_T3MechTech.label>T3机械科技</GR_T3MechTech.label>
   <!-- EN: Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance. -->
-  <GR_T3MechTech.description>TODO</GR_T3MechTech.description>
+  <GR_T3MechTech.description>解锁三级武器。这些武器通常归类为重火力。</GR_T3MechTech.description>
 
   <!-- EN: T3 Upgrades -->
   <GR_T3Upgrades.label>T3升级</GR_T3Upgrades.label>
   <!-- EN: Unlock T3 upgrades, which provide advanced enhancements to your gray race. -->
-  <GR_T3Upgrades.description>TODO</GR_T3Upgrades.description>
+  <GR_T3Upgrades.description>解锁 T3 升级，为你的灰裔提供高级强化。</GR_T3Upgrades.description>
 
   <!-- EN: T3 Weapon Tech -->
   <GR_T3WeaponTech.label>T3武器科技</GR_T3WeaponTech.label>
   <!-- EN: Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance. -->
-  <GR_T3WeaponTech.description>TODO</GR_T3WeaponTech.description>
+  <GR_T3WeaponTech.description>解锁三级武器。这些武器通常归类为重火力。</GR_T3WeaponTech.description>
 
   <!-- EN: T4 Mech Tech -->
   <GR_T4MechTech.label>T4机械科技</GR_T4MechTech.label>
   <!-- EN: Unlocks Tier 4 weaponry. These weapons are generally classified as heavy ordnance. -->
-  <GR_T4MechTech.description>TODO</GR_T4MechTech.description>
+  <GR_T4MechTech.description>解锁四级武器。这些武器通常归类为重火力。</GR_T4MechTech.description>
 
   <!-- EN: T4 Upgrades -->
   <GR_T4Upgrades.label>T4升级</GR_T4Upgrades.label>
   <!-- EN: Unlock T4 upgrades, which provide ultimate enhancements to your gray race. -->
-  <GR_T4Upgrades.description>TODO</GR_T4Upgrades.description>
+  <GR_T4Upgrades.description>解锁 T4 升级，为你的灰裔提供终极强化。</GR_T4Upgrades.description>
 
   <!-- EN: T5 Mech Tech -->
   <GR_T5MechTech.label>T5机械科技</GR_T5MechTech.label>
   <!-- EN: The technology needed for your mechanitor to create and control high-tier mechanoids.\n\nYou can get powerfocus chips by using a mechanitor to summon a war queen threat. -->
-  <GR_T5MechTech.description>TODO</GR_T5MechTech.description>
+  <GR_T5MechTech.description>机械师制造和控制高阶机械体所需的技术。\n\n你可以让机械师召唤战争女王威胁，以获得能量聚焦芯片。</GR_T5MechTech.description>
 
   <!-- EN: T6 Mech Tech -->
   <GR_T6MechTech.label>T6机械科技</GR_T6MechTech.label>
   <!-- EN: The advanced technology needed for your mechanitor to create and control ultra-tier mechanoids, including large mechs and ultra-tier mechanitor gear.\n\nYou can get nano structuring chips by using a mechanitor to summon an apocriton threat. -->
-  <GR_T6MechTech.description>TODO</GR_T6MechTech.description>
+  <GR_T6MechTech.description>机械师制造和控制超阶机械体（包括大型机械体和超阶机械师装备）所需的先进技术。\n\n你可以让机械师召唤启示者威胁，以获得纳米结构芯片。</GR_T6MechTech.description>
 
   <!-- EN: Zro -->
   <GR_Zro.label>泽珞</GR_Zro.label>
   <!-- EN: Unlock zro,this is a substance that can greatly enhance spiritual abilities. -->
-  <GR_Zro.description>TODO</GR_Zro.description>
+  <GR_Zro.description>解锁泽珞。这是一种能极大增强灵能能力的物质。</GR_Zro.description>
 
 </LanguageData>

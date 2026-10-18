@@ -30,8 +30,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
     <defName>GR_BB_Bow_L1M1S2</defName>
-    <label>齐射舰艏</label>
-    <description>从Stellaris那复制过来的BATTLESHIP_BOW_L1M1S2。</description>
+    <label>Salvo Bow</label>
+    <description>Copied from Stellaris BATTLESHIP_BOW_L1M1S2.</description>
     <uiOrder>0</uiOrder>
     <slots>
       <li>
@@ -63,9 +63,9 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
     <defName>GR_BB_Bow_L2</defName>
-    <label>巨炮舰艏</label>
+    <label>Artillery Bow</label>
     <uiOrder>1</uiOrder>
-    <description>从Stellaris那复制过来的BATTLESHIP_BOW_L2。</description>
+    <description>Copied from Stellaris BATTLESHIP_BOW_L2.</description>
     <slots>
       <li>
         <key>LARGE_GUN_01</key>
@@ -84,8 +84,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
     <defName>GR_BB_Bow_M1S2SHB</defName>
-    <label>格纳库舰艏</label>
-    <description>从Stellaris那复制过来的BATTLESHIP_BOW_M1S2SHB.</description>
+    <label>Hangar Bow</label>
+    <description>Copied from Stellaris BATTLESHIP_BOW_M1S2SHB.</description>
     <uiOrder>2</uiOrder>
     <slots>
       <li>
@@ -116,8 +116,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_BowBase">
     <defName>GR_BB_Bow_M2S4</defName>
-    <label>脊峰舰艏</label>
-    <description>从Stellaris那复制过来的BATTLESHIP_BOW_M2S4</description>
+    <label>Spinal Bow</label>
+    <description>Copied from Stellaris BATTLESHIP_BOW_M2S4.</description>
     <uiOrder>3</uiOrder>
     <slots>
       <li>

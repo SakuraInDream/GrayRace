@@ -13,7 +13,7 @@
     <isPlayer>true</isPlayer>
     <basicMemberKind>GR_colonist</basicMemberKind>
     <pawnSingular>gray colonist</pawnSingular>
-    <pawnsPlural>kiiro colonists</pawnsPlural>
+    <pawnsPlural>gray colonists</pawnsPlural>
     <techLevel>Ultra</techLevel>
     <melaninRange>0</melaninRange>
     <allowedCultures>

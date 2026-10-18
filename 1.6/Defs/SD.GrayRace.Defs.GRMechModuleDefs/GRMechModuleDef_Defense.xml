@@ -4,8 +4,8 @@
 
   <!-- 纳米装甲 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor1Base" Abstract="True">
-    <label>纳米装甲</label>
-    <description>加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。</description>
+    <label>Nanite Armor</label>
+    <description>Reinforced nanite armor provides an additional layer of protection. In combat, that layer may be the difference between life and death.</description>
     <iconPath>Icon/ShipParts/ship_part_armor_1</iconPath>
     <slotFamily>Armor_1</slotFamily>
     <researchPrerequisites>
@@ -76,8 +76,8 @@
 
   <!-- 瓷金装甲 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor2Base" Abstract="True">
-    <label>瓷金装甲</label>
-    <description>不同金属和陶瓷的结合物，坚硬而又不失柔韧性。</description>
+    <label>Ceramo-Metal Armor</label>
+    <description>A composite of various metals and ceramics: hard yet still flexible.</description>
     <iconPath>Icon/ShipParts/ship_part_armor_2</iconPath>
     <slotFamily>Armor_2</slotFamily>
     <researchPrerequisites>
@@ -145,8 +145,8 @@
 
   <!-- 塑钢装甲 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor3Base" Abstract="True">
-    <label>塑钢装甲</label>
-    <description>塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。</description>
+    <label>Plasteel Armor</label>
+    <description>Plasteel is a composite of various plastics and metals, tough and elastic. It strengthens the hull and is cheap to produce.</description>
     <iconPath>Icon/ShipParts/ship_part_armor_3</iconPath>
     <slotFamily>Armor_3</slotFamily>
     <researchPrerequisites>
@@ -214,8 +214,8 @@
 
   <!-- 耐钢装甲 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor4Base" Abstract="True">
-    <label>耐钢装甲</label>
-    <description>此种材料质地强韧、耐冲击，是合适的舰体材料。</description>
+    <label>Durasteel Armor</label>
+    <description>This material is tough and impact-resistant, making it a suitable hull material.</description>
     <iconPath>Icon/ShipParts/ship_part_armor_4</iconPath>
     <slotFamily>Armor_4</slotFamily>
     <researchPrerequisites>
@@ -283,8 +283,8 @@
 
   <!-- 零素装甲 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor5Base" Abstract="True">
-    <label>零素装甲</label>
-    <description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</description>
+    <label>Null-Element Armor</label>
+    <description>Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower.</description>
     <iconPath>Icon/ShipParts/ship_part_armor_5</iconPath>
     <slotFamily>Armor_5</slotFamily>
     <researchPrerequisites>
@@ -343,8 +343,8 @@
 
   <!-- 龙鳞装甲 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor6Base" Abstract="True">
-    <label>龙鳞装甲</label>
-    <description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</description>
+    <label>Dragonscale Armor</label>
+    <description>Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower.</description>
     <iconPath>Icon/ShipParts/ship_part_armor_5</iconPath>
     <slotFamily>Armor_6</slotFamily>
     <researchPrerequisites>
@@ -404,8 +404,8 @@
 
   <!-- 偏射盾 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Shield1Base" Abstract="True">
-    <label>偏射盾</label>
-    <description>能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。</description>
+    <label>Deflector Shield</label>
+    <description>An energy deflection barrier that negates a certain amount of enemy fire before overloading. Its main drawback is high energy consumption.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_1</iconPath>
     <slotFamily>Shield_1</slotFamily>
     <researchPrerequisites>
@@ -470,8 +470,8 @@
 
   <!-- 改良偏射盾 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Shield2Base" Abstract="True">
-    <label>改良偏射盾</label>
-    <description>升级能量偏射屏障，在过载前化解更多火力。</description>
+    <label>Improved Deflector Shield</label>
+    <description>An upgraded energy deflection barrier that negates more fire before overloading.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_2</iconPath>
     <slotFamily>Shield_2</slotFamily>
     <researchPrerequisites>
@@ -536,8 +536,8 @@
 
   <!-- 护盾 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Shield3Base" Abstract="True">
-    <label>护盾</label>
-    <description>新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。</description>
+    <label>Shield</label>
+    <description>A new-generation shield generator that replaces older energy deflectors and provides superior protection.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_3</iconPath>
     <slotFamily>Shield_3</slotFamily>
     <researchPrerequisites>
@@ -602,8 +602,8 @@
 
   <!-- 先进护盾 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Shield4Base" Abstract="True">
-    <label>先进护盾</label>
-    <description>升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。</description>
+    <label>Advanced Shield</label>
+    <description>An upgraded shield generator that creates a stronger energy field. Only sustained fire can break through this barrier.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_4</iconPath>
     <slotFamily>Shield_4</slotFamily>
     <researchPrerequisites>
@@ -671,8 +671,8 @@
 
   <!-- 超级护盾 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Shield5Base" Abstract="True">
-    <label>超级护盾</label>
-    <description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</description>
+    <label>Super Shield</label>
+    <description>These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_5</iconPath>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
@@ -731,8 +731,8 @@
 
   <!-- 暗物质护盾 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Shield6Base" Abstract="True">
-    <label>暗物质护盾</label>
-    <description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</description>
+    <label>Dark Matter Shield</label>
+    <description>These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_5</iconPath>
     <researchPrerequisites>
       <li>GR_T6MechTech</li>

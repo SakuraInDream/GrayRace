@@ -179,7 +179,7 @@
       </li>
       <!-- 产物自动输出格：相对建筑中心的固定偏移。 -->
       <li Class="SD.GrayRace.DefModExtensions.DefModExtension_NaniteTransmuterOutput">
-        <outputOffset>(0,-2,-3)</outputOffset>
+        <outputOffset>(0,-2,-5)</outputOffset>
       </li>
     </modExtensions>
   </ThingDef>

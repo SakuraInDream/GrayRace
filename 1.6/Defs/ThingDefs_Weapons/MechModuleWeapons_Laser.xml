@@ -21,8 +21,8 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Infrared</defName>
-    <label>小型红色激光</label>
-    <description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</description>
+    <label>Small Red Laser</label>
+    <description>Laser weapons fire focused beams at targets, damaging enemies with intense heat.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
     </graphicData>
@@ -47,7 +47,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Infrared_M</defName>
-    <label>中型红色激光</label>
+    <label>Medium Red Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
     </graphicData>
@@ -73,7 +73,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Infrared_L</defName>
-    <label>大型红色激光</label>
+    <label>Large Red Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
     </graphicData>
@@ -99,8 +99,8 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Blue</defName>
-    <label>小型蓝色激光</label>
-    <description>比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。</description>
+    <label>Small Blue Laser</label>
+    <description>More powerful than red lasers. To organic beings, electromagnetic radiation of this wavelength appears blue or violet.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
     </graphicData>
@@ -125,7 +125,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Blue_M</defName>
-    <label>中型蓝色激光</label>
+    <label>Medium Blue Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
     </graphicData>
@@ -156,7 +156,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Blue_L</defName>
-    <label>大型蓝色激光</label>
+    <label>Large Blue Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
     </graphicData>
@@ -182,8 +182,8 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_UV</defName>
-    <label>小型紫外激光</label>
-    <description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</description>
+    <label>Small Ultraviolet Laser</label>
+    <description>Ultraviolet lasers are an upgraded, enhanced version of the preceding blue lasers. These weapons are precise and devastating, capable of inflicting massive damage.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
     </graphicData>
@@ -208,7 +208,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_UV_M</defName>
-    <label>中型紫外激光</label>
+    <label>Medium Ultraviolet Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
     </graphicData>
@@ -234,7 +234,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_UV_L</defName>
-    <label>大型紫外激光</label>
+    <label>Large Ultraviolet Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
     </graphicData>
@@ -260,8 +260,8 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_XRay</defName>
-    <label>小型X射线激光</label>
-    <description>这种激光的波长较紫外线短一些，但是更具毁灭性。</description>
+    <label>Small X-Ray Laser</label>
+    <description>This laser has a shorter wavelength than ultraviolet light, but is even more destructive.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
     </graphicData>
@@ -286,7 +286,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_XRay_M</defName>
-    <label>中型X射线激光</label>
+    <label>Medium X-Ray Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
     </graphicData>
@@ -312,7 +312,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_XRay_L</defName>
-    <label>大型X射线激光</label>
+    <label>Large X-Ray Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
     </graphicData>
@@ -338,8 +338,8 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Gamma</defName>
-    <label>小型伽马激光</label>
-    <description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</description>
+    <label>Small Gamma Laser</label>
+    <description>Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
     </graphicData>
@@ -363,7 +363,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Gamma_M</defName>
-    <label>中型伽马激光</label>
+    <label>Medium Gamma Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_M</texPath>
     </graphicData>
@@ -388,7 +388,7 @@
 
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_PulseLaser_Gamma_L</defName>
-    <label>大型伽马激光</label>
+    <label>Large Gamma Laser</label>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
     </graphicData>
@@ -426,7 +426,7 @@
 
   <!-- 每种颜色使用独立抽象模板，S/M/L 只配置对应 Mote。 -->
   <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_Infrared" Abstract="True">
-    <label>红色激光</label>
+    <label>Red Laser</label>
     <projectile>
       <damageAmountBase>11</damageAmountBase>
     </projectile>
@@ -454,7 +454,7 @@
   </ThingDef>
 
   <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_Blue" Abstract="True">
-    <label>蓝色激光</label>
+    <label>Blue Laser</label>
     <projectile>
       <damageAmountBase>14</damageAmountBase>
       <armorPenetrationBase>0.65</armorPenetrationBase>
@@ -483,7 +483,7 @@
   </ThingDef>
 
   <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_UV" Abstract="True">
-    <label>紫外激光</label>
+    <label>Ultraviolet Laser</label>
     <projectile>
       <damageAmountBase>18</damageAmountBase>
       <armorPenetrationBase>0.8</armorPenetrationBase>
@@ -512,7 +512,7 @@
   </ThingDef>
 
   <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_Xray" Abstract="True">
-    <label>X射线激光</label>
+    <label>X-Ray Laser</label>
     <projectile>
       <damageAmountBase>24</damageAmountBase>
       <armorPenetrationBase>0.8</armorPenetrationBase>
@@ -541,7 +541,7 @@
   </ThingDef>
 
   <ThingDef ParentName="Bullet_GR_LaserBase" Name="Bullet_GR_Laser_Gamma" Abstract="True">
-    <label>伽马激光</label>
+    <label>Gamma Laser</label>
     <projectile>
       <damageAmountBase>31</damageAmountBase>
       <armorPenetrationBase>0.8</armorPenetrationBase>
@@ -572,8 +572,8 @@
   <!--光矛-->
   <ThingDef ParentName="GR_MechWeapon_PulseLaserBase">
     <defName>GR_MechWeapon_Lances</defName>
-    <label>粒子光矛</label>
-    <description>这些重型能量武器能够发射聚焦的粒子射线并造成巨幅伤害。发射阵列的规模限制了它们只能运用在战列舰和泰坦上。</description>
+    <label>Particle Lance</label>
+    <description>These heavy energy weapons fire focused particle beams and deal enormous damage. The size of their emitter arrays limits them to battleships and titans.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
     </graphicData>
@@ -604,7 +604,7 @@
 
    <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_Laser_Lances</defName>
-    <label>粒子光矛</label>
+    <label>Particle Lance</label>
     <projectile>
       <damageAmountBase>1050</damageAmountBase>
       <armorPenetrationBase>15.75</armorPenetrationBase>
@@ -614,8 +614,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Lances_Plus</defName>
-    <label>快子光矛</label>
-    <description>粒子光矛更为强力的版本，该武器发射携带有巨大能量的快子光束。和它的之前版本一样，只能运用在战列舰和泰坦上。</description>
+    <label>Tachyon Lance</label>
+    <description>A more powerful version of the particle lance, firing a tachyon beam that carries immense energy. Like its predecessor, it can only be mounted on battleships and titans.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
@@ -649,7 +649,7 @@
 
   <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_Laser_LancesPlus</defName>
-    <label>快子光矛</label>
+    <label>Tachyon Lance</label>
     <projectile>
       <damageAmountBase>1350</damageAmountBase>
       <armorPenetrationBase>20.25</armorPenetrationBase>
@@ -660,8 +660,8 @@
   <!--电弧-->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_ArcEmitters</defName>
-    <label>电弧发射器</label>
-    <description>向目标发射混乱能量的电弧，可以无视装甲和护盾的强大武器。</description>
+    <label>Arc Emitter</label>
+    <description>Fires an arc of chaotic energy at the target—a powerful weapon that ignores armor and shields.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_S</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -693,7 +693,7 @@
 
    <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_Laser_ArcEmitters</defName>
-    <label>电弧</label>
+    <label>Arc</label>
     <projectile>
       <damageDef>GR_Arc</damageDef>
       <damageAmountBase>650</damageAmountBase>
@@ -703,8 +703,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_ArcEmittersPlus</defName>
-    <label>聚能电弧发射器</label>
-    <description>这些升级后的发射器装备了更优秀的聚焦透镜，这使得它们可以发射出更加强大的能量。</description>
+    <label>Concentrated Arc Emitter</label>
+    <description>These upgraded emitters are equipped with superior focusing lenses, allowing them to discharge even greater energy.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
@@ -738,7 +738,7 @@
 
   <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_Laser_ArcEmittersPlus</defName>
-    <label>聚能电弧</label>
+    <label>Concentrated Arc</label>
     <projectile>
       <damageDef>GR_Arc</damageDef>
       <damageAmountBase>846</damageAmountBase>
@@ -749,8 +749,8 @@
   <!--T槽炼狱射线-->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_TitanLance</defName>
-    <label>炼狱射线</label>
-    <description>一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。</description>
+    <label>Perdition Beam</label>
+    <description>A massive array of series-linked energy amplification conduits capable of firing a beam of unprecedented power. Its size means only Titan-class starships can mount it.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>
@@ -806,8 +806,8 @@
   <!--远古湮灭眩光-->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_AncientTitanLance</defName>
-    <label>远古湮灭眩光</label>
-    <description>高强度中射程火力将会让我们的泰坦舰更加轻易地突破敌人的战线。这些远古的火炮曾是一个星海帝国建立的根基。</description>
+    <label>Ancient Ruination Glare</label>
+    <description>High-intensity, medium-range firepower will let our titans break enemy lines far more easily. These ancient cannons were once the foundation of a stellar empire.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>

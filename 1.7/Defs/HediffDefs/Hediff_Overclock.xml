@@ -9,8 +9,8 @@
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
     <defName>GR_Overclock_Arm</defName>
-    <label>手臂超频</label>
-    <description>加速能量消耗对部位进行效率超频。</description>
+    <label>Arm Overclock</label>
+    <description>Accelerates energy consumption to overclock the efficiency of a body part.</description>
     <!-- 范围 0% 到 100% -->
     <efficiencyRange>0~1</efficiencyRange>
     <!-- 基础能量消耗 -->
@@ -19,24 +19,24 @@
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
     <defName>GR_Overclock_Leg</defName>
-    <label>腿部超频</label>
-    <description>加速能量消耗对部位进行效率超频。</description>
+    <label>Leg Overclock</label>
+    <description>Accelerates energy consumption to overclock the efficiency of a body part.</description>
     <efficiencyRange>0~1</efficiencyRange>
     <baseEnergyDrain>1.0</baseEnergyDrain>
   </SD.GrayRace.Hediffs.HediffDef_Overclock>
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
     <defName>GR_Overclock_Eye</defName>
-    <label>眼部超频</label>
-    <description>加速能量消耗对部位进行效率超频。</description>
+    <label>Eye Overclock</label>
+    <description>Accelerates energy consumption to overclock the efficiency of a body part.</description>
     <efficiencyRange>0~1</efficiencyRange>
     <baseEnergyDrain>1.0</baseEnergyDrain>
   </SD.GrayRace.Hediffs.HediffDef_Overclock>
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
     <defName>GR_Overclock_Heart</defName>
-    <label>核心超频</label>
-    <description>大幅提升血液循环效率。</description>
+    <label>Core Overclock</label>
+    <description>Greatly improves blood circulation efficiency.</description>
 
     <capacityToBoost>BloodPumping</capacityToBoost>
     <capacityRange>0~1</capacityRange>
@@ -45,8 +45,8 @@
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
     <defName>GR_Overclock_Ear</defName>
-    <label>听觉超频</label>
-    <description>大幅提升听力效率。</description>
+    <label>Hearing Overclock</label>
+    <description>Greatly improves hearing efficiency.</description>
 
     <capacityToBoost>Hearing</capacityToBoost>
     <capacityRange>0~1</capacityRange>
@@ -55,8 +55,8 @@
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
     <defName>GR_Overclock_Brain</defName>
-    <label>人格核心超频</label>
-    <description>提升意识水平。</description>
+    <label>Persona Core Overclock</label>
+    <description>Improves consciousness.</description>
     <!-- 这个玩意是仿原版的 capMods 实现，只不过只影响一个 capacity -->
     <!-- 用法是直接指定 PawnCapacityDef -->
     <!-- 这里直接写 <efficiencyRange>0~0.5</efficiencyRange> 也行，不要同时使用，二选一 -->

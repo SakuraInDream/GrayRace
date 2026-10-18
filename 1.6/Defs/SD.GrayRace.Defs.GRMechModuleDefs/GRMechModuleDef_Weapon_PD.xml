@@ -3,8 +3,8 @@
   <!-- 点防御 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_PDArray1</defName>
-    <label>哨兵点防御</label>
-    <description>对于那些又大又笨重的军用舰船来说，在船体上安装反导弹和反攻击机的装置是很有必要的。</description>
+    <label>Sentinel Point Defense</label>
+    <description>For large, cumbersome warships, mounting anti-missile and anti-strike-craft defenses on the hull is essential.</description>
     <iconPath>Icon/ShipParts/ship_part_point_defense_1</iconPath>
     <upgradesTo>
       <li>GR_MechModule_PDArray2</li>
@@ -26,8 +26,8 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_PDArray2</defName>
-    <label>屏障点防御</label>
-    <description>升级后的弹道预测算法可以提升追踪和点防御的效能。</description>
+    <label>Barrier Point Defense</label>
+    <description>Upgraded ballistic prediction algorithms improve tracking and point-defense effectiveness.</description>
     <iconPath>Icon/ShipParts/ship_part_point_defense_2</iconPath>
     <upgradesTo>
       <li>GR_MechModule_PDArray3</li>
@@ -50,8 +50,8 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_PDArray3</defName>
-    <label>守护者点防御</label>
-    <description>种类丰富的弹药能够显著提升拦截威胁的能力。</description>
+    <label>Guardian Point Defense</label>
+    <description>A diverse ammunition load significantly improves the ability to intercept threats.</description>
     <iconPath>Icon/ShipParts/ship_part_point_defense_3</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_PointDefenseTurret</li>

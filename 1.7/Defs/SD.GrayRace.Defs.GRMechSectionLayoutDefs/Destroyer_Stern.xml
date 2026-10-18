@@ -20,8 +20,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_SternBase">
     <defName>GR_Destroyer_STERN_PD2</defName>
-    <label>哨卫舰艉</label>
-    <description>从Stellaris那复制的DESTROYER_STERN_PD2。</description>
+    <label>Sentinel Stern</label>
+    <description>Copied from Stellaris DESTROYER_STERN_PD2.</description>
     <uiOrder>0</uiOrder>
     <slots>
       <li>
@@ -41,8 +41,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_SternBase">
     <defName>GR_Destroyer_STERN_S2</defName>
-    <label>拦截者舰艉</label>
-    <description>从Stellaris那复制的DESTROYER_STERN_S2。</description>
+    <label>Interceptor Stern</label>
+    <description>Copied from Stellaris DESTROYER_STERN_S2.</description>
     <uiOrder>1</uiOrder>
     <slots>
       <li>
@@ -67,8 +67,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_SternBase">
     <defName>GR_Destroyer_STERN_M1</defName>
-    <label>炮艇舰艉</label>
-    <description>从Stellaris那复制的DESTROYER_STERN_M1。</description>
+    <label>Gunship Stern</label>
+    <description>Copied from Stellaris DESTROYER_STERN_M1.</description>
     <uiOrder>2</uiOrder>
     <slots>
       <li>

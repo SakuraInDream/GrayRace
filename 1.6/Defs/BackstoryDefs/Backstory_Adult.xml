@@ -88,9 +88,9 @@
     <defName>GR_Quartermaster</defName>
     <title>Gray Quartermaster</title>
     <titleShort>Quartermaster</titleShort>
-    <description>{PAWN_nameDef} 曾被誉为士兵的守护天使，作为太阳III空间站上最优秀的军需物资官，她把数字与数据化作帝国的血液，泵向最遥远的前线。
-直到有一天，她发现自己精心规划的补给被上司贪污大半，士兵们因缺乏药品与食物而死去。她选择举报，却最终被发配到先遣队，成为无名的拓荒者。
-天使从此被囚禁与大地。</description>
+    <description>Once hailed as the guardian angel of soldiers, {PAWN_nameDef} was the finest quartermaster on Sol III Station. She turned numbers and data into the Empire's lifeblood, pumping it to the most distant front lines.
+Then one day she discovered that most of the supplies she had carefully planned had been embezzled by her superiors, and soldiers were dying for lack of medicine and food. She reported it—and was exiled to the Advance Team, becoming a nameless pioneer.
+The angel was imprisoned on the ground forever after.</description>
     <skillGains>
       <Intellectual>6</Intellectual>
       <Crafting>3</Crafting>
@@ -108,9 +108,9 @@
     <defName>GR_Adjutant</defName>
     <title>Gray Adjutant</title>
     <titleShort>Adjutant</titleShort>
-    <description>{PAWN_nameDef} 曾是帝国第一远征军旗舰「伊丽莎白女王号」的指挥官副官。她以能比舰载电脑更快判断出炮弹预着点而深受信赖。
-直到某次远征时偶遇了肃正协议。她与指挥官率舰奋战，却终究不敌。好在最后关头，舰队借助虫洞突围成功，但 {PAWN_nameDef} 却未能随舰逃出。
-她的最后一次目击记录，停留在了帝国边缘的边缘星区。</description>
+    <description>{PAWN_nameDef} once served as the adjutant to the commander of the Empire's First Expeditionary Fleet flagship, Queen Elizabeth. She was trusted for calculating shell impact points faster than the shipboard computer.
+Then, on an expedition, she encountered the Correction Protocol. She and the commander fought with the fleet, but were ultimately defeated. At the last moment the fleet escaped through a wormhole, yet {PAWN_nameDef} failed to get out with them.
+Her last sighting remains at the very edge of the Empire's frontier sectors.</description>
     <skillGains>
       <Intellectual>3</Intellectual>
       <Crafting>3</Crafting>
@@ -129,7 +129,7 @@
     <defName>GR_Artist</defName>
     <title>Gray Artist</title>
     <titleShort>Artist</titleShort>
-    <description>{PAWN_nameDef}是一位独立艺术家，在星球轨道上有着自己的艺术馆轨道站。她用定制化的升级工具塑造雕像，或是用昂贵又稀有的颜料绘制独一无二的作品。对她而言，将灵感作成现实的过程无比美妙，但在作品完成之后则又会回归无趣之中。艺术馆总能引来无数的“上层人士”观赏她的作品，但她从不将目光落在已经完成的那些上。在穷尽了所有的灵感之后，她抛下了自己的一切，将自己置于寰宇之间，只为拓展艺术的边界。</description>
+    <description>{PAWN_nameDef} is an independent artist who owns an orbital art gallery station. She shapes sculptures with custom upgrade tools, or paints one-of-a-kind works with expensive, rare pigments. To her, the process of turning inspiration into reality is incomparably beautiful—but once a work is finished, it becomes dull again. The gallery always draws countless 'upper-class' visitors to admire her works, yet she never looks at the finished pieces. After exhausting all her inspiration, she abandoned everything she had and cast herself into the void, simply to expand the boundaries of art.</description>
     <forcedTraits>
       <TorturedArtist>0</TorturedArtist>
     </forcedTraits>
@@ -148,9 +148,9 @@
     <defName>GR_Researcher</defName>
     <title>Gray Research Supervisor </title>
     <titleShort>Research Supervisor</titleShort>
-    <description>{PAWN_nameDef}是科研星球上一个科研实验室的科研主管，负责主导研究新式武装的工作。
-对于喜欢用自己的身体去测试武器的威力的她来说——麻痹的四肢也好、抽搐的反应也罢，这种切身体验自己的造物所带来疼痛让其感到自身的存在。然而，这样扭曲的癖好让其广受争议，除了工作以外几乎没有人和她有交集。
-她曾无数次以自己的身体试探造物的威力，这一次，造物终于回以最后的回应，某次研究空间技术的过程中，她被卷入未知空间后不知所踪。</description>
+    <description>{PAWN_nameDef} was the research supervisor of a laboratory on a science planet, leading the development of new weapons.
+She liked to test weapon power with her own body—numb limbs, convulsing reactions, the pain of experiencing her own creations firsthand made her feel alive. Yet this twisted habit made her controversial; apart from work, almost no one interacted with her.
+She had tested the power of her creations on herself countless times. This time, the creation finally answered. During an experiment in spatial technology, she was drawn into an unknown space and vanished without a trace.</description>
     <forcedTraits>
       <Masochist>0</Masochist>
     </forcedTraits>
@@ -169,7 +169,7 @@
     <defName>GR_Engineer</defName>
     <title>Gray Megastructure Engineer </title>
     <titleShort>Megastructure Engineer</titleShort>
-    <description>经过多年苦修，{PAWN_nameDef}终于跻身帝国的巨构工程师团队。然而，她参与的首个巨型项目便因重大失误而失败。作为惩罚，她被永久流放至先遣队，禁止重返中心星区——曾经的梦想之地，如今已成回不去的远方。</description>
+    <description>After years of rigorous study, {PAWN_nameDef} finally joined the Empire's megastructure engineering team. However, her first megaproject failed due to a major error. As punishment, she was permanently exiled to the Advance Team and forbidden from returning to the core sectors—the place of her dreams, now a distant home she can never return to.</description>
     <forcedTraits>
       <GR_Engineers>0</GR_Engineers>
     </forcedTraits>
@@ -188,7 +188,7 @@
     <defName>GR_Enforcer</defName>
     <title>Gray Penal Colony Enforcer </title>
     <titleShort>Enforcer</titleShort>
-    <description>{PAWN_nameDef}曾是要塞星球防务部的精英队长，以其百步穿杨的枪法闻名。直到一次行动，她目睹了辖区底层民生凋敝的真相。数次仗义执言反遭打压，最终被贬至偏远流放星球，成为一名基层执法官。当灰裔先遣队途经该星域时，为躲避持续的政治迫害，她毅然登船，寻求新的开始。</description>
+    <description>{PAWN_nameDef} was an elite captain in the defense department of a fortress world, famed for her marksmanship. Then, during one operation, she witnessed the truth of the destitution among the people in her jurisdiction. After speaking out several times and being suppressed for it, she was demoted to a remote penal world as a grassroots law officer. When the Gray Advance Team passed through that sector, she boarded without hesitation to escape ongoing political persecution and seek a new beginning.</description>
     <skillGains>
       <Shooting>6</Shooting>
       <Melee>6</Melee>
@@ -204,8 +204,8 @@
     <defName>GR_Diplomat</defName>
     <title>Gray Diplomat</title>
     <titleShort>Diplomat</titleShort>
-    <description>{PAWN_nameDef}曾经代表星海帝国在星海共同体担任外交官。分食敌对国家的飨宴不会因为战争胜利就此终止，欺骗、胁迫、恐吓，利用一切手段——直到为帝国榨干一切利益，而她本人舔舐干净每一丝残羹剩饭为止，这场盛宴才算落幕。
-然而这份贪婪终究被察觉。沉沦于纸醉金迷之中，她最终被纠察队揭开伪饰，作为惩罚被投入了先遣队，从此再难回到昔日的盛筵。</description>
+    <description>{PAWN_nameDef} once represented the Star Sea Empire as a diplomat in the Star Sea Community. The feast of carving up hostile nations does not end with a war victory; deception, coercion, intimidation—every method is used until the Empire has squeezed out every last benefit, and she herself has licked clean every last scrap. Only then does the banquet end.
+But this greed was eventually noticed. Sunken in luxury, she was finally exposed by the inspectors and thrown into the Advance Team as punishment, never to return to her former feast.</description>
     <forcedTraits>
       <Greedy>0</Greedy>
     </forcedTraits>
@@ -224,8 +224,8 @@
     <defName>GR_Maid</defName>
     <title>Gray Maid</title>
     <titleShort>Maid</titleShort>
-    <description>对于故乡被占领的{PAWN_nameDef}来说，比起遮天蔽日的火药味，炊烟那令人怀念的气味更引起她的乡愁。那个待了许多年的大宅、那股打扫得当的清新空气，仿佛都变成了过往的事物。
-如今她主动加入先遣队，是为了将记忆里尚未被硝烟玷污的风景重新夺回。即便前路遍布流血与牺牲，她也要追逐那早已消散在岁月里的气息。</description>
+    <description>For {PAWN_nameDef}, whose homeland was occupied, the nostalgic smell of cooking smoke stirs more homesickness than the all-encompassing smell of gunpowder. The great house where she lived for so many years, the fresh, well-cleaned air—all seem to have become things of the past.
+Now she has volunteered for the Advance Team to reclaim the landscapes in her memory that have not yet been tainted by gunpowder smoke. Even if the road ahead is full of blood and sacrifice, she will chase that scent that has long since faded from the years.</description>
     <forcedTraits>
       <GR_Maid>0</GR_Maid>
     </forcedTraits>
@@ -245,8 +245,8 @@
     <defName>GR_Geologist</defName>
     <title>Gray Geologist</title>
     <titleShort>Geologist</titleShort>
-    <description>{PAWN_nameDef}认为石头不应该是被保存和展示的古老遗物，而是过往的时代所遗留下来的余香。由自己亲自去探索未知的矿洞与奇妙的地质结构，就如同将肉烤软后再享用、将果实催熟后再品尝一般，是研究中无比重要的一部分。
-对于身为地质学博士的{PAWN_nameDef}来说，这种与大地的交流如同她进食行为一般，这也是她加入先遣队的理由。</description>
+    <description>{PAWN_nameDef} believes stones should not be preserved and displayed as ancient relics, but rather the lingering fragrance left behind by past ages. Exploring unknown mines and wondrous geological formations in person—like softening meat before eating it, or ripening fruit before tasting it—is an essential part of research.
+For {PAWN_nameDef}, a doctor of geology, this communion with the earth is as natural as eating. That is why she joined the Advance Team.</description>
     <forcedTraits>
       <Undergrounder>0</Undergrounder>
     </forcedTraits>
@@ -265,7 +265,7 @@
     <defName>GR_StarPicker</defName>
     <title>Gray Star Picker</title>
     <titleShort>Star Picker</titleShort>
-    <description>{PAWN_nameDef}曾是一座恒星物质采集设施上的技术员，日夜与星辰为伴，将星辉转化为帝国前进的动力。然而星辰之力终有尽时，她如神话中的夸父般，执着地追寻更璀璨的星芒。为此，她来到了边缘世界——这片未被染指的崭新星域。</description>
+    <description>{PAWN_nameDef} was a technician at a stellar matter collection facility, spending day and night with the stars, turning starlight into the driving force of the Empire. But the power of the stars must eventually run out. Like Kuafu in myth, she pursued ever more brilliant starlight. To that end, she came to the rimworld—a new, untouched star sector.</description>
     <forcedTraits>
       <GR_Physicists>0</GR_Physicists>
     </forcedTraits>
@@ -284,7 +284,7 @@
     <defName>GR_PublicServants</defName>
     <title>Gray Public Servants</title>
     <titleShort>Public Servants</titleShort>
-    <description>{PAWN_nameDef}曾是一位成功的市长，精心管理着一座千万人口的工业星球都市。她是城市毋庸置疑的统治者，却更醉心于将整座城市视为一件精密的仪器去运营与优化。对她而言，权力索然无味，唯有开发与建造的过程本身充满魅力。最终，她从容交卸职权，转向星空，去绘制她下一张宏伟的城市蓝图。</description>
+    <description>{PAWN_nameDef} was once a successful mayor, carefully managing an industrial planet-city of ten million people. She was the city's undisputed ruler, yet she was more fascinated by running and optimizing the entire city as a precision instrument. To her, power was tasteless; only the process of development and construction held any charm. In the end, she calmly handed over her authority and turned to the stars, to draw her next grand city blueprint.</description>
     <forcedTraits>
       <Industriousness>2</Industriousness>
     </forcedTraits>
@@ -304,7 +304,7 @@
     <defName>GR_Geisha</defName>
     <title>Gray Geisha</title>
     <titleShort>Geisha</titleShort>
-    <description>{PAWN_nameDef}是一位极其特殊的存在。或许是在成长中被注入了被污染的数据流，又或是其核心记忆体早已偏离常轨，她最终选择成为艺妓，将自身全然奉献于“艺术”。那些与她有过深度交集的顾客，无不盛赞其精妙的“技艺”，并声称在她身上领略过何谓完美。</description>
+    <description>{PAWN_nameDef} is a very special existence. Perhaps she was injected with a corrupted data stream while growing, or perhaps her core memory had long since strayed from its proper course. She ultimately chose to become a geisha, dedicating herself entirely to 'art'. Every customer who has had deep dealings with her praises her exquisite 'technique' and claims to have glimpsed perfection in her.</description>
     <forcedTraits>
       <Beauty>2</Beauty>
     </forcedTraits>
@@ -324,9 +324,9 @@
     <defName>GR_Wanderer</defName>
     <title>Gray Wanderer doctor</title>
     <titleShort>Wanderer doctor</titleShort>
-    <description>{PAWN_nameDef}是一名专业的外科医生，拥有丰富的抢救经验和手术经验。经过改造升级，她可以随时展开一台小型的手术台进行现场治疗或用于手术场景。她从不谈论自己从何又为何出发，只是踏上了游历世界，顺路治病救人的道路，虽然路上总是被耽误，但她总是微笑着出着自己的一份力。
-她常说要人应该活在当下，有话就快说，有心愿就去做。
-毕竟只有她知道，在一切完成之后，她总能在寂静无人的深夜偷偷踏上新的旅程。</description>
+    <description>{PAWN_nameDef} is a professional surgeon with extensive emergency and surgical experience. After modification and upgrades, she can deploy a small operating table anywhere for field treatment or surgery. She never talks about where she came from or why she set out; she simply took to wandering the world, healing people along the way. Though she is always delayed on the road, she always smiles and does her part.
+She often says people should live in the present—say what you mean, and do what you wish.
+After all, only she knows that when everything is done, she can always slip away on a new journey late at night, when all is silent.</description>
     <skillGains>
       <Medicine>9</Medicine>
       <Melee>3</Melee>
@@ -343,10 +343,10 @@
     <defName>GR_StormEmperor</defName>
     <title>Gray Storm Emperor</title>
     <titleShort>Storm Emperor</titleShort>
-    <description>以暴戾之火，巡猎尘与空。
-{PAWN_nameDef}是一位独立的战斗机甲驾驶员，但对她而言，比起“驾驶”，她更像是在使用延展的肢体进行战斗。
-得益于特殊的身体改造，往往高昂的装备维修费用往往只需要些许时间就能被负责修复的纳米群完成，因此她无需专业设备也能独自打理好整台机甲。
-“比起高精度的能量系武器，我个人倾向于有着凶猛火力的实弹，或者干脆说爆炸系武器啦～再搭配上厚重的重型装甲，完美～”</description>
+    <description>With the fire of violence, hunt across dust and sky.
+{PAWN_nameDef} is an independent combat mech pilot, but to her, it is less 'piloting' than fighting with extended limbs.
+Thanks to special body modifications, the often-expensive equipment maintenance can usually be completed in a short time by the nanite swarm responsible for repairs, so she can maintain the entire mech alone without professional equipment.
+'Compared to high-precision energy weapons, I personally prefer live ammunition with fierce firepower—or rather, explosive weapons! Pair that with thick heavy armor, and it's perfect.'</description>
     <skillGains>
       <Shooting>6</Shooting>
       <Melee>6</Melee>

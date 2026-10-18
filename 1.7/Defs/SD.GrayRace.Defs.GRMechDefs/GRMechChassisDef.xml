@@ -6,14 +6,14 @@
       <li>
         <!-- key 是用来保存数据的，让模块知道安装在哪个槽位里，仿群星设计 -->
         <key>POWER_CORE_01</key>
-        <label>反应堆</label>
+        <label>Reactor</label>
         <slotDef>GR_MechSlot_PowerCore</slotDef>
         <anchorBodyPart>Reactor</anchorBodyPart>
         <uiOrder>10</uiOrder>
       </li>
       <li>
         <key>THRUSTER_01</key>
-        <label>推进器</label>
+        <label>Thruster</label>
         <slotDef>GR_MechSlot_Thruster</slotDef>
         <anchorBodyPart>MechanicalFoot</anchorBodyPart>
         <uiOrder>20</uiOrder>
@@ -25,8 +25,8 @@
   <!-- 每制作一个 ChassisDef 就要创建一个 RecipeDef 绑定机械体 -->
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Corvette</defName>
-    <label>护卫舰</label>
-    <description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</description>
+    <label>Frigate</label>
+    <description>The frigate is one of the most basic warship types. It is armed and can engage enemies.</description>
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
     <fixedWorkTicks>20000</fixedWorkTicks>
@@ -42,8 +42,8 @@
 
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Frigate</defName>
-    <label>雷击舰</label>
-    <description>雷击舰是护卫舰的一种先进衍生型号，专职发射鱼雷。他们更慢更脆弱，但可以对大型目标造成毁灭性的打击。</description>
+    <label>Torpedo Boat</label>
+    <description>The torpedo boat is an advanced derivative of the frigate, dedicated to launching torpedoes. They are slower and more fragile, but can deliver devastating strikes against large targets.</description>
     <!-- TODO -->
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
@@ -59,8 +59,8 @@
 
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Destroyer</defName>
-    <label>驱逐舰</label>
-    <description>采用双区段设计的驱逐舰可以提供多种多样的战略性武装。</description>
+    <label>Destroyer</label>
+    <description>Destroyers use a two-section design, allowing a wide variety of strategic armaments.</description>
     <!-- TODO -->
     <pawnKindDef>GR_Mech_DD</pawnKindDef>
     <designerPreviewPath>Race/Mech/DD_south</designerPreviewPath>
@@ -77,8 +77,8 @@
 
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Cruiser</defName>
-    <label>巡洋舰</label>
-    <description>巡洋舰采用三段式设计，在愿意加钱的情况下可自由进行各种追加模组改装。</description>
+    <label>Cruiser</label>
+    <description>Cruisers use a three-section design and can be freely refitted with additional modules if one is willing to pay.</description>
     <!-- TODO -->
     <pawnKindDef>GR_Mech_CA</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
@@ -96,8 +96,8 @@
 
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Battleship</defName>
-    <label>战列舰</label>
-    <description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</description>
+    <label>Battleship</label>
+    <description>Battleships carry unmatched firepower and have the largest hull size, but they are expensive and poorly maneuverable.</description>
     <!-- 这两个绑定对应的机械体 -->
     <pawnKindDef>GR_Mech_BB</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
@@ -116,8 +116,8 @@
 
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Titan</defName>
-    <label>泰坦</label>
-    <description>这些巨型战舰是整个舰队的骄傲，泰坦上携带有多种武器，一般作为旗舰使用。</description>
+    <label>Titan</label>
+    <description>These giant warships are the pride of the fleet. Titans carry a variety of weapons and usually serve as flagships.</description>
     <!-- TODO -->
     <pawnKindDef>GR_Mech_TT</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
@@ -135,8 +135,8 @@
 
   <SD.GrayRace.Defs.GRMechChassisDef ParentName="GR_ChassisBase">
     <defName>GR_Chassis_Juggernaut</defName>
-    <label>主宰</label>
-    <description>这些巨型构造物既是舰船也是空间站。主宰是一种庞大的可移动空间站，可以维修和建造舰船，也就是说，它可以作为进攻性战役中行动时的前进基地使用。</description>
+    <label>Juggernaut</label>
+    <description>These colossal constructs are both ships and space stations. The juggernaut is an enormous mobile station that can repair and build ships, serving as a forward base during offensive campaigns.</description>
     <!-- TODO -->
     <pawnKindDef>GR_Mech_JG</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>

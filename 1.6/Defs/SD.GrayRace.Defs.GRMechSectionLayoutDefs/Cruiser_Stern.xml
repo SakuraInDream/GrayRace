@@ -25,7 +25,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_SternBase">
     <defName>GR_Cruiser_Stern_M1</defName>
-    <label>齐射舰艉</label>
+    <label>Salvo Stern</label>
     <description>Copied from Stellaris CRUISER_STERN_M1.</description>
     <uiOrder>0</uiOrder>
     <slots>
@@ -40,7 +40,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_SternBase">
     <defName>GR_Cruiser_Stern_S2</defName>
-    <label>炮艇舰艉</label>
+    <label>Gunship Stern</label>
     <description>Heavy carrier mid section copied from Stellaris CRUISER_STERN_M1.</description>
     <uiOrder>1</uiOrder>
     <slots>

@@ -2,8 +2,8 @@
 <Defs>
   <!-- 裂解炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor1Base" Abstract="True">
-    <label>裂解炮</label>
-    <description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</description>
+    <label>Disruptor</label>
+    <description>The high-energy beam fired by a disruptor simultaneously weakens and breaks the molecular bonds holding the target's atoms together. It penetrates shields and armor, dealing devastating damage directly to hull and crew.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
     <slotFamily>Disruptors</slotFamily>
     <researchPrerequisites>
@@ -46,8 +46,8 @@
 
   <!-- 离子裂解炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor2Base" Abstract="True">
-    <label>离子裂解炮</label>
-    <description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</description>
+    <label>Ion Disruptor</label>
+    <description>These upgraded disruptors fire a more powerful ion stream at their targets.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
     <slotFamily>IonDisruptors</slotFamily>
     <researchPrerequisites>
@@ -95,8 +95,8 @@
 
   <!-- 相位裂解炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor3Base" Abstract="True">
-    <label>相位裂解炮</label>
-    <description>这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。</description>
+    <label>Phase Disruptor</label>
+    <description>This extremely enhanced disruptor fires quantum energy. Any target struck suffers tremendous damage.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
     <slotFamily>PhaseDisruptors</slotFamily>
     <researchPrerequisites>

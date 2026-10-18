@@ -30,7 +30,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_MidBase">
     <defName>GR_BB_Mid_L2M2</defName>
-    <label>齐射核心</label>
+    <label>Salvo Core</label>
     <description>Line mid section copied from Stellaris BATTLESHIP_MID_L2M2.</description>
     <uiOrder>0</uiOrder>
     <slots>
@@ -63,7 +63,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_MidBase">
     <defName>GR_BB_Mid_L3</defName>
-    <label>巨炮核心</label>
+    <label>Artillery Core</label>
     <description>Artillery mid section copied from Stellaris BATTLESHIP_MID_L3.</description>
     <uiOrder>1</uiOrder>
     <slots>
@@ -90,7 +90,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_MidBase">
     <defName>GR_BB_Mid_M4SHB</defName>
-    <label>格纳库核心</label>
+    <label>Hangar Core</label>
     <description>Carrier mid section copied from Stellaris BATTLESHIP_MID_M4SHB.</description>
     <uiOrder>2</uiOrder>
     <slots>
@@ -128,7 +128,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_MidBase">
     <defName>GR_BB_Mid_S4LHB</defName>
-    <label>航母核心</label>
+    <label>Carrier Core</label>
     <description>Heavy carrier mid section copied from Stellaris BATTLESHIP_MID_S4LHB.</description>
     <uiOrder>3</uiOrder>
     <slots>

@@ -8,8 +8,8 @@
   </SD.GrayRace.Defs.GRMechThrusterModuleDef>
 
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Chemical" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
-    <label>化学推进器</label>
-    <description>简单而有效的化学助推器依靠可燃物推动机械体。</description>
+    <label>Chemical Thruster</label>
+    <description>A simple and effective chemical booster that propels the mechanoid by burning propellant.</description>
     <iconPath>Icon/ShipParts/ship_part_thruster_1</iconPath>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
@@ -19,8 +19,8 @@
   </SD.GrayRace.Defs.GRMechThrusterModuleDef>
 
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Ion" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
-    <label>离子推进器</label>
-    <description>此种电推进器的推力来源于离子束，而非传统工质。</description>
+    <label>Ion Thruster</label>
+    <description>This electric propulsion system generates thrust from an ion beam rather than conventional reaction mass.</description>
     <iconPath>Icon/ShipParts/ship_part_thruster_2</iconPath>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -30,8 +30,8 @@
   </SD.GrayRace.Defs.GRMechThrusterModuleDef>
 
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Plasma" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
-    <label>等离子推进器</label>
-    <description>等离子推进是电推进的高级形式，赋予舰船更快的亚光速航速和更好的机动性。</description>
+    <label>Plasma Thruster</label>
+    <description>Plasma propulsion is an advanced form of electric propulsion, giving ships faster sublight speed and better maneuverability.</description>
     <iconPath>Icon/ShipParts/ship_part_thruster_3</iconPath>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
@@ -41,8 +41,8 @@
   </SD.GrayRace.Defs.GRMechThrusterModuleDef>
 
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_Impulse" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
-    <label>脉冲推进器</label>
-    <description>在亚光速条件下，此种高级聚变推进器可赋予舰船无与伦比的机动性和速度优势。</description>
+    <label>Impulse Thruster</label>
+    <description>At sublight speeds, this advanced fusion thruster gives ships unmatched maneuverability and speed.</description>
     <iconPath>Icon/ShipParts/ship_part_thruster_4</iconPath>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
@@ -52,8 +52,8 @@
   </SD.GrayRace.Defs.GRMechThrusterModuleDef>
 
   <SD.GrayRace.Defs.GRMechThrusterModuleDef Name="GR_MechModule_ThrusterTier_DarkMatter" ParentName="GR_MechModule_ThrusterBase" Abstract="True">
-    <label>暗物质推进器</label>
-    <description>这些舰船推进器利用暗物质技术，以一种似乎违反了多个物理法则的方式来产生推进力。</description>
+    <label>Dark Matter Thruster</label>
+    <description>These ship thrusters use dark matter technology to generate thrust in a way that seems to violate several physical laws.</description>
     <iconPath>Icon/ShipParts/ship_part_thruster_5</iconPath>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>

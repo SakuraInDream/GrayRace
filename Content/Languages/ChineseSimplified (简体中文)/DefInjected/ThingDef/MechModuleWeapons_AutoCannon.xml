@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 大型机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon1_L.label>大型机关炮弹丸</Bullet_GR_MechAutocannon1_L.label>
+  
+  <!-- EN: 中型机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon1_M.label>中型机关炮弹丸</Bullet_GR_MechAutocannon1_M.label>
+  
+  <!-- EN: 小型机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon1_S.label>小型机关炮弹丸</Bullet_GR_MechAutocannon1_S.label>
+  
+  <!-- EN: 大型撕裂者机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon2_L.label>大型撕裂者机关炮弹丸</Bullet_GR_MechAutocannon2_L.label>
+  
+  <!-- EN: 中型撕裂者机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon2_M.label>中型撕裂者机关炮弹丸</Bullet_GR_MechAutocannon2_M.label>
+  
+  <!-- EN: 小型撕裂者机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon2_S.label>小型撕裂者机关炮弹丸</Bullet_GR_MechAutocannon2_S.label>
+  
+  <!-- EN: 大型火风暴机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon3_L.label>大型火风暴机关炮弹丸</Bullet_GR_MechAutocannon3_L.label>
+  
+  <!-- EN: 中型火风暴机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon3_M.label>中型火风暴机关炮弹丸</Bullet_GR_MechAutocannon3_M.label>
+  
+  <!-- EN: 小型火风暴机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon3_S.label>小型火风暴机关炮弹丸</Bullet_GR_MechAutocannon3_S.label>
+  
+  <!-- EN: 大型纳米机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon4_L.label>大型纳米机关炮弹丸</Bullet_GR_MechAutocannon4_L.label>
+  
+  <!-- EN: 中型纳米机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon4_M.label>中型纳米机关炮弹丸</Bullet_GR_MechAutocannon4_M.label>
+  
+  <!-- EN: 小型纳米机关炮弹丸 -->
+  <Bullet_GR_MechAutocannon4_S.label>小型纳米机关炮弹丸</Bullet_GR_MechAutocannon4_S.label>
+  
+  <!-- EN: 大型机关炮 -->
+  <GR_MechWeapon_Autocannon1_L.label>大型机关炮</GR_MechWeapon_Autocannon1_L.label>
+  <!-- EN: 大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。 -->
+  <GR_MechWeapon_Autocannon1_L.description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</GR_MechWeapon_Autocannon1_L.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon1_L.tools.barrel.label>枪管</GR_MechWeapon_Autocannon1_L.tools.barrel.label>
+  <!-- EN: 大型机关炮 -->
+  <GR_MechWeapon_Autocannon1_L.verbs.Verb_Shoot.label>大型机关炮</GR_MechWeapon_Autocannon1_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型机关炮 -->
+  <GR_MechWeapon_Autocannon1_M.label>中型机关炮</GR_MechWeapon_Autocannon1_M.label>
+  <!-- EN: 大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。 -->
+  <GR_MechWeapon_Autocannon1_M.description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</GR_MechWeapon_Autocannon1_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon1_M.tools.barrel.label>枪管</GR_MechWeapon_Autocannon1_M.tools.barrel.label>
+  <!-- EN: 中型机关炮 -->
+  <GR_MechWeapon_Autocannon1_M.verbs.Verb_Shoot.label>中型机关炮</GR_MechWeapon_Autocannon1_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 机关炮 -->
+  <GR_MechWeapon_Autocannon1_S.label>机关炮</GR_MechWeapon_Autocannon1_S.label>
+  <!-- EN: 大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。 -->
+  <GR_MechWeapon_Autocannon1_S.description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</GR_MechWeapon_Autocannon1_S.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon1_S.tools.barrel.label>枪管</GR_MechWeapon_Autocannon1_S.tools.barrel.label>
+  <!-- EN: 机关炮 -->
+  <GR_MechWeapon_Autocannon1_S.verbs.Verb_Shoot.label>机关炮</GR_MechWeapon_Autocannon1_S.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 大型撕裂者机关炮 -->
+  <GR_MechWeapon_Autocannon2_L.label>大型撕裂者机关炮</GR_MechWeapon_Autocannon2_L.label>
+  <!-- EN: 这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。 -->
+  <GR_MechWeapon_Autocannon2_L.description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</GR_MechWeapon_Autocannon2_L.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon2_L.tools.barrel.label>枪管</GR_MechWeapon_Autocannon2_L.tools.barrel.label>
+  <!-- EN: 大型撕裂者机关炮 -->
+  <GR_MechWeapon_Autocannon2_L.verbs.Verb_Shoot.label>大型撕裂者机关炮</GR_MechWeapon_Autocannon2_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型撕裂者机关炮 -->
+  <GR_MechWeapon_Autocannon2_M.label>中型撕裂者机关炮</GR_MechWeapon_Autocannon2_M.label>
+  <!-- EN: 这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。 -->
+  <GR_MechWeapon_Autocannon2_M.description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</GR_MechWeapon_Autocannon2_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon2_M.tools.barrel.label>枪管</GR_MechWeapon_Autocannon2_M.tools.barrel.label>
+  <!-- EN: 中型撕裂者机关炮 -->
+  <GR_MechWeapon_Autocannon2_M.verbs.Verb_Shoot.label>中型撕裂者机关炮</GR_MechWeapon_Autocannon2_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 撕裂者机关炮 -->
+  <GR_MechWeapon_Autocannon2_S.label>撕裂者机关炮</GR_MechWeapon_Autocannon2_S.label>
+  <!-- EN: 这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。 -->
+  <GR_MechWeapon_Autocannon2_S.description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</GR_MechWeapon_Autocannon2_S.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon2_S.tools.barrel.label>枪管</GR_MechWeapon_Autocannon2_S.tools.barrel.label>
+  <!-- EN: 撕裂者机关炮 -->
+  <GR_MechWeapon_Autocannon2_S.verbs.Verb_Shoot.label>撕裂者机关炮</GR_MechWeapon_Autocannon2_S.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 大型火风暴机关炮 -->
+  <GR_MechWeapon_Autocannon3_L.label>大型火风暴机关炮</GR_MechWeapon_Autocannon3_L.label>
+  <!-- EN: 设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。 -->
+  <GR_MechWeapon_Autocannon3_L.description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</GR_MechWeapon_Autocannon3_L.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon3_L.tools.barrel.label>枪管</GR_MechWeapon_Autocannon3_L.tools.barrel.label>
+  <!-- EN: 大型火风暴机关炮 -->
+  <GR_MechWeapon_Autocannon3_L.verbs.Verb_Shoot.label>大型火风暴机关炮</GR_MechWeapon_Autocannon3_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型火风暴机关炮 -->
+  <GR_MechWeapon_Autocannon3_M.label>中型火风暴机关炮</GR_MechWeapon_Autocannon3_M.label>
+  <!-- EN: 设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。 -->
+  <GR_MechWeapon_Autocannon3_M.description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</GR_MechWeapon_Autocannon3_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon3_M.tools.barrel.label>枪管</GR_MechWeapon_Autocannon3_M.tools.barrel.label>
+  <!-- EN: 中型火风暴机关炮 -->
+  <GR_MechWeapon_Autocannon3_M.verbs.Verb_Shoot.label>中型火风暴机关炮</GR_MechWeapon_Autocannon3_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 火风暴机关炮 -->
+  <GR_MechWeapon_Autocannon3_S.label>火风暴机关炮</GR_MechWeapon_Autocannon3_S.label>
+  <!-- EN: 设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。 -->
+  <GR_MechWeapon_Autocannon3_S.description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</GR_MechWeapon_Autocannon3_S.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon3_S.tools.barrel.label>枪管</GR_MechWeapon_Autocannon3_S.tools.barrel.label>
+  <!-- EN: 火风暴机关炮 -->
+  <GR_MechWeapon_Autocannon3_S.verbs.Verb_Shoot.label>火风暴机关炮</GR_MechWeapon_Autocannon3_S.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 大型纳米机关炮 -->
+  <GR_MechWeapon_Autocannon4_L.label>大型纳米机关炮</GR_MechWeapon_Autocannon4_L.label>
+  <!-- EN: 极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。 -->
+  <GR_MechWeapon_Autocannon4_L.description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</GR_MechWeapon_Autocannon4_L.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon4_L.tools.barrel.label>枪管</GR_MechWeapon_Autocannon4_L.tools.barrel.label>
+  <!-- EN: 大型纳米机关炮 -->
+  <GR_MechWeapon_Autocannon4_L.verbs.Verb_Shoot.label>大型纳米机关炮</GR_MechWeapon_Autocannon4_L.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型纳米机关炮 -->
+  <GR_MechWeapon_Autocannon4_M.label>中型纳米机关炮</GR_MechWeapon_Autocannon4_M.label>
+  <!-- EN: 极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。 -->
+  <GR_MechWeapon_Autocannon4_M.description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</GR_MechWeapon_Autocannon4_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon4_M.tools.barrel.label>枪管</GR_MechWeapon_Autocannon4_M.tools.barrel.label>
+  <!-- EN: 中型纳米机关炮 -->
+  <GR_MechWeapon_Autocannon4_M.verbs.Verb_Shoot.label>中型纳米机关炮</GR_MechWeapon_Autocannon4_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 纳米机关炮 -->
+  <GR_MechWeapon_Autocannon4_S.label>纳米机关炮</GR_MechWeapon_Autocannon4_S.label>
+  <!-- EN: 极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。 -->
+  <GR_MechWeapon_Autocannon4_S.description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</GR_MechWeapon_Autocannon4_S.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Autocannon4_S.tools.barrel.label>枪管</GR_MechWeapon_Autocannon4_S.tools.barrel.label>
+  <!-- EN: 纳米机关炮 -->
+  <GR_MechWeapon_Autocannon4_S.verbs.Verb_Shoot.label>纳米机关炮</GR_MechWeapon_Autocannon4_S.verbs.Verb_Shoot.label>
+  
+</LanguageData>

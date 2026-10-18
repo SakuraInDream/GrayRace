@@ -2,8 +2,8 @@
 <Defs>
   <SD.GrayRace.Defs.GRMechSectionLayoutDef>
     <defName>GR_Titan_Mid</defName>
-    <label>泰坦核心</label>
-    <description>从Stellaris那复制过来的TITAN_MID</description>
+    <label>Titan Core</label>
+    <description>Copied from Stellaris TITAN_MID.</description>
     <sectionSlot>GR_MechSection_Mid</sectionSlot>
     <shipSize>GR_Chassis_Titan</shipSize>
     <researchPrerequisites>

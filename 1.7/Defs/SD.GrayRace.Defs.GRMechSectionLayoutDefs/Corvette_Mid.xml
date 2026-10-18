@@ -36,8 +36,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
     <defName>GR_Corvette_MID_S3</defName>
-    <label>拦截者核心</label>
-    <description>从Stellaris那复制的CORVETTE_MID_S3。</description>
+    <label>Interceptor Core</label>
+    <description>Copied from Stellaris CORVETTE_MID_S3.</description>
     <slots>
       <li>
         <key>SMALL_GUN_01</key>
@@ -62,8 +62,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
     <defName>GR_Corvette_MID_S2PD1</defName>
-    <label>哨卫核心</label>
-    <description>从Stellaris那复制的CORVETTE_MID_S2PD1。</description>
+    <label>Sentinel Core</label>
+    <description>Copied from Stellaris CORVETTE_MID_S2PD1.</description>
     <slots>
       <li>
         <key>PD_01</key>
@@ -89,8 +89,8 @@
   <!-- 雷击舰 -->
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Corvette_MidBase">
     <defName>GR_Corvette_MID_M1S1</defName>
-    <label>鱼雷核心</label>
-    <description>从Stellaris那复制的CORVETTE_MID_M1S1。</description>
+    <label>Torpedo Core</label>
+    <description>Copied from Stellaris CORVETTE_MID_M1S1.</description>
     <shipSize>GR_Chassis_Frigate</shipSize>
     <costList Inherit="False">
       <GR_Alloy>60</GR_Alloy>

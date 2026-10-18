@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 动能火炮 -->
+  <GR_MechModule_KineticBattery.label>动能火炮</GR_MechModule_KineticBattery.label>
+  <!-- EN: 射程极远的火炮，火力猛烈，而且准确性极高。 -->
+  <GR_MechModule_KineticBattery.description>射程极远的火炮，火力猛烈，而且准确性极高。</GR_MechModule_KineticBattery.description>
+  
+  <!-- EN: 先进动能火炮 -->
+  <GR_MechModule_KineticBatteryPlus.label>先进动能火炮</GR_MechModule_KineticBatteryPlus.label>
+  <!-- EN: 更为强劲的远程舰载火力系统，装备有升级版的发射装置和火控系统。 -->
+  <GR_MechModule_KineticBatteryPlus.description>更为强劲的远程舰载火力系统，装备有升级版的发射装置和火控系统。</GR_MechModule_KineticBatteryPlus.description>
+  
+</LanguageData>

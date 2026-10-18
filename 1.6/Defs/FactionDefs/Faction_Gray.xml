@@ -3,9 +3,9 @@
 
   <FactionDef ParentName="FactionBase">
     <defName>Gray_Faction</defName>
-    <label>&lt;color=#00ff9b>&lt;b>德萨努协约国&lt;/b>&lt;/color></label>
-    <fixedName>&lt;color=#00ff9b>&lt;b>德萨努协约国&lt;/b>&lt;/color></fixedName>
-    <description>灰裔先遣队据点。</description>
+    <label>&lt;color=#00ff9b>&lt;b>Desanu Concord&lt;/b>&lt;/color></label>
+    <fixedName>&lt;color=#00ff9b>&lt;b>Desanu Concord&lt;/b>&lt;/color></fixedName>
+    <description>Gray Advance Team outpost.</description>
     <colorSpectrum>
       <li>(0,255,155)</li>
     </colorSpectrum>

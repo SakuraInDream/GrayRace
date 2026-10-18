@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: <color=#00ff9b><b>德萨努协约国</b></color> -->
-  <Gray_Faction.label>TODO</Gray_Faction.label>
+  <Gray_Faction.label>&lt;color=#00ff9b&gt;&lt;b&gt;德萨努协约国&lt;/b&gt;&lt;/color&gt;</Gray_Faction.label>
   <!-- EN: 灰裔先遣队据点。 -->
-  <Gray_Faction.description>TODO</Gray_Faction.description>
+  <Gray_Faction.description>灰裔先遣队据点。</Gray_Faction.description>
   <!-- EN: <color=#00ff9b><b>德萨努协约国</b></color> -->
-  <Gray_Faction.fixedName>TODO</Gray_Faction.fixedName>
+  <Gray_Faction.fixedName>&lt;color=#00ff9b&gt;&lt;b&gt;德萨努协约国&lt;/b&gt;&lt;/color&gt;</Gray_Faction.fixedName>
   <!-- EN: governor -->
-  <Gray_Faction.leaderTitle>TODO</Gray_Faction.leaderTitle>
+  <Gray_Faction.leaderTitle>总督</Gray_Faction.leaderTitle>
   <!-- EN: {0} from {1} are attacking your {2}. -->
-  <Gray_Faction.messageDefendersAttacking>TODO</Gray_Faction.messageDefendersAttacking>
+  <Gray_Faction.messageDefendersAttacking>{1} 的 {0} 正在攻击你的 {2}。</Gray_Faction.messageDefendersAttacking>
   <!-- EN: Gray -->
-  <Gray_Faction.pawnSingular>TODO</Gray_Faction.pawnSingular>
+  <Gray_Faction.pawnSingular>灰裔</Gray_Faction.pawnSingular>
   <!-- EN: Grey -->
-  <Gray_Faction.pawnsPlural>TODO</Gray_Faction.pawnsPlural>
-  
+  <Gray_Faction.pawnsPlural>灰裔</Gray_Faction.pawnsPlural>
+
 </LanguageData>

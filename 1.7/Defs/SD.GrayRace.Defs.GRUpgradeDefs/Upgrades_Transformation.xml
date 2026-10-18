@@ -4,8 +4,8 @@
   <!-- 变形 -->
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_PowerClaw</defName>
-    <label>动力爪形态</label>
-    <description>将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。</description>
+    <label>Power Claw Form</label>
+    <description>Reorganizes the hand's nanites into a high-hardness power claw, greatly increasing melee damage.</description>
 
     <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
     <iconPath>Things/projectile/Rail_Shotgun</iconPath>
@@ -39,8 +39,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_DrillArm</defName>
-    <label>挖掘臂形态</label>
-    <description>将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
+    <label>Mining Arm Form</label>
+    <description>Transforms the hand into a mechanical arm that speeds up mining. A built-in auger helps miners find weaknesses in rock faster. It also includes a general-purpose manipulator, which is somewhat clumsy and slightly affects mobility.</description>
 
     <targetBodyPart>MechanicalArm</targetBodyPart>
 
@@ -53,8 +53,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_FieldHand</defName>
-    <label>务农手形态</label>
-    <description>将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</description>
+    <label>Farming Hand Form</label>
+    <description>Transforms the hand into a mechanical palm that speeds up sowing and harvesting. Several retractable finger-like protrusions can harvest from multiple points on a plant or sow several plants at once. It also includes a general-purpose manipulator, which is somewhat clumsy and slightly affects mobility.</description>
 
     <targetBodyPart>MechanicalHand</targetBodyPart>
     <excludedBodyPartTags>
@@ -69,8 +69,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="CETeam.CombatExtended">
     <defName>GR_Transform_Eye_NightVision</defName>
-    <label>夜视形态</label>
-    <description>将眼部变形为夜视系统，在黑暗中也能清晰视物。</description>
+    <label>Night Vision Form</label>
+    <description>Transforms the eye into a night vision system, allowing clear sight in darkness.</description>
 
     <targetBodyPart>SightSensor</targetBodyPart>
 
@@ -84,8 +84,8 @@
   <!-- 变形仿生体 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicArm</defName>
-    <label>仿生臂形态</label>
-    <description>将手臂重构为原版仿生臂。</description>
+    <label>Bionic Arm Form</label>
+    <description>Reconstructs the arm into a vanilla bionic arm.</description>
 
     <targetBodyPart>MechanicalArm</targetBodyPart>
     <hediffToApply>BionicArm</hediffToApply>
@@ -97,8 +97,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicLeg</defName>
-    <label>仿生腿形态</label>
-    <description>将腿部重构为原版仿生腿。</description>
+    <label>Bionic Leg Form</label>
+    <description>Reconstructs the leg into a vanilla bionic leg.</description>
 
     <targetBodyPart>MechanicalLeg</targetBodyPart>
     <hediffToApply>BionicLeg</hediffToApply>
@@ -110,8 +110,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicEye</defName>
-    <label>仿生眼形态</label>
-    <description>将视觉器官重构为原版仿生眼。</description>
+    <label>Bionic Eye Form</label>
+    <description>Reconstructs the visual organ into a vanilla bionic eye.</description>
 
     <targetBodyPart>SightSensor</targetBodyPart>
 
@@ -124,8 +124,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicEar</defName>
-    <label>仿生耳形态</label>
-    <description>将听觉器官重构为原版仿生耳。</description>
+    <label>Bionic Ear Form</label>
+    <description>Reconstructs the hearing organ into a vanilla bionic ear.</description>
 
     <targetBodyPart>HearingSensor</targetBodyPart>
 
@@ -138,8 +138,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicHeart</defName>
-    <label>仿生心脏形态</label>
-    <description>将灰潮核心重构为原版仿生心脏。</description>
+    <label>Bionic Heart Form</label>
+    <description>Reconstructs the Gray Tide core into a vanilla bionic heart.</description>
 
     <targetBodyPart>Nano_Heart</targetBodyPart>
 
@@ -152,8 +152,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicJaw</defName>
-    <label>仿生下颌形态</label>
-    <description>将下颌重构为原版仿生下颌。</description>
+    <label>Bionic Jaw Form</label>
+    <description>Reconstructs the jaw into a vanilla bionic jaw.</description>
 
     <targetBodyPart>Jaw</targetBodyPart>
     <hediffToApply>BionicJaw</hediffToApply>
@@ -165,8 +165,8 @@
 
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Transform_Vanilla_BionicTongue</defName>
-    <label>仿生舌形态</label>
-    <description>将舌部重构为原版仿生舌。</description>
+    <label>Bionic Tongue Form</label>
+    <description>Reconstructs the tongue into a vanilla bionic tongue.</description>
 
     <targetBodyPartTags>
       <li>Tongue</li>

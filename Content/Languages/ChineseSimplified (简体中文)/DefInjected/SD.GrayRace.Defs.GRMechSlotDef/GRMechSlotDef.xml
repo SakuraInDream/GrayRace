@@ -1,74 +1,74 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: auxiliary slot -->
-  <GR_MechSlot_Auxiliary.label>TODO</GR_MechSlot_Auxiliary.label>
+  <GR_MechSlot_Auxiliary.label>辅助槽</GR_MechSlot_Auxiliary.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_Auxiliary.description>TODO</GR_MechSlot_Auxiliary.description>
+  <GR_MechSlot_Auxiliary.description>用于安装辅助模块的槽位。</GR_MechSlot_Auxiliary.description>
   
   <!-- EN: extra-large spinal slot -->
-  <GR_MechSlot_ExtraLarge.label>TODO</GR_MechSlot_ExtraLarge.label>
+  <GR_MechSlot_ExtraLarge.label>超大型脊峰槽</GR_MechSlot_ExtraLarge.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_ExtraLarge.description>TODO</GR_MechSlot_ExtraLarge.description>
+  <GR_MechSlot_ExtraLarge.description>用于安装脊峰武器模块的固定超大型槽位。</GR_MechSlot_ExtraLarge.description>
   
   <!-- EN: large turret slot -->
-  <GR_MechSlot_LargeTurret.label>TODO</GR_MechSlot_LargeTurret.label>
+  <GR_MechSlot_LargeTurret.label>大型炮塔槽</GR_MechSlot_LargeTurret.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_LargeTurret.description>TODO</GR_MechSlot_LargeTurret.description>
+  <GR_MechSlot_LargeTurret.description>用于安装重型炮塔模块的大型武器槽。</GR_MechSlot_LargeTurret.description>
   
   <!-- EN: large utility slot -->
-  <GR_MechSlot_LargeUtility.label>TODO</GR_MechSlot_LargeUtility.label>
+  <GR_MechSlot_LargeUtility.label>大型通用槽</GR_MechSlot_LargeUtility.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_LargeUtility.description>TODO</GR_MechSlot_LargeUtility.description>
+  <GR_MechSlot_LargeUtility.description>用于安装通用模块的大型槽位。</GR_MechSlot_LargeUtility.description>
   
   <!-- EN: medium turret slot -->
-  <GR_MechSlot_MediumTurret.label>TODO</GR_MechSlot_MediumTurret.label>
+  <GR_MechSlot_MediumTurret.label>中型炮塔槽</GR_MechSlot_MediumTurret.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_MediumTurret.description>TODO</GR_MechSlot_MediumTurret.description>
+  <GR_MechSlot_MediumTurret.description>用于安装标准炮塔模块的中型武器槽。</GR_MechSlot_MediumTurret.description>
   
   <!-- EN: medium utility slot -->
-  <GR_MechSlot_MediumUtility.label>TODO</GR_MechSlot_MediumUtility.label>
+  <GR_MechSlot_MediumUtility.label>中型通用槽</GR_MechSlot_MediumUtility.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_MediumUtility.description>TODO</GR_MechSlot_MediumUtility.description>
+  <GR_MechSlot_MediumUtility.description>用于安装通用模块的中型槽位。</GR_MechSlot_MediumUtility.description>
   
   <!-- EN: point-defence slot -->
-  <GR_MechSlot_PointDefenseTurret.label>TODO</GR_MechSlot_PointDefenseTurret.label>
+  <GR_MechSlot_PointDefenseTurret.label>点防御槽</GR_MechSlot_PointDefenseTurret.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_PointDefenseTurret.description>TODO</GR_MechSlot_PointDefenseTurret.description>
+  <GR_MechSlot_PointDefenseTurret.description>用于安装点防御模块的武器槽。</GR_MechSlot_PointDefenseTurret.description>
   
   <!-- EN: 反应堆 -->
-  <GR_MechSlot_PowerCore.label>TODO</GR_MechSlot_PowerCore.label>
+  <GR_MechSlot_PowerCore.label>反应堆</GR_MechSlot_PowerCore.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_PowerCore.description>TODO</GR_MechSlot_PowerCore.description>
+  <GR_MechSlot_PowerCore.description>用于安装动力核心模块的槽位。</GR_MechSlot_PowerCore.description>
   
   <!-- EN: small turret slot -->
-  <GR_MechSlot_SmallTurret.label>TODO</GR_MechSlot_SmallTurret.label>
+  <GR_MechSlot_SmallTurret.label>小型炮塔槽</GR_MechSlot_SmallTurret.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_SmallTurret.description>TODO</GR_MechSlot_SmallTurret.description>
+  <GR_MechSlot_SmallTurret.description>用于安装轻型炮塔模块的小型武器槽。</GR_MechSlot_SmallTurret.description>
   
   <!-- EN: small utility slot -->
-  <GR_MechSlot_SmallUtility.label>TODO</GR_MechSlot_SmallUtility.label>
+  <GR_MechSlot_SmallUtility.label>小型通用槽</GR_MechSlot_SmallUtility.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_SmallUtility.description>TODO</GR_MechSlot_SmallUtility.description>
+  <GR_MechSlot_SmallUtility.description>用于安装通用模块的小型槽位。</GR_MechSlot_SmallUtility.description>
   
   <!-- EN: strike craft slot -->
-  <GR_MechSlot_StrikeCraftBay.label>TODO</GR_MechSlot_StrikeCraftBay.label>
+  <GR_MechSlot_StrikeCraftBay.label>舰载机槽</GR_MechSlot_StrikeCraftBay.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_StrikeCraftBay.description>TODO</GR_MechSlot_StrikeCraftBay.description>
+  <GR_MechSlot_StrikeCraftBay.description>用于安装舰载机模块的槽位。</GR_MechSlot_StrikeCraftBay.description>
   
   <!-- EN: 推进器 -->
-  <GR_MechSlot_Thruster.label>TODO</GR_MechSlot_Thruster.label>
+  <GR_MechSlot_Thruster.label>推进器</GR_MechSlot_Thruster.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_Thruster.description>TODO</GR_MechSlot_Thruster.description>
+  <GR_MechSlot_Thruster.description>用于安装推进器模块的槽位。</GR_MechSlot_Thruster.description>
   
   <!-- EN: Titan Laser -->
-  <GR_MechSlot_Titanic.label>TODO</GR_MechSlot_Titanic.label>
+  <GR_MechSlot_Titanic.label>泰坦激光</GR_MechSlot_Titanic.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_Titanic.description>TODO</GR_MechSlot_Titanic.description>
+  <GR_MechSlot_Titanic.description>用于安装泰坦级武器模块的固定槽位。</GR_MechSlot_Titanic.description>
   
   <!-- EN: torpedo slot -->
-  <GR_MechSlot_TorpedoTube.label>TODO</GR_MechSlot_TorpedoTube.label>
+  <GR_MechSlot_TorpedoTube.label>鱼雷槽</GR_MechSlot_TorpedoTube.label>
   <!-- EN: TODO -->
-  <GR_MechSlot_TorpedoTube.description>TODO</GR_MechSlot_TorpedoTube.description>
+  <GR_MechSlot_TorpedoTube.description>用于安装鱼雷模块的武器槽。</GR_MechSlot_TorpedoTube.description>
   
 </LanguageData>

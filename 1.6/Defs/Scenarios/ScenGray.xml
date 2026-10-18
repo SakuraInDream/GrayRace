@@ -4,9 +4,9 @@
   <ScenarioDef ParentName="ScenarioBase">
     <defName>GR_Crashlanded</defName>
     <label>Advance team</label>
-    <description>Scenario description TODO</description>
+    <description>Usually, before a colonization fleet arrives, an advance team is sent to conduct early planetary reconnaissance: estimating habitability, mapping local factions, and assessing potential threats...\nYou will serve as the captain of this reconnaissance operation, leading a team of advance scouts.\nMake the most of your team's strengths, gather resources, establish a foothold, make contact with local factions, and clear out potential threats.\nA7 reconnaissance team member data uploading. Ground-orbit two-way transmission link established. Guidance beacon lit. Approach clear. Drop authorized. Good luck and godspeed.</description>
     <scenario>
-      <summary>Scenario summary TODO</summary>
+      <summary>The story of three Gray colonists building a settlement on the rimworld.</summary>
       <playerFaction Inherit="false">
         <def>PlayerFaction</def>
         <factionDef>Gray_PlayerFaction</factionDef>
@@ -120,7 +120,7 @@
         <!-- 游戏开始文本 -->
         <li Class="ScenPart_GameStartDialog">
           <def>GameStartDialog</def>
-          <text>GameeStartDialog TODO</text>
+          <text>The moment their feet touched solid soil, it always brought a mysterious joy to those who had drifted in space for so long.\n"Communications clear. This is the advance team's mothership."\nThe two who had left the fleet and fallen onto this planet like meteors each held different thoughts.\n"Yes, we've received the preliminary planetary survey samples. Good work. The personnel you requested are on their way. Until then, you're on your own."\nThe liaison officer's rambling reminders echoed in their ears, distant beneath the static.\n"Also, we've detected claims from a hostile faction. The data has been synchronized. Be careful."\nThe story of the past is now a prologue. A new chapter begins with the first crude wooden wall.\n"Good luck with the expansion."\nMay this story have a happy ending.</text>
           <closeSound>GameStartSting</closeSound>
         </li>
 

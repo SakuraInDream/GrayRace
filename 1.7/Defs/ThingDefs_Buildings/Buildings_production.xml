@@ -177,7 +177,7 @@
           <li>GR_Alloy</li>
         </blacklistedDefs>
       </li>
-      <!-- 产物自动输出格：相对建筑中心的局部偏移，不随建筑旋转。按贴图上的传送带位置调整。 -->
+      <!-- 产物自动输出格：相对建筑中心的固定偏移。 -->
       <li Class="SD.GrayRace.DefModExtensions.DefModExtension_NaniteTransmuterOutput">
         <outputOffset>(0,-2,-3)</outputOffset>
       </li>

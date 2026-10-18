@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Natural Engineers -->
@@ -14,7 +14,7 @@
   <!-- EN: Perfect And Dainty -->
   <GR_Maid.degreeDatas.Perfect_And_Dainty.label>完美潇洒的女仆</GR_Maid.degreeDatas.Perfect_And_Dainty.label>
   <!-- EN: {PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others. -->
-  <GR_Maid.degreeDatas.Perfect_And_Dainty.description>TODO</GR_Maid.degreeDatas.Perfect_And_Dainty.description>
+  <GR_Maid.degreeDatas.Perfect_And_Dainty.description>{PAWN_nameDef} 天赋异禀。{PAWN_pronoun} 学习东西比其他人快得多。</GR_Maid.degreeDatas.Perfect_And_Dainty.description>
   
   <!-- EN: Natural Physicists -->
   <GR_Physicists.degreeDatas.Natural_Physicists.label>天生物理学家</GR_Physicists.degreeDatas.Natural_Physicists.label>

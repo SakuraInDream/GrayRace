@@ -2,8 +2,8 @@
 <Defs>
   <StatDef>
     <defName>GRStat_NaniteMax</defName>
-    <label>备用灰潮源质上限</label>
-    <description>灰裔体内能够储存的备用纳米机械最大值。</description>
+    <label>Spare Nanite capacity</label>
+    <description>The maximum amount of spare nanites the Gray can store in her body.</description>
     <category>BasicsPawn</category>
     <defaultBaseValue>500</defaultBaseValue>
     <minValue>0</minValue>
@@ -17,8 +17,8 @@
 
   <StatDef>
     <defName>GRStat_NaniteRegenRate</defName>
-    <label>备用灰潮源质回复率</label>
-    <description>灰裔每秒自动回复的纳米机械数量。</description>
+    <label>Spare Nanite recovery rate</label>
+    <description>The number of nanites the Gray automatically recovers per second.</description>
     <category>BasicsPawn</category>
     <defaultBaseValue>1.0</defaultBaseValue>
     <toStringStyle>FloatTwo</toStringStyle>
@@ -54,8 +54,8 @@
 
   <StatDef>
     <defName>GRStat_OverclockMaxLevel</defName>
-    <label>超频上限</label>
-    <description>该灰裔当前部位可达到的最大超频百分比。</description>
+    <label>Overclock Limit</label>
+    <description>The maximum overclock percentage this body part can currently reach.</description>
     <category>BasicsPawn</category>
     <defaultBaseValue>1</defaultBaseValue>
     <minValue>0</minValue>

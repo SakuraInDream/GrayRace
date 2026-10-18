@@ -2,8 +2,8 @@
 <Defs>
   <!-- 机关炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Autocannon1Base" Abstract="True">
-    <label>机关炮</label>
-    <description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</description>
+    <label>Autocannon</label>
+    <description>A large-caliber ballistic weapon that fires explosive shells. These autocannons are prized mainly for their extremely high rate of fire.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_1</iconPath>
     <slotFamily>Autocannon</slotFamily>
     <researchPrerequisites>
@@ -62,8 +62,8 @@
 
   <!-- 撕裂者机关炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Autocannon2Base" Abstract="True">
-    <label>撕裂者机关炮</label>
-    <description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</description>
+    <label>Ripper Cannon</label>
+    <description>These upgraded autocannons have more sophisticated tracking and fire-control systems, which also increase their rate of fire.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_2</iconPath>
     <slotFamily>RipperCannons</slotFamily>
     <researchPrerequisites>
@@ -125,8 +125,8 @@
 
   <!-- 火风暴机关炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Autocannon3Base" Abstract="True">
-    <label>火风暴机关炮</label>
-    <description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</description>
+    <label>Stormfire Cannon</label>
+    <description>An advanced automatic cannon that can pour a barrage of high-explosive shells onto a target.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_3</iconPath>
     <slotFamily>StormfireCannons</slotFamily>
     <researchPrerequisites>
@@ -188,8 +188,8 @@
 
   <!-- 纳米机关炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Autocannon4Base" Abstract="True">
-    <label>纳米机关炮</label>
-    <description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</description>
+    <label>Nanite Autocannon</label>
+    <description>An extremely advanced autocannon whose rounds detonate near the target into a cloud of nanomachines, overloading its shields and corroding its hull sections.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_4</iconPath>
     <slotFamily>NaniteAutocannon</slotFamily>
     <researchPrerequisites>

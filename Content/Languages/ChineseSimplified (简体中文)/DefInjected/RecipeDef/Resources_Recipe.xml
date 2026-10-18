@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: cast Alloy x200 -->
@@ -29,60 +29,39 @@
   <!-- EN: Extract Nanites -->
   <GR_Extract.jobString>正在提取灰潮源质</GR_Extract.jobString>
   
+  <!-- EN: make component x2 -->
+  <GR_Make_ComponentIndustrial.label>制作零部件 x2</GR_Make_ComponentIndustrial.label>
+  <!-- EN: Make component. -->
+  <GR_Make_ComponentIndustrial.description>制作零部件。</GR_Make_ComponentIndustrial.description>
+  <!-- EN: Making component. -->
+  <GR_Make_ComponentIndustrial.jobString>正在制作零部件。</GR_Make_ComponentIndustrial.jobString>
+  
+  <!-- EN: make component x2 -->
+  <GR_Make_ComponentIndustrial_Nanites.label>制作零部件 x2</GR_Make_ComponentIndustrial_Nanites.label>
+  <!-- EN: Make component. -->
+  <GR_Make_ComponentIndustrial_Nanites.description>使用灰潮源质制造零部件。</GR_Make_ComponentIndustrial_Nanites.description>
+  <!-- EN: Making component. -->
+  <GR_Make_ComponentIndustrial_Nanites.jobString>正在制作零部件</GR_Make_ComponentIndustrial_Nanites.jobString>
+  
+  <!-- EN: make advanced component x2 -->
+  <GR_Make_ComponentSpacer.label>制作高级零部件 x2</GR_Make_ComponentSpacer.label>
+  <!-- EN: Make  advanced component. -->
+  <GR_Make_ComponentSpacer.description>制作高级零部件。</GR_Make_ComponentSpacer.description>
+  <!-- EN: Making advanced component. -->
+  <GR_Make_ComponentSpacer.jobString>正在制作高级零部件。</GR_Make_ComponentSpacer.jobString>
+  
+  <!-- EN: make advanced component x2 -->
+  <GR_Make_ComponentSpacer_Nanites.label>制作高级零部件 x2</GR_Make_ComponentSpacer_Nanites.label>
+  <!-- EN: Make advanced component. -->
+  <GR_Make_ComponentSpacer_Nanites.description>使用灰潮源质制造高级零部件。</GR_Make_ComponentSpacer_Nanites.description>
+  <!-- EN: Making advanced component. -->
+  <GR_Make_ComponentSpacer_Nanites.jobString>正在制作高级零部件</GR_Make_ComponentSpacer_Nanites.jobString>
+  
   <!-- EN: production Gray Flesh -->
-  <GR_Make_GrayFlesh.label>TODO</GR_Make_GrayFlesh.label>
+  <GR_Make_GrayFlesh.label>生产灰色血肉</GR_Make_GrayFlesh.label>
   <!-- EN: Uses organic matter to production Gray Flesh. -->
-  <GR_Make_GrayFlesh.description>TODO</GR_Make_GrayFlesh.description>
+  <GR_Make_GrayFlesh.description>利用有机物生产灰色血肉。</GR_Make_GrayFlesh.description>
   <!-- EN: Production Gray Flesh -->
-  <GR_Make_GrayFlesh.jobString>TODO</GR_Make_GrayFlesh.jobString>
-  
-  <!-- EN: make Nanites x2500 -->
-  <GR_Plasteel_Make_Nanites.label>制作灰潮源质 x2500</GR_Plasteel_Make_Nanites.label>
-  <!-- EN: Make Nanites. -->
-  <GR_Plasteel_Make_Nanites.description>使用玻璃钢制造灰潮源质。</GR_Plasteel_Make_Nanites.description>
-  <!-- EN: Making Nanites. -->
-  <GR_Plasteel_Make_Nanites.jobString>正在将玻璃钢转化成灰潮源质</GR_Plasteel_Make_Nanites.jobString>
-  
-  <!-- EN: make Nanites x2500 -->
-  <GR_Plasteel_Make_Nanites_More.label>制作灰潮源质 x2500</GR_Plasteel_Make_Nanites_More.label>
-  <!-- EN: Make Nanites. -->
-  <GR_Plasteel_Make_Nanites_More.description>使用玻璃钢制造灰潮源质。</GR_Plasteel_Make_Nanites_More.description>
-  <!-- EN: Making Nanites. -->
-  <GR_Plasteel_Make_Nanites_More.jobString>正在将玻璃钢转化成灰潮源质</GR_Plasteel_Make_Nanites_More.jobString>
-  
-  <!-- EN: make Nanites x500 -->
-  <GR_Steel_Make_Nanites.label>制作灰潮源质 x500</GR_Steel_Make_Nanites.label>
-  <!-- EN: Make Nanites. -->
-  <GR_Steel_Make_Nanites.description>使用钢铁制造灰潮源质。</GR_Steel_Make_Nanites.description>
-  <!-- EN: Making Nanites. -->
-  <GR_Steel_Make_Nanites.jobString>正在将钢铁转化成灰潮源质</GR_Steel_Make_Nanites.jobString>
-  
-  <!-- EN: make Nanites x125 -->
-  <GR_Steel_Make_Nanites_LowEfficiency.label>TODO</GR_Steel_Make_Nanites_LowEfficiency.label>
-  <!-- EN: Make Nanites. -->
-  <GR_Steel_Make_Nanites_LowEfficiency.description>TODO</GR_Steel_Make_Nanites_LowEfficiency.description>
-  <!-- EN: Making Nanites. -->
-  <GR_Steel_Make_Nanites_LowEfficiency.jobString>TODO</GR_Steel_Make_Nanites_LowEfficiency.jobString>
-  
-  <!-- EN: make Nanites x5000 -->
-  <GR_Steel_Make_Nanites_More.label>制作灰潮源质 x5000</GR_Steel_Make_Nanites_More.label>
-  <!-- EN: Make Nanites. -->
-  <GR_Steel_Make_Nanites_More.description>使用钢铁制造灰潮源质。</GR_Steel_Make_Nanites_More.description>
-  <!-- EN: Making Nanites. -->
-  <GR_Steel_Make_Nanites_More.jobString>正在将钢铁转化成灰潮源质</GR_Steel_Make_Nanites_More.jobString>
-  
-  <!-- EN: make Nanites x1000 -->
-  <GR_Uranium_Make_Nanites.label>制作灰潮源质 x1000</GR_Uranium_Make_Nanites.label>
-  <!-- EN: Make Nanites. -->
-  <GR_Uranium_Make_Nanites.description>使用铀制造灰潮源质。</GR_Uranium_Make_Nanites.description>
-  <!-- EN: Making Nanites. -->
-  <GR_Uranium_Make_Nanites.jobString>正在将铀转化成灰潮源质</GR_Uranium_Make_Nanites.jobString>
-  
-  <!-- EN: make Nanites x10000 -->
-  <GR_Uranium_Make_Nanites_More.label>制作灰潮源质 x10000</GR_Uranium_Make_Nanites_More.label>
-  <!-- EN: Make Nanites. -->
-  <GR_Uranium_Make_Nanites_More.description>使用铀制造灰潮源质。</GR_Uranium_Make_Nanites_More.description>
-  <!-- EN: Making Nanites. -->
-  <GR_Uranium_Make_Nanites_More.jobString>正在将铀转化成灰潮源质</GR_Uranium_Make_Nanites_More.jobString>
+  <GR_Make_GrayFlesh.jobString>生产灰色血肉</GR_Make_GrayFlesh.jobString>
   
 </LanguageData>

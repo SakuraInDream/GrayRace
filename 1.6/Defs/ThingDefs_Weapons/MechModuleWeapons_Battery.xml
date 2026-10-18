@@ -4,8 +4,8 @@
   <!-- ================ 动能火炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_KineticBattery</defName>
-    <label>动能火炮</label>
-    <description>射程极远的火炮，火力猛烈，而且准确性极高。</description>
+    <label>Kinetic Cannon</label>
+    <description>A cannon with extreme range, fierce firepower, and exceptional accuracy.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -36,7 +36,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechKineticBattery</defName>
-    <label>动能火炮弹丸</label>
+    <label>Kinetic Cannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -51,8 +51,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_KineticBatteryPlus</defName>
-    <label>先进动能火炮</label>
-    <description>更为强劲的远程舰载火力系统，装备有升级版的发射装置和火控系统。</description>
+    <label>Advanced Kinetic Cannon</label>
+    <description>A more powerful long-range naval firepower system equipped with upgraded launchers and fire-control systems.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -83,7 +83,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechKineticBatteryPlus</defName>
-    <label>先进动能火炮弹丸</label>
+    <label>Advanced Kinetic Cannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>

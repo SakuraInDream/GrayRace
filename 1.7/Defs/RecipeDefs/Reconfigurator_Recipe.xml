@@ -1,122 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!--零部件-->
-
-  <RecipeDef>
-    <defName>GR_Make_ComponentIndustrial</defName>
-    <label>make component x2</label>
-    <description>Make component.</description>
-    <jobString>Making component.</jobString>
-    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>6000</workAmount>
-    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-    <recipeUsers>
-      <li>GR_NaniteReconfigurator</li>
-    </recipeUsers>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </filter>
-        <count>12</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>GR_Nanites</li>
-          </thingDefs>
-        </filter>
-        <count>6</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Steel</li>
-        <li>GR_Nanites</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <products>
-      <ComponentIndustrial>2</ComponentIndustrial>
-    </products>
-    <skillRequirements>
-      <Crafting>8</Crafting>
-    </skillRequirements>
-    <workSkill>Crafting</workSkill>
-    <displayPriority>0</displayPriority>
-  </RecipeDef>
-
-  <!--高级零部件-->
-
-  <RecipeDef>
-    <defName>GR_Make_ComponentSpacer</defName>
-    <label>make advanced component x2</label>
-    <description>Make  advanced component.</description>
-    <jobString>Making advanced component.</jobString>
-    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_Machining</soundWorking>
-    <workAmount>12000</workAmount>
-    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-    <recipeUsers>
-      <li>GR_NaniteReconfigurator</li>
-    </recipeUsers>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>GR_Nanites</li>
-          </thingDefs>
-        </filter>
-        <count>10</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>GR_Alloy</li>
-          </thingDefs>
-        </filter>
-        <count>10</count>
-      </li>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Gold</li>
-          </thingDefs>
-        </filter>
-        <count>0.3</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>GR_Nanites</li>
-        <li>GR_Alloy</li>
-        <li>Gold</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <products>
-      <ComponentSpacer>2</ComponentSpacer>
-    </products>
-    <skillRequirements>
-      <Crafting>8</Crafting>
-    </skillRequirements>
-    <workSkill>Crafting</workSkill>
-    <displayPriority>1</displayPriority>
-  </RecipeDef>
-
   <!--灰潮核心-->
-
   <RecipeDef>
     <defName>GR_Make_GrayCore</defName>
     <label>make Nanite Core</label>
     <description>Make Nanite Core.</description>
     <jobString>Making Nanite Core.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
+    <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>30000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
@@ -164,18 +56,17 @@
       <Intellectual>12</Intellectual>
     </skillRequirements>
     <workSkill>Crafting</workSkill>
-    <displayPriority>2</displayPriority>
+    <displayPriority>3</displayPriority>
   </RecipeDef>
 
   <!--仿制灰潮核心-->
-
   <RecipeDef>
     <defName>GR_Make_GrayCorePoor</defName>
     <label>make Imitation Nanite Core</label>
     <description>Make Imitation Nanite Core.</description>
     <jobString>Making Imitation Nanite Core.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
+    <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>12000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
@@ -223,18 +114,17 @@
       <Intellectual>8</Intellectual>
     </skillRequirements>
     <workSkill>Crafting</workSkill>
-    <displayPriority>3</displayPriority>
+    <displayPriority>4</displayPriority>
   </RecipeDef>
 
   <!--人格核心-->
-
   <RecipeDef>
     <defName>GR_Make_AICore</defName>
     <label>make AI Persona Core</label>
     <description>Make AI Persona Core.</description>
     <jobString>Making AI Persona Core.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
+    <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>30000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
@@ -291,18 +181,17 @@
       <Intellectual>12</Intellectual>
     </skillRequirements>
     <workSkill>Crafting</workSkill>
-    <displayPriority>4</displayPriority>
+    <displayPriority>2</displayPriority>
   </RecipeDef>
 
   <!--基本立方-->
-
   <RecipeDef>
     <defName>GR_Make_FundamentalCube</defName>
     <label>make Fundamental Cube</label>
     <description>Make Fundamental Cube.</description>
     <jobString>Making Fundamental Cube.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
+    <effectWorking>Smith</effectWorking>
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>1200000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
@@ -343,7 +232,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <GR_FundamentalCube>4</GR_FundamentalCube>
+      <GR_FundamentalCube>1</GR_FundamentalCube>
     </products>
     <skillRequirements>
       <Crafting>18</Crafting>
@@ -351,6 +240,86 @@
     </skillRequirements>
     <workSkill>Crafting</workSkill>
     <displayPriority>100</displayPriority>
+  </RecipeDef>
+
+  <!--治愈机械液-->
+  <RecipeDef>
+    <defName>GR_Make_MechSerumHealer</defName>
+    <label>make healer mech serum</label>
+    <description>Make healer mech serum.</description>
+    <jobString>Making healer mech serum.</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>60000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <recipeUsers>
+      <li>GR_NaniteReconfigurator</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>500</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GR_Nanites</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <MechSerumHealer>1</MechSerumHealer>
+    </products>
+    <skillRequirements>
+      <Crafting>14</Crafting>
+      <Intellectual>14</Intellectual>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <displayPriority>98</displayPriority>
+  </RecipeDef>
+
+  <!--复活机械液-->
+  <RecipeDef>
+    <defName>GR_Make_MechSerumResurrector</defName>
+    <label>make resurrector mech serum</label>
+    <description>Make resurrector mech serum.</description>
+    <jobString>Making resurrector mech serum.</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>300000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <recipeUsers>
+      <li>GR_NaniteReconfigurator</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>5000</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GR_Nanites</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <MechSerumResurrector>1</MechSerumResurrector>
+    </products>
+    <skillRequirements>
+      <Crafting>18</Crafting>
+      <Intellectual>18</Intellectual>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <displayPriority>99</displayPriority>
   </RecipeDef>
 
 </Defs>

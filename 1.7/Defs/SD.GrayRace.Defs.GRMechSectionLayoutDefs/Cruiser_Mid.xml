@@ -35,7 +35,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
     <defName>GR_Cruiser_Mid_S2HB</defName>
-    <label>格纳库核心</label>
+    <label>Hangar Core</label>
     <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_S2HB.</description>
     <uiOrder>0</uiOrder>
     <slots>
@@ -61,7 +61,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
     <defName>GR_Cruiser_Mid_L1M1</defName>
-    <label>巨炮核心</label>
+    <label>Artillery Core</label>
     <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_L1M1.</description>
     <uiOrder>1</uiOrder>
     <slots>
@@ -82,7 +82,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
     <defName>GR_Cruiser_Mid_M3</defName>
-    <label>齐射核心</label>
+    <label>Salvo Core</label>
     <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_M3.</description>
     <uiOrder>2</uiOrder>
     <slots>
@@ -109,7 +109,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Cruiser_MidBase">
     <defName>GR_Cruiser_Mid_M2S2</defName>
-    <label>鱼雷核心</label>
+    <label>Torpedo Core</label>
     <description>Heavy carrier mid section copied from Stellaris CRUISER_MID_M2S2.</description>
     <uiOrder>3</uiOrder>
     <slots>

@@ -2,8 +2,8 @@
 <Defs>
   <!-- 物质投射炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver1Base" Abstract="True">
-    <label>物质投射炮</label>
-    <description>此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。</description>
+    <label>Mass Driver</label>
+    <description>This electromagnetic projectile weapon uses magnets to cyclotron-accelerate armor-piercing rounds to extreme velocities.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_1</iconPath>
     <slotFamily>MassDriver1</slotFamily>
     <researchPrerequisites>
@@ -62,8 +62,8 @@
 
   <!-- 线圈炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver2Base" Abstract="True">
-    <label>线圈炮</label>
-    <description>线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。</description>
+    <label>Coilgun</label>
+    <description>The coilgun is an upgraded version of the early mass driver, using electromagnetic coils to accelerate projectiles more efficiently.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_2</iconPath>
     <slotFamily>MassDriver2</slotFamily>
     <researchPrerequisites>
@@ -122,8 +122,8 @@
 
   <!-- 轨道炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver3Base" Abstract="True">
-    <label>轨道炮</label>
-    <description>轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。</description>
+    <label>Railgun</label>
+    <description>The railgun is the latest electromagnetic accelerator. It launches projectiles at incredible speed by accelerating them along twin parallel rails.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_3</iconPath>
     <slotFamily>MassDriver3</slotFamily>
     <researchPrerequisites>
@@ -182,8 +182,8 @@
 
   <!-- 先进轨道炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver4Base" Abstract="True">
-    <label>先进轨道炮</label>
-    <description>经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。</description>
+    <label>Advanced Railgun</label>
+    <description>A new version of the classic railgun, using sturdier rails and increased energy allocation. These weapons are more powerful and accurate than their predecessors.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_4</iconPath>
     <slotFamily>MassDriver4</slotFamily>
     <researchPrerequisites>
@@ -245,8 +245,8 @@
 
   <!-- 高斯炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MassDriver5Base" Abstract="True">
-    <label>高斯炮</label>
-    <description>在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。</description>
+    <label>Gauss Cannon</label>
+    <description>After upgrading the design of older electromagnetic coils, this new version is even more destructive than the most advanced railgun. It fires more accurately and at higher speed.</description>
     <iconPath>Icon/ShipParts/ship_part_mass_driver_5</iconPath>
     <slotFamily>MassDriver5</slotFamily>
     <researchPrerequisites>
@@ -299,8 +299,8 @@
 
   <!-- 兆级加农炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MegaCannonBase" Abstract="True">
-    <label>兆级加农炮</label>
-    <description>一款无比庞大的质量加速炮，只能安装在轴基武器台上。能够在极远距离射出威力惊人的炮弹。</description>
+    <label>Mega Cannon</label>
+    <description>An enormous mass accelerator cannon that can only be mounted on a spinal weapon mount. It fires projectiles of terrifying power at extreme range.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
     <slotFamily>MegaCannon</slotFamily>
     <researchPrerequisites>
@@ -325,13 +325,13 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_MegaCannonBase">
     <defName>GR_MechModule_MegaCannonPlus</defName>
-    <label>千兆级加农炮</label>
-    <description>更加强大的质量加速炮，能够轻易撕毁最坚固的护盾。</description>
+    <label>Giga Cannon</label>
+    <description>A more powerful mass accelerator capable of tearing through even the strongest shields.</description>
     <compatibleSlots>
       <li>GR_MechSlot_ExtraLarge</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>88</GR_Alloy>
+      <GR_Alloy>229</GR_Alloy>
       <Chemfuel>67</Chemfuel>
     </costList>
     <power>-260</power>

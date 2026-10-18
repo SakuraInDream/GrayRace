@@ -1,53 +1,53 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: 建造战列舰 -->
-  <GR_Mech_BB.label>TODO</GR_Mech_BB.label>
+  <GR_Mech_BB.label>建造战列舰</GR_Mech_BB.label>
   <!-- EN: 战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。 -->
-  <GR_Mech_BB.description>TODO</GR_Mech_BB.description>
+  <GR_Mech_BB.description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</GR_Mech_BB.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GR_Mech_BB.jobString>TODO</GR_Mech_BB.jobString>
+  <GR_Mech_BB.jobString>正在执行未知配方。</GR_Mech_BB.jobString>
   
   <!-- EN: 建造护卫舰 -->
-  <GR_Mech_Corvette.label>TODO</GR_Mech_Corvette.label>
+  <GR_Mech_Corvette.label>建造护卫舰</GR_Mech_Corvette.label>
   <!-- EN: 护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。 -->
-  <GR_Mech_Corvette.description>TODO</GR_Mech_Corvette.description>
+  <GR_Mech_Corvette.description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</GR_Mech_Corvette.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GR_Mech_Corvette.jobString>TODO</GR_Mech_Corvette.jobString>
+  <GR_Mech_Corvette.jobString>正在执行未知配方。</GR_Mech_Corvette.jobString>
   
   <!-- EN: 建造巡洋舰 -->
-  <GR_Mech_Cruiser.label>TODO</GR_Mech_Cruiser.label>
+  <GR_Mech_Cruiser.label>建造巡洋舰</GR_Mech_Cruiser.label>
   <!-- EN: TODO -->
-  <GR_Mech_Cruiser.description>TODO</GR_Mech_Cruiser.description>
+  <GR_Mech_Cruiser.description>巡洋舰采用三段式设计，在愿意加钱的情况下可自由进行各种追加模组改装。</GR_Mech_Cruiser.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GR_Mech_Cruiser.jobString>TODO</GR_Mech_Cruiser.jobString>
+  <GR_Mech_Cruiser.jobString>正在执行未知配方。</GR_Mech_Cruiser.jobString>
   
   <!-- EN: 建造驱逐舰 -->
-  <GR_Mech_Destroyer.label>TODO</GR_Mech_Destroyer.label>
+  <GR_Mech_Destroyer.label>建造驱逐舰</GR_Mech_Destroyer.label>
   <!-- EN: TODO -->
-  <GR_Mech_Destroyer.description>TODO</GR_Mech_Destroyer.description>
+  <GR_Mech_Destroyer.description>采用双区段设计的驱逐舰可以提供多种多样的战略性武装。</GR_Mech_Destroyer.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GR_Mech_Destroyer.jobString>TODO</GR_Mech_Destroyer.jobString>
+  <GR_Mech_Destroyer.jobString>正在执行未知配方。</GR_Mech_Destroyer.jobString>
   
   <!-- EN: 建造雷击舰 -->
-  <GR_Mech_Frigate.label>TODO</GR_Mech_Frigate.label>
+  <GR_Mech_Frigate.label>建造雷击舰</GR_Mech_Frigate.label>
   <!-- EN: TODO -->
-  <GR_Mech_Frigate.description>TODO</GR_Mech_Frigate.description>
+  <GR_Mech_Frigate.description>雷击舰是护卫舰的一种先进衍生型号，专职发射鱼雷。他们更慢更脆弱，但可以对大型目标造成毁灭性的打击。</GR_Mech_Frigate.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GR_Mech_Frigate.jobString>TODO</GR_Mech_Frigate.jobString>
+  <GR_Mech_Frigate.jobString>正在执行未知配方。</GR_Mech_Frigate.jobString>
   
   <!-- EN: 建造主宰 -->
-  <GR_Mech_Juggernaut.label>TODO</GR_Mech_Juggernaut.label>
+  <GR_Mech_Juggernaut.label>建造主宰</GR_Mech_Juggernaut.label>
   <!-- EN: TODO -->
-  <GR_Mech_Juggernaut.description>TODO</GR_Mech_Juggernaut.description>
+  <GR_Mech_Juggernaut.description>这些巨型构造物既是舰船也是空间站。主宰是一种庞大的可移动空间站，可以维修和建造舰船，也就是说，它可以作为进攻性战役中行动时的前进基地使用。</GR_Mech_Juggernaut.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GR_Mech_Juggernaut.jobString>TODO</GR_Mech_Juggernaut.jobString>
+  <GR_Mech_Juggernaut.jobString>正在执行未知配方。</GR_Mech_Juggernaut.jobString>
   
   <!-- EN: 建造泰坦 -->
-  <GR_Mech_Titan.label>TODO</GR_Mech_Titan.label>
+  <GR_Mech_Titan.label>建造泰坦</GR_Mech_Titan.label>
   <!-- EN: TODO -->
-  <GR_Mech_Titan.description>TODO</GR_Mech_Titan.description>
+  <GR_Mech_Titan.description>这些巨型战舰是整个舰队的骄傲，泰坦上携带有多种武器，一般作为旗舰使用。</GR_Mech_Titan.description>
   <!-- EN: Doing an unknown recipe. -->
-  <GR_Mech_Titan.jobString>TODO</GR_Mech_Titan.jobString>
+  <GR_Mech_Titan.jobString>正在执行未知配方。</GR_Mech_Titan.jobString>
   
 </LanguageData>

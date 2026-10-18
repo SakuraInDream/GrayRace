@@ -2,7 +2,7 @@
 <Defs>
   <SD.GrayRace.Defs.GRMechSectionLayoutDef>
     <defName>GR_juggernaut_Mid</defName>
-    <label>主宰</label>
+    <label>Juggernaut</label>
     <description>Copied from Stellaris CORE_JUGGERNAUT_SECTION.</description>
     <sectionSlot>GR_MechSection_Mid</sectionSlot>
     <shipSize>GR_Chassis_Juggernaut</shipSize>

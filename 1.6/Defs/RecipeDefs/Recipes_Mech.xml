@@ -3,8 +3,8 @@
   <!-- 所有的机械体（舰船）都只需要动态消耗合金。根据区段和实际安装的模块进行计算 -->
   <RecipeDef>
     <defName>GR_Mech_Corvette</defName>
-    <label>建造护卫舰</label>
-    <description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</description>
+    <label>Build frigate</label>
+    <description>The frigate is one of the most basic warship types. It is armed and can engage enemies.</description>
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
 
     <modExtensions>
@@ -17,8 +17,8 @@
 
   <RecipeDef>
     <defName>GR_Mech_Frigate</defName>
-    <label>建造雷击舰</label>
-    <description>TODO</description>
+    <label>Build torpedo boat</label>
+    <description>The torpedo boat is an advanced derivative of the frigate, dedicated to launching torpedoes. They are slower and more fragile, but can deliver devastating strikes against large targets.</description>
     <researchPrerequisite>GR_T1MechTech</researchPrerequisite>
 
     <modExtensions>
@@ -30,8 +30,8 @@
 
   <RecipeDef>
     <defName>GR_Mech_Destroyer</defName>
-    <label>建造驱逐舰</label>
-    <description>TODO</description>
+    <label>Build destroyer</label>
+    <description>Destroyers use a two-section design, allowing a wide variety of strategic armaments.</description>
     <researchPrerequisite>GR_T2MechTech</researchPrerequisite>
 
     <modExtensions>
@@ -43,8 +43,8 @@
 
   <RecipeDef>
     <defName>GR_Mech_Cruiser</defName>
-    <label>建造巡洋舰</label>
-    <description>TODO</description>
+    <label>Build cruiser</label>
+    <description>Cruisers use a three-section design and can be freely refitted with additional modules if one is willing to pay.</description>
     <researchPrerequisite>GR_T3MechTech</researchPrerequisite>
 
     <modExtensions>
@@ -56,8 +56,8 @@
 
   <RecipeDef>
     <defName>GR_Mech_BB</defName>
-    <label>建造战列舰</label>
-    <description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</description>
+    <label>Build battleship</label>
+    <description>Battleships carry unmatched firepower and have the largest hull size, but they are expensive and poorly maneuverable.</description>
     <researchPrerequisite>GR_T4MechTech</researchPrerequisite>
 
     <modExtensions>
@@ -69,8 +69,8 @@
 
   <RecipeDef>
     <defName>GR_Mech_Titan</defName>
-    <label>建造泰坦</label>
-    <description>TODO</description>
+    <label>Build titan</label>
+    <description>These giant warships are the pride of the fleet. Titans carry a variety of weapons and usually serve as flagships.</description>
     <researchPrerequisite>GR_T5MechTech</researchPrerequisite>
 
     <modExtensions>
@@ -82,8 +82,8 @@
 
   <RecipeDef>
     <defName>GR_Mech_Juggernaut</defName>
-    <label>建造主宰</label>
-    <description>TODO</description>
+    <label>Build juggernaut</label>
+    <description>These colossal constructs are both ships and space stations. The juggernaut is an enormous mobile station that can repair and build ships, serving as a forward base during offensive campaigns.</description>
     <researchPrerequisite>GR_T6MechTech</researchPrerequisite>
 
     <modExtensions>

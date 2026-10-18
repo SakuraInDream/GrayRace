@@ -1,58 +1,70 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Mote -->
-  <Mote_GR_TitanLance.label>TODO</Mote_GR_TitanLance.label>
+  <Mote_GR_TitanLance.label>光效</Mote_GR_TitanLance.label>
   
   <!-- EN: Mote -->
-  <Mote_GRHeavyLaser.label>TODO</Mote_GRHeavyLaser.label>
+  <Mote_GRHeavyLaser.label>光效</Mote_GRHeavyLaser.label>
   
   <!-- EN: Mote -->
-  <Mote_GRHeavyMG.label>TODO</Mote_GRHeavyMG.label>
+  <Mote_GRHeavyMG.label>光效</Mote_GRHeavyMG.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Blue_L.label>TODO</Mote_GRLaserBeam_Blue_L.label>
+  <Mote_GRLaserBeam_ArcEmitters.label>光效</Mote_GRLaserBeam_ArcEmitters.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Blue_M.label>TODO</Mote_GRLaserBeam_Blue_M.label>
+  <Mote_GRLaserBeam_ArcEmittersPlus.label>光效</Mote_GRLaserBeam_ArcEmittersPlus.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Blue_S.label>TODO</Mote_GRLaserBeam_Blue_S.label>
+  <Mote_GRLaserBeam_Blue_L.label>光效</Mote_GRLaserBeam_Blue_L.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Gamma_L.label>TODO</Mote_GRLaserBeam_Gamma_L.label>
+  <Mote_GRLaserBeam_Blue_M.label>光效</Mote_GRLaserBeam_Blue_M.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Gamma_M.label>TODO</Mote_GRLaserBeam_Gamma_M.label>
+  <Mote_GRLaserBeam_Blue_S.label>光效</Mote_GRLaserBeam_Blue_S.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Gamma_S.label>TODO</Mote_GRLaserBeam_Gamma_S.label>
+  <Mote_GRLaserBeam_Gamma_L.label>光效</Mote_GRLaserBeam_Gamma_L.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Infrared_L.label>TODO</Mote_GRLaserBeam_Infrared_L.label>
+  <Mote_GRLaserBeam_Gamma_M.label>光效</Mote_GRLaserBeam_Gamma_M.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Infrared_M.label>TODO</Mote_GRLaserBeam_Infrared_M.label>
+  <Mote_GRLaserBeam_Gamma_S.label>光效</Mote_GRLaserBeam_Gamma_S.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_Infrared_S.label>TODO</Mote_GRLaserBeam_Infrared_S.label>
+  <Mote_GRLaserBeam_Infrared_L.label>光效</Mote_GRLaserBeam_Infrared_L.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_UV_L.label>TODO</Mote_GRLaserBeam_UV_L.label>
+  <Mote_GRLaserBeam_Infrared_M.label>光效</Mote_GRLaserBeam_Infrared_M.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_UV_M.label>TODO</Mote_GRLaserBeam_UV_M.label>
+  <Mote_GRLaserBeam_Infrared_S.label>光效</Mote_GRLaserBeam_Infrared_S.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_UV_S.label>TODO</Mote_GRLaserBeam_UV_S.label>
+  <Mote_GRLaserBeam_Lance.label>光效</Mote_GRLaserBeam_Lance.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_XRay_L.label>TODO</Mote_GRLaserBeam_XRay_L.label>
+  <Mote_GRLaserBeam_LancePlus.label>光效</Mote_GRLaserBeam_LancePlus.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_XRay_M.label>TODO</Mote_GRLaserBeam_XRay_M.label>
+  <Mote_GRLaserBeam_UV_L.label>光效</Mote_GRLaserBeam_UV_L.label>
   
   <!-- EN: Mote -->
-  <Mote_GRLaserBeam_XRay_S.label>TODO</Mote_GRLaserBeam_XRay_S.label>
+  <Mote_GRLaserBeam_UV_M.label>光效</Mote_GRLaserBeam_UV_M.label>
+  
+  <!-- EN: Mote -->
+  <Mote_GRLaserBeam_UV_S.label>光效</Mote_GRLaserBeam_UV_S.label>
+  
+  <!-- EN: Mote -->
+  <Mote_GRLaserBeam_XRay_L.label>光效</Mote_GRLaserBeam_XRay_L.label>
+  
+  <!-- EN: Mote -->
+  <Mote_GRLaserBeam_XRay_M.label>光效</Mote_GRLaserBeam_XRay_M.label>
+  
+  <!-- EN: Mote -->
+  <Mote_GRLaserBeam_XRay_S.label>光效</Mote_GRLaserBeam_XRay_S.label>
   
 </LanguageData>

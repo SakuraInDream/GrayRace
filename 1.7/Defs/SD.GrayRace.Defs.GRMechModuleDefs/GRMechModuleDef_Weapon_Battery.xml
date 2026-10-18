@@ -2,8 +2,8 @@
 <Defs>
   <!-- 动能火炮 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_KineticBatteryBase" Abstract="True">
-    <label>动能火炮</label>
-    <description>射程极远的火炮，火力猛烈，而且准确性极高。</description>
+    <label>Kinetic Cannon</label>
+    <description>A cannon with extreme range, fierce firepower, and exceptional accuracy.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
     <slotFamily>KineticBattery</slotFamily>
     <researchPrerequisites>
@@ -28,8 +28,8 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_KineticBatteryBase">
     <defName>GR_MechModule_KineticBatteryPlus</defName>
-    <label>先进动能火炮</label>
-    <description>更为强劲的远程舰载火力系统，装备有升级版的发射装置和火控系统。</description>
+    <label>Advanced Kinetic Cannon</label>
+    <description>A more powerful long-range naval firepower system equipped with upgraded launchers and fire-control systems.</description>
     <compatibleSlots>
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>

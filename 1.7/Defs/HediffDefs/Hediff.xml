@@ -4,10 +4,10 @@
   <!--灰潮再生-->
   <HediffDef>
     <defName>NanitesRegeneration</defName>
-    <label>灰潮再生</label>
+    <label>Gray Tide Regeneration</label>
     <hediffClass>HediffWithComps</hediffClass>
     <!-- <hediffClass>Hediff_RapidRegeneration</hediffClass> -->
-    <description>运用体内的备用灰潮源质能够快速修复身上的伤口。</description>
+    <description>Uses the spare Nanite in the body to rapidly repair wounds.</description>
     <isBad>false</isBad>
     <preventsDeath>false</preventsDeath>
     <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
@@ -27,9 +27,9 @@
   <!--灰潮生命-->
   <HediffDef>
     <defName>NanitesLife</defName>
-    <label>灰潮生命</label>
+    <label>Gray Tide Life</label>
     <hediffClass>HediffWithComps</hediffClass>
-    <description>你不应该看到这个。</description>
+    <description>You should not be seeing this.</description>
     <isBad>false</isBad>
     <preventsDeath>false</preventsDeath>
     <stages>

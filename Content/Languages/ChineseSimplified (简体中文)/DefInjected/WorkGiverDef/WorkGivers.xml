@@ -1,32 +1,32 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: reshaping things -->
-  <GR_DoBillsNaniteReconfigurator.label>TODO</GR_DoBillsNaniteReconfigurator.label>
+  <GR_DoBillsNaniteReconfigurator.label>重塑物品</GR_DoBillsNaniteReconfigurator.label>
   <!-- EN: reshaping things at -->
-  <GR_DoBillsNaniteReconfigurator.gerund>TODO</GR_DoBillsNaniteReconfigurator.gerund>
+  <GR_DoBillsNaniteReconfigurator.gerund>在...重塑物品</GR_DoBillsNaniteReconfigurator.gerund>
   <!-- EN: reshaping things at -->
-  <GR_DoBillsNaniteReconfigurator.verb>TODO</GR_DoBillsNaniteReconfigurator.verb>
+  <GR_DoBillsNaniteReconfigurator.verb>在...重塑物品</GR_DoBillsNaniteReconfigurator.verb>
   
   <!-- EN: transmuting things -->
-  <GR_DoBillsNaniteTransmuter.label>TODO</GR_DoBillsNaniteTransmuter.label>
+  <GR_DoBillsNaniteTransmuter.label>转化物品</GR_DoBillsNaniteTransmuter.label>
   <!-- EN: transmuting things at -->
-  <GR_DoBillsNaniteTransmuter.gerund>TODO</GR_DoBillsNaniteTransmuter.gerund>
+  <GR_DoBillsNaniteTransmuter.gerund>在...转化物品</GR_DoBillsNaniteTransmuter.gerund>
   <!-- EN: transmuting things at -->
-  <GR_DoBillsNaniteTransmuter.verb>TODO</GR_DoBillsNaniteTransmuter.verb>
+  <GR_DoBillsNaniteTransmuter.verb>在...转化物品</GR_DoBillsNaniteTransmuter.verb>
   
   <!-- EN: filling drydock materials -->
-  <GR_FillDrydockMaterials.label>TODO</GR_FillDrydockMaterials.label>
+  <GR_FillDrydockMaterials.label>填充干船坞材料</GR_FillDrydockMaterials.label>
   <!-- EN: filling -->
-  <GR_FillDrydockMaterials.gerund>TODO</GR_FillDrydockMaterials.gerund>
+  <GR_FillDrydockMaterials.gerund>填充中</GR_FillDrydockMaterials.gerund>
   <!-- EN: fill -->
-  <GR_FillDrydockMaterials.verb>TODO</GR_FillDrydockMaterials.verb>
+  <GR_FillDrydockMaterials.verb>填充</GR_FillDrydockMaterials.verb>
   
   <!-- EN: Filling Incubator. -->
-  <GR_FillIncubatorNanites.label>TODO</GR_FillIncubatorNanites.label>
+  <GR_FillIncubatorNanites.label>正在填充培育仓。</GR_FillIncubatorNanites.label>
   <!-- EN: filling -->
-  <GR_FillIncubatorNanites.gerund>TODO</GR_FillIncubatorNanites.gerund>
+  <GR_FillIncubatorNanites.gerund>填充中</GR_FillIncubatorNanites.gerund>
   <!-- EN: fill -->
-  <GR_FillIncubatorNanites.verb>TODO</GR_FillIncubatorNanites.verb>
+  <GR_FillIncubatorNanites.verb>填充</GR_FillIncubatorNanites.verb>
   
 </LanguageData>

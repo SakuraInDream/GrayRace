@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Infrared_S_CE</defName>
     <label>red laser beam (S)</label>
     <graphicData>
@@ -14,7 +14,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Infrared_M_CE</defName>
     <label>red laser beam (M)</label>
     <graphicData>
@@ -27,7 +27,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Infrared_L_CE</defName>
     <label>red laser beam (L)</label>
     <graphicData>
@@ -40,7 +40,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Blue_S_CE</defName>
     <label>blue laser beam (S)</label>
     <graphicData>
@@ -53,7 +53,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Blue_M_CE</defName>
     <label>blue laser beam (M)</label>
     <graphicData>
@@ -66,7 +66,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Blue_L_CE</defName>
     <label>blue laser beam (L)</label>
     <graphicData>
@@ -79,7 +79,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_UV_S_CE</defName>
     <label>UV laser beam (S)</label>
     <graphicData>
@@ -92,7 +92,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_UV_M_CE</defName>
     <label>UV laser beam (M)</label>
     <graphicData>
@@ -105,7 +105,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_UV_L_CE</defName>
     <label>UV laser beam (L)</label>
     <graphicData>
@@ -118,7 +118,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Xray_S_CE</defName>
     <label>x-ray laser beam (S)</label>
     <graphicData>
@@ -131,7 +131,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Xray_M_CE</defName>
     <label>x-ray laser beam (M)</label>
     <graphicData>
@@ -144,7 +144,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Xray_L_CE</defName>
     <label>x-ray laser beam (L)</label>
     <graphicData>
@@ -157,7 +157,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Gamma_S_CE</defName>
     <label>gamma laser beam (S)</label>
     <graphicData>
@@ -170,7 +170,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Gamma_M_CE</defName>
     <label>gamma laser beam (M)</label>
     <graphicData>
@@ -183,7 +183,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Gamma_L_CE</defName>
     <label>gamma laser beam (L)</label>
     <graphicData>
@@ -196,7 +196,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_Lances_CE</defName>
     <label>particle lance beam</label>
     <graphicData>
@@ -209,7 +209,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_LancesPlus_CE</defName>
     <label>tachyon lance beam</label>
     <graphicData>
@@ -222,7 +222,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_ArcEmitters_CE</defName>
     <label>arc beam</label>
     <graphicData>
@@ -234,7 +234,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_Laser_ArcEmittersPlus_CE</defName>
     <label>focused arc beam</label>
     <graphicData>

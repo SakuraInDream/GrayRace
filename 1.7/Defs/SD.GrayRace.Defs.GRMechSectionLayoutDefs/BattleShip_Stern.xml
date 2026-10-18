@@ -25,7 +25,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_SternBase">
     <defName>GR_BB_Stern_L1</defName>
-    <label>巨炮舰艉</label>
+    <label>Artillery Stern</label>
     <description>Artillery stern copied from Stellaris BATTLESHIP_STERN_L1.</description>
     <uiOrder>0</uiOrder>
     <slots>
@@ -40,7 +40,7 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_BattleShip_SternBase">
     <defName>GR_BB_Stern_M2</defName>
-    <label>齐射舰艉</label>
+    <label>Salvo Stern</label>
     <description>Line stern copied from Stellaris BATTLESHIP_STERN_M2.</description>
     <uiOrder>1</uiOrder>
     <slots>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 中型裂解炮弹丸 -->
+  <Bullet_GR_MechDisruptor1_M.label>中型裂解炮弹丸</Bullet_GR_MechDisruptor1_M.label>
+  
+  <!-- EN: 小型裂解炮弹丸 -->
+  <Bullet_GR_MechDisruptor1_S.label>小型裂解炮弹丸</Bullet_GR_MechDisruptor1_S.label>
+  
+  <!-- EN: 中型离子裂解炮弹丸 -->
+  <Bullet_GR_MechDisruptor2_M.label>中型离子裂解炮弹丸</Bullet_GR_MechDisruptor2_M.label>
+  
+  <!-- EN: 小型离子裂解炮弹丸 -->
+  <Bullet_GR_MechDisruptor2_S.label>小型离子裂解炮弹丸</Bullet_GR_MechDisruptor2_S.label>
+  
+  <!-- EN: 中型相位裂解炮弹丸 -->
+  <Bullet_GR_MechDisruptor3_M.label>中型相位裂解炮弹丸</Bullet_GR_MechDisruptor3_M.label>
+  
+  <!-- EN: 小型相位裂解炮弹丸 -->
+  <Bullet_GR_MechDisruptor3_S.label>小型相位裂解炮弹丸</Bullet_GR_MechDisruptor3_S.label>
+  
+  <!-- EN: 中型裂解炮 -->
+  <GR_MechWeapon_Disruptor1_M.label>中型裂解炮</GR_MechWeapon_Disruptor1_M.label>
+  <!-- EN: 裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。 -->
+  <GR_MechWeapon_Disruptor1_M.description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</GR_MechWeapon_Disruptor1_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Disruptor1_M.tools.barrel.label>枪管</GR_MechWeapon_Disruptor1_M.tools.barrel.label>
+  <!-- EN: 中型裂解炮 -->
+  <GR_MechWeapon_Disruptor1_M.verbs.Verb_Shoot.label>中型裂解炮</GR_MechWeapon_Disruptor1_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 小型裂解炮 -->
+  <GR_MechWeapon_Disruptor1_S.label>小型裂解炮</GR_MechWeapon_Disruptor1_S.label>
+  <!-- EN: 裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。 -->
+  <GR_MechWeapon_Disruptor1_S.description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</GR_MechWeapon_Disruptor1_S.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Disruptor1_S.tools.barrel.label>枪管</GR_MechWeapon_Disruptor1_S.tools.barrel.label>
+  <!-- EN: 小型裂解炮 -->
+  <GR_MechWeapon_Disruptor1_S.verbs.Verb_Shoot.label>小型裂解炮</GR_MechWeapon_Disruptor1_S.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型离子裂解炮 -->
+  <GR_MechWeapon_Disruptor2_M.label>中型离子裂解炮</GR_MechWeapon_Disruptor2_M.label>
+  <!-- EN: 这些升级版的裂解炮可以对目标发射出更具威力的离子流。 -->
+  <GR_MechWeapon_Disruptor2_M.description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</GR_MechWeapon_Disruptor2_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Disruptor2_M.tools.barrel.label>枪管</GR_MechWeapon_Disruptor2_M.tools.barrel.label>
+  <!-- EN: 中型离子裂解炮 -->
+  <GR_MechWeapon_Disruptor2_M.verbs.Verb_Shoot.label>中型离子裂解炮</GR_MechWeapon_Disruptor2_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 小型离子裂解炮 -->
+  <GR_MechWeapon_Disruptor2_S.label>小型离子裂解炮</GR_MechWeapon_Disruptor2_S.label>
+  <!-- EN: 这些升级版的裂解炮可以对目标发射出更具威力的离子流。 -->
+  <GR_MechWeapon_Disruptor2_S.description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</GR_MechWeapon_Disruptor2_S.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Disruptor2_S.tools.barrel.label>枪管</GR_MechWeapon_Disruptor2_S.tools.barrel.label>
+  <!-- EN: 小型离子裂解炮 -->
+  <GR_MechWeapon_Disruptor2_S.verbs.Verb_Shoot.label>小型离子裂解炮</GR_MechWeapon_Disruptor2_S.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 中型相位裂解炮 -->
+  <GR_MechWeapon_Disruptor3_M.label>中型相位裂解炮</GR_MechWeapon_Disruptor3_M.label>
+  <!-- EN: 最先进的相位裂解武器，这种火炮是之前的升级版相位裂解器完全军事化的成果。它们的相位抛射体更加致命。 -->
+  <GR_MechWeapon_Disruptor3_M.description>最先进的相位裂解武器，这种火炮是之前的升级版相位裂解器完全军事化的成果。它们的相位抛射体更加致命。</GR_MechWeapon_Disruptor3_M.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Disruptor3_M.tools.barrel.label>枪管</GR_MechWeapon_Disruptor3_M.tools.barrel.label>
+  <!-- EN: 中型相位裂解炮 -->
+  <GR_MechWeapon_Disruptor3_M.verbs.Verb_Shoot.label>中型相位裂解炮</GR_MechWeapon_Disruptor3_M.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 小型相位裂解炮 -->
+  <GR_MechWeapon_Disruptor3_S.label>小型相位裂解炮</GR_MechWeapon_Disruptor3_S.label>
+  <!-- EN: 这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。 -->
+  <GR_MechWeapon_Disruptor3_S.description>这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。</GR_MechWeapon_Disruptor3_S.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_Disruptor3_S.tools.barrel.label>枪管</GR_MechWeapon_Disruptor3_S.tools.barrel.label>
+  <!-- EN: 小型相位裂解炮 -->
+  <GR_MechWeapon_Disruptor3_S.verbs.Verb_Shoot.label>小型相位裂解炮</GR_MechWeapon_Disruptor3_S.verbs.Verb_Shoot.label>
+  
+</LanguageData>

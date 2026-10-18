@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 机关炮 -->
+  <GR_MechModule_Autocannon1_L.label>机关炮</GR_MechModule_Autocannon1_L.label>
+  <!-- EN: 大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。 -->
+  <GR_MechModule_Autocannon1_L.description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</GR_MechModule_Autocannon1_L.description>
+  
+  <!-- EN: 机关炮 -->
+  <GR_MechModule_Autocannon1_M.label>机关炮</GR_MechModule_Autocannon1_M.label>
+  <!-- EN: 大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。 -->
+  <GR_MechModule_Autocannon1_M.description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</GR_MechModule_Autocannon1_M.description>
+  
+  <!-- EN: 机关炮 -->
+  <GR_MechModule_Autocannon1_S.label>机关炮</GR_MechModule_Autocannon1_S.label>
+  <!-- EN: 大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。 -->
+  <GR_MechModule_Autocannon1_S.description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</GR_MechModule_Autocannon1_S.description>
+  
+  <!-- EN: 撕裂者机关炮 -->
+  <GR_MechModule_Autocannon2_L.label>撕裂者机关炮</GR_MechModule_Autocannon2_L.label>
+  <!-- EN: 这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。 -->
+  <GR_MechModule_Autocannon2_L.description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</GR_MechModule_Autocannon2_L.description>
+  
+  <!-- EN: 撕裂者机关炮 -->
+  <GR_MechModule_Autocannon2_M.label>撕裂者机关炮</GR_MechModule_Autocannon2_M.label>
+  <!-- EN: 这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。 -->
+  <GR_MechModule_Autocannon2_M.description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</GR_MechModule_Autocannon2_M.description>
+  
+  <!-- EN: 撕裂者机关炮 -->
+  <GR_MechModule_Autocannon2_S.label>撕裂者机关炮</GR_MechModule_Autocannon2_S.label>
+  <!-- EN: 这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。 -->
+  <GR_MechModule_Autocannon2_S.description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</GR_MechModule_Autocannon2_S.description>
+  
+  <!-- EN: 火风暴机关炮 -->
+  <GR_MechModule_Autocannon3_L.label>火风暴机关炮</GR_MechModule_Autocannon3_L.label>
+  <!-- EN: 设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。 -->
+  <GR_MechModule_Autocannon3_L.description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</GR_MechModule_Autocannon3_L.description>
+  
+  <!-- EN: 火风暴机关炮 -->
+  <GR_MechModule_Autocannon3_M.label>火风暴机关炮</GR_MechModule_Autocannon3_M.label>
+  <!-- EN: 设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。 -->
+  <GR_MechModule_Autocannon3_M.description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</GR_MechModule_Autocannon3_M.description>
+  
+  <!-- EN: 火风暴机关炮 -->
+  <GR_MechModule_Autocannon3_S.label>火风暴机关炮</GR_MechModule_Autocannon3_S.label>
+  <!-- EN: 设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。 -->
+  <GR_MechModule_Autocannon3_S.description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</GR_MechModule_Autocannon3_S.description>
+  
+  <!-- EN: 纳米机关炮 -->
+  <GR_MechModule_Autocannon4_L.label>纳米机关炮</GR_MechModule_Autocannon4_L.label>
+  <!-- EN: 极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。 -->
+  <GR_MechModule_Autocannon4_L.description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</GR_MechModule_Autocannon4_L.description>
+  
+  <!-- EN: 纳米机关炮 -->
+  <GR_MechModule_Autocannon4_M.label>纳米机关炮</GR_MechModule_Autocannon4_M.label>
+  <!-- EN: 极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。 -->
+  <GR_MechModule_Autocannon4_M.description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</GR_MechModule_Autocannon4_M.description>
+  
+  <!-- EN: 纳米机关炮 -->
+  <GR_MechModule_Autocannon4_S.label>纳米机关炮</GR_MechModule_Autocannon4_S.label>
+  <!-- EN: 极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。 -->
+  <GR_MechModule_Autocannon4_S.description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</GR_MechModule_Autocannon4_S.description>
+  
+</LanguageData>

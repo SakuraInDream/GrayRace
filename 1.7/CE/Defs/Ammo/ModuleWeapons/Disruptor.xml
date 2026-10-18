@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_MechDisruptor1_S_CE</defName>
     <label>disruptor bolt (S)</label>
     <graphicData>
@@ -16,7 +16,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_MechDisruptor1_M_CE</defName>
     <label>disruptor bolt (M)</label>
     <graphicData>
@@ -31,7 +31,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_MechDisruptor2_S_CE</defName>
     <label>ion disruptor bolt (S)</label>
     <graphicData>
@@ -46,7 +46,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_MechDisruptor2_M_CE</defName>
     <label>ion disruptor bolt (M)</label>
    <graphicData>
@@ -61,7 +61,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_MechDisruptor3_S_CE</defName>
     <label>phase disruptor bolt (S)</label>
     <graphicData>
@@ -76,7 +76,7 @@
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseLaserBulletTextured">
+  <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="BaseLaserBulletTextured">
     <defName>Bullet_GR_MechDisruptor3_M_CE</defName>
     <label>phase disruptor bolt (M)</label>
     <graphicData>

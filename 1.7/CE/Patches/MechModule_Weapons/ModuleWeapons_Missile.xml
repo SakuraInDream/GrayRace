@@ -17,8 +17,6 @@
       <range>89.9</range>
       <burstShotCount>6</burstShotCount>
       <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
-      <forcedMissRadius>1.2</forcedMissRadius>
-      <forcedMissEvenDispersal>true</forcedMissEvenDispersal>
       <soundCast>Shot_IncendiaryLauncher</soundCast>
       <soundCastTail>GunTail_Heavy</soundCastTail>
       <muzzleFlashScale>8</muzzleFlashScale>

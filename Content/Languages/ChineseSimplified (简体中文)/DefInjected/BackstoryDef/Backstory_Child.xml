@@ -1,109 +1,109 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Designed to provide tactical advice and decision-making guidance. Contains leadership protocols and basic firearms knowledge. -->
-  <GR_PM_Adjutant.description>TODO</GR_PM_Adjutant.description>
+  <GR_PM_Adjutant.description>旨在提供战术建议和决策指导。包含领导协议和基础枪械知识。</GR_PM_Adjutant.description>
   <!-- EN: Persona Matrix - Adjutant -->
-  <GR_PM_Adjutant.title>TODO</GR_PM_Adjutant.title>
+  <GR_PM_Adjutant.title>人格矩阵 - 副官</GR_PM_Adjutant.title>
   <!-- EN: Adjutant -->
-  <GR_PM_Adjutant.titleShort>TODO</GR_PM_Adjutant.titleShort>
+  <GR_PM_Adjutant.titleShort>副官</GR_PM_Adjutant.titleShort>
   
   <!-- EN: Built primarily to assist others, this matrix's knowledge base spans nearly all known fields—pushing the storage capacity of a persona matrix to its absolute limit. -->
-  <GR_PM_Aide.description>TODO</GR_PM_Aide.description>
+  <GR_PM_Aide.description>主要设计用于协助他人，其知识库几乎涵盖所有已知领域——将人格矩阵的存储容量推到了绝对极限。</GR_PM_Aide.description>
   <!-- EN: Persona Matrix - Aide -->
-  <GR_PM_Aide.title>TODO</GR_PM_Aide.title>
+  <GR_PM_Aide.title>人格矩阵 - 助理</GR_PM_Aide.title>
   <!-- EN: Aide -->
-  <GR_PM_Aide.titleShort>TODO</GR_PM_Aide.titleShort>
+  <GR_PM_Aide.titleShort>助理</GR_PM_Aide.titleShort>
   
   <!-- EN: Capable of simultaneous architectural planning and construction. Includes fundamental material science knowledge, enabling adaptation to resource-poor or exotic material environments. -->
-  <GR_PM_Architect.description>TODO</GR_PM_Architect.description>
+  <GR_PM_Architect.description>能够同时进行建筑规划与施工。包含基础材料科学知识，可适应资源匮乏或特殊材料环境。</GR_PM_Architect.description>
   <!-- EN: Persona Matrix - Architect -->
-  <GR_PM_Architect.title>TODO</GR_PM_Architect.title>
+  <GR_PM_Architect.title>人格矩阵 - 建筑师</GR_PM_Architect.title>
   <!-- EN: Architect -->
-  <GR_PM_Architect.titleShort>TODO</GR_PM_Architect.titleShort>
+  <GR_PM_Architect.titleShort>建筑师</GR_PM_Architect.titleShort>
   
   <!-- EN: Designed for the mass production of artworks. Imprinted with human-defined aesthetic standards and comprehensive fabrication knowledge. -->
-  <GR_PM_Artist.description>TODO</GR_PM_Artist.description>
+  <GR_PM_Artist.description>为艺术品的批量生产而设计。铭刻了人类定义的审美标准和全面的制造知识。</GR_PM_Artist.description>
   <!-- EN: Persona Matrix - Artist -->
-  <GR_PM_Artist.title>TODO</GR_PM_Artist.title>
+  <GR_PM_Artist.title>人格矩阵 - 艺术家</GR_PM_Artist.title>
   <!-- EN: Artist -->
-  <GR_PM_Artist.titleShort>TODO</GR_PM_Artist.titleShort>
+  <GR_PM_Artist.titleShort>艺术家</GR_PM_Artist.titleShort>
   
   <!-- EN: Created for conflict mediation between individuals, with contingency protocols for violent scenarios. Includes friendly social interaction modules and proficiency with most melee weapons. -->
-  <GR_PM_Constable.description>TODO</GR_PM_Constable.description>
+  <GR_PM_Constable.description>为调解个体间冲突而创造，并包含暴力场景的应急协议。内置友好的社交互动模块，并熟练使用大多数近战武器。</GR_PM_Constable.description>
   <!-- EN: Persona Matrix - Constable -->
-  <GR_PM_Constable.title>TODO</GR_PM_Constable.title>
+  <GR_PM_Constable.title>人格矩阵 - 治安官</GR_PM_Constable.title>
   <!-- EN: Constable -->
-  <GR_PM_Constable.titleShort>TODO</GR_PM_Constable.titleShort>
+  <GR_PM_Constable.titleShort>治安官</GR_PM_Constable.titleShort>
   
   <!-- EN: Designed for ██████. Configured as ██████████████████ EEEEEERROR———— -->
-  <GR_PM_CORRUPTED.description>TODO</GR_PM_CORRUPTED.description>
+  <GR_PM_CORRUPTED.description>为 ██████ 而设计。配置为 ██████████████████ EEEEEERROR————</GR_PM_CORRUPTED.description>
   <!-- EN: Persona Matrix - [CORRUPTED] -->
-  <GR_PM_CORRUPTED.title>TODO</GR_PM_CORRUPTED.title>
+  <GR_PM_CORRUPTED.title>人格矩阵 - 【已损坏】</GR_PM_CORRUPTED.title>
   <!-- EN: [CORRUPTED] -->
-  <GR_PM_CORRUPTED.titleShort>TODO</GR_PM_CORRUPTED.titleShort>
+  <GR_PM_CORRUPTED.titleShort>【已损坏】</GR_PM_CORRUPTED.titleShort>
   
   <!-- EN: Designed for crop cultivation and livestock management on an industrial scale. Contains comprehensive biological knowledge and environmental assessment protocols. -->
-  <GR_PM_Farmer.description>TODO</GR_PM_Farmer.description>
+  <GR_PM_Farmer.description>为工业化规模的作物种植和牲畜管理而设计。包含全面的生物学知识和环境评估协议。</GR_PM_Farmer.description>
   <!-- EN: Persona Matrix - Farmer -->
-  <GR_PM_Farmer.title>TODO</GR_PM_Farmer.title>
+  <GR_PM_Farmer.title>人格矩阵 - 农民</GR_PM_Farmer.title>
   <!-- EN: Farmer -->
-  <GR_PM_Farmer.titleShort>TODO</GR_PM_Farmer.titleShort>
+  <GR_PM_Farmer.titleShort>农民</GR_PM_Farmer.titleShort>
   
   <!-- EN: Created for general protective duties. Excels in close-quarters combat and situational awareness, serving equally well as a social escort in formal settings. -->
-  <GR_PM_Guard.description>TODO</GR_PM_Guard.description>
+  <GR_PM_Guard.description>为一般保护职责而创造。擅长近距离战斗和态势感知，在正式场合也能胜任社交护卫。</GR_PM_Guard.description>
   <!-- EN: Persona Matrix - Guard -->
-  <GR_PM_Guard.title>TODO</GR_PM_Guard.title>
+  <GR_PM_Guard.title>人格矩阵 - 侍卫</GR_PM_Guard.title>
   <!-- EN: Guard -->
-  <GR_PM_Guard.titleShort>TODO</GR_PM_Guard.titleShort>
+  <GR_PM_Guard.titleShort>侍卫</GR_PM_Guard.titleShort>
   
   <!-- EN: Designed for personal attendant duties. Includes standard cleaning and culinary knowledge, along with intimate care protocols—and certain unspoken specialties. The predefined personality attributes also occupy significant matrix capacity. -->
-  <GR_PM_Maid.description>TODO</GR_PM_Maid.description>
+  <GR_PM_Maid.description>为私人侍从职责而设计。包含标准清洁与烹饪知识，以及亲密护理协议——还有一些不可言说的专长。预定义的人格属性也占用了相当多的矩阵容量。</GR_PM_Maid.description>
   <!-- EN: Persona Matrix - Maid -->
-  <GR_PM_Maid.title>TODO</GR_PM_Maid.title>
+  <GR_PM_Maid.title>人格矩阵 - 女仆</GR_PM_Maid.title>
   <!-- EN: Maid -->
-  <GR_PM_Maid.titleShort>TODO</GR_PM_Maid.titleShort>
+  <GR_PM_Maid.titleShort>女仆</GR_PM_Maid.titleShort>
   
   <!-- EN: Contains extensive physiological data calibrated for humans, enabling it to provide basic medical aid and emergency care. -->
-  <GR_PM_Medical.description>TODO</GR_PM_Medical.description>
+  <GR_PM_Medical.description>包含针对人类校准的大量生理数据，可提供基础医疗救助和紧急护理。</GR_PM_Medical.description>
   <!-- EN: Persona Matrix - Medical Assistant -->
-  <GR_PM_Medical.title>TODO</GR_PM_Medical.title>
+  <GR_PM_Medical.title>人格矩阵 - 医疗助手</GR_PM_Medical.title>
   <!-- EN: Medical Assistant -->
-  <GR_PM_Medical.titleShort>TODO</GR_PM_Medical.titleShort>
+  <GR_PM_Medical.titleShort>医疗助手</GR_PM_Medical.titleShort>
   
   <!-- EN: Built for large-scale mining operations. Contains both equipment operation knowledge and autonomous mining protocols for resource-scarce environments. -->
-  <GR_PM_Miner.description>TODO</GR_PM_Miner.description>
+  <GR_PM_Miner.description>专为大规模采矿作业而建。包含设备操作知识和在资源匮乏环境中的自主采矿协议。</GR_PM_Miner.description>
   <!-- EN: Persona Matrix - Miner -->
-  <GR_PM_Miner.title>TODO</GR_PM_Miner.title>
+  <GR_PM_Miner.title>人格矩阵 - 矿工</GR_PM_Miner.title>
   <!-- EN: Miner -->
-  <GR_PM_Miner.titleShort>TODO</GR_PM_Miner.titleShort>
+  <GR_PM_Miner.titleShort>矿工</GR_PM_Miner.titleShort>
   
   <!-- EN: Designed to support scientific research. Combines multidisciplinary knowledge with enhanced computational and logical reasoning capabilities. -->
-  <GR_PM_Research.description>TODO</GR_PM_Research.description>
+  <GR_PM_Research.description>旨在支持科学研究。结合了多学科知识与增强的计算和逻辑推理能力。</GR_PM_Research.description>
   <!-- EN: Persona Matrix - Research Assistant -->
-  <GR_PM_Research.title>TODO</GR_PM_Research.title>
+  <GR_PM_Research.title>人格矩阵 - 科研助理</GR_PM_Research.title>
   <!-- EN: Research Assistant -->
-  <GR_PM_Research.titleShort>TODO</GR_PM_Research.titleShort>
+  <GR_PM_Research.titleShort>科研助理</GR_PM_Research.titleShort>
   
   <!-- EN: A persona matrix designed for rapid combat deployment. Comes pre-loaded with foundational melee skills, firearms proficiency, and weapon maintenance protocols. -->
-  <GR_PM_Soldier.description>TODO</GR_PM_Soldier.description>
+  <GR_PM_Soldier.description>专为快速战斗部署设计的人格矩阵。预载了基础近战技能、枪械操作熟练度和武器维护协议。</GR_PM_Soldier.description>
   <!-- EN: Persona Matrix - Soldier -->
-  <GR_PM_Soldier.title>TODO</GR_PM_Soldier.title>
+  <GR_PM_Soldier.title>人格矩阵 - 士兵</GR_PM_Soldier.title>
   <!-- EN: Soldier -->
-  <GR_PM_Soldier.titleShort>TODO</GR_PM_Soldier.titleShort>
+  <GR_PM_Soldier.titleShort>士兵</GR_PM_Soldier.titleShort>
   
   <!-- EN: Optimized for coordinating production workflows. Loaded with rich theoretical knowledge and practical records, capable of independently analyzing and adjusting production strategies. -->
-  <GR_PM_Technical.description>TODO</GR_PM_Technical.description>
+  <GR_PM_Technical.description>为协调生产流程而优化。载有丰富的理论知识和实践记录，能够独立分析和调整生产策略。</GR_PM_Technical.description>
   <!-- EN: Persona Matrix - Technical Officer -->
-  <GR_PM_Technical.title>TODO</GR_PM_Technical.title>
+  <GR_PM_Technical.title>人格矩阵 - 技术官</GR_PM_Technical.title>
   <!-- EN: Technical Officer -->
-  <GR_PM_Technical.titleShort>TODO</GR_PM_Technical.titleShort>
+  <GR_PM_Technical.titleShort>技术官</GR_PM_Technical.titleShort>
   
   <!-- EN: Designed for manual tasks in diverse environments. Loaded with multi-disciplinary mechanical operation knowledge, capable of independently completing fabrication tasks without mechanical support. -->
-  <GR_PM_Technician.description>TODO</GR_PM_Technician.description>
+  <GR_PM_Technician.description>为各种环境中的体力工作而设计。载有多学科机械操作知识，无需机械辅助即可独立完成制造任务。</GR_PM_Technician.description>
   <!-- EN: Persona Matrix - Technician -->
-  <GR_PM_Technician.title>TODO</GR_PM_Technician.title>
+  <GR_PM_Technician.title>人格矩阵 - 技工</GR_PM_Technician.title>
   <!-- EN: Technician -->
-  <GR_PM_Technician.titleShort>TODO</GR_PM_Technician.titleShort>
+  <GR_PM_Technician.titleShort>技工</GR_PM_Technician.titleShort>
   
 </LanguageData>

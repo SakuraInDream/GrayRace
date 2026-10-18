@@ -2,24 +2,24 @@
 <Defs>
   <SD.GrayRace.Defs.GRMechSectionSlotDef>
     <defName>GR_MechSection_Bow</defName>
-    <label>舰艏区段</label>
-    <description>TODO</description>
+    <label>Bow Section</label>
+    <description>Bow section.</description>
     <slotId>bow</slotId>
     <uiOrder>100</uiOrder>
   </SD.GrayRace.Defs.GRMechSectionSlotDef>
 
   <SD.GrayRace.Defs.GRMechSectionSlotDef>
     <defName>GR_MechSection_Mid</defName>
-    <label>核心区段</label>
-    <description>TODO</description>
+    <label>Core Section</label>
+    <description>Core section.</description>
     <slotId>mid</slotId>
     <uiOrder>200</uiOrder>
   </SD.GrayRace.Defs.GRMechSectionSlotDef>
 
   <SD.GrayRace.Defs.GRMechSectionSlotDef>
     <defName>GR_MechSection_Stern</defName>
-    <label>舰艉区段</label>
-    <description>TODO</description>
+    <label>Stern Section</label>
+    <description>Stern section.</description>
     <slotId>stern</slotId>
     <uiOrder>300</uiOrder>
   </SD.GrayRace.Defs.GRMechSectionSlotDef>

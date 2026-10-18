@@ -4,8 +4,8 @@
   <!-- ================ 等离子发射器 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma1_S</defName>
-    <label>小型等离子发射器</label>
-    <description>可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。</description>
+    <label>Small Plasma Thrower</label>
+    <description>A weapon that fires devastating high-energy plasma spheres. These plasma projectiles are especially effective against the armor of large ships.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -35,7 +35,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma1_S</defName>
-    <label>小型等离子发射器弹丸</label>
+    <label>Small Plasma Thrower Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -50,8 +50,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma1_M</defName>
-    <label>中型等离子发射器</label>
-    <description>可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。</description>
+    <label>Medium Plasma Thrower</label>
+    <description>A weapon that fires devastating high-energy plasma spheres. These plasma projectiles are especially effective against the armor of large ships.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -81,7 +81,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma1_M</defName>
-    <label>中型等离子发射器弹丸</label>
+    <label>Medium Plasma Thrower Bolt</label>
 
     <graphicData>
       <texPath>Things/Projectile/Bullet_Thump</texPath>
@@ -99,8 +99,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma1_L</defName>
-    <label>大型等离子发射器</label>
-    <description>可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。</description>
+    <label>Large Plasma Thrower</label>
+    <description>A weapon that fires devastating high-energy plasma spheres. These plasma projectiles are especially effective against the armor of large ships.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
@@ -131,7 +131,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma1_L</defName>
-    <label>大型等离子发射器弹丸</label>
+    <label>Large Plasma Thrower Bolt</label>
     <thingClass>Projectile_HellsphereCannon</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Thump</texPath>
@@ -149,8 +149,8 @@
   <!-- ================ 等离子加速器 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma2_S</defName>
-    <label>小型等离子加速器</label>
-    <description>这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。</description>
+    <label>Small Plasma Accelerator</label>
+    <description>This new accelerator cannon fires high-energy plasma held by more advanced confinement fields. The technology reduces the energy lost as the plasma travels toward its target.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -180,7 +180,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma2_S</defName>
-    <label>小型等离子加速器弹丸</label>
+    <label>Small Plasma Accelerator Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -195,8 +195,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma2_M</defName>
-    <label>中型等离子加速器</label>
-    <description>这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。</description>
+    <label>Medium Plasma Accelerator</label>
+    <description>This new accelerator cannon fires high-energy plasma held by more advanced confinement fields. The technology reduces the energy lost as the plasma travels toward its target.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -226,7 +226,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma2_M</defName>
-    <label>中型等离子加速器弹丸</label>
+    <label>Medium Plasma Accelerator Bolt</label>
     <thingClass>Projectile_HellsphereCannon</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Thump</texPath>
@@ -244,8 +244,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma2_L</defName>
-    <label>大型等离子加速器</label>
-    <description>这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。</description>
+    <label>Large Plasma Accelerator</label>
+    <description>This new accelerator cannon fires high-energy plasma held by more advanced confinement fields. The technology reduces the energy lost as the plasma travels toward its target.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
@@ -276,7 +276,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma2_L</defName>
-    <label>大型等离子加速器弹丸</label>
+    <label>Large Plasma Accelerator Bolt</label>
     <thingClass>Projectile_HellsphereCannon</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Thump</texPath>
@@ -294,8 +294,8 @@
   <!-- ================ 等离子加农炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma3_S</defName>
-    <label>小型等离子加农炮</label>
-    <description>最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。</description>
+    <label>Small Plasma Cannon</label>
+    <description>The most advanced plasma weapon, this cannon is the fully militarized result of the previous plasma accelerator. Its plasma projectiles are even deadlier.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -325,7 +325,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma3_S</defName>
-    <label>小型等离子加农炮弹丸</label>
+    <label>Small Plasma Cannon Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -340,8 +340,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma3_M</defName>
-    <label>中型等离子加农炮</label>
-    <description>最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。</description>
+    <label>Medium Plasma Cannon</label>
+    <description>The most advanced plasma weapon, this cannon is the fully militarized result of the previous plasma accelerator. Its plasma projectiles are even deadlier.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -371,7 +371,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma3_M</defName>
-    <label>中型等离子加农炮弹丸</label>
+    <label>Medium Plasma Cannon Bolt</label>
     <thingClass>Projectile_HellsphereCannon</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Thump</texPath>
@@ -389,8 +389,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Plasma3_L</defName>
-    <label>大型等离子加农炮</label>
-    <description>最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。</description>
+    <label>Large Plasma Cannon</label>
+    <description>The most advanced plasma weapon, this cannon is the fully militarized result of the previous plasma accelerator. Its plasma projectiles are even deadlier.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
@@ -421,7 +421,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechPlasma3_L</defName>
-    <label>大型等离子加农炮弹丸</label>
+    <label>Large Plasma Cannon Bolt</label>
     <thingClass>Projectile_HellsphereCannon</thingClass>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Thump</texPath>

@@ -4,8 +4,8 @@
   <!-- 下面的 iconPath 均为 Stellaris 经过垂直翻转处理后的文件 -->
   <!-- 红色激光 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_InfraredBase" Abstract="True">
-    <label>红色激光</label>
-    <description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</description>
+    <label>Red Laser</label>
+    <description>Laser weapons fire focused beams at targets, damaging enemies with intense heat.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
     <!-- slotFamily 用来解决同一武器的 S/M/L 切换问题 -->
     <slotFamily>PulseLaser_Infrared</slotFamily>
@@ -66,8 +66,8 @@
 
   <!-- 蓝色激光 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_BlueBase" Abstract="True">
-    <label>蓝色激光</label>
-    <description>比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。</description>
+    <label>Blue Laser</label>
+    <description>More powerful than red lasers. To organic beings, electromagnetic radiation of this wavelength appears blue or violet.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
     <slotFamily>PulseLaser_Blue</slotFamily>
     <researchPrerequisites>
@@ -129,8 +129,8 @@
 
   <!-- 紫外激光 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_UVBase" Abstract="True">
-    <label>紫外激光</label>
-    <description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</description>
+    <label>Ultraviolet Laser</label>
+    <description>Ultraviolet lasers are an upgraded, enhanced version of the preceding blue lasers. These weapons are precise and devastating, capable of inflicting massive damage.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
     <slotFamily>PulseLaser_UV</slotFamily>
     <researchPrerequisites>
@@ -189,8 +189,8 @@
 
   <!-- X射线激光 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_XrayBase" Abstract="True">
-    <label>X射线激光</label>
-    <description>这种激光的波长较紫外线短一些，但是更具毁灭性。</description>
+    <label>X-Ray Laser</label>
+    <description>This laser has a shorter wavelength than ultraviolet light, but is even more destructive.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_4</iconPath>
     <slotFamily>PulseLaser_Xray</slotFamily>
     <researchPrerequisites>
@@ -252,8 +252,8 @@
 
   <!-- 伽马激光 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_GammaBase" Abstract="True">
-    <label>伽马激光</label>
-    <description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</description>
+    <label>Gamma Laser</label>
+    <description>Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
     <slotFamily>PulseLaser_Gamma</slotFamily>
     <researchPrerequisites>
@@ -306,8 +306,8 @@
 
   <!-- 光矛 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_LancesBase" Abstract="True">
-    <label>粒子光矛</label>
-    <description>这些重型能量武器能够发射聚焦的粒子射线并造成巨幅伤害。发射阵列的规模限制了它们只能运用在战列舰和泰坦上。</description>
+    <label>Particle Lance</label>
+    <description>These heavy energy weapons fire focused particle beams and deal enormous damage. The size of their emitter arrays limits them to battleships and titans.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
     <slotFamily>Lances</slotFamily>
     <researchPrerequisites>
@@ -332,8 +332,8 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_LancesBase">
     <defName>GR_MechModule_Lances_Plus</defName>
-    <label>快子光矛</label>
-    <description>粒子光矛更为强力的版本，该武器发射携带有巨大能量的快子光束。和它的之前版本一样，只能运用在战列舰和泰坦上。</description>
+    <label>Tachyon Lance</label>
+    <description>A more powerful version of the particle lance, firing a tachyon beam that carries immense energy. Like its predecessor, it can only be mounted on battleships and titans.</description>
     <compatibleSlots>
       <li>GR_MechSlot_ExtraLarge</li>
     </compatibleSlots>
@@ -348,8 +348,8 @@
 
 <!-- 电弧发射器 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_ArcEmittersBase" Abstract="True">
-    <label>电弧发射器</label>
-    <description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</description>
+    <label>Arc Emitter</label>
+    <description>Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
     <slotFamily>ArcEmitters</slotFamily>
     <researchPrerequisites>
@@ -374,13 +374,13 @@
 
   <SD.GrayRace.Defs.GRMechModuleDef ParentName="GR_MechModule_ArcEmittersBase">
     <defName>GR_MechModule_ArcEmittersPlus</defName>
-    <label>聚能电弧发射器</label>
-    <description>这些升级后的发射器装备了更优秀的聚焦透镜，这使得它们可以发射出更加强大的能量。</description>
+    <label>Concentrated Arc Emitter</label>
+    <description>These upgraded emitters are equipped with superior focusing lenses, allowing them to discharge even greater energy.</description>
     <compatibleSlots>
       <li>GR_MechSlot_ExtraLarge</li>
     </compatibleSlots>
     <costList>
-      <GR_Alloy>88</GR_Alloy>
+      <GR_Alloy>229</GR_Alloy>
       <Jade>67</Jade>
     </costList>
     <power>-260</power>
@@ -391,8 +391,8 @@
   <!-- 炼狱射线 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_TitanLance</defName>
-    <label>炼狱射线</label>
-    <description>一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。</description>
+    <label>Perdition Beam</label>
+    <description>A massive array of series-linked energy amplification conduits capable of firing a beam of unprecedented power. Its size means only Titan-class starships can mount it.</description>
     <iconPath>Icon/ShipParts/ship_part_perdition_beam</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Titanic</li>
@@ -413,8 +413,8 @@
   <!-- 远古湮灭眩光 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_AncientTitanLance</defName>
-    <label>远古湮灭眩光</label>
-    <description>一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。</description>
+    <label>Ancient Ruination Glare</label>
+    <description>A massive array of series-linked energy amplification conduits capable of firing a beam of unprecedented power. Its size means only Titan-class starships can mount it.</description>
     <iconPath>Icon/ShipParts/ship_part_perdition_beam</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Titanic</li>

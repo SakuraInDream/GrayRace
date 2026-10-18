@@ -4,8 +4,8 @@
   <!-- 主宰 -->
   <ThingDef ParentName="GR_Mech">
     <defName>GR_Mech_JG</defName>
-    <label>永恒神域</label>
-    <description>永恒神域是一类特殊的超重型机械体，不仅火力凶猛盾甲厚重，还内置了一个小型制舰单元，可以在战斗中维修友方机械体和制造小型机械体，且能够搭载效果优秀的光环。</description>
+    <label>Eternal Sanctum</label>
+    <description>The Eternal Sanctum is a special super-heavy mechanoid. Not only does it have ferocious firepower and thick shields and armor, but it also contains a small shipbuilding unit that can repair friendly mechanoids and build small mechanoids during combat, and it can mount highly effective auras.</description>
     <statBases>
       <Mass>303.75</Mass>
       <MoveSpeed>4</MoveSpeed>
@@ -47,7 +47,7 @@
 
   <PawnKindDef ParentName="LightMechanoidKind">
     <defName>GR_Mech_JG</defName>
-    <label>永恒神域</label>
+    <label>Eternal Sanctum</label>
     <race>GR_Mech_JG</race>
     <combatPower>3200</combatPower>
     <maxPerGroup>1</maxPerGroup>

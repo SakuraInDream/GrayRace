@@ -4,8 +4,8 @@
   <!-- ================ 裂解炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Disruptor1_S</defName>
-    <label>小型裂解炮</label>
-    <description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</description>
+    <label>Small Disruptor</label>
+    <description>The high-energy beam fired by a disruptor simultaneously weakens and breaks the molecular bonds holding the target's atoms together. It penetrates shields and armor, dealing devastating damage directly to hull and crew.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -35,7 +35,7 @@
 
   <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_MechDisruptor1_S</defName>
-    <label>小型裂解炮弹丸</label>
+    <label>Small Disruptor Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -51,8 +51,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Disruptor1_M</defName>
-    <label>中型裂解炮</label>
-    <description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</description>
+    <label>Medium Disruptor</label>
+    <description>The high-energy beam fired by a disruptor simultaneously weakens and breaks the molecular bonds holding the target's atoms together. It penetrates shields and armor, dealing devastating damage directly to hull and crew.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -82,7 +82,7 @@
 
   <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_MechDisruptor1_M</defName>
-    <label>中型裂解炮弹丸</label>
+    <label>Medium Disruptor Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -99,8 +99,8 @@
   <!-- ================ 离子裂解炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Disruptor2_S</defName>
-    <label>小型离子裂解炮</label>
-    <description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</description>
+    <label>Small Ion Disruptor</label>
+    <description>These upgraded disruptors fire a more powerful ion stream at their targets.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -130,7 +130,7 @@
 
   <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_MechDisruptor2_S</defName>
-    <label>小型离子裂解炮弹丸</label>
+    <label>Small Ion Disruptor Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -146,8 +146,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Disruptor2_M</defName>
-    <label>中型离子裂解炮</label>
-    <description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</description>
+    <label>Medium Ion Disruptor</label>
+    <description>These upgraded disruptors fire a more powerful ion stream at their targets.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -177,7 +177,7 @@
 
   <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_MechDisruptor2_M</defName>
-    <label>中型离子裂解炮弹丸</label>
+    <label>Medium Ion Disruptor Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -194,8 +194,8 @@
   <!-- ================ 相位裂解炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Disruptor3_S</defName>
-    <label>小型相位裂解炮</label>
-    <description>这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。</description>
+    <label>Small Phase Disruptor</label>
+    <description>This extremely enhanced disruptor fires quantum energy. Any target struck suffers tremendous damage.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -225,7 +225,7 @@
 
   <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_MechDisruptor3_S</defName>
-    <label>小型相位裂解炮弹丸</label>
+    <label>Small Phase Disruptor Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -241,8 +241,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Disruptor3_M</defName>
-    <label>中型相位裂解炮</label>
-    <description>最先进的相位裂解武器，这种火炮是之前的升级版相位裂解器完全军事化的成果。它们的相位抛射体更加致命。</description>
+    <label>Medium Phase Disruptor</label>
+    <description>The most advanced phase disruption weapon, this cannon is the fully militarized result of the previous phase disruptor. Its phase projectiles are even deadlier.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -272,7 +272,7 @@
 
   <ThingDef ParentName="Bullet_GR_LaserBase">
     <defName>Bullet_GR_MechDisruptor3_M</defName>
-    <label>中型相位裂解炮弹丸</label>
+    <label>Medium Phase Disruptor Bolt</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -45,8 +45,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_BowBase">
     <defName>GR_Destroyer_BOW_M1S2</defName>
-    <label>炮艇舰艏</label>
-    <description>从Stellaris那复制的DESTROYER_BOW_M1S2。</description>
+    <label>Gunship Bow</label>
+    <description>Copied from Stellaris DESTROYER_BOW_M1S2.</description>
     <uiOrder>0</uiOrder>
     <slots>
       <li>
@@ -72,8 +72,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_BowBase">
     <defName>GR_Destroyer_BOW_S3</defName>
-    <label>哨卫舰艏</label>
-    <description>从Stellaris那复制的DESTROYER_BOW_S3。</description>
+    <label>Sentinel Bow</label>
+    <description>Copied from Stellaris DESTROYER_BOW_S3.</description>
     <uiOrder>1</uiOrder>
     <slots>
       <li>
@@ -99,8 +99,8 @@
 
   <SD.GrayRace.Defs.GRMechSectionLayoutDef ParentName="GR_Destroyer_BowBase">
     <defName>GR_Destroyer_BOW_L1</defName>
-    <label>巨炮舰艏</label>
-    <description>从Stellaris那复制的DESTROYER_BOW_L1。</description>
+    <label>Artillery Bow</label>
+    <description>Copied from Stellaris DESTROYER_BOW_L1.</description>
     <uiOrder>2</uiOrder>
     <slots>
       <li>

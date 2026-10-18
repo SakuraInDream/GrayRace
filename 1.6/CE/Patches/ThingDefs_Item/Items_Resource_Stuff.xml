@@ -70,22 +70,4 @@
     </value>
   </Operation>
 
-  <!--泽珞-->
-
-  <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="GR_Zro"]/stuffProps/statFactors</xpath>
-    <value>
-      <MeleePenetrationFactor>1.3</MeleePenetrationFactor>
-    </value>
-  </Operation>
-
-  <Operation Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="GR_Zro"]/stuffProps/categories</xpath>
-    <value>
-      <li>Metallic_Weapon</li>
-      <li>Steeled</li>
-      <li>SoftArmor</li>
-    </value>
-  </Operation>
-
 </Patch>

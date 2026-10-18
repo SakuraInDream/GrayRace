@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: 动能火炮弹丸 -->
+  <Bullet_GR_MechKineticBattery.label>动能火炮弹丸</Bullet_GR_MechKineticBattery.label>
+  
+  <!-- EN: 先进动能火炮弹丸 -->
+  <Bullet_GR_MechKineticBatteryPlus.label>先进动能火炮弹丸</Bullet_GR_MechKineticBatteryPlus.label>
+  
+  <!-- EN: 动能火炮 -->
+  <GR_MechWeapon_KineticBattery.label>动能火炮</GR_MechWeapon_KineticBattery.label>
+  <!-- EN: 射程极远的火炮，火力猛烈，而且准确性极高。 -->
+  <GR_MechWeapon_KineticBattery.description>射程极远的火炮，火力猛烈，而且准确性极高。</GR_MechWeapon_KineticBattery.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_KineticBattery.tools.barrel.label>枪管</GR_MechWeapon_KineticBattery.tools.barrel.label>
+  <!-- EN: 动能火炮 -->
+  <GR_MechWeapon_KineticBattery.verbs.Verb_Shoot.label>动能火炮</GR_MechWeapon_KineticBattery.verbs.Verb_Shoot.label>
+  
+  <!-- EN: 先进动能火炮 -->
+  <GR_MechWeapon_KineticBatteryPlus.label>先进动能火炮</GR_MechWeapon_KineticBatteryPlus.label>
+  <!-- EN: 更为强劲的远程舰载火力系统，装备有升级版的发射装置和火控系统。 -->
+  <GR_MechWeapon_KineticBatteryPlus.description>更为强劲的远程舰载火力系统，装备有升级版的发射装置和火控系统。</GR_MechWeapon_KineticBatteryPlus.description>
+  <!-- EN: barrel -->
+  <GR_MechWeapon_KineticBatteryPlus.tools.barrel.label>枪管</GR_MechWeapon_KineticBatteryPlus.tools.barrel.label>
+  <!-- EN: 先进动能火炮 -->
+  <GR_MechWeapon_KineticBatteryPlus.verbs.Verb_Shoot.label>先进动能火炮</GR_MechWeapon_KineticBatteryPlus.verbs.Verb_Shoot.label>
+  
+</LanguageData>

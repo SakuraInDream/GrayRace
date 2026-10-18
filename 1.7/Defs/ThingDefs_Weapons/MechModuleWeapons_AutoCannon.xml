@@ -4,8 +4,8 @@
   <!-- ================ 机关炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon1_S</defName>
-    <label>机关炮</label>
-    <description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</description>
+    <label>Autocannon</label>
+    <description>A large-caliber ballistic weapon that fires explosive shells. These autocannons are prized mainly for their extremely high rate of fire.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -37,7 +37,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon1_S</defName>
-    <label>小型机关炮弹丸</label>
+    <label>Small Autocannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -51,8 +51,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon1_M</defName>
-    <label>中型机关炮</label>
-    <description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</description>
+    <label>Medium Autocannon</label>
+    <description>A large-caliber ballistic weapon that fires explosive shells. These autocannons are prized mainly for their extremely high rate of fire.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -84,7 +84,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon1_M</defName>
-    <label>中型机关炮弹丸</label>
+    <label>Medium Autocannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -98,8 +98,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon1_L</defName>
-    <label>大型机关炮</label>
-    <description>大口径的弹道武器，发抛射壳炮弹。这些机炮的主要优势在于极高的射速。</description>
+    <label>Large Autocannon</label>
+    <description>A large-caliber ballistic weapon that fires explosive shells. These autocannons are prized mainly for their extremely high rate of fire.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
@@ -131,7 +131,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon1_L</defName>
-    <label>大型机关炮弹丸</label>
+    <label>Large Autocannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -146,8 +146,8 @@
   <!-- ================ 撕裂者机关炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon2_S</defName>
-    <label>撕裂者机关炮</label>
-    <description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</description>
+    <label>Ripper Cannon</label>
+    <description>These upgraded autocannons have more sophisticated tracking and fire-control systems, which also increase their rate of fire.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -179,7 +179,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon2_S</defName>
-    <label>小型撕裂者机关炮弹丸</label>
+    <label>Small Ripper Cannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -193,8 +193,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon2_M</defName>
-    <label>中型撕裂者机关炮</label>
-    <description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</description>
+    <label>Medium Ripper Cannon</label>
+    <description>These upgraded autocannons have more sophisticated tracking and fire-control systems, which also increase their rate of fire.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -226,7 +226,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon2_M</defName>
-    <label>中型撕裂者机关炮弹丸</label>
+    <label>Medium Ripper Cannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -240,8 +240,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon2_L</defName>
-    <label>大型撕裂者机关炮</label>
-    <description>这些升级版机关炮具备更完善的追踪能力和开火控制系统，因此也提升了射速。</description>
+    <label>Large Ripper Cannon</label>
+    <description>These upgraded autocannons have more sophisticated tracking and fire-control systems, which also increase their rate of fire.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
@@ -273,7 +273,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon2_L</defName>
-    <label>大型撕裂者机关炮弹丸</label>
+    <label>Large Ripper Cannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -288,8 +288,8 @@
   <!-- ================ 火风暴机关炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon3_S</defName>
-    <label>火风暴机关炮</label>
-    <description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</description>
+    <label>Stormfire Cannon</label>
+    <description>An advanced automatic cannon that can pour a barrage of high-explosive shells onto a target.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -321,7 +321,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon3_S</defName>
-    <label>小型火风暴机关炮弹丸</label>
+    <label>Small Stormfire Cannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -335,8 +335,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon3_M</defName>
-    <label>中型火风暴机关炮</label>
-    <description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</description>
+    <label>Medium Stormfire Cannon</label>
+    <description>An advanced automatic cannon that can pour a barrage of high-explosive shells onto a target.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -368,7 +368,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon3_M</defName>
-    <label>中型火风暴机关炮弹丸</label>
+    <label>Medium Stormfire Cannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -382,8 +382,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon3_L</defName>
-    <label>大型火风暴机关炮</label>
-    <description>设计先进的自动火炮，能够向目标倾泻一片由高爆炮弹构成的弹幕。</description>
+    <label>Large Stormfire Cannon</label>
+    <description>An advanced automatic cannon that can pour a barrage of high-explosive shells onto a target.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
@@ -415,7 +415,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon3_L</defName>
-    <label>大型火风暴机关炮弹丸</label>
+    <label>Large Stormfire Cannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -430,8 +430,8 @@
   <!-- ================ 纳米机关炮 ================ -->
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon4_S</defName>
-    <label>纳米机关炮</label>
-    <description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</description>
+    <label>Nanite Autocannon</label>
+    <description>An extremely advanced autocannon whose rounds detonate near the target into a cloud of nanomachines, overloading its shields and corroding its hull sections.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_S</texPath>
@@ -463,7 +463,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon4_S</defName>
-    <label>小型纳米机关炮弹丸</label>
+    <label>Small Nanite Autocannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -477,8 +477,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon4_M</defName>
-    <label>中型纳米机关炮</label>
-    <description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</description>
+    <label>Medium Nanite Autocannon</label>
+    <description>An extremely advanced autocannon whose rounds detonate near the target into a cloud of nanomachines, overloading its shields and corroding its hull sections.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_M</texPath>
@@ -510,7 +510,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon4_M</defName>
-    <label>中型纳米机关炮弹丸</label>
+    <label>Medium Nanite Autocannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -524,8 +524,8 @@
 
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_Autocannon4_L</defName>
-    <label>大型纳米机关炮</label>
-    <description>极度先进的自动火炮，射出的弹药可以在接近目标时引爆成一片纳米机器人云，以此过载目标的护盾并蚕食其船体区段。</description>
+    <label>Large Nanite Autocannon</label>
+    <description>An extremely advanced autocannon whose rounds detonate near the target into a cloud of nanomachines, overloading its shields and corroding its hull sections.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_MassDriver_L</texPath>
@@ -557,7 +557,7 @@
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_GR_MechAutocannon4_L</defName>
-    <label>大型纳米机关炮弹丸</label>
+    <label>Large Nanite Autocannon Shell</label>
     <graphicData>
       <texPath>Things/Projectile/Bullet_Small</texPath>
       <graphicClass>Graphic_Single</graphicClass>

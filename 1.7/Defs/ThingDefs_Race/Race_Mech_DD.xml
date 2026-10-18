@@ -4,8 +4,8 @@
   <!-- 驱逐舰 -->
   <ThingDef ParentName="GR_Mech">
     <defName>GR_Mech_DD</defName>
-    <label>强袭精灵</label>
-    <description>强袭级是以擅长作为前锋突进作战为傲的中型机械体，以抵近射击为作战方针。虽相比于护卫舰，外观上没有太大差异，但其火力、装甲以及本质都获得了成长。像是进入青春期般，身上那些未熟的性征开始逐渐发育，表现出未来的可能性。作为战争机器——那正趋于成熟的美丽，与这份美丽截然相反的作战方式，让敌人和伙伴在面对她时，比起对美丽的惊艳，更多的是一份畏惧。</description>
+    <label>Strike Sprite</label>
+    <description>The Strike-class is a medium mechanoid that prides itself on spearheading assaults, with close-range shooting as its doctrine. Although she looks little different from a frigate, her firepower, armor, and very nature have grown. As if entering puberty, her immature features begin to develop, showing future possibilities. As a war machine—that beauty coming into maturity, and a fighting style utterly opposed to it, make enemies and allies alike feel more awe than admiration when facing her.</description>
     <statBases>
       <Mass>60</Mass>
       <MoveSpeed>9</MoveSpeed>
@@ -47,7 +47,7 @@
 
   <PawnKindDef ParentName="LightMechanoidKind">
     <defName>GR_Mech_DD</defName>
-    <label>强袭精灵</label>
+    <label>Strike Sprite</label>
     <race>GR_Mech_DD</race>
     <combatPower>200</combatPower>
     <maxPerGroup>20</maxPerGroup>

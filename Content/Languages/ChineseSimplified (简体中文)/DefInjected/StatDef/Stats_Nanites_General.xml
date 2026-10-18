@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: 备用灰潮源质上限 -->
-  <GRStat_NaniteMax.label>TODO</GRStat_NaniteMax.label>
+  <GRStat_NaniteMax.label>备用灰潮源质上限</GRStat_NaniteMax.label>
   <!-- EN: 灰裔体内能够储存的备用纳米机械最大值。 -->
-  <GRStat_NaniteMax.description>TODO</GRStat_NaniteMax.description>
-  
+  <GRStat_NaniteMax.description>灰裔体内能够储存的备用纳米机械最大值。</GRStat_NaniteMax.description>
+
   <!-- EN: 备用灰潮源质回复率 -->
-  <GRStat_NaniteRegenRate.label>TODO</GRStat_NaniteRegenRate.label>
+  <GRStat_NaniteRegenRate.label>备用灰潮源质回复率</GRStat_NaniteRegenRate.label>
   <!-- EN: 灰裔每秒自动回复的纳米机械数量。 -->
-  <GRStat_NaniteRegenRate.description>TODO</GRStat_NaniteRegenRate.description>
-  
+  <GRStat_NaniteRegenRate.description>灰裔每秒自动回复的纳米机械数量。</GRStat_NaniteRegenRate.description>
+
   <!-- EN: 超频上限 -->
-  <GRStat_OverclockMaxLevel.label>TODO</GRStat_OverclockMaxLevel.label>
+  <GRStat_OverclockMaxLevel.label>超频上限</GRStat_OverclockMaxLevel.label>
   <!-- EN: 该灰裔当前部位可达到的最大超频百分比。 -->
-  <GRStat_OverclockMaxLevel.description>TODO</GRStat_OverclockMaxLevel.description>
-  
+  <GRStat_OverclockMaxLevel.description>该灰裔当前部位可达到的最大超频百分比。</GRStat_OverclockMaxLevel.description>
+
 </LanguageData>

@@ -54,8 +54,8 @@
 
   <ThingDef ParentName="GR_Mech">
     <defName>GR_Mech_FF</defName>
-    <label>巡空精魅</label>
-    <description>巡空级是一种专注于大量制造和灵活支援战场的轻型机械体。作为灰裔对抗敌人的先遣部队，被大量的投入战场，发生紧急状况时也可快速支援。她具备「护卫」舰应有的速度与量产性，与她身上有些简约的护甲与火力，形成绝妙的平衡。正因为是量产型，纤细的躯体与手脚似乎还有待发育，可谓是相当稚嫩……虽说如此，从本就不多的护甲遮掩下，也已然能窥见女性的曲线了。</description>
+    <label>Sky Patrol Wisp</label>
+    <description>The Sky Patrol-class is a light mechanoid focused on mass production and flexible battlefield support. As the Gray's vanguard against enemies, they are deployed in large numbers and can provide rapid support in emergencies. She has the speed and mass-producibility expected of a frigate, forming a superb balance with her somewhat simple armor and firepower. Precisely because she is a mass-produced model, her slender body and limbs seem yet to develop—quite immature... Even so, beneath what little armor she has, a feminine curve can already be glimpsed.</description>
     <statBases>
       <Mass>40</Mass>
       <MoveSpeed>12.7</MoveSpeed>
@@ -97,7 +97,7 @@
 
   <PawnKindDef ParentName="LightMechanoidKind">
     <defName>GR_Mech_FF</defName>
-    <label>巡空精魅</label>
+    <label>Sky Patrol Wisp</label>
     <race>GR_Mech_FF</race>
     <combatPower>100</combatPower>
     <maxPerGroup>20</maxPerGroup>

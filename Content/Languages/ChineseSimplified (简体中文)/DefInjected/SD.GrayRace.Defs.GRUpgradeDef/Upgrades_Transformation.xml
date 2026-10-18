@@ -1,54 +1,54 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: 挖掘臂形态 -->
-  <GR_Transform_Hand_DrillArm.label>TODO</GR_Transform_Hand_DrillArm.label>
+  <GR_Transform_Hand_DrillArm.label>挖掘臂形态</GR_Transform_Hand_DrillArm.label>
   <!-- EN: 将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。 -->
-  <GR_Transform_Hand_DrillArm.description>TODO</GR_Transform_Hand_DrillArm.description>
+  <GR_Transform_Hand_DrillArm.description>将手部变形为能加快挖掘速度的机械手臂。内置了蛇形钻杆，可以帮助矿工更快地找到岩石中的弱点。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</GR_Transform_Hand_DrillArm.description>
   
   <!-- EN: 务农手形态 -->
-  <GR_Transform_Hand_FieldHand.label>TODO</GR_Transform_Hand_FieldHand.label>
+  <GR_Transform_Hand_FieldHand.label>务农手形态</GR_Transform_Hand_FieldHand.label>
   <!-- EN: 将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。 -->
-  <GR_Transform_Hand_FieldHand.description>TODO</GR_Transform_Hand_FieldHand.description>
+  <GR_Transform_Hand_FieldHand.description>将手部变形为可以加快播种和收割的机械手掌，多个可收缩的指状凸起可以从一株的多个点进行收获，或者同时播种多棵植物。此外还配备了通用机械手，它有点笨拙，这会稍微影响到移动能力。</GR_Transform_Hand_FieldHand.description>
   
   <!-- EN: 动力爪形态 -->
-  <GR_Transform_Hand_PowerClaw.label>TODO</GR_Transform_Hand_PowerClaw.label>
+  <GR_Transform_Hand_PowerClaw.label>动力爪形态</GR_Transform_Hand_PowerClaw.label>
   <!-- EN: 将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。 -->
-  <GR_Transform_Hand_PowerClaw.description>TODO</GR_Transform_Hand_PowerClaw.description>
+  <GR_Transform_Hand_PowerClaw.description>将手部纳米机械重组为高硬度动力爪，大幅提升近战伤害。</GR_Transform_Hand_PowerClaw.description>
   
   <!-- EN: 仿生臂形态 -->
-  <GR_Transform_Vanilla_BionicArm.label>TODO</GR_Transform_Vanilla_BionicArm.label>
+  <GR_Transform_Vanilla_BionicArm.label>仿生臂形态</GR_Transform_Vanilla_BionicArm.label>
   <!-- EN: 将手臂重构为原版仿生臂。 -->
-  <GR_Transform_Vanilla_BionicArm.description>TODO</GR_Transform_Vanilla_BionicArm.description>
+  <GR_Transform_Vanilla_BionicArm.description>将手臂重构为原版仿生臂。</GR_Transform_Vanilla_BionicArm.description>
   
   <!-- EN: 仿生耳形态 -->
-  <GR_Transform_Vanilla_BionicEar.label>TODO</GR_Transform_Vanilla_BionicEar.label>
+  <GR_Transform_Vanilla_BionicEar.label>仿生耳形态</GR_Transform_Vanilla_BionicEar.label>
   <!-- EN: 将听觉器官重构为原版仿生耳。 -->
-  <GR_Transform_Vanilla_BionicEar.description>TODO</GR_Transform_Vanilla_BionicEar.description>
+  <GR_Transform_Vanilla_BionicEar.description>将听觉器官重构为原版仿生耳。</GR_Transform_Vanilla_BionicEar.description>
   
   <!-- EN: 仿生眼形态 -->
-  <GR_Transform_Vanilla_BionicEye.label>TODO</GR_Transform_Vanilla_BionicEye.label>
+  <GR_Transform_Vanilla_BionicEye.label>仿生眼形态</GR_Transform_Vanilla_BionicEye.label>
   <!-- EN: 将视觉器官重构为原版仿生眼。 -->
-  <GR_Transform_Vanilla_BionicEye.description>TODO</GR_Transform_Vanilla_BionicEye.description>
+  <GR_Transform_Vanilla_BionicEye.description>将视觉器官重构为原版仿生眼。</GR_Transform_Vanilla_BionicEye.description>
   
   <!-- EN: 仿生心脏形态 -->
-  <GR_Transform_Vanilla_BionicHeart.label>TODO</GR_Transform_Vanilla_BionicHeart.label>
+  <GR_Transform_Vanilla_BionicHeart.label>仿生心脏形态</GR_Transform_Vanilla_BionicHeart.label>
   <!-- EN: 将灰潮核心重构为原版仿生心脏。 -->
-  <GR_Transform_Vanilla_BionicHeart.description>TODO</GR_Transform_Vanilla_BionicHeart.description>
+  <GR_Transform_Vanilla_BionicHeart.description>将灰潮核心重构为原版仿生心脏。</GR_Transform_Vanilla_BionicHeart.description>
   
   <!-- EN: 仿生下颌形态 -->
-  <GR_Transform_Vanilla_BionicJaw.label>TODO</GR_Transform_Vanilla_BionicJaw.label>
+  <GR_Transform_Vanilla_BionicJaw.label>仿生下颌形态</GR_Transform_Vanilla_BionicJaw.label>
   <!-- EN: 将下颌重构为原版仿生下颌。 -->
-  <GR_Transform_Vanilla_BionicJaw.description>TODO</GR_Transform_Vanilla_BionicJaw.description>
+  <GR_Transform_Vanilla_BionicJaw.description>将下颌重构为原版仿生下颌。</GR_Transform_Vanilla_BionicJaw.description>
   
   <!-- EN: 仿生腿形态 -->
-  <GR_Transform_Vanilla_BionicLeg.label>TODO</GR_Transform_Vanilla_BionicLeg.label>
+  <GR_Transform_Vanilla_BionicLeg.label>仿生腿形态</GR_Transform_Vanilla_BionicLeg.label>
   <!-- EN: 将腿部重构为原版仿生腿。 -->
-  <GR_Transform_Vanilla_BionicLeg.description>TODO</GR_Transform_Vanilla_BionicLeg.description>
+  <GR_Transform_Vanilla_BionicLeg.description>将腿部重构为原版仿生腿。</GR_Transform_Vanilla_BionicLeg.description>
   
   <!-- EN: 仿生舌形态 -->
-  <GR_Transform_Vanilla_BionicTongue.label>TODO</GR_Transform_Vanilla_BionicTongue.label>
+  <GR_Transform_Vanilla_BionicTongue.label>仿生舌形态</GR_Transform_Vanilla_BionicTongue.label>
   <!-- EN: 将舌部重构为原版仿生舌。 -->
-  <GR_Transform_Vanilla_BionicTongue.description>TODO</GR_Transform_Vanilla_BionicTongue.description>
+  <GR_Transform_Vanilla_BionicTongue.description>将舌部重构为原版仿生舌。</GR_Transform_Vanilla_BionicTongue.description>
   
 </LanguageData>

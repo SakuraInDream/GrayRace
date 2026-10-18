@@ -8,8 +8,8 @@
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_Fission" ParentName="GR_MechModule_ReactorBase" Abstract="True">
-    <label>裂变反应堆</label>
-    <description>通过受控核裂变为机械体提供基础能源，但同时也会带来持续的废热与核废料处理压力。</description>
+    <label>Fission Reactor</label>
+    <description>Provides basic power to mechanoids through controlled nuclear fission, but also brings constant waste heat and nuclear waste disposal pressure.</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_1</iconPath>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
@@ -19,8 +19,8 @@
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_Fusion" ParentName="GR_MechModule_ReactorBase" Abstract="True">
-    <label>聚变反应堆</label>
-    <description>核聚变能够以更稳定的方式输出更高功率，在显著抬升供能上限的同时，规避大部分裂变系统的固有风险。</description>
+    <label>Fusion Reactor</label>
+    <description>Nuclear fusion delivers higher output more stably. It significantly raises the power ceiling while avoiding most inherent risks of fission systems.</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_2</iconPath>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -30,8 +30,8 @@
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_ColdFusion" ParentName="GR_MechModule_ReactorBase" Abstract="True">
-    <label>冷聚变反应堆</label>
-    <description>在相对低温环境下维持聚变反应，使新一代高效反应堆成为现实，也让机体能更从容地支撑高负载作战模块。</description>
+    <label>Cold Fusion Reactor</label>
+    <description>Maintains fusion at relatively low temperatures, making a new generation of efficient reactors possible and allowing the chassis to support high-load combat modules with ease.</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_3</iconPath>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
@@ -41,8 +41,8 @@
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_Antimatter" ParentName="GR_MechModule_ReactorBase" Abstract="True">
-    <label>反物质反应堆</label>
-    <description>利用正反物质湮灭释放的巨量能量，其单位体积供能效率已远超常规聚变堆，可稳定驱动更重型的战斗配置。</description>
+    <label>Antimatter Reactor</label>
+    <description>Harnesses the immense energy released by matter-antimatter annihilation. Its power density far exceeds conventional fusion reactors and can reliably drive heavier combat configurations.</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_4</iconPath>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
@@ -52,8 +52,8 @@
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_ZeroPoint" ParentName="GR_MechModule_ReactorBase" Abstract="True">
-    <label>零点反应堆</label>
-    <description>直接从真空涨落中抽取零点能，近乎无穷的供能储备开始被压缩进标准化舰载动力核心之中。</description>
+    <label>Zero-Point Reactor</label>
+    <description>Draws zero-point energy directly from vacuum fluctuations, compressing an almost inexhaustible power reserve into a standardized shipboard power core.</description>
     <iconPath>Icon/ShipParts/ship_part_reactor_5</iconPath>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
@@ -63,8 +63,8 @@
   </SD.GrayRace.Defs.GRMechPowerCoreModuleDef>
 
   <SD.GrayRace.Defs.GRMechPowerCoreModuleDef Name="GR_MechModule_ReactorTier_DarkMatter" ParentName="GR_MechModule_ReactorBase" Abstract="True">
-    <label>暗物质反应堆</label>
-    <description>这些动力核心仿佛能直接从暗物质中抽取能量，实际输出已经超出常规物理模型所能解释的范畴。</description>
+    <label>Dark Matter Reactor</label>
+    <description>These power cores seem to draw energy directly from dark matter. Their actual output exceeds anything conventional physical models can explain.</description>
     <iconPath>Icon/ShipParts/ship_part_dark_matter_power_core</iconPath>
     <researchPrerequisites>
       <li>GR_T6MechTech</li>

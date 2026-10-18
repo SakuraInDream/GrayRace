@@ -3,7 +3,7 @@
   <SD.GrayRace.Defs.GRMechComponentSetDef>
     <defName>GR_MechComponentSet_PowerCore</defName>
     <label>power core</label>
-    <description>TODO</description>
+    <description>Power core components.</description>
     <coreRole>PowerCore</coreRole>
     <glyph>R</glyph>
     <uiOrder>100</uiOrder>
@@ -12,7 +12,7 @@
   <SD.GrayRace.Defs.GRMechComponentSetDef>
     <defName>GR_MechComponentSet_Thruster</defName>
     <label>thruster</label>
-    <description>TODO</description>
+    <description>Thruster components.</description>
     <coreRole>Thruster</coreRole>
     <glyph>E</glyph>
     <uiOrder>200</uiOrder>
@@ -21,7 +21,7 @@
   <SD.GrayRace.Defs.GRMechComponentSetDef>
     <defName>GR_MechComponentSet_Sensor</defName>
     <label>sensor</label>
-    <description>TODO</description>
+    <description>Sensor components.</description>
     <coreRole>Sensor</coreRole>
     <glyph>S</glyph>
     <uiOrder>300</uiOrder>
