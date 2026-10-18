@@ -6,6 +6,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
+[StaticConstructorOnStartup]
 public class Window_GrayMechDrydockDesigner : Window
 {
     /// <summary>

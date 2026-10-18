@@ -9,8 +9,14 @@ namespace SD.GrayRace.ITabs;
 public class GrayMechDrydockCanvasRenderer
 {
     private const string DesignerGridTexturePath = "UI/GrayMechDrydock/DesignerGridTile";
+#if !RIMWORLD_1_7
+    private const float DesignerGridTileSize = 136f;
+#endif
 
-    private static Texture2D designerGridTexture = ContentFinder<Texture2D>.Get(DesignerGridTexturePath);
+    // 不能在静态字段初始化时加载贴图：该类可能被非主线程提前触碰。
+    // 改为在 DrawSlotBay（UI 主线程）首次调用时懒加载。
+    private static Texture2D designerGridTexture;
+    private static bool designerGridTextureInitialized;
 
     // private static void DrawCornerBracket(float x, float y, float size, bool left, bool top)
     // {
@@ -52,8 +58,15 @@ public class GrayMechDrydockCanvasRenderer
 
     internal void DrawSlotBay(Rect rect)
     {
-        Texture2D texture = designerGridTexture;
+        Texture2D texture = GetDesignerGridTexture();
+        if (texture == null)
+        {
+            Widgets.DrawBoxSolid(rect, new Color(GrayMechDrydockTabStyle.CardFill.r, GrayMechDrydockTabStyle.CardFill.g, GrayMechDrydockTabStyle.CardFill.b, 0.84f));
+            return;
+        }
 
+#if RIMWORLD_1_7
+        // 1.7 新引擎下 wrapMode 在此处失效，改为手动逐块 UV 对齐。
         float tileWidth = texture.width;
         float tileHeight = texture.height;
 
@@ -72,6 +85,31 @@ public class GrayMechDrydockCanvasRenderer
                     new Rect(0f, 0f, width / tileWidth, height / tileHeight));
             }
         }
+#else
+        // 1.6 仍使用 wrapMode.Repeat + 一次绘制。
+        texture.wrapMode = TextureWrapMode.Repeat;
+        GUI.DrawTextureWithTexCoords(
+            rect,
+            texture,
+            new Rect(0f, 0f, rect.width / DesignerGridTileSize, rect.height / DesignerGridTileSize));
+#endif
+    }
+
+    private static Texture2D GetDesignerGridTexture()
+    {
+        if (designerGridTextureInitialized)
+        {
+            return designerGridTexture;
+        }
+
+        designerGridTextureInitialized = true;
+        designerGridTexture = ContentFinder<Texture2D>.Get(DesignerGridTexturePath, false);
+        if (designerGridTexture == BaseContent.BadTex)
+        {
+            designerGridTexture = null;
+        }
+
+        return designerGridTexture;
     }
 
     internal void DrawDisabledSlotWidget(Rect rect, Color accent)

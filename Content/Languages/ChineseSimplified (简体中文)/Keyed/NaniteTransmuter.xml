@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <GR_NaniteTransmuterTab>纳米变形器</GR_NaniteTransmuterTab>
+
+  <GR_NaniteTransmuter_StorageTitle>灰潮源质存储</GR_NaniteTransmuter_StorageTitle>
+  <GR_NaniteTransmuter_LoadAmount>装填数量</GR_NaniteTransmuter_LoadAmount>
+  <GR_NaniteTransmuter_Load>装填</GR_NaniteTransmuter_Load>
+  <GR_NaniteTransmuter_AvailableOnMap>地图可用：{0}</GR_NaniteTransmuter_AvailableOnMap>
+  <GR_NaniteTransmuter_StoredOfMax>已存储 / 最大存储：{0} / {1}</GR_NaniteTransmuter_StoredOfMax>
+
+  <GR_NaniteTransmuter_ProductList>产物列表</GR_NaniteTransmuter_ProductList>
+  <GR_NaniteTransmuter_CostPer100>成本/100个</GR_NaniteTransmuter_CostPer100>
+  <GR_NaniteTransmuter_CostPer100Tip>每 100 个产物消耗的灰潮源质：{0}</GR_NaniteTransmuter_CostPer100Tip>
+  <GR_NaniteTransmuter_Queue>任务队列</GR_NaniteTransmuter_Queue>
+  <GR_NaniteTransmuter_NoTask>队列为空</GR_NaniteTransmuter_NoTask>
+
+  <GR_NaniteTransmuter_ActiveTask>当前任务：{0} × {1}</GR_NaniteTransmuter_ActiveTask>
+  <GR_NaniteTransmuter_Cost>耗材：{0}</GR_NaniteTransmuter_Cost>
+  <GR_NaniteTransmuter_Cancel>取消</GR_NaniteTransmuter_Cancel>
+
+  <GR_NaniteTransmuter_PreviewHint>从左侧选择产物</GR_NaniteTransmuter_PreviewHint>
+  <GR_NaniteTransmuter_SelectedProduct>目标产物：{0}</GR_NaniteTransmuter_SelectedProduct>
+  <GR_NaniteTransmuter_Quantity>制造数量（最小 100）</GR_NaniteTransmuter_Quantity>
+  <GR_NaniteTransmuter_StepHint>Shift ×10 / Ctrl ×100</GR_NaniteTransmuter_StepHint>
+  <GR_NaniteTransmuter_EstimatedCost>预计耗材：{0}</GR_NaniteTransmuter_EstimatedCost>
+  <GR_NaniteTransmuter_EstimatedTime>预计时间：{0}</GR_NaniteTransmuter_EstimatedTime>
+  <GR_NaniteTransmuter_MachineStock>机器库存：{0}</GR_NaniteTransmuter_MachineStock>
+  <GR_NaniteTransmuter_AddToQueue>加入队列</GR_NaniteTransmuter_AddToQueue>
+
+  <GR_NaniteTransmuter_None>无</GR_NaniteTransmuter_None>
+  <GR_NaniteTransmuter_NotEnoughNanites>灰潮源质不足</GR_NaniteTransmuter_NotEnoughNanites>
+  <GR_NaniteTransmuter_InvalidAmount>无效数量</GR_NaniteTransmuter_InvalidAmount>
+  <GR_NaniteTransmuter_StorageFull>机器存储已满</GR_NaniteTransmuter_StorageFull>
+  <GR_NaniteTransmuter_NoNanitesOnMap>地图上没有可装填的灰潮源质</GR_NaniteTransmuter_NoNanitesOnMap>
+  <GR_NaniteTransmuter_MinCount>制造数量至少为 100</GR_NaniteTransmuter_MinCount>
+  <GR_NaniteTransmuter_NoProduct>未选择产物</GR_NaniteTransmuter_NoProduct>
+
+  <GR_NaniteTransmuter_DebugFillButton>填满</GR_NaniteTransmuter_DebugFillButton>
+  <GR_NaniteTransmuter_DebugClearButton>清空</GR_NaniteTransmuter_DebugClearButton>
+  <GR_NaniteTransmuter_DebugCompleteCurrentButton>完成当前</GR_NaniteTransmuter_DebugCompleteCurrentButton>
+  <GR_NaniteTransmuter_DebugCompleteAllButton>完成全部</GR_NaniteTransmuter_DebugCompleteAllButton>
+  <GR_NaniteTransmuter_DebugFillTip>God mode：将机器内部灰潮源质填满。</GR_NaniteTransmuter_DebugFillTip>
+  <GR_NaniteTransmuter_DebugClearTip>God mode：清空机器内部灰潮源质。</GR_NaniteTransmuter_DebugClearTip>
+  <GR_NaniteTransmuter_DebugCompleteCurrentTip>God mode：立即完成队首配方。</GR_NaniteTransmuter_DebugCompleteCurrentTip>
+  <GR_NaniteTransmuter_DebugCompleteAllTip>God mode：立即完成队列中的全部配方。</GR_NaniteTransmuter_DebugCompleteAllTip>
+
+</LanguageData>

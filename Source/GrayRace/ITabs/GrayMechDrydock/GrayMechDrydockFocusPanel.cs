@@ -8,6 +8,7 @@ using Verse.Sound;
 
 namespace SD.GrayRace.ITabs;
 
+[StaticConstructorOnStartup]
 internal partial class GrayMechDrydockFocusPanel
 {
     private const string CombatExtendedPackageId = "CETeam.CombatExtended";

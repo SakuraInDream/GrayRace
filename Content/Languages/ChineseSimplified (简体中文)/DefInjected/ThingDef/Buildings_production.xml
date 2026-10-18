@@ -19,11 +19,11 @@
   <!-- EN: Nanite Reconfigurator -->
   <GR_NaniteReconfigurator.label>纳米重塑台</GR_NaniteReconfigurator.label>
   <!-- EN: A workbench equipped with advanced tools for producing technological marvels from simpler materials. -->
-  <GR_NaniteReconfigurator.description>制造灰裔物品的通用工作台。保留了传统工作台上的大部分工程机械，以确保灰裔之外的种族仍然可以正常使用，额外添加的小型纳米机械集群则能起到一定的辅助作用，大幅提高了工作效率。</GR_NaniteReconfigurator.description>
+  <GR_NaniteReconfigurator.description>制造灰裔物品的通用工作台。保留了传统工作台上的大部分工程机械，以确保灰裔之外的种族仍然可以正常使用，额外添加的小型纳米机械集群则能起到一定的辅助作用，大幅提高了工作效率。同时允许将金属材料分解为灰潮源质。</GR_NaniteReconfigurator.description>
 
   <!-- EN: Nanite Transmuter -->
   <GR_NaniteTransmuter.label>纳米变形器</GR_NaniteTransmuter.label>
-  <!-- EN: A workbench equipped with advanced tools for producing technological marvels from simpler materials. -->
-  <GR_NaniteTransmuter.description>将灰潮源质高效转化为其他基础资源的大型工业机器，同时可承担更高级的合金铸造配方。</GR_NaniteTransmuter.description>
+  <!-- EN: A large industrial machine that automatically transmutes nanites into raw metallic and stony materials. Manual bills remain available for advanced alloy casting. -->
+  <GR_NaniteTransmuter.description>将灰潮源质自动转化为各类金属与石材的大型工业机器。手动配方仍可用于高级合金铸造。</GR_NaniteTransmuter.description>
 
 </LanguageData>

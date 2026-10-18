@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <GR_NaniteReconfiguratorTab>纳米重塑台</GR_NaniteReconfiguratorTab>
+
+  <GR_NaniteReconfigurator_TopTitle>金属分解</GR_NaniteReconfigurator_TopTitle>
+  <GR_NaniteReconfigurator_QueuedTasks>队列任务：{0}</GR_NaniteReconfigurator_QueuedTasks>
+  <GR_NaniteReconfigurator_QueuedOutput>预计总产出：{0} 灰潮源质</GR_NaniteReconfigurator_QueuedOutput>
+  <GR_NaniteReconfigurator_RateHint>分解速度：100 个 / 600 tick（只按质量计算）</GR_NaniteReconfigurator_RateHint>
+
+  <GR_NaniteReconfigurator_MaterialList>材料列表</GR_NaniteReconfigurator_MaterialList>
+  <GR_NaniteReconfigurator_MapCountHeader>地图内已有</GR_NaniteReconfigurator_MapCountHeader>
+  <GR_NaniteReconfigurator_MapCountTip>地图内可用（未禁用）数量：{0}</GR_NaniteReconfigurator_MapCountTip>
+
+  <GR_NaniteReconfigurator_PreviewHint>从左侧选择要分解的材料</GR_NaniteReconfigurator_PreviewHint>
+  <GR_NaniteReconfigurator_SelectedMaterial>输入材料：{0}</GR_NaniteReconfigurator_SelectedMaterial>
+  <GR_NaniteReconfigurator_Quantity>输入数量（最小 100）</GR_NaniteReconfigurator_Quantity>
+  <GR_NaniteReconfigurator_StepHint>Shift ×10 / Ctrl ×100</GR_NaniteReconfigurator_StepHint>
+  <GR_NaniteReconfigurator_EstimatedTime>预计时间：{0}</GR_NaniteReconfigurator_EstimatedTime>
+  <GR_NaniteReconfigurator_EstimatedYield>预计产出：{0} 灰潮源质</GR_NaniteReconfigurator_EstimatedYield>
+  <GR_NaniteReconfigurator_MapAvailable>地图可用：{0}</GR_NaniteReconfigurator_MapAvailable>
+  <GR_NaniteReconfigurator_AddToQueue>加入队列</GR_NaniteReconfigurator_AddToQueue>
+
+  <GR_NaniteReconfigurator_Queue>任务队列</GR_NaniteReconfigurator_Queue>
+  <GR_NaniteReconfigurator_NoTask>队列为空</GR_NaniteReconfigurator_NoTask>
+  <GR_NaniteReconfigurator_ActiveTask>当前任务：{0} × {1} → {2} 灰潮源质</GR_NaniteReconfigurator_ActiveTask>
+  <GR_NaniteReconfigurator_Output>产出：{0} 灰潮源质</GR_NaniteReconfigurator_Output>
+  <GR_NaniteReconfigurator_QueuedTask>{0}. {1} × {2} → {3} 灰潮源质</GR_NaniteReconfigurator_QueuedTask>
+  <GR_NaniteReconfigurator_Cancel>取消</GR_NaniteReconfigurator_Cancel>
+
+  <GR_NaniteReconfigurator_None>无</GR_NaniteReconfigurator_None>
+  <GR_NaniteReconfigurator_NoMaterial>未选择材料</GR_NaniteReconfigurator_NoMaterial>
+  <GR_NaniteReconfigurator_InvalidMaterial>该材料不能分解</GR_NaniteReconfigurator_InvalidMaterial>
+  <GR_NaniteReconfigurator_MinCount>数量至少为 100</GR_NaniteReconfigurator_MinCount>
+  <GR_NaniteReconfigurator_NotEnoughMaterial>地图上的材料不足</GR_NaniteReconfigurator_NotEnoughMaterial>
+
+  <GR_NaniteReconfigurator_DebugCompleteCurrentButton>完成当前</GR_NaniteReconfigurator_DebugCompleteCurrentButton>
+  <GR_NaniteReconfigurator_DebugCompleteAllButton>完成全部</GR_NaniteReconfigurator_DebugCompleteAllButton>
+  <GR_NaniteReconfigurator_DebugCompleteCurrentTip>God mode：立即完成队首配方。</GR_NaniteReconfigurator_DebugCompleteCurrentTip>
+  <GR_NaniteReconfigurator_DebugCompleteAllTip>God mode：立即完成队列中的全部配方。</GR_NaniteReconfigurator_DebugCompleteAllTip>
+
+</LanguageData>

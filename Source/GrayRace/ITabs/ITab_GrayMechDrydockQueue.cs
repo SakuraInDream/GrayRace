@@ -5,6 +5,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
+[StaticConstructorOnStartup]
 public class ITab_GrayMechDrydockQueue : ITab
 {
     /// <summary>

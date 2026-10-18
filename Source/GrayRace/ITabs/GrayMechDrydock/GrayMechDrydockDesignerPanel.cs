@@ -3,6 +3,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
+[StaticConstructorOnStartup]
 public class GrayMechDrydockDesignerPanel
 {
     private readonly GrayMechSectionCanvasPanel sectionCanvasPanel = new();

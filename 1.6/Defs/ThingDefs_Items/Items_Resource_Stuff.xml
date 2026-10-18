@@ -38,10 +38,11 @@
         <li>Metallic</li>
       </categories>
       <appearance>Metal</appearance>
-      <commonality>1.00</commonality>
+      <commonality>0</commonality>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(255,255,255)</color>
       <isAirtight>true</isAirtight>
+      <allowedInStuffGeneration>false</allowedInStuffGeneration>
       <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
       <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -99,7 +100,8 @@
         <li>Metallic</li>
       </categories>
       <appearance>Metal</appearance>
-      <commonality>1.00</commonality>
+      <commonality>0</commonality>
+      <allowedInStuffGeneration>false</allowedInStuffGeneration>
       <constructEffect>ConstructMetal</constructEffect>
       <color>(150,150,150)</color>
       <isAirtight>true</isAirtight>
@@ -121,62 +123,5 @@
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
     <allowedArchonexusCount>80</allowedArchonexusCount>
   </ThingDef>
-
-  <!--以太龙鳞-->
-  <!-- <ThingDef ParentName="ResourceBase">
-        <defName>GR_EtherDrakeScale</defName>
-        <label>Ether Drake Scale</label>
-        <description>The Ether Drake Scale is composed of multiple layers of unique mineral nanostructures with self-healing capabilities. By employing unconventional manufacturing techniques, we can precisely replicate these self-repairing structures.</description>
-        <graphicData>
-            <texPath>Things/Item/Resource/Steel</texPath>
-            <graphicClass>Graphic_StackCount</graphicClass>
-        </graphicData>
-        <soundInteract>Metal_Drop</soundInteract>
-        <soundDrop>Metal_Drop</soundDrop>
-        <statBases>
-            <MarketValue>100</MarketValue>
-            <Mass>10</Mass>
-            <StuffPower_Armor_Sharp>15</StuffPower_Armor_Sharp>
-            <StuffPower_Armor_Blunt>18</StuffPower_Armor_Blunt>
-            <StuffPower_Armor_Heat>60</StuffPower_Armor_Heat>
-            <StuffPower_Insulation_Cold>255</StuffPower_Insulation_Cold>
-            <StuffPower_Insulation_Heat>255</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>15</SharpDamageMultiplier>
-            <BluntDamageMultiplier>15</BluntDamageMultiplier>
-            <Flammability>0</Flammability>
-        </statBases>
-        <useHitPoints>false</useHitPoints>
-        <healthAffectsPrice>false</healthAffectsPrice>
-        <thingCategories>
-            <li>ResourcesRaw</li>
-        </thingCategories>
-        <burnableByRecipe>false</burnableByRecipe>
-        <smeltable>true</smeltable>
-        <stuffProps>
-            <categories>
-                <li>Metallic</li>
-            </categories>
-            <appearance>Metal</appearance>
-            <commonality>1.00</commonality>
-            <constructEffect>ConstructMetal</constructEffect>
-            <color>(155,55,55)</color>
-            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
-            <statFactors>
-                <MaxHitPoints>50</MaxHitPoints>
-                <Beauty>0.5</Beauty>
-                <Mass>3</Mass>
-                <Flammability>0</Flammability>
-                <WorkToMake>3</WorkToMake>
-                <WorkToBuild>3</WorkToBuild>
-                <MeleeWeapon_CooldownMultiplier>0.25</MeleeWeapon_CooldownMultiplier>
-            </statFactors>
-            <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
-        </stuffProps>
-        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <allowedArchonexusCount>80</allowedArchonexusCount>
-    </ThingDef> -->
 
 </Defs>

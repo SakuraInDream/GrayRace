@@ -8,6 +8,7 @@ using Verse;
 
 namespace SD.GrayRace.ITabs;
 
+[StaticConstructorOnStartup]
 public class ITab_GrayMechLoadout : ITab
 {
     private const float PanelWidth = 820f;
