@@ -80,7 +80,7 @@
     <hediffClass>Hediff_High</hediffClass>
     <label>high on zro</label>
     <labelNoun>a zro high</labelNoun>
-    <description>Go-juice in the bloodstream. It supercharges combat-related abilities, and instantly increases psyfocus when first injected.</description>
+    <description>Zro in the bloodstream. It supercharges combat-related abilities, and instantly increases psyfocus when first injected.</description>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <scenarioCanAdd>true</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
@@ -160,8 +160,7 @@
   <HediffDef ParentName="AddictionBase">
     <defName>GR_ZroAddiction</defName>
     <label>Zro addiction</label>
-    <description>A chemical addiction to go-juice. Long-term presence of go-juice has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
-\nWithout regular doses of go-juice, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <description>A chemical addiction to Zro. Long-term presence of Zro has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\nWithout regular doses of Zro, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
     <hediffClass>Hediff_Addiction</hediffClass>
     <chemicalNeed>Chemical_Zro</chemicalNeed>
     <comps>

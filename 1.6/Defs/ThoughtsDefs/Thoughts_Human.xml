@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>GR_ButcheredHumanlikeCorpse</defName>
+    <durationDays>15</durationDays>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <stages>
+      <li>
+        <label>I butchered humanlike</label>
+        <description>This isn't right... Why... That feeling... No matter how I wash, it won't come off...</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>GR_KnowButcheredHumanlikeCorpse</defName>
+    <durationDays>15</durationDays>
+    <stackLimit>1</stackLimit>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <stages>
+      <li>
+        <label>we butchered humanlike</label>
+        <description>Why treat them like this? This is... too barbaric...</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>GR_KnowColonistExecuted</defName>
+    <durationDays>15</durationDays>
+    <stackLimit>5</stackLimit>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>justified execution of colonist</label>
+        <description>A guilty colonist was executed. It was justified, but still sad.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>colonist euthanized</label>
+        <!-- generic humane, can't be worse than KnowColonistDied -->
+        <description>A colonist was euthanized. It was humane, but still sad.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>colonist executed</label>
+        <!-- generic brutal -->
+        <description>One of our own... Our own people are treated like this too? For no reason... killed?</description>
+        <baseMoodEffect>-7</baseMoodEffect>
+      </li>
+      <li>
+        <label>colonist organ-harvested</label>
+        <!-- died because of organ harvesting -->
+        <description>(An agonized electronic screech)</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <label>colonist ripscanned</label>
+        <!-- died due to ripscanning -->
+        <description>We exist now... and they still need to do this?</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="DeathMemory">
+    <defName>GR_KnowGuestExecuted</defName>
+    <durationDays>15</durationDays>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>justified execution</label>
+        <description>A guilty prisoner or guest was executed. It was justified, but still sad.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <li>
+        <label>someone was euthanized</label>
+        <!-- generic humane -->
+        <description>A prisoner or guest was euthanized. It was humane, but still sad.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>someone was executed</label>
+        <!-- generic brutal -->
+        <description>...What a wretched, miserable sight... If only they had sat down to negotiate, or just surrendered...</description>
+        <baseMoodEffect>-7</baseMoodEffect>
+      </li>
+      <li>
+        <label>someone was organ-murdered</label>
+        <!-- died because of organ harvesting -->
+        <description>Hollow corpses. Hollow eyes...</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <label>someone was ripscanned</label>
+        <!-- died due to ripscanning -->
+        <description>I hope this data... can help us...</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>GR_KnowColonistOrganHarvested</defName>
+    <durationDays>15</durationDays>
+    <stackLimit>5</stackLimit>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Bloodlust</li>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <stages>
+      <li>
+        <label>colonist's organ harvested</label>
+        <description>A human... having this done to them... But they can't survive it...</description>
+        <baseMoodEffect>-7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>GR_KnowGuestOrganHarvested</defName>
+    <durationDays>15</durationDays>
+    <stackLimit>5</stackLimit>
+    <doNotApplyToQuestLodgers>true</doNotApplyToQuestLodgers>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Bloodlust</li>
+      <li>Psychopath</li>
+      <li>Cannibal</li>
+    </nullifyingTraits>
+    <nullifyingHediffs>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">Inhumanized</li>
+    </nullifyingHediffs>
+    <stages>
+      <li>
+        <label>someone's organ harvested</label>
+        <description>Is this being done to save our people? Is there really no other way...</description>
+        <baseMoodEffect>-7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

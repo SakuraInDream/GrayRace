@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: drill arm -->
+  <GR_Hediff_DrillArm.label>挖掘臂</GR_Hediff_DrillArm.label>
+  <!-- EN: Transforms the eye into a night vision system. -->
+  <GR_Hediff_DrillArm.description>灰裔通过对帝国的挖掘臂进行逆向分析，并结合自身特性加以改进研发出的形态。与帝国的版本相比，不会损失正常的操作能力。</GR_Hediff_DrillArm.description>
+
+  <!-- EN: field hand -->
+  <GR_Hediff_FieldHand.label>务农手</GR_Hediff_FieldHand.label>
+  <!-- EN: Transforms the eye into a night vision system. -->
+  <GR_Hediff_FieldHand.description>灰裔通过对帝国的务农手进行逆向分析，并结合自身特性加以改进研发出的形态。与帝国的版本相比，不会损失正常的操作能力。</GR_Hediff_FieldHand.description>
+
+</LanguageData>

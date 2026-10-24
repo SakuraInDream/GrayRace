@@ -35,7 +35,7 @@
 
   <SD.GrayRace.Hediffs.HediffDef_Overclock ParentName="GrayOverclockBase">
     <defName>GR_Overclock_Heart</defName>
-    <label>Core Overclock</label>
+    <label>Gray Core Overclock</label>
     <description>Greatly improves blood circulation efficiency.</description>
 
     <capacityToBoost>BloodPumping</capacityToBoost>

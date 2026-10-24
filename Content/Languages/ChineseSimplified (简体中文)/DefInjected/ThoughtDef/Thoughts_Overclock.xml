@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Advanced Overclock -->
+  <GR_AdvancedOverclocking.stages.Advanced_Overclock.label>高级超频</GR_AdvancedOverclocking.stages.Advanced_Overclock.label>
+  <!-- EN: Losing some Nanites... but this power? Worth it. Absolutely worth it. -->
+  <GR_AdvancedOverclocking.stages.Advanced_Overclock.description>损失一些源质……但这股力量？值了，绝对值了</GR_AdvancedOverclocking.stages.Advanced_Overclock.description>
+
+  <!-- EN: Intermediate Overclock -->
+  <GR_IntermediateOverclocking.stages.Intermediate_Overclock.label>中级超频</GR_IntermediateOverclocking.stages.Intermediate_Overclock.label>
+  <!-- EN: Whoa. Power is surging through the Nanites. This feeling... it's amazing. -->
+  <GR_IntermediateOverclocking.stages.Intermediate_Overclock.description>哇哦。力量在源质中奔涌。这感觉……太棒了。</GR_IntermediateOverclocking.stages.Intermediate_Overclock.description>
+
+  <!-- EN: Primary Overclock -->
+  <GR_PrimaryOverclocking.stages.Primary_Overclock.label>初级超频</GR_PrimaryOverclocking.stages.Primary_Overclock.label>
+  <!-- EN: I've gotten stronger. Just a little—but hey, not bad. -->
+  <GR_PrimaryOverclocking.stages.Primary_Overclock.description>我变强了，一点点，也不错。</GR_PrimaryOverclocking.stages.Primary_Overclock.description>
+
+  <!-- EN: Ultimate Overclock -->
+  <GR_UltimateOverclocking.stages.Ultimate_Overclock.label>终极超频</GR_UltimateOverclocking.stages.Ultimate_Overclock.label>
+  <!-- EN: The world... is in the palm of my hand. The cost? Insignificant. -->
+  <GR_UltimateOverclocking.stages.Ultimate_Overclock.description>世界……就在我掌心，代价？微不足道。</GR_UltimateOverclocking.stages.Ultimate_Overclock.description>
+
+</LanguageData>

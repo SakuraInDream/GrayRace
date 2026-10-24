@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Strategic Coordination Center Signal Relay Terminal -->
   <GR_SCC_BandNode_Hediff.label>战略指挥中心信号转发终端</GR_SCC_BandNode_Hediff.label>
   <!-- EN: This mechanitor's bandwidth is being increased thanks to the influence of a band node structure. -->
   <GR_SCC_BandNode_Hediff.description>得益于频带节点结构的影响，这名机械师的带宽正在提升。</GR_SCC_BandNode_Hediff.description>
-
+  
   <!-- EN: Strategic Coordination Center DownLink -->
   <GR_SCC_DownLink_Hediff.label>战略指挥中心下行链路</GR_SCC_DownLink_Hediff.label>
   <!-- EN: A Strategic Coordination Link that boosts Mech Control Groups and Bandwidth for the Mechanitor. -->
   <GR_SCC_DownLink_Hediff.description>一种战略协调链路，可提升机械师的控制组数量与带宽。</GR_SCC_DownLink_Hediff.description>
-
+  
 </LanguageData>

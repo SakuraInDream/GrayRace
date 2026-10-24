@@ -6,7 +6,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>GR_ScienceNexus</defName>
     <label>Science Nexus DownLink</label>
-    <description>Increases research speed when placed near hi-tech research bench and unlocks new research projects. Each research bench can only use one multi-analyzer.</description>
+    <description>A terminal that receives signals from the Science Nexus, significantly increasing research speed and unlocking new research projects. Each research bench can link to only two Science Nexus downlinks.</description>
     <graphicData>
       <texPath>Things/Building/Misc/ScienceNexus</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: sky-high expectations -->
+  <GR_Expectations.stages.skyhigh_expectations.label>极高的期望</GR_Expectations.stages.skyhigh_expectations.label>
+  <!-- EN: Such a perfect colony! This is the masterpiece we built with our own hands! -->
+  <GR_Expectations.stages.skyhigh_expectations.description>如此完美的殖民地！这就是我们亲手打造的杰作！</GR_Expectations.stages.skyhigh_expectations.description>
+  <!-- EN: high expectations -->
+  <GR_Expectations.stages.high_expectations.label>很高的期望</GR_Expectations.stages.high_expectations.label>
+  <!-- EN: Our construction is almost complete! -->
+  <GR_Expectations.stages.high_expectations.description>我们的建设即将大功告成！</GR_Expectations.stages.high_expectations.description>
+  <!-- EN: moderate expectations -->
+  <GR_Expectations.stages.moderate_expectations.label>合理的期望</GR_Expectations.stages.moderate_expectations.label>
+  <!-- EN: Our colony is thriving! -->
+  <GR_Expectations.stages.moderate_expectations.description>我们的殖民地正在蒸蒸日上！</GR_Expectations.stages.moderate_expectations.description>
+  <!-- EN: low expectations -->
+  <GR_Expectations.stages.low_expectations.label>较低的期望</GR_Expectations.stages.low_expectations.label>
+  <!-- EN: Coming along nicely! -->
+  <GR_Expectations.stages.low_expectations.description>小有起色！</GR_Expectations.stages.low_expectations.description>
+  <!-- EN: very low expectations -->
+  <GR_Expectations.stages.very_low_expectations.label>很低的期望</GR_Expectations.stages.very_low_expectations.label>
+  <!-- EN: Not bad, not bad! Looks proper! -->
+  <GR_Expectations.stages.very_low_expectations.description>不错不错，像模像样！</GR_Expectations.stages.very_low_expectations.description>
+  <!-- EN: extremely low expectations -->
+  <GR_Expectations.stages.extremely_low_expectations.label>极低的期望</GR_Expectations.stages.extremely_low_expectations.label>
+  <!-- EN: Whoa! A new colony, a new beginning! -->
+  <GR_Expectations.stages.extremely_low_expectations.description>哇哦！新的殖民地，新的开始！</GR_Expectations.stages.extremely_low_expectations.description>
+  <!-- EN: noble expectations -->
+  <GR_Expectations.stages.noble_expectations.label>贵族的期望</GR_Expectations.stages.noble_expectations.label>
+  <!-- EN: Noble...? Me? A noble? -->
+  <GR_Expectations.stages.noble_expectations.description>贵族……？我？成为贵族？</GR_Expectations.stages.noble_expectations.description>
+  <!-- EN: royal expectations -->
+  <GR_Expectations.stages.royal_expectations.label>皇室的期望</GR_Expectations.stages.royal_expectations.label>
+  <!-- EN: If this position is bestowed by Her Majesty the Empress, I shall not fail in my duty. -->
+  <GR_Expectations.stages.royal_expectations.description>若此位为女皇陛下所赐，我定当不辱使命。</GR_Expectations.stages.royal_expectations.description>
+  <!-- EN: elite expectations -->
+  <GR_Expectations.stages.elite_expectations.label>精英的期望</GR_Expectations.stages.elite_expectations.label>
+  <!-- EN: I will make this position shine in my hands. -->
+  <GR_Expectations.stages.elite_expectations.description>我会让这个职位在我的手上绽放光彩。</GR_Expectations.stages.elite_expectations.description>
+  <!-- EN: supreme expectations -->
+  <GR_Expectations.stages.supreme_expectations.label>最高的期望</GR_Expectations.stages.supreme_expectations.label>
+  <!-- EN: They trust me... entrusted everything to me. I will not let them down. -->
+  <GR_Expectations.stages.supreme_expectations.description>他们信任我……把一切交给了我。我一定不会辜负这份信任。</GR_Expectations.stages.supreme_expectations.description>
+
+</LanguageData>

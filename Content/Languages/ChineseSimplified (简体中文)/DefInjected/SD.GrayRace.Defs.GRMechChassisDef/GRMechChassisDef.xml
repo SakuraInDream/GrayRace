@@ -1,39 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 战列舰 -->
+  <!-- EN: Battleship -->
   <GR_Chassis_Battleship.label>战列舰</GR_Chassis_Battleship.label>
-  <!-- EN: 战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。 -->
+  <!-- EN: Battleships carry unmatched firepower and have the largest hull size, but they are expensive and poorly maneuverable. -->
   <GR_Chassis_Battleship.description>战列舰可搭载无可匹敌的火力，拥有最大的舰体规模，但成本高昂，机动性较差。</GR_Chassis_Battleship.description>
   
-  <!-- EN: 护卫舰 -->
+  <!-- EN: Frigate -->
   <GR_Chassis_Corvette.label>护卫舰</GR_Chassis_Corvette.label>
-  <!-- EN: 护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。 -->
+  <!-- EN: The frigate is one of the most basic warship types. It is armed and can engage enemies. -->
   <GR_Chassis_Corvette.description>护卫舰是最基础的战舰类型之一，具有武装，可以与敌人交战。</GR_Chassis_Corvette.description>
   
-  <!-- EN: 巡洋舰 -->
+  <!-- EN: Cruiser -->
   <GR_Chassis_Cruiser.label>巡洋舰</GR_Chassis_Cruiser.label>
-  <!-- EN: 巡洋舰采用三段式设计，在愿意加钱的情况下可自由进行各种追加模组改装。 -->
+  <!-- EN: Cruisers use a three-section design and can be freely refitted with additional modules if one is willing to pay. -->
   <GR_Chassis_Cruiser.description>巡洋舰采用三段式设计，在愿意加钱的情况下可自由进行各种追加模组改装。</GR_Chassis_Cruiser.description>
   
-  <!-- EN: 驱逐舰 -->
+  <!-- EN: Destroyer -->
   <GR_Chassis_Destroyer.label>驱逐舰</GR_Chassis_Destroyer.label>
-  <!-- EN: 采用双区段设计的驱逐舰可以提供多种多样的战略性武装。 -->
+  <!-- EN: Destroyers use a two-section design, allowing a wide variety of strategic armaments. -->
   <GR_Chassis_Destroyer.description>采用双区段设计的驱逐舰可以提供多种多样的战略性武装。</GR_Chassis_Destroyer.description>
   
-  <!-- EN: 雷击舰 -->
+  <!-- EN: Torpedo Boat -->
   <GR_Chassis_Frigate.label>雷击舰</GR_Chassis_Frigate.label>
-  <!-- EN: 雷击舰是护卫舰的一种先进衍生型号，专职发射鱼雷。他们更慢更脆弱，但可以对大型目标造成毁灭性的打击。 -->
+  <!-- EN: The torpedo boat is an advanced derivative of the frigate, dedicated to launching torpedoes. They are slower and more fragile, but can deliver devastating strikes against large targets. -->
   <GR_Chassis_Frigate.description>雷击舰是护卫舰的一种先进衍生型号，专职发射鱼雷。他们更慢更脆弱，但可以对大型目标造成毁灭性的打击。</GR_Chassis_Frigate.description>
   
-  <!-- EN: 主宰 -->
+  <!-- EN: Juggernaut -->
   <GR_Chassis_Juggernaut.label>主宰</GR_Chassis_Juggernaut.label>
-  <!-- EN: 这些巨型构造物既是舰船也是空间站。主宰是一种庞大的可移动空间站，可以维修和建造舰船，也就是说，它可以作为进攻性战役中行动时的前进基地使用。 -->
+  <!-- EN: These colossal constructs are both ships and space stations. The juggernaut is an enormous mobile station that can repair and build ships, serving as a forward base during offensive campaigns. -->
   <GR_Chassis_Juggernaut.description>这些巨型构造物既是舰船也是空间站。主宰是一种庞大的可移动空间站，可以维修和建造舰船，也就是说，它可以作为进攻性战役中行动时的前进基地使用。</GR_Chassis_Juggernaut.description>
   
-  <!-- EN: 泰坦 -->
+  <!-- EN: Titan -->
   <GR_Chassis_Titan.label>泰坦</GR_Chassis_Titan.label>
-  <!-- EN: 这些巨型战舰是整个舰队的骄傲，泰坦上携带有多种武器，一般作为旗舰使用。 -->
+  <!-- EN: These giant warships are the pride of the fleet. Titans carry a variety of weapons and usually serve as flagships. -->
   <GR_Chassis_Titan.description>这些巨型战舰是整个舰队的骄傲，泰坦上携带有多种武器，一般作为旗舰使用。</GR_Chassis_Titan.description>
   
 </LanguageData>

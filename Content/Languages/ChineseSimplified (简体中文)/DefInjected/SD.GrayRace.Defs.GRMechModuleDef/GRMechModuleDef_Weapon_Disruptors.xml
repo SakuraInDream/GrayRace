@@ -1,34 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 裂解炮 -->
+  <!-- EN: Disruptor -->
   <GR_MechModule_Disruptor1_M.label>裂解炮</GR_MechModule_Disruptor1_M.label>
-  <!-- EN: 裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。 -->
+  <!-- EN: The high-energy beam fired by a disruptor simultaneously weakens and breaks the molecular bonds holding the target's atoms together. It penetrates shields and armor, dealing devastating damage directly to hull and crew. -->
   <GR_MechModule_Disruptor1_M.description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</GR_MechModule_Disruptor1_M.description>
   
-  <!-- EN: 裂解炮 -->
+  <!-- EN: Disruptor -->
   <GR_MechModule_Disruptor1_S.label>裂解炮</GR_MechModule_Disruptor1_S.label>
-  <!-- EN: 裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。 -->
+  <!-- EN: The high-energy beam fired by a disruptor simultaneously weakens and breaks the molecular bonds holding the target's atoms together. It penetrates shields and armor, dealing devastating damage directly to hull and crew. -->
   <GR_MechModule_Disruptor1_S.description>裂解炮发射出的高能射束，能够同时弱化并破坏构成目标原子间的分子键。它们能够穿透护盾和护甲，对敌方的船体和船员直接造成毁灭性的打击。</GR_MechModule_Disruptor1_S.description>
   
-  <!-- EN: 离子裂解炮 -->
+  <!-- EN: Ion Disruptor -->
   <GR_MechModule_Disruptor2_M.label>离子裂解炮</GR_MechModule_Disruptor2_M.label>
-  <!-- EN: 这些升级版的裂解炮可以对目标发射出更具威力的离子流。 -->
+  <!-- EN: These upgraded disruptors fire a more powerful ion stream at their targets. -->
   <GR_MechModule_Disruptor2_M.description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</GR_MechModule_Disruptor2_M.description>
   
-  <!-- EN: 离子裂解炮 -->
+  <!-- EN: Ion Disruptor -->
   <GR_MechModule_Disruptor2_S.label>离子裂解炮</GR_MechModule_Disruptor2_S.label>
-  <!-- EN: 这些升级版的裂解炮可以对目标发射出更具威力的离子流。 -->
+  <!-- EN: These upgraded disruptors fire a more powerful ion stream at their targets. -->
   <GR_MechModule_Disruptor2_S.description>这些升级版的裂解炮可以对目标发射出更具威力的离子流。</GR_MechModule_Disruptor2_S.description>
   
-  <!-- EN: 相位裂解炮 -->
+  <!-- EN: Phase Disruptor -->
   <GR_MechModule_Disruptor3_M.label>相位裂解炮</GR_MechModule_Disruptor3_M.label>
-  <!-- EN: 这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。 -->
+  <!-- EN: This extremely enhanced disruptor fires quantum energy. Any target struck suffers tremendous damage. -->
   <GR_MechModule_Disruptor3_M.description>这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。</GR_MechModule_Disruptor3_M.description>
   
-  <!-- EN: 相位裂解炮 -->
+  <!-- EN: Phase Disruptor -->
   <GR_MechModule_Disruptor3_S.label>相位裂解炮</GR_MechModule_Disruptor3_S.label>
-  <!-- EN: 这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。 -->
+  <!-- EN: This extremely enhanced disruptor fires quantum energy. Any target struck suffers tremendous damage. -->
   <GR_MechModule_Disruptor3_S.description>这种极限强化版的裂解炮能够发射量子能，任何被命中的目标都会承受极大的伤害。</GR_MechModule_Disruptor3_S.description>
   
 </LanguageData>

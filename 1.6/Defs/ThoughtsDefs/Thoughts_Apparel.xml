@@ -6,10 +6,6 @@
     <workerClass>ThoughtWorker_Hediff</workerClass>
     <hediff>GR_WD40</hediff>
     <validWhileDespawned>true</validWhileDespawned>
-    <nullifyingTraits>
-      <li>Ascetic</li>
-      <li>Kind</li>
-    </nullifyingTraits>
     <stages>
       <li>
         <label>Wow, it's WD40!</label>

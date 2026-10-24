@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <!-- 变形Hediff -->
-
-  <!-- 夜视 CE 用的 -->
-  <HediffDef MayRequire="CETeam.CombatExtended">
-    <defName>GR_Hediff_NightVisionEye</defName>
-    <label>Night Vision Eye</label>
-    <hediffClass>Hediff_AddedPart</hediffClass>
-    <description>Transforms the eye into a night vision system.</description>
-    <defaultLabelColor>(0.3, 0.8, 0.8)</defaultLabelColor>
-    <isBad>false</isBad>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.1</partEfficiency>
-      <betterThanNatural>true</betterThanNatural>
-    </addedPartProps>
-    <stages>
-      <li>
-        <statOffsets>
-          <NightVisionEfficiency>2.0</NightVisionEfficiency>
-        </statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
-
   <!-- ================================== 大脑插件 ================================== -->
 
   <!-- 战斗芯片 -->

@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
 
   <!-- EN: Gray Advanced Combat Clothing -->
   <GR_AdvancedCombatClothing.label>灰裔高级战斗服装</GR_AdvancedCombatClothing.label>
   <!-- EN: Unlock Gray's advanced combat clothing -->
-  <GR_AdvancedCombatClothing.description>解锁灰裔高级战斗服装</GR_AdvancedCombatClothing.description>
+  <GR_AdvancedCombatClothing.description>解锁灰裔的高级战斗服装，这些拥有附加特化效果的服装，其效果符合的制造成本。\n通常来说，只有灰裔的指挥官或是战功赫赫的老兵才能穿上这身定制的护甲。\n好好宣扬灰裔的光荣，灰裔的强大。\n继续胜利吧，直到永远。</GR_AdvancedCombatClothing.description>
 
   <!-- EN: Alloy Casting -->
   <GR_AlloyCasting.label>合金铸造</GR_AlloyCasting.label>
   <!-- EN: Unlocks the production of alloy. This space-age, high-quality metal offers near-perfect toughness, strength, and hardness, while also exhibiting exceptional malleability under specific conditions. -->
-  <GR_AlloyCasting.description>解锁合金生产。这种太空时代的高品质金属具有近乎完美的韧性、强度和硬度，同时在特定条件下也表现出极佳的延展性。</GR_AlloyCasting.description>
-  <!-- EN: 先空着，傻逼泰南的科技联动显示太抽象了，后面写个说明 -->
+  <GR_AlloyCasting.description>解锁标准合金的制造工艺。这种经过全银河系认可的优质金属在材料学上的韧性、强度、硬度都堪称完美，在特定的条件下也拥有极强的可塑性。但在缺乏专用制造设备的环境下生产，可能会导致安全性低于预期。\n“没事我已经手动删除了安全制造协议”</GR_AlloyCasting.description>
+  <!-- EN: Placeholder for now. The tech-link display is too abstract; an explanation will be added later. -->
   <GR_AlloyCasting.discoveredLetterText>合金的铸造配方在三个不同的科技研究完成时，会分别解锁三个不同的配方。</GR_AlloyCasting.discoveredLetterText>
   <!-- EN: About: Alloy production formula -->
   <GR_AlloyCasting.discoveredLetterTitle>关于：合金生产配方</GR_AlloyCasting.discoveredLetterTitle>
@@ -18,22 +18,22 @@
   <!-- EN: Alloy process optimization -->
   <GR_AlloyProcessOptimization.label>合金工艺优化</GR_AlloyProcessOptimization.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_AlloyProcessOptimization.description>解锁更高效的合金铸造配方。</GR_AlloyProcessOptimization.description>
+  <GR_AlloyProcessOptimization.description>优化合金的制造工艺与流程。\n通过以非标准的方式组合多个生产设备，建立标准熔炼工作流线，开始小规模工业化生产。\n注意：非标准的生产线可能会导致安全性进一步降低！并显著提升不可预测的爆炸事故出现！\n“在上个季度的生产报告中，除了操作员以外的生产受伤率是0%！不过我想应该也不会有人敢到这些设备附近就是......”</GR_AlloyProcessOptimization.description>
 
   <!-- EN: Gray Basic Clothing -->
   <GR_BasicClothing.label>灰裔基础服装</GR_BasicClothing.label>
   <!-- EN: Unlock Gray's basic clothing -->
-  <GR_BasicClothing.description>解锁灰裔基础服装</GR_BasicClothing.description>
+  <GR_BasicClothing.description>解锁灰裔的日常服装，即使是融入人群也不会有什么违和感的衣服，大概吧？\n参考人类服装而设计。\n这种刻意模仿人类的行为，引来了少许人类成员的异议。</GR_BasicClothing.description>
 
   <!-- EN: Gray Combat Clothing -->
   <GR_CombatClothing.label>灰裔战斗服装</GR_CombatClothing.label>
   <!-- EN: Unlock Gray's combat clothing -->
-  <GR_CombatClothing.description>解锁灰裔战斗服装</GR_CombatClothing.description>
+  <GR_CombatClothing.description>解锁灰裔的战斗用服装，这些服装拥有标准的防护效果，和人类用的防护不同，以保护全身为目的。\n这一身用量身定制一次来说再贴切不过，完完全全灰裔风格的制式护甲。\n穿着这身衣服来战斗，往往会收获意料之外的赞许目光。</GR_CombatClothing.description>
 
   <!-- EN: Cosmogenesis -->
   <GR_Cosmogenesis.label>宇宙创生</GR_Cosmogenesis.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_Cosmogenesis.description>解锁更高效的合金铸造配方。</GR_Cosmogenesis.description>
+  <GR_Cosmogenesis.description>帝国最尖端的科技，解锁在最前线才会使用的武装与机械体。\n正是因为生为灰裔，才能使用这些。\n她们必须永远承担那些令人类畏惧的重任，为人类虔心献上胜利。</GR_Cosmogenesis.description>
 
   <!-- EN: Decorative Clothing -->
   <GR_DecorativeClothing.label>灰裔装饰服装</GR_DecorativeClothing.label>
@@ -48,17 +48,17 @@
   <!-- EN: Fusion Reactor -->
   <GR_FusionReactor.label>聚变反应堆</GR_FusionReactor.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_FusionReactor.description>解锁更高效的合金铸造配方。</GR_FusionReactor.description>
+  <GR_FusionReactor.description>解锁聚变反应堆。\n灰裔在殖民开拓中最常用的、经过优化改造的特殊反应堆。\n这种反应堆使用在宜居星球上随处可见的石头作为燃料，在聚变的最终过程中还会产出对于灰裔来说十分重要的钢铁。</GR_FusionReactor.description>
 
   <!-- EN: Nanite Transmuter -->
   <GR_NaniteTransmuter.label>纳米变形器</GR_NaniteTransmuter.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_NaniteTransmuter.description>解锁更高效的合金铸造配方。</GR_NaniteTransmuter.description>
+  <GR_NaniteTransmuter.description>解锁纳米变形器。\n这个独特的制造工厂可以将基础金属同化为灰潮源质，亦可反向生产合金，这一技术大大降低了成本并提升了产量。\n在人类帝国获得这种技术后，帝国境内的每一块贵金属上都被打上了专门的印记，没有印记的贵金属在市场上流通的结果是被直接收缴。</GR_NaniteTransmuter.description>
 
   <!-- EN: Gray Professional Clothing -->
   <GR_ProfessionalClothing.label>灰裔特殊服装</GR_ProfessionalClothing.label>
   <!-- EN: Unlock Gray's Professional clothing -->
-  <GR_ProfessionalClothing.description>解锁灰裔专业服装</GR_ProfessionalClothing.description>
+  <GR_ProfessionalClothing.description>解锁灰裔的特殊服装，着重以增加工作效率为目的。\n参考人类历史上各种各样的职业服装而二次创新设计。\n不过因为穿着者的缘故往往能一眼看出差异。</GR_ProfessionalClothing.description>
 
   <!-- EN: Railgun -->
   <GR_Railgun.label>磁轨武器</GR_Railgun.label>
@@ -68,7 +68,7 @@
   <!-- EN: Science Nexus -->
   <GR_ScienceNexus.label>科研枢纽</GR_ScienceNexus.label>
   <!-- EN: Unlock more efficient alloy casting formulas. -->
-  <GR_ScienceNexus.description>解锁更高效的合金铸造配方。</GR_ScienceNexus.description>
+  <GR_ScienceNexus.description>解锁建造科研枢纽下行链路。\n用于接收帝国科研部专门为灰裔设计科技的接收器。\n在提高研究速度的同时，将先遣队所拥有的全部科技下载至高级研究台上。</GR_ScienceNexus.description>
 
   <!-- EN: T1 Mech Tech -->
   <GR_T1MechTech.label>T1机械科技</GR_T1MechTech.label>
@@ -83,12 +83,12 @@
   <!-- EN: T1 Weapon Tech -->
   <GR_T1WeaponTech.label>T1武器科技</GR_T1WeaponTech.label>
   <!-- EN: Unlocks Tier 1 weaponry, typically consisting of rifles and shotguns. -->
-  <GR_T1WeaponTech.description>解锁一级武器，通常包括步枪和霰弹枪。</GR_T1WeaponTech.description>
+  <GR_T1WeaponTech.description>获取民用级灰裔武器制作方式，这些武器主打简单、实用、有效。\n对付后花园的变异小怪虫绰绰有余。</GR_T1WeaponTech.description>
 
   <!-- EN: T2 Mech Tech -->
   <GR_T2MechTech.label>T2机械科技</GR_T2MechTech.label>
   <!-- EN: Unlocks Tier 2 weaponry, typically consisting of sniper rifles and machine guns. -->
-  <GR_T2MechTech.description>解锁二级武器，通常包括狙击步枪和机枪。</GR_T2MechTech.description>
+  <GR_T2MechTech.description>获取灰裔制式武器制作方式，这些武器制作工艺稍显复杂，但适合工业生产。\n这些武器能接入灰裔的接口，提供弹药和欲着点预测功能。\n有些灰裔有枪械洁癖，不喜欢别的灰裔用过的枪。</GR_T2MechTech.description>
 
   <!-- EN: T2 Upgrades -->
   <GR_T2Upgrades.label>T2升级</GR_T2Upgrades.label>
@@ -113,7 +113,7 @@
   <!-- EN: T3 Weapon Tech -->
   <GR_T3WeaponTech.label>T3武器科技</GR_T3WeaponTech.label>
   <!-- EN: Unlocks Tier 3 weaponry. These weapons are generally classified as heavy ordnance. -->
-  <GR_T3WeaponTech.description>解锁三级武器。这些武器通常归类为重火力。</GR_T3WeaponTech.description>
+  <GR_T3WeaponTech.description>获取灰裔精英武器制作方式，这些配给给精英部队用的武器个个都精贵得很。\n在熟练的灰裔手里，这些武器就是肢体的一部分。\n很难在先遣队的武装配置中看见它们。\n……除非惹了大麻烦或者倒了大霉。</GR_T3WeaponTech.description>
 
   <!-- EN: T4 Mech Tech -->
   <GR_T4MechTech.label>T4机械科技</GR_T4MechTech.label>
@@ -138,6 +138,6 @@
   <!-- EN: Zro -->
   <GR_Zro.label>泽珞</GR_Zro.label>
   <!-- EN: Unlock zro,this is a substance that can greatly enhance spiritual abilities. -->
-  <GR_Zro.description>解锁泽珞。这是一种能极大增强灵能能力的物质。</GR_Zro.description>
+  <GR_Zro.description>解锁泽珞。\n这是一种能极大幅度增强灵能的物质，相应带来的是极高的成瘾性——不，是必定。</GR_Zro.description>
 
 </LanguageData>

@@ -35,10 +35,10 @@
     <requiredMemes>
       <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
     </requiredMemes>
     <allowedMemes>
-      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Shipborn</li>
     </allowedMemes>
     <disallowedPrecepts>
@@ -59,9 +59,24 @@
       <li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienRaces_Horrible</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienRaces_Respected</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienRaces_Exalted</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredRavenous</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_RequiredStrong</li>
     </disallowedPrecepts>
     <xenotypeSet>
       <xenotypeChances>
+        <GR_Xeno_Gray>1</GR_Xeno_Gray>
+        <Baseliner>0</Baseliner>
+        <Dirtmole>0</Dirtmole>
+        <Genie>0</Genie>
+        <Hussar>0</Hussar>
+        <Sanguophage>0</Sanguophage>
+        <Neanderthal>0</Neanderthal>
+        <Pigskin>0</Pigskin>
+        <Impid>0</Impid>
+        <Waster>0</Waster>
+        <Yttakin>0</Yttakin>
+        <Highmate>0</Highmate>
       </xenotypeChances>
     </xenotypeSet>
     <backstoryCategories>

@@ -1,112 +1,112 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 大型等离子发射器弹丸 -->
+  <!-- EN: Large Plasma Thrower Bolt -->
   <Bullet_GR_MechPlasma1_L.label>大型等离子发射器弹丸</Bullet_GR_MechPlasma1_L.label>
   
-  <!-- EN: 中型等离子发射器弹丸 -->
+  <!-- EN: Medium Plasma Thrower Bolt -->
   <Bullet_GR_MechPlasma1_M.label>中型等离子发射器弹丸</Bullet_GR_MechPlasma1_M.label>
   
-  <!-- EN: 小型等离子发射器弹丸 -->
+  <!-- EN: Small Plasma Thrower Bolt -->
   <Bullet_GR_MechPlasma1_S.label>小型等离子发射器弹丸</Bullet_GR_MechPlasma1_S.label>
   
-  <!-- EN: 大型等离子加速器弹丸 -->
+  <!-- EN: Large Plasma Accelerator Bolt -->
   <Bullet_GR_MechPlasma2_L.label>大型等离子加速器弹丸</Bullet_GR_MechPlasma2_L.label>
   
-  <!-- EN: 中型等离子加速器弹丸 -->
+  <!-- EN: Medium Plasma Accelerator Bolt -->
   <Bullet_GR_MechPlasma2_M.label>中型等离子加速器弹丸</Bullet_GR_MechPlasma2_M.label>
   
-  <!-- EN: 小型等离子加速器弹丸 -->
+  <!-- EN: Small Plasma Accelerator Bolt -->
   <Bullet_GR_MechPlasma2_S.label>小型等离子加速器弹丸</Bullet_GR_MechPlasma2_S.label>
   
-  <!-- EN: 大型等离子加农炮弹丸 -->
+  <!-- EN: Large Plasma Cannon Bolt -->
   <Bullet_GR_MechPlasma3_L.label>大型等离子加农炮弹丸</Bullet_GR_MechPlasma3_L.label>
   
-  <!-- EN: 中型等离子加农炮弹丸 -->
+  <!-- EN: Medium Plasma Cannon Bolt -->
   <Bullet_GR_MechPlasma3_M.label>中型等离子加农炮弹丸</Bullet_GR_MechPlasma3_M.label>
   
-  <!-- EN: 小型等离子加农炮弹丸 -->
+  <!-- EN: Small Plasma Cannon Bolt -->
   <Bullet_GR_MechPlasma3_S.label>小型等离子加农炮弹丸</Bullet_GR_MechPlasma3_S.label>
   
-  <!-- EN: 大型等离子发射器 -->
+  <!-- EN: Large Plasma Thrower -->
   <GR_MechWeapon_Plasma1_L.label>大型等离子发射器</GR_MechWeapon_Plasma1_L.label>
-  <!-- EN: 可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。 -->
+  <!-- EN: A weapon that fires devastating high-energy plasma spheres. These plasma projectiles are especially effective against the armor of large ships. -->
   <GR_MechWeapon_Plasma1_L.description>可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。</GR_MechWeapon_Plasma1_L.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma1_L.tools.barrel.label>枪管</GR_MechWeapon_Plasma1_L.tools.barrel.label>
-  <!-- EN: 大型等离子发射器 -->
+  <!-- EN: Large Plasma Thrower -->
   <GR_MechWeapon_Plasma1_L.verbs.Verb_Shoot.label>大型等离子发射器</GR_MechWeapon_Plasma1_L.verbs.Verb_Shoot.label>
   
-  <!-- EN: 中型等离子发射器 -->
+  <!-- EN: Medium Plasma Thrower -->
   <GR_MechWeapon_Plasma1_M.label>中型等离子发射器</GR_MechWeapon_Plasma1_M.label>
-  <!-- EN: 可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。 -->
+  <!-- EN: A weapon that fires devastating high-energy plasma spheres. These plasma projectiles are especially effective against the armor of large ships. -->
   <GR_MechWeapon_Plasma1_M.description>可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。</GR_MechWeapon_Plasma1_M.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma1_M.tools.barrel.label>枪管</GR_MechWeapon_Plasma1_M.tools.barrel.label>
-  <!-- EN: 中型等离子发射器 -->
+  <!-- EN: Medium Plasma Thrower -->
   <GR_MechWeapon_Plasma1_M.verbs.Verb_Shoot.label>中型等离子发射器</GR_MechWeapon_Plasma1_M.verbs.Verb_Shoot.label>
   
-  <!-- EN: 小型等离子发射器 -->
+  <!-- EN: Small Plasma Thrower -->
   <GR_MechWeapon_Plasma1_S.label>小型等离子发射器</GR_MechWeapon_Plasma1_S.label>
-  <!-- EN: 可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。 -->
+  <!-- EN: A weapon that fires devastating high-energy plasma spheres. These plasma projectiles are especially effective against the armor of large ships. -->
   <GR_MechWeapon_Plasma1_S.description>可以向目标发射毁灭性的高能等离子球体的武器。这种等离子抛射体在对付大型舰船的装甲时特别有效。</GR_MechWeapon_Plasma1_S.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma1_S.tools.barrel.label>枪管</GR_MechWeapon_Plasma1_S.tools.barrel.label>
-  <!-- EN: 小型等离子发射器 -->
+  <!-- EN: Small Plasma Thrower -->
   <GR_MechWeapon_Plasma1_S.verbs.Verb_Shoot.label>小型等离子发射器</GR_MechWeapon_Plasma1_S.verbs.Verb_Shoot.label>
   
-  <!-- EN: 大型等离子加速器 -->
+  <!-- EN: Large Plasma Accelerator -->
   <GR_MechWeapon_Plasma2_L.label>大型等离子加速器</GR_MechWeapon_Plasma2_L.label>
-  <!-- EN: 这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。 -->
+  <!-- EN: This new accelerator cannon fires high-energy plasma held by more advanced confinement fields. The technology reduces the energy lost as the plasma travels toward its target. -->
   <GR_MechWeapon_Plasma2_L.description>这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。</GR_MechWeapon_Plasma2_L.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma2_L.tools.barrel.label>枪管</GR_MechWeapon_Plasma2_L.tools.barrel.label>
-  <!-- EN: 大型等离子加速器 -->
+  <!-- EN: Large Plasma Accelerator -->
   <GR_MechWeapon_Plasma2_L.verbs.Verb_Shoot.label>大型等离子加速器</GR_MechWeapon_Plasma2_L.verbs.Verb_Shoot.label>
   
-  <!-- EN: 中型等离子加速器 -->
+  <!-- EN: Medium Plasma Accelerator -->
   <GR_MechWeapon_Plasma2_M.label>中型等离子加速器</GR_MechWeapon_Plasma2_M.label>
-  <!-- EN: 这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。 -->
+  <!-- EN: This new accelerator cannon fires high-energy plasma held by more advanced confinement fields. The technology reduces the energy lost as the plasma travels toward its target. -->
   <GR_MechWeapon_Plasma2_M.description>这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。</GR_MechWeapon_Plasma2_M.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma2_M.tools.barrel.label>枪管</GR_MechWeapon_Plasma2_M.tools.barrel.label>
-  <!-- EN: 中型等离子加速器 -->
+  <!-- EN: Medium Plasma Accelerator -->
   <GR_MechWeapon_Plasma2_M.verbs.Verb_Shoot.label>中型等离子加速器</GR_MechWeapon_Plasma2_M.verbs.Verb_Shoot.label>
   
-  <!-- EN: 小型等离子加速器 -->
+  <!-- EN: Small Plasma Accelerator -->
   <GR_MechWeapon_Plasma2_S.label>小型等离子加速器</GR_MechWeapon_Plasma2_S.label>
-  <!-- EN: 这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。 -->
+  <!-- EN: This new accelerator cannon fires high-energy plasma held by more advanced confinement fields. The technology reduces the energy lost as the plasma travels toward its target. -->
   <GR_MechWeapon_Plasma2_S.description>这种新的加速炮利发射具有更先进约束场的高能等离子体。这种技术可以降低等离子体向目标飞行过程中所逸散的能量。</GR_MechWeapon_Plasma2_S.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma2_S.tools.barrel.label>枪管</GR_MechWeapon_Plasma2_S.tools.barrel.label>
-  <!-- EN: 小型等离子加速器 -->
+  <!-- EN: Small Plasma Accelerator -->
   <GR_MechWeapon_Plasma2_S.verbs.Verb_Shoot.label>小型等离子加速器</GR_MechWeapon_Plasma2_S.verbs.Verb_Shoot.label>
   
-  <!-- EN: 大型等离子加农炮 -->
+  <!-- EN: Large Plasma Cannon -->
   <GR_MechWeapon_Plasma3_L.label>大型等离子加农炮</GR_MechWeapon_Plasma3_L.label>
-  <!-- EN: 最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。 -->
+  <!-- EN: The most advanced plasma weapon, this cannon is the fully militarized result of the previous plasma accelerator. Its plasma projectiles are even deadlier. -->
   <GR_MechWeapon_Plasma3_L.description>最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。</GR_MechWeapon_Plasma3_L.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma3_L.tools.barrel.label>枪管</GR_MechWeapon_Plasma3_L.tools.barrel.label>
-  <!-- EN: 大型等离子加农炮 -->
+  <!-- EN: Large Plasma Cannon -->
   <GR_MechWeapon_Plasma3_L.verbs.Verb_Shoot.label>大型等离子加农炮</GR_MechWeapon_Plasma3_L.verbs.Verb_Shoot.label>
   
-  <!-- EN: 中型等离子加农炮 -->
+  <!-- EN: Medium Plasma Cannon -->
   <GR_MechWeapon_Plasma3_M.label>中型等离子加农炮</GR_MechWeapon_Plasma3_M.label>
-  <!-- EN: 最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。 -->
+  <!-- EN: The most advanced plasma weapon, this cannon is the fully militarized result of the previous plasma accelerator. Its plasma projectiles are even deadlier. -->
   <GR_MechWeapon_Plasma3_M.description>最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。</GR_MechWeapon_Plasma3_M.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma3_M.tools.barrel.label>枪管</GR_MechWeapon_Plasma3_M.tools.barrel.label>
-  <!-- EN: 中型等离子加农炮 -->
+  <!-- EN: Medium Plasma Cannon -->
   <GR_MechWeapon_Plasma3_M.verbs.Verb_Shoot.label>中型等离子加农炮</GR_MechWeapon_Plasma3_M.verbs.Verb_Shoot.label>
   
-  <!-- EN: 小型等离子加农炮 -->
+  <!-- EN: Small Plasma Cannon -->
   <GR_MechWeapon_Plasma3_S.label>小型等离子加农炮</GR_MechWeapon_Plasma3_S.label>
-  <!-- EN: 最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。 -->
+  <!-- EN: The most advanced plasma weapon, this cannon is the fully militarized result of the previous plasma accelerator. Its plasma projectiles are even deadlier. -->
   <GR_MechWeapon_Plasma3_S.description>最先进的等离子武器，这种火炮是之前的升级版等离子发射器完全军事化的成果。它们的等离子抛射体更加致命。</GR_MechWeapon_Plasma3_S.description>
   <!-- EN: barrel -->
   <GR_MechWeapon_Plasma3_S.tools.barrel.label>枪管</GR_MechWeapon_Plasma3_S.tools.barrel.label>
-  <!-- EN: 小型等离子加农炮 -->
+  <!-- EN: Small Plasma Cannon -->
   <GR_MechWeapon_Plasma3_S.verbs.Verb_Shoot.label>小型等离子加农炮</GR_MechWeapon_Plasma3_S.verbs.Verb_Shoot.label>
   
 </LanguageData>

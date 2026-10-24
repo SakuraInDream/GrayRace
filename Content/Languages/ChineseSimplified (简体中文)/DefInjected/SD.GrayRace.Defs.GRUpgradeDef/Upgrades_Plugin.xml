@@ -1,89 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: PrecisionChip -->
   <GR_Plugin_Arm_PrecisionChip.label>精密芯片</GR_Plugin_Arm_PrecisionChip.label>
-  <!-- EN: 植入手臂的精密操作芯片，提升制作精度和质量。 -->
+  <!-- EN: A precision manipulation chip implanted in the arm that improves crafting accuracy and quality. -->
   <GR_Plugin_Arm_PrecisionChip.description>植入手臂的精密操作芯片，提升制作精度和质量。</GR_Plugin_Arm_PrecisionChip.description>
   
   <!-- EN: Analysis Chip -->
   <GR_Plugin_Brain_AnalysisChip.label>分析芯片</GR_Plugin_Brain_AnalysisChip.label>
-  <!-- EN: 协助主人格核心学习的拓展芯片。专门用于多次迭代数据，推测不同选择的后果。……只要失败了足够多次的话，便能推测出正确的路线吧。 -->
+  <!-- EN: An expansion chip that assists the primary persona core in learning. It iterates data many times to predict the consequences of different choices. ...With enough failures, it should eventually deduce the correct path. -->
   <GR_Plugin_Brain_AnalysisChip.description>协助主人格核心学习的拓展芯片。专门用于多次迭代数据，推测不同选择的后果。……只要失败了足够多次的话，便能推测出正确的路线吧。</GR_Plugin_Brain_AnalysisChip.description>
   
   <!-- EN: CombatChip -->
   <GR_Plugin_Brain_CombatChip.label>战斗芯片</GR_Plugin_Brain_CombatChip.label>
-  <!-- EN: 植入人格核心的高级战斗芯片，提升远程射击能力。 -->
+  <!-- EN: An advanced combat chip implanted in the persona core that improves ranged shooting ability. -->
   <GR_Plugin_Brain_CombatChip.description>植入人格核心的高级战斗芯片，提升远程射击能力。</GR_Plugin_Brain_CombatChip.description>
   
   <!-- EN: Concentrate Chip -->
   <GR_Plugin_Brain_ConcentrateChip.label>集中芯片</GR_Plugin_Brain_ConcentrateChip.label>
-  <!-- EN: 植入人格核心的集中芯片，提升工作能力。 -->
+  <!-- EN: A concentration chip implanted in the persona core that improves work ability. -->
   <GR_Plugin_Brain_ConcentrateChip.description>植入人格核心的集中芯片，提升工作能力。</GR_Plugin_Brain_ConcentrateChip.description>
   
-  <!-- EN: 机控中枢 -->
+  <!-- EN: Mechlink -->
   <GR_Plugin_Brain_Mechlink.label>机控中枢</GR_Plugin_Brain_Mechlink.label>
-  <!-- EN: 将机控中枢与人格核心连接，允许操控机械族。 -->
+  <!-- EN: Connects the mechlink to the persona core, allowing the control of mechanoids. -->
   <GR_Plugin_Brain_Mechlink.description>将机控中枢与人格核心连接，允许操控机械族。</GR_Plugin_Brain_Mechlink.description>
   
   <!-- EN: Reaction Chip -->
   <GR_Plugin_Brain_ReactionChip.label>反应芯片</GR_Plugin_Brain_ReactionChip.label>
-  <!-- EN: 存储着百般武艺的精炼数据芯片。应对、预测、使用——只要陷入近身战，定能派上用场。 -->
+  <!-- EN: A refined data chip storing countless combat techniques. Respond, predict, execute—when close combat begins, it will prove its worth. -->
   <GR_Plugin_Brain_ReactionChip.description>存储着百般武艺的精炼数据芯片。应对、预测、使用——只要陷入近身战，定能派上用场。</GR_Plugin_Brain_ReactionChip.description>
   
   <!-- EN: Technician local database -->
   <GR_Plugin_Brain_TechnicianDatabase.label>技工本地数据库</GR_Plugin_Brain_TechnicianDatabase.label>
-  <!-- EN: 存储着大量蓝图的数据库。甚至收录了宇宙中存在过和已经消失的螺丝规格，以及对应的工具。 -->
+  <!-- EN: A database containing vast numbers of blueprints. It even records the specifications of screws that exist—and no longer exist—throughout the universe, along with the corresponding tools. -->
   <GR_Plugin_Brain_TechnicianDatabase.description>存储着大量蓝图的数据库。甚至收录了宇宙中存在过和已经消失的螺丝规格，以及对应的工具。</GR_Plugin_Brain_TechnicianDatabase.description>
   
   <!-- EN: TargetingSystem -->
   <GR_Plugin_Eye_TargetingSystem.label>瞄准系统</GR_Plugin_Eye_TargetingSystem.label>
-  <!-- EN: 兼容各式装备的目标分析与识别元件。能有效避免友军误伤，同时提供可靠的向量预测功能。经常有骑士灰裔以礼物的方式赠送给搭档。 -->
+  <!-- EN: A target analysis and identification component compatible with all kinds of equipment. It effectively prevents friendly fire while providing reliable vector prediction. Knightly Gray often give it to their partners as a gift. -->
   <GR_Plugin_Eye_TargetingSystem.description>兼容各式装备的目标分析与识别元件。能有效避免友军误伤，同时提供可靠的向量预测功能。经常有骑士灰裔以礼物的方式赠送给搭档。</GR_Plugin_Eye_TargetingSystem.description>
   
   <!-- EN: EfficiencyBooster -->
   <GR_Plugin_Heart_EfficiencyBooster.label>效率增强器</GR_Plugin_Heart_EfficiencyBooster.label>
-  <!-- EN: 安装在灰潮核心的效率增强器，提升纳米机械恢复速度。 -->
+  <!-- EN: An efficiency enhancer installed in the Gray Tide core that increases nanite recovery speed. -->
   <GR_Plugin_Heart_EfficiencyBooster.description>安装在灰潮核心的效率增强器，提升纳米机械恢复速度。</GR_Plugin_Heart_EfficiencyBooster.description>
   
   <!-- EN: Advanced nanites memory -->
   <GR_Plugin_NanitesMemoryAdvanced.label>高级纳米机械存储器</GR_Plugin_NanitesMemoryAdvanced.label>
-  <!-- EN: 正如其名称，用于存储源质的存储器。这种款式一般只会用于运输目的。会一定程度上影响灰裔的行动能力的同时，还需抽调少量核心的算力用于压缩灰潮源质。 -->
+  <!-- EN: As its name suggests, a storage unit for Zro. This model is generally used only for transport. It hinders the Gray's mobility to some extent and also draws a small amount of core processing power to compress Zro. -->
   <GR_Plugin_NanitesMemoryAdvanced.description>正如其名称，用于存储源质的存储器。这种款式一般只会用于运输目的。会一定程度上影响灰裔的行动能力的同时，还需抽调少量核心的算力用于压缩灰潮源质。</GR_Plugin_NanitesMemoryAdvanced.description>
   
   <!-- EN: Intermediate nanites memory -->
   <GR_Plugin_NanitesMemoryIntermediate.label>中级纳米机械存储器</GR_Plugin_NanitesMemoryIntermediate.label>
-  <!-- EN: 正如其名称，用于存储源质的存储器。因为更大的体积和制造成本，得以采用更高效的压缩方式。不但大幅提升了存储上限，应其控制良好的体积和分布方式，并不会对行动造成影响。 -->
+  <!-- EN: As its name suggests, a storage unit for Zro. Its larger size and manufacturing cost allow a more efficient compression method. It greatly increases storage capacity, while its well-controlled size and distribution do not affect movement. -->
   <GR_Plugin_NanitesMemoryIntermediate.description>正如其名称，用于存储源质的存储器。因为更大的体积和制造成本，得以采用更高效的压缩方式。不但大幅提升了存储上限，应其控制良好的体积和分布方式，并不会对行动造成影响。</GR_Plugin_NanitesMemoryIntermediate.description>
   
   <!-- EN: Primary nanites memory -->
   <GR_Plugin_NanitesMemoryPrimary.label>初级纳米机械存储器</GR_Plugin_NanitesMemoryPrimary.label>
-  <!-- EN: 正如其名称，用于存储源质的存储器。可提升灰裔体内的灰潮源质存储单位上限。专门设计成了几乎不会对行动造成阻碍的小型款式。 -->
+  <!-- EN: As its name suggests, a storage unit for Zro. It raises the Gray's internal Zro storage capacity. It is designed in a small form that barely hinders movement. -->
   <GR_Plugin_NanitesMemoryPrimary.description>正如其名称，用于存储源质的存储器。可提升灰裔体内的灰潮源质存储单位上限。专门设计成了几乎不会对行动造成阻碍的小型款式。</GR_Plugin_NanitesMemoryPrimary.description>
   
   <!-- EN: Ultimate nanites memory -->
   <GR_Plugin_NanitesMemoryUltimate.label>终极纳米机械存储器</GR_Plugin_NanitesMemoryUltimate.label>
-  <!-- EN: 正如其名称，用于存储源质的存储器。基本上只会在涉及到大规模建设的运输作业中见到。这种级别的插件，会对核心算力和行动能力产生严重影响，足让有些灰裔将其视为责罚。 -->
+  <!-- EN: As its name suggests, a storage unit for Zro. It is basically only seen in transport operations for large-scale construction. A plugin of this level seriously affects core processing power and mobility—enough that some Gray regard it as punishment. -->
   <GR_Plugin_NanitesMemoryUltimate.description>正如其名称，用于存储源质的存储器。基本上只会在涉及到大规模建设的运输作业中见到。这种级别的插件，会对核心算力和行动能力产生严重影响，足让有些灰裔将其视为责罚。</GR_Plugin_NanitesMemoryUltimate.description>
   
   <!-- EN: Advanced overclocking chip -->
   <GR_Plugin_OverclockingChipAdvanced.label>高级超频芯片</GR_Plugin_OverclockingChipAdvanced.label>
-  <!-- EN: 无视安全超频协议的产物。需要牺牲一部分源质容量。失去赖以为生的源质，足以让任何灰裔理解这款芯片的危险性。 -->
+  <!-- EN: A product that ignores all safe overclocking protocols. It requires sacrificing part of one's Zro capacity. Losing the Zro they rely on is enough for any Gray to understand the danger of this chip. -->
   <GR_Plugin_OverclockingChipAdvanced.description>无视安全超频协议的产物。需要牺牲一部分源质容量。失去赖以为生的源质，足以让任何灰裔理解这款芯片的危险性。</GR_Plugin_OverclockingChipAdvanced.description>
   
   <!-- EN: Intermediate overclocking chip -->
   <GR_Plugin_OverclockingChipIntermediate.label>中级超频芯片</GR_Plugin_OverclockingChipIntermediate.label>
-  <!-- EN: 精心构建的超频支持插件。在安全超频的前提下做到了极限。对于许多灰裔来说，这是一道分水岭。 -->
+  <!-- EN: A carefully engineered overclocking support plugin. It reaches the limit of what is possible under safe overclocking. For many Gray, it is a watershed. -->
   <GR_Plugin_OverclockingChipIntermediate.description>精心构建的超频支持插件。在安全超频的前提下做到了极限。对于许多灰裔来说，这是一道分水岭。</GR_Plugin_OverclockingChipIntermediate.description>
   
   <!-- EN: Primary overclocking chip -->
   <GR_Plugin_OverclockingChipPrimary.label>初级超频芯片</GR_Plugin_OverclockingChipPrimary.label>
-  <!-- EN: 简单的超频支持插件。仅仅用于控制核心能量的再分配与优化。 -->
+  <!-- EN: A simple overclocking support plugin. It merely controls the redistribution and optimization of core energy. -->
   <GR_Plugin_OverclockingChipPrimary.description>简单的超频支持插件。仅仅用于控制核心能量的再分配与优化。</GR_Plugin_OverclockingChipPrimary.description>
   
   <!-- EN: Ultimate overclocking chip -->
   <GR_Plugin_OverclockingChipUltimate.label>终极超频芯片</GR_Plugin_OverclockingChipUltimate.label>
-  <!-- EN: 黑入人格核心，将能量供应推至满载。几乎刚需外置源质储罐。……即便能理解降低源质储量意味着什么，超频到极限所带来的全能感仍在狂欢。 -->
+  <!-- EN: Hacks into the persona core, pushing energy supply to full load. An external Zro tank is almost mandatory. ...Even understanding what reduced Zro reserves means, the omnipotence of overclocking to the limit is still euphoric. -->
   <GR_Plugin_OverclockingChipUltimate.description>黑入人格核心，将能量供应推至满载。几乎刚需外置源质储罐。……即便能理解降低源质储量意味着什么，超频到极限所带来的全能感仍在狂欢。</GR_Plugin_OverclockingChipUltimate.description>
   
 </LanguageData>

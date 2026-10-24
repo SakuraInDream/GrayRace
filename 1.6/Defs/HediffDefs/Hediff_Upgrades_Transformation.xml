@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 变形Hediff -->
+
+  <!-- ================================== 手臂变形 ================================== -->
+
+  <!-- 挖掘臂 -->
+  <HediffDef>
+    <defName>GR_Hediff_DrillArm</defName>
+    <label>drill arm</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <description>A form developed by the Gray through reverse-engineering the Empire's drill arm and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <MiningSpeed>1.60</MiningSpeed>
+          <DeepDrillingSpeed>0.7</DeepDrillingSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 务农手 -->
+  <HediffDef>
+    <defName>GR_Hediff_FieldHand</defName>
+    <label>field hand</label>
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <description>A form developed by the Gray through reverse-engineering the Empire's field hand and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PlantWorkSpeed>1.60</PlantWorkSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 眼部变形 ================================== -->
+
+  <!-- ================================== 躯干变形 ================================== -->
+
+
+</Defs>

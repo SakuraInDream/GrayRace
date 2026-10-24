@@ -5,7 +5,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_MechanitorHelmet</defName>
     <label>Gray Mechanitor Helmet</label>
-    <description>.</description>
+    <description>As the standard visual terminal of Gray mechanitors, its lens is composed of multiple nanoscale refraction arrays that can parse and reorganize visual information within microseconds. Through a neural-sympathy port linked to the wearer's persona core, the refractor can directly read what is seen and thought, then calculate and project the optimal logical path and tactical prediction for the wearer.\nAfter some Gray mechanitors collectively protested that 'direct connection to the persona core violates privacy,' a new user protocol was added to the next generation of sympathy refractors.</description>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -88,7 +88,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_MarksmanHelmet</defName>
     <label>Gray Marksman Helmet</label>
-    <description>.</description>
+    <description>The helmet's protective layer is compressed to the utmost to make room for an intelligent fire-control system. It helps the marksman calculate wind speed, predict ballistic trajectories, and analyze movement, tracing the target's line of fate before the shooter's eyes—yet no matter how precisely it calculates the 'intersection,' it can never replace the instant the marksman pulls the trigger.</description>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -169,7 +169,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_MeleeHelmet</defName>
     <label>Gray Warrior Helmet</label>
-    <description>.</description>
+    <description>Equipment forged for the Gray by human artisans of the Star Sea Empire, intended to fill in the part the Gray lack.\nA heavy faceplate made exclusively for the Gray, equipped with an intelligent system that analyzes behavior and predicts movement, along with sensory shielding. Engraved on it is a prayer: 'A knight's sword is swung in protection, never drawn for selfish desire.'</description>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -253,7 +253,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_LightHelmet</defName>
     <label>Gray Light Helmet</label>
-    <description>.</description>
+    <description>Light standard helmet designed for reconnaissance and support missions. A dedicated soft cushioning layer is added over the basic protective structure, significantly improving resistance to impacts and stray rounds. It effectively handles unpredictable sniper shots and shrapnel on the battlefield—threats that are often lethal and precise.</description>
     <techLevel>Spacer</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -330,7 +330,7 @@
   <ThingDef ParentName="HatMakeableBase">
     <defName>Gray_Apparel_HeavyHelmet</defName>
     <label>Gray Heavy Helmet</label>
-    <description>.</description>
+    <description>Standard Gray heavy helmet, designed for heavy infantry who charge into battle. It follows the same multi-layer protection concept as the full-body armor and adds a special cushioning liner to minimize impact damage to the wearer's persona core—though the Gray lack a biological brain, their persona core is more vulnerable to certain attacks than biological organs. Most Gray proactively equip superior armor to ensure their safety in fierce combat.</description>
     <techLevel>Spacer</techLevel>
     <possessionCount>1</possessionCount>
     <graphicData>

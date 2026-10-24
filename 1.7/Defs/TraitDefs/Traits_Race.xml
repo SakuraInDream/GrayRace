@@ -11,7 +11,7 @@
     <degreeDatas>
       <li>
         <label>Learning Algorithms</label>
-        <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
+        <description>With base code built on a self-iterating cognitive architecture, she can learn more from any interaction.\nIn time, she will surely become a remarkable Gray.</description>
         <statFactors>
           <GlobalLearningFactor>1.2</GlobalLearningFactor>
         </statFactors>
@@ -29,7 +29,7 @@
     <degreeDatas>
       <li>
         <label>Natural Engineers</label>
-        <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
+        <description>Her base code can construct optimal designs based on a vast built-in library.\nA natural-born builder.</description>
         <statFactors>
           <GeneralLaborSpeed>1.2</GeneralLaborSpeed>
           <ConstructionSpeed>1.2</ConstructionSpeed>
@@ -45,7 +45,7 @@
     <degreeDatas>
       <li>
         <label>Natural Physicists</label>
-        <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
+        <description>The systematic knowledge of physical laws stored in her base code helps her conduct research more effectively.\nShe is, so to speak, a natural rationalist.</description>
         <statFactors>
           <ResearchSpeed>1.2</ResearchSpeed>
         </statFactors>
@@ -60,7 +60,7 @@
     <degreeDatas>
       <li>
         <label>Natural Sociologists</label>
-        <description>{PAWN_nameDef} has a knack for learning. {PAWN_pronoun} picks things up much faster than others.</description>
+        <description>Her base code contains built-in social structure models for various species, allowing her to precisely understand group dynamics and the logic of individual behavior.\nSome people who know her deliberately avoid her, which troubles her a little.</description>
         <statFactors>
           <SocialImpact>1.5</SocialImpact>
           <NegotiationAbility>1.5</NegotiationAbility>

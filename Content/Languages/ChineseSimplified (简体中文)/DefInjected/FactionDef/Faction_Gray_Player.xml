@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Gray colonial outpost -->
   <Gray_PlayerFaction.label>灰裔殖民前哨站</Gray_PlayerFaction.label>
   <!-- EN: A colony of recently-arrived Grays. -->
@@ -11,7 +11,7 @@
   <Gray_PlayerFaction.messageDefendersAttacking>{1} 的 {0} 正在攻击你的 {2}。</Gray_PlayerFaction.messageDefendersAttacking>
   <!-- EN: gray colonist -->
   <Gray_PlayerFaction.pawnSingular>灰裔殖民者</Gray_PlayerFaction.pawnSingular>
-  <!-- EN: kiiro colonists -->
+  <!-- EN: gray colonists -->
   <Gray_PlayerFaction.pawnsPlural>灰裔殖民者</Gray_PlayerFaction.pawnsPlural>
-
+  
 </LanguageData>

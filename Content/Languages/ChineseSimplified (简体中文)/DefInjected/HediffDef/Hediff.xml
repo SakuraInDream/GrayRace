@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
-  <!-- EN: 灰潮生命 -->
+  
+  <!-- EN: Gray Tide Life -->
   <NanitesLife.label>灰潮生命</NanitesLife.label>
-  <!-- EN: 你不应该看到这个。 -->
+  <!-- EN: You should not be seeing this. -->
   <NanitesLife.description>你不应该看到这个。</NanitesLife.description>
-
-  <!-- EN: 灰潮再生 -->
+  
+  <!-- EN: Gray Tide Regeneration -->
   <NanitesRegeneration.label>灰潮再生</NanitesRegeneration.label>
-  <!-- EN: 运用体内的备用灰潮源质能够快速修复身上的伤口。 -->
+  <!-- EN: Uses the spare Nanite in the body to rapidly repair wounds. -->
   <NanitesRegeneration.description>运用体内的备用灰潮源质能够快速修复身上的伤口。</NanitesRegeneration.description>
-
+  
 </LanguageData>

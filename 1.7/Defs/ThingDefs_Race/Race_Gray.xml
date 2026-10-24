@@ -395,13 +395,39 @@
             <original>WitnessedDeathAlly</original>
             <replacer>GR_WitnessedDeathAlly</replacer>
           </li>
+          <li>
+            <original>ButcheredHumanlikeCorpse</original>
+            <replacer>GR_ButcheredHumanlikeCorpse</replacer>
+          </li>
+          <li>
+            <original>KnowButcheredHumanlikeCorpse</original>
+            <replacer>GR_KnowButcheredHumanlikeCorpse</replacer>
+          </li>
+          <li>
+            <original>KnowColonistExecuted</original>
+            <replacer>GR_KnowColonistExecuted</replacer>
+          </li>
+          <li>
+            <original>KnowGuestExecuted</original>
+            <replacer>GR_KnowGuestExecuted</replacer>
+          </li>
+          <li>
+            <original>KnowColonistOrganHarvested</original>
+            <replacer>GR_KnowColonistOrganHarvested</replacer>
+          </li>
+          <li>
+            <original>KnowGuestOrganHarvested</original>
+            <replacer>GR_KnowGuestOrganHarvested</replacer>
+          </li>
+          <li>
+            <original>Expectations</original>
+            <replacer>GR_Expectations</replacer>
+          </li>
         </replacerList>
         <cannotReceiveThoughts>
           <li>AteWithoutTable</li>
-          <li>ButcheredHumanlikeCorpse</li>
           <li>HarvestedOrgan_Bloodlust</li>
           <li>KilledHumanlikeBloodlust</li>
-          <li>KnowButcheredHumanlikeCorpse</li>
           <li>ObservedLayingCorpse</li>
           <li>ObservedLayingRottingCorpse</li>
           <li>SleepDisturbed</li>
@@ -414,6 +440,17 @@
           <li>ToxicFallout</li>
           <li>EnvironmentDark</li>
         </cannotReceiveThoughts>
+        <restrictedThoughts>
+          <li>GR_KnowCompatriotDied</li>
+          <li>GR_WitnessedDeathAlly</li>
+          <li>GR_ButcheredHumanlikeCorpse</li>
+          <li>GR_KnowButcheredHumanlikeCorpse</li>
+          <li>GR_KnowColonistExecuted</li>
+          <li>GR_KnowGuestExecuted</li>
+          <li>GR_KnowColonistOrganHarvested</li>
+          <li>GR_KnowGuestOrganHarvested</li>
+          <li>GR_Expectations</li>
+        </restrictedThoughts>
       </thoughtSettings>
       <!-- ================================================= 种族限定设置 ================================================= -->
       <raceRestriction>
@@ -486,7 +523,11 @@
           <li>GR_ShipSlayer</li>
         </weaponList>
         <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
+        <whiteGeneTags>
+          <li>Aptitude</li>
+        </whiteGeneTags>
         <whiteGeneList>
+          <li>DarkVision</li>
         </whiteGeneList>
         <blackRecipeList>
         </blackRecipeList>
@@ -784,6 +825,7 @@
     </race>
     <recipes Inherit="False">      <!--能够接受的手术配方-->
       <li>RemoveBodyPart</li>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">RemovePorcupineQuill</li>
     </recipes>
   </AlienRace.ThingDef_AlienRace>
 

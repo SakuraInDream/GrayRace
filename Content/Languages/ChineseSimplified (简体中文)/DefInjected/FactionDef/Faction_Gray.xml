@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
-  <!-- EN: <color=#00ff9b><b>德萨努协约国</b></color> -->
-  <Gray_Faction.label>&lt;color=#00ff9b&gt;&lt;b&gt;德萨努协约国&lt;/b&gt;&lt;/color&gt;</Gray_Faction.label>
-  <!-- EN: 灰裔先遣队据点。 -->
+  
+  <!-- EN: <color=#00ff9b><b>Desanu Concord</b></color> -->
+  <Gray_Faction.label>&lt;color=#00ff9b>&lt;b>德萨努协约国&lt;/b>&lt;/color></Gray_Faction.label>
+  <!-- EN: Gray Advance Team outpost. -->
   <Gray_Faction.description>灰裔先遣队据点。</Gray_Faction.description>
-  <!-- EN: <color=#00ff9b><b>德萨努协约国</b></color> -->
-  <Gray_Faction.fixedName>&lt;color=#00ff9b&gt;&lt;b&gt;德萨努协约国&lt;/b&gt;&lt;/color&gt;</Gray_Faction.fixedName>
+  <!-- EN: <color=#00ff9b><b>Desanu Concord</b></color> -->
+  <Gray_Faction.fixedName>&lt;color=#00ff9b>&lt;b>德萨努协约国&lt;/b>&lt;/color></Gray_Faction.fixedName>
   <!-- EN: governor -->
   <Gray_Faction.leaderTitle>总督</Gray_Faction.leaderTitle>
   <!-- EN: {0} from {1} are attacking your {2}. -->
@@ -15,5 +15,5 @@
   <Gray_Faction.pawnSingular>灰裔</Gray_Faction.pawnSingular>
   <!-- EN: Grey -->
   <Gray_Faction.pawnsPlural>灰裔</Gray_Faction.pawnsPlural>
-
+  
 </LanguageData>

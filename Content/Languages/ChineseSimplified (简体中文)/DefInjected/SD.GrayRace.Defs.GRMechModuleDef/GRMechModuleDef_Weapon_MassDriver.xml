@@ -1,89 +1,89 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 物质投射炮 -->
+  <!-- EN: Mass Driver -->
   <GR_MechModule_MassDriver1_L.label>物质投射炮</GR_MechModule_MassDriver1_L.label>
-  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <!-- EN: This electromagnetic projectile weapon uses magnets to cyclotron-accelerate armor-piercing rounds to extreme velocities. -->
   <GR_MechModule_MassDriver1_L.description>此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。</GR_MechModule_MassDriver1_L.description>
   
-  <!-- EN: 物质投射炮 -->
+  <!-- EN: Mass Driver -->
   <GR_MechModule_MassDriver1_M.label>物质投射炮</GR_MechModule_MassDriver1_M.label>
-  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <!-- EN: This electromagnetic projectile weapon uses magnets to cyclotron-accelerate armor-piercing rounds to extreme velocities. -->
   <GR_MechModule_MassDriver1_M.description>此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。</GR_MechModule_MassDriver1_M.description>
   
-  <!-- EN: 物质投射炮 -->
+  <!-- EN: Mass Driver -->
   <GR_MechModule_MassDriver1_S.label>物质投射炮</GR_MechModule_MassDriver1_S.label>
-  <!-- EN: 此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。 -->
+  <!-- EN: This electromagnetic projectile weapon uses magnets to cyclotron-accelerate armor-piercing rounds to extreme velocities. -->
   <GR_MechModule_MassDriver1_S.description>此类电磁射弹器使用磁铁将穿甲弹丸回旋加速到极高的速度。</GR_MechModule_MassDriver1_S.description>
   
-  <!-- EN: 线圈炮 -->
+  <!-- EN: Coilgun -->
   <GR_MechModule_MassDriver2_L.label>线圈炮</GR_MechModule_MassDriver2_L.label>
-  <!-- EN: 线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。 -->
+  <!-- EN: The coilgun is an upgraded version of the early mass driver, using electromagnetic coils to accelerate projectiles more efficiently. -->
   <GR_MechModule_MassDriver2_L.description>线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。</GR_MechModule_MassDriver2_L.description>
   
-  <!-- EN: 线圈炮 -->
+  <!-- EN: Coilgun -->
   <GR_MechModule_MassDriver2_M.label>线圈炮</GR_MechModule_MassDriver2_M.label>
-  <!-- EN: 线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。 -->
+  <!-- EN: The coilgun is an upgraded version of the early mass driver, using electromagnetic coils to accelerate projectiles more efficiently. -->
   <GR_MechModule_MassDriver2_M.description>线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。</GR_MechModule_MassDriver2_M.description>
   
-  <!-- EN: 线圈炮 -->
+  <!-- EN: Coilgun -->
   <GR_MechModule_MassDriver2_S.label>线圈炮</GR_MechModule_MassDriver2_S.label>
-  <!-- EN: 线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。 -->
+  <!-- EN: The coilgun is an upgraded version of the early mass driver, using electromagnetic coils to accelerate projectiles more efficiently. -->
   <GR_MechModule_MassDriver2_S.description>线圈炮是早期质量投射器的升级版，使用电磁线圈更有效地加速弹药。</GR_MechModule_MassDriver2_S.description>
   
-  <!-- EN: 轨道炮 -->
+  <!-- EN: Railgun -->
   <GR_MechModule_MassDriver3_L.label>轨道炮</GR_MechModule_MassDriver3_L.label>
-  <!-- EN: 轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。 -->
+  <!-- EN: The railgun is the latest electromagnetic accelerator. It launches projectiles at incredible speed by accelerating them along twin parallel rails. -->
   <GR_MechModule_MassDriver3_L.description>轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。</GR_MechModule_MassDriver3_L.description>
   
-  <!-- EN: 轨道炮 -->
+  <!-- EN: Railgun -->
   <GR_MechModule_MassDriver3_M.label>轨道炮</GR_MechModule_MassDriver3_M.label>
-  <!-- EN: 轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。 -->
+  <!-- EN: The railgun is the latest electromagnetic accelerator. It launches projectiles at incredible speed by accelerating them along twin parallel rails. -->
   <GR_MechModule_MassDriver3_M.description>轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。</GR_MechModule_MassDriver3_M.description>
   
-  <!-- EN: 轨道炮 -->
+  <!-- EN: Railgun -->
   <GR_MechModule_MassDriver3_S.label>轨道炮</GR_MechModule_MassDriver3_S.label>
-  <!-- EN: 轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。 -->
+  <!-- EN: The railgun is the latest electromagnetic accelerator. It launches projectiles at incredible speed by accelerating them along twin parallel rails. -->
   <GR_MechModule_MassDriver3_S.description>轨道炮是最新的电磁加速炮，轨道炮通过并行双轨加速炮弹使之以难以置信的高速发射出去。</GR_MechModule_MassDriver3_S.description>
   
-  <!-- EN: 先进轨道炮 -->
+  <!-- EN: Advanced Railgun -->
   <GR_MechModule_MassDriver4_L.label>先进轨道炮</GR_MechModule_MassDriver4_L.label>
-  <!-- EN: 经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。 -->
+  <!-- EN: A new version of the classic railgun, using sturdier rails and increased energy allocation. These weapons are more powerful and accurate than their predecessors. -->
   <GR_MechModule_MassDriver4_L.description>经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。</GR_MechModule_MassDriver4_L.description>
   
-  <!-- EN: 先进轨道炮 -->
+  <!-- EN: Advanced Railgun -->
   <GR_MechModule_MassDriver4_M.label>先进轨道炮</GR_MechModule_MassDriver4_M.label>
-  <!-- EN: 经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。 -->
+  <!-- EN: A new version of the classic railgun, using sturdier rails and increased energy allocation. These weapons are more powerful and accurate than their predecessors. -->
   <GR_MechModule_MassDriver4_M.description>经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。</GR_MechModule_MassDriver4_M.description>
   
-  <!-- EN: 先进轨道炮 -->
+  <!-- EN: Advanced Railgun -->
   <GR_MechModule_MassDriver4_S.label>先进轨道炮</GR_MechModule_MassDriver4_S.label>
-  <!-- EN: 经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。 -->
+  <!-- EN: A new version of the classic railgun, using sturdier rails and increased energy allocation. These weapons are more powerful and accurate than their predecessors. -->
   <GR_MechModule_MassDriver4_S.description>经典轨道炮的新版本，使用更坚固的轨道并增加了能量配给。这些武器比之前的更强劲，更准确。</GR_MechModule_MassDriver4_S.description>
   
-  <!-- EN: 高斯炮 -->
+  <!-- EN: Gauss Cannon -->
   <GR_MechModule_MassDriver5_L.label>高斯炮</GR_MechModule_MassDriver5_L.label>
-  <!-- EN: 在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。 -->
+  <!-- EN: After upgrading the design of older electromagnetic coils, this new version is even more destructive than the most advanced railgun. It fires more accurately and at higher speed. -->
   <GR_MechModule_MassDriver5_L.description>在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。</GR_MechModule_MassDriver5_L.description>
   
-  <!-- EN: 高斯炮 -->
+  <!-- EN: Gauss Cannon -->
   <GR_MechModule_MassDriver5_M.label>高斯炮</GR_MechModule_MassDriver5_M.label>
-  <!-- EN: 在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。 -->
+  <!-- EN: After upgrading the design of older electromagnetic coils, this new version is even more destructive than the most advanced railgun. It fires more accurately and at higher speed. -->
   <GR_MechModule_MassDriver5_M.description>在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。</GR_MechModule_MassDriver5_M.description>
   
-  <!-- EN: 高斯炮 -->
+  <!-- EN: Gauss Cannon -->
   <GR_MechModule_MassDriver5_S.label>高斯炮</GR_MechModule_MassDriver5_S.label>
-  <!-- EN: 在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。 -->
+  <!-- EN: After upgrading the design of older electromagnetic coils, this new version is even more destructive than the most advanced railgun. It fires more accurately and at higher speed. -->
   <GR_MechModule_MassDriver5_S.description>在对老式电磁线圈的设计进行升级后，新版本的破坏性甚至高于最先进的轨道炮。它能够发射得更准，速度更快。</GR_MechModule_MassDriver5_S.description>
   
-  <!-- EN: 兆级加农炮 -->
+  <!-- EN: Mega Cannon -->
   <GR_MechModule_MegaCannon.label>兆级加农炮</GR_MechModule_MegaCannon.label>
-  <!-- EN: 一款无比庞大的质量加速炮，只能安装在轴基武器台上。能够在极远距离射出威力惊人的炮弹。 -->
+  <!-- EN: An enormous mass accelerator cannon that can only be mounted on a spinal weapon mount. It fires projectiles of terrifying power at extreme range. -->
   <GR_MechModule_MegaCannon.description>一款无比庞大的质量加速炮，只能安装在轴基武器台上。能够在极远距离射出威力惊人的炮弹。</GR_MechModule_MegaCannon.description>
   
-  <!-- EN: 千兆级加农炮 -->
+  <!-- EN: Giga Cannon -->
   <GR_MechModule_MegaCannonPlus.label>千兆级加农炮</GR_MechModule_MegaCannonPlus.label>
-  <!-- EN: 更加强大的质量加速炮，能够轻易撕毁最坚固的护盾。 -->
+  <!-- EN: A more powerful mass accelerator capable of tearing through even the strongest shields. -->
   <GR_MechModule_MegaCannonPlus.description>更加强大的质量加速炮，能够轻易撕毁最坚固的护盾。</GR_MechModule_MegaCannonPlus.description>
   
 </LanguageData>

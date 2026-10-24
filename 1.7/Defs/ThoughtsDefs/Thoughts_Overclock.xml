@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>GR_PrimaryOverclocking</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>GR_Hediff_OverclockingChipPrimary</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Primary Overclock</label>
+        <description>I've gotten stronger. Just a little—but hey, not bad.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>GR_IntermediateOverclocking</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>GR_Hediff_OverclockingChipIntermediate</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Intermediate Overclock</label>
+        <description>Whoa. Power is surging through the Nanites. This feeling... it's amazing.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>GR_AdvancedOverclocking</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>GR_Hediff_OverclockingChipAdvanced</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Advanced Overclock</label>
+        <description>Losing some Nanites... but this power? Worth it. Absolutely worth it.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>GR_UltimateOverclocking</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>GR_Hediff_OverclockingChipUltimate</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Ultimate Overclock</label>
+        <description>The world... is in the palm of my hand. The cost? Insignificant.</description>
+        <baseMoodEffect>25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

@@ -1,184 +1,184 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <!-- EN: 纳米装甲 -->
+
+  <!-- EN: Nanite Armor -->
   <GR_MechModule_Armor1_L.label>纳米装甲</GR_MechModule_Armor1_L.label>
-  <!-- EN: 加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。 -->
+  <!-- EN: Reinforced nanite armor provides an additional layer of protection. In combat, that layer may be the difference between life and death. -->
   <GR_MechModule_Armor1_L.description>加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。</GR_MechModule_Armor1_L.description>
-  
-  <!-- EN: 纳米装甲 -->
+
+  <!-- EN: Nanite Armor -->
   <GR_MechModule_Armor1_M.label>纳米装甲</GR_MechModule_Armor1_M.label>
-  <!-- EN: 加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。 -->
+  <!-- EN: Reinforced nanite armor provides an additional layer of protection. In combat, that layer may be the difference between life and death. -->
   <GR_MechModule_Armor1_M.description>加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。</GR_MechModule_Armor1_M.description>
-  
-  <!-- EN: 纳米装甲 -->
+
+  <!-- EN: Nanite Armor -->
   <GR_MechModule_Armor1_S.label>纳米装甲</GR_MechModule_Armor1_S.label>
-  <!-- EN: 加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。 -->
+  <!-- EN: Reinforced nanite armor provides an additional layer of protection. In combat, that layer may be the difference between life and death. -->
   <GR_MechModule_Armor1_S.description>加强过的纳米装甲能够提供多一层的防护，有没有这一层防护，在战斗中可能就是生与死的区别。</GR_MechModule_Armor1_S.description>
-  
-  <!-- EN: 瓷金装甲 -->
+
+  <!-- EN: Ceramo-Metal Armor -->
   <GR_MechModule_Armor2_L.label>瓷金装甲</GR_MechModule_Armor2_L.label>
-  <!-- EN: 不同金属和陶瓷的结合物，坚硬而又不失柔韧性。 -->
+  <!-- EN: A composite of various metals and ceramics: hard yet still flexible. -->
   <GR_MechModule_Armor2_L.description>不同金属和陶瓷的结合物，坚硬而又不失柔韧性。</GR_MechModule_Armor2_L.description>
-  
-  <!-- EN: 瓷金装甲 -->
+
+  <!-- EN: Ceramo-Metal Armor -->
   <GR_MechModule_Armor2_M.label>瓷金装甲</GR_MechModule_Armor2_M.label>
-  <!-- EN: 不同金属和陶瓷的结合物，坚硬而又不失柔韧性。 -->
+  <!-- EN: A composite of various metals and ceramics: hard yet still flexible. -->
   <GR_MechModule_Armor2_M.description>不同金属和陶瓷的结合物，坚硬而又不失柔韧性。</GR_MechModule_Armor2_M.description>
-  
-  <!-- EN: 瓷金装甲 -->
+
+  <!-- EN: Ceramo-Metal Armor -->
   <GR_MechModule_Armor2_S.label>瓷金装甲</GR_MechModule_Armor2_S.label>
-  <!-- EN: 不同金属和陶瓷的结合物，坚硬而又不失柔韧性。 -->
+  <!-- EN: A composite of various metals and ceramics: hard yet still flexible. -->
   <GR_MechModule_Armor2_S.description>不同金属和陶瓷的结合物，坚硬而又不失柔韧性。</GR_MechModule_Armor2_S.description>
-  
-  <!-- EN: 塑钢装甲 -->
+
+  <!-- EN: Plasteel Armor -->
   <GR_MechModule_Armor3_L.label>塑钢装甲</GR_MechModule_Armor3_L.label>
-  <!-- EN: 塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。 -->
+  <!-- EN: Plasteel is a composite of various plastics and metals, tough and elastic. It strengthens the hull and is cheap to produce. -->
   <GR_MechModule_Armor3_L.description>塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。</GR_MechModule_Armor3_L.description>
-  
-  <!-- EN: 塑钢装甲 -->
+
+  <!-- EN: Plasteel Armor -->
   <GR_MechModule_Armor3_M.label>塑钢装甲</GR_MechModule_Armor3_M.label>
-  <!-- EN: 塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。 -->
+  <!-- EN: Plasteel is a composite of various plastics and metals, tough and elastic. It strengthens the hull and is cheap to produce. -->
   <GR_MechModule_Armor3_M.description>塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。</GR_MechModule_Armor3_M.description>
-  
-  <!-- EN: 塑钢装甲 -->
+
+  <!-- EN: Plasteel Armor -->
   <GR_MechModule_Armor3_S.label>塑钢装甲</GR_MechModule_Armor3_S.label>
-  <!-- EN: 塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。 -->
+  <!-- EN: Plasteel is a composite of various plastics and metals, tough and elastic. It strengthens the hull and is cheap to produce. -->
   <GR_MechModule_Armor3_S.description>塑钢由多种塑料和金属结合而成，富有弹性。能增加舰体强度，而且造价低廉。</GR_MechModule_Armor3_S.description>
-  
-  <!-- EN: 耐钢装甲 -->
+
+  <!-- EN: Durasteel Armor -->
   <GR_MechModule_Armor4_L.label>耐钢装甲</GR_MechModule_Armor4_L.label>
-  <!-- EN: 此种材料质地强韧、耐冲击，是合适的舰体材料。 -->
+  <!-- EN: This material is tough and impact-resistant, making it a suitable hull material. -->
   <GR_MechModule_Armor4_L.description>此种材料质地强韧、耐冲击，是合适的舰体材料。</GR_MechModule_Armor4_L.description>
-  
-  <!-- EN: 耐钢装甲 -->
+
+  <!-- EN: Durasteel Armor -->
   <GR_MechModule_Armor4_M.label>耐钢装甲</GR_MechModule_Armor4_M.label>
-  <!-- EN: 此种材料质地强韧、耐冲击，是合适的舰体材料。 -->
+  <!-- EN: This material is tough and impact-resistant, making it a suitable hull material. -->
   <GR_MechModule_Armor4_M.description>此种材料质地强韧、耐冲击，是合适的舰体材料。</GR_MechModule_Armor4_M.description>
-  
-  <!-- EN: 耐钢装甲 -->
+
+  <!-- EN: Durasteel Armor -->
   <GR_MechModule_Armor4_S.label>耐钢装甲</GR_MechModule_Armor4_S.label>
-  <!-- EN: 此种材料质地强韧、耐冲击，是合适的舰体材料。 -->
+  <!-- EN: This material is tough and impact-resistant, making it a suitable hull material. -->
   <GR_MechModule_Armor4_S.description>此种材料质地强韧、耐冲击，是合适的舰体材料。</GR_MechModule_Armor4_S.description>
-  
-  <!-- EN: 零素装甲 -->
+
+  <!-- EN: Null-Element Armor -->
   <GR_MechModule_Armor5_L.label>零素装甲</GR_MechModule_Armor5_L.label>
-  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
+  <!-- EN: Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower. -->
   <GR_MechModule_Armor5_L.description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</GR_MechModule_Armor5_L.description>
-  
-  <!-- EN: 零素装甲 -->
+
+  <!-- EN: Null-Element Armor -->
   <GR_MechModule_Armor5_M.label>零素装甲</GR_MechModule_Armor5_M.label>
-  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
+  <!-- EN: Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower. -->
   <GR_MechModule_Armor5_M.description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</GR_MechModule_Armor5_M.description>
-  
-  <!-- EN: 零素装甲 -->
+
+  <!-- EN: Null-Element Armor -->
   <GR_MechModule_Armor5_S.label>零素装甲</GR_MechModule_Armor5_S.label>
-  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
+  <!-- EN: Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower. -->
   <GR_MechModule_Armor5_S.description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</GR_MechModule_Armor5_S.description>
-  
-  <!-- EN: 龙鳞装甲 -->
+
+  <!-- EN: Dragonscale Armor -->
   <GR_MechModule_Armor6_L.label>龙鳞装甲</GR_MechModule_Armor6_L.label>
-  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
-  <GR_MechModule_Armor6_L.description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</GR_MechModule_Armor6_L.description>
-  
-  <!-- EN: 龙鳞装甲 -->
+  <!-- EN: Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower. -->
+  <GR_MechModule_Armor6_L.description>以太龙麟由多层独特矿物质纳米结构构成，具自我修复能力。采用非常规制造手段能够让我们精确仿制出这些能够自我修复的结构。</GR_MechModule_Armor6_L.description>
+
+  <!-- EN: Dragonscale Armor -->
   <GR_MechModule_Armor6_M.label>龙鳞装甲</GR_MechModule_Armor6_M.label>
-  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
-  <GR_MechModule_Armor6_M.description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</GR_MechModule_Armor6_M.description>
-  
-  <!-- EN: 龙鳞装甲 -->
+  <!-- EN: Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower. -->
+  <GR_MechModule_Armor6_M.description>以太龙麟由多层独特矿物质纳米结构构成，具自我修复能力。采用非常规制造手段能够让我们精确仿制出这些能够自我修复的结构。</GR_MechModule_Armor6_M.description>
+
+  <!-- EN: Dragonscale Armor -->
   <GR_MechModule_Armor6_S.label>龙鳞装甲</GR_MechModule_Armor6_S.label>
-  <!-- EN: 中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。 -->
-  <GR_MechModule_Armor6_S.description>中子装甲密度大、质地坚，相比常规合金装甲，中子装甲能抵抗更强大火力。</GR_MechModule_Armor6_S.description>
-  
-  <!-- EN: 偏射盾 -->
+  <!-- EN: Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower. -->
+  <GR_MechModule_Armor6_S.description>以太龙麟由多层独特矿物质纳米结构构成，具自我修复能力。采用非常规制造手段能够让我们精确仿制出这些能够自我修复的结构。</GR_MechModule_Armor6_S.description>
+
+  <!-- EN: Deflector Shield -->
   <GR_MechModule_Shield1_L.label>偏射盾</GR_MechModule_Shield1_L.label>
-  <!-- EN: 能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。 -->
+  <!-- EN: An energy deflection barrier that negates a certain amount of enemy fire before overloading. Its main drawback is high energy consumption. -->
   <GR_MechModule_Shield1_L.description>能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。</GR_MechModule_Shield1_L.description>
-  
-  <!-- EN: 偏射盾 -->
+
+  <!-- EN: Deflector Shield -->
   <GR_MechModule_Shield1_M.label>偏射盾</GR_MechModule_Shield1_M.label>
-  <!-- EN: 能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。 -->
+  <!-- EN: An energy deflection barrier that negates a certain amount of enemy fire before overloading. Its main drawback is high energy consumption. -->
   <GR_MechModule_Shield1_M.description>能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。</GR_MechModule_Shield1_M.description>
-  
-  <!-- EN: 偏射盾 -->
+
+  <!-- EN: Deflector Shield -->
   <GR_MechModule_Shield1_S.label>偏射盾</GR_MechModule_Shield1_S.label>
-  <!-- EN: 能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。 -->
+  <!-- EN: An energy deflection barrier that negates a certain amount of enemy fire before overloading. Its main drawback is high energy consumption. -->
   <GR_MechModule_Shield1_S.description>能量偏射屏障可在过载前化解一定敌方火力，主要缺点是能耗高。</GR_MechModule_Shield1_S.description>
-  
-  <!-- EN: 改良偏射盾 -->
+
+  <!-- EN: Improved Deflector Shield -->
   <GR_MechModule_Shield2_L.label>改良偏射盾</GR_MechModule_Shield2_L.label>
-  <!-- EN: 升级能量偏射屏障，在过载前化解更多火力。 -->
+  <!-- EN: An upgraded energy deflection barrier that negates more fire before overloading. -->
   <GR_MechModule_Shield2_L.description>升级能量偏射屏障，在过载前化解更多火力。</GR_MechModule_Shield2_L.description>
-  
-  <!-- EN: 改良偏射盾 -->
+
+  <!-- EN: Improved Deflector Shield -->
   <GR_MechModule_Shield2_M.label>改良偏射盾</GR_MechModule_Shield2_M.label>
-  <!-- EN: 升级能量偏射屏障，在过载前化解更多火力。 -->
+  <!-- EN: An upgraded energy deflection barrier that negates more fire before overloading. -->
   <GR_MechModule_Shield2_M.description>升级能量偏射屏障，在过载前化解更多火力。</GR_MechModule_Shield2_M.description>
-  
-  <!-- EN: 改良偏射盾 -->
+
+  <!-- EN: Improved Deflector Shield -->
   <GR_MechModule_Shield2_S.label>改良偏射盾</GR_MechModule_Shield2_S.label>
-  <!-- EN: 升级能量偏射屏障，在过载前化解更多火力。 -->
+  <!-- EN: An upgraded energy deflection barrier that negates more fire before overloading. -->
   <GR_MechModule_Shield2_S.description>升级能量偏射屏障，在过载前化解更多火力。</GR_MechModule_Shield2_S.description>
-  
-  <!-- EN: 护盾 -->
+
+  <!-- EN: Shield -->
   <GR_MechModule_Shield3_L.label>护盾</GR_MechModule_Shield3_L.label>
-  <!-- EN: 新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。 -->
+  <!-- EN: A new-generation shield generator that replaces older energy deflectors and provides superior protection. -->
   <GR_MechModule_Shield3_L.description>新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。</GR_MechModule_Shield3_L.description>
-  
-  <!-- EN: 护盾 -->
+
+  <!-- EN: Shield -->
   <GR_MechModule_Shield3_M.label>护盾</GR_MechModule_Shield3_M.label>
-  <!-- EN: 新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。 -->
+  <!-- EN: A new-generation shield generator that replaces older energy deflectors and provides superior protection. -->
   <GR_MechModule_Shield3_M.description>新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。</GR_MechModule_Shield3_M.description>
-  
-  <!-- EN: 护盾 -->
+
+  <!-- EN: Shield -->
   <GR_MechModule_Shield3_S.label>护盾</GR_MechModule_Shield3_S.label>
-  <!-- EN: 新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。 -->
+  <!-- EN: A new-generation shield generator that replaces older energy deflectors and provides superior protection. -->
   <GR_MechModule_Shield3_S.description>新型护盾生成器是新一代能量屏障，取代旧式能量偏转器，提供更优秀的防护能力。</GR_MechModule_Shield3_S.description>
-  
-  <!-- EN: 先进护盾 -->
+
+  <!-- EN: Advanced Shield -->
   <GR_MechModule_Shield4_L.label>先进护盾</GR_MechModule_Shield4_L.label>
-  <!-- EN: 升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。 -->
+  <!-- EN: An upgraded shield generator that creates a stronger energy field. Only sustained fire can break through this barrier. -->
   <GR_MechModule_Shield4_L.description>升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。</GR_MechModule_Shield4_L.description>
-  
-  <!-- EN: 先进护盾 -->
+
+  <!-- EN: Advanced Shield -->
   <GR_MechModule_Shield4_M.label>先进护盾</GR_MechModule_Shield4_M.label>
-  <!-- EN: 升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。 -->
+  <!-- EN: An upgraded shield generator that creates a stronger energy field. Only sustained fire can break through this barrier. -->
   <GR_MechModule_Shield4_M.description>升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。</GR_MechModule_Shield4_M.description>
-  
-  <!-- EN: 先进护盾 -->
+
+  <!-- EN: Advanced Shield -->
   <GR_MechModule_Shield4_S.label>先进护盾</GR_MechModule_Shield4_S.label>
-  <!-- EN: 升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。 -->
+  <!-- EN: An upgraded shield generator that creates a stronger energy field. Only sustained fire can break through this barrier. -->
   <GR_MechModule_Shield4_S.description>升级护盾生成器以制造出更强能量场。只有持续不断的火力可以击穿此屏障。</GR_MechModule_Shield4_S.description>
-  
-  <!-- EN: 超级护盾 -->
+
+  <!-- EN: Super Shield -->
   <GR_MechModule_Shield5_L.label>超级护盾</GR_MechModule_Shield5_L.label>
-  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
+  <!-- EN: These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection. -->
   <GR_MechModule_Shield5_L.description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</GR_MechModule_Shield5_L.description>
-  
-  <!-- EN: 超级护盾 -->
+
+  <!-- EN: Super Shield -->
   <GR_MechModule_Shield5_M.label>超级护盾</GR_MechModule_Shield5_M.label>
-  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
+  <!-- EN: These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection. -->
   <GR_MechModule_Shield5_M.description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</GR_MechModule_Shield5_M.description>
-  
-  <!-- EN: 超级护盾 -->
+
+  <!-- EN: Super Shield -->
   <GR_MechModule_Shield5_S.label>超级护盾</GR_MechModule_Shield5_S.label>
-  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
+  <!-- EN: These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection. -->
   <GR_MechModule_Shield5_S.description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</GR_MechModule_Shield5_S.description>
-  
-  <!-- EN: 暗物质护盾 -->
+
+  <!-- EN: Dark Matter Shield -->
   <GR_MechModule_Shield6_L.label>暗物质护盾</GR_MechModule_Shield6_L.label>
-  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
-  <GR_MechModule_Shield6_L.description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</GR_MechModule_Shield6_L.description>
-  
-  <!-- EN: 暗物质护盾 -->
+  <!-- EN: These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection. -->
+  <GR_MechModule_Shield6_L.description>这些偏导护盾利用暗物质以一种似乎完全违反自然规律的方式偏转来袭的炮火。</GR_MechModule_Shield6_L.description>
+
+  <!-- EN: Dark Matter Shield -->
   <GR_MechModule_Shield6_M.label>暗物质护盾</GR_MechModule_Shield6_M.label>
-  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
-  <GR_MechModule_Shield6_M.description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</GR_MechModule_Shield6_M.description>
-  
-  <!-- EN: 暗物质护盾 -->
+  <!-- EN: These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection. -->
+  <GR_MechModule_Shield6_M.description>这些偏导护盾利用暗物质以一种似乎完全违反自然规律的方式偏转来袭的炮火。</GR_MechModule_Shield6_M.description>
+
+  <!-- EN: Dark Matter Shield -->
   <GR_MechModule_Shield6_S.label>暗物质护盾</GR_MechModule_Shield6_S.label>
-  <!-- EN: 这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。 -->
-  <GR_MechModule_Shield6_S.description>这些加强、加固的能量护盾无比强大，所提供的防护能力首屈一指。</GR_MechModule_Shield6_S.description>
-  
+  <!-- EN: These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection. -->
+  <GR_MechModule_Shield6_S.description>这些偏导护盾利用暗物质以一种似乎完全违反自然规律的方式偏转来袭的炮火。</GR_MechModule_Shield6_S.description>
+
 </LanguageData>

@@ -344,7 +344,7 @@
   <!-- 龙鳞装甲 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Armor6Base" Abstract="True">
     <label>Dragonscale Armor</label>
-    <description>Neutron armor is dense and hard. Compared with conventional alloy armor, it can withstand much stronger firepower.</description>
+    <description>Ether dragonscale is composed of multiple layers of unique mineral nanostructures and possesses self-repair capabilities. Using unconventional manufacturing methods allows us to precisely replicate these self-repairing structures.</description>
     <iconPath>Icon/ShipParts/ship_part_armor_5</iconPath>
     <slotFamily>Armor_6</slotFamily>
     <researchPrerequisites>
@@ -732,7 +732,7 @@
   <!-- 暗物质护盾 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Shield6Base" Abstract="True">
     <label>Dark Matter Shield</label>
-    <description>These reinforced, hardened energy shields are immensely powerful, offering unsurpassed protection.</description>
+    <description>These deflector shields use dark matter to deflect incoming fire in a way that seems to completely violate natural law.</description>
     <iconPath>Icon/ShipParts/ship_part_shield_5</iconPath>
     <researchPrerequisites>
       <li>GR_T6MechTech</li>

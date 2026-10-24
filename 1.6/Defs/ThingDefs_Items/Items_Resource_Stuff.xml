@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>GR_Nanites</defName>
     <label>Nanites</label>
-    <description>A simple and efficient nano-actuator capable of performing complex operations and experiments at the nanoscale.</description>
+    <description>The primary substance that makes up the Gray's body. When removed from the body and no longer under control, it enters dormancy on its own to prevent infinite replication. Even when shaped and fixed in form, its inherent abilities can still be activated. Its ease of shaping makes it exceptionally suitable for manufacturing, or assisting in manufacturing, various high-precision components.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Nanites</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

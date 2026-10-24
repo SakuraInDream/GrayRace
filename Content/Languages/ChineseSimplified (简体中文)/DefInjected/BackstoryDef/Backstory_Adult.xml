@@ -1,42 +1,42 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: {PAWN_nameDef} 曾是帝国第一远征军旗舰「伊丽莎白女王号」的指挥官副官。她以能比舰载电脑更快判断出炮弹预着点而深受信赖。\n直到某次远征时偶遇了肃正协议。她与指挥官率舰奋战，却终究不敌。好在最后关头，舰队借助虫洞突围成功，但 {PAWN_nameDef} 却未能随舰逃出。\n她的最后一次目击记录，停留在了帝国边缘的边缘星区。 -->
+  <!-- EN: {PAWN_nameDef} once served as the adjutant to the commander of the Empire's First Expeditionary Fleet flagship, Queen Elizabeth. She was trusted for calculating shell impact points faster than the shipboard computer.\nThen, on an expedition, she encountered the Correction Protocol. She and the commander fought with the fleet, but were ultimately defeated. At the last moment the fleet escaped through a wormhole, yet {PAWN_nameDef} failed to get out with them.\nHer last sighting remains at the very edge of the Empire's frontier sectors. -->
   <GR_Adjutant.description>{PAWN_nameDef} 曾是帝国第一远征军旗舰「伊丽莎白女王号」的指挥官副官。她以能比舰载电脑更快判断出炮弹预着点而深受信赖。\n直到某次远征时偶遇了肃正协议。她与指挥官率舰奋战，却终究不敌。好在最后关头，舰队借助虫洞突围成功，但 {PAWN_nameDef} 却未能随舰逃出。\n她的最后一次目击记录，停留在了帝国边缘的边缘星区。</GR_Adjutant.description>
   <!-- EN: Gray Adjutant -->
   <GR_Adjutant.title>灰裔副官</GR_Adjutant.title>
   <!-- EN: Adjutant -->
   <GR_Adjutant.titleShort>副官</GR_Adjutant.titleShort>
   
-  <!-- EN: {PAWN_nameDef}是一位独立艺术家，在星球轨道上有着自己的艺术馆轨道站。她用定制化的升级工具塑造雕像，或是用昂贵又稀有的颜料绘制独一无二的作品。对她而言，将灵感作成现实的过程无比美妙，但在作品完成之后则又会回归无趣之中。艺术馆总能引来无数的“上层人士”观赏她的作品，但她从不将目光落在已经完成的那些上。在穷尽了所有的灵感之后，她抛下了自己的一切，将自己置于寰宇之间，只为拓展艺术的边界。 -->
+  <!-- EN: {PAWN_nameDef} is an independent artist who owns an orbital art gallery station. She shapes sculptures with custom upgrade tools, or paints one-of-a-kind works with expensive, rare pigments. To her, the process of turning inspiration into reality is incomparably beautiful—but once a work is finished, it becomes dull again. The gallery always draws countless 'upper-class' visitors to admire her works, yet she never looks at the finished pieces. After exhausting all her inspiration, she abandoned everything she had and cast herself into the void, simply to expand the boundaries of art. -->
   <GR_Artist.description>{PAWN_nameDef}是一位独立艺术家，在星球轨道上有着自己的艺术馆轨道站。她用定制化的升级工具塑造雕像，或是用昂贵又稀有的颜料绘制独一无二的作品。对她而言，将灵感作成现实的过程无比美妙，但在作品完成之后则又会回归无趣之中。艺术馆总能引来无数的“上层人士”观赏她的作品，但她从不将目光落在已经完成的那些上。在穷尽了所有的灵感之后，她抛下了自己的一切，将自己置于寰宇之间，只为拓展艺术的边界。</GR_Artist.description>
   <!-- EN: Gray Artist -->
   <GR_Artist.title>灰裔艺术家</GR_Artist.title>
   <!-- EN: Artist -->
   <GR_Artist.titleShort>艺术家</GR_Artist.titleShort>
   
-  <!-- EN: {PAWN_nameDef}曾经代表星海帝国在星海共同体担任外交官。分食敌对国家的飨宴不会因为战争胜利就此终止，欺骗、胁迫、恐吓，利用一切手段——直到为帝国榨干一切利益，而她本人舔舐干净每一丝残羹剩饭为止，这场盛宴才算落幕。\n然而这份贪婪终究被察觉。沉沦于纸醉金迷之中，她最终被纠察队揭开伪饰，作为惩罚被投入了先遣队，从此再难回到昔日的盛筵。 -->
+  <!-- EN: {PAWN_nameDef} once represented the Star Sea Empire as a diplomat in the Star Sea Community. The feast of carving up hostile nations does not end with a war victory; deception, coercion, intimidation—every method is used until the Empire has squeezed out every last benefit, and she herself has licked clean every last scrap. Only then does the banquet end.\nBut this greed was eventually noticed. Sunken in luxury, she was finally exposed by the inspectors and thrown into the Advance Team as punishment, never to return to her former feast. -->
   <GR_Diplomat.description>{PAWN_nameDef}曾经代表星海帝国在星海共同体担任外交官。分食敌对国家的飨宴不会因为战争胜利就此终止，欺骗、胁迫、恐吓，利用一切手段——直到为帝国榨干一切利益，而她本人舔舐干净每一丝残羹剩饭为止，这场盛宴才算落幕。\n然而这份贪婪终究被察觉。沉沦于纸醉金迷之中，她最终被纠察队揭开伪饰，作为惩罚被投入了先遣队，从此再难回到昔日的盛筵。</GR_Diplomat.description>
   <!-- EN: Gray Diplomat -->
   <GR_Diplomat.title>灰裔外交官</GR_Diplomat.title>
   <!-- EN: Diplomat -->
   <GR_Diplomat.titleShort>外交官</GR_Diplomat.titleShort>
   
-  <!-- EN: {PAWN_nameDef}曾是要塞星球防务部的精英队长，以其百步穿杨的枪法闻名。直到一次行动，她目睹了辖区底层民生凋敝的真相。数次仗义执言反遭打压，最终被贬至偏远流放星球，成为一名基层执法官。当灰裔先遣队途经该星域时，为躲避持续的政治迫害，她毅然登船，寻求新的开始。 -->
+  <!-- EN: {PAWN_nameDef} was an elite captain in the defense department of a fortress world, famed for her marksmanship. Then, during one operation, she witnessed the truth of the destitution among the people in her jurisdiction. After speaking out several times and being suppressed for it, she was demoted to a remote penal world as a grassroots law officer. When the Gray Advance Team passed through that sector, she boarded without hesitation to escape ongoing political persecution and seek a new beginning. -->
   <GR_Enforcer.description>{PAWN_nameDef}曾是要塞星球防务部的精英队长，以其百步穿杨的枪法闻名。直到一次行动，她目睹了辖区底层民生凋敝的真相。数次仗义执言反遭打压，最终被贬至偏远流放星球，成为一名基层执法官。当灰裔先遣队途经该星域时，为躲避持续的政治迫害，她毅然登船，寻求新的开始。</GR_Enforcer.description>
   <!-- EN: Gray Penal Colony Enforcer  -->
   <GR_Enforcer.title>灰裔流放地执法官</GR_Enforcer.title>
   <!-- EN: Enforcer -->
   <GR_Enforcer.titleShort>执法官</GR_Enforcer.titleShort>
   
-  <!-- EN: 经过多年苦修，{PAWN_nameDef}终于跻身帝国的巨构工程师团队。然而，她参与的首个巨型项目便因重大失误而失败。作为惩罚，她被永久流放至先遣队，禁止重返中心星区——曾经的梦想之地，如今已成回不去的远方。 -->
+  <!-- EN: After years of rigorous study, {PAWN_nameDef} finally joined the Empire's megastructure engineering team. However, her first megaproject failed due to a major error. As punishment, she was permanently exiled to the Advance Team and forbidden from returning to the core sectors—the place of her dreams, now a distant home she can never return to. -->
   <GR_Engineer.description>经过多年苦修，{PAWN_nameDef}终于跻身帝国的巨构工程师团队。然而，她参与的首个巨型项目便因重大失误而失败。作为惩罚，她被永久流放至先遣队，禁止重返中心星区——曾经的梦想之地，如今已成回不去的远方。</GR_Engineer.description>
   <!-- EN: Gray Megastructure Engineer  -->
   <GR_Engineer.title>灰裔巨构工程师</GR_Engineer.title>
   <!-- EN: Megastructure Engineer -->
   <GR_Engineer.titleShort>巨构工程师</GR_Engineer.titleShort>
   
-  <!-- EN: {PAWN_nameDef}是一位极其特殊的存在。或许是在成长中被注入了被污染的数据流，又或是其核心记忆体早已偏离常轨，她最终选择成为艺妓，将自身全然奉献于“艺术”。那些与她有过深度交集的顾客，无不盛赞其精妙的“技艺”，并声称在她身上领略过何谓完美。 -->
+  <!-- EN: {PAWN_nameDef} is a very special existence. Perhaps she was injected with a corrupted data stream while growing, or perhaps her core memory had long since strayed from its proper course. She ultimately chose to become a geisha, dedicating herself entirely to 'art'. Every customer who has had deep dealings with her praises her exquisite 'technique' and claims to have glimpsed perfection in her. -->
   <GR_Geisha.description>{PAWN_nameDef}是一位极其特殊的存在。或许是在成长中被注入了被污染的数据流，又或是其核心记忆体早已偏离常轨，她最终选择成为艺妓，将自身全然奉献于“艺术”。那些与她有过深度交集的顾客，无不盛赞其精妙的“技艺”，并声称在她身上领略过何谓完美。</GR_Geisha.description>
   <!-- EN: Gray Geisha -->
   <GR_Geisha.title>灰裔艺伎</GR_Geisha.title>
@@ -50,14 +50,14 @@
   <!-- EN: Gene Doctor -->
   <GR_GeneDoctor.titleShort>基因医生</GR_GeneDoctor.titleShort>
   
-  <!-- EN: {PAWN_nameDef}认为石头不应该是被保存和展示的古老遗物，而是过往的时代所遗留下来的余香。由自己亲自去探索未知的矿洞与奇妙的地质结构，就如同将肉烤软后再享用、将果实催熟后再品尝一般，是研究中无比重要的一部分。\n对于身为地质学博士的{PAWN_nameDef}来说，这种与大地的交流如同她进食行为一般，这也是她加入先遣队的理由。 -->
+  <!-- EN: {PAWN_nameDef} believes stones should not be preserved and displayed as ancient relics, but rather the lingering fragrance left behind by past ages. Exploring unknown mines and wondrous geological formations in person—like softening meat before eating it, or ripening fruit before tasting it—is an essential part of research.\nFor {PAWN_nameDef}, a doctor of geology, this communion with the earth is as natural as eating. That is why she joined the Advance Team. -->
   <GR_Geologist.description>{PAWN_nameDef}认为石头不应该是被保存和展示的古老遗物，而是过往的时代所遗留下来的余香。由自己亲自去探索未知的矿洞与奇妙的地质结构，就如同将肉烤软后再享用、将果实催熟后再品尝一般，是研究中无比重要的一部分。\n对于身为地质学博士的{PAWN_nameDef}来说，这种与大地的交流如同她进食行为一般，这也是她加入先遣队的理由。</GR_Geologist.description>
   <!-- EN: Gray Geologist -->
   <GR_Geologist.title>灰裔地质学家</GR_Geologist.title>
   <!-- EN: Geologist -->
   <GR_Geologist.titleShort>地质学家</GR_Geologist.titleShort>
   
-  <!-- EN: 对于故乡被占领的{PAWN_nameDef}来说，比起遮天蔽日的火药味，炊烟那令人怀念的气味更引起她的乡愁。那个待了许多年的大宅、那股打扫得当的清新空气，仿佛都变成了过往的事物。\n如今她主动加入先遣队，是为了将记忆里尚未被硝烟玷污的风景重新夺回。即便前路遍布流血与牺牲，她也要追逐那早已消散在岁月里的气息。 -->
+  <!-- EN: For {PAWN_nameDef}, whose homeland was occupied, the nostalgic smell of cooking smoke stirs more homesickness than the all-encompassing smell of gunpowder. The great house where she lived for so many years, the fresh, well-cleaned air—all seem to have become things of the past.\nNow she has volunteered for the Advance Team to reclaim the landscapes in her memory that have not yet been tainted by gunpowder smoke. Even if the road ahead is full of blood and sacrifice, she will chase that scent that has long since faded from the years. -->
   <GR_Maid.description>对于故乡被占领的{PAWN_nameDef}来说，比起遮天蔽日的火药味，炊烟那令人怀念的气味更引起她的乡愁。那个待了许多年的大宅、那股打扫得当的清新空气，仿佛都变成了过往的事物。\n如今她主动加入先遣队，是为了将记忆里尚未被硝烟玷污的风景重新夺回。即便前路遍布流血与牺牲，她也要追逐那早已消散在岁月里的气息。</GR_Maid.description>
   <!-- EN: Gray Maid -->
   <GR_Maid.title>灰裔女仆</GR_Maid.title>
@@ -78,42 +78,42 @@
   <!-- EN: Metallurgist -->
   <GR_Metallurgist.titleShort>冶金师</GR_Metallurgist.titleShort>
   
-  <!-- EN: {PAWN_nameDef}曾是一位成功的市长，精心管理着一座千万人口的工业星球都市。她是城市毋庸置疑的统治者，却更醉心于将整座城市视为一件精密的仪器去运营与优化。对她而言，权力索然无味，唯有开发与建造的过程本身充满魅力。最终，她从容交卸职权，转向星空，去绘制她下一张宏伟的城市蓝图。 -->
+  <!-- EN: {PAWN_nameDef} was once a successful mayor, carefully managing an industrial planet-city of ten million people. She was the city's undisputed ruler, yet she was more fascinated by running and optimizing the entire city as a precision instrument. To her, power was tasteless; only the process of development and construction held any charm. In the end, she calmly handed over her authority and turned to the stars, to draw her next grand city blueprint. -->
   <GR_PublicServants.description>{PAWN_nameDef}曾是一位成功的市长，精心管理着一座千万人口的工业星球都市。她是城市毋庸置疑的统治者，却更醉心于将整座城市视为一件精密的仪器去运营与优化。对她而言，权力索然无味，唯有开发与建造的过程本身充满魅力。最终，她从容交卸职权，转向星空，去绘制她下一张宏伟的城市蓝图。</GR_PublicServants.description>
   <!-- EN: Gray Public Servants -->
   <GR_PublicServants.title>灰裔人民公仆</GR_PublicServants.title>
   <!-- EN: Public Servants -->
   <GR_PublicServants.titleShort>人民公仆</GR_PublicServants.titleShort>
   
-  <!-- EN: {PAWN_nameDef} 曾被誉为士兵的守护天使，作为太阳III空间站上最优秀的军需物资官，她把数字与数据化作帝国的血液，泵向最遥远的前线。\n直到有一天，她发现自己精心规划的补给被上司贪污大半，士兵们因缺乏药品与食物而死去。她选择举报，却最终被发配到先遣队，成为无名的拓荒者。\n天使从此被囚禁与大地。 -->
+  <!-- EN: Once hailed as the guardian angel of soldiers, {PAWN_nameDef} was the finest quartermaster on Sol III Station. She turned numbers and data into the Empire's lifeblood, pumping it to the most distant front lines.\nThen one day she discovered that most of the supplies she had carefully planned had been embezzled by her superiors, and soldiers were dying for lack of medicine and food. She reported it—and was exiled to the Advance Team, becoming a nameless pioneer.\nThe angel was imprisoned on the ground forever after. -->
   <GR_Quartermaster.description>{PAWN_nameDef} 曾被誉为士兵的守护天使，作为太阳III空间站上最优秀的军需物资官，她把数字与数据化作帝国的血液，泵向最遥远的前线。\n直到有一天，她发现自己精心规划的补给被上司贪污大半，士兵们因缺乏药品与食物而死去。她选择举报，却最终被发配到先遣队，成为无名的拓荒者。\n天使从此被囚禁与大地。</GR_Quartermaster.description>
   <!-- EN: Gray Quartermaster -->
   <GR_Quartermaster.title>灰裔军需官</GR_Quartermaster.title>
   <!-- EN: Quartermaster -->
   <GR_Quartermaster.titleShort>军需官</GR_Quartermaster.titleShort>
   
-  <!-- EN: {PAWN_nameDef}是科研星球上一个科研实验室的科研主管，负责主导研究新式武装的工作。\n对于喜欢用自己的身体去测试武器的威力的她来说——麻痹的四肢也好、抽搐的反应也罢，这种切身体验自己的造物所带来疼痛让其感到自身的存在。然而，这样扭曲的癖好让其广受争议，除了工作以外几乎没有人和她有交集。\n她曾无数次以自己的身体试探造物的威力，这一次，造物终于回以最后的回应，某次研究空间技术的过程中，她被卷入未知空间后不知所踪。 -->
+  <!-- EN: {PAWN_nameDef} was the research supervisor of a laboratory on a science planet, leading the development of new weapons.\nShe liked to test weapon power with her own body—numb limbs, convulsing reactions, the pain of experiencing her own creations firsthand made her feel alive. Yet this twisted habit made her controversial; apart from work, almost no one interacted with her.\nShe had tested the power of her creations on herself countless times. This time, the creation finally answered. During an experiment in spatial technology, she was drawn into an unknown space and vanished without a trace. -->
   <GR_Researcher.description>{PAWN_nameDef}是科研星球上一个科研实验室的科研主管，负责主导研究新式武装的工作。\n对于喜欢用自己的身体去测试武器的威力的她来说——麻痹的四肢也好、抽搐的反应也罢，这种切身体验自己的造物所带来疼痛让其感到自身的存在。然而，这样扭曲的癖好让其广受争议，除了工作以外几乎没有人和她有交集。\n她曾无数次以自己的身体试探造物的威力，这一次，造物终于回以最后的回应，某次研究空间技术的过程中，她被卷入未知空间后不知所踪。</GR_Researcher.description>
   <!-- EN: Gray Research Supervisor  -->
   <GR_Researcher.title>灰裔科研主管</GR_Researcher.title>
   <!-- EN: Research Supervisor -->
   <GR_Researcher.titleShort>科研主管</GR_Researcher.titleShort>
   
-  <!-- EN: {PAWN_nameDef}曾是一座恒星物质采集设施上的技术员，日夜与星辰为伴，将星辉转化为帝国前进的动力。然而星辰之力终有尽时，她如神话中的夸父般，执着地追寻更璀璨的星芒。为此，她来到了边缘世界——这片未被染指的崭新星域。 -->
+  <!-- EN: {PAWN_nameDef} was a technician at a stellar matter collection facility, spending day and night with the stars, turning starlight into the driving force of the Empire. But the power of the stars must eventually run out. Like Kuafu in myth, she pursued ever more brilliant starlight. To that end, she came to the rimworld—a new, untouched star sector. -->
   <GR_StarPicker.description>{PAWN_nameDef}曾是一座恒星物质采集设施上的技术员，日夜与星辰为伴，将星辉转化为帝国前进的动力。然而星辰之力终有尽时，她如神话中的夸父般，执着地追寻更璀璨的星芒。为此，她来到了边缘世界——这片未被染指的崭新星域。</GR_StarPicker.description>
   <!-- EN: Gray Star Picker -->
   <GR_StarPicker.title>灰裔摘星者</GR_StarPicker.title>
   <!-- EN: Star Picker -->
   <GR_StarPicker.titleShort>摘星者</GR_StarPicker.titleShort>
   
-  <!-- EN: 以暴戾之火，巡猎尘与空。\n{PAWN_nameDef}是一位独立的战斗机甲驾驶员，但对她而言，比起“驾驶”，她更像是在使用延展的肢体进行战斗。\n得益于特殊的身体改造，往往高昂的装备维修费用往往只需要些许时间就能被负责修复的纳米群完成，因此她无需专业设备也能独自打理好整台机甲。\n“比起高精度的能量系武器，我个人倾向于有着凶猛火力的实弹，或者干脆说爆炸系武器啦～再搭配上厚重的重型装甲，完美～” -->
+  <!-- EN: With the fire of violence, hunt across dust and sky.\n{PAWN_nameDef} is an independent combat mech pilot, but to her, it is less 'piloting' than fighting with extended limbs.\nThanks to special body modifications, the often-expensive equipment maintenance can usually be completed in a short time by the nanite swarm responsible for repairs, so she can maintain the entire mech alone without professional equipment.\n'Compared to high-precision energy weapons, I personally prefer live ammunition with fierce firepower—or rather, explosive weapons! Pair that with thick heavy armor, and it's perfect.' -->
   <GR_StormEmperor.description>以暴戾之火，巡猎尘与空。\n{PAWN_nameDef}是一位独立的战斗机甲驾驶员，但对她而言，比起“驾驶”，她更像是在使用延展的肢体进行战斗。\n得益于特殊的身体改造，往往高昂的装备维修费用往往只需要些许时间就能被负责修复的纳米群完成，因此她无需专业设备也能独自打理好整台机甲。\n“比起高精度的能量系武器，我个人倾向于有着凶猛火力的实弹，或者干脆说爆炸系武器啦～再搭配上厚重的重型装甲，完美～”</GR_StormEmperor.description>
   <!-- EN: Gray Storm Emperor -->
   <GR_StormEmperor.title>灰裔风暴御者</GR_StormEmperor.title>
   <!-- EN: Storm Emperor -->
   <GR_StormEmperor.titleShort>风暴御者</GR_StormEmperor.titleShort>
   
-  <!-- EN: {PAWN_nameDef}是一名专业的外科医生，拥有丰富的抢救经验和手术经验。经过改造升级，她可以随时展开一台小型的手术台进行现场治疗或用于手术场景。她从不谈论自己从何又为何出发，只是踏上了游历世界，顺路治病救人的道路，虽然路上总是被耽误，但她总是微笑着出着自己的一份力。\n她常说要人应该活在当下，有话就快说，有心愿就去做。\n毕竟只有她知道，在一切完成之后，她总能在寂静无人的深夜偷偷踏上新的旅程。 -->
+  <!-- EN: {PAWN_nameDef} is a professional surgeon with extensive emergency and surgical experience. After modification and upgrades, she can deploy a small operating table anywhere for field treatment or surgery. She never talks about where she came from or why she set out; she simply took to wandering the world, healing people along the way. Though she is always delayed on the road, she always smiles and does her part.\nShe often says people should live in the present—say what you mean, and do what you wish.\nAfter all, only she knows that when everything is done, she can always slip away on a new journey late at night, when all is silent. -->
   <GR_Wanderer.description>{PAWN_nameDef}是一名专业的外科医生，拥有丰富的抢救经验和手术经验。经过改造升级，她可以随时展开一台小型的手术台进行现场治疗或用于手术场景。她从不谈论自己从何又为何出发，只是踏上了游历世界，顺路治病救人的道路，虽然路上总是被耽误，但她总是微笑着出着自己的一份力。\n她常说要人应该活在当下，有话就快说，有心愿就去做。\n毕竟只有她知道，在一切完成之后，她总能在寂静无人的深夜偷偷踏上新的旅程。</GR_Wanderer.description>
   <!-- EN: Gray Wanderer doctor -->
   <GR_Wanderer.title>灰裔浪客医师</GR_Wanderer.title>

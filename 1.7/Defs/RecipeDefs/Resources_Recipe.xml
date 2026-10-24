@@ -50,7 +50,6 @@
   </RecipeDef>
 
   <!--高级零部件-->
-
   <RecipeDef>
     <defName>GR_Make_ComponentSpacer</defName>
     <label>make advanced component x2</label>
@@ -182,7 +181,7 @@
   <RecipeDef>
     <defName>GR_Alloy_recipe_Less</defName>
     <label>cast Alloy x200</label>
-    <description>Casting Alloy,it's not a easy task.</description>
+    <description>Cast alloy. It is not a simple task.</description>
     <jobString>casting Alloy</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Smith</effectWorking>
@@ -248,7 +247,7 @@
   <RecipeDef>
     <defName>GR_Alloy_recipe_Normal</defName>
     <label>cast Alloy x500</label>
-    <description>Casting Alloy,it's not a easy task.</description>
+    <description>Cast alloy. It is not a simple task.</description>
     <jobString>casting Alloy</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Smith</effectWorking>
@@ -314,7 +313,7 @@
   <RecipeDef>
     <defName>GR_Alloy_recipe_Much</defName>
     <label>cast Alloy x1000</label>
-    <description>Casting Alloy,it's not a easy task.</description>
+    <description>Cast alloy. It is not a simple task.</description>
     <jobString>casting Alloy</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <effectWorking>Smith</effectWorking>
@@ -380,7 +379,7 @@
 	<RecipeDef>
 		<defName>GR_Make_ComponentIndustrial_Nanites</defName>
 		<label>make component x2</label>
-		<description>Make component.</description>
+		<description>Make components using Gray Tide Zro.</description>
 		<jobString>Making component.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
@@ -416,7 +415,7 @@
 	<RecipeDef>
 		<defName>GR_Make_ComponentSpacer_Nanites</defName>
 		<label>make advanced component x2</label>
-		<description>Make advanced component.</description>
+		<description>Make advanced components using Gray Tide Zro.</description>
 		<jobString>Making advanced component.</jobString>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>

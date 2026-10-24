@@ -1,34 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <!-- EN: 手臂超频 -->
+
+  <!-- EN: Arm Overclock -->
   <GR_Overclock_Arm.label>手臂超频</GR_Overclock_Arm.label>
-  <!-- EN: 加速能量消耗对部位进行效率超频。 -->
+  <!-- EN: Accelerates energy consumption to overclock the efficiency of a body part. -->
   <GR_Overclock_Arm.description>加速能量消耗对部位进行效率超频。</GR_Overclock_Arm.description>
-  
-  <!-- EN: 人格核心超频 -->
+
+  <!-- EN: Persona Core Overclock -->
   <GR_Overclock_Brain.label>人格核心超频</GR_Overclock_Brain.label>
-  <!-- EN: 提升意识水平。 -->
+  <!-- EN: Improves consciousness. -->
   <GR_Overclock_Brain.description>提升意识水平。</GR_Overclock_Brain.description>
-  
-  <!-- EN: 听觉超频 -->
+
+  <!-- EN: Hearing Overclock -->
   <GR_Overclock_Ear.label>听觉超频</GR_Overclock_Ear.label>
-  <!-- EN: 大幅提升听力效率。 -->
+  <!-- EN: Greatly improves hearing efficiency. -->
   <GR_Overclock_Ear.description>大幅提升听力效率。</GR_Overclock_Ear.description>
-  
-  <!-- EN: 眼部超频 -->
+
+  <!-- EN: Eye Overclock -->
   <GR_Overclock_Eye.label>眼部超频</GR_Overclock_Eye.label>
-  <!-- EN: 加速能量消耗对部位进行效率超频。 -->
+  <!-- EN: Accelerates energy consumption to overclock the efficiency of a body part. -->
   <GR_Overclock_Eye.description>加速能量消耗对部位进行效率超频。</GR_Overclock_Eye.description>
-  
-  <!-- EN: 核心超频 -->
-  <GR_Overclock_Heart.label>核心超频</GR_Overclock_Heart.label>
-  <!-- EN: 大幅提升血液循环效率。 -->
+
+  <!-- EN: Core Overclock -->
+  <GR_Overclock_Heart.label>灰潮核心超频</GR_Overclock_Heart.label>
+  <!-- EN: Greatly improves blood circulation efficiency. -->
   <GR_Overclock_Heart.description>大幅提升血液循环效率。</GR_Overclock_Heart.description>
-  
-  <!-- EN: 腿部超频 -->
+
+  <!-- EN: Leg Overclock -->
   <GR_Overclock_Leg.label>腿部超频</GR_Overclock_Leg.label>
-  <!-- EN: 加速能量消耗对部位进行效率超频。 -->
+  <!-- EN: Accelerates energy consumption to overclock the efficiency of a body part. -->
   <GR_Overclock_Leg.description>加速能量消耗对部位进行效率超频。</GR_Overclock_Leg.description>
-  
+
 </LanguageData>

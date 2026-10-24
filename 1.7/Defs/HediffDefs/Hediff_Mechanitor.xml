@@ -7,7 +7,7 @@
     <defName>GR_SCC_DownLink</defName>
     <descriptionHyperlinks><HediffDef>GR_SCC_DownLink_Hediff</HediffDef></descriptionHyperlinks>
     <label>SCC DownLink</label>
-    <description>A Strategic Coordination Link that boosts Mech Control Groups and Bandwidth for the Mechanitor.</description>
+    <description>A wireless transmission device that receives signals from a distant Strategic Coordination Center, greatly increasing the mechanitor's control groups and bandwidth.</description>
     <costList>
       <GR_Alloy>20</GR_Alloy>
       <GR_Nanites>10</GR_Nanites>

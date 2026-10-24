@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 巡空精魅 -->
+  <!-- EN: Sky Patrol Wisp -->
   <GR_Mech_FF.label>巡空精魅</GR_Mech_FF.label>
-  <!-- EN: 巡空级是一种专注于大量制造和灵活支援战场的轻型机械体。作为灰裔对抗敌人的先遣部队，被大量的投入战场，发生紧急状况时也可快速支援。她具备「护卫」舰应有的速度与量产性，与她身上有些简约的护甲与火力，形成绝妙的平衡。正因为是量产型，纤细的躯体与手脚似乎还有待发育，可谓是相当稚嫩……虽说如此，从本就不多的护甲遮掩下，也已然能窥见女性的曲线了。 -->
+  <!-- EN: The Sky Patrol-class is a light mechanoid focused on mass production and flexible battlefield support. As the Gray's vanguard against enemies, they are deployed in large numbers and can provide rapid support in emergencies. She has the speed and mass-producibility expected of a frigate, forming a superb balance with her somewhat simple armor and firepower. Precisely because she is a mass-produced model, her slender body and limbs seem yet to develop—quite immature... Even so, beneath what little armor she has, a feminine curve can already be glimpsed. -->
   <GR_Mech_FF.description>巡空级是一种专注于大量制造和灵活支援战场的轻型机械体。作为灰裔对抗敌人的先遣部队，被大量的投入战场，发生紧急状况时也可快速支援。她具备「护卫」舰应有的速度与量产性，与她身上有些简约的护甲与火力，形成绝妙的平衡。正因为是量产型，纤细的躯体与手脚似乎还有待发育，可谓是相当稚嫩……虽说如此，从本就不多的护甲遮掩下，也已然能窥见女性的曲线了。</GR_Mech_FF.description>
   <!-- EN: head -->
   <GR_Mech_FF.tools.head.label>头部</GR_Mech_FF.tools.head.label>

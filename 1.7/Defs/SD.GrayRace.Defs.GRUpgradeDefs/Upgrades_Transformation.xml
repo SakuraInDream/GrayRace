@@ -1,50 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!-- 变形 -->
-  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
-    <defName>GR_Transform_Hand_PowerClaw</defName>
-    <label>Power Claw Form</label>
-    <description>Reorganizes the hand's nanites into a high-hardness power claw, greatly increasing melee damage.</description>
-
-    <!-- 图标路径 贴图大小 64x64 以上，至少 45x45 -->
-    <iconPath>Things/projectile/Rail_Shotgun</iconPath>
-
-    <!-- 施加的身体部位 填 BodyPartDef -->
-    <targetBodyPart>MechanicalHand</targetBodyPart>
-
-    <!-- 如果不确定是什么身体部位可用 targetBodyPartGroups 填 BodyPartGroupDef -->
-    <!-- <targetBodyPartGroups>
-      <li></li>
-    </targetBodyPartGroups> -->
-
-    <!-- 要施加的 Hediff(要变形的 Hediff) -->
-    <!-- 示例为原版的 动力爪 -->
-    <hediffToApply>PowerClaw</hediffToApply>
-
-    <!-- 身体变形不需要材料删掉 -->
-    <!-- <requiredMaterials> -->
-      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
-      <!-- <Plasteel>20</Plasteel> -->
-    <!-- </requiredMaterials> -->
-
-    <!-- 科技解锁需求 -->
-    <!-- 示例为 Royalty DLC 的 专业肢体 -->
-    <researchPrerequisites>
-      <li>SpecializedLimbs</li>
-    </researchPrerequisites>
-    <!-- 显示顺序 -->
-    <uiOrder>10</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_DrillArm</defName>
     <label>Mining Arm Form</label>
-    <description>Transforms the hand into a mechanical arm that speeds up mining. A built-in auger helps miners find weaknesses in rock faster. It also includes a general-purpose manipulator, which is somewhat clumsy and slightly affects mobility.</description>
-
+    <description>A form developed by the Gray through reverse-engineering the Empire's drill arm and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability.</description>
+    <!-- <targetBodyPartGroups>
+      <li></li>
+    </targetBodyPartGroups> -->
     <targetBodyPart>MechanicalArm</targetBodyPart>
-
-    <hediffToApply>DrillArm</hediffToApply>
+    <hediffToApply>GR_Hediff_DrillArm</hediffToApply>
     <researchPrerequisites>
       <li>SpecializedLimbs</li>
     </researchPrerequisites>
@@ -54,127 +19,16 @@
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_FieldHand</defName>
     <label>Farming Hand Form</label>
-    <description>Transforms the hand into a mechanical palm that speeds up sowing and harvesting. Several retractable finger-like protrusions can harvest from multiple points on a plant or sow several plants at once. It also includes a general-purpose manipulator, which is somewhat clumsy and slightly affects mobility.</description>
-
+    <description>A form developed by the Gray through reverse-engineering the Empire's field hand and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability.</description>
     <targetBodyPart>MechanicalHand</targetBodyPart>
     <excludedBodyPartTags>
       <li>ManipulationLimbDigit</li>
     </excludedBodyPartTags>
-    <hediffToApply>FieldHand</hediffToApply>
+    <hediffToApply>GR_Hediff_FieldHand</hediffToApply>
     <researchPrerequisites>
       <li>SpecializedLimbs</li>
     </researchPrerequisites>
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
-  <SD.GrayRace.Defs.GRUpgradeDef MayRequire="CETeam.CombatExtended">
-    <defName>GR_Transform_Eye_NightVision</defName>
-    <label>Night Vision Form</label>
-    <description>Transforms the eye into a night vision system, allowing clear sight in darkness.</description>
-
-    <targetBodyPart>SightSensor</targetBodyPart>
-
-    <hediffToApply>GR_Hediff_NightVisionEye</hediffToApply>
-    <researchPrerequisites>
-      <li>SpecializedLimbs</li>
-    </researchPrerequisites>
-    <uiOrder>50</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <!-- 变形仿生体 -->
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicArm</defName>
-    <label>Bionic Arm Form</label>
-    <description>Reconstructs the arm into a vanilla bionic arm.</description>
-
-    <targetBodyPart>MechanicalArm</targetBodyPart>
-    <hediffToApply>BionicArm</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>60</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicLeg</defName>
-    <label>Bionic Leg Form</label>
-    <description>Reconstructs the leg into a vanilla bionic leg.</description>
-
-    <targetBodyPart>MechanicalLeg</targetBodyPart>
-    <hediffToApply>BionicLeg</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>70</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicEye</defName>
-    <label>Bionic Eye Form</label>
-    <description>Reconstructs the visual organ into a vanilla bionic eye.</description>
-
-    <targetBodyPart>SightSensor</targetBodyPart>
-
-    <hediffToApply>BionicEye</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>80</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicEar</defName>
-    <label>Bionic Ear Form</label>
-    <description>Reconstructs the hearing organ into a vanilla bionic ear.</description>
-
-    <targetBodyPart>HearingSensor</targetBodyPart>
-
-    <hediffToApply>BionicEar</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>90</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicHeart</defName>
-    <label>Bionic Heart Form</label>
-    <description>Reconstructs the Gray Tide core into a vanilla bionic heart.</description>
-
-    <targetBodyPart>Nano_Heart</targetBodyPart>
-
-    <hediffToApply>BionicHeart</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>100</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicJaw</defName>
-    <label>Bionic Jaw Form</label>
-    <description>Reconstructs the jaw into a vanilla bionic jaw.</description>
-
-    <targetBodyPart>Jaw</targetBodyPart>
-    <hediffToApply>BionicJaw</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>120</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
-
-  <SD.GrayRace.Defs.GRUpgradeDef>
-    <defName>GR_Transform_Vanilla_BionicTongue</defName>
-    <label>Bionic Tongue Form</label>
-    <description>Reconstructs the tongue into a vanilla bionic tongue.</description>
-
-    <targetBodyPartTags>
-      <li>Tongue</li>
-    </targetBodyPartTags>
-    <hediffToApply>BionicTongue</hediffToApply>
-    <researchPrerequisites>
-      <li>Bionics</li>
-    </researchPrerequisites>
-    <uiOrder>130</uiOrder>
-  </SD.GrayRace.Defs.GRUpgradeDef>
 </Defs>

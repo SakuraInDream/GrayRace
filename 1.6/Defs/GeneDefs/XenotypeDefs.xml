@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <XenotypeDef>
+    <defName>GR_Xeno_Gray</defName>
+    <label>Protocol:Gray</label>
+    <description>The inherent protocol of the Gray, containing data for all work types in which the Gray specialize.</description>
+    <descriptionShort>The inherent protocol of the Gray.</descriptionShort>
+    <iconPath>UI/Icons/Xenotypes/Baseliner</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>AptitudeRemarkable_Mining</li>
+      <li>AptitudeStrong_Crafting</li>
+      <li>AptitudeRemarkable_Construction</li>
+      <li>AptitudeStrong_Intellectual</li>
+      <li>DarkVision</li>
+    </genes>
+  </XenotypeDef>
+
+</Defs>

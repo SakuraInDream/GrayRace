@@ -1,109 +1,109 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
-  <!-- EN: 远古湮灭眩光 -->
+
+  <!-- EN: Ancient Ruination Glare -->
   <GR_MechModule_AncientTitanLance.label>远古湮灭眩光</GR_MechModule_AncientTitanLance.label>
-  <!-- EN: 一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。 -->
-  <GR_MechModule_AncientTitanLance.description>一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。</GR_MechModule_AncientTitanLance.description>
-  
-  <!-- EN: 电弧发射器 -->
+  <!-- EN: A massive array of series-linked energy amplification conduits capable of firing a beam of unprecedented power. Its size means only Titan-class starships can mount it. -->
+  <GR_MechModule_AncientTitanLance.description>高强度中射程火力将会让我们的泰坦舰更加轻易地突破敌人的战线。这些远古的火炮曾是一个星海帝国建立的根基。</GR_MechModule_AncientTitanLance.description>
+
+  <!-- EN: Arc Emitter -->
   <GR_MechModule_ArcEmitters.label>电弧发射器</GR_MechModule_ArcEmitters.label>
-  <!-- EN: 伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。 -->
-  <GR_MechModule_ArcEmitters.description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</GR_MechModule_ArcEmitters.description>
-  
-  <!-- EN: 聚能电弧发射器 -->
+  <!-- EN: Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched. -->
+  <GR_MechModule_ArcEmitters.description>向目标发射混乱能量的电弧，可以无视装甲和护盾的强大武器。</GR_MechModule_ArcEmitters.description>
+
+  <!-- EN: Concentrated Arc Emitter -->
   <GR_MechModule_ArcEmittersPlus.label>聚能电弧发射器</GR_MechModule_ArcEmittersPlus.label>
-  <!-- EN: 这些升级后的发射器装备了更优秀的聚焦透镜，这使得它们可以发射出更加强大的能量。 -->
+  <!-- EN: These upgraded emitters are equipped with superior focusing lenses, allowing them to discharge even greater energy. -->
   <GR_MechModule_ArcEmittersPlus.description>这些升级后的发射器装备了更优秀的聚焦透镜，这使得它们可以发射出更加强大的能量。</GR_MechModule_ArcEmittersPlus.description>
-  
-  <!-- EN: 粒子光矛 -->
+
+  <!-- EN: Particle Lance -->
   <GR_MechModule_Lances.label>粒子光矛</GR_MechModule_Lances.label>
-  <!-- EN: 这些重型能量武器能够发射聚焦的粒子射线并造成巨幅伤害。发射阵列的规模限制了它们只能运用在战列舰和泰坦上。 -->
+  <!-- EN: These heavy energy weapons fire focused particle beams and deal enormous damage. The size of their emitter arrays limits them to battleships and titans. -->
   <GR_MechModule_Lances.description>这些重型能量武器能够发射聚焦的粒子射线并造成巨幅伤害。发射阵列的规模限制了它们只能运用在战列舰和泰坦上。</GR_MechModule_Lances.description>
-  
-  <!-- EN: 快子光矛 -->
+
+  <!-- EN: Tachyon Lance -->
   <GR_MechModule_Lances_Plus.label>快子光矛</GR_MechModule_Lances_Plus.label>
-  <!-- EN: 粒子光矛更为强力的版本，该武器发射携带有巨大能量的快子光束。和它的之前版本一样，只能运用在战列舰和泰坦上。 -->
+  <!-- EN: A more powerful version of the particle lance, firing a tachyon beam that carries immense energy. Like its predecessor, it can only be mounted on battleships and titans. -->
   <GR_MechModule_Lances_Plus.description>粒子光矛更为强力的版本，该武器发射携带有巨大能量的快子光束。和它的之前版本一样，只能运用在战列舰和泰坦上。</GR_MechModule_Lances_Plus.description>
-  
-  <!-- EN: 蓝色激光 -->
+
+  <!-- EN: Blue Laser -->
   <GR_MechModule_PulseLaser_Blue.label>蓝色激光</GR_MechModule_PulseLaser_Blue.label>
-  <!-- EN: 比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。 -->
+  <!-- EN: More powerful than red lasers. To organic beings, electromagnetic radiation of this wavelength appears blue or violet. -->
   <GR_MechModule_PulseLaser_Blue.description>比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。</GR_MechModule_PulseLaser_Blue.description>
-  
-  <!-- EN: 蓝色激光 -->
+
+  <!-- EN: Blue Laser -->
   <GR_MechModule_PulseLaser_Blue_L.label>蓝色激光</GR_MechModule_PulseLaser_Blue_L.label>
-  <!-- EN: 比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。 -->
+  <!-- EN: More powerful than red lasers. To organic beings, electromagnetic radiation of this wavelength appears blue or violet. -->
   <GR_MechModule_PulseLaser_Blue_L.description>比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。</GR_MechModule_PulseLaser_Blue_L.description>
-  
-  <!-- EN: 蓝色激光 -->
+
+  <!-- EN: Blue Laser -->
   <GR_MechModule_PulseLaser_Blue_M.label>蓝色激光</GR_MechModule_PulseLaser_Blue_M.label>
-  <!-- EN: 比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。 -->
+  <!-- EN: More powerful than red lasers. To organic beings, electromagnetic radiation of this wavelength appears blue or violet. -->
   <GR_MechModule_PulseLaser_Blue_M.description>比红色激光器更加强大，对有机生物来说，这种波长的电磁辐射看上去是蓝色或紫色的。</GR_MechModule_PulseLaser_Blue_M.description>
-  
-  <!-- EN: 伽马激光 -->
+
+  <!-- EN: Gamma Laser -->
   <GR_MechModule_PulseLaser_Gamma.label>伽马激光</GR_MechModule_PulseLaser_Gamma.label>
-  <!-- EN: 伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。 -->
+  <!-- EN: Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched. -->
   <GR_MechModule_PulseLaser_Gamma.description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</GR_MechModule_PulseLaser_Gamma.description>
-  
-  <!-- EN: 伽马激光 -->
+
+  <!-- EN: Gamma Laser -->
   <GR_MechModule_PulseLaser_Gamma_L.label>伽马激光</GR_MechModule_PulseLaser_Gamma_L.label>
-  <!-- EN: 伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。 -->
+  <!-- EN: Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched. -->
   <GR_MechModule_PulseLaser_Gamma_L.description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</GR_MechModule_PulseLaser_Gamma_L.description>
-  
-  <!-- EN: 伽马激光 -->
+
+  <!-- EN: Gamma Laser -->
   <GR_MechModule_PulseLaser_Gamma_M.label>伽马激光</GR_MechModule_PulseLaser_Gamma_M.label>
-  <!-- EN: 伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。 -->
+  <!-- EN: Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched. -->
   <GR_MechModule_PulseLaser_Gamma_M.description>伽马激光的电磁辐射频率极高。在激光武器领域，其破坏力是无可比拟的。</GR_MechModule_PulseLaser_Gamma_M.description>
-  
-  <!-- EN: 红色激光 -->
+
+  <!-- EN: Red Laser -->
   <GR_MechModule_PulseLaser_Infrared.label>红色激光</GR_MechModule_PulseLaser_Infrared.label>
-  <!-- EN: 激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。 -->
+  <!-- EN: Laser weapons fire focused beams at targets, damaging enemies with intense heat. -->
   <GR_MechModule_PulseLaser_Infrared.description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</GR_MechModule_PulseLaser_Infrared.description>
-  
-  <!-- EN: 红色激光 -->
+
+  <!-- EN: Red Laser -->
   <GR_MechModule_PulseLaser_Infrared_L.label>红色激光</GR_MechModule_PulseLaser_Infrared_L.label>
-  <!-- EN: 激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。 -->
+  <!-- EN: Laser weapons fire focused beams at targets, damaging enemies with intense heat. -->
   <GR_MechModule_PulseLaser_Infrared_L.description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</GR_MechModule_PulseLaser_Infrared_L.description>
-  
-  <!-- EN: 红色激光 -->
+
+  <!-- EN: Red Laser -->
   <GR_MechModule_PulseLaser_Infrared_M.label>红色激光</GR_MechModule_PulseLaser_Infrared_M.label>
-  <!-- EN: 激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。 -->
+  <!-- EN: Laser weapons fire focused beams at targets, damaging enemies with intense heat. -->
   <GR_MechModule_PulseLaser_Infrared_M.description>激光武器可以向目标发射聚焦光束，通过高热量给敌方造成伤害。</GR_MechModule_PulseLaser_Infrared_M.description>
-  
-  <!-- EN: 紫外激光 -->
+
+  <!-- EN: Ultraviolet Laser -->
   <GR_MechModule_PulseLaser_UV.label>紫外激光</GR_MechModule_PulseLaser_UV.label>
-  <!-- EN: 紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。 -->
+  <!-- EN: Ultraviolet lasers are an upgraded, enhanced version of the preceding blue lasers. These weapons are precise and devastating, capable of inflicting massive damage. -->
   <GR_MechModule_PulseLaser_UV.description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</GR_MechModule_PulseLaser_UV.description>
-  
-  <!-- EN: 紫外激光 -->
+
+  <!-- EN: Ultraviolet Laser -->
   <GR_MechModule_PulseLaser_UV_L.label>紫外激光</GR_MechModule_PulseLaser_UV_L.label>
-  <!-- EN: 紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。 -->
+  <!-- EN: Ultraviolet lasers are an upgraded, enhanced version of the preceding blue lasers. These weapons are precise and devastating, capable of inflicting massive damage. -->
   <GR_MechModule_PulseLaser_UV_L.description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</GR_MechModule_PulseLaser_UV_L.description>
-  
-  <!-- EN: 紫外激光 -->
+
+  <!-- EN: Ultraviolet Laser -->
   <GR_MechModule_PulseLaser_UV_M.label>紫外激光</GR_MechModule_PulseLaser_UV_M.label>
-  <!-- EN: 紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。 -->
+  <!-- EN: Ultraviolet lasers are an upgraded, enhanced version of the preceding blue lasers. These weapons are precise and devastating, capable of inflicting massive damage. -->
   <GR_MechModule_PulseLaser_UV_M.description>紫外激光器是它的前身蓝激光器的更新强化版本。这些武器精准而充满毁灭性，可以造成巨大的杀伤。</GR_MechModule_PulseLaser_UV_M.description>
-  
-  <!-- EN: X射线激光 -->
+
+  <!-- EN: X-Ray Laser -->
   <GR_MechModule_PulseLaser_Xray.label>X射线激光</GR_MechModule_PulseLaser_Xray.label>
-  <!-- EN: 这种激光的波长较紫外线短一些，但是更具毁灭性。 -->
+  <!-- EN: This laser has a shorter wavelength than ultraviolet light, but is even more destructive. -->
   <GR_MechModule_PulseLaser_Xray.description>这种激光的波长较紫外线短一些，但是更具毁灭性。</GR_MechModule_PulseLaser_Xray.description>
-  
-  <!-- EN: X射线激光 -->
+
+  <!-- EN: X-Ray Laser -->
   <GR_MechModule_PulseLaser_Xray_L.label>X射线激光</GR_MechModule_PulseLaser_Xray_L.label>
-  <!-- EN: 这种激光的波长较紫外线短一些，但是更具毁灭性。 -->
+  <!-- EN: This laser has a shorter wavelength than ultraviolet light, but is even more destructive. -->
   <GR_MechModule_PulseLaser_Xray_L.description>这种激光的波长较紫外线短一些，但是更具毁灭性。</GR_MechModule_PulseLaser_Xray_L.description>
-  
-  <!-- EN: X射线激光 -->
+
+  <!-- EN: X-Ray Laser -->
   <GR_MechModule_PulseLaser_Xray_M.label>X射线激光</GR_MechModule_PulseLaser_Xray_M.label>
-  <!-- EN: 这种激光的波长较紫外线短一些，但是更具毁灭性。 -->
+  <!-- EN: This laser has a shorter wavelength than ultraviolet light, but is even more destructive. -->
   <GR_MechModule_PulseLaser_Xray_M.description>这种激光的波长较紫外线短一些，但是更具毁灭性。</GR_MechModule_PulseLaser_Xray_M.description>
-  
-  <!-- EN: 炼狱射线 -->
+
+  <!-- EN: Perdition Beam -->
   <GR_MechModule_TitanLance.label>炼狱射线</GR_MechModule_TitanLance.label>
-  <!-- EN: 一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。 -->
+  <!-- EN: A massive array of series-linked energy amplification conduits capable of firing a beam of unprecedented power. Its size means only Titan-class starships can mount it. -->
   <GR_MechModule_TitanLance.description>一个巨大的串联能源增幅导管阵列，可以发射一道威力前所未有的光束。它的尺寸意味着只有泰坦级星舰才能装得上。</GR_MechModule_TitanLance.description>
-  
+
 </LanguageData>

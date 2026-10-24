@@ -5,7 +5,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailPDW</defName>
     <label>Gray Railgun PDW</label>
-    <description>Satellite.Its low-pressure rail and compact capacitor provide only modest projectile velocity and a thin EMP coating, but in return grant a blistering rate of fire, exceptional stability, and nearly inaudible operation. This extreme lightweight design design enables lightning-fast target acquisition, making it the perfect partner for infiltration missions and the personal defense weapon of choice for most Grays.</description>
+    <description>Gray standard rail SMG, also known as Satellite. Its low-pressure rail and small capacitor provide only modest muzzle velocity and EMP coating, but in return it offers an extremely high rate of fire, stability, and an almost inaudible report. Its ultra-lightweight design allows for extremely fast draw speed; it is the best partner for infiltration missions and the preferred close-defense weapon of most Gray.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_PDW</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -112,7 +112,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailShotgun</defName>
     <label>Gray Railgun Shotgun</label>
-    <description>White dwarf.Its unique array of mid-pressure magnetic rails simultaneously accelerates multiple projectiles, which are then compressed into a dense cluster by a muzzle suppressor. Upon impact, this cluster erupts into a devastating storm of shrapnel. While effective range is limited, its close-quarters and confined-space suppression capability is nothing short of terrifying.</description>
+    <description>Gray standard rail shotgun, also known as White Dwarf. Its unique mid-pressure rail array accelerates multiple projectiles simultaneously, compressing them into a single mass at the muzzle; upon impact, it bursts into a deadly storm of metal. Although it lacks sustained power, it retains terrifying suppressive force at close range and in enclosed spaces.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_SG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -213,7 +213,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailAssaultRifle</defName>
     <label>Gray Railgun Rifle</label>
-    <description>Meteor.Utilizing a compact mid-pressure rail and a specialized capacitor that applies a powerful EMP coating to its slugs, this rifle offers respectable armor penetration while effectively neutralizing mechanical lifeforms. As it is essentially an elongated modification of a submachine gun platform, its raw stopping power is somewhat limited, but this trade-off maximizes its weight and size advantages.</description>
+    <description>Gray standard rail rifle, also known as Meteor. It uses a compact mid-pressure rail, and a special capacitor applies a powerful EMP coating to the projectile, providing decent penetration while effectively suppressing the movement of mechanical life. Because it is essentially an extended conversion of an SMG, its destructive power is slightly lacking, but it balances functionality and portability to the greatest extent.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -316,7 +316,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailMachinegun</defName>
     <label>Gray Railgun Light MachineGun</label>
-    <description>Star.Featuring a compact high-pressure rail and a high-capacity capacitor, this weapon unleashes a continuous, devastating stream of heavy depleted uranium armor-piercing rounds at a cyclic rate of fire. It creates a suppressive impact zone akin to a storm of steel and lead, establishing absolute dominance in base assaults and fire suppression roles.</description>
+    <description>Gray standard rail light machine gun, also known as Star. Using a compact high-pressure rail and a high-capacity capacitor, it continuously pours heavy depleted-uranium armor-piercing rounds at a devastating rate of fire. The fire coverage it creates is like a violent storm, making it the absolute master of base assaults and suppressive fire.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_MG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -411,7 +411,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailSniperRifle</defName>
     <label>Gray Railgun Sniper Rifle</label>
-    <description>Comet.A custom-built over-pressure magnetic rail accelerates projectiles to twenty Mach and imbues them with a potent EMP charge, granting phenomenal penetration and lethal force. The kinetic energy released upon impact can pierce weaker armor plates on corvettes. Due to its considerable size and poor portability, Grays typically deploy this weapon only from fixed firing positions.</description>
+    <description>Gray standard rail sniper rifle, also known as Comet. A custom over-pressure rail and high-voltage capacitor apply an EMP effect to the projectile while accelerating it to Mach 20, granting incredible penetration and lethality; the kinetic energy released on impact can even pierce the thinner armor of a frigate. Because of its large size, it hinders movement when fully deployed, so the Gray generally use it only when sniping from a fixed position.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_SR</texPath>
@@ -519,7 +519,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_RailCannon</defName>
     <label>Neutron star</label>
-    <description>Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal.</description>
+    <description>A heavy weapon built in an era before the Gray existed, converted by a group of fanatical heavy-firepower enthusiasts from a decommissioned frigate's secondary gun. Its staggering recoil is difficult even for enhanced soldiers in exoskeletons to handle, so it was handed over to the Gray to deal with the giant creatures encountered during colonial expansion. Using an extended high-pressure rail and a heavy capacitor, it fires armor-piercing high-explosive rounds of tremendous mass; its power is enough to level a small building or reduce a 22nd-century main battle tank to scrap.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/RailGun/Rail_Cannon</texPath>
       <graphicClass>Graphic_Single</graphicClass>

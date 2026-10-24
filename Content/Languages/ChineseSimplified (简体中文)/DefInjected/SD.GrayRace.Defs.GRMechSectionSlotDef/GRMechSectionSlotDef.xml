@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 舰艏区段 -->
+  <!-- EN: Bow Section -->
   <GR_MechSection_Bow.label>舰艏区段</GR_MechSection_Bow.label>
-  <!-- EN: TODO -->
+  <!-- EN: Bow section. -->
   <GR_MechSection_Bow.description>舰艏区段。</GR_MechSection_Bow.description>
   
-  <!-- EN: 核心区段 -->
+  <!-- EN: Core Section -->
   <GR_MechSection_Mid.label>核心区段</GR_MechSection_Mid.label>
-  <!-- EN: TODO -->
+  <!-- EN: Core section. -->
   <GR_MechSection_Mid.description>核心区段。</GR_MechSection_Mid.description>
   
-  <!-- EN: 舰艉区段 -->
+  <!-- EN: Stern Section -->
   <GR_MechSection_Stern.label>舰艉区段</GR_MechSection_Stern.label>
-  <!-- EN: TODO -->
+  <!-- EN: Stern section. -->
   <GR_MechSection_Stern.description>舰艉区段。</GR_MechSection_Stern.description>
   
 </LanguageData>

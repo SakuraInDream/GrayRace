@@ -4,7 +4,7 @@
   <!--旗袍-->
   <ThingDef ParentName="ApparelNoQualityBase">
     <defName>Gray_Apparel_Qipao</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>She is the Gray Wind: an invincible commander, a diplomat who can debate a crowd into silence, an administrator who builds prosperity, and a scientist whose brilliance shines across the stars. She is also the pioneer of the Gray race and the faith of their people—and now she has come for you, ruler.</description>
     <label>Gray Qipao</label>
     <possessionCount>1</possessionCount>
     <graphicData>
@@ -72,7 +72,7 @@
   <!--使节服装-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_Envoy</defName>
-    <description>.</description>
+    <description>Sometimes the Gray harbor an inexplicable obsession with their origin—the source of every Gray.\nIt is a feeling that cannot be understood just by looking. Only when actually wearing this uniquely cut gown does the persona core flash with several inexplicable currents, as if by instinct—and to the Gray, it is a tingling that unsettles the heart.\nLooking down at herself, she feels as if she has truly become the Gray Wind herself—and with that, she can command with confidence and cross verbal swords with anyone.</description>
     <label>Gray Envoy Dress</label>
     <graphicData>
       <texPath>Apparel/Envoy/Gray_Envoy</texPath>
@@ -149,7 +149,7 @@
   <!--矿工装-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_TerraMessenger</defName>
-    <description>.</description>
+    <description>Mining attire consisting of a protective one-piece gel bodysuit made from special materials, paired with a Viking-style fur coat that resists water, wind, and dust.\nThe whole set is designed to let Gray miners focus entirely on manipulating Gray Tide Zro and breaking down ore.\nThe coat is plainly made from thick leather and cloth, and still bears fragments of Bessellian stone.\nSurprisingly, there is little technology in it—perhaps reports indicated that adding miscellaneous functions actually hindered the work.</description>
     <label>Gray Terra Messenger</label>
     <graphicData>
       <texPath>Apparel/TerraMessenger/Gray_TerraMessenger</texPath>
@@ -227,7 +227,7 @@
   <!--女仆装-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_Maid</defName>
-    <description>.</description>
+    <description>A style popular in the Star Sea Empire's fleet, equipped with self-cleaning functionality.\nMuted in color and long in skirt, it is an elegant design—yet its bold cut leaves the skin of the chest completely exposed.\nIt is clothing that inevitably makes one a little restless when sharing a room.\nAnd—a pair of gauntlets of unclear purpose.</description>
     <label>Gray Maid</label>
     <graphicData>
       <texPath>Apparel/Maid/Gray_Maid</texPath>
@@ -309,7 +309,7 @@
   <!--工装-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_Workwear</defName>
-    <description>.</description>
+    <description>A common workwear style among Gray laborers: light, durable, and carrying a faint smell of machine oil and rust.\nThough it looks plain, it is actually tailored to the Gray's nature—the workwear effectively enhances the reaction speed of Gray Tide Zro, allowing Gray workers to move freely among crowded machines and even operate several at once.</description>
     <label>Gray Workwear</label>
     <graphicData>
       <texPath>Apparel/Worker/Gray_Worker</texPath>
@@ -387,7 +387,7 @@
   <!--实验服-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_Researcher</defName>
-    <description>.</description>
+    <description>An intellectual outfit the Gray wear while working in laboratories and hospitals.\nThough it is less technologically advanced than other clothing, it somehow puts colleagues and patients at ease.\nThey accept the prescriptions it implies, stay still during treatment, and sound convincing in technical discussions.\nCould it be that this, too, is part of the outfit's function?</description>
     <label>Gray Lab Coat</label>
     <graphicData>
       <texPath>Apparel/Researcher/Gray_Researcher</texPath>
@@ -472,7 +472,7 @@
   <!--OL装-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_OL</defName>
-    <description>.</description>
+    <description>An ordinary office lady outfit.\nThere are Gray with no outstanding abilities, too; they often become one of the countless masses of the vast Empire.\nBut over a long lifespan, this outfit will become proof that she transformed from this youthful form.</description>
     <label>Gray Office Lady Outfit</label>
     <graphicData>
       <texPath>Apparel/OL/Gray_OL</texPath>
@@ -540,7 +540,7 @@
   <!--水手服-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_SailorSuit</defName>
-    <description>.</description>
+    <description>Youthful clothing from the early days of human civilization.\nThe reinforced stockings beneath the pleated skirt will not tear even in vigorous movement, making it possible to become the sailor-suit killer of a planet's urban legends.\nThe sweat gathered on the collarbone hidden by the sailor collar still glistens even under an alien sky.\nOf course, the Gray do not sweat.</description>
     <label>Gray Sailor Suit</label>
     <graphicData>
       <texPath>Apparel/SailorSuit/Gray_SailorSuit</texPath>
@@ -608,7 +608,7 @@
   <!--毛衣-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_Sweater</defName>
-    <description>.</description>
+    <description>A plain sweater, common on planets without artificial climate control, and thoroughly imbued with a housewife vibe.\nThough the Gray do not fear the cold, this human-style clothing helps them blend in with humans during certain seasons.\nSome white-haired enthusiasts are especially eager to visit Gray settlements in winter to photograph them wearing this.</description>
     <label>Gray Sweater</label>
     <graphicData>
       <texPath>Apparel/Sweater/Gray_Sweater</texPath>
@@ -672,7 +672,7 @@
   <!--婚纱-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_WeddingDress</defName>
-    <description>.</description>
+    <description>A magnificent wedding dress embodying longing and happiness—but for the Gray, it means far more.\nIn an Empire of immense material abundance, Gray with legal citizenship can buy one at any time or make one by hand, but the most important meaning of a wedding dress has always been bestowed by one's other half.\nFor the Gray, walking down the aisle with a lover 'to hold hands and grow old together' not only symbolizes the beginning of a beautiful marriage, but also represents the complete recognition of their intelligence—as if 'being treated as a human being.' Who is to say this is not the ultimate fantasy of every Gray?\nA distant wind-song carries a message, reminding you of one thing:\nAmong the brilliant stars of the night sky, a star draped in a veil of light still waits for their return.</description>
     <label>Gray Wedding Dress</label>
     <graphicData>
       <texPath>Apparel/Wedding/Gray_WeddingDress</texPath>
@@ -785,7 +785,7 @@
   <!--夜宴晚礼服-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_BanquetDress</defName>
-    <description>.</description>
+    <description>Clothing that fully displays the body's allure.\nGossamer-fine gauze and satin are carefully woven together. Though a cloak can cover the body completely, it serves only as a conspicuous embellishment.\nIs the one wearing this a butterfly caught in a web—or a hunter lingering on the web?</description>
     <label>Gray Evening Banquet Dress</label>
     <graphicData>
       <texPath>Apparel/BanquetDress/Gray_BanquetDress</texPath>
@@ -813,7 +813,7 @@
   <!--神道巫女-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_MikoOutfit</defName>
-    <description>.</description>
+    <description>A garment heavy with religious flavor from the early days of human civilization.\nThere is almost no covering at the chest, and the skirt is so short one cannot help but want to pull it down—by modern standards, it looks rather lewd.\nAfter all, was the miko outfit originally like this? The designers who reworked it tend to keep quiet about that.</description>
     <label>Gray miko outfit</label>
     <graphicData>
       <texPath>Apparel/MikoOutfit/Gray_MikoOutfit</texPath>
@@ -849,7 +849,7 @@
   <!--希玛纯-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_Himation</defName>
-    <description>.</description>
+    <description>A simple, unadorned garment from the early days of human civilization.\nIt wraps the body in a single layer of plain wool, symbolizing the people of that era's desire not to be bound by clothing and their pursuit of freedom and spontaneity.\nSimple yet elegant, it makes every Gray who wears it feel one step closer to the countless philosophers of that age.</description>
     <label>Gray Himation</label>
     <graphicData>
       <texPath>Apparel/Himation/Gray_Himation</texPath>
@@ -875,7 +875,7 @@
   <!--修女-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_Nun</defName>
-    <description>.</description>
+    <description>A garment heavy with religious flavor from the early days of human civilization.\nWhat was once a plainly cut robe that fully covered the body has become clothing that instead accentuates every curve.\nIt has been completely redesigned, turning its originally subtle sense of contrast into something far more blatantly sensual.</description>
     <label>Gray Nun</label>
     <graphicData>
       <texPath>Apparel/Nun/Gray_Nun</texPath>
@@ -903,7 +903,7 @@
   <!--道袍-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_TaoistRobe</defName>
-    <description>.</description>
+    <description>A garment from the early days of human civilization that feels a little mystifying.\nEven so, it is said to have been made to deal with unsettling horrors on certain planets, and it has the power to ward off evil and suppress demons.\nUnlike the original Taoist robe, it has also been redesigned to feel more distinctly Gray in style.</description>
     <label>Gray Taoist Robe</label>
     <graphicData>
       <texPath>Apparel/TaoistRobe/Gray_TaoistRobe</texPath>
@@ -931,7 +931,7 @@
   <!--情趣婚纱-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_SensualWeddingDress</defName>
-    <description>.</description>
+    <description>Clothing many Gray long to wear, now realized in such a twisted way.\nLike a lovestruck girl receiving a wedding ring, she stretches her neck and closes her eyes as a pure white collar is fastened around it.\nTo appear before others in this outfit, she looks truly like a loyal bitch—so loyal that one cannot even imagine her betraying anyone.\nWhat a wonderful bride.</description>
     <label>Gray Sensual Wedding Dress</label>
     <graphicData>
       <texPath>Apparel/Wedding/Gray_SensualWeddingDress</texPath>

@@ -4,7 +4,7 @@
   <FactionDef Name="Gray_PlayerFaction" ParentName="PlayerFactionBase">
     <defName>Gray_PlayerFaction</defName>
     <label>Gray colonial outpost</label>
-    <description>A colony of recently-arrived Grays.</description>
+    <description>What story will unfold in the new colony?</description>
     <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
     <categoryTag>Gray_PlayerFaction</categoryTag>
     <colorSpectrum>

@@ -113,7 +113,7 @@
                   </groups>
                   <parts>
                     <li>
-                      <def>Tongue</def>
+                      <def>Nano_Tongue</def>
                       <coverage>0.001</coverage>
                       <depth>Inside</depth>
                       <groups>

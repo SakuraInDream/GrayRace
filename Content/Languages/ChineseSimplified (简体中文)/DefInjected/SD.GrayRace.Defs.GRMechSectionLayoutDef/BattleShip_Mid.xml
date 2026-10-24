@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 齐射核心 -->
+  <!-- EN: Salvo Core -->
   <GR_BB_Mid_L2M2.label>齐射核心</GR_BB_Mid_L2M2.label>
   <!-- EN: Line mid section copied from Stellaris BATTLESHIP_MID_L2M2. -->
   <GR_BB_Mid_L2M2.description>复制自 Stellaris BATTLESHIP_MID_L2M2 的战线核心区段。</GR_BB_Mid_L2M2.description>
   
-  <!-- EN: 巨炮核心 -->
+  <!-- EN: Artillery Core -->
   <GR_BB_Mid_L3.label>巨炮核心</GR_BB_Mid_L3.label>
   <!-- EN: Artillery mid section copied from Stellaris BATTLESHIP_MID_L3. -->
   <GR_BB_Mid_L3.description>复制自 Stellaris BATTLESHIP_MID_L3 的巨炮核心区段。</GR_BB_Mid_L3.description>
   
-  <!-- EN: 格纳库核心 -->
+  <!-- EN: Hangar Core -->
   <GR_BB_Mid_M4SHB.label>格纳库核心</GR_BB_Mid_M4SHB.label>
   <!-- EN: Carrier mid section copied from Stellaris BATTLESHIP_MID_M4SHB. -->
   <GR_BB_Mid_M4SHB.description>复制自 Stellaris BATTLESHIP_MID_M4SHB 的航母核心区段。</GR_BB_Mid_M4SHB.description>
   
-  <!-- EN: 航母核心 -->
+  <!-- EN: Carrier Core -->
   <GR_BB_Mid_S4LHB.label>航母核心</GR_BB_Mid_S4LHB.label>
   <!-- EN: Heavy carrier mid section copied from Stellaris BATTLESHIP_MID_S4LHB. -->
   <GR_BB_Mid_S4LHB.description>复制自 Stellaris BATTLESHIP_MID_S4LHB 的重型航母核心区段。</GR_BB_Mid_S4LHB.description>

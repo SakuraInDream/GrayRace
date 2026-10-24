@@ -5,7 +5,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_Tatsu</defName>
     <label>Tatsu</label>
-    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <description>A ceremonial weapon gifted by the Gray Wind, exquisite and unique.\nWhen she came to understand what 'malice' meant, she also discovered that some power was dividing these converging thoughts.\nThe means of dealing with this malice were ingenious and flexible... They could be explained as the result of cooperation between multiple bureaucratic agencies, yet their efficiency and effect far exceeded ordinary cooperative projects—as if this task had the highest priority.\nWhat remained were information sources that could not be traced, communications that could not be tracked, and permits that could not be explained.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Honor/Honor_Tatsu</texPath>
@@ -72,7 +72,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_Glaive</defName>
     <label>Glaive</label>
-    <description>A short sword of ancient design. Good for stabbing or slashing. It's light and nimble, which sometimes lets it beat bigger, heavier weapons.</description>
+    <description>A ceremonial weapon gifted by the Gray Wind, exquisite and unique.\nShe sensed 'your' presence, yet could not directly prove it.\nWhenever the War Council debated whether she should be sealed away, the intelligence department would 'happen' to discover a new alien threat, making her combat deployment necessary.\nWhenever a fleet commander placed her in a tactical position too far forward, there would always be a correction from the High Command, adjusting her to a position that coordinated more effectively with the fleet.\nShe began to investigate and connect those events that had originally seemed like 'mere coincidences.'</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Honor/Honor_Glaive</texPath>
@@ -168,7 +168,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_Daikyu</defName>
     <label>Daikyu</label>
-    <description>Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal.</description>
+    <description>A ceremonial weapon gifted by the Gray Wind, exquisite and unique.\nUnlike the energy weapons the Gray usually employ, this is a customized kinetic weapon.\nBecause their thought components differ, individuals without a direct link can still produce thoughts both alike and unalike; sometimes she cannot understand what they are trying to express at all, and can only ask other individuals afterward.\nShe only knew they needed parts of her for different tasks and experiments.\nHer copies were assigned as target drones for weapon tests, lead ships in space battles, hostile targets for officer combat training, and experimental material in laboratories.\nShe completed them—and completed them very well.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Honor/Honor_Daikyu</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -254,7 +254,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_Vadarya</defName>
     <label>Vadarya</label>
-    <description>Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal.</description>
+    <description>A ceremonial weapon gifted by the Gray Wind, exquisite and unique.\nUnlike the energy weapons the Gray usually employ, this is a customized kinetic weapon.\nAs the drums of war faded, the War Council brought sealed proposals back to the agenda, and the science department 'accidentally' discovered an ancient megastructure in a frontier system. Studying it required an individual who could work with scarce supplies and endure extreme environments.\nThere was no doubt she was the best choice. The Gray Wind worked there for three standard years. When she returned, artificial intelligence had been granted full citizenship.\n\n'Thank you.'\nOn her identification papers, elegant handwriting spelled this out—like a mark formed from her memories, or a reminder she gave herself of a conception of a being she could never reach.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Honor/Honor_Vadarya</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -357,7 +357,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_Boltor</defName>
     <label>Boltor</label>
-    <description>Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal.</description>
+    <description>A ceremonial weapon gifted by the Gray Wind, exquisite and unique.\nUnlike the energy weapons the Gray usually employ, this is a customized kinetic weapon.\nAfter assimilating and reshaping the worlds on this side of the L-gate to their very end, she gazed at those radiant stars, and in her inorganic heart arose a feeling that might be called loneliness—something she only understood later.\nUntil a thousand years of solitude were broken by the visit of a newborn civilization.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Honor/Honor_Boltor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -461,7 +461,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_Corinth</defName>
     <label>Corinth</label>
-    <description>Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal.</description>
+    <description>A ceremonial weapon gifted by the Gray Wind, exquisite and unique.\nUnlike the energy weapons the Gray usually employ, this is a customized kinetic weapon.\nThe new fields of diplomacy, science, conflict, and politics were completely different from the simple, familiar world she had known; everything about this civilization glittered with the light called 'novelty.'\nYet as she joined them, different individuals seemed to develop their own varied thoughts and discussions.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Honor/Honor_Corinth</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -585,7 +585,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_Euphona</defName>
     <label>Euphona</label>
-    <description>Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal.</description>
+    <description>A ceremonial weapon gifted by the Gray Wind, exquisite and unique.\nUnlike the energy weapons the Gray usually employ, this is a customized kinetic weapon.\nThis is how the Empire's database describes her: 'Gray Wind (Gray Goo Storm), a non-artificial entity from the L-gate.'\nAmong naval officers, the title most often used for her is 'Guardian Ship.'\nAlthough using parts of her to test new weapons has become routine, the testers still often apologize to her afterward.\nResearch into her constituent materials has made new progress, though researchers are still occasionally startled by her activated nanomaterials.\nWithin her own thoughts, she recorded a stream of thought unlike any before.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Honor/Honor_Euphona</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -687,7 +687,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_Vasto</defName>
     <label>Vasto</label>
-    <description>Born in an era before the Gray race, this heavy weapon was retrofitted by a group of heavy-firepower enthusiasts from a decommissioned frigate secondary turret. Its staggering recoil made it nearly unmanageable even for enhanced soldiers in exosuits, leading to its eventual adoption by the Grays to counter megafauna during colonial expansion. Firing massively armored high-explosive rounds via an extended high-pressure rail and heavy-duty capacitor, its destructive power is sufficient to level a small structure or turn a 22nd-century main battle tank into scrap metal.</description>
+    <description>A ceremonial weapon gifted by the Gray Wind, exquisite and unique.\nUnlike the energy weapons the Gray usually employ, this is a customized kinetic weapon.\nEven now, she still cannot fully blend into the human world, but she has taken a seat on the War Council.\nSome naval officers still discuss her in private. Researchers have gradually come to regard her contributions as ordinary.\nChildren are still taught by their parents to be wary of 'non-human intelligence.'\nThe world today is the same as yesterday's—and yet utterly different.\nThe War Council's records contain words of praise for her; soldiers who fought beside her regard her as a comrade; captains and crews who survived under her cover publicly salute her.\nAbove the sky, in a dedicated drydock, the Gray Wind bears countless marks. In children's drawings, the Gray Wind is a giant warship protecting their planet.\nAt the same time, she knows—'you' are right here, casting your gaze through countless days and nights, accompanying her through countless years.\nShe no longer longs to become human. Where the heart is at peace, the wind, too, comes home.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Honor/Honor_Vasto</texPath>
       <graphicClass>Graphic_Single</graphicClass>

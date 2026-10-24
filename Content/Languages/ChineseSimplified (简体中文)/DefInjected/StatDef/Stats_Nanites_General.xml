@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
-  <!-- EN: 备用灰潮源质上限 -->
+  
+  <!-- EN: Spare Nanite capacity -->
   <GRStat_NaniteMax.label>备用灰潮源质上限</GRStat_NaniteMax.label>
-  <!-- EN: 灰裔体内能够储存的备用纳米机械最大值。 -->
+  <!-- EN: The maximum amount of spare nanites the Gray can store in her body. -->
   <GRStat_NaniteMax.description>灰裔体内能够储存的备用纳米机械最大值。</GRStat_NaniteMax.description>
-
-  <!-- EN: 备用灰潮源质回复率 -->
+  
+  <!-- EN: Spare Nanite recovery rate -->
   <GRStat_NaniteRegenRate.label>备用灰潮源质回复率</GRStat_NaniteRegenRate.label>
-  <!-- EN: 灰裔每秒自动回复的纳米机械数量。 -->
+  <!-- EN: The number of nanites the Gray automatically recovers per second. -->
   <GRStat_NaniteRegenRate.description>灰裔每秒自动回复的纳米机械数量。</GRStat_NaniteRegenRate.description>
-
-  <!-- EN: 超频上限 -->
+  
+  <!-- EN: Overclock Limit -->
   <GRStat_OverclockMaxLevel.label>超频上限</GRStat_OverclockMaxLevel.label>
-  <!-- EN: 该灰裔当前部位可达到的最大超频百分比。 -->
+  <!-- EN: The maximum overclock percentage this body part can currently reach. -->
   <GRStat_OverclockMaxLevel.description>该灰裔当前部位可达到的最大超频百分比。</GRStat_OverclockMaxLevel.description>
-
+  
 </LanguageData>

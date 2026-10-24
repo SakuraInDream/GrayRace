@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ================================== 大脑插件 ================================== -->
+
+  <!-- 战斗芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_CombatChip</defName>
+    <label>Combat Chip</label>
+    <description>A combat chip implanted in the brain that improves ranged shooting ability.</description>
+    <defaultLabelColor>(0.23, 0.51, 0.96)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <RangedCooldownFactor>-0.2</RangedCooldownFactor>
+          <AimingDelayFactor>-0.2</AimingDelayFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 反应芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_ReactionChip</defName>
+    <label>Reaction Chip</label>
+    <description>A refined data chip storing countless combat techniques. Respond, predict, execute—when close combat begins, it will prove its worth.</description>
+    <defaultLabelColor>(0.90, 0.22, 0.27)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeHitChance>2</MeleeHitChance>
+          <MeleeDodgeChance>2</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 分析芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_AnalysisChip</defName>
+    <label>Analysis Chip</label>
+    <description>An expansion chip that assists the primary persona core in learning. It iterates data many times to predict the consequences of different choices. ...With enough failures, it should eventually deduce the correct path.</description>
+    <defaultLabelColor>(0.49, 0.30, 1.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ResearchSpeed>0.5</ResearchSpeed>
+          <GlobalLearningFactor>0.3</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 集中芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_ConcentrateChip</defName>
+    <label>Concentrate Chip</label>
+    <description>A concentration chip implanted in the brain that improves work ability.</description>
+    <defaultLabelColor>(0.42, 0.64, 0.41)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GeneralLaborSpeed>0.5</GeneralLaborSpeed>
+          <ConstructionSpeed>1</ConstructionSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 技工本地数据库 -->
+
+  <HediffDef>
+    <defName>GR_Hediff_TechnicianDatabase</defName>
+    <label>Technician local database</label>
+    <description>A database containing vast numbers of blueprints. It even records the specifications of screws that exist—and no longer exist—throughout the universe, along with the corresponding tools.</description>
+    <defaultLabelColor>(0.42, 0.64, 0.41)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <aptitudes>
+      <Construction>8</Construction>
+      <Crafting>8</Crafting>
+    </aptitudes>
+  </HediffDef>
+
+  <!--超频芯片-->
+  <HediffDef>
+    <defName>GR_Hediff_OverclockingChipPrimary</defName>
+    <label>Primary overclocking chip</label>
+    <description>A simple overclocking support plugin. It merely controls the redistribution and optimization of core energy.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_OverclockMaxLevel>0.25</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_OverclockingChipIntermediate</defName>
+    <label>Intermediate overclocking chip</label>
+    <description>A carefully engineered overclocking support plugin. It reaches the limit of what is possible under safe overclocking. For many Gray, it is a watershed.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_OverclockMaxLevel>0.75</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_OverclockingChipAdvanced</defName>
+    <label>Advanced overclocking chip</label>
+    <description>A product that ignores all safe overclocking protocols. It requires sacrificing part of one's Zro capacity. Losing the Zro they rely on is enough for any Gray to understand the danger of this chip.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_OverclockMaxLevel>1.5</GRStat_OverclockMaxLevel>
+          <GRStat_NaniteMax>-750</GRStat_NaniteMax>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_OverclockingChipUltimate</defName>
+    <label>Ultimate overclocking chip</label>
+    <description>Hacks the persona core, pushing energy supply to full load. An external Zro tank is almost mandatory. ...Even understanding what reduced Zro reserves means, the omnipotence of overclocking to the limit is still euphoric.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_OverclockMaxLevel>2.5</GRStat_OverclockMaxLevel>
+          <GRStat_NaniteMax>-750</GRStat_NaniteMax>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 心脏插件 ================================== -->
+
+  <!-- 效率增强器 -->
+  <HediffDef>
+    <defName>GR_Hediff_EfficiencyBooster</defName>
+    <label>Efficiency Booster</label>
+    <description>An enhancer installed in the Gray Tide core. Increases the regeneration rate of spare Gray Tide nanites.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteRegenRate>1</GRStat_NaniteRegenRate>
+          <GRStat_OverclockMaxLevel>0.5</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 手臂插件 ================================== -->
+
+  <!-- 精密芯片 -->
+  <HediffDef>
+    <defName>GR_Hediff_PrecisionChip</defName>
+    <label>Precision Chip</label>
+    <description>A precision manipulation chip implanted in the arm.</description>
+    <defaultLabelColor>(0.42, 0.64, 0.41)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GeneralLaborSpeed>0.2</GeneralLaborSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 眼部插件 ================================== -->
+
+  <!-- 瞄准系统 -->
+  <HediffDef>
+    <defName>GR_Hediff_TargetingSystem</defName>
+    <label>Targeting System</label>
+    <description>A target analysis and identification component compatible with all kinds of equipment. It effectively prevents friendly fire while providing reliable vector prediction. Knightly Gray often give it to their partners as a gift.</description>
+    <defaultLabelColor>(0.23, 0.51, 0.96)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 躯干插件 ================================== -->
+
+  <!--灰潮源质存储器-->
+  <HediffDef>
+    <defName>GR_Hediff_NanitesMemoryPrimary</defName>
+    <label>Primary nanite memory</label>
+    <description>As its name suggests, a storage unit for Zro. It raises the Gray's internal Zro storage capacity. It is designed in a small form that barely hinders movement.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteMax>250</GRStat_NaniteMax>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_NanitesMemoryIntermediate</defName>
+    <label>Intermediate nanite memory</label>
+    <description>As its name suggests, a storage unit for Zro. Its larger size and manufacturing cost allow a more efficient compression method. It greatly increases storage capacity, while its well-controlled size and distribution do not affect movement.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteMax>750</GRStat_NaniteMax>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_NanitesMemoryAdvanced</defName>
+    <label>Advanced nanite memory</label>
+    <description>As its name suggests, a storage unit for Zro. This model is generally used only for transport. It hinders the Gray's mobility to some extent and also draws a small amount of core processing power to compress Zro.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteMax>1500</GRStat_NaniteMax>
+          <GRStat_OverclockMaxLevel>-0.25</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>GR_Hediff_NanitesMemoryUltimate</defName>
+    <label>Ultimate nanite memory</label>
+    <description>As its name suggests, a storage unit for Zro. It is basically only seen in transport operations for large-scale construction. A plugin of this level seriously affects core processing power and mobility—enough that some Gray regard it as punishment.</description>
+    <defaultLabelColor>(1.00, 0.84, 0.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteMax>2500</GRStat_NaniteMax>
+          <GRStat_OverclockMaxLevel>-0.75</GRStat_OverclockMaxLevel>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

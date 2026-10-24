@@ -34,8 +34,15 @@
     <preventsDeath>false</preventsDeath>
     <stages>
       <li>
+        <capMods>
+          <li MayRequire="rim.job.world">
+            <capacity>RJW_Fertility</capacity>
+            <setMax>0</setMax>
+          </li>
+        </capMods>
         <statFactors>
           <PsychicSensitivity>0</PsychicSensitivity>
+          <Fertility>0</Fertility>
         </statFactors>
         <becomeVisible>false</becomeVisible>
         <minSeverity>0</minSeverity>

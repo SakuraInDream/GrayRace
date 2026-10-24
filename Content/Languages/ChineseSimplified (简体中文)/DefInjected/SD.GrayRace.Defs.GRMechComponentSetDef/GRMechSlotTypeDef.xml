@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: power core -->
   <GR_MechComponentSet_PowerCore.label>动力核心</GR_MechComponentSet_PowerCore.label>
-  <!-- EN: TODO -->
+  <!-- EN: Power core components. -->
   <GR_MechComponentSet_PowerCore.description>动力核心组件。</GR_MechComponentSet_PowerCore.description>
   
   <!-- EN: sensor -->
   <GR_MechComponentSet_Sensor.label>传感器</GR_MechComponentSet_Sensor.label>
-  <!-- EN: TODO -->
+  <!-- EN: Sensor components. -->
   <GR_MechComponentSet_Sensor.description>传感器组件。</GR_MechComponentSet_Sensor.description>
   
   <!-- EN: thruster -->
   <GR_MechComponentSet_Thruster.label>推进器</GR_MechComponentSet_Thruster.label>
-  <!-- EN: TODO -->
+  <!-- EN: Thruster components. -->
   <GR_MechComponentSet_Thruster.description>推进器组件。</GR_MechComponentSet_Thruster.description>
   
 </LanguageData>

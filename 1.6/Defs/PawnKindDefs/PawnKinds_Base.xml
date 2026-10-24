@@ -15,17 +15,18 @@
     <initialResistanceRange>10~30</initialResistanceRange>
     <xenotypeSet>
       <xenotypeChances>
-        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">1</Baseliner>
-        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0</Dirtmole>
-        <Genie MayRequire="Ludeon.RimWorld.Biotech">0</Genie>
-        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0</Hussar>
-        <Sanguophage MayRequire="Ludeon.RimWorld.Biotech">0</Sanguophage>
-        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0</Neanderthal>
-        <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0</Pigskin>
-        <Impid MayRequire="Ludeon.RimWorld.Biotech">0</Impid>
-        <Waster MayRequire="Ludeon.RimWorld.Biotech">0</Waster>
-        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0</Yttakin>
-        <Highmate MayRequire="Ludeon.RimWorld.Biotech">0</Highmate>
+        <GR_Xeno_Gray>1</GR_Xeno_Gray>
+        <Baseliner>0</Baseliner>
+        <Dirtmole>0</Dirtmole>
+        <Genie>0</Genie>
+        <Hussar>0</Hussar>
+        <Sanguophage>0</Sanguophage>
+        <Neanderthal>0</Neanderthal>
+        <Pigskin>0</Pigskin>
+        <Impid>0</Impid>
+        <Waster>0</Waster>
+        <Yttakin>0</Yttakin>
+        <Highmate>0</Highmate>
       </xenotypeChances>
     </xenotypeSet>
     <useFactionXenotypes>false</useFactionXenotypes>

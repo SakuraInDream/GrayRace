@@ -807,7 +807,7 @@
   <ThingDef ParentName="LightMechanoidGunRanged">
     <defName>GR_MechWeapon_AncientTitanLance</defName>
     <label>Ancient Ruination Glare</label>
-    <description>High-intensity, medium-range firepower will let our titans break enemy lines far more easily. These ancient cannons were once the foundation of a stellar empire.</description>
+    <description>High-intensity, medium-range firepower will let our titans break enemy lines far more easily. These ancient cannons were once the foundation on which a stellar empire was built.</description>
     <techLevel>Spacer</techLevel>
     <graphicData>
       <texPath>Things/Item/Weapon/MechFloating/Floating_PulseLaser_L</texPath>

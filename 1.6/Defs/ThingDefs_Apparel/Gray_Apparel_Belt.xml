@@ -5,7 +5,7 @@
   <ThingDef ParentName="MechanitorPackBase">
     <defName>Gray_Apparel_MechanitorBelt</defName>
     <label>Gray auxiliary robotic arm</label>
-    <description>A backpack containing bandwidth-expansion computer and antenna. It can increase a mechanitor's maximum total bandwidth.</description>
+    <description>The Four-Way Auxiliary Arm is a multifunctional expansion device commonly used by Gray mechanitors. As long as a part of oneself is injected into it, its four independent auxiliary cores can switch between manipulation, hauling, repair, or defense modes according to mission needs. All auxiliary arm movements are scheduled in real time by the secondary logic unit of the persona core, with almost no operational delay. After battle, one occasionally sees auxiliary arms that have detached from the main body due to damage yet still twitch—derisively called 'Gray Embers' by scavengers.</description>
     <techLevel>Spacer</techLevel>
     <recipeMaker>
       <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>

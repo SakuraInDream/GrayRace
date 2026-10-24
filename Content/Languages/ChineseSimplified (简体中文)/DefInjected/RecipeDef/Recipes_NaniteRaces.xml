@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
   <!-- EN: Persona Matrix - Adjutant -->
@@ -43,11 +43,11 @@
   <!-- EN: Doing an unknown recipe. -->
   <GRRecipe_Farmer.jobString>正在执行未知配方。</GRRecipe_Farmer.jobString>
   
-  <!-- EN: 基础型灰裔 -->
+  <!-- EN: Basic Gray -->
   <GRRecipe_GrayRace.label>基础型灰裔</GRRecipe_GrayRace.label>
-  <!-- EN: 培育一名基础型灰裔。 -->
+  <!-- EN: Incubate a basic Gray. -->
   <GRRecipe_GrayRace.description>培育一名基础型灰裔。</GRRecipe_GrayRace.description>
-  <!-- EN: 开始制造灰裔。 -->
+  <!-- EN: Begin creating a Gray. -->
   <GRRecipe_GrayRace.jobString>开始制造灰裔。</GRRecipe_GrayRace.jobString>
   
   <!-- EN: Persona Matrix - Guard -->

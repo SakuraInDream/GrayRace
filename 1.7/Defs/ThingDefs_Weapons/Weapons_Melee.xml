@@ -5,7 +5,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_HFMurasama</defName>
     <label>HF Murasama</label>
-    <description>.</description>
+    <description>A replica of the blade carried by a legendary swordsman of the Star Sea Empire. The blade vibrates a thousand times per second, producing heat sufficient to melt through armor and incredible cutting power—it can even slice a main battle tank in half with ease. The hilt has a biometric lock, so only the Gray can use it properly.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_HFMurasama</texPath>
@@ -69,7 +69,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_ShipSlayer</defName>
     <label>Ship Slayer</label>
-    <description>.</description>
+    <description>This is not a true weapon, but a piece of ship armor fitted with a grip. Its edges are eroded by Gray Tide Zro, making them sharp and corrosive. Its immense weight is somewhat taxing even for the Gray, but every swing carries destructive kinetic energy enough to crack the earth and shatter mountains.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_ShipSlayer</texPath>
@@ -135,7 +135,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_VoltSword</defName>
     <label>Electric Shock Sword</label>
-    <description>.</description>
+    <description>The most common standard weapon among the Gray. A current generator is embedded between the double alloy blades, releasing electricity to paralyze enemies while slashing. Its tip is specialized for discharge, focusing high-voltage current into a single point. It is the preferred self-defense weapon, combining offense and defense.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_VoltSword</texPath>
@@ -222,7 +222,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_Cadus</defName>
     <label>Stun Stick</label>
-    <description>.</description>
+    <description>An advanced weapon developed from the success of the electric shock sword. Both ends of this staff carry high-voltage current generators; cutting power was sacrificed for a stronger current. Its high-voltage current easily penetrates flesh and machinery, providing more efficient crowd control.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_Cadus</texPath>
@@ -309,7 +309,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_Lightsaber</defName>
     <label>Lightsaber</label>
-    <description>.</description>
+    <description>A fusion core drives the plasma emitter in the hilt, and a specially designed magnetic field constrains it into a searing blade of light. Because plasma has no mass, there is almost no inertia when swinging, granting a dizzying attack speed—victims often see only a flash of a light arc.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_Lightsaber</texPath>
@@ -370,7 +370,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_Crowbar</defName>
     <label>Crowbar of Physics</label>
-    <description>.</description>
+    <description>It looks like an ordinary crowbar, but some say it can, to some extent, master the laws of physics.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_Crowbar</texPath>
@@ -431,7 +431,7 @@
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>GR_FFR</defName>
     <label>Force Field Ripper</label>
-    <description>.</description>
+    <description>An experimental manifestation of Cosmogenesis's grand unified theory and reality editing. It directly manipulates the four fundamental forces in an incomprehensible way, freely controlling any matter it touches. The emitter is shaped like a claw and, for reasons unknown, has no weight at all—as if it does not exist in this plane.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Melee/Melee_ForceFieldRipper</texPath>

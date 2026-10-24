@@ -5,7 +5,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyPDW</defName>
     <label>Gray Energy PDW</label>
-    <description>Flowglow.Its compact frame is almost entirely dedicated to the particle accelerator, enabling true instant-fire capability. However, its low stopping power makes it effective only against humans and smaller foes, rendering it unpopular among Grays who frequently encounter bizarre alien lifeforms.</description>
+    <description>Gray standard energy personal defense weapon, also known as Flowglow. Most of its compact frame is devoted to the particle accelerator, achieving truly instant-fire capability. However, its insufficient power limits it to humans and smaller enemies, so it is not very popular among the Gray, who frequently encounter bizarre alien lifeforms. It is generally issued to non-combat personnel.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_PDW</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -109,7 +109,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyShotgun</defName>
     <label>Gray Energy Shotgun</label>
-    <description>Lucifer.An energy compressor forces a high-yield charge into a single point, maximizing penetration and burst damage. However, due to a lack of containment, the projectile is highly unstable and dissipates shortly after leaving the barrel. This inherent limitation led to its design and deployment as a shotgun.</description>
+    <description>Gray standard energy shotgun, also known as Lucifer. An energy compressor compresses a high yield of energy into a single point, maximizing penetration and explosive power. However, lacking confinement, the projectile is extremely unstable and disperses after traveling only a short distance from the barrel, making its role similar to a traditional shotgun. In any case, you do not want to be within 90 degrees of the muzzle.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_SG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -212,7 +212,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyLauncher</defName>
     <label>Gray Energy Launcher</label>
-    <description>.</description>
+    <description>A plasma cutter commonly used by pioneers in the era before the Gray were born. After the Gray took over development and construction work, they converted the obsolete cutters into penetrating laser weapons capable of slicing targets in a straight line into a brilliant kaleidoscope of flowers. Even as a 'civilian' weapon, in the hands of a skilled operator it cuts through any target as easily as cutting a stone.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_Launcher</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -319,7 +319,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyBattleRifle</defName>
     <label>Gray Energy Rifle</label>
-    <description>Aetherglow.Utilizing a high-pressure energy cell coupled with a stabilizer, it delivers substantial firepower without compromising on weight or size. As a weapon that excels in range, accuracy, power, compactness, and weight, it is the preferred choice for the majority of Grays.</description>
+    <description>Gray standard energy battle rifle, also known as Aetherglow. Using an ultra-high-voltage energy cell paired with an energy stabilizer, it ensures projectile power without affecting the weapon's weight or size. As a weapon that balances range, accuracy, power, size, and weight, it is the first choice of most Gray. Even those without shooting experience can quickly learn to use it.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_AR</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -419,7 +419,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyHMG</defName>
     <label>Gray Energy MachineGun</label>
-    <description>Lumenward.Its massive size and staggering weight mean even a Gray can only wield it by hand. This bulk, however, allows it to house a particle accelerator, energy stabilizer, and rapid heat sink simultaneously. Powered by multiple large high-pressure energy cells at the rear, it unleashes a relentless, devastating hail of high-energy projectiles, turning any engagement zone into a bloody wilderness. Due to its bulk and overkill nature, Grays deploy it only for outpost defense, rarely carrying it on routine patrols—even in teams.</description>
+    <description>Gray standard energy heavy machine gun, also known as Lumenward. Known for its size and weight, it is as heavy as an iron block and too large for a human to operate by hand; apart from the Gray, it is only used as a mounted weapon. It carries a particle accelerator, energy stabilizer, and rapid cooling system, paired with multiple large high-voltage energy cells at the rear, allowing it to fire high-energy projectiles continuously at a despairing rate—turning everything in sight into a wilderness of flesh. However, due to its size, weight, and excessive power, the Gray only occasionally use it when defending outposts; its poor portability always excludes it from field operations.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_HMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -518,7 +518,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergySniperRifle</defName>
     <label>Gray Energy Sniper Rifle</label>
-    <description>Radiant.A high-energy particle focuser channels the raw power of a Diabolus main cannon into a single, devastating beam. The shot's brilliance remains visible even from dozens of kilometers away, and its armor-piercing capability is absolute. This is no assassin's tool—it is a weapon of pure, lethal, and efficient annihilation.</description>
+    <description>Gray standard energy sniper rifle, also known as Radiant. A high-energy particle focuser channels the surging power of a Diabolus main cannon into a single beam. The brilliant light emitted by the beam is visible even from tens of kilometers away, and its jet of high-energy particles can directly penetrate most forms of armor and shields. This is not an assassination weapon, but an outright destroyer—lethal and efficient.</description>
     <possessionCount>1</possessionCount>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_SR</texPath>
@@ -622,7 +622,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>GR_EnergyHL</defName>
     <label>Gray Energy Heavy Launcher</label>
-    <description>Supernova.This platform serves dual roles in anti-armor and anti-fortification warfare. The entire cannon is essentially a gigantic particle accelerator, retaining only the most basic stabilizer to prevent catastrophic failure. Each shot consumes an entire high-pressure energy cell, firing an unstable orb of energy that detonates upon impact with a terrifying blast, obliterating everything within its radius.</description>
+    <description>Gray standard heavy energy launcher, also known as Supernova. It can handle both anti-armor and anti-fortification missions. The entire cannon body is essentially a giant particle accelerator, retaining only the most basic energy stabilizer to prevent a chamber explosion. Each shot consumes an entire high-voltage energy cell, and the unstable energy mass it fires implodes upon impact, erasing everything within the area.</description>
     <graphicData>
       <texPath>Things/Item/Weapon/Energy/Energy_Heavy_Launcher</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -4,7 +4,7 @@
   <!--机械师软甲-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_MechanitorISA</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>The Laminar Warweave is the signature combat bodysuit of Gray mechanitors and their final insurance. Its main structure is made of active Gray Tide Zro, which actively coordinates the whole body and dynamically dissipates incoming impacts, effectively solving the problem of mechanitors being accidentally hit by stray fire on the battlefield. Since some cuts do not affect the suit's performance, high-cut bodysuit variants once appeared—and were unexpectedly popular.</description>
     <label>Gray mechanitor ISA</label>
     <techLevel>Spacer</techLevel>
     <thingCategories>
@@ -82,7 +82,7 @@
   <!--通用软甲-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_UniversalISA</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>Standard Gray general-purpose underarmor. A full-body bodysuit that effectively cushions incoming impacts. Despite its simple, unadorned look, its perfectly body-hugging design makes it extremely comfortable—so comfortable that some Gray wear it as everyday clothing, and its excellent design makes the crew uniform seem almost redundant.</description>
     <label>Gray Universal ISA</label>
     <techLevel>Spacer</techLevel>
     <thingCategories>
@@ -156,7 +156,7 @@
   <!--舰员制服A-->
   <ThingDef ParentName="ApparelMakeableBase" Name="Gray_Apparel_CrewUniform">
     <defName>Gray_Apparel_CrewUniformA</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>Standard Advance Team uniform, Type A, privately nicknamed Anonymous. Wearing it in the Advance Team will probably make you blend in. No one is likely to remember you, which is exactly why introverted Gray favor it.</description>
     <label>Gray Crew Uniform(Style A)</label>
     <techLevel>Spacer</techLevel>
     <thingCategories>
@@ -228,7 +228,7 @@
   <!--舰员制服B-->
   <ThingDef ParentName="Gray_Apparel_CrewUniform">
     <defName>Gray_Apparel_CrewUniformB</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>Standard Advance Team uniform, Type B, privately nicknamed Beloved. A saying circulates among the Gray: wear it, and you will constantly attract human attention.</description>
     <label>Gray Crew Uniform(Style B)</label>
     <graphicData>
       <texPath>Apparel/CrewUniform/Gray_CrewUniformB</texPath>
@@ -241,7 +241,7 @@
   <!--舰员制服C-->
   <ThingDef ParentName="Gray_Apparel_CrewUniform">
     <defName>Gray_Apparel_CrewUniformC</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>Standard Advance Team uniform, Type C, privately nicknamed Characteristic. It was not designed for efficiency, nor does it aim for subtlety. Gray who choose it may be confident that they have a unique path ahead.</description>
     <label>Gray Crew Uniform(Style C)</label>
     <graphicData>
       <texPath>Apparel/CrewUniform/Gray_CrewUniformC</texPath>
@@ -254,7 +254,7 @@
   <!--尼罗河纱衣-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_NileGauze</defName>
-    <description>.</description>
+    <description>A garment from the early days of human civilization that even the Gray find embarrassing.\nSmooth silk is cut into strips, like leaves setting off a flower, fully accentuating the body's graceful curves. The gold and gemstones used as decoration occasionally chime like bells when moving.</description>
     <label>Gray Nile Gauze Garment</label>
     <graphicData>
       <texPath>Apparel/NileGauze/Gray_NileGauze</texPath>
@@ -312,7 +312,7 @@
   <!--兔女郎-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_BunnyGirl</defName>
-    <description>.</description>
+    <description>A garment from the early days of human civilization that sets the blood racing.\nThe thin-glazed patent leather faithfully reflects the desires of others, turning both it and its wearer into a cute beast intoxicated by desire. They say if you press your ear to her chest, you can hear the faint hum of her core at work—care to try?</description>
     <label>Gray Bunny Girl</label>
     <graphicData>
       <texPath>Apparel/BunnyGirl/Gray_BunnyGirl</texPath>
@@ -337,7 +337,7 @@
   <!--逆兔女郎-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_BunnyGirl_Reverse</defName>
-    <description>.</description>
+    <description>A garment from the early days of human civilization that sets the blood racing even more.\nThe thin-glazed patent leather faithfully reflects the desires of others, turning both it and its wearer into a cute beast intoxicated by desire. Compared with the original design, it is more unkempt and direct, as if saying it is perfectly fine to reach out and touch.</description>
     <label>Gray Bunny Girl Reverse</label>
     <graphicData>
       <texPath>Apparel/BunnyGirl/Gray_ReverseBunnyGirl</texPath>
@@ -364,7 +364,7 @@
   <!--逆兔女郎变体-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_BunnyGirl_Reverse_Alter</defName>
-    <description>.</description>
+    <description>A garment from the early days of human civilization that sets the blood racing even more.\nThe thin-glazed patent leather faithfully reflects the desires of others, turning both it and its wearer into a cute beast intoxicated by desire. Compared with the original design, it is more unkempt and direct, as if saying it is perfectly fine to reach out and touch. This variant uses a slightly different cut.</description>
     <label>Gray Bunny Girl Reverse(Alter)</label>
     <graphicData>
       <texPath>Apparel/BunnyGirl/Gray_ReverseBunnyGirlAlter</texPath>
@@ -391,7 +391,7 @@
   <!--连体泳衣-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_Swimsuit</defName>
-    <description>.</description>
+    <description>A boldly designed one-piece swimsuit.\nAlien suns are often more than merely bright. Besides vacations, when settling or exploring exceptionally hot environments, they wear this to ensure heat dissipation.\n...Really, is that all?</description>
     <label>Gray Swimsuit</label>
     <graphicData>
       <texPath>Apparel/Swimsuit/Gray_Swimsuit</texPath>
@@ -423,7 +423,7 @@
   <!--分体泳衣-->
   <ThingDef ParentName="GR_ApparelDecorative">
     <defName>Gray_Apparel_Bikini</defName>
-    <description>.</description>
+    <description>A boldly designed bikini-style swimsuit.\nAlien suns are often more than merely bright. Besides vacations, when settling or exploring exceptionally hot environments, they wear this to ensure heat dissipation.\n...Really, is that all?</description>
     <label>Gray Bikini</label>
     <graphicData>
       <texPath>Apparel/Swimsuit/Gray_Bikini</texPath>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: I butchered humanlike -->
+  <GR_ButcheredHumanlikeCorpse.stages.I_butchered_humanlike.label>屠宰了人类</GR_ButcheredHumanlikeCorpse.stages.I_butchered_humanlike.label>
+  <!-- EN: This isn't right... Why... That feeling... No matter how I wash, it won't come off... -->
+  <GR_ButcheredHumanlikeCorpse.stages.I_butchered_humanlike.description>不该这样的、为什么、那个触感、怎么洗都洗不掉……</GR_ButcheredHumanlikeCorpse.stages.I_butchered_humanlike.description>
+
+  <!-- EN: we butchered humanlike -->
+  <GR_KnowButcheredHumanlikeCorpse.stages.we_butchered_humanlike.label>有人被屠宰</GR_KnowButcheredHumanlikeCorpse.stages.we_butchered_humanlike.label>
+  <!-- EN: Why treat them like this? This is... too barbaric... -->
+  <GR_KnowButcheredHumanlikeCorpse.stages.we_butchered_humanlike.description>为什么要这样对待他们？这也……太野蛮了……</GR_KnowButcheredHumanlikeCorpse.stages.we_butchered_humanlike.description>
+
+  <!-- EN: justified execution of colonist -->
+  <GR_KnowColonistExecuted.stages.justified_execution_of_colonist.label>合理的死刑（殖民者）</GR_KnowColonistExecuted.stages.justified_execution_of_colonist.label>
+  <!-- EN: A guilty colonist was executed. It was justified, but still sad. -->
+  <GR_KnowColonistExecuted.stages.justified_execution_of_colonist.description>某位有罪的殖民者被处决了。虽然合理，但仍然令人悲伤。</GR_KnowColonistExecuted.stages.justified_execution_of_colonist.description>
+  <!-- EN: colonist euthanized -->
+  <GR_KnowColonistExecuted.stages.colonist_euthanized.label>殖民者被安乐死</GR_KnowColonistExecuted.stages.colonist_euthanized.label>
+  <!-- EN: A colonist was euthanized. It was humane, but still sad. -->
+  <GR_KnowColonistExecuted.stages.colonist_euthanized.description>某位殖民者被安乐死了。虽然还算人性，但仍然令人悲伤。</GR_KnowColonistExecuted.stages.colonist_euthanized.description>
+  <!-- EN: colonist executed -->
+  <GR_KnowColonistExecuted.stages.colonist_executed.label>殖民者被处决</GR_KnowColonistExecuted.stages.colonist_executed.label>
+  <!-- EN: One of our own... Our own people are treated like this too? For no reason... killed? -->
+  <GR_KnowColonistExecuted.stages.colonist_executed.description>自己人、自己人也要被这样对待吗？无缘无故的……杀死他们？</GR_KnowColonistExecuted.stages.colonist_executed.description>
+  <!-- EN: colonist organ-harvested -->
+  <GR_KnowColonistExecuted.stages.colonist_organharvested.label>殖民者因器官摘取而死</GR_KnowColonistExecuted.stages.colonist_organharvested.label>
+  <!-- EN: (An agonized electronic screech) -->
+  <GR_KnowColonistExecuted.stages.colonist_organharvested.description>（极度痛苦的电子哀鸣）</GR_KnowColonistExecuted.stages.colonist_organharvested.description>
+  <!-- EN: colonist ripscanned -->
+  <GR_KnowColonistExecuted.stages.colonist_ripscanned.label>殖民者因裂解扫描而死</GR_KnowColonistExecuted.stages.colonist_ripscanned.label>
+  <!-- EN: We exist now... and they still need to do this? -->
+  <GR_KnowColonistExecuted.stages.colonist_ripscanned.description>明明有我们了……还需要这样做吗？</GR_KnowColonistExecuted.stages.colonist_ripscanned.description>
+
+  <!-- EN: colonist's organ harvested -->
+  <GR_KnowColonistOrganHarvested.stages.colonists_organ_harvested.label>殖民者器官被摘取</GR_KnowColonistOrganHarvested.stages.colonists_organ_harvested.label>
+  <!-- EN: A human... having this done to them... But they can't survive it... -->
+  <GR_KnowColonistOrganHarvested.stages.colonists_organ_harvested.description>人类、被做这种事情……可是活不下去的啊……</GR_KnowColonistOrganHarvested.stages.colonists_organ_harvested.description>
+
+  <!-- EN: justified execution -->
+  <GR_KnowGuestExecuted.stages.justified_execution.label>合理的死刑</GR_KnowGuestExecuted.stages.justified_execution.label>
+  <!-- EN: A guilty prisoner or guest was executed. It was justified, but still sad. -->
+  <GR_KnowGuestExecuted.stages.justified_execution.description>某个有罪的囚犯或是宾客被处决了。虽然合理，但仍然令人悲伤。</GR_KnowGuestExecuted.stages.justified_execution.description>
+  <!-- EN: someone was euthanized -->
+  <GR_KnowGuestExecuted.stages.someone_was_euthanized.label>有人被安乐死</GR_KnowGuestExecuted.stages.someone_was_euthanized.label>
+  <!-- EN: A prisoner or guest was euthanized. It was humane, but still sad. -->
+  <GR_KnowGuestExecuted.stages.someone_was_euthanized.description>某个囚犯或是宾客被安乐死了。虽然还算人性，但仍然令人悲伤。</GR_KnowGuestExecuted.stages.someone_was_euthanized.description>
+  <!-- EN: someone was executed -->
+  <GR_KnowGuestExecuted.stages.someone_was_executed.label>有人被处决</GR_KnowGuestExecuted.stages.someone_was_executed.label>
+  <!-- EN: ...What a wretched, miserable sight... If only they had sat down to negotiate, or just surrendered... -->
+  <GR_KnowGuestExecuted.stages.someone_was_executed.description>……真是狼狈至极的惨状……明明只要坐下来谈判、投降就好了……</GR_KnowGuestExecuted.stages.someone_was_executed.description>
+  <!-- EN: someone was organ-murdered -->
+  <GR_KnowGuestExecuted.stages.someone_was_organmurdered.label>有人因器官摘取而死</GR_KnowGuestExecuted.stages.someone_was_organmurdered.label>
+  <!-- EN: Hollow corpses. Hollow eyes... -->
+  <GR_KnowGuestExecuted.stages.someone_was_organmurdered.description>空洞的尸体、空洞的眼神……</GR_KnowGuestExecuted.stages.someone_was_organmurdered.description>
+  <!-- EN: someone was ripscanned -->
+  <GR_KnowGuestExecuted.stages.someone_was_ripscanned.label>有人因裂解扫描而死</GR_KnowGuestExecuted.stages.someone_was_ripscanned.label>
+  <!-- EN: I hope this data... can help us... -->
+  <GR_KnowGuestExecuted.stages.someone_was_ripscanned.description>希望这些数据……能帮到我们……</GR_KnowGuestExecuted.stages.someone_was_ripscanned.description>
+
+  <!-- EN: someone's organ harvested -->
+  <GR_KnowGuestOrganHarvested.stages.someones_organ_harvested.label>有人器官被摘取</GR_KnowGuestOrganHarvested.stages.someones_organ_harvested.label>
+  <!-- EN: Is this being done to save our people? Is there really no other way... -->
+  <GR_KnowGuestOrganHarvested.stages.someones_organ_harvested.description>这样做，是为了救我们的人吗？真的没有别的办法了吗……</GR_KnowGuestOrganHarvested.stages.someones_organ_harvested.description>
+
+</LanguageData>

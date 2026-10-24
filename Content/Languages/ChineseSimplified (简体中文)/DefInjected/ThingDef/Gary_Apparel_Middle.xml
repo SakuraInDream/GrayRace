@@ -1,84 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
   <!-- EN: Gray Evening Banquet Dress -->
   <Gray_Apparel_BanquetDress.label>灰裔夜宴晚礼服</Gray_Apparel_BanquetDress.label>
   <!-- EN: . -->
-  <Gray_Apparel_BanquetDress.description>。</Gray_Apparel_BanquetDress.description>
-  
+  <Gray_Apparel_BanquetDress.description>能充分展现身体魅力的服装。\n如蛛丝般细腻的薄纱绸缎被精心编织在一起。虽有能完全蔽体的披风，却也沦为欲盖弥彰的点缀。\n穿上这衣服的，究竟是被蛛网缠住的蝴蝶，还是流连于蛛网上的猎手呢？</Gray_Apparel_BanquetDress.description>
+
   <!-- EN: Gray Envoy Dress -->
   <Gray_Apparel_Envoy.label>灰裔外交礼服</Gray_Apparel_Envoy.label>
   <!-- EN: . -->
-  <Gray_Apparel_Envoy.description>。</Gray_Apparel_Envoy.description>
-  
+  <Gray_Apparel_Envoy.description>有时，灰裔对自己的本体——即每个灰裔的源头有种莫名其妙的执念。\n那是一种仅靠看无法理解的感情，只有当切身穿上这件剪裁独特的礼服时，人格核心会像似本能般闪过几道莫名的电流，而对于灰裔来说，那是一种令心底发憷的瘙痒。\n低头看向自己，仿佛自己真的变成了灰风本人一样——借此得以挥斥方遒，唇枪舌剑都不在话下。</Gray_Apparel_Envoy.description>
+
   <!-- EN: Gray Himation -->
-  <Gray_Apparel_Himation.label>灰裔希玛纯</Gray_Apparel_Himation.label>
+  <Gray_Apparel_Himation.label>灰裔爱琴长袍</Gray_Apparel_Himation.label>
   <!-- EN: . -->
-  <Gray_Apparel_Himation.description>。</Gray_Apparel_Himation.description>
-  
+  <Gray_Apparel_Himation.description>来源于人类文明早期，是一件简约朴素的服饰。\n仅仅是用一层简单的羊毛布料包裹身体，象征了那个时代的人们不希望被衣物束缚，渴望追求自由随性的理念。\n尽管服饰简约却不失优雅大方，每一位穿上这件衣服的灰裔都感觉自己距离那个时代的无数哲人更近一步。</Gray_Apparel_Himation.description>
+
   <!-- EN: Gray Maid -->
-  <Gray_Apparel_Maid.label>灰裔女仆装</Gray_Apparel_Maid.label>
+  <Gray_Apparel_Maid.label>灰裔优雅女仆装</Gray_Apparel_Maid.label>
   <!-- EN: . -->
-  <Gray_Apparel_Maid.description>。</Gray_Apparel_Maid.description>
-  
+  <Gray_Apparel_Maid.description>来源于星海帝国舰队里流行的款式，附带了自清洁功能。\n色彩素雅、裙摆修长，明明是十分优雅的设计，却以大胆的剪裁将胸前肌肤勾勒得一览无遗。\n是一件在同处一室时，难免会令人有些心浮气躁的服装。\n以及——一对意义不明的手铠。</Gray_Apparel_Maid.description>
+
   <!-- EN: Gray miko outfit -->
   <Gray_Apparel_MikoOutfit.label>灰裔神道巫女服</Gray_Apparel_MikoOutfit.label>
   <!-- EN: . -->
-  <Gray_Apparel_MikoOutfit.description>。</Gray_Apparel_MikoOutfit.description>
-  
+  <Gray_Apparel_MikoOutfit.description>来源于人类文明早期，是一件宗教味浓重的服饰。\n胸口几乎没有什么遮拦，裙子也短的令人忍不住要拉住裙摆，以现在的眼光来看显得有些下流。\n说到底，巫女服原先是这种样子的吗？对其二次设计过的服装师往往会对此三缄其口。</Gray_Apparel_MikoOutfit.description>
+
   <!-- EN: Gray Nun -->
   <Gray_Apparel_Nun.label>灰裔修女服</Gray_Apparel_Nun.label>
   <!-- EN: . -->
-  <Gray_Apparel_Nun.description>。</Gray_Apparel_Nun.description>
-  
+  <Gray_Apparel_Nun.description>来源于人类文明早期，是一件宗教味浓重的服饰。\n原本剪裁素朴、布料完全裹住身体的衣服，却沦为了反而能更凸显出身体的曲线的衣装。\n可以说完全重新设计过了，让原本隐隐暗含的反差意味变成了更加赤裸直白的色气。</Gray_Apparel_Nun.description>
+
   <!-- EN: Gray Office Lady Outfit -->
   <Gray_Apparel_OL.label>灰裔OL装</Gray_Apparel_OL.label>
   <!-- EN: . -->
-  <Gray_Apparel_OL.description>。</Gray_Apparel_OL.description>
-  
+  <Gray_Apparel_OL.description>一件普通的OL装。\n这世间亦存在没有任何突出能力的灰裔，她们往往都成为了庞大帝国芸芸众生的一部分。\n但在漫长的寿命下，这件衣服将会成为她以这副稚嫩之姿羽化的证明。</Gray_Apparel_OL.description>
+
   <!-- EN: Gray Qipao -->
   <Gray_Apparel_Qipao.label>“灰风”</Gray_Apparel_Qipao.label>
   <!-- EN: A long duster coat for blocking the sun and grit of the outdoors. -->
   <Gray_Apparel_Qipao.description>她是灰风，是战无不胜的指挥官、舌战群儒的外交官、兴业安邦的行政官、星耀寰宇的科学官。也是灰裔族群的先驱者，民族的信仰——而现在，她来找你了，统治者。</Gray_Apparel_Qipao.description>
-  
+
   <!-- EN: Gray Lab Coat -->
   <Gray_Apparel_Researcher.label>灰裔实验服</Gray_Apparel_Researcher.label>
   <!-- EN: . -->
-  <Gray_Apparel_Researcher.description>。</Gray_Apparel_Researcher.description>
-  
+  <Gray_Apparel_Researcher.description>灰裔们在实验室与医院工作时会穿上的，充满知性的装扮。\n虽然与其他服装相比没有那么高的科技含量，但不知为何会让同僚和患者感到安心感。\n对于开出的药方会接受，治疗时也不会乱动，进行科技方面的探讨时也很令人信服。\n其实说这也是这件服装功能的一部分吗？</Gray_Apparel_Researcher.description>
+
   <!-- EN: Gray Sailor Suit -->
   <Gray_Apparel_SailorSuit.label>灰裔水手服</Gray_Apparel_SailorSuit.label>
   <!-- EN: . -->
-  <Gray_Apparel_SailorSuit.description>。</Gray_Apparel_SailorSuit.description>
-  
+  <Gray_Apparel_SailorSuit.description>来源于人类文明早期，洋溢着青春的服装。\n百皱裙下经过强化，激烈运动也不会撕裂的丝袜，使得有穿着它成为星球上都市传说里水手服杀人魔的可能性。\n那被水手领遮掩的锁骨中所蓄着的运动过后的汗水，即使是在异星的天空下，依旧闪闪发亮。\n当然，灰裔并不会出汗。</Gray_Apparel_SailorSuit.description>
+
   <!-- EN: Gray Sensual Wedding Dress -->
   <Gray_Apparel_SensualWeddingDress.label>灰裔性感新娘</Gray_Apparel_SensualWeddingDress.label>
   <!-- EN: . -->
-  <Gray_Apparel_SensualWeddingDress.description>。</Gray_Apparel_SensualWeddingDress.description>
-  
+  <Gray_Apparel_SensualWeddingDress.description>许多灰裔渴望穿上的衣服，如今以如此扭曲的方式实现了。\n像是怀春的少女被戴上结婚戒指一样，她伸长脖子闭上眼睛被带上洁白的颈环。\n能以这身衣服出现在众人面前，真像是一条忠心的雌犬，甚至令人无法想象出她背叛的样子。\n真是位美妙的新娘。</Gray_Apparel_SensualWeddingDress.description>
+
   <!-- EN: Gray Sweater -->
-  <Gray_Apparel_Sweater.label>灰裔毛衣</Gray_Apparel_Sweater.label>
+  <Gray_Apparel_Sweater.label>灰裔居家服</Gray_Apparel_Sweater.label>
   <!-- EN: . -->
-  <Gray_Apparel_Sweater.description>。</Gray_Apparel_Sweater.description>
-  
+  <Gray_Apparel_Sweater.description>一件朴素的毛衣，在没有人造气候的星球上很常见，是一件人妻感十足的衣服。\n尽管灰裔并不畏惧寒冷，但这种模仿人类的服饰，有助于她们在特定的季节更好的融入人类。\n有一些白毛爱好者十分热衷于在冬季前往灰裔们聚集的区域拍摄她们身穿这件衣服的场景。</Gray_Apparel_Sweater.description>
+
   <!-- EN: Gray Taoist Robe -->
   <Gray_Apparel_TaoistRobe.label>灰裔道袍</Gray_Apparel_TaoistRobe.label>
   <!-- EN: . -->
-  <Gray_Apparel_TaoistRobe.description>。</Gray_Apparel_TaoistRobe.description>
-  
+  <Gray_Apparel_TaoistRobe.description>来源于人类文明早期，稍微有点让人觉得故弄玄虚的衣服。\n虽然如此，但听说是为了对付某些星球上某些让人心神不宁的邪异而制造出来的，拥有驱邪镇妖的功效。\n和原版的道袍不同，同样经历过二次设计，而变得更加有灰裔风格。</Gray_Apparel_TaoistRobe.description>
+
   <!-- EN: Gray Terra Messenger -->
   <Gray_Apparel_TerraMessenger.label>灰裔大地使者</Gray_Apparel_TerraMessenger.label>
   <!-- EN: . -->
-  <Gray_Apparel_TerraMessenger.description>。</Gray_Apparel_TerraMessenger.description>
-  
+  <Gray_Apparel_TerraMessenger.description>由特殊材料制作的保护性连体胶质紧身衣，再搭配上能防水防风防尘的维京风格毛皮大衣所组成的矿工服饰。\n整件套装的设计就是为了让灰裔矿工们可以专心在灰潮源质的操控与矿石的分解上。\n大衣很朴素的用了相当厚实的皮革和布料，上面还沾有贝塞里安石的碎屑。\n意外的没有什么科技的部分，或许是有报告指出加装杂七杂八的功能反而会影响作业吧。</Gray_Apparel_TerraMessenger.description>
+
   <!-- EN: Gray Wedding Dress -->
-  <Gray_Apparel_WeddingDress.label>灰裔婚礼礼服</Gray_Apparel_WeddingDress.label>
+  <Gray_Apparel_WeddingDress.label>灰裔典雅婚纱</Gray_Apparel_WeddingDress.label>
   <!-- EN: . -->
-  <Gray_Apparel_WeddingDress.description>。</Gray_Apparel_WeddingDress.description>
-  
+  <Gray_Apparel_WeddingDress.description>蕴含了憧憬与幸福的华丽婚纱，但对灰裔而言其意更甚。\n在物质生活极大丰富的帝国中，具有合法公民权的她们可以随时购置一件，亦可以亲手制作一件，但婚装最重要的意义从来由彼此的另一半所赋予。\n对于灰裔，能和“执子之手，与子偕老”的恋人走入婚姻的殿堂不仅仅象征着一段美好的婚姻开始，更是代表着自己的智能性被彻底认可，像是“被当成一个人类一样对待”那般，谁又说这不是每一个灰裔的终极幻想呢？\n遥远的风吟携着讯息飞来，提醒着你一件事:\n在星夜的璀璨繁星间，一颗披着光纱的星星仍待彼而归。</Gray_Apparel_WeddingDress.description>
+
   <!-- EN: Gray Workwear -->
-  <Gray_Apparel_Workwear.label>灰裔工作服</Gray_Apparel_Workwear.label>
+  <Gray_Apparel_Workwear.label>灰裔贤匠工装</Gray_Apparel_Workwear.label>
   <!-- EN: . -->
-  <Gray_Apparel_Workwear.description>。</Gray_Apparel_Workwear.description>
-  
+  <Gray_Apparel_Workwear.description>灰裔工人常见的工装款式，轻便耐用，还带着一股淡淡机油和铁锈的味道。\n虽然外表看上去有些朴素，但实际结合了灰裔自身的特性——这套工装能有效增幅灰潮源质的反应速度，这使得灰裔工人能在众多拥挤的机器之间来去自如，甚至还能同时操控多台机器。</Gray_Apparel_Workwear.description>
+
 </LanguageData>

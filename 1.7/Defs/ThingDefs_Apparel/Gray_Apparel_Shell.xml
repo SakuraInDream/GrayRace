@@ -4,7 +4,7 @@
   <!--机械师装甲-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_MechanitorArmor</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>The Formation Skeleton is a combat exoskeleton used by Gray mechanitors for frontline command and defense. Its special shield array analyzes force distribution in real time and concentrates protection precisely at the point of impact: when a bullet comes in, the energy barrier converges at a single point to cancel penetration; when an explosion hits, the barrier instantly spreads across the whole body to disperse the blast energy.\nThe array is designed to focus on a single attack and can reconstruct itself within seconds. For Gray mechanitors operating from the rear, this short-cycle recharge defense is more effective against stray fire and off-target artillery than ordinary shields.</description>
     <label>Gray Mechanitor Armor</label>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
@@ -100,7 +100,7 @@
   <!--射手装甲-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_MarksmanArmor</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>Special lightweight mobile protection for units that require high mobility. It ensures high-performance maneuverability while a special shield design preserves defensive capability.\nProtection relies mainly on small hover units and shield generators distributed across the body. Both recharge quickly, allowing the marksman to stay 'parallel' to deadly lines of fire—but remember: one wrong judgment is enough to ensure you never intersect with safety again.</description>
     <label>Gray Marksman Armor</label>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
@@ -200,7 +200,7 @@
   <!--战士装甲-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_MeleeArmor</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>Equipment forged for the Gray by human artisans of the Star Sea Empire, intended to fill in the part the Gray lack.\nA heavy full-body suit of armor made exclusively for the Gray. It carries numerous thrusters to counter its own weight and layers multiple micro-shield arrays. Engraved on it is a prayer: 'Our only sorrow is to live in shame, rather than die gloriously.'</description>
     <label>Gray Warrior Armor</label>
     <techLevel>Ultra</techLevel>
     <possessionCount>1</possessionCount>
@@ -299,7 +299,7 @@
   <!--轻型装甲-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_LightArmor</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>Light standard armor designed for reconnaissance and support missions. At the cost of protection, its weight and bulk are greatly reduced so as not to hinder the wearer's movement. The saved volume can house more power systems, compensating for inferior craftsmanship with sheer quantity.</description>
     <label>Gray Light Armor</label>
     <techLevel>Spacer</techLevel>
     <possessionCount>1</possessionCount>
@@ -379,7 +379,7 @@
   <!--重型装甲-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_HeavyArmor</defName>
-    <description>A long duster coat for blocking the sun and grit of the outdoors.</description>
+    <description>Standard Gray heavy armor, built for heavy infantry who charge into the fray. By layering multiple composite armor plates, this suit trades mobility for superb defensive performance. Even in a storm of bullets and shells, it lets the wearer stand firm and unshaken.</description>
     <label>Gray Heavy Armor</label>
     <techLevel>Spacer</techLevel>
     <possessionCount>1</possessionCount>
@@ -459,7 +459,7 @@
   <!--防尘大衣-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_Duster</defName>
-    <description>.</description>
+    <description>A loose coat; dust protection is only its most ordinary function.\nSince dust affects sensor efficiency, the Gray designed this garment to keep the body clean.\nOf course, on top of that, the coat has many pockets that can hold plenty of small tools or other potentially useful items.\nComes with a bottle of WD4000.</description>
     <label>Gray Duster</label>
     <graphicData>
       <texPath>Apparel/Duster/Gray_Duster</texPath>
@@ -531,7 +531,7 @@
   <!--雨衣-->
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>Gray_Apparel_Raincoat</defName>
-    <description>.</description>
+    <description>A uniquely shaped raincoat designed specifically for the Gray.\nThe Gray dislike the feeling of water on their bodies, as it severely affects the reaction speed of Gray Tide Zro, so a properly designed raincoat is necessary.\nThe special material design ensures that every Gray wearing this coat on a brightly lit city street becomes a striking focal point.</description>
     <label>Gray Raincoat</label>
     <graphicData>
       <texPath>Apparel/Raincoat/Gray_Raincoat</texPath>

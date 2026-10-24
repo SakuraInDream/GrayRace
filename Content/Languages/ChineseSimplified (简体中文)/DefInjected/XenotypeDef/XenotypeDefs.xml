@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Protocol:Gray -->
+  <GR_Xeno_Gray.label>协议：灰裔</GR_Xeno_Gray.label>
+  <!-- EN: The inherent protocol of the Gray, containing data for all work types in which the Gray specialize. -->
+  <GR_Xeno_Gray.description>灰裔的固有协议,包含了灰裔所擅长的所有工作类型的数据。</GR_Xeno_Gray.description>
+  <!-- EN: The inherent protocol of the Gray. -->
+  <GR_Xeno_Gray.descriptionShort>灰裔的固有协议。</GR_Xeno_Gray.descriptionShort>
+
+</LanguageData>

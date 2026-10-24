@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
   
-  <!-- EN: 神域御侍 -->
+  <!-- EN: Sanctum Attendant -->
   <GR_Mech_TT.label>神域御侍</GR_Mech_TT.label>
-  <!-- EN: 神域御侍是一类擅长超远距离作战的超重型机械体，拥有极其厚重的装甲与坚不可摧的护盾，也因此牺牲了大量航速。火力方面则换来了无可比拟的提升，T级主炮拥有极大的威力与极远的射程，更多更大的副炮也使其能够有效保护自己免受近距离的威胁。还可以搭载战术光环以增强友方或压制敌方。 -->
+  <!-- EN: The Sanctum Attendant is a super-heavy mechanoid specialized in extreme-range combat. It possesses extremely thick armor and an indestructible shield, at the cost of a large amount of speed. In return, its firepower has improved incomparably: its T-class main gun has enormous power and extreme range, and more and larger secondary guns let it effectively protect itself from close threats. It can also mount tactical auras to strengthen allies or suppress enemies. -->
   <GR_Mech_TT.description>神域御侍是一类擅长超远距离作战的超重型机械体，拥有极其厚重的装甲与坚不可摧的护盾，也因此牺牲了大量航速。火力方面则换来了无可比拟的提升，T级主炮拥有极大的威力与极远的射程，更多更大的副炮也使其能够有效保护自己免受近距离的威胁。还可以搭载战术光环以增强友方或压制敌方。</GR_Mech_TT.description>
   <!-- EN: head -->
   <GR_Mech_TT.tools.head.label>头部</GR_Mech_TT.tools.head.label>

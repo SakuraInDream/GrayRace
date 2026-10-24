@@ -38,4 +38,15 @@
     <spawnThingOnRemoved>AIPersonaCore</spawnThingOnRemoved>
   </BodyPartDef>
 
+  <BodyPartDef>
+    <defName>Nano_Tongue</defName>
+    <label>tongue</label>
+    <skinCovered>false</skinCovered>
+    <bleedRate>0</bleedRate>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>Tongue</li>
+    </tags>
+  </BodyPartDef>
+
 </Defs>

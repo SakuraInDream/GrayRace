@@ -6,7 +6,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>GR_NaniteReconfigurator</defName>
     <label>Nanite Reconfigurator</label>
-    <description>A nanite workbench that breaks down metallic materials into raw nanites. Only mass matters; market value and hit point multipliers are ignored. Manual bills remain available.</description>
+    <description>A general-purpose workbench for manufacturing Gray items. It retains most of the engineering machinery of a traditional workbench to ensure that races other than the Gray can still use it normally, while an added small nanite swarm provides assistance and greatly improves work efficiency. It also allows metallic materials to be broken down into Gray Tide Zro.</description>
     <thingClass>SD.GrayRace.ThingClasses.Building_NaniteReconfigurator</thingClass>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
@@ -189,7 +189,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>GR_FusionReactor</defName>
     <label>Heavy Element Fusion Reactor</label>
-    <description>Produces power by consuming chemfuel. Must be periodically refueled by hand.</description>
+    <description>A tokamak-type fusion reactor that overcomes the difficulty of synthesizing heavy elements. Using silicon as fuel, it effectively solves the problem of scarce and insufficient raw materials, and while generating power it can also fuse steel to supply construction needs.</description>
     <thingClass>Building</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
@@ -288,7 +288,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>GR_Incubator</defName>
     <label>Incubator</label>
-    <description>A vat of fluid which can gestate an embryo or accelerate a child's growth.\n\nWhile growing or gestating, the vat must be fed with a constant supply of nutrition to provide the feedstock for growth. Gestating an embryo takes twice the nutrition of accelerating a child's growth.\n\nEmbryos are gestated for 9 days before a baby is formed. There is a risk of health complications.\n\nChild growth can only be accelerated up to age 18, but not beyond. While growing, a child's skills will slowly increase. Children raised in growth vats will have lower skills and gain fewer passions than normal.\n\nThe device uses chemical injections, electrical stimulation, and simple mechanite treatments to push the body to grow. Growth vats are often used to quickly manufacture engineered workers or warriors.</description>
+    <description>An incubation device used to create newborn Gray. After inserting a Gray Tide core and a persona core, fill it with a large amount of Gray Tide Zro, and over time a complete Gray infant will be cultivated.</description>
     <thingClass>SD.GrayRace.ThingClasses.Building_GRIncubator</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>
     <tickerType>Normal</tickerType>

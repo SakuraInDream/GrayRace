@@ -349,7 +349,7 @@
 <!-- 电弧发射器 -->
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_ArcEmittersBase" Abstract="True">
     <label>Arc Emitter</label>
-    <description>Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched.</description>
+    <description>Fires an arc of chaotic energy at the target—a powerful weapon that ignores armor and shields.</description>
     <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
     <slotFamily>ArcEmitters</slotFamily>
     <researchPrerequisites>
@@ -414,7 +414,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_AncientTitanLance</defName>
     <label>Ancient Ruination Glare</label>
-    <description>A massive array of series-linked energy amplification conduits capable of firing a beam of unprecedented power. Its size means only Titan-class starships can mount it.</description>
+    <description>High-intensity, medium-range firepower will let our titans break enemy lines far more easily. These ancient cannons were once the foundation on which a stellar empire was built.</description>
     <iconPath>Icon/ShipParts/ship_part_perdition_beam</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Titanic</li>
