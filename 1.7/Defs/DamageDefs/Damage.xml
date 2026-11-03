@@ -28,7 +28,9 @@
     <plantDamageFactor>15</plantDamageFactor>
     <explosionHeatEnergyPerCell>20</explosionHeatEnergyPerCell>
     <explosionCellFleck>Fleck_Vaporize</explosionCellFleck>
-    <soundExplosion>Explosion_Vaporize</soundExplosion>
+    <explosionColorCenter>(1, 1, 1)</explosionColorCenter>
+    <explosionColorEdge>(0.35, 0.9, 0.4)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
     <combatLogRules>Damage_Flame</combatLogRules>
   </DamageDef>
 
@@ -50,6 +52,11 @@
     <makesAnimalsFlee>true</makesAnimalsFlee>
     <buildingDamageFactor>0</buildingDamageFactor>
     <plantDamageFactor>0</plantDamageFactor>
+    <explosionCellFleck>BlastEMP</explosionCellFleck>
+    <explosionColorCenter>(1, 1, 1)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.35, 1)</explosionColorEdge>
+    <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+    <soundExplosion>Explosion_EMP</soundExplosion>
     <combatLogRules>Damage_Flame</combatLogRules>
   </DamageDef>
 
@@ -64,6 +71,7 @@
         <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
       </li>
     </additionalHediffs>
+    <scratchSplitPercentage>1</scratchSplitPercentage>
     <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
     <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
     <externalViolence>false</externalViolence>
@@ -88,11 +96,46 @@
     <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
   </DamageDef>
 
+  <!--纳米爆炸-->
+  <DamageDef>
+    <defName>GR_NanoExplosion</defName>
+    <label>nano explosion</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>false</externalViolence>
+    <additionalHediffs>
+      <li>
+        <hediff>GR_Nanite_Corrosion</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has been decomposed.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>50</defaultDamage>
+    <defaultStoppingPower>3</defaultStoppingPower>
+    <buildingDamageFactorPassable>15</buildingDamageFactorPassable>
+    <buildingDamageFactorImpassable>30</buildingDamageFactorImpassable>
+    <plantDamageFactor>15</plantDamageFactor>
+    <corpseDamageFactor>15</corpseDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(1, 1, 1)</explosionColorCenter>
+    <explosionColorEdge>(0.62, 0.62, 0.62)</explosionColorEdge>
+    <soundExplosion>Explosion_Thump</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+
   <!--激光-->
   <DamageDef ParentName="Beam">
     <defName>GR_Laser</defName>
     <label>Laser</label>
-    <isExplosive>true</isExplosive>
     <defaultDamage>25</defaultDamage>
     <defaultArmorPenetration>1</defaultArmorPenetration>
     <workerClass>DamageWorker_AddInjury</workerClass>

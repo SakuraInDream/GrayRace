@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: sky-high expectations -->
   <GR_Expectations.stages.skyhigh_expectations.label>极高的期望</GR_Expectations.stages.skyhigh_expectations.label>
   <!-- EN: Such a perfect colony! This is the masterpiece we built with our own hands! -->
@@ -41,5 +41,5 @@
   <GR_Expectations.stages.supreme_expectations.label>最高的期望</GR_Expectations.stages.supreme_expectations.label>
   <!-- EN: They trust me... entrusted everything to me. I will not let them down. -->
   <GR_Expectations.stages.supreme_expectations.description>他们信任我……把一切交给了我。我一定不会辜负这份信任。</GR_Expectations.stages.supreme_expectations.description>
-
+  
 </LanguageData>

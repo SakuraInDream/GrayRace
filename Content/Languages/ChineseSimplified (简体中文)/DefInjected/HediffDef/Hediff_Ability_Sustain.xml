@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: nanite bubble shield -->
+  <GR_Hediff_NanoBubbleShield.label>纳米护盾力场（待优化）</GR_Hediff_NanoBubbleShield.label>
+  <!-- EN: . -->
+  <GR_Hediff_NanoBubbleShield.description>由纳米机械构成的球形力场，持续消耗备用灰潮源质以维持。</GR_Hediff_NanoBubbleShield.description>
+
+  <!-- EN: nanite cloak -->
+  <GR_Hediff_NanoCloak.label>纳米光学迷彩（待优化）</GR_Hediff_NanoCloak.label>
+  <!-- EN: . -->
+  <GR_Hediff_NanoCloak.description>由纳米机械构成的光线偏折外壳，持续消耗备用灰潮源质以维持。</GR_Hediff_NanoCloak.description>
+
+</LanguageData>

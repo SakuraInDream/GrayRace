@@ -12,10 +12,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -26,7 +26,7 @@
         <warmupTime>0.21</warmupTime>
         <defaultCooldownTime>0.64</defaultCooldownTime>
         <range>14.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -59,10 +59,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -73,7 +73,7 @@
         <warmupTime>0.32</warmupTime>
         <defaultCooldownTime>0.98</defaultCooldownTime>
         <range>16.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -106,10 +106,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -120,7 +120,7 @@
         <warmupTime>0.43</warmupTime>
         <defaultCooldownTime>1.27</defaultCooldownTime>
         <range>19.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -154,10 +154,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -168,7 +168,7 @@
         <warmupTime>0.21</warmupTime>
         <defaultCooldownTime>0.64</defaultCooldownTime>
         <range>14.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -201,10 +201,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -215,7 +215,7 @@
         <warmupTime>0.32</warmupTime>
         <defaultCooldownTime>0.98</defaultCooldownTime>
         <range>16.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -248,10 +248,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -262,7 +262,7 @@
         <warmupTime>0.43</warmupTime>
         <defaultCooldownTime>1.27</defaultCooldownTime>
         <range>19.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -296,10 +296,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -310,7 +310,7 @@
         <warmupTime>0.21</warmupTime>
         <defaultCooldownTime>0.64</defaultCooldownTime>
         <range>14.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -343,10 +343,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -357,7 +357,7 @@
         <warmupTime>0.32</warmupTime>
         <defaultCooldownTime>0.98</defaultCooldownTime>
         <range>16.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -390,10 +390,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -404,7 +404,7 @@
         <warmupTime>0.43</warmupTime>
         <defaultCooldownTime>1.27</defaultCooldownTime>
         <range>19.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -438,10 +438,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -452,7 +452,7 @@
         <warmupTime>0.21</warmupTime>
         <defaultCooldownTime>0.64</defaultCooldownTime>
         <range>14.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -485,10 +485,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -499,7 +499,7 @@
         <warmupTime>0.32</warmupTime>
         <defaultCooldownTime>0.98</defaultCooldownTime>
         <range>16.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
@@ -532,10 +532,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.3</AccuracyLong>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -546,7 +546,7 @@
         <warmupTime>0.43</warmupTime>
         <defaultCooldownTime>1.27</defaultCooldownTime>
         <range>19.9</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>

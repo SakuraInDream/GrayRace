@@ -605,7 +605,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <damageDef>Bomb</damageDef>
+      <damageDef>GR_NanoExplosion</damageDef>
       <damageAmountBase>150</damageAmountBase>
       <explosionRadius>1.5</explosionRadius>
       <armorPenetrationBase>4.5</armorPenetrationBase>

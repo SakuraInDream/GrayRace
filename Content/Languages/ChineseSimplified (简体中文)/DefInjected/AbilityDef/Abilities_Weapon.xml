@@ -2,12 +2,12 @@
 <LanguageData>
   
   <!-- EN: airburst shell -->
-  <GR_CorinthBomb.label>空爆弹</GR_CorinthBomb.label>
+  <GR_CorinthBomb.label>空爆弹（待优化）</GR_CorinthBomb.label>
   <!-- EN: . -->
   <GR_CorinthBomb.description>。</GR_CorinthBomb.description>
   
   <!-- EN: Throwing Glaive -->
-  <GR_GlaiveBomb.label>投掷战刃</GR_GlaiveBomb.label>
+  <GR_GlaiveBomb.label>投掷战刃（待优化）</GR_GlaiveBomb.label>
   <!-- EN: . -->
   <GR_GlaiveBomb.description>。</GR_GlaiveBomb.description>
   

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============== 光学迷彩 ============== -->
+  <AbilityDef>
+    <defName>GR_NanoCloak</defName>
+    <label>nanite cloak</label>
+    <description>.</description>
+    <iconPath>Things/Item/Resource/Nanites/Nanites_a</iconPath>
+    <abilityClass>SD.GrayRace.Abilities.Ability_NaniteToggle</abilityClass>
+    <targetRequired>false</targetRequired>
+    <gizmoClass>Command_Ability</gizmoClass>
+    <showWhenDrafted>true</showWhenDrafted>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>0</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <violent>false</violent>
+      <warmupTime>0</warmupTime>
+      <range>0.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="SD.GrayRace.Abilities.CompProperties_AbilityNanitesCost">
+        <nanitesCost>24</nanitesCost>
+      </li>
+      <li Class="SD.GrayRace.Abilities.CompProperties_AbilityApplyHediffToSelf">
+        <hediffDef>GR_Hediff_NanoCloak</hediffDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ============== 群体护盾 ============== -->
+  <AbilityDef>
+    <defName>GR_NanoDecompositionField</defName>
+    <label>nanite decomposition field</label>
+    <description>.</description>
+    <iconPath>Things/Item/Resource/Nanites/Nanites_c</iconPath>
+    <abilityClass>SD.GrayRace.Abilities.Ability_NaniteToggle</abilityClass>
+    <targetRequired>false</targetRequired>
+    <gizmoClass>Command_Ability</gizmoClass>
+    <showWhenDrafted>true</showWhenDrafted>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>0</cooldownTicksRange>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <violent>false</violent>
+      <warmupTime>0</warmupTime>
+      <range>0.9</range>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="SD.GrayRace.Abilities.CompProperties_AbilityNanitesCost">
+        <nanitesCost>40</nanitesCost>
+      </li>
+      <li Class="SD.GrayRace.Abilities.CompProperties_AbilityApplyHediffToSelf">
+        <hediffDef>GR_Hediff_NanoBubbleShield</hediffDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+</Defs>

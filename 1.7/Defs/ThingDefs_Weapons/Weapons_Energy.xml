@@ -718,7 +718,7 @@
       <drawSize>(1.5, 3)</drawSize>
     </graphicData>
     <projectile>
-      <damageDef>GR_Laser</damageDef>
+      <damageDef>Vaporize</damageDef>
       <damageAmountBase>50</damageAmountBase>
       <armorPenetrationBase>1</armorPenetrationBase>
       <explosionRadius>5.5</explosionRadius>

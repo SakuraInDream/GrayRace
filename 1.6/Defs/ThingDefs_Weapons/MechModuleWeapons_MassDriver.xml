@@ -26,7 +26,7 @@
         <defaultProjectile>Bullet_PDArray</defaultProjectile>
         <warmupTime>0.3</warmupTime>
         <range>29.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>10</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Shotgun</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
@@ -60,10 +60,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>0.95</AccuracyTouch>
-      <AccuracyShort>0.9</AccuracyShort>
-      <AccuracyMedium>0.72</AccuracyMedium>
-      <AccuracyLong>0.5</AccuracyLong>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -74,7 +74,8 @@
         <warmupTime>0.73</warmupTime>
         <defaultCooldownTime>2.17</defaultCooldownTime>
         <range>24.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>6</muzzleFlashScale>
@@ -121,7 +122,8 @@
         <warmupTime>0.9</warmupTime>
         <defaultCooldownTime>2.7</defaultCooldownTime>
         <range>36.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>8</muzzleFlashScale>
@@ -169,7 +171,8 @@
         <defaultCooldownTime>3.18</defaultCooldownTime>
         <minRange>21.9</minRange>
         <range>49.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>10</muzzleFlashScale>
@@ -217,7 +220,8 @@
         <warmupTime>0.73</warmupTime>
         <defaultCooldownTime>2.17</defaultCooldownTime>
         <range>24.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>6</muzzleFlashScale>
@@ -264,7 +268,8 @@
         <warmupTime>0.9</warmupTime>
         <defaultCooldownTime>2.7</defaultCooldownTime>
         <range>36.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>8</muzzleFlashScale>
@@ -312,7 +317,8 @@
         <defaultCooldownTime>3.18</defaultCooldownTime>
         <minRange>21.9</minRange>
         <range>49.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>10</muzzleFlashScale>
@@ -360,7 +366,8 @@
         <warmupTime>0.73</warmupTime>
         <defaultCooldownTime>2.17</defaultCooldownTime>
         <range>24.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>6</muzzleFlashScale>
@@ -407,7 +414,8 @@
         <warmupTime>0.9</warmupTime>
         <defaultCooldownTime>2.7</defaultCooldownTime>
         <range>36.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>8</muzzleFlashScale>
@@ -455,7 +463,8 @@
         <defaultCooldownTime>3.18</defaultCooldownTime>
         <minRange>21.9</minRange>
         <range>49.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>10</muzzleFlashScale>
@@ -503,7 +512,8 @@
         <warmupTime>0.73</warmupTime>
         <defaultCooldownTime>2.17</defaultCooldownTime>
         <range>24.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>6</muzzleFlashScale>
@@ -550,7 +560,8 @@
         <warmupTime>0.9</warmupTime>
         <defaultCooldownTime>2.7</defaultCooldownTime>
         <range>36.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>8</muzzleFlashScale>
@@ -598,7 +609,8 @@
         <defaultCooldownTime>3.18</defaultCooldownTime>
         <minRange>21.9</minRange>
         <range>49.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>10</muzzleFlashScale>
@@ -646,7 +658,8 @@
         <warmupTime>0.73</warmupTime>
         <defaultCooldownTime>2.17</defaultCooldownTime>
         <range>24.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>6</muzzleFlashScale>
@@ -693,7 +706,8 @@
         <warmupTime>0.9</warmupTime>
         <defaultCooldownTime>2.7</defaultCooldownTime>
         <range>36.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>8</muzzleFlashScale>
@@ -741,7 +755,8 @@
         <defaultCooldownTime>3.18</defaultCooldownTime>
         <minRange>21.9</minRange>
         <range>49.9</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>10</muzzleFlashScale>
@@ -775,10 +790,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>1</AccuracyTouch>
-      <AccuracyShort>1</AccuracyShort>
-      <AccuracyMedium>1</AccuracyMedium>
-      <AccuracyLong>1</AccuracyLong>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -790,7 +805,8 @@
         <minRange>21.9</minRange>
         <range>74.9</range>
         <defaultCooldownTime>8.55</defaultCooldownTime>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>6</muzzleFlashScale>
@@ -823,10 +839,10 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <AccuracyTouch>1</AccuracyTouch>
-      <AccuracyShort>1</AccuracyShort>
-      <AccuracyMedium>1</AccuracyMedium>
-      <AccuracyLong>1</AccuracyLong>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
     </statBases>
     <weaponTags/>
     <verbs>
@@ -838,7 +854,8 @@
         <minRange>21.9</minRange>
         <range>74.9</range>
         <defaultCooldownTime>8.55</defaultCooldownTime>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
         <soundCast>Shot_Slugthrower</soundCast>
         <soundCastTail>GunTail_Light</soundCastTail>
         <muzzleFlashScale>8</muzzleFlashScale>

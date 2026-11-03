@@ -6,6 +6,9 @@ namespace SD.GrayRace.Comps;
 
 public class CompGrayMechVanillaShield : CompShield
 {
+    /// EMP伤害倍率
+    private const float EmpShieldDamageFactor = 4f;
+
     private float EnergyMaxStat => parent?.GetStatValue(StatDefOf.EnergyShieldEnergyMax) ?? 0f;
 
     private bool HasShieldCapacity => EnergyMaxStat > 0.001f;
@@ -82,6 +85,17 @@ public class CompGrayMechVanillaShield : CompShield
     {
         if (!HasShieldCapacity)
         {
+            absorbed = true;
+            return;
+        }
+
+        // 让EMP正常计算伤害而不是秒盾
+        if (dinfo.Def == DamageDefOf.EMP)
+        {
+            DamageInfo shieldHit = dinfo;
+            shieldHit.Def = DamageDefOf.Bullet;
+            shieldHit.SetAmount(dinfo.Amount * EmpShieldDamageFactor);
+            base.PostPreApplyDamage(ref shieldHit, out _);
             absorbed = false;
             return;
         }

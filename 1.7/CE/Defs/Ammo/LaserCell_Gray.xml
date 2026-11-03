@@ -87,7 +87,6 @@
     <defName>Bullet_SGLaser_GR</defName>
     <label>laser beam</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
-      <damageDef>GR_Laser</damageDef>
       <damageAmountBase>2</damageAmountBase>
       <armorPenetrationBase>0.1</armorPenetrationBase>
       <pelletCount>40</pelletCount>
@@ -111,7 +110,6 @@
     <defName>Bullet_SRLaser_GR</defName>
     <label>laser beam</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
-      <damageDef>GR_Laser</damageDef>
       <damageAmountBase>60</damageAmountBase>
       <armorPenetrationBase>1</armorPenetrationBase>
     </projectile>
@@ -122,7 +120,7 @@
     <defName>Bullet_HLLaser_GR</defName>
     <label>laser beam</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
-      <damageDef>GR_Laser</damageDef>
+      <damageDef>Vaporize</damageDef>
       <damageAmountBase>400</damageAmountBase>
       <armorPenetrationBase>4</armorPenetrationBase>
       <explosionRadius>5</explosionRadius>

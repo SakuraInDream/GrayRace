@@ -4,7 +4,7 @@
   <!--射手甲的跳跃-->
   <AbilityDef>
     <defName>GR_Longjump</defName>
-    <label>longjump</label>
+    <label>long jump</label>
     <description>Utilize the suspension device embedded in the armor to quickly jump to a distance.</description>
     <iconPath>UI/Abilities/MechLongJump</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>

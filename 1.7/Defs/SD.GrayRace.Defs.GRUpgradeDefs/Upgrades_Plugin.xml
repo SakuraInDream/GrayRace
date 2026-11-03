@@ -2,6 +2,10 @@
 <Defs>
 
   <!-- ================================== 大脑插件 ================================== -->
+
+  <!-- ============== 初级职业芯片 ============== -->
+
+   <!--战斗芯片-->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_CombatChip</defName>
     <label>CombatChip</label>
@@ -26,6 +30,7 @@
     <uiOrder>10</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
+  <!--反应芯片-->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_ReactionChip</defName>
     <label>Reaction Chip</label>
@@ -49,6 +54,7 @@
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
+  <!--分析芯片-->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_AnalysisChip</defName>
     <label>Analysis Chip</label>
@@ -72,6 +78,7 @@
     <uiOrder>30</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
+  <!--集中芯片-->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_ConcentrateChip</defName>
     <label>Concentrate Chip</label>
@@ -95,6 +102,77 @@
     <uiOrder>40</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
+  <!-- ============== 高级职业芯片 ============== -->
+
+  <!-- 火控核心 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_FireControl</defName>
+    <label>Fire Control Core</label>
+    <description>Utilizes an additional core to calculate the optimal firing moment. The experience learned and optimized from naval warship salvos is enough to turn outgoing bullets into a continuous curtain of rain.</description>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
+    <hediffToApply>GR_Hediff_FireControl</hediffToApply>
+    <exclusionTags>
+      <li>SecondaryChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>200</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+    </requiredMaterials>
+    <workAmount>2500</workAmount>
+    <requiredSkill>Shooting</requiredSkill>
+    <minSkillLevel>10</minSkillLevel>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 安全协议超驰 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_SecurityProtocolOverride</defName>
+    <label>Security Protocol Override</label>
+    <description>A piece of code that disables safety protocol restrictions. No longer bound by safety protocols—in exchange, output is pushed to its absolute limit, and the body becomes far more fragile.</description>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
+    <hediffToApply>GR_Hediff_SecurityProtocolOverride</hediffToApply>
+    <exclusionTags>
+      <li>SecondaryChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>200</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+    </requiredMaterials>
+    <workAmount>2500</workAmount>
+    <requiredSkill>Melee</requiredSkill>
+    <minSkillLevel>10</minSkillLevel>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 高速缓存 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Plugin_Brain_HiSpeedCache</defName>
+    <label>High-Speed Cache</label>
+    <description>Installs additional high-speed cache. Information that needs processing is stored in the cache and retrieved instantly when needed, saving a vast amount of time and thereby improving research efficiency.</description>
+    <targetBodyPart>Nano_Brain</targetBodyPart>
+    <hediffToApply>GR_Hediff_HiSpeedCache</hediffToApply>
+    <exclusionTags>
+      <li>SecondaryChip</li>
+    </exclusionTags>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <requiredMaterials>
+      <GR_Nanites>200</GR_Nanites>
+      <ComponentSpacer>10</ComponentSpacer>
+    </requiredMaterials>
+    <workAmount>2500</workAmount>
+    <requiredSkill>Intellectual</requiredSkill>
+    <minSkillLevel>10</minSkillLevel>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
   <!-- 技工本地数据库 -->
   <SD.GrayRace.Defs.GRUpgradeDef>
     <defName>GR_Plugin_Brain_TechnicianDatabase</defName>
@@ -109,11 +187,11 @@
       <li>GR_T3Upgrades</li>
     </researchPrerequisites>
     <requiredMaterials>
-      <GR_Nanites>100</GR_Nanites>
+      <GR_Nanites>200</GR_Nanites>
       <ComponentSpacer>10</ComponentSpacer>
     </requiredMaterials>
     <workAmount>2500</workAmount>
-    <requiredSkill>Intellectual</requiredSkill>
+    <requiredSkill>Crafting</requiredSkill>
     <minSkillLevel>10</minSkillLevel>
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>

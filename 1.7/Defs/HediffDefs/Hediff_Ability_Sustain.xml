@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 光学迷彩 -->
+  <HediffDef>
+    <defName>GR_Hediff_NanoCloak</defName>
+    <label>nanite cloak</label>
+    <description>.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.40, 0.70, 1.00)</defaultLabelColor>
+    <isBad>false</isBad>
+    <makesAlert>false</makesAlert>
+    <tendable>false</tendable>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Invisibility">
+        <visibleToPlayer>true</visibleToPlayer>
+        <fadeDurationTicks>30</fadeDurationTicks>
+        <recoverFromDisruptedTicks>300</recoverFromDisruptedTicks>
+        <affectedByDisruptor>true</affectedByDisruptor>
+      </li>
+      <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NaniteUpkeep">
+        <naniteCostPerSecond>3</naniteCostPerSecond>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- 群体护盾 -->
+  <HediffDef>
+    <defName>GR_Hediff_NanoBubbleShield</defName>
+    <label>nanite bubble shield</label>
+    <description>.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.40, 0.90, 0.80)</defaultLabelColor>
+    <isBad>false</isBad>
+    <makesAlert>false</makesAlert>
+    <tendable>false</tendable>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NaniteBubbleShield" />
+      <li Class="SD.GrayRace.Hediffs.HediffCompProperties_NaniteUpkeep">
+        <naniteCostPerSecond>5</naniteCostPerSecond>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

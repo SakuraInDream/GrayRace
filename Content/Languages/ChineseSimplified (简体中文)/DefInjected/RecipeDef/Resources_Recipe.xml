@@ -3,21 +3,21 @@
   
   <!-- EN: cast Alloy x200 -->
   <GR_Alloy_recipe_Less.label>铸造合金 x200</GR_Alloy_recipe_Less.label>
-  <!-- EN: Casting Alloy,it's not a easy task. -->
+  <!-- EN: Cast alloy. It is not a simple task. -->
   <GR_Alloy_recipe_Less.description>铸造合金，这不是一项简单的任务。</GR_Alloy_recipe_Less.description>
   <!-- EN: casting Alloy -->
   <GR_Alloy_recipe_Less.jobString>正在铸造合金</GR_Alloy_recipe_Less.jobString>
   
   <!-- EN: cast Alloy x1000 -->
   <GR_Alloy_recipe_Much.label>铸造合金 x1000</GR_Alloy_recipe_Much.label>
-  <!-- EN: Casting Alloy,it's not a easy task. -->
+  <!-- EN: Cast alloy. It is not a simple task. -->
   <GR_Alloy_recipe_Much.description>铸造合金，这不是一项简单的任务。</GR_Alloy_recipe_Much.description>
   <!-- EN: casting Alloy -->
   <GR_Alloy_recipe_Much.jobString>正在铸造合金</GR_Alloy_recipe_Much.jobString>
   
   <!-- EN: cast Alloy x500 -->
   <GR_Alloy_recipe_Normal.label>铸造合金 x500</GR_Alloy_recipe_Normal.label>
-  <!-- EN: Casting Alloy,it's not a easy task. -->
+  <!-- EN: Cast alloy. It is not a simple task. -->
   <GR_Alloy_recipe_Normal.description>铸造合金，这不是一项简单的任务。</GR_Alloy_recipe_Normal.description>
   <!-- EN: casting Alloy -->
   <GR_Alloy_recipe_Normal.jobString>正在铸造合金</GR_Alloy_recipe_Normal.jobString>
@@ -38,7 +38,7 @@
   
   <!-- EN: make component x2 -->
   <GR_Make_ComponentIndustrial_Nanites.label>制作零部件 x2</GR_Make_ComponentIndustrial_Nanites.label>
-  <!-- EN: Make component. -->
+  <!-- EN: Make components using Gray Tide Zro. -->
   <GR_Make_ComponentIndustrial_Nanites.description>使用灰潮源质制造零部件。</GR_Make_ComponentIndustrial_Nanites.description>
   <!-- EN: Making component. -->
   <GR_Make_ComponentIndustrial_Nanites.jobString>正在制作零部件</GR_Make_ComponentIndustrial_Nanites.jobString>
@@ -52,7 +52,7 @@
   
   <!-- EN: make advanced component x2 -->
   <GR_Make_ComponentSpacer_Nanites.label>制作高级零部件 x2</GR_Make_ComponentSpacer_Nanites.label>
-  <!-- EN: Make advanced component. -->
+  <!-- EN: Make advanced components using Gray Tide Zro. -->
   <GR_Make_ComponentSpacer_Nanites.description>使用灰潮源质制造高级零部件。</GR_Make_ComponentSpacer_Nanites.description>
   <!-- EN: Making advanced component. -->
   <GR_Make_ComponentSpacer_Nanites.jobString>正在制作高级零部件</GR_Make_ComponentSpacer_Nanites.jobString>

@@ -6,4 +6,8 @@
   <GR_AbilityDisabledNoNanites>{0} 的备用灰潮源质不足。需要 {1}，可用 {2}。</GR_AbilityDisabledNoNanites>
   <GR_AbilityFailedNoNanites>{PAWN} 的备用灰潮源质不足，能力释放失败。</GR_AbilityFailedNoNanites>
 
+  <GR_NaniteUpkeepRate>持续消耗：{0} 备用灰潮源质/秒</GR_NaniteUpkeepRate>
+  <GR_NaniteUpkeepExhausted>{PAWN} 的备用灰潮源质耗尽，纳米力场已消散。</GR_NaniteUpkeepExhausted>
+  <GR_NaniteUpkeepNoModule>{PAWN} 没有备用灰潮源质模块，纳米力场已消散。</GR_NaniteUpkeepNoModule>
+
 </LanguageData>

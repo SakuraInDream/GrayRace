@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <!-- ================================== 手臂变形 ================================== -->
+
+  <!-- 挖掘臂 -->
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_DrillArm</defName>
     <label>Mining Arm Form</label>
@@ -16,6 +19,7 @@
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
 
+  <!-- 务农手 -->
   <SD.GrayRace.Defs.GRUpgradeDef MayRequire="Ludeon.RimWorld.Royalty">
     <defName>GR_Transform_Hand_FieldHand</defName>
     <label>Farming Hand Form</label>
@@ -30,5 +34,85 @@
     </researchPrerequisites>
     <uiOrder>20</uiOrder>
   </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 纳米榴弹发射器 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Hand_GrenadeLauncher</defName>
+    <label>Grenade Launcher</label>
+    <description>.</description>
+    <targetBodyPart>MechanicalHand</targetBodyPart>
+    <exclusionTags>
+      <li>Hand_Combat</li>
+    </exclusionTags>
+    <excludedBodyPartTags>
+      <li>ManipulationLimbDigit</li>
+    </excludedBodyPartTags>
+    <hediffToApply>GR_Hediff_GrenadeLauncher</hediffToApply>
+    <researchPrerequisites>
+      <li>GR_T2Upgrades</li>
+    </researchPrerequisites>
+    <uiOrder>20</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 目标牵引 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Leg_LongJump</defName>
+    <label>Nanite Pull</label>
+    <description>.</description>
+    <targetBodyPart>MechanicalHand</targetBodyPart>
+    <exclusionTags>
+      <li>Hand_Combat</li>
+    </exclusionTags>
+    <hediffToApply>GR_Hediff_LongJump</hediffToApply>
+    <researchPrerequisites>
+      <li>GR_T1Upgrades</li>
+    </researchPrerequisites>
+    <uiOrder>30</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- ================================== 躯干变形 ================================== -->
+
+  <!-- 镜面皮肤 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Torso_MirrorSkin</defName>
+    <label>Mirror Skin</label>
+    <description>.</description>
+    <targetBodyPart>Torso</targetBodyPart>
+    <hediffToApply>GR_Hediff_MirrorSkin</hediffToApply>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <uiOrder>30</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 分解力场 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Torso_NaniteDecompositionField</defName>
+    <label>Nanite Decomposition Field</label>
+    <description>.</description>
+    <targetBodyPart>Torso</targetBodyPart>
+    <hediffToApply>GR_Hediff_NaniteDecompositionField</hediffToApply>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <uiOrder>30</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- 推进器 -->
+  <SD.GrayRace.Defs.GRUpgradeDef>
+    <defName>GR_Transform_Torso_Thruster</defName>
+    <label>Thruster</label>
+    <description>.</description>
+    <targetBodyPart>Torso</targetBodyPart>
+    <hediffToApply>GR_Hediff_Thruster</hediffToApply>
+    <researchPrerequisites>
+      <li>GR_T3Upgrades</li>
+    </researchPrerequisites>
+    <uiOrder>30</uiOrder>
+  </SD.GrayRace.Defs.GRUpgradeDef>
+
+  <!-- ================================== 腿部变形 ================================== -->
+
+
 
 </Defs>

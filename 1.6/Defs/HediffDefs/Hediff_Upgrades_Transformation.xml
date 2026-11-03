@@ -48,9 +48,91 @@
     </stages>
   </HediffDef>
 
+  <!-- 榴弹发射器 -->
+  <HediffDef>
+    <defName>GR_Hediff_GrenadeLauncher</defName>
+    <label>nano grenade launcher</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <makesAlert>false</makesAlert>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <abilities>
+      <li>GR_NanoGrenade</li>
+      <li>GR_NanoSuperGrenade</li>
+    </abilities>
+  </HediffDef>
+
+  <!-- 牵引器 -->
+  <HediffDef>
+    <defName>GR_Hediff_LongJump</defName>
+    <label>Nanite Pull</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <makesAlert>false</makesAlert>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <abilities>
+      <li>GR_NanoLongjump</li>
+    </abilities>
+  </HediffDef>
+
   <!-- ================================== 眼部变形 ================================== -->
 
   <!-- ================================== 躯干变形 ================================== -->
+
+  <!-- 镜面皮肤 -->
+  <HediffDef>
+    <defName>GR_Hediff_MirrorSkin</defName>
+    <label>mirror skin</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <makesAlert>false</makesAlert>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <abilities>
+      <li>GR_NanoCloak</li>
+    </abilities>
+  </HediffDef>
+
+  <!-- 分解力场 -->
+  <HediffDef>
+    <defName>GR_Hediff_NaniteDecompositionField</defName>
+    <label>nanite decomposition field</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <makesAlert>false</makesAlert>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <abilities>
+      <li>GR_NanoDecompositionField</li>
+    </abilities>
+  </HediffDef>
+
+  <!-- 推进器 -->
+  <HediffDef>
+    <defName>GR_Hediff_Thruster</defName>
+    <label>nanite thruster</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <description>.</description>
+    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+    <isBad>false</isBad>
+    <makesAlert>false</makesAlert>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <stages>
+      <li>
+        <statOffsets>
+          <GRStat_NaniteRegenRate>-0.25</GRStat_NaniteRegenRate>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- ================================== 腿部变形 ================================== -->
 
 
 </Defs>

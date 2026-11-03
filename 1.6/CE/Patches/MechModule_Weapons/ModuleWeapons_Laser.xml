@@ -341,7 +341,7 @@
   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
     <defName>GR_MechWeapon_Lances</defName>
     <statBases>
-      <SightsEfficiency>1</SightsEfficiency>
+      <SightsEfficiency>6</SightsEfficiency>
       <ShotSpread>0.01</ShotSpread>
       <SwayFactor>0</SwayFactor>
     </statBases>
@@ -364,7 +364,7 @@
   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
     <defName>GR_MechWeapon_Lances_Plus</defName>
     <statBases>
-      <SightsEfficiency>1</SightsEfficiency>
+      <SightsEfficiency>8</SightsEfficiency>
       <ShotSpread>0.01</ShotSpread>
       <SwayFactor>0</SwayFactor>
     </statBases>
@@ -387,7 +387,7 @@
   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
     <defName>GR_MechWeapon_ArcEmitters</defName>
     <statBases>
-      <SightsEfficiency>1</SightsEfficiency>
+      <SightsEfficiency>6</SightsEfficiency>
       <ShotSpread>0.01</ShotSpread>
       <SwayFactor>0</SwayFactor>
     </statBases>
@@ -410,7 +410,7 @@
   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
     <defName>GR_MechWeapon_ArcEmittersPlus</defName>
     <statBases>
-      <SightsEfficiency>1</SightsEfficiency>
+      <SightsEfficiency>8</SightsEfficiency>
       <ShotSpread>0.01</ShotSpread>
       <SwayFactor>0</SwayFactor>
     </statBases>
@@ -428,10 +428,5 @@
       <muzzleFlashScale>4</muzzleFlashScale>
     </Properties>
   </Operation>
-
-  <!--
-    泰坦光矛 / 远古湮灭眩光（GR_MechWeapon_TitanLance / GR_MechWeapon_AncientTitanLance）
-    使用自定义 Verb_GrayTitanLance 并且没有弹丸，无法套用本模式，未包含，需单独方案。
-  -->
 
 </Patch>

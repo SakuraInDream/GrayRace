@@ -352,7 +352,7 @@
   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
     <defName>GR_MechWeapon_MegaCannon</defName>
     <statBases>
-      <SightsEfficiency>1</SightsEfficiency>
+      <SightsEfficiency>6</SightsEfficiency>
       <ShotSpread>0.01</ShotSpread>
       <SwayFactor>0</SwayFactor>
     </statBases>
@@ -375,7 +375,7 @@
   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
     <defName>GR_MechWeapon_MegaCannonPlus</defName>
     <statBases>
-      <SightsEfficiency>1</SightsEfficiency>
+      <SightsEfficiency>8</SightsEfficiency>
       <ShotSpread>0.01</ShotSpread>
       <SwayFactor>0</SwayFactor>
     </statBases>

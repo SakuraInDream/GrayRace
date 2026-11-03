@@ -63,16 +63,6 @@ public class AbilityComp_NanitesCost : AbilityComp
         return false;
     }
 
-    public override string CompInspectStringExtra()
-    {
-        if (Cost <= float.Epsilon)
-        {
-            return null;
-        }
-
-        return "GR_AbilityNanitesCost".Translate() + ": " + Cost.ToString("0.#");
-    }
-
     public override string ToString()
     {
         return base.ToString() + " cost=" + Cost.ToString("0.#");

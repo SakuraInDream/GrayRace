@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 牵引 -->
+  <AbilityDef>
+    <defName>GR_NanoLongjump</defName>
+    <label>Nanite Pull</label>
+    <description>.</description>
+    <iconPath>UI/Abilities/Longjump</iconPath>
+    <abilityClass>SD.GrayRace.Abilities.Ability_NaniteCost</abilityClass>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <cooldownTicksRange>10</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>jump</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0</warmupTime>
+      <range>29.9</range>
+      <requireLineOfSight>true</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>false</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastJump</jobDef>
+    <comps>
+      <li Class="SD.GrayRace.Abilities.CompProperties_AbilityNanitesCost">
+        <nanitesCost>75</nanitesCost>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- 爆弹 -->
+  <AbilityDef>
+    <defName>GR_NanoGrenade</defName>
+    <label>nanite grenade</label>
+    <description>.</description>
+    <iconPath>Things/Item/Equipment/WeaponRanged/Grenades</iconPath>
+    <abilityClass>SD.GrayRace.Abilities.Ability_NaniteCost</abilityClass>
+    <cooldownTicksRange>300</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>24.9</range>
+      <warmupTime>1</warmupTime>
+      <soundCast>InfernoCannon_Fire</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="SD.GrayRace.Abilities.CompProperties_AbilityNanitesCost">
+        <nanitesCost>50</nanitesCost>
+      </li>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_GR_NanoGrenade</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_NanoGrenade</defName>
+    <label>Nanite Grenade</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Grenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_NanoExplosion</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <explosionRadius>1.5</explosionRadius>
+      <speed>20</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- 终极爆弹 -->
+  <AbilityDef>
+    <defName>GR_NanoSuperGrenade</defName>
+    <label>Ultimatum</label>
+    <description>.</description>
+    <iconPath>Things/Item/Equipment/WeaponRanged/Grenades</iconPath>
+    <abilityClass>SD.GrayRace.Abilities.Ability_NaniteCost</abilityClass>
+    <cooldownTicksRange>7200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>13.9</range>
+      <warmupTime>0</warmupTime>
+      <soundCast>InfernoCannon_Fire</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>true</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="SD.GrayRace.Abilities.CompProperties_AbilityNanitesCost">
+        <nanitesCost>500</nanitesCost>
+      </li>
+      <li Class="CompProperties_AbilityLaunchProjectile">
+        <projectileDef>Bullet_GR_NanoSuperGrenade</projectileDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_NanoSuperGrenade</defName>
+    <label>Ultimatum</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Grenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_NanoExplosion</damageDef>
+      <damageAmountBase>750</damageAmountBase>
+      <explosionRadius>9.9</explosionRadius>
+      <speed>20</speed>
+    </projectile>
+  </ThingDef>
+
+</Defs>

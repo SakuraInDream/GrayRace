@@ -36,6 +36,22 @@ public class Ability_NaniteCost : Ability
         return base.Activate(target, dest);
     }
 
+    /// <summary>悬浮在能力 gizmo 上时显示一次性消耗，与灵能显示精神消耗的位置一致。</summary>
+    public override string Tooltip
+    {
+        get
+        {
+            string text = base.Tooltip;
+            float cost = AbilityComp_NanitesCost.CostOf(this);
+            if (cost > 0f)
+            {
+                text += "\n" + "GR_AbilityNanitesCost".Translate() + ": " + cost.ToString("0.#");
+            }
+
+            return text;
+        }
+    }
+
     public override bool Activate(GlobalTargetInfo target)
     {
         if (!TryConsumeNanites())

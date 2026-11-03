@@ -3,6 +3,8 @@
 
   <!-- ================================== 大脑插件 ================================== -->
 
+  <!-- ============== 初级职业芯片 ============== -->
+
   <!-- 战斗芯片 -->
   <HediffDef>
     <defName>GR_Hediff_CombatChip</defName>
@@ -15,8 +17,7 @@
     <stages>
       <li>
         <statOffsets>
-          <RangedCooldownFactor>-0.2</RangedCooldownFactor>
-          <AimingDelayFactor>-0.2</AimingDelayFactor>
+          <ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
         </statOffsets>
       </li>
     </stages>
@@ -34,8 +35,8 @@
     <stages>
       <li>
         <statOffsets>
-          <MeleeHitChance>2</MeleeHitChance>
-          <MeleeDodgeChance>2</MeleeDodgeChance>
+          <MeleeHitChance>0.5</MeleeHitChance>
+          <MeleeDodgeChance>4</MeleeDodgeChance>
         </statOffsets>
       </li>
     </stages>
@@ -53,7 +54,6 @@
     <stages>
       <li>
         <statOffsets>
-          <ResearchSpeed>0.5</ResearchSpeed>
           <GlobalLearningFactor>0.3</GlobalLearningFactor>
         </statOffsets>
       </li>
@@ -79,8 +79,69 @@
     </stages>
   </HediffDef>
 
-  <!-- 技工本地数据库 -->
+  <!-- ============== 高级职业芯片 ============== -->
 
+  <!-- 火控核心 -->
+  <HediffDef>
+    <defName>GR_Hediff_FireControl</defName>
+    <label>Fire Control Core</label>
+    <description>Utilizes an additional core to calculate the optimal firing moment. The experience learned and optimized from naval warship salvos is enough to turn outgoing bullets into a continuous curtain of rain.</description>
+    <defaultLabelColor>(0.23, 0.51, 0.96)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <aptitudes>
+      <Shooting>8</Shooting>
+    </aptitudes>
+    <stages>
+      <li>
+        <statOffsets>
+          <RangedCooldownFactor>-0.3</RangedCooldownFactor>
+          <AimingDelayFactor>-0.3</AimingDelayFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 安全协议超驰 -->
+  <HediffDef>
+    <defName>GR_Hediff_SecurityProtocolOverride</defName>
+    <label>Security Protocol Override</label>
+    <description>A piece of code that disables safety protocol restrictions. No longer bound by safety protocols—in exchange, output is pushed to its absolute limit, and the body becomes far more fragile.</description>
+    <defaultLabelColor>(0.90, 0.22, 0.27)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <MeleeDamageFactor>1</MeleeDamageFactor>
+          <MeleeCooldownFactor>-0.3</MeleeCooldownFactor>
+          <IncomingDamageFactor>0.5</IncomingDamageFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 高速缓存 -->
+  <HediffDef>
+    <defName>GR_Hediff_HiSpeedCache</defName>
+    <label>High-Speed Cache</label>
+    <description>Installs additional high-speed cache. Information that needs processing is stored in the cache and retrieved instantly when needed, saving a vast amount of time and thereby improving research efficiency.</description>
+    <defaultLabelColor>(0.49, 0.30, 1.00)</defaultLabelColor>
+    <hediffClass>HediffWithComps</hediffClass>
+    <keepOnBodyPartRestoration>true</keepOnBodyPartRestoration>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <ResearchSpeed>0.5</ResearchSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <!-- 技工本地数据库 -->
   <HediffDef>
     <defName>GR_Hediff_TechnicianDatabase</defName>
     <label>Technician local database</label>
@@ -95,7 +156,8 @@
     </aptitudes>
   </HediffDef>
 
-  <!--超频芯片-->
+  <!-- ============== 超频芯片 ============== -->
+
   <HediffDef>
     <defName>GR_Hediff_OverclockingChipPrimary</defName>
     <label>Primary overclocking chip</label>
@@ -221,7 +283,8 @@
     <stages>
       <li>
         <statOffsets>
-          <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+          <ShootingAccuracyFactor_Long>0.5</ShootingAccuracyFactor_Long>
+          <ShootingAccuracyFactor_Medium>0.3</ShootingAccuracyFactor_Medium>
         </statOffsets>
       </li>
     </stages>

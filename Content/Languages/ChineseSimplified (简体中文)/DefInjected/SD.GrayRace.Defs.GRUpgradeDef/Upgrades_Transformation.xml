@@ -2,13 +2,38 @@
 <LanguageData>
 
   <!-- EN: Mining Arm Form -->
-  <GR_Transform_Hand_DrillArm.label>挖掘臂形态</GR_Transform_Hand_DrillArm.label>
-  <!-- EN: Transforms the hand into a mechanical arm that speeds up mining. A built-in auger helps miners find weaknesses in rock faster. It also includes a general-purpose manipulator, which is somewhat clumsy and slightly affects mobility. -->
+  <GR_Transform_Hand_DrillArm.label>挖掘臂形态（待优化）</GR_Transform_Hand_DrillArm.label>
+  <!-- EN: A form developed by the Gray through reverse-engineering the Empire's drill arm and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability. -->
   <GR_Transform_Hand_DrillArm.description>灰裔通过对帝国的挖掘臂进行逆向分析，并结合自身特性加以改进研发出的形态。与帝国的版本相比，不会损失正常的操作能力。</GR_Transform_Hand_DrillArm.description>
 
   <!-- EN: Farming Hand Form -->
-  <GR_Transform_Hand_FieldHand.label>务农手形态</GR_Transform_Hand_FieldHand.label>
-  <!-- EN: Transforms the hand into a mechanical palm that speeds up sowing and harvesting. Several retractable finger-like protrusions can harvest from multiple points on a plant or sow several plants at once. It also includes a general-purpose manipulator, which is somewhat clumsy and slightly affects mobility. -->
+  <GR_Transform_Hand_FieldHand.label>务农手形态（待优化）</GR_Transform_Hand_FieldHand.label>
+  <!-- EN: A form developed by the Gray through reverse-engineering the Empire's field hand and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability. -->
   <GR_Transform_Hand_FieldHand.description>灰裔通过对帝国的务农手进行逆向分析，并结合自身特性加以改进研发出的形态。与帝国的版本相比，不会损失正常的操作能力。</GR_Transform_Hand_FieldHand.description>
+
+  <!-- EN: Grenade Launcher -->
+  <GR_Transform_Hand_GrenadeLauncher.label>榴弹发射器（待优化）</GR_Transform_Hand_GrenadeLauncher.label>
+  <!-- EN: . -->
+  <GR_Transform_Hand_GrenadeLauncher.description>TODO</GR_Transform_Hand_GrenadeLauncher.description>
+
+  <!-- EN: Nanite Pull -->
+  <GR_Transform_Leg_LongJump.label>牵引装置（待优化）</GR_Transform_Leg_LongJump.label>
+  <!-- EN: . -->
+  <GR_Transform_Leg_LongJump.description>TODO</GR_Transform_Leg_LongJump.description>
+
+  <!-- EN: Mirror Skin -->
+  <GR_Transform_Torso_MirrorSkin.label>镜面皮肤（待优化）</GR_Transform_Torso_MirrorSkin.label>
+  <!-- EN: . -->
+  <GR_Transform_Torso_MirrorSkin.description>TODO</GR_Transform_Torso_MirrorSkin.description>
+
+  <!-- EN: Nanite Decomposition Field -->
+  <GR_Transform_Torso_NaniteDecompositionField.label>源质分解力场（待优化）</GR_Transform_Torso_NaniteDecompositionField.label>
+  <!-- EN: . -->
+  <GR_Transform_Torso_NaniteDecompositionField.description>TODO</GR_Transform_Torso_NaniteDecompositionField.description>
+
+  <!-- EN: Thruster -->
+  <GR_Transform_Torso_Thruster.label>源质推进器（待优化）</GR_Transform_Torso_Thruster.label>
+  <!-- EN: . -->
+  <GR_Transform_Torso_Thruster.description>TODO</GR_Transform_Torso_Thruster.description>
 
 </LanguageData>

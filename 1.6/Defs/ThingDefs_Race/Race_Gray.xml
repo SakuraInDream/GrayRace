@@ -606,6 +606,21 @@
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
         <showMessageIfOwned>true</showMessageIfOwned>
       </li>
+      <!-- 无血条的盾，类似原版灵能盾，直接使用原版CompProjectileInterceptor的逻辑，确保CE兼容问题 -->
+      <li Class="CompProperties_ProjectileInterceptor">
+        <compClass>SD.GrayRace.Comps.CompNaniteBubbleInterceptor</compClass>
+        <radius>4.9</radius>
+        <interceptGroundProjectiles>true</interceptGroundProjectiles>
+        <interceptAirProjectiles>true</interceptAirProjectiles>
+        <interceptNonHostileProjectiles>false</interceptNonHostileProjectiles>
+        <interceptOutgoingProjectiles>false</interceptOutgoingProjectiles>
+        <disarmedByEmpForTicks>0</disarmedByEmpForTicks>
+        <cooldownTicks>0</cooldownTicks>
+        <chargeIntervalTicks>0</chargeIntervalTicks>
+        <hitPoints>-1</hitPoints>
+        <startWithMaxHitPoints>false</startWithMaxHitPoints>
+        <color>(0.40, 0.90, 0.80)</color>
+      </li>
       <!-- Comps 大一统 -->
       <li Class="SD.GrayRace.Comps.CompPropertiesGrayManager">
         <!-- 纳米资源相关设置 -->
@@ -656,6 +671,10 @@
       </li>
       <li>
         <damageDef>GR_NanoBullet</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>GR_NanoExplosion</damageDef>
         <multiplier>0</multiplier>
       </li>
     </damageMultipliers>

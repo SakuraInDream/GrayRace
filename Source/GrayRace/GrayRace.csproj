@@ -19,7 +19,7 @@
     </Project>
   -->
   <!-- 使用 Directory.Build.props 也行，内容跟上面的一样 -->
-  <Import Project="Local.props" Condition="Exists('Local.props')"/>
+  <Import Project="Local.props" Condition="Exists('Local.props')" />
 
   <!-- 如果没有，查找环境变量 RIMWORLD_DIR -->
   <PropertyGroup Condition=" '$(RimWorldPath)' == '' ">
@@ -103,19 +103,22 @@
     <DebugType>none</DebugType>
   </PropertyGroup>
 
-  <!-- 别人的包可能会存在更新不及时的情况，尽可能引用游戏路径的 dll -->
+  <!-- 1.6：用 Krafs.Rimworld.Ref 的引用程序集；配合 .Local 在 Debug 且本机游戏版本完全匹配时改用本机程序集（IDE 可跳转真实源码） -->
   <ItemGroup Condition="'$(RimWorldVersion)' == '1.6'">
-    <Reference Include="$(RimWorldManagedPath)\Assembly-CSharp.dll" Private="False"/>
-    <Reference Include="$(RimWorldManagedPath)\Unity*" Private="False"/>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+    <PackageReference Include="Krafs.Rimworld.Ref.Local" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
+  <!-- 1.7：暂无对应 NuGet 包，引用本机游戏根目录的引用程序集 -->
   <ItemGroup Condition="'$(RimWorldVersion)' == '1.7'">
-    <Reference Include="$(RimWorldPath)\Assembly-CSharp.dll" Private="False"/>
-    <Reference Include="$(RimWorldPath)\UnityStubs.dll" Private="False"/>
+    <Reference Include="$(RimWorldPath)\Assembly-CSharp.dll" Private="False" />
+    <Reference Include="$(RimWorldPath)\UnityStubs.dll" Private="False" />
   </ItemGroup>
 
   <ItemGroup>
-    <!-- <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" /> -->
-    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.3"/>
+    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.3" />
   </ItemGroup>
 </Project>

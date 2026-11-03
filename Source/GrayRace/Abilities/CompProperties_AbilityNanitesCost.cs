@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using RimWorld;
-using UnityEngine;
 using Verse;
 
 namespace SD.GrayRace.Abilities;
@@ -12,14 +11,6 @@ public class CompProperties_AbilityNanitesCost : AbilityCompProperties
     public CompProperties_AbilityNanitesCost()
     {
         compClass = typeof(AbilityComp_NanitesCost);
-    }
-
-    public override IEnumerable<string> ExtraStatSummary()
-    {
-        if (nanitesCost > float.Epsilon)
-        {
-            yield return "GR_AbilityNanitesCost".Translate() + ": " + Mathf.RoundToInt(nanitesCost).ToString();
-        }
     }
 
     public override IEnumerable<string> ConfigErrors(AbilityDef parentDef)
