@@ -103,5 +103,11 @@ namespace SD.GrayRace.Needs
                 return -1;
             }
         }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look(ref stopSeekingMetal, "stopSeekingMetal");
+        }
     }
 }
