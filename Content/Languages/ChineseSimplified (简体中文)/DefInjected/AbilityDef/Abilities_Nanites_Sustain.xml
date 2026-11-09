@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: nanite cloak -->
   <GR_NanoCloak.label>纳米光学迷彩（待优化）</GR_NanoCloak.label>
   <!-- EN: . -->
   <GR_NanoCloak.description>使用灰潮源质组成镜面以扭曲光线，使使用者隐形。备用灰潮源质耗尽时迷彩会自动解除。</GR_NanoCloak.description>
-
+  
   <!-- EN: nanite decomposition field -->
   <GR_NanoDecompositionField.label>源质分解力场（待优化）</GR_NanoDecompositionField.label>
   <!-- EN: . -->
   <GR_NanoDecompositionField.description>使用灰潮源质形成分解力场，能够快速分解来袭的子弹。备用灰潮源质耗尽时力场会自动解除。</GR_NanoDecompositionField.description>
-
+  
 </LanguageData>

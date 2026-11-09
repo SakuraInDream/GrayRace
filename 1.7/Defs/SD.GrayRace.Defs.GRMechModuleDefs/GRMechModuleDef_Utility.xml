@@ -88,4 +88,136 @@
     <uiOrder>0</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
+  <!-- 加力燃烧室 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_Afterburners</defName>
+    <label>Afterburners</label>
+    <description>Afterburners increase a ship's combat speed.</description>
+    <iconPath>Icon/ShipParts/ship_part_afterburner</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>4</GR_Alloy>
+    </costList>
+    <power>-10</power>
+    <statFactors>
+      <MoveSpeed>1.1</MoveSpeed>
+      <MeleeDodgeChance>1.05</MeleeDodgeChance>
+    </statFactors>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 加力燃烧室 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_Afterburners_Advanced</defName>
+    <label>Advanced Afterburners</label>
+    <description>Advanced afterburners increase a ship's combat speed.</description>
+    <iconPath>Icon/ShipParts/ship_part_afterburner</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>4</GR_Alloy>
+    </costList>
+    <power>-25</power>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+      <MeleeDodgeChance>1.15</MeleeDodgeChance>
+    </statFactors>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 反应堆增压器 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_ReactorBooster</defName>
+    <label>Reactor Booster</label>
+    <description>Auxiliary Power Systems increase the ship's reactor power output.</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_booster</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>5</GR_Alloy>
+    </costList>
+    <power>100</power>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 先进反应堆增压器 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_ReactorBooster_Advanced</defName>
+    <label>Advanced Reactor Booster</label>
+    <description>The discovery of antimatter enables highly advanced reactor boosters that greatly increase ship reactor output.</description>
+    <iconPath>Icon/ShipParts/ship_part_reactor_booster</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>15</GR_Alloy>
+    </costList>
+    <power>300</power>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 反应装甲 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_ReactiveArmor</defName>
+    <label>Reactive Armor</label>
+    <description>Implanting crystal arrays into a ship's defense systems provides some resistance against weapons that would normally pierce armor.</description>
+    <iconPath>Icon/ShipParts/ship_part_reactive_armor</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>10</GR_Alloy>
+      <Jade>20</Jade>
+    </costList>
+    <power>-15</power>
+    <statFactors>
+      <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.15</ArmorRating_Blunt>
+    </statFactors>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <!-- 活性反应装甲 -->
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_LivingReactiveArmor</defName>
+    <label>Living Reactive Armor</label>
+    <description>Reactive Metal Filaments respond to incoming fire by reconfiguring themselves to resist armor-piercing weaponry.</description>
+    <iconPath>Icon/ShipParts/ship_part_reactive_armor</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_Auxiliary</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>30</GR_Alloy>
+      <GR_Nanites>100</GR_Nanites>
+    </costList>
+    <power>-25</power>
+    <statFactors>
+      <ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+    </statFactors>
+    <uiOrder>0</uiOrder>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
 </Defs>

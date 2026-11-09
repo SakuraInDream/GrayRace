@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
   <!--动能火炮-->
@@ -17,6 +17,8 @@
       <defaultCooldownTime>5.36</defaultCooldownTime>
       <minRange>22.5</minRange>
       <range>119.9</range>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
       <soundCast>Shot_Slugthrower</soundCast>
       <soundCastTail>GunTail_Light</soundCastTail>
       <muzzleFlashScale>6</muzzleFlashScale>
@@ -39,6 +41,8 @@
       <defaultCooldownTime>5.36</defaultCooldownTime>
       <minRange>22.5</minRange>
       <range>119.9</range>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
       <soundCast>Shot_Slugthrower</soundCast>
       <soundCastTail>GunTail_Light</soundCastTail>
       <muzzleFlashScale>8</muzzleFlashScale>

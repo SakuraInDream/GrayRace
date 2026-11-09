@@ -1,0 +1,100 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsWindows Condition="$([System.OperatingSystem]::IsWindows())">true</IsWindows>
+    <IsLinux Condition="$([System.OperatingSystem]::IsLinux())">true</IsLinux>
+    <IsOSX Condition="$([System.OperatingSystem]::IsMacOS())">true</IsOSX>
+    <IsWSL Condition="'$(WSL_DISTRO_NAME)' != ''">true</IsWSL>
+  </PropertyGroup>
+
+  <!-- 复用主项目的 RimWorld 路径配置；也可以在 Local.props 里直接指定 RimWorldPath / CombatExtendedAssembly -->
+  <Import Project="..\GrayRace\Local.props" Condition="Exists('..\GrayRace\Local.props')" />
+  <Import Project="Local.props" Condition="Exists('Local.props')" />
+
+  <PropertyGroup Condition=" '$(RimWorldPath)' == '' ">
+    <RimWorldPath>$(RIMWORLD_DIR)</RimWorldPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsWindows)' == 'true'">
+    <RegSteamPath>$(registry:HKEY_CURRENT_USER\Software\Valve\Steam@SteamPath)\steamapps</RegSteamPath>
+    <SteamLibraryPath Condition="'$(SteamLibraryPath)' == '' and Exists('$(RegSteamPath)/common/RimWorld')">$(RegSteamPath)</SteamLibraryPath>
+    <SteamLibraryPath Condition="'$(SteamLibraryPath)' == ''">C:/Program Files (x86)/Steam/steamapps</SteamLibraryPath>
+    <RimWorldPath Condition="'$(RimWorldPath)' == ''">$(SteamLibraryPath)/common/RimWorld</RimWorldPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsWSL)' == 'true'">
+    <RimWorldPath Condition="'$(RimWorldPath)' == ''">/mnt/g/RimWorldMods/RimWorld</RimWorldPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsLinux)' == 'true' and '$(IsWSL)' != 'true'">
+    <RimWorldPath Condition="'$(RimWorldPath)' == ''">$(HOME)/.local/share/Steam/steamapps/common/RimWorld</RimWorldPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <RimWorldVersionFile>$(RimWorldPath)/Version.txt</RimWorldVersionFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="Exists('$(RimWorldVersionFile)')">
+    <RawVersionContent>$([System.IO.File]::ReadAllText('$(RimWorldVersionFile)'))</RawVersionContent>
+    <RimWorldVersion>$([System.Text.RegularExpressions.Regex]::Match($(RawVersionContent), '^\d+\.\d+'))</RimWorldVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RimWorldVersion)' == '' ">
+    <RimWorldVersion>1.6</RimWorldVersion>
+  </PropertyGroup>
+
+  <!-- CE 本体程序集：优先本地 Mods/CombatExtended，其次 Steam 创意工坊 -->
+  <PropertyGroup>
+    <CombatExtendedAssembly Condition="'$(CombatExtendedAssembly)' == '' and Exists('$(RimWorldPath)/Mods/CombatExtended/Assemblies/CombatExtended.dll')">$(RimWorldPath)\Mods\CombatExtended\Assemblies\CombatExtended.dll</CombatExtendedAssembly>
+    <CombatExtendedAssembly Condition="'$(CombatExtendedAssembly)' == ''">$(RimWorldPath)\..\..\workshop\content\294100\2890901044\Assemblies\CombatExtended.dll</CombatExtendedAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework Condition="'$(RimWorldVersion)' == '1.6'">net48</TargetFramework>
+    <TargetFramework Condition="'$(RimWorldVersion)' == '1.7'">net10.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SD.GrayRace.CE</RootNamespace>
+    <AssemblyName>GrayRaceCE</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <Deterministic>false</Deterministic>
+
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\$(RimWorldVersion)\CE\Assemblies\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>..\..\$(RimWorldVersion)\CE\Assemblies\</OutputPath>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(RimWorldVersion)' == '1.6'">
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4871" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(RimWorldVersion)' == '1.7'">
+    <Reference Include="$(RimWorldPath)\Assembly-CSharp.dll" Private="False" />
+    <Reference Include="$(RimWorldPath)\UnityStubs.dll" Private="False" />
+    <ProjectReference Include="..\BuildTools\UnityEngine.CoreModule.Ref\UnityEngine.CoreModule.Ref.csproj" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup Condition="!Exists('$(CombatExtendedAssembly)')">
+    <!-- 没有安装 CE 时只构建一个空的兼容 DLL，避免主解决方案在无 CE 环境构建失败。 -->
+    <Compile Remove="Comps\**\*.cs" />
+    <Compile Remove="Projectiles\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GrayRace\GrayRace.csproj" Private="false" />
+    <Reference Include="$(CombatExtendedAssembly)" Private="False" Condition="Exists('$(CombatExtendedAssembly)')" />
+  </ItemGroup>
+
+  <Target Name="WarnMissingCE" BeforeTargets="Build" Condition="!Exists('$(CombatExtendedAssembly)')">
+    <Warning Text="Combat Extended assembly not found at '$(CombatExtendedAssembly)'. GrayRaceCE will be built without CE support; set CombatExtendedAssembly in Local.props." />
+  </Target>
+</Project>

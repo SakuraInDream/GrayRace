@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_Torpedoes1_G</defName>
+    <label>Space Torpedoes</label>
+    <description>A standard swarmer missile module that fits in a medium weapon slot.</description>
+    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_TorpedoTube</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>58</GR_Alloy>
+    </costList>
+    <power>-40</power>
+    <equipmentDef>GR_MechWeapon_Torpedoes1_G</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_Torpedoes2_G</defName>
+    <label>Armored Torpedoes</label>
+    <description>A standard swarmer missile module that fits in a medium weapon slot.</description>
+    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_TorpedoTube</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>58</GR_Alloy>
+      <Chemfuel>13</Chemfuel>
+    </costList>
+    <power>-52</power>
+    <equipmentDef>GR_MechWeapon_Torpedoes2_G</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_Torpedoes3_G</defName>
+    <label>Devastator Torpedoes</label>
+    <description>A standard swarmer missile module that fits in a medium weapon slot.</description>
+    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_TorpedoTube</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T4MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>88</GR_Alloy>
+      <Chemfuel>19</Chemfuel>
+    </costList>
+    <power>-64</power>
+    <equipmentDef>GR_MechWeapon_Torpedoes3_G</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_EnergyTorpedoes1_G</defName>
+    <label>Space Torpedoes</label>
+    <description>A standard swarmer missile module that fits in a medium weapon slot.</description>
+    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_TorpedoTube</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T2MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>220</GR_Alloy>
+      <PsychoidLeaves>47</PsychoidLeaves>
+    </costList>
+    <power>-118</power>
+    <equipmentDef>GR_MechWeapon_EnergyTorpedoes1_G</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+  <SD.GrayRace.Defs.GRMechModuleDef>
+    <defName>GR_MechModule_EnergyTorpedoes2_G</defName>
+    <label>Armored Torpedoes</label>
+    <description>A standard swarmer missile module that fits in a medium weapon slot.</description>
+    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <compatibleSlots>
+      <li>GR_MechSlot_TorpedoTube</li>
+    </compatibleSlots>
+    <researchPrerequisites>
+      <li>GR_T3MechTech</li>
+    </researchPrerequisites>
+    <costList>
+      <GR_Alloy>330</GR_Alloy>
+      <Chemfuel>70</Chemfuel>
+    </costList>
+    <power>-154</power>
+    <equipmentDef>GR_MechWeapon_EnergyTorpedoes2_G</equipmentDef>
+    <weaponDeploymentTicks>45</weaponDeploymentTicks>
+  </SD.GrayRace.Defs.GRMechModuleDef>
+
+</Defs>

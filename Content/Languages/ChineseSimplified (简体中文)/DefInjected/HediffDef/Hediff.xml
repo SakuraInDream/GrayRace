@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Gray Tide Life -->
   <NanitesLife.label>灰潮生命</NanitesLife.label>
   <!-- EN: You should not be seeing this. -->
   <NanitesLife.description>你不应该看到这个。</NanitesLife.description>
-
+  
   <!-- EN: Gray Tide Regeneration -->
   <NanitesRegeneration.label>灰潮再生（待优化）</NanitesRegeneration.label>
   <!-- EN: Uses the spare Nanite in the body to rapidly repair wounds. -->
   <NanitesRegeneration.description>运用体内的备用灰潮源质能够快速修复身上的伤口。</NanitesRegeneration.description>
-
+  
 </LanguageData>

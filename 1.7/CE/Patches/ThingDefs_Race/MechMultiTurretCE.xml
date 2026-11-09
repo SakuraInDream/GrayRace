@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- CE 下把多硬点炮塔 Comp 换成 CE 专用实现，使用 CE 的 ProjectileCE 发射 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@Name="GR_Mech"]/comps/li[@Class="SD.GrayRace.Comps.CompPropertiesMultiTurretGun"]</xpath>
+    <value>
+      <li Class="SD.GrayRace.CE.Comps.CompPropertiesMultiTurretGunCE" />
+    </value>
+  </Operation>
+
+</Patch>

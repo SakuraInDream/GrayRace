@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!--太空鱼雷-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Torpedoes1_G</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_Torpedoes1_G_CE</defaultProjectile>
+      <warmupTime>5.25</warmupTime>
+      <defaultCooldownTime>15.55</defaultCooldownTime>
+      <range>29.9</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--太空鱼雷-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Torpedoes2_G</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_Torpedoes2_G_CE</defaultProjectile>
+      <warmupTime>5.25</warmupTime>
+      <defaultCooldownTime>15.55</defaultCooldownTime>
+      <range>29.9</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--毁灭者鱼雷-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_Torpedoes3_G</defName>
+    <statBases>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_Torpedoes3_G_CE</defaultProjectile>
+      <warmupTime>5.25</warmupTime>
+      <defaultCooldownTime>15.55</defaultCooldownTime>
+      <range>29.9</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--质子发射器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_EnergyTorpedoes1_G</defName>
+    <statBases>
+      <SightsEfficiency>3</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_EnergyTorpedoes1_G_CE</defaultProjectile>
+      <warmupTime>5.25</warmupTime>
+      <defaultCooldownTime>15.55</defaultCooldownTime>
+      <minRange>45</minRange>
+      <range>120</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+  <!--中子发射器-->
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>GR_MechWeapon_EnergyTorpedoes2_G</defName>
+    <statBases>
+      <SightsEfficiency>3</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>0</SwayFactor>
+    </statBases>
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_GR_EnergyTorpedoes2_G_CE</defaultProjectile>
+      <warmupTime>5.25</warmupTime>
+      <defaultCooldownTime>15.55</defaultCooldownTime>
+      <minRange>45</minRange>
+      <range>120</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+      <soundCast>Shot_Slugthrower</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>6</muzzleFlashScale>
+    </Properties>
+  </Operation>
+
+</Patch>

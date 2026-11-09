@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Nanite Grenade -->
   <Bullet_GR_NanoGrenade.label>源质爆弹</Bullet_GR_NanoGrenade.label>
-
+  
   <!-- EN: Ultimatum -->
   <Bullet_GR_NanoSuperGrenade.label>最终通牒</Bullet_GR_NanoSuperGrenade.label>
-
+  
 </LanguageData>

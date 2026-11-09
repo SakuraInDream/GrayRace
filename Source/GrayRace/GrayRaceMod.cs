@@ -2,6 +2,7 @@ using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using SD.GrayRace.HarmonyPatches;
+using UnityEngine;
 using Verse;
 
 namespace SD.GrayRace
@@ -26,6 +27,22 @@ namespace SD.GrayRace
             // HarmonyMethod transpiler = new HarmonyMethod(typeof(ResearchProjectDefPatches), nameof(ResearchProjectDefPatches.UnlockedDefsTranspiler));
             // HarmonyInstance.Patch(original: originalMethod, transpiler: transpiler);
             HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+        }
+
+        public override string SettingsCategory()
+        {
+            return Content.Name;
+        }
+
+        public override void DoSettingsWindowContents(Rect inRect)
+        {
+            Listing_Standard listing = new Listing_Standard();
+            listing.Begin(inRect);
+            listing.CheckboxLabeled(
+                "GR_Settings_MentalStateImmunity".Translate(),
+                ref Settings.enableMentalStateImmunity,
+                "GR_Settings_MentalStateImmunityDesc".Translate());
+            listing.End();
         }
     }
 }

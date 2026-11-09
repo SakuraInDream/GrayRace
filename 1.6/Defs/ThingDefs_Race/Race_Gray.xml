@@ -23,6 +23,13 @@
           <li>Food</li>
         </disabledNeeds>
       </li>
+      <li Class="SD.GrayRace.HarmonyPatches.MentalStateImmunity">
+        <allowedMentalStates>
+          <li>SocialFighting</li>
+          <li>PanicFlee</li>
+          <li>BerserkTrance</li>
+        </allowedMentalStates>
+      </li>
     </modExtensions>
   </ThingDef>
 

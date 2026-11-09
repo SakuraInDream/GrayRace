@@ -11,8 +11,8 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>GR_NanoBullet</damageDef>
       <damageAmountBase>300</damageAmountBase>
-      <armorPenetrationSharp>750</armorPenetrationSharp>
-      <armorPenetrationBlunt>120000</armorPenetrationBlunt>
+      <armorPenetrationSharp>4500</armorPenetrationSharp>
+      <armorPenetrationBlunt>67500</armorPenetrationBlunt>
       <stoppingPower>5</stoppingPower>
       <speed>180</speed>
     </projectile>
@@ -28,8 +28,8 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>GR_NanoBullet</damageDef>
       <damageAmountBase>390</damageAmountBase>
-      <armorPenetrationSharp>900</armorPenetrationSharp>
-      <armorPenetrationBlunt>150000</armorPenetrationBlunt>
+      <armorPenetrationSharp>5850</armorPenetrationSharp>
+      <armorPenetrationBlunt>87750</armorPenetrationBlunt>
       <stoppingPower>5</stoppingPower>
       <speed>220</speed>
     </projectile>

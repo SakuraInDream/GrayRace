@@ -1,24 +1,54 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-  
+
+  <!-- EN: Afterburners -->
+  <GR_MechModule_Afterburners.label>加力燃烧室</GR_MechModule_Afterburners.label>
+  <!-- EN: Afterburners increase a ship's combat speed. -->
+  <GR_MechModule_Afterburners.description>加力燃烧室可以提高舰船的战斗速度。</GR_MechModule_Afterburners.description>
+
+  <!-- EN: Advanced Afterburners -->
+  <GR_MechModule_Afterburners_Advanced.label>先进加力燃烧室</GR_MechModule_Afterburners_Advanced.label>
+  <!-- EN: Advanced afterburners increase a ship's combat speed. -->
+  <GR_MechModule_Afterburners_Advanced.description>先进加力燃烧室可以大幅提高舰船的战斗速度。</GR_MechModule_Afterburners_Advanced.description>
+
+  <!-- EN: Living Reactive Armor -->
+  <GR_MechModule_LivingReactiveArmor.label>活体反应装甲</GR_MechModule_LivingReactiveArmor.label>
+  <!-- EN: Reactive Metal Filaments respond to incoming fire by reconfiguring themselves to resist armor-piercing weaponry. -->
+  <GR_MechModule_LivingReactiveArmor.description>活体反应装甲在受到攻击时会重新配置自身以抵抗穿甲武器。</GR_MechModule_LivingReactiveArmor.description>
+
+  <!-- EN: Reactive Armor -->
+  <GR_MechModule_ReactiveArmor.label>反应装甲</GR_MechModule_ReactiveArmor.label>
+  <!-- EN: Implanting crystal arrays into a ship's defense systems provides some resistance against weapons that would normally pierce armor. -->
+  <GR_MechModule_ReactiveArmor.description>将晶体阵列植入舰船的防御系统可以提供一定的防护，以抵抗通常能够穿透装甲的武器。</GR_MechModule_ReactiveArmor.description>
+
+  <!-- EN: Reactor Booster -->
+  <GR_MechModule_ReactorBooster.label>反应堆增强器</GR_MechModule_ReactorBooster.label>
+  <!-- EN: Auxiliary Power Systems increase the ship's reactor power output. -->
+  <GR_MechModule_ReactorBooster.description>辅助动力系统可以提高舰船反应堆的功率输出。</GR_MechModule_ReactorBooster.description>
+
+  <!-- EN: Advanced Reactor Booster -->
+  <GR_MechModule_ReactorBooster_Advanced.label>先进反应堆增强器</GR_MechModule_ReactorBooster_Advanced.label>
+  <!-- EN: The discovery of antimatter enables highly advanced reactor boosters that greatly increase ship reactor output. -->
+  <GR_MechModule_ReactorBooster_Advanced.description>反物质的发现使得高度先进的反应堆增强器成为可能，这些增强器可以大幅提高舰船反应堆的输出。</GR_MechModule_ReactorBooster_Advanced.description>
+
   <!-- EN: Shield Capacitor -->
   <GR_MechModule_ShieldBooster.label>护盾电容</GR_MechModule_ShieldBooster.label>
   <!-- EN: A storage capacitor that can strengthen a ship's shields. -->
   <GR_MechModule_ShieldBooster.description>储能电容器可用于增强舰船护盾。</GR_MechModule_ShieldBooster.description>
-  
+
   <!-- EN: Advanced Shield Capacitor -->
   <GR_MechModule_ShieldBooster_Advanced.label>先进护盾电容</GR_MechModule_ShieldBooster_Advanced.label>
   <!-- EN: An advanced storage capacitor that can greatly strengthen a ship's shields. -->
   <GR_MechModule_ShieldBooster_Advanced.description>先进储能电容器可用于大幅增强舰船护盾。</GR_MechModule_ShieldBooster_Advanced.description>
-  
+
   <!-- EN: Shield Hardener -->
   <GR_MechModule_ShieldHardener.label>护盾硬化器</GR_MechModule_ShieldHardener.label>
   <!-- EN: A shield hardener that strengthens a ship's shield protection. -->
   <GR_MechModule_ShieldHardener.description>护盾硬化器可用于增强舰船护盾的防护能力。</GR_MechModule_ShieldHardener.description>
-  
+
   <!-- EN: Advanced Shield Hardener -->
   <GR_MechModule_ShieldHardener_Advanced.label>先进护盾硬化器</GR_MechModule_ShieldHardener_Advanced.label>
   <!-- EN: An advanced shield hardener that strengthens a ship's shield protection. -->
   <GR_MechModule_ShieldHardener_Advanced.description>先进护盾硬化器可用于大幅增强舰船护盾的防护能力。</GR_MechModule_ShieldHardener_Advanced.description>
-  
+
 </LanguageData>

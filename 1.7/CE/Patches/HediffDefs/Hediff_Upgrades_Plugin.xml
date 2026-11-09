@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- 瞄准系统 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="GR_Hediff_TargetingSystem"]/stages/li/statOffsets</xpath>
+    <value>
+      <statOffsets>
+        <AimingAccuracy>0.5</AimingAccuracy>
+      </statOffsets>
+    </value>
+  </Operation>
+
+</Patch>

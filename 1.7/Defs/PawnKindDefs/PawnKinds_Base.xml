@@ -5,6 +5,7 @@
     <race>Gray_Race</race>
     <fixedGender>Female</fixedGender>
     <defaultFactionType>Gray_Faction</defaultFactionType>
+    <nameMaker>Gray_NamerPerson</nameMaker>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <invNutrition>3</invNutrition>
     <gearHealthRange>1~1</gearHealthRange>

@@ -55,16 +55,16 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="GR_Mech_FF"]/tools</xpath>
     <value>
-      <tools>
+      <tools Inherit="False">
         <li Class="CombatExtended.ToolCE">
           <label>fist</label>
           <capacities>
             <li>GR_NanoScratch</li>
           </capacities>
-          <power>10</power>
+          <power>20</power>
           <cooldownTime>2</cooldownTime>
-          <armorPenetrationSharp>4</armorPenetrationSharp>
-          <armorPenetrationBlunt>8</armorPenetrationBlunt>
+          <armorPenetrationSharp>8</armorPenetrationSharp>
+          <armorPenetrationBlunt>16</armorPenetrationBlunt>
         </li>
       </tools>
     </value>

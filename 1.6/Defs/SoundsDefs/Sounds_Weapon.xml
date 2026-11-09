@@ -277,4 +277,10 @@
     </subSounds>
   </SoundDef>
 
+  <ImpactSoundTypeDef>
+    <defName>GR_TorpedoImpact</defName>
+    <soundDef>Explosion_Rocket</soundDef>
+    <playOnlyIfHitPawn>false</playOnlyIfHitPawn>
+  </ImpactSoundTypeDef>
+
 </Defs>

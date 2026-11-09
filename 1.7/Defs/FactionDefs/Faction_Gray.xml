@@ -24,7 +24,7 @@
       <li>Gray_Leader</li>
     </fixedLeaderKinds>
     <factionIconPath>Icon/Faction/Gray</factionIconPath>
-    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <settlementNameMaker>Gray_NamerSettlement</settlementNameMaker>
     <techLevel>Archotech</techLevel>
     <melaninRange>0</melaninRange>    <!--黑皮肤概率，百分数-->
     <naturalEnemy>false</naturalEnemy>

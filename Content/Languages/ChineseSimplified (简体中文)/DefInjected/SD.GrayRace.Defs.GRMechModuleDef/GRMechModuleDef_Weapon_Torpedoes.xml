@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Proton Launchers -->
+  <GR_MechModule_EnergyTorpedoes1_G.label>质子发射器</GR_MechModule_EnergyTorpedoes1_G.label>
+  <!-- EN: A standard swarmer missile module that fits in a medium weapon slot. -->
+  <GR_MechModule_EnergyTorpedoes1_G.description>这些能量抛射体由紧密聚集的质子组成，能够对敌方船体造成巨额伤害。</GR_MechModule_EnergyTorpedoes1_G.description>
+
+  <!-- EN: Armored Torpedoes -->
+  <GR_MechModule_EnergyTorpedoes2_G.label>中子发射器</GR_MechModule_EnergyTorpedoes2_G.label>
+  <!-- EN: A standard swarmer missile module that fits in a medium weapon slot. -->
+  <GR_MechModule_EnergyTorpedoes2_G.description>由于中子具有毁灭性的能量，升级的能量发射物将依赖中子而非质子对敌方进行打击。</GR_MechModule_EnergyTorpedoes2_G.description>
+
+  <!-- EN: Space Torpedoes -->
+  <GR_MechModule_Torpedoes1_G.label>太空鱼雷</GR_MechModule_Torpedoes1_G.label>
+  <!-- EN: A standard swarmer missile module that fits in a medium weapon slot. -->
+  <GR_MechModule_Torpedoes1_G.description>这些鱼雷本质上是巨大的、缓慢移动的导弹。它们配备了更强大的弹头和护盾调节器，使其能够安全地穿过能量屏障。</GR_MechModule_Torpedoes1_G.description>
+
+  <!-- EN: Armored Torpedoes -->
+  <GR_MechModule_Torpedoes2_G.label>装甲鱼雷</GR_MechModule_Torpedoes2_G.label>
+  <!-- EN: A standard swarmer missile module that fits in a medium weapon slot. -->
+  <GR_MechModule_Torpedoes2_G.description>升级的太空鱼雷配备了装甲，提高了它们在敌方点防御系统下的生存能力。在爆炸时，鱼雷的碎片化装甲也会造成额外伤害。</GR_MechModule_Torpedoes2_G.description>
+
+  <!-- EN: Devastator Torpedoes -->
+  <GR_MechModule_Torpedoes3_G.label>毁灭者鱼雷</GR_MechModule_Torpedoes3_G.label>
+  <!-- EN: A standard swarmer missile module that fits in a medium weapon slot. -->
+  <GR_MechModule_Torpedoes3_G.description>配备超强大弹头的先进鱼雷。具有更流线型的设计、更快的引擎和改进的护盾调节器，能够轻松穿透能量屏障。</GR_MechModule_Torpedoes3_G.description>
+
+</LanguageData>

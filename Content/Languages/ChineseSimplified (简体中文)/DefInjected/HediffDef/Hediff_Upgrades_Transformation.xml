@@ -1,39 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: drill arm -->
   <GR_Hediff_DrillArm.label>挖掘臂（待优化）</GR_Hediff_DrillArm.label>
   <!-- EN: A form developed by the Gray through reverse-engineering the Empire's drill arm and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability. -->
   <GR_Hediff_DrillArm.description>灰裔通过对帝国的挖掘臂进行逆向分析，并结合自身特性加以改进研发出的形态。与帝国的版本相比，不会损失正常的操作能力。</GR_Hediff_DrillArm.description>
-
+  
   <!-- EN: field hand -->
   <GR_Hediff_FieldHand.label>务农手（待优化）</GR_Hediff_FieldHand.label>
   <!-- EN: A form developed by the Gray through reverse-engineering the Empire's field hand and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability. -->
   <GR_Hediff_FieldHand.description>灰裔通过对帝国的务农手进行逆向分析，并结合自身特性加以改进研发出的形态。与帝国的版本相比，不会损失正常的操作能力。</GR_Hediff_FieldHand.description>
-
+  
   <!-- EN: nano grenade launcher -->
   <GR_Hediff_GrenadeLauncher.label>榴弹发射器（待优化）</GR_Hediff_GrenadeLauncher.label>
   <!-- EN: . -->
   <GR_Hediff_GrenadeLauncher.description>TODO</GR_Hediff_GrenadeLauncher.description>
-
+  
   <!-- EN: Nanite Pull -->
   <GR_Hediff_LongJump.label>牵引装置（待优化）</GR_Hediff_LongJump.label>
   <!-- EN: . -->
   <GR_Hediff_LongJump.description>TODO</GR_Hediff_LongJump.description>
-
+  
   <!-- EN: mirror skin -->
   <GR_Hediff_MirrorSkin.label>镜面皮肤（待优化）</GR_Hediff_MirrorSkin.label>
   <!-- EN: . -->
   <GR_Hediff_MirrorSkin.description>TODO</GR_Hediff_MirrorSkin.description>
-
+  
   <!-- EN: nanite decomposition field -->
   <GR_Hediff_NaniteDecompositionField.label>纳米分解力场（待优化）</GR_Hediff_NaniteDecompositionField.label>
   <!-- EN: . -->
   <GR_Hediff_NaniteDecompositionField.description>TODO</GR_Hediff_NaniteDecompositionField.description>
-
+  
   <!-- EN: nanite thruster -->
   <GR_Hediff_Thruster.label>纳米推进器（待优化）</GR_Hediff_Thruster.label>
   <!-- EN: . -->
   <GR_Hediff_Thruster.description>TODO</GR_Hediff_Thruster.description>
-
+  
 </LanguageData>

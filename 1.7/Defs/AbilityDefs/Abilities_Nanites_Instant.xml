@@ -79,7 +79,7 @@
     </projectile>
   </ThingDef>
 
-  <!-- 终极爆弹 -->
+  <!-- 最终通牒 -->
   <AbilityDef>
     <defName>GR_NanoSuperGrenade</defName>
     <label>Ultimatum</label>

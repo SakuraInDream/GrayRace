@@ -2,19 +2,19 @@
 <LanguageData>
 
   <!-- EN: nanite grenade -->
-  <GR_NanoGrenade.label>源质爆弹</GR_NanoGrenade.label>
+  <GR_NanoGrenade.label>源质爆弹（待优化）</GR_NanoGrenade.label>
   <!-- EN: . -->
   <GR_NanoGrenade.description>TODO</GR_NanoGrenade.description>
 
   <!-- EN: Nanite Pull -->
-  <GR_NanoLongjump.label>源质牵引</GR_NanoLongjump.label>
+  <GR_NanoLongjump.label>源质牵引（待优化）</GR_NanoLongjump.label>
   <!-- EN: . -->
   <GR_NanoLongjump.description>TODO</GR_NanoLongjump.description>
   <!-- EN: jump -->
   <GR_NanoLongjump.verbProperties.label>TODO</GR_NanoLongjump.verbProperties.label>
 
   <!-- EN: Ultimatum -->
-  <GR_NanoSuperGrenade.label>最终通牒</GR_NanoSuperGrenade.label>
+  <GR_NanoSuperGrenade.label>最终通牒（待优化）</GR_NanoSuperGrenade.label>
   <!-- EN: . -->
   <GR_NanoSuperGrenade.description>TODO</GR_NanoSuperGrenade.description>
 

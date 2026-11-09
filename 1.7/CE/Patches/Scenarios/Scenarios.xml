@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ScenarioDef[defName="GR_Crashlanded"]/scenario/parts</xpath>
+    <value>
+      <li Class="ScenPart_StartingThing_Defined">
+        <def>StartingThing_Defined</def>
+        <thingDef>Ammo_LaserChargePack</thingDef>
+        <count>200</count>
+      </li>
+      <li Class="ScenPart_StartingThing_Defined">
+        <def>StartingThing_Defined</def>
+        <thingDef>Ammo_6mmRailgun_Sabot</thingDef>
+        <count>200</count>
+      </li>
+    </value>
+  </Operation>
+</Patch>

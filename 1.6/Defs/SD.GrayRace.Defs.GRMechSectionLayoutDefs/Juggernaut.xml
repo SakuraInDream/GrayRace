@@ -26,34 +26,42 @@
         <hardpointAnchor>(1.5,1.3)</hardpointAnchor>
         <uiOrder>1</uiOrder>
       </li>
+
       <li>
-        <key>STRIKE_CRAFT_01</key>
-        <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
+        <key>TORPEDO_TUBE_01</key>
+        <slotDef>GR_MechSlot_TorpedoTube</slotDef>
+        <hardpointAnchor>(0,2.5)</hardpointAnchor>
         <uiOrder>2</uiOrder>
       </li>
       <li>
-        <key>STRIKE_CRAFT_02</key>
-        <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
+        <key>TORPEDO_TUBE_02</key>
+        <slotDef>GR_MechSlot_TorpedoTube</slotDef>
+        <hardpointAnchor>(1.5,2)</hardpointAnchor>
         <uiOrder>3</uiOrder>
       </li>
       <li>
-        <key>STRIKE_CRAFT_03</key>
-        <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
+        <key>TORPEDO_TUBE_03</key>
+        <slotDef>GR_MechSlot_TorpedoTube</slotDef>
+        <hardpointAnchor>(-1.5,2)</hardpointAnchor>
         <uiOrder>4</uiOrder>
       </li>
+
       <li>
-        <key>STRIKE_CRAFT_04</key>
-        <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
+        <key>LARGE_GUN_01</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointAnchor>(0.4,0)</hardpointAnchor>
         <uiOrder>5</uiOrder>
       </li>
       <li>
-        <key>STRIKE_CRAFT_05</key>
-        <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
+        <key>LARGE_GUN_02</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointAnchor>(-0.4,0)</hardpointAnchor>
         <uiOrder>6</uiOrder>
       </li>
       <li>
-        <key>STRIKE_CRAFT_06</key>
-        <slotDef>GR_MechSlot_StrikeCraftBay</slotDef>
+        <key>LARGE_GUN_03</key>
+        <slotDef>GR_MechSlot_LargeTurret</slotDef>
+        <hardpointAnchor>(0,-0.4)</hardpointAnchor>
         <uiOrder>7</uiOrder>
       </li>
 

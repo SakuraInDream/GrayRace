@@ -2,6 +2,14 @@
 <Patch>
 
   <!-- 1级装甲 -->
+   <Operation Class="PatchOperationAdd">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[@Name="GR_MechModule_Armor1Base"]/statOffsets</xpath>
+    <value>
+        <ArmorRating_Heat>0.1</ArmorRating_Heat>
+        <ArmorRating_Electric>0.1</ArmorRating_Electric>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor1_S"]/statOffsets</xpath>
     <value>
@@ -33,6 +41,14 @@
   </Operation>
 
   <!-- 2级装甲 -->
+   <Operation Class="PatchOperationAdd">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[@Name="GR_MechModule_Armor2Base"]/statOffsets</xpath>
+    <value>
+        <ArmorRating_Heat>0.2</ArmorRating_Heat>
+        <ArmorRating_Electric>0.2</ArmorRating_Electric>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor2_S"]/statOffsets</xpath>
     <value>
@@ -64,6 +80,14 @@
   </Operation>
 
   <!-- 3级装甲 -->
+   <Operation Class="PatchOperationAdd">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[@Name="GR_MechModule_Armor3Base"]/statOffsets</xpath>
+    <value>
+        <ArmorRating_Heat>0.3</ArmorRating_Heat>
+        <ArmorRating_Electric>0.3</ArmorRating_Electric>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor3_S"]/statOffsets</xpath>
     <value>
@@ -95,6 +119,14 @@
   </Operation>
 
   <!-- 4级装甲 -->
+   <Operation Class="PatchOperationAdd">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[@Name="GR_MechModule_Armor4Base"]/statOffsets</xpath>
+    <value>
+        <ArmorRating_Heat>0.4</ArmorRating_Heat>
+        <ArmorRating_Electric>0.4</ArmorRating_Electric>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor4_S"]/statOffsets</xpath>
     <value>
@@ -126,6 +158,14 @@
   </Operation>
 
   <!-- 5级装甲 -->
+   <Operation Class="PatchOperationAdd">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[@Name="GR_MechModule_Armor5Base"]/statOffsets</xpath>
+    <value>
+        <ArmorRating_Heat>0.5</ArmorRating_Heat>
+        <ArmorRating_Electric>0.5</ArmorRating_Electric>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor5_S"]/statOffsets</xpath>
     <value>
@@ -157,6 +197,14 @@
   </Operation>
 
   <!-- 6级装甲 -->
+   <Operation Class="PatchOperationAdd">
+    <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[@Name="GR_MechModule_Armor6Base"]/statOffsets</xpath>
+    <value>
+        <ArmorRating_Heat>0.6</ArmorRating_Heat>
+        <ArmorRating_Electric>0.6</ArmorRating_Electric>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/SD.GrayRace.Defs.GRMechModuleDef[defName="GR_MechModule_Armor6_S"]/statOffsets</xpath>
     <value>

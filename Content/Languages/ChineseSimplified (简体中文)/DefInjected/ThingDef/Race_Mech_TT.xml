@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Sanctum Attendant -->
   <GR_Mech_TT.label>神域御侍</GR_Mech_TT.label>
   <!-- EN: The Sanctum Attendant is a super-heavy mechanoid specialized in extreme-range combat. It possesses extremely thick armor and an indestructible shield, at the cost of a large amount of speed. In return, its firepower has improved incomparably: its T-class main gun has enormous power and extreme range, and more and larger secondary guns let it effectively protect itself from close threats. It can also mount tactical auras to strengthen allies or suppress enemies. -->
   <GR_Mech_TT.description>以人类帝国古神话中泰坦巨人为名，是擅长超视距作战的极重型机械体。\n头部上方的环状天线用于直连帝国的联通哨兵阵列。\n火力、装甲、护盾、射程、甚至辅助能力——将这些特化到极致的她，理所应当的付出了行动不便的代价。\n不过能在身边那些副炮的警戒中来到她身边的，定是她的友人吧。</GR_Mech_TT.description>
-  <!-- EN: head -->
-  <GR_Mech_TT.tools.head.label>头部</GR_Mech_TT.tools.head.label>
   <!-- EN: fist -->
   <GR_Mech_TT.tools.fist.label>拳</GR_Mech_TT.tools.fist.label>
-
+  
+  <!-- UNUSED -->
+  <GR_Mech_TT.tools.head.label>头部</GR_Mech_TT.tools.head.label>
+  
 </LanguageData>

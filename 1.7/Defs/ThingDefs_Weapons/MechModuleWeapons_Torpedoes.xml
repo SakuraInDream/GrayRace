@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- ==================== 爆破鱼雷 ==================== -->
+  <!--太空鱼雷-->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Torpedoes1_G</defName>
+    <label>Space Torpedoes</label>
+    <description>A medium weapon that launches multiple small missiles in a single salvo.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMortar_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_Torpedoes1_G</defaultProjectile>
+        <warmupTime>5.25</warmupTime>
+        <defaultCooldownTime>15.5</defaultCooldownTime>
+        <range>14.9</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_Torpedoes1_G</defName>
+    <label>Space Torpedoes</label>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Damage_Torpedo</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <speed>55</speed>
+      <soundExplode>Explosion_Rocket</soundExplode>
+    </projectile>
+  </ThingDef>
+
+  <!--装甲鱼雷-->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Torpedoes2_G</defName>
+    <label>Armored Torpedoes</label>
+    <description>A medium weapon that launches multiple small missiles in a single salvo.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMortar_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_Torpedoes2_G</defaultProjectile>
+        <warmupTime>5.25</warmupTime>
+        <defaultCooldownTime>15.5</defaultCooldownTime>
+        <range>14.9</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_Torpedoes2_G</defName>
+    <label>Armored Torpedoes</label>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Damage_Torpedo</damageDef>
+      <damageAmountBase>65</damageAmountBase>
+      <armorPenetrationBase>1.25</armorPenetrationBase>
+      <speed>55</speed>
+      <soundExplode>Explosion_Rocket</soundExplode>
+    </projectile>
+  </ThingDef>
+
+  <!--毁灭者鱼雷-->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_Torpedoes3_G</defName>
+    <label>Devastator Torpedoes</label>
+    <description>A medium weapon that launches multiple small missiles in a single salvo.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMortar_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_Torpedoes3_G</defaultProjectile>
+        <warmupTime>5.25</warmupTime>
+        <defaultCooldownTime>15.5</defaultCooldownTime>
+        <range>14.9</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_Torpedoes3_G</defName>
+    <label>Devastator Torpedoes</label>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Damage_Torpedo</damageDef>
+      <damageAmountBase>85</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <speed>55</speed>
+      <soundExplode>Explosion_Rocket</soundExplode>
+    </projectile>
+  </ThingDef>
+
+  <!-- ==================== 能量鱼雷 ==================== -->
+  <!--质子发射器-->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_EnergyTorpedoes1_G</defName>
+    <label>Proton Launchers</label>
+    <description>A medium weapon that launches multiple small missiles in a single salvo.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMortar_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_EnergyTorpedoes1_G</defaultProjectile>
+        <warmupTime>5.25</warmupTime>
+        <defaultCooldownTime>15.5</defaultCooldownTime>
+        <minRange>22.9</minRange>
+        <range>59.9</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_EnergyTorpedoes1_G</defName>
+    <label>Proton Torpedoes</label>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Damage_Torpedo</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <speed>90</speed>
+      <soundExplode>Explosion_Rocket</soundExplode>
+    </projectile>
+  </ThingDef>
+
+  <!--中子发射器-->
+  <ThingDef ParentName="LightMechanoidGunRanged">
+    <defName>GR_MechWeapon_EnergyTorpedoes2_G</defName>
+    <label>Neutron Launchers</label>
+    <description>A medium weapon that launches multiple small missiles in a single salvo.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Building/Security/TurretMortar_Top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+    </statBases>
+    <weaponTags/>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_GR_EnergyTorpedoes2_G</defaultProjectile>
+        <warmupTime>5.25</warmupTime>
+        <defaultCooldownTime>15.5</defaultCooldownTime>
+        <minRange>22.9</minRange>
+        <range>59.9</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GR_EnergyTorpedoes2_G</defName>
+    <label>Neutron Torpedoes</label>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Things/Projectile/LauncherShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>GR_Damage_Torpedo</damageDef>
+      <damageAmountBase>39</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <speed>90</speed>
+      <soundExplode>Explosion_Rocket</soundExplode>
+    </projectile>
+  </ThingDef>
+
+</Defs>

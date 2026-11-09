@@ -11,8 +11,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>22</damageAmountBase>
-      <armorPenetrationSharp>22</armorPenetrationSharp>
-      <armorPenetrationBlunt>22</armorPenetrationBlunt>
       <stoppingPower>1</stoppingPower>
       <speed>110</speed>
     </projectile>
@@ -29,8 +27,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>56</damageAmountBase>
-      <armorPenetrationSharp>56</armorPenetrationSharp>
-      <armorPenetrationBlunt>56</armorPenetrationBlunt>
       <explosionRadius>1.5</explosionRadius>
       <stoppingPower>3</stoppingPower>
       <speed>140</speed>
@@ -47,8 +43,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>135</damageAmountBase>
-      <armorPenetrationSharp>135</armorPenetrationSharp>
-      <armorPenetrationBlunt>135</armorPenetrationBlunt>
       <explosionRadius>3</explosionRadius>
       <stoppingPower>5</stoppingPower>
       <speed>170</speed>
@@ -65,8 +59,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>29</damageAmountBase>
-      <armorPenetrationSharp>29</armorPenetrationSharp>
-      <armorPenetrationBlunt>29</armorPenetrationBlunt>
       <stoppingPower>1</stoppingPower>
       <speed>170</speed>
     </projectile>
@@ -83,8 +75,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>74</damageAmountBase>
-      <armorPenetrationSharp>74</armorPenetrationSharp>
-      <armorPenetrationBlunt>74</armorPenetrationBlunt>
       <explosionRadius>1.5</explosionRadius>
       <stoppingPower>3</stoppingPower>
       <speed>170</speed>
@@ -101,8 +91,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>177</damageAmountBase>
-      <armorPenetrationSharp>177</armorPenetrationSharp>
-      <armorPenetrationBlunt>177</armorPenetrationBlunt>
       <explosionRadius>3</explosionRadius>
       <stoppingPower>5</stoppingPower>
       <speed>170</speed>
@@ -119,8 +107,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>38</damageAmountBase>
-      <armorPenetrationSharp>38</armorPenetrationSharp>
-      <armorPenetrationBlunt>38</armorPenetrationBlunt>
       <stoppingPower>1</stoppingPower>
       <speed>170</speed>
     </projectile>
@@ -137,8 +123,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>96</damageAmountBase>
-      <armorPenetrationSharp>96</armorPenetrationSharp>
-      <armorPenetrationBlunt>96</armorPenetrationBlunt>
       <explosionRadius>1.5</explosionRadius>
       <stoppingPower>3</stoppingPower>
       <speed>170</speed>
@@ -155,8 +139,6 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Vaporize</damageDef>
       <damageAmountBase>231</damageAmountBase>
-      <armorPenetrationSharp>231</armorPenetrationSharp>
-      <armorPenetrationBlunt>231</armorPenetrationBlunt>
       <explosionRadius>3</explosionRadius>
       <stoppingPower>5</stoppingPower>
       <speed>170</speed>

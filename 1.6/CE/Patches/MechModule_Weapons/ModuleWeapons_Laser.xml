@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
   <!--红色激光-->
@@ -16,8 +16,8 @@
       <warmupTime>1.07</warmupTime>
       <defaultCooldownTime>3.18</defaultCooldownTime>
       <range>39.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>
@@ -39,8 +39,8 @@
       <warmupTime>1.25</warmupTime>
       <defaultCooldownTime>3.75</defaultCooldownTime>
       <range>59.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>6</muzzleFlashScale>
@@ -62,8 +62,8 @@
       <warmupTime>1.43</warmupTime>
       <defaultCooldownTime>4.27</defaultCooldownTime>
       <range>79.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
@@ -85,8 +85,8 @@
       <warmupTime>1.07</warmupTime>
       <defaultCooldownTime>3.18</defaultCooldownTime>
       <range>39.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>
@@ -108,8 +108,8 @@
       <warmupTime>1.25</warmupTime>
       <defaultCooldownTime>3.75</defaultCooldownTime>
       <range>59.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>6</muzzleFlashScale>
@@ -131,8 +131,8 @@
       <warmupTime>1.43</warmupTime>
       <defaultCooldownTime>4.27</defaultCooldownTime>
       <range>79.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
@@ -154,8 +154,8 @@
       <warmupTime>1.07</warmupTime>
       <defaultCooldownTime>3.18</defaultCooldownTime>
       <range>39.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>
@@ -176,8 +176,8 @@
       <warmupTime>1.25</warmupTime>
       <defaultCooldownTime>3.75</defaultCooldownTime>
       <range>59.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>6</muzzleFlashScale>
@@ -198,8 +198,8 @@
       <warmupTime>1.43</warmupTime>
       <defaultCooldownTime>4.27</defaultCooldownTime>
       <range>79.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
@@ -221,8 +221,8 @@
       <warmupTime>1.07</warmupTime>
       <defaultCooldownTime>3.18</defaultCooldownTime>
       <range>39.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>
@@ -243,8 +243,8 @@
       <warmupTime>1.25</warmupTime>
       <defaultCooldownTime>3.75</defaultCooldownTime>
       <range>59.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>6</muzzleFlashScale>
@@ -265,8 +265,8 @@
       <warmupTime>1.43</warmupTime>
       <defaultCooldownTime>4.27</defaultCooldownTime>
       <range>79.9</range>
-      <burstShotCount>1</burstShotCount>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
@@ -288,7 +288,8 @@
       <warmupTime>1.07</warmupTime>
       <defaultCooldownTime>3.18</defaultCooldownTime>
       <range>39.9</range>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>
@@ -309,7 +310,8 @@
       <warmupTime>1.25</warmupTime>
       <defaultCooldownTime>3.75</defaultCooldownTime>
       <range>59.9</range>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>6</muzzleFlashScale>
@@ -330,7 +332,8 @@
       <warmupTime>1.43</warmupTime>
       <defaultCooldownTime>4.27</defaultCooldownTime>
       <range>79.9</range>
-      <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>9</muzzleFlashScale>
@@ -353,7 +356,8 @@
       <defaultCooldownTime>7.5</defaultCooldownTime>
       <minRange>5</minRange>
       <range>149.9</range>
-      <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>
@@ -376,7 +380,8 @@
       <defaultCooldownTime>7.5</defaultCooldownTime>
       <minRange>5</minRange>
       <range>149.9</range>
-      <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>
@@ -399,7 +404,8 @@
       <defaultCooldownTime>7.5</defaultCooldownTime>
       <minRange>5</minRange>
       <range>149.9</range>
-      <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>
@@ -422,7 +428,8 @@
       <defaultCooldownTime>7.5</defaultCooldownTime>
       <minRange>5</minRange>
       <range>149.9</range>
-      <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
       <soundCast>GR_EnergyBattleRifleShoot</soundCast>
       <soundCastTail>GunTail_Medium</soundCastTail>
       <muzzleFlashScale>4</muzzleFlashScale>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <LanguageData>
-
+  
   <!-- EN: Disintegration Corrosion -->
   <GR_Disintegration_Corrosion.label>裂解侵蚀（待优化）</GR_Disintegration_Corrosion.label>
   <!-- EN: The creature is being consumed by a lethal disintegrative corrosion, its armor relentlessly flaking away into nothingness, exposing vulnerable tissues beneath. Its movements turn sluggish and uncoordinated as its very flesh dissolves into molecular debris. -->
@@ -17,7 +17,7 @@
   <GR_Disintegration_Corrosion.stages.Collapse.label>崩溃</GR_Disintegration_Corrosion.stages.Collapse.label>
   <!-- EN: Annihilation -->
   <GR_Disintegration_Corrosion.stages.Annihilation.label>湮灭</GR_Disintegration_Corrosion.stages.Annihilation.label>
-
+  
   <!-- EN: Nanite Corrosion -->
   <GR_Nanite_Corrosion.label>纳米侵蚀（待优化）</GR_Nanite_Corrosion.label>
   <!-- EN: This lethal nanite infection progressively disassembles the target's molecular structure, inducing excruciating neural pain while systematically degrading defensive capabilities. Affected subjects undergo a cascading failure—from localized corrosion to total systemic collapse. -->
@@ -32,5 +32,5 @@
   <GR_Nanite_Corrosion.stages.Corrosion.label>侵蚀</GR_Nanite_Corrosion.stages.Corrosion.label>
   <!-- EN: Neural -->
   <GR_Nanite_Corrosion.stages.Neural.label>神经</GR_Nanite_Corrosion.stages.Neural.label>
-
+  
 </LanguageData>

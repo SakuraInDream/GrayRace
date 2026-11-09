@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Gray personal names: Latin-style given name + family name, no nickname. -->
+
+  <!-- Given names. Keyword: gray_first -->
+  <RulePackDef>
+    <defName>Gray_NamerFirstName</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>gray_first->Clara</li>
+        <li>gray_first->Lucida</li>
+        <li>gray_first->Splendida</li>
+        <li>gray_first->Nitida</li>
+        <li>gray_first->Candida</li>
+        <li>gray_first->Aurea</li>
+        <li>gray_first->Serena</li>
+        <li>gray_first->Formosa</li>
+        <li>gray_first->Venusta</li>
+        <li>gray_first->Fulgida</li>
+        <li>gray_first->Bona</li>
+        <li>gray_first->Iusta</li>
+        <li>gray_first->Recta</li>
+        <li>gray_first->Vera</li>
+        <li>gray_first->Sincera</li>
+        <li>gray_first->Fida</li>
+        <li>gray_first->Benigna</li>
+        <li>gray_first->Pia</li>
+        <li>gray_first->Libera</li>
+        <li>gray_first->Modesta</li>
+        <li>gray_first->Magna</li>
+        <li>gray_first->Valida</li>
+        <li>gray_first->Robusta</li>
+        <li>gray_first->Invicta</li>
+        <li>gray_first->Intrepida</li>
+        <li>gray_first->Impavida</li>
+        <li>gray_first->Firma</li>
+        <li>gray_first->Strenua</li>
+        <li>gray_first->Magnanima</li>
+        <li>gray_first->Perpetua</li>
+        <li>gray_first->Docta</li>
+        <li>gray_first->Erudita</li>
+        <li>gray_first->Provida</li>
+        <li>gray_first->Acuta</li>
+        <li>gray_first->Perspicua</li>
+        <li>gray_first->Ingeniosa</li>
+        <li>gray_first->Perita</li>
+        <li>gray_first->Sedula</li>
+        <li>gray_first->Industria</li>
+        <li>gray_first->Studiosa</li>
+        <li>gray_first->Fausta</li>
+        <li>gray_first->Prospera</li>
+        <li>gray_first->Optima</li>
+        <li>gray_first->Laeta</li>
+        <li>gray_first->Beata</li>
+        <li>gray_first->Florida</li>
+        <li>gray_first->Fecunda</li>
+        <li>gray_first->Pacifica</li>
+        <li>gray_first->Tranquilla</li>
+        <li>gray_first->Nova</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Family names. Keyword: gray_last -->
+  <RulePackDef>
+    <defName>Gray_NamerFamilyName</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>gray_last->Luminius</li>
+        <li>gray_last->Gravitius</li>
+        <li>gray_last->Inertius</li>
+        <li>gray_last->Momentius</li>
+        <li>gray_last->Quantius</li>
+        <li>gray_last->Undarius</li>
+        <li>gray_last->Radiarius</li>
+        <li>gray_last->Spectrius</li>
+        <li>gray_last->Orbitius</li>
+        <li>gray_last->Temporius</li>
+        <li>gray_last->Spatius</li>
+        <li>gray_last->Vacuarius</li>
+        <li>gray_last->Impulsius</li>
+        <li>gray_last->Atomius</li>
+        <li>gray_last->Elementius</li>
+        <li>gray_last->Aurarius</li>
+        <li>gray_last->Argentius</li>
+        <li>gray_last->Ferrius</li>
+        <li>gray_last->Cuprius</li>
+        <li>gray_last->Carbonius</li>
+        <li>gray_last->Silicius</li>
+        <li>gray_last->Phosphorius</li>
+        <li>gray_last->Sulfurius</li>
+        <li>gray_last->Crystallius</li>
+        <li>gray_last->Moleculius</li>
+        <li>gray_last->Ionius</li>
+        <li>gray_last->Vitianus</li>
+        <li>gray_last->Cellulius</li>
+        <li>gray_last->Nucleius</li>
+        <li>gray_last->Generius</li>
+        <li>gray_last->Specianus</li>
+        <li>gray_last->Evolutionius</li>
+        <li>gray_last->Hereditius</li>
+        <li>gray_last->Symbiosius</li>
+        <li>gray_last->Folius</li>
+        <li>gray_last->Radicius</li>
+        <li>gray_last->Nervius</li>
+        <li>gray_last->Sanguinius</li>
+        <li>gray_last->Numerius</li>
+        <li>gray_last->Calculius</li>
+        <li>gray_last->Rationius</li>
+        <li>gray_last->Geometrius</li>
+        <li>gray_last->Axius</li>
+        <li>gray_last->Vectorius</li>
+        <li>gray_last->Matricius</li>
+        <li>gray_last->Fractalius</li>
+        <li>gray_last->Infinitius</li>
+        <li>gray_last->Algorithmius</li>
+        <li>gray_last->Sphaerius</li>
+        <li>gray_last->Symmetrius</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <!-- Full pawn name. Root keyword must be the first rule of this pack. -->
+  <RulePackDef>
+    <defName>Gray_NamerPerson</defName>
+    <include>
+      <li>Gray_NamerFirstName</li>
+      <li>Gray_NamerFamilyName</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[gray_first] [gray_last]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

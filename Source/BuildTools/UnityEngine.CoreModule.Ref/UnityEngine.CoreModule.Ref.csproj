@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>UnityEngine.CoreModule</AssemblyName>
+    <RootNamespace>UnityEngine.CoreModule.Ref</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+
+  <!-- 仅用于 1.7 编译期：把 CE 引用的 UnityEngine.CoreModule 类型转发到游戏的 UnityStubs。 -->
+  <ItemGroup>
+    <Reference Include="$(RimWorldPath)\UnityStubs.dll" Private="False" />
+  </ItemGroup>
+</Project>

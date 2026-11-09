@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Mental state immunity -->
+  <GR_Settings_MentalStateImmunity>精神状态免疫</GR_Settings_MentalStateImmunity>
+  <!-- EN: Gray pawns only suffer natural mood breaks. Mental states forced by hediffs, abilities, genes, events, or mods are blocked. -->
+  <GR_Settings_MentalStateImmunityDesc>灰裔只会发生正常的心情崩溃；由 Hediff、能力、基因、事件或 Mod 强制施加的精神状态会被屏蔽。</GR_Settings_MentalStateImmunityDesc>
+
+</LanguageData>

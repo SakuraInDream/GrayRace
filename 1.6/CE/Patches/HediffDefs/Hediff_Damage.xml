@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- 纳米侵蚀 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="GR_Nanite_Corrosion"]/stages/li[minSeverity="0.1"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+          <ArmorRating_Sharp>-4</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-4</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.1</ArmorRating_Heat>
+        </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="GR_Nanite_Corrosion"]/stages/li[minSeverity="0.35"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+          <ArmorRating_Sharp>-14</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-14</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.35</ArmorRating_Heat>
+        </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="GR_Nanite_Corrosion"]/stages/li[minSeverity="0.7"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+          <ArmorRating_Sharp>-28</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-28</ArmorRating_Blunt>
+          <ArmorRating_Heat>-0.7</ArmorRating_Heat>
+        </statOffsets>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="GR_Nanite_Corrosion"]/stages/li[minSeverity="0.9"]/statOffsets</xpath>
+    <value>
+      <statOffsets>
+          <ArmorRating_Sharp>-40</ArmorRating_Sharp>
+          <ArmorRating_Blunt>-40</ArmorRating_Blunt>
+          <ArmorRating_Heat>-1</ArmorRating_Heat>
+        </statOffsets>
+    </value>
+  </Operation>
+
+</Patch>

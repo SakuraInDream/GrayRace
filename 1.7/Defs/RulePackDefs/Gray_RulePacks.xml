@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Gray Race settlement namer. All keywords are self-contained: no vanilla word banks are referenced. -->
+  <RulePackDef>
+    <defName>Gray_NamerSettlement</defName>
+    <rulePack>
+      <rulesStrings>
+
+        <!-- ===== ROOT (must be the first rule). Weights: 1 / 2 / 4 / 4 / 8 / 12 / 12 ===== -->
+        <li>r_name(p=1)->[city]</li>
+        <li>r_name(p=2)->[star]</li>
+        <li>r_name(p=4)->New [city]</li>
+        <li>r_name(p=4)->[city] New District</li>
+        <li>r_name(p=8)->[constellation]</li>
+        <li>r_name(p=12)->[terrain] [outpost]</li>
+        <li>r_name(p=12)->[virtue] [hub]</li>
+
+        <!-- ===== city: real world cities (capitals and 2nd/3rd largest). China: Shanghai and Hong Kong only. New York -> York, New Delhi -> Delhi. ===== -->
+        <li>city->Washington</li>
+        <li>city->London</li>
+        <li>city->Paris</li>
+        <li>city->Berlin</li>
+        <li>city->Madrid</li>
+        <li>city->Rome</li>
+        <li>city->Moscow</li>
+        <li>city->Kyiv</li>
+        <li>city->Warsaw</li>
+        <li>city->Prague</li>
+        <li>city->Vienna</li>
+        <li>city->Budapest</li>
+        <li>city->Athens</li>
+        <li>city->Stockholm</li>
+        <li>city->Oslo</li>
+        <li>city->Copenhagen</li>
+        <li>city->Helsinki</li>
+        <li>city->Amsterdam</li>
+        <li>city->Brussels</li>
+        <li>city->Zurich</li>
+        <li>city->Geneva</li>
+        <li>city->Lisbon</li>
+        <li>city->Dublin</li>
+        <li>city->Ottawa</li>
+        <li>city->Toronto</li>
+        <li>city->Montreal</li>
+        <li>city->Vancouver</li>
+        <li>city->York</li>
+        <li>city->Los Angeles</li>
+        <li>city->Chicago</li>
+        <li>city->San Francisco</li>
+        <li>city->Boston</li>
+        <li>city->Seattle</li>
+        <li>city->Houston</li>
+        <li>city->Mexico City</li>
+        <li>city->Rio de Janeiro</li>
+        <li>city->Sao Paulo</li>
+        <li>city->Buenos Aires</li>
+        <li>city->Santiago</li>
+        <li>city->Lima</li>
+        <li>city->Bogota</li>
+        <li>city->Cairo</li>
+        <li>city->Alexandria</li>
+        <li>city->Nairobi</li>
+        <li>city->Cape Town</li>
+        <li>city->Johannesburg</li>
+        <li>city->Lagos</li>
+        <li>city->Casablanca</li>
+        <li>city->Istanbul</li>
+        <li>city->Ankara</li>
+        <li>city->Jerusalem</li>
+        <li>city->Tehran</li>
+        <li>city->Baghdad</li>
+        <li>city->Dubai</li>
+        <li>city->Riyadh</li>
+        <li>city->Delhi</li>
+        <li>city->Mumbai</li>
+        <li>city->Tokyo</li>
+        <li>city->Osaka</li>
+        <li>city->Kyoto</li>
+        <li>city->Seoul</li>
+        <li>city->Busan</li>
+        <li>city->Bangkok</li>
+        <li>city->Singapore</li>
+        <li>city->Jakarta</li>
+        <li>city->Manila</li>
+        <li>city->Hanoi</li>
+        <li>city->Sydney</li>
+        <li>city->Melbourne</li>
+        <li>city->Auckland</li>
+        <li>city->Wellington</li>
+        <li>city->Shanghai</li>
+        <li>city->Hong Kong</li>
+
+        <!-- ===== star: only stars that have a real Chinese proper name or Chinese lunar-mansion name. ===== -->
+        <li>star->Alpheratz</li>
+        <li>star->Sadalmelik</li>
+        <li>star->Altair</li>
+        <li>star->Hamal</li>
+        <li>star->Capella</li>
+        <li>star->Arcturus</li>
+        <li>star->Cor Caroli</li>
+        <li>star->Sirius</li>
+        <li>star->Procyon</li>
+        <li>star->Canopus</li>
+        <li>star->Schedar</li>
+        <li>star->Rigil Kentaurus</li>
+        <li>star->Alderamin</li>
+        <li>star->Menkar</li>
+        <li>star->Phact</li>
+        <li>star->Alphecca</li>
+        <li>star->Acrux</li>
+        <li>star->Deneb</li>
+        <li>star->Sualocin</li>
+        <li>star->Thuban</li>
+        <li>star->Kitalpha</li>
+        <li>star->Achernar</li>
+        <li>star->Castor</li>
+        <li>star->Alnair</li>
+        <li>star->Rasalgethi</li>
+        <li>star->Alphard</li>
+        <li>star->Regulus</li>
+        <li>star->Arneb</li>
+        <li>star->Zubenelgenubi</li>
+        <li>star->Vega</li>
+        <li>star->Rasalhague</li>
+        <li>star->Betelgeuse</li>
+        <li>star->Peacock</li>
+        <li>star->Markab</li>
+        <li>star->Mirfak</li>
+        <li>star->Ankaa</li>
+        <li>star->Alrescha</li>
+        <li>star->Fomalhaut</li>
+        <li>star->Rukbat</li>
+        <li>star->Antares</li>
+        <li>star->Unukalhai</li>
+        <li>star->Aldebaran</li>
+        <li>star->Atria</li>
+        <li>star->Dubhe</li>
+        <li>star->Polaris</li>
+        <li>star->Regor</li>
+        <li>star->Spica</li>
+
+        <!-- ===== constellation: the 88 constellations ===== -->
+        <li>constellation->Andromeda</li>
+        <li>constellation->Antlia</li>
+        <li>constellation->Apus</li>
+        <li>constellation->Aquarius</li>
+        <li>constellation->Aquila</li>
+        <li>constellation->Ara</li>
+        <li>constellation->Aries</li>
+        <li>constellation->Auriga</li>
+        <li>constellation->Bootes</li>
+        <li>constellation->Caelum</li>
+        <li>constellation->Camelopardalis</li>
+        <li>constellation->Cancer</li>
+        <li>constellation->Canes Venatici</li>
+        <li>constellation->Canis Major</li>
+        <li>constellation->Canis Minor</li>
+        <li>constellation->Capricornus</li>
+        <li>constellation->Carina</li>
+        <li>constellation->Cassiopeia</li>
+        <li>constellation->Centaurus</li>
+        <li>constellation->Cepheus</li>
+        <li>constellation->Cetus</li>
+        <li>constellation->Chamaeleon</li>
+        <li>constellation->Circinus</li>
+        <li>constellation->Columba</li>
+        <li>constellation->Coma Berenices</li>
+        <li>constellation->Corona Australis</li>
+        <li>constellation->Corona Borealis</li>
+        <li>constellation->Corvus</li>
+        <li>constellation->Crater</li>
+        <li>constellation->Crux</li>
+        <li>constellation->Cygnus</li>
+        <li>constellation->Delphinus</li>
+        <li>constellation->Dorado</li>
+        <li>constellation->Draco</li>
+        <li>constellation->Equuleus</li>
+        <li>constellation->Eridanus</li>
+        <li>constellation->Fornax</li>
+        <li>constellation->Gemini</li>
+        <li>constellation->Grus</li>
+        <li>constellation->Hercules</li>
+        <li>constellation->Horologium</li>
+        <li>constellation->Hydra</li>
+        <li>constellation->Hydrus</li>
+        <li>constellation->Indus</li>
+        <li>constellation->Lacerta</li>
+        <li>constellation->Leo</li>
+        <li>constellation->Leo Minor</li>
+        <li>constellation->Lepus</li>
+        <li>constellation->Libra</li>
+        <li>constellation->Lupus</li>
+        <li>constellation->Lynx</li>
+        <li>constellation->Lyra</li>
+        <li>constellation->Mensa</li>
+        <li>constellation->Microscopium</li>
+        <li>constellation->Monoceros</li>
+        <li>constellation->Musca</li>
+        <li>constellation->Norma</li>
+        <li>constellation->Octans</li>
+        <li>constellation->Ophiuchus</li>
+        <li>constellation->Orion</li>
+        <li>constellation->Pavo</li>
+        <li>constellation->Pegasus</li>
+        <li>constellation->Perseus</li>
+        <li>constellation->Phoenix</li>
+        <li>constellation->Pictor</li>
+        <li>constellation->Pisces</li>
+        <li>constellation->Piscis Austrinus</li>
+        <li>constellation->Puppis</li>
+        <li>constellation->Pyxis</li>
+        <li>constellation->Reticulum</li>
+        <li>constellation->Sagitta</li>
+        <li>constellation->Sagittarius</li>
+        <li>constellation->Scorpius</li>
+        <li>constellation->Sculptor</li>
+        <li>constellation->Scutum</li>
+        <li>constellation->Serpens</li>
+        <li>constellation->Sextans</li>
+        <li>constellation->Taurus</li>
+        <li>constellation->Telescopium</li>
+        <li>constellation->Triangulum</li>
+        <li>constellation->Triangulum Australe</li>
+        <li>constellation->Tucana</li>
+        <li>constellation->Ursa Major</li>
+        <li>constellation->Ursa Minor</li>
+        <li>constellation->Vela</li>
+        <li>constellation->Virgo</li>
+        <li>constellation->Volans</li>
+        <li>constellation->Vulpecula</li>
+
+        <!-- ===== terrain: landscape modifier (12 free-form + 12 taken from Core / Odyssey biomes) ===== -->
+        <li>terrain->Wasteland</li>
+        <li>terrain->Polar</li>
+        <li>terrain->Northern</li>
+        <li>terrain->Deepwood</li>
+        <li>terrain->Mountain</li>
+        <li>terrain->Tundra</li>
+        <li>terrain->Plateau</li>
+        <li>terrain->Canyon</li>
+        <li>terrain->Marsh</li>
+        <li>terrain->Dune</li>
+        <li>terrain->Icefield</li>
+        <li>terrain->Ravine</li>
+        <li>terrain->Forest</li>
+        <li>terrain->Boreal</li>
+        <li>terrain->Rainforest</li>
+        <li>terrain->Shrubland</li>
+        <li>terrain->Desert</li>
+        <li>terrain->Bog</li>
+        <li>terrain->Sea Ice</li>
+        <li>terrain->Glacier</li>
+        <li>terrain->Glowforest</li>
+        <li>terrain->Grassland</li>
+        <li>terrain->Lava</li>
+        <li>terrain->Scarland</li>
+
+        <!-- ===== outpost: settlement type ===== -->
+        <li>outpost->Outpost</li>
+        <li>outpost->Mining Station</li>
+        <li>outpost->Research Station</li>
+        <li>outpost->Observation Station</li>
+
+        <!-- ===== virtue: positive abstract noun ===== -->
+        <li>virtue->Hope</li>
+        <li>virtue->Future</li>
+        <li>virtue->Liberty</li>
+        <li>virtue->Vitality</li>
+        <li>virtue->Discovery</li>
+        <li>virtue->Dawn</li>
+        <li>virtue->Horizon</li>
+        <li>virtue->Progress</li>
+        <li>virtue->Unity</li>
+        <li>virtue->Aspiration</li>
+        <li>virtue->Radiance</li>
+        <li>virtue->Endeavor</li>
+
+        <!-- ===== hub: settlement type ===== -->
+        <li>hub->Hub</li>
+        <li>hub->Nexus</li>
+        <li>hub->Core City</li>
+        <li>hub->Ideal City</li>
+        <li>hub->Haven</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

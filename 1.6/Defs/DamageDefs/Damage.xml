@@ -186,4 +186,22 @@
     <workerClass>DamageWorker_AddInjury</workerClass>
   </DamageDef>
 
+  <!--鱼雷直击-->
+  <DamageDef ParentName="Bomb">
+    <defName>GR_Damage_Torpedo</defName>
+    <label>Torpedo</label>
+    <workerClass>SD.GrayRace.DamageWorkers.DamageWorker_Torpedo</workerClass>
+    <impactSoundType>GR_TorpedoImpact</impactSoundType>
+    <isRanged>true</isRanged>
+    <isExplosive>true</isExplosive>
+    <defaultDamage>50</defaultDamage>
+    <defaultArmorPenetration>1</defaultArmorPenetration>
+    <modExtensions>
+      <li Class="SD.GrayRace.DefModExtensions.TorpedoDamageExtension">
+        <damagePerBodySize>1</damagePerBodySize>
+        <maxDamageFactor>9999</maxDamageFactor>
+      </li>
+    </modExtensions>
+  </DamageDef>
+
 </Defs>

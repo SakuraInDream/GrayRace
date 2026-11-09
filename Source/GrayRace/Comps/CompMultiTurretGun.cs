@@ -653,7 +653,31 @@ public class CompMultiTurretGun : ThingComp
             return false;
         }
 
+        return TryLaunchProjectile(hp, pawn, verb, projectileDef, target, shootLine, origin);
+    }
+
+    /// <summary>
+    /// 模块武器投射物发射入口。需要特殊投射物处理的兼容层可通过派生类覆盖此方法。
+    /// </summary>
+    protected virtual bool TryLaunchProjectile(
+        MechHardpoint hp,
+        Pawn pawn,
+        Verb verb,
+        ThingDef projectileDef,
+        LocalTargetInfo target,
+        ShootLine shootLine,
+        Vector3 origin)
+    {
         origin.y = 0f;
+
+        // 未知投射物类：避免 InvalidCastException。兼容层可覆盖此方法处理特殊投射物。
+        if (!typeof(Projectile).IsAssignableFrom(projectileDef.thingClass))
+        {
+            Log.ErrorOnce(
+                $"[GrayRace] No compatible projectile launcher for {projectileDef.defName} ({projectileDef.thingClass}).",
+                projectileDef.shortHash ^ 0x47524345);
+            return false;
+        }
 
         Projectile projectile = (Projectile)GenSpawn.Spawn(projectileDef, pawn.Position, pawn.Map);
 

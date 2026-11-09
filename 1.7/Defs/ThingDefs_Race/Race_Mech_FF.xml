@@ -9,7 +9,10 @@
       <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
       <StaggerDurationFactor>0</StaggerDurationFactor>
+      <MeleeDodgeChance>5</MeleeDodgeChance>
+      <PsychicSensitivity>0</PsychicSensitivity>
     </statBases>
+    <tools Inherit="False" />
     <modExtensions>
       <li Class="SD.GrayRace.HarmonyPatches.DisableNeeds">
         <disabledNeeds>
