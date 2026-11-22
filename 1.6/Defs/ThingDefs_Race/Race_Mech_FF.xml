@@ -19,6 +19,7 @@
           <li>MechEnergy</li>
         </disabledNeeds>
       </li>
+      <li Class="SD.GrayRace.DefModExtensions.TerrainSkipExtension" />
     </modExtensions>
     <race>
       <body>GR_MechBody</body>

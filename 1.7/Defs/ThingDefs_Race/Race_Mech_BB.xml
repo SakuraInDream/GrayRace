@@ -7,13 +7,15 @@
     <label>Verdict Princess</label>
     <description>The Verdict-class is a heavy mechanoid specialized in long-range combat. ...Just by looking at her, one can tell this chassis has fully matured. No trace of immaturity remains; she has completely shed her green form. Firepower, armor, and shields are all at fully mature levels, and fitting possibilities have opened up at once. As long as enough of them are fielded, any problem will be solved.</description>
     <statBases>
+      <MarketValue>6400</MarketValue>
       <Mass>135</Mass>
       <MoveSpeed>6</MoveSpeed>
       <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+      <EMPResistance>0.2</EMPResistance>
       <MeleeHitChance>32</MeleeHitChance>
       <BandwidthCost>8</BandwidthCost>
-      <CaravanBonusSpeedFactor>10</CaravanBonusSpeedFactor>
+      <CaravanRidingSpeedFactor>12</CaravanRidingSpeedFactor>
     </statBases>
     <race>
       <baseBodySize>8</baseBodySize>
@@ -45,7 +47,7 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="LightMechanoidKind">
+  <PawnKindDef ParentName="GR_BaseMechanoidKind">
     <defName>GR_Mech_BB</defName>
     <label>Verdict Princess</label>
     <race>GR_Mech_BB</race>

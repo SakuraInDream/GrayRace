@@ -101,6 +101,15 @@
           <li>
             <defName>Tough</defName>
           </li>
+          <li>
+            <defName>Cannibal</defName>
+          </li>
+          <li>
+            <defName>Bloodlust</defName>
+          </li>
+          <li>
+            <defName>Gourmand</defName>
+          </li>
         </disallowedTraits>
         <forcedRaceTraitEntries>          <!--种族必备特性-->
           <li>
@@ -175,6 +184,9 @@
             <li>GR_Feature0</li>
             <li>GR_Feature1</li>
             <li>GR_Feature2</li>
+            <li>GR_Feature3</li>
+            <li>GR_Feature4</li>
+            <li>GR_Feature5</li>
           </headTypes>
           <bodyTypes>            <!--体型-->
             <li>Female</li>
@@ -253,7 +265,7 @@
                   <layerOffset>-0.274</layerOffset>
                 </south>
                 <north>
-                  <layerOffset>-0.274</layerOffset>
+                  <layerOffset>-0.271</layerOffset>
                 </north>
                 <east>
                   <layerOffset>-0.274</layerOffset>
@@ -530,6 +542,10 @@
           <li>GR_ShipSlayer</li>
         </weaponList>
         <onlyHaveRaceRestrictedGenes>true</onlyHaveRaceRestrictedGenes>
+        <onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+        <xenotypeList>
+          <li>GR_Xeno_Gray</li>
+        </xenotypeList>
         <whiteGeneTags>
           <li>Aptitude</li>
         </whiteGeneTags>

@@ -62,7 +62,7 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
-    <weaponTags>
+    <weaponTags Inherit="False">
       <li>GR_BasicWeapon</li>
     </weaponTags>
     <tools>
@@ -292,7 +292,7 @@
       </li>
     </verbs>
     <weaponTags Inherit="False">
-      <li>GR_T1Weapon</li>
+      <li>GR_BasicWeapon</li>
     </weaponTags>
     <tools>
       <li>

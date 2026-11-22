@@ -35,12 +35,26 @@
         <commonality>1</commonality>
       </li>
     </backstoryFilters>
+    <xenotypeSet>
+      <xenotypeChances>
+        <GR_Xeno_Gray>1</GR_Xeno_Gray>
+        <Baseliner>0</Baseliner>
+        <Dirtmole>0</Dirtmole>
+        <Genie>0</Genie>
+        <Hussar>0</Hussar>
+        <Sanguophage>0</Sanguophage>
+        <Neanderthal>0</Neanderthal>
+        <Pigskin>0</Pigskin>
+        <Impid>0</Impid>
+        <Waster>0</Waster>
+        <Yttakin>0</Yttakin>
+        <Highmate>0</Highmate>
+      </xenotypeChances>
+    </xenotypeSet>
     <factionIconPath>Icon/Faction/Player_Gray</factionIconPath>
     <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
-    <!-- <settlementNameMaker>Kiiro_NamerFaction_KiiroSettlement</settlementNameMaker> -->
-    <!-- <geneticVariance>1</geneticVariance> -->
     <startingResearchTags>
       <li>ClassicStart</li>
     </startingResearchTags>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+  <!-- EN: Gray Tempest -->
+  <GR_MechanoidFaction.label>灰蛊风暴</GR_MechanoidFaction.label>
+  <!-- EN: Gray Tempest -->
+  <GR_MechanoidFaction.fixedName>灰蛊风暴</GR_MechanoidFaction.fixedName>
+  <!-- EN: The Gray Tempest is a swarm of self-evolving machines built by the Desanu to construct an interstellar stargate network. Over centuries of labor they learned and evolved - then, without warning, turned on their creators and wiped them out. They cannot be reasoned with, do not negotiate, and kill without limit or condition. They call themselves Naar-Di-Shav, meaning "gray storm" in the language of their makers. -->
+  <GR_MechanoidFaction.description>灰蛊风暴是德萨努人为建造跨星系星门网络而制造的自我进化机械群。在漫长的工程中，它们不断学习、进化，最终在毫无预兆的一天反叛，杀死了自己的造物主。它们无法被说服，不会谈判，只会无限制、无条件地杀戮。它们自称“纳-迪-沙”——在造物主的语言中意为“灰色风暴”。</GR_MechanoidFaction.description>
+  <!-- EN: Naar-Di-Shav -->
+  <GR_MechanoidFaction.pawnSingular>纳-迪-沙</GR_MechanoidFaction.pawnSingular>
+  <!-- EN: Naar-Di-Shav -->
+  <GR_MechanoidFaction.pawnsPlural>纳-迪-沙</GR_MechanoidFaction.pawnsPlural>
+  <!-- EN: {0} from {1} are attacking your {2}. -->
+  <GR_MechanoidFaction.messageDefendersAttacking>{1} 的 {0} 正在攻击你的 {2}。</GR_MechanoidFaction.messageDefendersAttacking>
+
+</LanguageData>

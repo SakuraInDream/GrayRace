@@ -4,7 +4,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor1Base" Abstract="True">
     <label>Disruptor</label>
     <description>The high-energy beam fired by a disruptor simultaneously weakens and breaks the molecular bonds holding the target's atoms together. It penetrates shields and armor, dealing devastating damage directly to hull and crew.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <iconPath>Icon/ShipParts/Red_Laser</iconPath>
     <slotFamily>Disruptors</slotFamily>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -48,7 +48,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor2Base" Abstract="True">
     <label>Ion Disruptor</label>
     <description>These upgraded disruptors fire a more powerful ion stream at their targets.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
+    <iconPath>Icon/ShipParts/Blue_Laser</iconPath>
     <slotFamily>IonDisruptors</slotFamily>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
@@ -97,7 +97,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Disruptor3Base" Abstract="True">
     <label>Phase Disruptor</label>
     <description>This extremely enhanced disruptor fires quantum energy. Any target struck suffers tremendous damage.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
+    <iconPath>Icon/ShipParts/Purple_Laser</iconPath>
     <slotFamily>PhaseDisruptors</slotFamily>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>

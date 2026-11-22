@@ -9,6 +9,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_ShieldBooster_Advanced</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -53,6 +56,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_ShieldHardener_Advanced</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -97,6 +103,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Afterburners_Advanced</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -111,12 +120,12 @@
     <uiOrder>0</uiOrder>
   </SD.GrayRace.Defs.GRMechModuleDef>
 
-  <!-- 加力燃烧室 -->
+  <!-- 先进加力燃烧室 -->
   <SD.GrayRace.Defs.GRMechModuleDef>
     <defName>GR_MechModule_Afterburners_Advanced</defName>
     <label>Advanced Afterburners</label>
     <description>Advanced afterburners increase a ship's combat speed.</description>
-    <iconPath>Icon/ShipParts/ship_part_afterburner</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>
@@ -139,10 +148,13 @@
     <defName>GR_MechModule_ReactorBooster</defName>
     <label>Reactor Booster</label>
     <description>Auxiliary Power Systems increase the ship's reactor power output.</description>
-    <iconPath>Icon/ShipParts/ship_part_reactor_booster</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_ReactorBooster_Advanced</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
@@ -158,7 +170,7 @@
     <defName>GR_MechModule_ReactorBooster_Advanced</defName>
     <label>Advanced Reactor Booster</label>
     <description>The discovery of antimatter enables highly advanced reactor boosters that greatly increase ship reactor output.</description>
-    <iconPath>Icon/ShipParts/ship_part_reactor_booster</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>
@@ -177,10 +189,13 @@
     <defName>GR_MechModule_ReactiveArmor</defName>
     <label>Reactive Armor</label>
     <description>Implanting crystal arrays into a ship's defense systems provides some resistance against weapons that would normally pierce armor.</description>
-    <iconPath>Icon/ShipParts/ship_part_reactive_armor</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_LivingReactiveArmor</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
@@ -201,7 +216,7 @@
     <defName>GR_MechModule_LivingReactiveArmor</defName>
     <label>Living Reactive Armor</label>
     <description>Reactive Metal Filaments respond to incoming fire by reconfiguring themselves to resist armor-piercing weaponry.</description>
-    <iconPath>Icon/ShipParts/ship_part_reactive_armor</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_shield_recharger</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_Auxiliary</li>
     </compatibleSlots>

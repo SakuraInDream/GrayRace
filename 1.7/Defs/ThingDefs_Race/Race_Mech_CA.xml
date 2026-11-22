@@ -7,13 +7,15 @@
     <label>Drive Fairy</label>
     <description>The Drive-class is a medium mechanoid specialized in medium-range combat. Her appearance still retains a girl's freshness, yet her body has grown greatly, giving off a pure sense of inaccessibility. Just like her appearance, her firepower has risen considerably while her speed has not dropped much, so approaching her must be difficult. Judging by her rate of fire, if she were not a war machine, she would probably be a popular and diligent worker.</description>
     <statBases>
+      <MarketValue>3200</MarketValue>
       <Mass>90</Mass>
       <MoveSpeed>7</MoveSpeed>
       <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+      <EMPResistance>0.15</EMPResistance>
       <MeleeHitChance>16</MeleeHitChance>
       <BandwidthCost>4</BandwidthCost>
-      <CaravanBonusSpeedFactor>12</CaravanBonusSpeedFactor>
+      <CaravanRidingSpeedFactor>14</CaravanRidingSpeedFactor>
     </statBases>
     <race>
       <baseBodySize>4</baseBodySize>
@@ -45,7 +47,7 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="LightMechanoidKind">
+  <PawnKindDef ParentName="GR_BaseMechanoidKind">
     <defName>GR_Mech_CA</defName>
     <label>Drive Fairy</label>
     <race>GR_Mech_CA</race>

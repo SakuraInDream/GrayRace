@@ -4,7 +4,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_KineticBatteryBase" Abstract="True">
     <label>Kinetic Cannon</label>
     <description>A cannon with extreme range, fierce firepower, and exceptional accuracy.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <iconPath>Icon/ShipParts/Red_Laser</iconPath>
     <slotFamily>KineticBattery</slotFamily>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>

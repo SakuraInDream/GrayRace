@@ -2,14 +2,14 @@
 <Defs>
 
   <!-- 护卫舰 -->
-  <ThingDef Name="GR_Mech" ParentName="LightMechanoid" Abstract="true">
+  <ThingDef Name="GR_Mech" ParentName="BaseMechanoid" Abstract="true">
     <statBases>
       <WastepacksPerRecharge>0</WastepacksPerRecharge>
       <MechEnergyLossPerHP>0</MechEnergyLossPerHP>
       <EnergyShieldEnergyMax>0</EnergyShieldEnergyMax>
       <EnergyShieldRechargeRate>0</EnergyShieldRechargeRate>
       <StaggerDurationFactor>0</StaggerDurationFactor>
-      <MeleeDodgeChance>5</MeleeDodgeChance>
+      <MeleeDodgeChance>0.5</MeleeDodgeChance>
       <PsychicSensitivity>0</PsychicSensitivity>
     </statBases>
     <tools Inherit="False" />
@@ -19,6 +19,7 @@
           <li>MechEnergy</li>
         </disabledNeeds>
       </li>
+      <li Class="SD.GrayRace.DefModExtensions.TerrainSkipExtension" />
     </modExtensions>
     <race>
       <body>GR_MechBody</body>
@@ -27,14 +28,14 @@
       <bulletStaggerDelayTicks>0</bulletStaggerDelayTicks>
       <lifeStageAges>
         <li>
-          <def>MechanoidFullyFormed</def>
+          <def>GR_RideableMechanoidFullyFormed</def>
           <minAge>0</minAge>
           <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
           <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
           <soundCall>Pawn_Mech_Militor_Call</soundCall>
         </li>
         <li>
-          <def>MechanoidFullyFormed</def>
+          <def>GR_RideableMechanoidFullyFormed</def>
           <minAge>100</minAge>
           <soundWounded>Pawn_Mech_Militor_Wounded</soundWounded>
           <soundDeath>Pawn_Mech_Militor_Death</soundDeath>
@@ -60,13 +61,15 @@
     <label>Sky Patrol Wisp</label>
     <description>The Sky Patrol-class is a light mechanoid focused on mass production and flexible battlefield support. As the Gray's vanguard against enemies, they are deployed in large numbers and can provide rapid support in emergencies. She has the speed and mass-producibility expected of a frigate, forming a superb balance with her somewhat simple armor and firepower. Precisely because she is a mass-produced model, her slender body and limbs seem yet to develop—quite immature... Even so, beneath what little armor she has, a feminine curve can already be glimpsed.</description>
     <statBases>
+      <MarketValue>800</MarketValue>
       <Mass>40</Mass>
-      <MoveSpeed>12.7</MoveSpeed>
+      <MoveSpeed>12</MoveSpeed>
       <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <EMPResistance>0.05</EMPResistance>
       <MeleeHitChance>4</MeleeHitChance>
       <BandwidthCost>1</BandwidthCost>
-      <CaravanBonusSpeedFactor>16</CaravanBonusSpeedFactor>
+      <CaravanRidingSpeedFactor>24</CaravanRidingSpeedFactor>
     </statBases>
     <race>
       <baseBodySize>1</baseBodySize>
@@ -98,7 +101,17 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="LightMechanoidKind">
+  <PawnKindDef Name="GR_BaseMechanoidKind" Abstract="True">
+    <defaultFactionDef>GR_MechanoidFaction</defaultFactionDef>
+    <isFighter>true</isFighter>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+    <canStrip>false</canStrip>
+    <minGenerationAge MayRequire="Ludeon.RimWorld.Biotech">200</minGenerationAge>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GR_BaseMechanoidKind">
     <defName>GR_Mech_FF</defName>
     <label>Sky Patrol Wisp</label>
     <race>GR_Mech_FF</race>

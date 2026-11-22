@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using HarmonyLib;
 using RimWorld;
+using SD.GrayRace.DefModExtensions;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -10,10 +11,12 @@ using Verse.AI;
 namespace SD.GrayRace.HarmonyPatches;
 
 /// <summary>
-/// 让携带 GR_Hediff_Thruster 的 Pawn“悬浮”移动。
+/// 让“悬浮单位”移动时忽略地形减速：
+/// 1) 种族 ThingDef 挂了 <see cref="TerrainSkipExtension"/>：GR_Mech 抽象基类及其所有子机械体；
+/// 2) Pawn 身上有 GR_Hediff_Thruster：Gray 的推进器变形。
 /// 参考 Maru 种族的 MaruTerrainSkip：接管 Pawn_PathFollower.CostToMoveIntoCell，
 /// 跳过地形（含水面、雪、沙、地形 tag 减速）带来的移动耗时，
-/// 但保留建筑与门的通行耗时——推进器只能浮过地面，不能破门。
+/// 但保留建筑与门的通行耗时——悬浮单位不能破门。
 /// 注意：这里只改变“进入下一格的耗时”，不影响寻路成本与地形可通行性判断。
 /// </summary>
 [HarmonyPatch]
@@ -59,12 +62,27 @@ internal static class Patch_Pawn_PathFollower_CostToMoveIntoCell
                    "Patch_Pawn_PathFollower_CostToMoveIntoCell: 未找到 Pawn_PathFollower.CostToMoveIntoCell(Pawn, IntVec3)（游戏版本不匹配？）");
     }
 
+    /// <summary>
+    /// 触发条件（任一满足即可）：
+    /// 1) 种族 ThingDef 挂了 TerrainSkipExtension（GR_Mech 抽象基类，全部机械体自动继承）；
+    /// 2) Pawn 身上有 GR_Hediff_Thruster（Gray 的推进器变形）。
+    /// </summary>
+    private static bool ShouldIgnoreTerrain(Pawn pawn)
+    {
+        if (pawn.def.HasModExtension<TerrainSkipExtension>())
+        {
+            return true;
+        }
+
+        HediffDef def = ThrusterDef;
+        return def != null
+               && pawn.health?.hediffSet != null
+               && pawn.health.hediffSet.HasHediff(def);
+    }
+
     private static bool Prefix(Pawn pawn, IntVec3 c, ref float __result)
     {
-        HediffDef def = ThrusterDef;
-        if (def == null
-            || pawn?.health?.hediffSet == null
-            || !pawn.health.hediffSet.HasHediff(def))
+        if (pawn == null || !ShouldIgnoreTerrain(pawn))
         {
             return true;
         }

@@ -10,7 +10,7 @@
     <recipeMaker>
       <unfinishedThingDef>UnfinishedPack</unfinishedThingDef>
       <researchPrerequisite>GR_T2MechTech</researchPrerequisite>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>

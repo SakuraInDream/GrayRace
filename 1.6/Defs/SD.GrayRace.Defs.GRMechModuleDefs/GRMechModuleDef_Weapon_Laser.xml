@@ -6,7 +6,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_InfraredBase" Abstract="True">
     <label>Red Laser</label>
     <description>Laser weapons fire focused beams at targets, damaging enemies with intense heat.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <iconPath>Icon/ShipParts/Red_Laser</iconPath>
     <!-- slotFamily 用来解决同一武器的 S/M/L 切换问题 -->
     <slotFamily>PulseLaser_Infrared</slotFamily>
     <researchPrerequisites>
@@ -68,7 +68,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_BlueBase" Abstract="True">
     <label>Blue Laser</label>
     <description>More powerful than red lasers. To organic beings, electromagnetic radiation of this wavelength appears blue or violet.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
+    <iconPath>Icon/ShipParts/Blue_Laser</iconPath>
     <slotFamily>PulseLaser_Blue</slotFamily>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -131,7 +131,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_UVBase" Abstract="True">
     <label>Ultraviolet Laser</label>
     <description>Ultraviolet lasers are an upgraded, enhanced version of the preceding blue lasers. These weapons are precise and devastating, capable of inflicting massive damage.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
+    <iconPath>Icon/ShipParts/Purple_Laser</iconPath>
     <slotFamily>PulseLaser_UV</slotFamily>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -191,7 +191,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_XrayBase" Abstract="True">
     <label>X-Ray Laser</label>
     <description>This laser has a shorter wavelength than ultraviolet light, but is even more destructive.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_4</iconPath>
+    <iconPath>Icon/ShipParts/X-ray_Laser</iconPath>
     <slotFamily>PulseLaser_Xray</slotFamily>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
@@ -254,7 +254,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_PulseLaser_GammaBase" Abstract="True">
     <label>Gamma Laser</label>
     <description>Gamma lasers emit electromagnetic radiation at extremely high frequencies. In the field of laser weaponry, their destructive power is unmatched.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <iconPath>Icon/ShipParts/Gamma_Laser</iconPath>
     <slotFamily>PulseLaser_Gamma</slotFamily>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
@@ -308,7 +308,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_LancesBase" Abstract="True">
     <label>Particle Lance</label>
     <description>These heavy energy weapons fire focused particle beams and deal enormous damage. The size of their emitter arrays limits them to battleships and titans.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <iconPath>Icon/ShipParts/Gamma_Laser</iconPath>
     <slotFamily>Lances</slotFamily>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
@@ -350,7 +350,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_ArcEmittersBase" Abstract="True">
     <label>Arc Emitter</label>
     <description>Fires an arc of chaotic energy at the target—a powerful weapon that ignores armor and shields.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <iconPath>Icon/ShipParts/Gamma_Laser</iconPath>
     <slotFamily>ArcEmitters</slotFamily>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>

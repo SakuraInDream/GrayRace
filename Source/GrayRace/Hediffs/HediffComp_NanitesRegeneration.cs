@@ -50,7 +50,7 @@ public class HediffComp_NanitesRegeneration : HediffComp
             {
                 defaultLabel = "超级修复",
                 defaultDesc = "消耗灰潮源质快速修复机体",
-                icon = ContentFinder<Texture2D>.Get("UI/Icons/Medical/Bleeding"),
+                icon = ContentFinder<Texture2D>.Get("Icon/Ability/Ability_SuperFix"),
                 isActive = () => isRegenerationActive,
                 toggleAction = () =>
                 {

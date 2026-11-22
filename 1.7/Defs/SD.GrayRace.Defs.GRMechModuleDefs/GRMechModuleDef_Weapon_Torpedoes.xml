@@ -4,10 +4,13 @@
     <defName>GR_MechModule_Torpedoes1_G</defName>
     <label>Space Torpedoes</label>
     <description>These torpedoes are essentially massive, slow-moving missiles. They are equipped with far more powerful warheads and shield modulators, allowing them to pass safely through energy barriers.</description>
-    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_torpedo_1</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_TorpedoTube</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Torpedoes2_G</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -23,10 +26,13 @@
     <defName>GR_MechModule_Torpedoes2_G</defName>
     <label>Armored Torpedoes</label>
     <description>Upgraded space torpedoes are fitted with armor, improving their survivability against enemy point-defense systems. On detonation, the torpedo's fragmented armor also inflicts additional damage.</description>
-    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_torpedo_2</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_TorpedoTube</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Torpedoes3_G</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
     </researchPrerequisites>
@@ -43,7 +49,7 @@
     <defName>GR_MechModule_Torpedoes3_G</defName>
     <label>Devastator Torpedoes</label>
     <description>Advanced torpedoes equipped with ultra-powerful warheads. Featuring a sleeker design, faster engines, and improved shield modulators, they can easily pierce through energy barriers.</description>
-    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_torpedo_3</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_TorpedoTube</li>
     </compatibleSlots>
@@ -63,10 +69,13 @@
     <defName>GR_MechModule_EnergyTorpedoes1_G</defName>
     <label>Proton Launchers</label>
     <description>These energy projectiles consist of tightly clustered protons, capable of dealing massive damage to enemy hulls.</description>
-    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_energy_torpedo_1</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_TorpedoTube</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_EnergyTorpedoes2_G</li>
+    </upgradesTo>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
     </researchPrerequisites>
@@ -83,7 +92,7 @@
     <defName>GR_MechModule_EnergyTorpedoes2_G</defName>
     <label>Neutron Launchers</label>
     <description>Due to the devastating energy of neutrons, upgraded energy projectiles rely on neutrons rather than protons to strike the enemy.</description>
-    <iconPath>Icon/ShipParts/ship_part_swarmer_missile_1</iconPath>
+    <iconPath>Icon/ShipParts/ship_part_energy_torpedo_2</iconPath>
     <compatibleSlots>
       <li>GR_MechSlot_TorpedoTube</li>
     </compatibleSlots>

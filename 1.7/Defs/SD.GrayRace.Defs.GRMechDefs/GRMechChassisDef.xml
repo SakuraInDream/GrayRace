@@ -29,7 +29,7 @@
     <description>The frigate is one of the most basic warship types. It is armed and can engage enemies.</description>
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
-    <fixedWorkTicks>20000</fixedWorkTicks>
+    <fixedWorkTicks>5000</fixedWorkTicks>
     <uiOrder>0</uiOrder>
     <researchPrerequisites>
       <li>GR_T1MechTech</li>
@@ -47,7 +47,7 @@
     <!-- TODO -->
     <pawnKindDef>GR_Mech_FF</pawnKindDef>
     <designerPreviewPath>Race/Mech/FF_south</designerPreviewPath>
-    <fixedWorkTicks>30000</fixedWorkTicks>
+    <fixedWorkTicks>7500</fixedWorkTicks>
     <uiOrder>1</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -64,7 +64,7 @@
     <!-- TODO -->
     <pawnKindDef>GR_Mech_DD</pawnKindDef>
     <designerPreviewPath>Race/Mech/DD_south</designerPreviewPath>
-    <fixedWorkTicks>40000</fixedWorkTicks>
+    <fixedWorkTicks>10000</fixedWorkTicks>
     <uiOrder>2</uiOrder>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -82,7 +82,7 @@
     <!-- TODO -->
     <pawnKindDef>GR_Mech_CA</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
-    <fixedWorkTicks>80000</fixedWorkTicks>
+    <fixedWorkTicks>20000</fixedWorkTicks>
     <uiOrder>3</uiOrder>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
@@ -101,7 +101,7 @@
     <!-- 这两个绑定对应的机械体 -->
     <pawnKindDef>GR_Mech_BB</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
-    <fixedWorkTicks>160000</fixedWorkTicks>
+    <fixedWorkTicks>40000</fixedWorkTicks>
     <uiOrder>4</uiOrder>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
@@ -121,7 +121,7 @@
     <!-- TODO -->
     <pawnKindDef>GR_Mech_TT</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
-    <fixedWorkTicks>320000</fixedWorkTicks>
+    <fixedWorkTicks>80000</fixedWorkTicks>
     <uiOrder>5</uiOrder>
     <researchPrerequisites>
       <li>GR_T5MechTech</li>
@@ -140,7 +140,7 @@
     <!-- TODO -->
     <pawnKindDef>GR_Mech_JG</pawnKindDef>
     <designerPreviewPath>Race/Mech/CA_south</designerPreviewPath>
-    <fixedWorkTicks>640000</fixedWorkTicks>
+    <fixedWorkTicks>160000</fixedWorkTicks>
     <uiOrder>6</uiOrder>
     <researchPrerequisites>
       <li>GR_T6MechTech</li>

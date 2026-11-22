@@ -85,7 +85,8 @@ public class CompGrayMechVanillaShield : CompShield
     {
         if (!HasShieldCapacity)
         {
-            absorbed = true;
+            // 没有护盾容量（未装护盾模块）时必须放行伤害，否则会变成无条件无敌。
+            absorbed = false;
             return;
         }
 

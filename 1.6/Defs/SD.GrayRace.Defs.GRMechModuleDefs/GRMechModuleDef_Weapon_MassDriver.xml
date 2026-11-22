@@ -301,7 +301,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_MegaCannonBase" Abstract="True">
     <label>Mega Cannon</label>
     <description>An enormous mass accelerator cannon that can only be mounted on a spinal weapon mount. It fires projectiles of terrifying power at extreme range.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_5</iconPath>
+    <iconPath>Icon/ShipParts/Gamma_Laser</iconPath>
     <slotFamily>MegaCannon</slotFamily>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>

@@ -747,8 +747,7 @@
       <researchPrerequisites>
         <li>GR_DecorativeClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
-        <li>ElectricTailoringBench</li>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>

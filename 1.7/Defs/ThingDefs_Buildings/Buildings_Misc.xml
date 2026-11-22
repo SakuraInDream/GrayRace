@@ -3,7 +3,7 @@
 
   <!--科研枢纽下行链路-->
 
-  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="GR_BuildingBase">
     <defName>GR_ScienceNexus</defName>
     <label>Science Nexus DownLink</label>
     <description>A terminal that receives signals from the Science Nexus, significantly increasing research speed and unlocking new research projects. Each research bench can link to only two Science Nexus downlinks.</description>
@@ -23,8 +23,6 @@
     <passability>PassThroughOnly</passability>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.5</fillPercent>
-    <designationHotKey>Misc4</designationHotKey>
-    <designationCategory>Gray_Building</designationCategory>
     <uiOrder>500</uiOrder>
     <minifiedDef>MinifiedThing</minifiedDef>
     <canOverlapZones>false</canOverlapZones>
@@ -33,10 +31,9 @@
       <li>BuildingsMisc</li>
     </thingCategories>
     <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
+      <MaxHitPoints>2000</MaxHitPoints>
       <WorkToBuild>48000</WorkToBuild>
       <Mass>60</Mass>
-      <Flammability>0</Flammability>
     </statBases>
     <costList>
       <GR_Alloy>200</GR_Alloy>
@@ -68,7 +65,7 @@
 
   <!--战略指挥中心转发终端-->
 
-  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="GR_BuildingBase">
     <defName>GR_SCC_BandNode</defName>
     <label>SCC Signal Relay Terminal</label>
     <description>A terminal that receives signals from the Strategic Coordination Center. It must be tuned to a specific Mechanitor. This will add 50 bandwidth to that mechanitor's total bandwidth, allowing them to control more mechanoids. The terminal can be quickly tuned to a Mechanitor immediately after construction. However, retuning it to a different Mechanitor takes considerably longer.</description>
@@ -96,13 +93,11 @@
       </buildingTags>
     </building>
     <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
-    <designationCategory>Gray_Building</designationCategory>
     <uiOrder>600</uiOrder>
     <statBases>
-      <MaxHitPoints>450</MaxHitPoints>
+      <MaxHitPoints>1500</MaxHitPoints>
       <WorkToBuild>90000</WorkToBuild>
       <Mass>25</Mass>
-      <Flammability>0</Flammability>
     </statBases>
     <size>(2,2)</size>
     <costList>
@@ -136,6 +131,243 @@
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
   </ThingDef>
 
+  <ThingDef ParentName="BuildingBase" Name="GR_BuildingBase" Abstract="True">
+    <statBases>
+      <Flammability>0</Flammability>
+    </statBases>
+    <designationCategory>Gray_Building</designationCategory>
+    <damageMultipliers Inherit="false">
+      <li>
+        <damageDef>GR_Disintegration</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>GR_NanoScratch</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>GR_NanoBullet</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>GR_NanoExplosion</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>Thump</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>Cut</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Crush</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Stab</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Scratch</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>ScratchToxic</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Bite</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>ToxicBite</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Blunt</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Poke</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>BombSuper</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>Demolish</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>Bullet</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Arrow</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>ArrowHighVelocity</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Flame</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Burn</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Frostbite</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>TornadoScratch</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Mining</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>EMP</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Stun</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Smoke</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Vaporize</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>AcidBurn</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <!--Biotech DLC -->
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <damageDef>BulletToxic</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <damageDef>Beam</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <damageDef>MechBandShockwave</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <!--Anomaly DLC -->
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>Nerve</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>EnergyBolt</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>Digested</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>ElectricalBurn</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>NerveStun</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>Psychic</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>DeadlifeDust</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>NociosphereVaporize</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <!-- Combat Extended -->
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Beanbag</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Taser</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Fragment</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>PrometheumFlame</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Bomb_Secondary</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Flame_Secondary</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>ArrowVenom</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>ArrowFire</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Tranquilizer</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Thermobaric</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Electrical</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Neuralizer</damageDef>
+        <multiplier>0.5</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>CE_Laser</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended,Ludeon.RimWorld.Anomaly">
+        <damageDef>NerveBioferrite</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended,Ludeon.RimWorld.Anomaly">
+        <damageDef>BioferriteFlame</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+    </damageMultipliers>
+  </ThingDef>
+
+  <!--纳米合金强化墙-->
   <ThingDef ParentName="Wall">
     <defName>GR_Wall</defName>
     <label>Nano-alloy reinforced wall</label>
@@ -145,8 +377,9 @@
       <li>Wall</li>
     </replaceTags>
     <graphicData>
-      <texPath>Things/Building/Linked/GravshipHull/GravshipHull_Atlas</texPath>
+      <texPath>Things/Building/Misc/Gray_NanoWall</texPath>
       <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <researchPrerequisites>
       <li>GR_AlloyCasting</li>
@@ -155,6 +388,7 @@
       <MaxHitPoints>1000</MaxHitPoints>
       <WorkToBuild>900</WorkToBuild>
       <Flammability>0</Flammability>
+      <Beauty>2</Beauty>
     </statBases>
     <costList>
       <GR_Alloy>2</GR_Alloy>
@@ -162,7 +396,7 @@
     </costList>
     <costStuffCount>3</costStuffCount>
     <designationCategory>Gray_Building</designationCategory>
-    <uiOrder>10</uiOrder>
+    <uiOrder>1</uiOrder>
     <stuffCategories Inherit="false">
       <li>Metallic</li>
     </stuffCategories>
@@ -183,6 +417,10 @@
         <multiplier>0.1</multiplier>
       </li>
       <li>
+        <damageDef>GR_NanoExplosion</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
         <damageDef>Bomb</damageDef>
         <multiplier>0.25</multiplier>
       </li>
@@ -190,211 +428,211 @@
         <damageDef>Thump</damageDef>
         <multiplier>0.25</multiplier>
       </li>
-		  <li>
-			<damageDef>Cut</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Crush</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Stab</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Scratch</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		   <li>
-			<damageDef>ScratchToxic</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Bite</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>ToxicBite</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Blunt</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Poke</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>BombSuper</damageDef>
-			<multiplier>0.25</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Demolish</damageDef>
-			<multiplier>0.25</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Bullet</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Arrow</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>ArrowHighVelocity</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Flame</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Burn</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Frostbite</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>TornadoScratch</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Mining</damageDef>
-			<multiplier>0.1</multiplier>
-		  </li>
-		  <li>
-			<damageDef>EMP</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Stun</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-		  <li>
-			<damageDef>Smoke</damageDef>
-			<multiplier>0</multiplier>
-		  </li>
-			<li>
-				<damageDef>Vaporize</damageDef>
-				<multiplier>0.25</multiplier>
-			</li>
-			<li>
-				<damageDef>AcidBurn</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-<!--Biotech DLC -->
-			<li MayRequire="Ludeon.RimWorld.Biotech">
-				<damageDef>BulletToxic</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">
-				<damageDef>Beam</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Biotech">
-				<damageDef>MechBandShockwave</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-<!--Anomaly DLC -->
-			<li MayRequire="Ludeon.RimWorld.Anomaly">
-				<damageDef>Nerve</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Anomaly">
-				<damageDef>EnergyBolt</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Anomaly">
-				<damageDef>Digested</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Anomaly">
-				<damageDef>ElectricalBurn</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Anomaly">
-				<damageDef>NerveStun</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Anomaly">
-				<damageDef>Psychic</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Anomaly">
-				<damageDef>DeadlifeDust</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="Ludeon.RimWorld.Anomaly">
-				<damageDef>NociosphereVaporize</damageDef>
-				<multiplier>0.25</multiplier>
-			</li>
-<!--==========-->
-<!-- Combat Extended -->
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Beanbag</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Taser</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Fragment</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>PrometheumFlame</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Bomb_Secondary</damageDef>
-				<multiplier>0.25</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Flame_Secondary</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>ArrowVenom</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>ArrowFire</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Tranquilizer</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Thermobaric</damageDef>
-				<multiplier>0.25</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Electrical</damageDef>
-				<multiplier>0</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>Neuralizer</damageDef>
-				<multiplier>0.5</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended">
-				<damageDef>CE_Laser</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended,Ludeon.RimWorld.Anomaly">
-				<damageDef>NerveBioferrite</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li MayRequire="CETeam.CombatExtended,Ludeon.RimWorld.Anomaly">
-				<damageDef>BioferriteFlame</damageDef>
-				<multiplier>0.25</multiplier>
-			</li>
-		</damageMultipliers>
+      <li>
+        <damageDef>Cut</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Crush</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Stab</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Scratch</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>ScratchToxic</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Bite</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>ToxicBite</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Blunt</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Poke</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>BombSuper</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>Demolish</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>Bullet</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Arrow</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>ArrowHighVelocity</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>Flame</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Burn</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Frostbite</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>TornadoScratch</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Mining</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li>
+        <damageDef>EMP</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Stun</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Smoke</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li>
+        <damageDef>Vaporize</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li>
+        <damageDef>AcidBurn</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <!--Biotech DLC -->
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <damageDef>BulletToxic</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <damageDef>Beam</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Biotech">
+        <damageDef>MechBandShockwave</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <!--Anomaly DLC -->
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>Nerve</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>EnergyBolt</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>Digested</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>ElectricalBurn</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>NerveStun</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>Psychic</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>DeadlifeDust</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Anomaly">
+        <damageDef>NociosphereVaporize</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <!--==========-->
+      <!-- Combat Extended -->
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Beanbag</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Taser</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Fragment</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>PrometheumFlame</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Bomb_Secondary</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Flame_Secondary</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>ArrowVenom</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>ArrowFire</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Tranquilizer</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Thermobaric</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Electrical</damageDef>
+        <multiplier>0</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>Neuralizer</damageDef>
+        <multiplier>0.5</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended">
+        <damageDef>CE_Laser</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended,Ludeon.RimWorld.Anomaly">
+        <damageDef>NerveBioferrite</damageDef>
+        <multiplier>0.1</multiplier>
+      </li>
+      <li MayRequire="CETeam.CombatExtended,Ludeon.RimWorld.Anomaly">
+        <damageDef>BioferriteFlame</damageDef>
+        <multiplier>0.25</multiplier>
+      </li>
+    </damageMultipliers>
   </ThingDef>
 
 </Defs>

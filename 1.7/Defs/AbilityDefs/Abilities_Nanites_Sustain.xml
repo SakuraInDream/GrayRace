@@ -6,7 +6,7 @@
     <defName>GR_NanoCloak</defName>
     <label>nanite cloak</label>
     <description>.</description>
-    <iconPath>Things/Item/Resource/Nanites/Nanites_a</iconPath>
+    <iconPath>Icon/Ability/Ability_Invisible</iconPath>
     <abilityClass>SD.GrayRace.Abilities.Ability_NaniteToggle</abilityClass>
     <targetRequired>false</targetRequired>
     <gizmoClass>Command_Ability</gizmoClass>
@@ -40,7 +40,7 @@
     <defName>GR_NanoDecompositionField</defName>
     <label>nanite decomposition field</label>
     <description>.</description>
-    <iconPath>Things/Item/Resource/Nanites/Nanites_c</iconPath>
+    <iconPath>Icon/Ability/Ability_NanoShield</iconPath>
     <abilityClass>SD.GrayRace.Abilities.Ability_NaniteToggle</abilityClass>
     <targetRequired>false</targetRequired>
     <gizmoClass>Command_Ability</gizmoClass>

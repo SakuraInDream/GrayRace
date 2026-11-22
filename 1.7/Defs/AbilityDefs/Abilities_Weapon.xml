@@ -5,7 +5,7 @@
     <defName>GR_GlaiveBomb</defName>
     <label>Throwing Glaive</label>
     <description>.</description>
-    <iconPath>Things/Item/Weapon/Honor/Honor_Glaive</iconPath>
+    <iconPath>Icon/Ability/Ability_Glaive</iconPath>
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>
     <verbProperties>
@@ -30,7 +30,7 @@
     <defName>GR_CorinthBomb</defName>
     <label>airburst shell</label>
     <description>.</description>
-    <iconPath>Things/Item/Weapon/Honor/Honor_Corinth</iconPath>
+    <iconPath>Icon/Ability/Ability_Airburst</iconPath>
     <displayOrder>200</displayOrder>
     <aiCanUse>true</aiCanUse>
     <verbProperties>

@@ -39,7 +39,7 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
-    <defaultFactionType>Gray_PlayerFaction</defaultFactionType>
+    <defaultFactionDef>Gray_PlayerFaction</defaultFactionDef>
   </PawnKindDef>
 
   <!--平民-->
@@ -53,13 +53,13 @@
     <minGenerationAge Inherit="False">15</minGenerationAge>
     <apparelMoney>500~5000</apparelMoney>
     <apparelTags>
-      <li>GR_Worker</li>
+      <li>GR_Daily</li>
       <li>GR_Underwear</li>
     </apparelTags>
     <specificApparelRequirements>
       <li>
         <bodyPartGroup>Torso</bodyPartGroup>
-        <requiredTag>GR_Worker</requiredTag>
+        <requiredTag>GR_Daily</requiredTag>
       </li>
       <li>
         <bodyPartGroup>Torso</bodyPartGroup>

@@ -6,7 +6,7 @@
     <defName>GR_NanoLongjump</defName>
     <label>Nanite Pull</label>
     <description>.</description>
-    <iconPath>UI/Abilities/Longjump</iconPath>
+    <iconPath>Icon/Ability/Ability_NanoLongJump</iconPath>
     <abilityClass>SD.GrayRace.Abilities.Ability_NaniteCost</abilityClass>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
     <cooldownTicksRange>10</cooldownTicksRange>
@@ -29,7 +29,7 @@
     <jobDef>CastJump</jobDef>
     <comps>
       <li Class="SD.GrayRace.Abilities.CompProperties_AbilityNanitesCost">
-        <nanitesCost>75</nanitesCost>
+        <nanitesCost>50</nanitesCost>
       </li>
     </comps>
   </AbilityDef>
@@ -39,12 +39,12 @@
     <defName>GR_NanoGrenade</defName>
     <label>nanite grenade</label>
     <description>.</description>
-    <iconPath>Things/Item/Equipment/WeaponRanged/Grenades</iconPath>
+    <iconPath>Icon/Ability/Ability_NanoGrenade</iconPath>
     <abilityClass>SD.GrayRace.Abilities.Ability_NaniteCost</abilityClass>
     <cooldownTicksRange>300</cooldownTicksRange>
     <verbProperties>
       <verbClass>Verb_CastAbility</verbClass>
-      <range>24.9</range>
+      <range>34.9</range>
       <warmupTime>1</warmupTime>
       <soundCast>InfernoCannon_Fire</soundCast>
       <targetParams>
@@ -73,9 +73,9 @@
     </graphicData>
     <projectile>
       <damageDef>GR_NanoExplosion</damageDef>
-      <damageAmountBase>25</damageAmountBase>
+      <damageAmountBase>50</damageAmountBase>
       <explosionRadius>1.5</explosionRadius>
-      <speed>20</speed>
+      <speed>40</speed>
     </projectile>
   </ThingDef>
 
@@ -84,7 +84,7 @@
     <defName>GR_NanoSuperGrenade</defName>
     <label>Ultimatum</label>
     <description>.</description>
-    <iconPath>Things/Item/Equipment/WeaponRanged/Grenades</iconPath>
+    <iconPath>Icon/Ability/Ability_Ultimatum</iconPath>
     <abilityClass>SD.GrayRace.Abilities.Ability_NaniteCost</abilityClass>
     <cooldownTicksRange>7200</cooldownTicksRange>
     <verbProperties>
@@ -120,7 +120,7 @@
       <damageDef>GR_NanoExplosion</damageDef>
       <damageAmountBase>750</damageAmountBase>
       <explosionRadius>9.9</explosionRadius>
-      <speed>20</speed>
+      <speed>40</speed>
     </projectile>
   </ThingDef>
 

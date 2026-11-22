@@ -304,6 +304,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_SmallUtility</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Armor6_S</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>27</GR_Alloy>
     </costList>
@@ -318,6 +321,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_MediumUtility</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Armor6_M</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>68</GR_Alloy>
     </costList>
@@ -332,6 +338,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_LargeUtility</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Armor6_L</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>170</GR_Alloy>
     </costList>
@@ -369,6 +378,7 @@
       <GR_Alloy>41</GR_Alloy>
     </costList>
     <statOffsets>
+      <EMPResistance>0.3</EMPResistance>
       <ArmorRating_Sharp>0.075</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.075</ArmorRating_Blunt>
     </statOffsets>
@@ -383,6 +393,7 @@
       <GR_Alloy>103</GR_Alloy>
     </costList>
     <statOffsets>
+      <EMPResistance>0.3</EMPResistance>
       <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
     </statOffsets>
@@ -397,6 +408,7 @@
       <GR_Alloy>258</GR_Alloy>
     </costList>
     <statOffsets>
+      <EMPResistance>0.3</EMPResistance>
       <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
       <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
     </statOffsets>
@@ -685,6 +697,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_SmallUtility</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Shield6_S</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>18</GR_Alloy>
       <PsychoidLeaves>6</PsychoidLeaves>
@@ -701,6 +716,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_MediumUtility</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Shield6_M</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>45</GR_Alloy>
       <PsychoidLeaves>13</PsychoidLeaves>
@@ -717,6 +735,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_LargeUtility</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_Shield6_L</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>113</GR_Alloy>
       <PsychoidLeaves>26</PsychoidLeaves>

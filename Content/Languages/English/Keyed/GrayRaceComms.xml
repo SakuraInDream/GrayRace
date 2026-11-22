@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <GR_RequestTrade>Request trade</GR_RequestTrade>
+  <GR_RequestTradeHostile>Cannot request trade from a hostile faction.</GR_RequestTradeHostile>
+
+</LanguageData>

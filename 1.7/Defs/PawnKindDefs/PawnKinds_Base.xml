@@ -4,7 +4,7 @@
   <PawnKindDef Name="Gray_PawnKindBase" Abstract="True">
     <race>Gray_Race</race>
     <fixedGender>Female</fixedGender>
-    <defaultFactionType>Gray_Faction</defaultFactionType>
+    <defaultFactionDef>Gray_Faction</defaultFactionDef>
     <nameMaker>Gray_NamerPerson</nameMaker>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <invNutrition>3</invNutrition>

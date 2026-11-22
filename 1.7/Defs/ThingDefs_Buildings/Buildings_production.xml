@@ -13,9 +13,8 @@
     <pathCost>50</pathCost>
     <tickerType>Normal</tickerType>
     <statBases>
-      <MaxHitPoints>600</MaxHitPoints>
+      <MaxHitPoints>3000</MaxHitPoints>
       <WorkToBuild>18000</WorkToBuild>
-      <Flammability>0</Flammability>
       <WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
     </statBases>
     <minifiedDef />
@@ -101,7 +100,7 @@
     <pathCost>50</pathCost>
     <tickerType>Normal</tickerType>
     <statBases>
-      <MaxHitPoints>1500</MaxHitPoints>
+      <MaxHitPoints>10000</MaxHitPoints>
       <WorkToBuild>600000</WorkToBuild>
       <Flammability>0</Flammability>
       <WorkTableWorkSpeedFactor>2.0</WorkTableWorkSpeedFactor>
@@ -172,9 +171,7 @@
     <modExtensions>
       <li Class="SD.GrayRace.DefModExtensions.DefModExtension_NaniteTransmuterBlacklist">
         <blacklistedDefs>
-          <li>Gold</li>
           <li>GR_Nanites</li>
-          <li>GR_Alloy</li>
         </blacklistedDefs>
       </li>
       <!-- 产物自动输出格：相对建筑中心的固定偏移。 -->
@@ -186,14 +183,14 @@
 
   <!--聚变反应堆-->
 
-  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="GR_BuildingBase">
     <defName>GR_FusionReactor</defName>
     <label>Heavy Element Fusion Reactor</label>
     <description>A tokamak-type fusion reactor that overcomes the difficulty of synthesizing heavy elements. Using silicon as fuel, it effectively solves the problem of scarce and insufficient raw materials, and while generating power it can also fuse steel to supply construction needs.</description>
     <thingClass>Building</thingClass>
     <drawerType>MapMeshAndRealTime</drawerType>
     <graphicData>
-      <texPath>Things/Building/Reactor</texPath>
+      <texPath>Things/Building/Misc/Gray_HeavyFusionReactor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,6)</drawSize>
       <drawOffset>(0,0,0.4)</drawOffset>
@@ -209,9 +206,8 @@
     <rotatable>false</rotatable>
     <blockWind>true</blockWind>
     <statBases>
-      <MaxHitPoints>1500</MaxHitPoints>
+      <MaxHitPoints>15000</MaxHitPoints>
       <WorkToBuild>600000</WorkToBuild>
-      <Flammability>0</Flammability>
       <Beauty>20</Beauty>
     </statBases>
     <tickerType>Normal</tickerType>
@@ -246,7 +242,7 @@
         <canEjectFuel>false</canEjectFuel>
       </li>
       <li Class="CompProperties_Spawner">
-        <requiresPower>false</requiresPower>
+        <requiresPower>true</requiresPower>
         <thingToSpawn>Steel</thingToSpawn>
         <spawnCount>200</spawnCount>
         <spawnIntervalRange>
@@ -285,7 +281,7 @@
 
   <!--被泰南气晕，培育仓盖子是单独渲染的-->
 
-  <ThingDef ParentName="BuildingBase">
+  <ThingDef ParentName="GR_BuildingBase">
     <defName>GR_Incubator</defName>
     <label>Incubator</label>
     <description>An incubation device used to create newborn Gray. After inserting a Gray Tide core and a persona core, fill it with a large amount of Gray Tide Zro, and over time a complete Gray infant will be cultivated.</description>
@@ -405,7 +401,7 @@
       <drawSize>(6,5)</drawSize>
     </graphicData>
     <statBases>
-      <MaxHitPoints>1800</MaxHitPoints>
+      <MaxHitPoints>5000</MaxHitPoints>
       <WorkToBuild>120000</WorkToBuild>
       <Flammability>0</Flammability>
       <WorkTableWorkSpeedFactor>1.25</WorkTableWorkSpeedFactor>

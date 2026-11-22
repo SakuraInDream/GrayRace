@@ -110,7 +110,7 @@
     <defName>Bullet_SRLaser_GR</defName>
     <label>laser beam</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
-      <damageAmountBase>60</damageAmountBase>
+      <damageAmountBase>80</damageAmountBase>
       <armorPenetrationBase>1</armorPenetrationBase>
     </projectile>
   </ThingDef>

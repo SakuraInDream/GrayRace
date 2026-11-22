@@ -20,7 +20,7 @@
         <li>GR_AdvancedCombatClothing</li>
         <li>GR_T2MechTech</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -102,7 +102,7 @@
       <researchPrerequisites>
         <li>GR_AdvancedCombatClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -183,7 +183,7 @@
       <researchPrerequisites>
         <li>GR_AdvancedCombatClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -267,7 +267,7 @@
       <researchPrerequisites>
         <li>GR_CombatClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -344,7 +344,7 @@
       <researchPrerequisites>
         <li>GR_CombatClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -412,8 +412,7 @@
       <researchPrerequisites>
         <li>GR_DecorativeClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
-        <li>ElectricTailoringBench</li>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -483,7 +482,7 @@
         </dataNorth>
         <dataSouth>
           <layer>55</layer>
-          <offset>(0, 0, -0.4)</offset>
+          <offset>(0, 0, -0.01)</offset>
         </dataSouth>
         <dataEast>
           <offset>(0, 0, -0.25)</offset>
@@ -714,7 +713,7 @@
       </wornGraphicData>
       <drawData>
         <dataNorth>
-          <layer>40000</layer>
+          <layer>150</layer>
           <offset>(0, 0, -0.35)</offset>
         </dataNorth>
         <dataSouth>
@@ -758,7 +757,7 @@
       </wornGraphicData>
       <drawData>
         <dataNorth>
-          <layer>40000</layer>
+          <layer>150</layer>
           <offset>(0, 0, -0.35)</offset>
         </dataNorth>
         <dataSouth>

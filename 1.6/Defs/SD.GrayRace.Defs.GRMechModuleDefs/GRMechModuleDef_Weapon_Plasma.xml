@@ -4,7 +4,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma1Base" Abstract="True">
     <label>Plasma Thrower</label>
     <description>A weapon that fires devastating high-energy plasma spheres. These plasma projectiles are especially effective against the armor of large ships.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_1</iconPath>
+    <iconPath>Icon/ShipParts/Red_Laser</iconPath>
     <slotFamily>PlasmaThrower</slotFamily>
     <researchPrerequisites>
       <li>GR_T2MechTech</li>
@@ -64,7 +64,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma2Base" Abstract="True">
     <label>Plasma Accelerator</label>
     <description>This new accelerator cannon fires high-energy plasma held by more advanced confinement fields. The technology reduces the energy lost as the plasma travels toward its target.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_2</iconPath>
+    <iconPath>Icon/ShipParts/Blue_Laser</iconPath>
     <slotFamily>PlasmaAccelerators</slotFamily>
     <researchPrerequisites>
       <li>GR_T3MechTech</li>
@@ -130,7 +130,7 @@
   <SD.GrayRace.Defs.GRMechModuleDef Name="GR_MechModule_Plasma3Base" Abstract="True">
     <label>Plasma Cannon</label>
     <description>The most advanced plasma weapon, this cannon is the fully militarized result of the previous plasma accelerator. Its plasma projectiles are even deadlier.</description>
-    <iconPath>Icon/ShipParts/ship_part_laser_3</iconPath>
+    <iconPath>Icon/ShipParts/Purple_Laser</iconPath>
     <slotFamily>PlasmaCannons</slotFamily>
     <researchPrerequisites>
       <li>GR_T4MechTech</li>
