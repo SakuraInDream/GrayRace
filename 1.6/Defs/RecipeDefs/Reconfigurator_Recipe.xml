@@ -242,6 +242,46 @@
     <displayPriority>100</displayPriority>
   </RecipeDef>
 
+  <!--魔鬼素-->
+  <RecipeDef>
+    <defName>GR_Make_Luciferium</defName>
+    <label>make luciferium</label>
+    <description>Make luciferium.</description>
+    <jobString>Making luciferium.</jobString>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>6000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+    <recipeUsers>
+      <li>GR_NaniteReconfigurator</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>GR_Nanites</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>GR_Nanites</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Luciferium>1</Luciferium>
+    </products>
+    <skillRequirements>
+      <Crafting>8</Crafting>
+      <Intellectual>8</Intellectual>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+    <displayPriority>97</displayPriority>
+  </RecipeDef>
+
   <!--治愈机械液-->
   <RecipeDef>
     <defName>GR_Make_MechSerumHealer</defName>
@@ -263,7 +303,7 @@
             <li>GR_Nanites</li>
           </thingDefs>
         </filter>
-        <count>500</count>
+        <count>50</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
@@ -275,8 +315,8 @@
       <MechSerumHealer>1</MechSerumHealer>
     </products>
     <skillRequirements>
-      <Crafting>14</Crafting>
-      <Intellectual>14</Intellectual>
+      <Crafting>12</Crafting>
+      <Intellectual>12</Intellectual>
     </skillRequirements>
     <workSkill>Crafting</workSkill>
     <displayPriority>98</displayPriority>
@@ -303,7 +343,7 @@
             <li>GR_Nanites</li>
           </thingDefs>
         </filter>
-        <count>5000</count>
+        <count>500</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
@@ -315,8 +355,8 @@
       <MechSerumResurrector>1</MechSerumResurrector>
     </products>
     <skillRequirements>
-      <Crafting>18</Crafting>
-      <Intellectual>18</Intellectual>
+      <Crafting>16</Crafting>
+      <Intellectual>16</Intellectual>
     </skillRequirements>
     <workSkill>Crafting</workSkill>
     <displayPriority>99</displayPriority>

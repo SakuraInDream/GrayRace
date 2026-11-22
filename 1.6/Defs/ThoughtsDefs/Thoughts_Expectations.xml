@@ -50,12 +50,12 @@
       <li>
         <label>elite expectations</label>
         <description>I will make this position shine in my hands.</description>
-        <baseMoodEffect>-6</baseMoodEffect>
+        <baseMoodEffect>6</baseMoodEffect>
       </li>
       <li>
         <label>supreme expectations</label>
         <description>They trust me... entrusted everything to me. I will not let them down.</description>
-        <baseMoodEffect>-12</baseMoodEffect>
+        <baseMoodEffect>0</baseMoodEffect>
       </li>
 
     </stages>

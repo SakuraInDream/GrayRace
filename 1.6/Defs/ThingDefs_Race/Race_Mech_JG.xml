@@ -7,13 +7,15 @@
     <label>Eternal Sanctum</label>
     <description>The Eternal Sanctum is a special super-heavy mechanoid. Not only does it have ferocious firepower and thick shields and armor, but it also contains a small shipbuilding unit that can repair friendly mechanoids and build small mechanoids during combat, and it can mount highly effective auras.</description>
     <statBases>
+      <MarketValue>25600</MarketValue>
       <Mass>303.75</Mass>
       <MoveSpeed>4</MoveSpeed>
       <ArmorRating_Blunt>0.9</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.9</ArmorRating_Sharp>
+      <EMPResistance>0.3</EMPResistance>
       <MeleeHitChance>128</MeleeHitChance>
       <BandwidthCost>32</BandwidthCost>
-      <CaravanBonusSpeedFactor>6</CaravanBonusSpeedFactor>
+      <CaravanRidingSpeedFactor>8</CaravanRidingSpeedFactor>
     </statBases>
     <race>
       <baseBodySize>32</baseBodySize>
@@ -45,7 +47,7 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="LightMechanoidKind">
+  <PawnKindDef ParentName="GR_BaseMechanoidKind">
     <defName>GR_Mech_JG</defName>
     <label>Eternal Sanctum</label>
     <race>GR_Mech_JG</race>

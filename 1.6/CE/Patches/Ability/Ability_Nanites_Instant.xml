@@ -4,7 +4,28 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/AbilityDef[defName="GR_NanoGrenade"]/verbProperties/range</xpath>
     <value>
-      <range>42</range>
+      <range>60</range>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Bullet_GR_NanoGrenade"]/projectile/damageAmountBase</xpath>
+    <value>
+      <damageAmountBase>100</damageAmountBase>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Bullet_GR_NanoGrenade"]/projectile/speed</xpath>
+    <value>
+      <speed>80</speed>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Bullet_GR_NanoSuperGrenade"]/projectile/damageAmountBase</xpath>
+    <value>
+      <damageAmountBase>1500</damageAmountBase>
     </value>
   </Operation>
 

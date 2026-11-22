@@ -320,7 +320,7 @@
     <soundWorking>Recipe_Machining</soundWorking>
     <workAmount>144000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
-    <researchPrerequisite>GR_NaniteTransmuter</researchPrerequisite>
+    <researchPrerequisite>GR_AlloyProcessOptimization</researchPrerequisite>
     <recipeUsers>
       <li>GR_NaniteReconfigurator</li>
     </recipeUsers>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TerrainDef ParentName="FloorBase">
+    <defName>GR_NanoFloor</defName>
+    <label>Nano flow light floor</label>
+    <description>流光溢彩！</description>
+    <texturePath>Things/Building/Misc/Gray_NanoFloor</texturePath>
+    <renderPrecedence>244</renderPrecedence>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <designationCategory Inherit="False">Gray_Building</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>GR_AlloyCasting</li>
+    </researchPrerequisites>
+    <color>(1,1,1,1)</color>
+    <costList>
+      <GR_Nanites>10</GR_Nanites>
+      <GR_Alloy>1</GR_Alloy>
+    </costList>
+    <isPaintable>true</isPaintable>
+    <statBases>
+      <WorkToBuild>1800</WorkToBuild>
+      <Beauty>8</Beauty>
+      <FilthMultiplier>0.1</FilthMultiplier>
+      <CleaningTimeFactor>0.1</CleaningTimeFactor>
+      <Cleanliness>2</Cleanliness>
+    </statBases>
+    <tags>
+      <li>FineFloor</li>
+    </tags>
+    <uiOrder>5</uiOrder>
+  </TerrainDef>
+</Defs>

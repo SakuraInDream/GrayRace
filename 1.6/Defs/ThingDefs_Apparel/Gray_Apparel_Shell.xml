@@ -21,7 +21,7 @@
         <li>GR_AdvancedCombatClothing</li>
         <li>GR_T2MechTech</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -116,7 +116,7 @@
       <researchPrerequisites>
         <li>GR_AdvancedCombatClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -216,7 +216,7 @@
       <researchPrerequisites>
         <li>GR_AdvancedCombatClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -315,7 +315,7 @@
       <researchPrerequisites>
         <li>GR_CombatClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -395,7 +395,7 @@
       <researchPrerequisites>
         <li>GR_CombatClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -473,8 +473,7 @@
       <researchPrerequisites>
         <li>GR_BasicClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
-        <li>ElectricTailoringBench</li>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>
@@ -545,8 +544,7 @@
       <researchPrerequisites>
         <li>GR_BasicClothing</li>
       </researchPrerequisites>
-      <recipeUsers>
-        <li>ElectricTailoringBench</li>
+      <recipeUsers Inherit="False">
         <li>GR_NaniteReconfigurator</li>
       </recipeUsers>
       <skillRequirements>

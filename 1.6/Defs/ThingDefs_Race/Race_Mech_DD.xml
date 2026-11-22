@@ -7,13 +7,15 @@
     <label>Strike Sprite</label>
     <description>The Strike-class is a medium mechanoid that prides itself on spearheading assaults, with close-range shooting as its doctrine. Although she looks little different from a frigate, her firepower, armor, and very nature have grown. As if entering puberty, her immature features begin to develop, showing future possibilities. As a war machine—that beauty coming into maturity, and a fighting style utterly opposed to it, make enemies and allies alike feel more awe than admiration when facing her.</description>
     <statBases>
+      <MarketValue>1600</MarketValue>
       <Mass>60</Mass>
       <MoveSpeed>9</MoveSpeed>
       <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+      <EMPResistance>0.1</EMPResistance>
       <MeleeHitChance>8</MeleeHitChance>
       <BandwidthCost>2</BandwidthCost>
-      <CaravanBonusSpeedFactor>14</CaravanBonusSpeedFactor>
+      <CaravanRidingSpeedFactor>18</CaravanRidingSpeedFactor>
     </statBases>
     <race>
       <baseBodySize>2</baseBodySize>
@@ -45,7 +47,7 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="LightMechanoidKind">
+  <PawnKindDef ParentName="GR_BaseMechanoidKind">
     <defName>GR_Mech_DD</defName>
     <label>Strike Sprite</label>
     <race>GR_Mech_DD</race>

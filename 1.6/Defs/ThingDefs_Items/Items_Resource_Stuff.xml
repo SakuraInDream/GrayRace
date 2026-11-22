@@ -49,13 +49,17 @@
       <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
       <statFactors>
         <MaxHitPoints>0.5</MaxHitPoints>
-        <Beauty>6</Beauty>
+        <Beauty>2</Beauty>
         <Flammability>0</Flammability>
         <Mass>0.1</Mass>
         <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
         <WorkToMake>0.1</WorkToMake>
+        <WorkToBuild>0.1</WorkToBuild>
         <WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
       </statFactors>
+      <statOffsets>
+        <Beauty>20</Beauty>
+      </statOffsets>
       <canSuggestUseDefaultStuff>false</canSuggestUseDefaultStuff>
     </stuffProps>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -112,12 +116,15 @@
       <statFactors>
         <Flammability>0</Flammability>
         <MaxHitPoints>20</MaxHitPoints>
-        <Beauty>2</Beauty>
+        <Beauty>6</Beauty>
         <WorkToMake>0.7</WorkToMake>
         <WorkToBuild>0.7</WorkToBuild>
         <Mass>0.7</Mass>
         <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
       </statFactors>
+      <statOffsets>
+        <Beauty>2</Beauty>
+      </statOffsets>
       <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
     </stuffProps>
     <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>

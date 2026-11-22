@@ -44,9 +44,6 @@
     <exclusionTags>
       <li>Hand_Combat</li>
     </exclusionTags>
-    <excludedBodyPartTags>
-      <li>ManipulationLimbDigit</li>
-    </excludedBodyPartTags>
     <hediffToApply>GR_Hediff_GrenadeLauncher</hediffToApply>
     <researchPrerequisites>
       <li>GR_T2Upgrades</li>
@@ -77,7 +74,7 @@
     <defName>GR_Transform_Torso_MirrorSkin</defName>
     <label>Mirror Skin</label>
     <description>.</description>
-    <targetBodyPart>Torso</targetBodyPart>
+    <targetBodyPart>Nano_Torso</targetBodyPart>
     <hediffToApply>GR_Hediff_MirrorSkin</hediffToApply>
     <researchPrerequisites>
       <li>GR_T3Upgrades</li>
@@ -90,7 +87,7 @@
     <defName>GR_Transform_Torso_NaniteDecompositionField</defName>
     <label>Nanite Decomposition Field</label>
     <description>.</description>
-    <targetBodyPart>Torso</targetBodyPart>
+    <targetBodyPart>Nano_Torso</targetBodyPart>
     <hediffToApply>GR_Hediff_NaniteDecompositionField</hediffToApply>
     <researchPrerequisites>
       <li>GR_T3Upgrades</li>
@@ -103,7 +100,7 @@
     <defName>GR_Transform_Torso_Thruster</defName>
     <label>Thruster</label>
     <description>.</description>
-    <targetBodyPart>Torso</targetBodyPart>
+    <targetBodyPart>Nano_Torso</targetBodyPart>
     <hediffToApply>GR_Hediff_Thruster</hediffToApply>
     <researchPrerequisites>
       <li>GR_T3Upgrades</li>

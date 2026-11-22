@@ -16,7 +16,6 @@
     <pawnsPlural>Grey</pawnsPlural>
     <listOrderPriority>30</listOrderPriority>
     <settlementGenerationWeight>1</settlementGenerationWeight>
-    <canMakeRandomly>true</canMakeRandomly>
     <canSiege>false</canSiege>
     <canStageAttacks>false</canStageAttacks>
     <leaderTitle>governor</leaderTitle>
@@ -26,7 +25,7 @@
     <factionIconPath>Icon/Faction/Gray</factionIconPath>
     <settlementNameMaker>Gray_NamerSettlement</settlementNameMaker>
     <techLevel>Archotech</techLevel>
-    <melaninRange>0</melaninRange>    <!--黑皮肤概率，百分数-->
+    <canRequestOrbitalTrader>true</canRequestOrbitalTrader>
     <naturalEnemy>false</naturalEnemy>
     <permanentEnemy>false</permanentEnemy>
     <allowedCultures>
@@ -94,7 +93,6 @@
         <li>Uranium</li>
       </disallowedThingDefs>
     </apparelStuffFilter>
-    <!-- <geneticVariance>0</geneticVariance> -->
     <caravanTraderKinds>
       <li>Caravan_Gray_BulkGoods</li>
       <li>Caravan_Gray_Exotic</li>
@@ -103,15 +101,14 @@
       <li>Visitor_Outlander_Standard</li>
     </visitorTraderKinds>
     <baseTraderKinds>
-      <li>Base_Outlander_Standard</li>
+      <li>Base_Gray_Standard</li>
     </baseTraderKinds>
     <allowedArrivalTemperatureRange>-273~1453</allowedArrivalTemperatureRange>
     <maxPawnCostPerTotalPointsCurve>
       <points>
         <li>(0,35)</li>
-        <li>(70, 50)</li>
-        <li>(700, 100)</li>
-        <li>(700, 120)</li>
+        <li>(70, 100)</li>
+        <li>(500, 150)</li>
         <li>(1000, 10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
@@ -120,35 +117,55 @@
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-          <Gray_Citizen>20</Gray_Citizen>
+          <Gray_Soldier>30</Gray_Soldier>
+          <Gray_FireSupportSoldier>8</Gray_FireSupportSoldier>
+          <Gray_EliteSoldier>6</Gray_EliteSoldier>
+          <Gray_HeavyFireSupportSoldier>2</Gray_HeavyFireSupportSoldier>
         </options>
       </li>
       <li>
         <kindDef>Combat</kindDef>
-        <commonality>1</commonality>
+        <commonality>75</commonality>
         <options>
-          <Gray_Citizen>20</Gray_Citizen>
-          <Gray_Leader>1</Gray_Leader>
+          <Gray_Soldier>15</Gray_Soldier>
+          <Gray_EliteSoldier>15</Gray_EliteSoldier>
+          <Gray_FireSupportSoldier>8</Gray_FireSupportSoldier>
+          <Gray_HeavyFireSupportSoldier>2</Gray_HeavyFireSupportSoldier>
         </options>
       </li>
       <li>
         <kindDef>Combat</kindDef>
-        <commonality>5</commonality>
+        <commonality>30</commonality>
         <options>
-          <Gray_Citizen>18</Gray_Citizen>
+          <Gray_EliteSoldier>25</Gray_EliteSoldier>
+          <Gray_FireSupportSoldier>12</Gray_FireSupportSoldier>
+          <Gray_Soldier>1</Gray_Soldier>
         </options>
       </li>
       <li>
         <kindDef>Combat</kindDef>
-        <commonality>5</commonality>
+        <commonality>12</commonality>
         <options>
-          <Gray_Citizen>15</Gray_Citizen>
+          <Gray_EliteSoldier>12</Gray_EliteSoldier>
+          <Gray_EliteFireSupportSoldier>12</Gray_EliteFireSupportSoldier>
+          <Gray_HeavyFireSupportSoldier>6</Gray_HeavyFireSupportSoldier>
+          <Gray_Soldier>1</Gray_Soldier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>4</commonality>
+        <options>
+          <Gray_EliteSoldier>6</Gray_EliteSoldier>
+          <Gray_EliteFireSupportSoldier>20</Gray_EliteFireSupportSoldier>
+          <Gray_EliteHeavyFireSupportSoldier>6</Gray_EliteHeavyFireSupportSoldier>
+          <Gray_Soldier>1</Gray_Soldier>
         </options>
       </li>
       <li>
         <kindDef>Peaceful</kindDef>
         <options>
-          <Gray_Citizen>10</Gray_Citizen>
+          <Gray_Citizen>4</Gray_Citizen>
         </options>
       </li>
       <li>
@@ -163,13 +180,16 @@
           <Elephant>2</Elephant>
         </carriers>
         <guards>
-          <Gray_Citizen>8</Gray_Citizen>
+          <Gray_Soldier>8</Gray_Soldier>
+          <Gray_Citizen>3</Gray_Citizen>
         </guards>
       </li>
       <li>
         <kindDef>Settlement</kindDef>
         <options>
-          <Gray_Citizen>20</Gray_Citizen>
+          <Gray_EliteSoldier>6</Gray_EliteSoldier>
+          <Gray_EliteFireSupportSoldier>20</Gray_EliteFireSupportSoldier>
+          <Gray_EliteHeavyFireSupportSoldier>10</Gray_EliteHeavyFireSupportSoldier>
           <Gray_Leader>1</Gray_Leader>
         </options>
       </li>

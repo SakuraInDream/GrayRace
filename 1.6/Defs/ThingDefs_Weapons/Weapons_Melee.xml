@@ -58,6 +58,9 @@
       </li>
     </tools>
     <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
       <researchPrerequisite>GR_T3WeaponTech</researchPrerequisite>
       <skillRequirements>
         <Crafting>16</Crafting>
@@ -124,6 +127,9 @@
       </li>
     </tools>
     <recipeMaker>
+      <recipeUsers Inherit="False">
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
       <researchPrerequisite>GR_AlloyCasting</researchPrerequisite>
       <skillRequirements>
         <Crafting>6</Crafting>
@@ -215,6 +221,9 @@
       <skillRequirements>
         <Crafting>8</Crafting>
       </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
     </recipeMaker>
   </ThingDef>
 
@@ -302,6 +311,9 @@
       <skillRequirements>
         <Crafting>10</Crafting>
       </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
     </recipeMaker>
   </ThingDef>
 
@@ -363,6 +375,9 @@
       <skillRequirements>
         <Crafting>14</Crafting>
       </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
     </recipeMaker>
   </ThingDef>
 
@@ -424,6 +439,9 @@
     </tools>
     <recipeMaker>
       <researchPrerequisite>GR_Cosmogenesis</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
     </recipeMaker>
   </ThingDef>
 
@@ -483,6 +501,9 @@
     </tools>
     <recipeMaker>
       <researchPrerequisite>GR_Cosmogenesis</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>GR_NaniteReconfigurator</li>
+      </recipeUsers>
     </recipeMaker>
   </ThingDef>
 

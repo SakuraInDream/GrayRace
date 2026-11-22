@@ -314,6 +314,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_ExtraLarge</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_MegaCannonPlus</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>176</GR_Alloy>
       <Chemfuel>52</Chemfuel>

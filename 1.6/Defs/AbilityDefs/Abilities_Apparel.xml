@@ -6,7 +6,7 @@
     <defName>GR_Longjump</defName>
     <label>long jump</label>
     <description>Utilize the suspension device embedded in the armor to quickly jump to a distance.</description>
-    <iconPath>UI/Abilities/MechLongJump</iconPath>
+    <iconPath>Icon/Ability/Ability_LongJump</iconPath>
     <cooldownTicksRange>900</cooldownTicksRange>
     <hostile>false</hostile>
     <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>

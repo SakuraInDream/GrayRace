@@ -6,7 +6,7 @@
     <defName>Gray</defName>
     <label>Gray</label>
     <corePart>
-      <def>Torso</def>
+      <def>Nano_Torso</def>
       <height>Middle</height>
       <depth>Outside</depth>
       <groups>

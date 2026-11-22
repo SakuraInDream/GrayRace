@@ -9,7 +9,7 @@
   <HediffDef>
     <defName>GR_Hediff_DrillArm</defName>
     <label>drill arm</label>
-    <hediffClass>Hediff_AddedPart</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
     <description>A form developed by the Gray through reverse-engineering the Empire's drill arm and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability.</description>
     <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
     <isBad>false</isBad>
@@ -31,7 +31,7 @@
   <HediffDef>
     <defName>GR_Hediff_FieldHand</defName>
     <label>field hand</label>
-    <hediffClass>Hediff_AddedPart</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
     <description>A form developed by the Gray through reverse-engineering the Empire's field hand and improving it to suit their own characteristics. Unlike the Empire's version, it does not sacrifice normal manipulation ability.</description>
     <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
     <isBad>false</isBad>
@@ -128,6 +128,9 @@
         <statOffsets>
           <GRStat_NaniteRegenRate>-0.25</GRStat_NaniteRegenRate>
         </statOffsets>
+        <statFactors>
+          <CaravanBonusSpeedFactor>2</CaravanBonusSpeedFactor>
+        </statFactors>
       </li>
     </stages>
   </HediffDef>

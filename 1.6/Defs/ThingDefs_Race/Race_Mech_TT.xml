@@ -7,13 +7,15 @@
     <label>Sanctum Attendant</label>
     <description>The Sanctum Attendant is a super-heavy mechanoid specialized in extreme-range combat. It possesses extremely thick armor and an indestructible shield, at the cost of a large amount of speed. In return, its firepower has improved incomparably: its T-class main gun has enormous power and extreme range, and more and larger secondary guns let it effectively protect itself from close threats. It can also mount tactical auras to strengthen allies or suppress enemies.</description>
     <statBases>
+      <MarketValue>12800</MarketValue>
       <Mass>202.5</Mass>
       <MoveSpeed>5</MoveSpeed>
       <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <EMPResistance>0.25</EMPResistance>
       <MeleeHitChance>64</MeleeHitChance>
       <BandwidthCost>16</BandwidthCost>
-      <CaravanBonusSpeedFactor>8</CaravanBonusSpeedFactor>
+      <CaravanRidingSpeedFactor>10</CaravanRidingSpeedFactor>
     </statBases>
     <race>
       <baseBodySize>16</baseBodySize>
@@ -45,7 +47,7 @@
     </comps>
   </ThingDef>
 
-  <PawnKindDef ParentName="LightMechanoidKind">
+  <PawnKindDef ParentName="GR_BaseMechanoidKind">
     <defName>GR_Mech_TT</defName>
     <label>Sanctum Attendant</label>
     <race>GR_Mech_TT</race>

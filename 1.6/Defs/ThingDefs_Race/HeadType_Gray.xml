@@ -18,4 +18,22 @@
     <graphicPath>Race/Gray/Head/Gray_Female2</graphicPath>
     <gender>None</gender>
   </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>GR_Feature3</defName>
+    <graphicPath>Race/Gray/Head/Gray_Female3</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>GR_Feature4</defName>
+    <graphicPath>Race/Gray/Head/Gray_Female4</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>GR_Feature5</defName>
+    <graphicPath>Race/Gray/Head/Gray_Female5</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
 </Defs>

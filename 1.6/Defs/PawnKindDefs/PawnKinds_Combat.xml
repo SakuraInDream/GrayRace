@@ -6,7 +6,7 @@
     <defName>Gray_Soldier</defName>
     <label>gray soldier</label>
     <combatPower>90</combatPower>
-    <itemQuality>Normal</itemQuality>
+    <itemQuality>Excellent</itemQuality>
     <isFighter>true</isFighter>
     <maxGenerationAge>2000</maxGenerationAge>
     <minGenerationAge>15</minGenerationAge>
@@ -41,7 +41,7 @@
     <defName>Gray_FireSupportSoldier</defName>
     <label>gray fire support soldier</label>
     <combatPower>120</combatPower>
-    <itemQuality>Normal</itemQuality>
+    <itemQuality>Excellent</itemQuality>
     <isFighter>true</isFighter>
     <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
@@ -74,7 +74,7 @@
     <defName>Gray_HeavyFireSupportSoldier</defName>
     <label>gray heavy fire support soldier</label>
     <combatPower>150</combatPower>
-    <itemQuality>Normal</itemQuality>
+    <itemQuality>Excellent</itemQuality>
     <isFighter>true</isFighter>
     <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
@@ -107,7 +107,7 @@
     <defName>Gray_EliteSoldier</defName>
     <label>gray elite soldier</label>
     <combatPower>120</combatPower>
-    <itemQuality>Masterwork</itemQuality>
+    <itemQuality>Legendary</itemQuality>
     <isFighter>true</isFighter>
     <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
@@ -144,7 +144,7 @@
     <defName>Gray_EliteFireSupportSoldier</defName>
     <label>gray elite fire support soldier</label>
     <combatPower>150</combatPower>
-    <itemQuality>Masterwork</itemQuality>
+    <itemQuality>Legendary</itemQuality>
     <isFighter>true</isFighter>
     <minGenerationAge>15</minGenerationAge>
     <apparelMoney>
@@ -180,7 +180,7 @@
     <defName>Gray_EliteHeavyFireSupportSoldier</defName>
     <label>gray elite heavy fire support soldier</label>
     <combatPower>180</combatPower>
-    <itemQuality>Masterwork</itemQuality>
+    <itemQuality>Legendary</itemQuality>
     <isFighter>true</isFighter>
     <minGenerationAge>15</minGenerationAge>
     <apparelMoney>

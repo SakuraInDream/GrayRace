@@ -17,6 +17,9 @@
     <compatibleSlots>
       <li>GR_MechSlot_LargeTurret</li>
     </compatibleSlots>
+    <upgradesTo>
+      <li>GR_MechModule_KineticBatteryPlus</li>
+    </upgradesTo>
     <costList>
       <GR_Alloy>88</GR_Alloy>
       <Chemfuel>26</Chemfuel>

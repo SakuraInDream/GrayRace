@@ -262,7 +262,7 @@
       <muzzleFlashScale>9</muzzleFlashScale>
     </Properties>
     <AmmoUser>
-      <magazineSize>1</magazineSize>
+      <magazineSize>4</magazineSize>
       <reloadTime>7.5</reloadTime>
       <ammoSet>AmmoSet_57mmRailgun</ammoSet>
     </AmmoUser>
